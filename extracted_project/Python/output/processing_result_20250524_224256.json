@@ -1,0 +1,166 @@
+{
+  "directory": "logs/",
+  "processed_at": "2025-05-24T22:42:56.820040",
+  "summary": {
+    "total_files": 4,
+    "log_files": 4,
+    "other_files": 0,
+    "total_sessionids": 0,
+    "total_users": 1
+  },
+  "sessionids": {
+    "all_unique": [],
+    "by_file": {
+      "logs/whatilove1728_session_success.txt": {
+        "file": "logs/whatilove1728_session_success.txt",
+        "extracted_at": "2025-05-24T22:42:56.820831",
+        "sessionids": [],
+        "count": 0
+      },
+      "logs/alx.trading_session_success.txt": {
+        "file": "logs/alx.trading_session_success.txt",
+        "extracted_at": "2025-05-24T22:42:56.820982",
+        "sessionids": [],
+        "count": 0
+      }
+    }
+  },
+  "converted_logs": {
+    "logs/whatilove1728_session_success.txt": {
+      "file_info": {
+        "path": "logs/whatilove1728_session_success.txt",
+        "name": "whatilove1728_session_success.txt",
+        "converted_at": "2025-05-24T22:42:56.820751"
+      },
+      "summary": {
+        "total_lines": 4,
+        "sessions_found": 0,
+        "usernames_found": 1,
+        "success_count": 1,
+        "error_count": 0
+      },
+      "entries": [
+        {
+          "line": 2,
+          "raw": "username: whatilove1728",
+          "timestamp": null,
+          "sessionid": null,
+          "username": "name",
+          "email": null,
+          "ip": null,
+          "status": "info"
+        },
+        {
+          "line": 3,
+          "raw": "password: xxxx5678",
+          "timestamp": null,
+          "sessionid": null,
+          "username": null,
+          "email": null,
+          "ip": null,
+          "status": "info"
+        },
+        {
+          "line": 4,
+          "raw": "success: true",
+          "timestamp": null,
+          "sessionid": null,
+          "username": null,
+          "email": null,
+          "ip": null,
+          "status": "success"
+        }
+      ],
+      "extracted": {
+        "sessionids": [],
+        "usernames": [
+          "name"
+        ],
+        "emails": []
+      }
+    },
+    "logs/alx.trading_session_success.txt": {
+      "file_info": {
+        "path": "logs/alx.trading_session_success.txt",
+        "name": "alx.trading_session_success.txt",
+        "converted_at": "2025-05-24T22:42:56.820905"
+      },
+      "summary": {
+        "total_lines": 4,
+        "sessions_found": 0,
+        "usernames_found": 1,
+        "success_count": 1,
+        "error_count": 0
+      },
+      "entries": [
+        {
+          "line": 2,
+          "raw": "username: alx.trading",
+          "timestamp": null,
+          "sessionid": null,
+          "username": "name",
+          "email": null,
+          "ip": null,
+          "status": "info"
+        },
+        {
+          "line": 3,
+          "raw": "password: xxxx1234",
+          "timestamp": null,
+          "sessionid": null,
+          "username": null,
+          "email": null,
+          "ip": null,
+          "status": "info"
+        },
+        {
+          "line": 4,
+          "raw": "success: true",
+          "timestamp": null,
+          "sessionid": null,
+          "username": null,
+          "email": null,
+          "ip": null,
+          "status": "success"
+        }
+      ],
+      "extracted": {
+        "sessionids": [],
+        "usernames": [
+          "name"
+        ],
+        "emails": []
+      }
+    }
+  },
+  "files_processed": [
+    {
+      "file": "logs/whatilove1728_session_success.txt",
+      "type": "log",
+      "status": "success",
+      "sessions_found": 0,
+      "lines_processed": 4
+    },
+    {
+      "file": "logs/alx.trading_session_success.txt",
+      "type": "log",
+      "status": "success",
+      "sessions_found": 0,
+      "lines_processed": 4
+    },
+    {
+      "file": "logs/whatilove1728_session_success.txt",
+      "type": "log",
+      "status": "success",
+      "sessions_found": 0,
+      "lines_processed": 4
+    },
+    {
+      "file": "logs/alx.trading_session_success.txt",
+      "type": "log",
+      "status": "success",
+      "sessions_found": 0,
+      "lines_processed": 4
+    }
+  ]
+}
