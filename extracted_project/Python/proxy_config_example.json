@@ -1,0 +1,8 @@
+{
+    "proxy_host": "your-proxy-host.com",
+    "proxy_port": "8080",
+    "proxy_user": "your-username",
+    "proxy_pass": "your-password",
+    "enabled": false,
+    "notes": "ตั้งค่า enabled: true เมื่อต้องการใช้งาน proxy"
+}

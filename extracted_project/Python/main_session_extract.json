@@ -1,0 +1,327 @@
+{
+  "directory": ".",
+  "scanned_at": "2025-05-24T22:29:51.911575",
+  "files_scanned": 149,
+  "sessions_found": 35,
+  "files": [
+    {
+      "file_path": "./proxy_config.json",
+      "extracted_at": "2025-05-24T22:29:51.912028",
+      "sessions": [
+        {
+          "session_id": "customer-hl_a3b13c04-zone-datacenter",
+          "type": "uuid_format",
+          "length": 36,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./templates/upload.html",
+      "extracted_at": "2025-05-24T22:29:51.923644",
+      "sessions": [
+        {
+          "session_id": "8675309-real-session-id-here-5551212",
+          "type": "uuid_format",
+          "length": 36,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/cliui/package.json",
+      "extracted_at": "2025-05-24T22:29:51.944106",
+      "sessions": [
+        {
+          "session_id": "command-line-interfaces",
+          "type": "uuid_format",
+          "length": 23,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/bare-events/package.json",
+      "extracted_at": "2025-05-24T22:29:51.953010",
+      "sessions": [
+        {
+          "session_id": "prettier-config-standard",
+          "type": "uuid_format",
+          "length": 24,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/@tootallnate/quickjs-emscripten/package.json",
+      "extracted_at": "2025-05-24T22:29:51.955349",
+      "sessions": [
+        {
+          "session_id": "typedoc-plugin-markdown",
+          "type": "uuid_format",
+          "length": 23,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "typedoc-plugin-inline-sources",
+          "type": "uuid_format",
+          "length": 29,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/esprima/package.json",
+      "extracted_at": "2025-05-24T22:29:51.956590",
+      "sessions": [
+        {
+          "session_id": "generate-xhtml-entities",
+          "type": "uuid_format",
+          "length": 23,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/bare-os/package.json",
+      "extracted_at": "2025-05-24T22:29:51.958181",
+      "sessions": [
+        {
+          "session_id": "prettier-config-standard",
+          "type": "uuid_format",
+          "length": 24,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/emoji-regex/package.json",
+      "extracted_at": "2025-05-24T22:29:51.959113",
+      "sessions": [
+        {
+          "session_id": "proposal-unicode-property",
+          "type": "uuid_format",
+          "length": 25,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/puppeteer-core/package.json",
+      "extracted_at": "2025-05-24T22:29:51.961032",
+      "sessions": [
+        {
+          "session_id": "puppeteer-core-browser",
+          "type": "uuid_format",
+          "length": 22,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "correct-devtools-protocol-package",
+          "type": "uuid_format",
+          "length": 33,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/chromium-bidi/package.json",
+      "extracted_at": "2025-05-24T22:29:51.975975",
+      "sessions": [
+        {
+          "session_id": "generate-module-package",
+          "type": "uuid_format",
+          "length": 23,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/bare-stream/package.json",
+      "extracted_at": "2025-05-24T22:29:51.984618",
+      "sessions": [
+        {
+          "session_id": "prettier-config-standard",
+          "type": "uuid_format",
+          "length": 24,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/devtools-protocol/json/browser_protocol.json",
+      "extracted_at": "2025-05-24T22:29:52.014708",
+      "sessions": [
+        {
+          "session_id": "referrer-when-downgrade",
+          "type": "uuid_format",
+          "length": 23,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "private-state-token-issuance",
+          "type": "uuid_format",
+          "length": 28,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "position-try-fallback",
+          "type": "uuid_format",
+          "length": 21,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "without-user-activation",
+          "type": "uuid_format",
+          "length": 23,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "trustedtype-policy-violation",
+          "type": "uuid_format",
+          "length": 28,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "execution-while-not-rendered",
+          "type": "uuid_format",
+          "length": 28,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "prefers-reduced-transparency",
+          "type": "uuid_format",
+          "length": 28,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "playback-while-not-visible",
+          "type": "uuid_format",
+          "length": 26,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "yasskin-httpbis-origin-signed-exchanges",
+          "type": "uuid_format",
+          "length": 39,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "private-state-token-redemption",
+          "type": "uuid_format",
+          "length": 30,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "message-signature-mismatch",
+          "type": "uuid_format",
+          "length": 26,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "position-try-fallbacks",
+          "type": "uuid_format",
+          "length": 22,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "manifest-missing-suitable",
+          "type": "uuid_format",
+          "length": 25,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "automation-set-credential-properties",
+          "type": "uuid_format",
+          "length": 36,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "execution-while-out-of-viewport",
+          "type": "uuid_format",
+          "length": 31,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "trustedtype-sink-violation",
+          "type": "uuid_format",
+          "length": 26,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "deferred-fetch-minimal",
+          "type": "uuid_format",
+          "length": 22,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "captured-surface-control",
+          "type": "uuid_format",
+          "length": 24,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "automation-set-spc-transaction",
+          "type": "uuid_format",
+          "length": 30,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "sandboxed-iframe-cannot-navigate",
+          "type": "uuid_format",
+          "length": 32,
+          "is_valid_format": false
+        },
+        {
+          "session_id": "network-and-fetch-handler",
+          "type": "uuid_format",
+          "length": 25,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    },
+    {
+      "file_path": "./node_modules/bare-fs/package.json",
+      "extracted_at": "2025-05-24T22:29:52.206677",
+      "sessions": [
+        {
+          "session_id": "prettier-config-standard",
+          "type": "uuid_format",
+          "length": 24,
+          "is_valid_format": false
+        }
+      ],
+      "status": "success",
+      "error": null
+    }
+  ],
+  "summary": {
+    "instagram_sessions": 0,
+    "other_sessions": 35,
+    "valid_sessions": 0
+  }
+}

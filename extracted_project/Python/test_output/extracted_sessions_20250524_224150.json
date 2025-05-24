@@ -1,0 +1,15 @@
+{
+  "extracted_at": "2025-05-24T22:41:50.045416",
+  "total_unique_sessions": 4,
+  "sessionids": [
+    "json123session456id789012345678901234",
+    "encoded123%3Aabcdefghijklmnopqrstuvwxyz456789",
+    "xyz987wvu654tsr321ponmlkjihgfedcba789",
+    "test456session789id012345678901234567890"
+  ],
+  "source_files": [
+    "test_logs/session_log1.txt",
+    "test_logs/session_log2.txt",
+    "test_logs/other_data.json"
+  ]
+}

@@ -1,0 +1,97 @@
+entrypoint = "main.py"
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+packages = ["unzipNLS"]
+
+[unitTest]
+language = "python3"
+
+[gitHubImport]
+requiredFiles = [".replit", "replit.nix"]
+
+[deployment]
+run = ["python3", "main.py"]
+deploymentTarget = "cloudrun"
+
+[workflows]
+runButton = "Find Session ID"
+
+[[workflows.workflow]]
+name = "Auto-Unzip and List"
+author = 42986657
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "unzip attached_assets/Sugarglitch-Replit.zip -d attached_assets/extracted_files/"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "ls attached_assets/extracted_files/"
+
+[[workflows.workflow]]
+name = "Auto-Setup and Run"
+author = 42986657
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "unzip attached_assets/Sugarglitch_v3_Fusion.zip -d attached_assets/extracted_files_v3/"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "unzip attached_assets/Sugarglitch-Replit.zip -d attached_assets/extracted_files/"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "ls attached_assets/extracted_files/"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "ls attached_assets/extracted_files_v3/"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 attached_assets/extracted_files/main.py"
+
+[[workflows.workflow]]
+name = "Run Sugarglitch v3"
+author = 42986657
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd attached_assets/extracted_files_v3"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 runner.py"
+
+[[workflows.workflow]]
+name = "Run Sugarglitch Plus+"
+author = 42986657
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 main.py"
+
+[[workflows.workflow]]
+name = "Run Sugarglitch with Brightdata"
+author = 42986657
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python3 main.py"
+
+[[workflows.workflow]]
+name = "Find Session ID"
+author = 42986657
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "python upload_handler.py"

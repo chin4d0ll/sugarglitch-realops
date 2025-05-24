@@ -1,0 +1,10 @@
+{
+  "target": "alx.trading",
+  "wordlist_used": "alx_trading_passwords.txt",
+  "total_passwords": 200,
+  "passwords_tested": 5,
+  "successful_logins": [],
+  "failed_attempts": 5,
+  "test_timestamp": "2025-05-24T23:11:29.749093",
+  "note": "Simulation test - not actual login attempts"
+}
