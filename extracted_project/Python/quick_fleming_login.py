@@ -142,24 +142,38 @@ class QuickInstagramLogin:
         """🔍 หา login elements"""
         username_selectors = [
             'input[name="username"]',
-            'input[aria-label="Phone number, username, or email"]',
+            'input[aria-label*="username"]',
+            'input[aria-label*="email"]',
+            'input[aria-label*="Phone"]',
             'input[placeholder*="username"]',
+            'input[placeholder*="email"]',
             'input[autocomplete="username"]',
-            '//input[@name="username"]'
+            'input[type="text"]',
+            '//input[@name="username"]',
+            '//input[contains(@aria-label, "username")]',
+            '//input[contains(@aria-label, "email")]',
+            '//input[contains(@placeholder, "username")]'
         ]
         
         password_selectors = [
             'input[name="password"]',
             'input[type="password"]',
-            'input[aria-label="Password"]',
+            'input[aria-label*="Password"]',
+            'input[placeholder*="password"]',
             '//input[@name="password"]',
-            '//input[@type="password"]'
+            '//input[@type="password"]',
+            '//input[contains(@aria-label, "Password")]',
+            '//input[contains(@placeholder, "password")]'
         ]
         
         button_selectors = [
             'button[type="submit"]',
-            '//button[contains(text(), "Log in")]',
-            '//button[@type="submit"]'
+            'button._acan._acap._acas._aj1-',
+            '//button[contains(text(), "Log")]',
+            '//button[contains(text(), "Login")]',
+            '//button[contains(text(), "log")]',
+            '//button[@type="submit"]',
+            '//div[@role="button" and contains(text(), "Log")]'
         ]
         
         username_field = None
