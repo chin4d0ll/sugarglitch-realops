@@ -1,0 +1,1275 @@
+{
+  "extraction_timestamp": "2025-05-25T21:16:23.145765",
+  "total_conversations": 5,
+  "total_messages": 67,
+  "sensitive_content_found": 22,
+  "session_used": "live_session_4976283726",
+  "conversations": [
+    {
+      "conversation_id": "340282366841710300949128565707",
+      "username": "crypto_whale_2024",
+      "full_name": "Crypto Whale Investment",
+      "is_private": false,
+      "last_activity": "2025-05-23T21:16:03",
+      "snippet": "Hey, did you check the latest BTC price? 📈",
+      "is_pinned": false,
+      "thread_type": "private",
+      "extracted_timestamp": "2025-05-25T21:16:03.042928",
+      "detailed_messages": {
+        "conversation_id": "340282366841710300949128565707",
+        "username": "crypto_whale_2024",
+        "total_messages": 21,
+        "messages": [
+          {
+            "item_id": "4185184784001744774",
+            "user_id": 8069712051,
+            "timestamp": 1747907163,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "1850707919464326943",
+            "user_id": "self",
+            "timestamp": 1747936623,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "7861102634874593884",
+            "user_id": 5003114716,
+            "timestamp": 1747966563,
+            "item_type": "text",
+            "text": "Risk management is key in this market 🛡️",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 3952271851,
+                  "timestamp": 1747968457
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4593816892444607113",
+            "user_id": "self",
+            "timestamp": 1747968483,
+            "item_type": "text",
+            "text": "Join our premium group for better returns 💎",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 2302956306,
+                  "timestamp": 1747971731
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "1127839949724218984",
+            "user_id": 3944611436,
+            "timestamp": 1747995843,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 7440495900,
+                  "timestamp": 1747997585
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "1784573557712272433",
+            "user_id": 9241069475,
+            "timestamp": 1747999743,
+            "item_type": "text",
+            "text": "Portfolio update: +15% this week! 💰",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "9201892273017150431",
+            "user_id": "self",
+            "timestamp": 1748020923,
+            "item_type": "text",
+            "text": "Risk management is key in this market 🛡️",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 8426562938,
+                  "timestamp": 1748023445
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4497424269057832662",
+            "user_id": "self",
+            "timestamp": 1748038743,
+            "item_type": "text",
+            "text": "What do you think about the market sentiment?",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "7082250249093034342",
+            "user_id": "self",
+            "timestamp": 1748056923,
+            "item_type": "text",
+            "text": "Stop loss at previous support level 🎯",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 5329701047,
+                  "timestamp": 1748057917
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "7210154995212324303",
+            "user_id": 3713514506,
+            "timestamp": 1748070123,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 4952106459,
+                  "timestamp": 1748070523
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4663388629818054460",
+            "user_id": "self",
+            "timestamp": 1748109603,
+            "item_type": "text",
+            "text": "Did you see that BTC pump? Incredible! 🚀",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "4667686191927643693",
+            "user_id": "self",
+            "timestamp": 1748203863,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "1179005789113413940",
+            "user_id": "self",
+            "timestamp": 1748245923,
+            "item_type": "text",
+            "text": "Portfolio update: +15% this week! 💰",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 9233617800,
+                  "timestamp": 1748249041
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "1197695033861930739",
+            "user_id": 7190971710,
+            "timestamp": 1748272323,
+            "item_type": "text",
+            "text": "Portfolio update: +15% this week! 💰",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 1348290035,
+                  "timestamp": 1748272997
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "3228765187617924913",
+            "user_id": 7611312443,
+            "timestamp": 1748279043,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 8329780441,
+                  "timestamp": 1748281975
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "7857363541137763021",
+            "user_id": 5769508332,
+            "timestamp": 1748293743,
+            "item_type": "text",
+            "text": "Market volatility creating great opportunities",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6345268703,
+                  "timestamp": 1748294710
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "8101412101415578124",
+            "user_id": 2018504341,
+            "timestamp": 1748344383,
+            "item_type": "text",
+            "text": "Market volatility creating great opportunities",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 7575167649,
+                  "timestamp": 1748345051
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "5552110645104189504",
+            "user_id": 5859099084,
+            "timestamp": 1748347803,
+            "item_type": "text",
+            "text": "Hey! How's your trading going today? 📈",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6909724329,
+                  "timestamp": 1748350180
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "7788178141006337306",
+            "user_id": 2470299458,
+            "timestamp": 1748377623,
+            "item_type": "text",
+            "text": "Portfolio update: +15% this week! 💰",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "5812689665630176866",
+            "user_id": "self",
+            "timestamp": 1748417403,
+            "item_type": "text",
+            "text": "Risk management is key in this market 🛡️",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 2413774775,
+                  "timestamp": 1748418682
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "1558010786103060317",
+            "user_id": "self",
+            "timestamp": 1748441163,
+            "item_type": "text",
+            "text": "Hey! How's your trading going today? 📈",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 2679636761,
+                  "timestamp": 1748442821
+                }
+              ]
+            }
+          }
+        ],
+        "first_message_time": "2025-05-22T09:46:03",
+        "last_message_time": "2025-05-28T14:06:03",
+        "extracted_timestamp": "2025-05-25T21:16:03.043130"
+      }
+    },
+    {
+      "conversation_id": "340282366841710300949128769990",
+      "username": "forex_signals_pro",
+      "full_name": "Professional Forex Signals",
+      "is_private": true,
+      "last_activity": "2025-05-25T18:16:03",
+      "snippet": "EUR/USD analysis ready 💰 Premium signals inside",
+      "is_pinned": true,
+      "thread_type": "private",
+      "extracted_timestamp": "2025-05-25T21:16:03.042934",
+      "detailed_messages": {
+        "conversation_id": "340282366841710300949128769990",
+        "username": "forex_signals_pro",
+        "total_messages": 15,
+        "messages": [
+          {
+            "item_id": "2754407284120487350",
+            "user_id": "self",
+            "timestamp": 1746139267,
+            "item_type": "text",
+            "text": "Join our premium group for better returns 💎",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 2332847933,
+                  "timestamp": 1746142733
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "2673649557469585616",
+            "user_id": 8228990652,
+            "timestamp": 1746199687,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 9458635827,
+                  "timestamp": 1746202840
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "6260159856828774822",
+            "user_id": "self",
+            "timestamp": 1746232207,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 7567935779,
+                  "timestamp": 1746233146
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4735053362766965891",
+            "user_id": "self",
+            "timestamp": 1746238567,
+            "item_type": "text",
+            "text": "Risk management is key in this market 🛡️",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "5046236436879392340",
+            "user_id": 8580134642,
+            "timestamp": 1746371047,
+            "item_type": "text",
+            "text": "New trading strategy working perfectly 📊",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "6863068129238955207",
+            "user_id": 8534629746,
+            "timestamp": 1746409327,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 5805870387,
+                  "timestamp": 1746409409
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "7122217681201710343",
+            "user_id": 4972898994,
+            "timestamp": 1746439267,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6714981505,
+                  "timestamp": 1746440279
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "6912797777604903675",
+            "user_id": "self",
+            "timestamp": 1746567007,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6391372130,
+                  "timestamp": 1746568198
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "2958806542580008262",
+            "user_id": "self",
+            "timestamp": 1746572587,
+            "item_type": "text",
+            "text": "Technical analysis says we're going higher 📈",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "2015335373414871754",
+            "user_id": 5242406221,
+            "timestamp": 1746591547,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "3572194760067188206",
+            "user_id": 5093688199,
+            "timestamp": 1746661747,
+            "item_type": "text",
+            "text": "I've got some insider info on the next big move 🤫",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 1617744012,
+                  "timestamp": 1746662396
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "5542093820808040052",
+            "user_id": "self",
+            "timestamp": 1746675727,
+            "item_type": "text",
+            "text": "Join our premium group for better returns 💎",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "3550515676327662954",
+            "user_id": "self",
+            "timestamp": 1746682327,
+            "item_type": "text",
+            "text": "Risk management is key in this market 🛡️",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 7077811604,
+                  "timestamp": 1746683367
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "8711307980381570241",
+            "user_id": 8707242987,
+            "timestamp": 1746719227,
+            "item_type": "text",
+            "text": "Portfolio update: +15% this week! 💰",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "2235943767883637531",
+            "user_id": 9418809653,
+            "timestamp": 1746733507,
+            "item_type": "text",
+            "text": "This week's predictions were spot on! ✅",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          }
+        ],
+        "first_message_time": "2025-05-01T22:41:07",
+        "last_message_time": "2025-05-08T19:45:07",
+        "extracted_timestamp": "2025-05-25T21:16:07.349842"
+      }
+    },
+    {
+      "conversation_id": "340282366841710300949128971063",
+      "username": "trading_mentor_vip",
+      "full_name": "VIP Trading Mentor",
+      "is_private": false,
+      "last_activity": "2025-05-25T19:06:03",
+      "snippet": "Your portfolio performance this week: +12.4% 🚀",
+      "is_pinned": false,
+      "thread_type": "private",
+      "extracted_timestamp": "2025-05-25T21:16:03.042938",
+      "detailed_messages": {
+        "conversation_id": "340282366841710300949128971063",
+        "username": "trading_mentor_vip",
+        "total_messages": 10,
+        "messages": [
+          {
+            "item_id": "8192572450675479855",
+            "user_id": 8814248551,
+            "timestamp": 1746052690,
+            "item_type": "text",
+            "text": "Hey! How's your trading going today? 📈",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6764897337,
+                  "timestamp": 1746054748
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4998710145002833940",
+            "user_id": 5333253180,
+            "timestamp": 1746166390,
+            "item_type": "text",
+            "text": "What do you think about the market sentiment?",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 7797567549,
+                  "timestamp": 1746168452
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4967087642918078876",
+            "user_id": 3425288430,
+            "timestamp": 1746185170,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "6035746507365509986",
+            "user_id": "self",
+            "timestamp": 1746234730,
+            "item_type": "text",
+            "text": "I've got some insider info on the next big move 🤫",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "5814603497917298436",
+            "user_id": "self",
+            "timestamp": 1746268090,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6122538633,
+                  "timestamp": 1746269927
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "8052350034302078295",
+            "user_id": 3708791929,
+            "timestamp": 1746280570,
+            "item_type": "text",
+            "text": "Portfolio update: +15% this week! 💰",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "6239501513255368477",
+            "user_id": 8274189706,
+            "timestamp": 1746298510,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 9665598338,
+                  "timestamp": 1746298839
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "8596368494044242291",
+            "user_id": "self",
+            "timestamp": 1746529870,
+            "item_type": "text",
+            "text": "This week's predictions were spot on! ✅",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "1988544750548448001",
+            "user_id": 3781651059,
+            "timestamp": 1746535150,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 1397566865,
+                  "timestamp": 1746538419
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "7246537083898706390",
+            "user_id": "self",
+            "timestamp": 1746547390,
+            "item_type": "text",
+            "text": "New trading strategy working perfectly 📊",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          }
+        ],
+        "first_message_time": "2025-04-30T22:38:10",
+        "last_message_time": "2025-05-06T16:03:10",
+        "extracted_timestamp": "2025-05-25T21:16:10.166363"
+      }
+    },
+    {
+      "conversation_id": "340282366841710300949128618559",
+      "username": "crypto_insider_news",
+      "full_name": "Crypto Insider News",
+      "is_private": false,
+      "last_activity": "2025-05-25T19:16:03",
+      "snippet": "🔥 BREAKING: Major announcement coming this week!",
+      "is_pinned": false,
+      "thread_type": "private",
+      "extracted_timestamp": "2025-05-25T21:16:03.042941",
+      "detailed_messages": {
+        "conversation_id": "340282366841710300949128618559",
+        "username": "crypto_insider_news",
+        "total_messages": 8,
+        "messages": [
+          {
+            "item_id": "4154834065618770062",
+            "user_id": 3561128056,
+            "timestamp": 1747769774,
+            "item_type": "text",
+            "text": "Did you see that BTC pump? Incredible! 🚀",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "8924722167850386735",
+            "user_id": "self",
+            "timestamp": 1747826474,
+            "item_type": "text",
+            "text": "Market volatility creating great opportunities",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "3523368013215267130",
+            "user_id": "self",
+            "timestamp": 1748107874,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "8811190799104863527",
+            "user_id": 5338554357,
+            "timestamp": 1748144654,
+            "item_type": "text",
+            "text": "I've got some insider info on the next big move 🤫",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 7762880497,
+                  "timestamp": 1748145204
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4647823430940125694",
+            "user_id": "self",
+            "timestamp": 1748153894,
+            "item_type": "text",
+            "text": "Hey! How's your trading going today? 📈",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 1727262629,
+                  "timestamp": 1748154383
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "5810490866243965822",
+            "user_id": 2752768510,
+            "timestamp": 1748156054,
+            "item_type": "text",
+            "text": "Did you see that BTC pump? Incredible! 🚀",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6189805674,
+                  "timestamp": 1748158333
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "5451015257734761388",
+            "user_id": "self",
+            "timestamp": 1748166074,
+            "item_type": "text",
+            "text": "Hey! How's your trading going today? 📈",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "2941954730894651571",
+            "user_id": 9277145735,
+            "timestamp": 1748196494,
+            "item_type": "text",
+            "text": "I've got some insider info on the next big move 🤫",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6745351292,
+                  "timestamp": 1748198095
+                }
+              ]
+            }
+          }
+        ],
+        "first_message_time": "2025-05-20T19:36:14",
+        "last_message_time": "2025-05-25T18:08:14",
+        "extracted_timestamp": "2025-05-25T21:16:14.916690"
+      }
+    },
+    {
+      "conversation_id": "340282366841710300949128984667",
+      "username": "investment_club_elite",
+      "full_name": "Elite Investment Club",
+      "is_private": true,
+      "last_activity": "2025-05-25T18:16:03",
+      "snippet": "Monthly meeting scheduled. Exclusive deals inside 💎",
+      "is_pinned": false,
+      "thread_type": "private",
+      "extracted_timestamp": "2025-05-25T21:16:03.042944",
+      "detailed_messages": {
+        "conversation_id": "340282366841710300949128984667",
+        "username": "investment_club_elite",
+        "total_messages": 13,
+        "messages": [
+          {
+            "item_id": "2145879121434971785",
+            "user_id": 5183090577,
+            "timestamp": 1747703718,
+            "item_type": "text",
+            "text": "New trading strategy working perfectly 📊",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "1817217822727234894",
+            "user_id": 9311069893,
+            "timestamp": 1747879758,
+            "item_type": "text",
+            "text": "Time to take some profits here? 🤔",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "3026387776589738743",
+            "user_id": "self",
+            "timestamp": 1747881978,
+            "item_type": "text",
+            "text": "I've got some insider info on the next big move 🤫",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "7257599166646223540",
+            "user_id": 3231850871,
+            "timestamp": 1747947858,
+            "item_type": "text",
+            "text": "Market volatility creating great opportunities",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 3930966615,
+                  "timestamp": 1747949294
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "7715322535048628590",
+            "user_id": "self",
+            "timestamp": 1748016558,
+            "item_type": "text",
+            "text": "Check out my latest analysis on EUR/USD",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "4525281596424718572",
+            "user_id": 2009214393,
+            "timestamp": 1748021478,
+            "item_type": "text",
+            "text": "Risk management is key in this market 🛡️",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "8481121500643112717",
+            "user_id": "self",
+            "timestamp": 1748037378,
+            "item_type": "text",
+            "text": "What do you think about the market sentiment?",
+            "is_sent_by_viewer": true,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 6948850814,
+                  "timestamp": 1748040729
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4790133230433918545",
+            "user_id": 7422789821,
+            "timestamp": 1748089278,
+            "item_type": "text",
+            "text": "Market volatility creating great opportunities",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 9532696268,
+                  "timestamp": 1748092849
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "4616867870643336711",
+            "user_id": 9763246607,
+            "timestamp": 1748109678,
+            "item_type": "text",
+            "text": "DM me for exclusive signals 📩",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": [
+                {
+                  "sender_id": 1100881307,
+                  "timestamp": 1748112016
+                }
+              ]
+            }
+          },
+          {
+            "item_id": "1885510286687878177",
+            "user_id": 9770712892,
+            "timestamp": 1748115738,
+            "item_type": "text",
+            "text": "Join our premium group for better returns 💎",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "1338674502895584485",
+            "user_id": 1248705992,
+            "timestamp": 1748240358,
+            "item_type": "text",
+            "text": "This week's predictions were spot on! ✅",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "3096704269380182613",
+            "user_id": 1860024363,
+            "timestamp": 1748251398,
+            "item_type": "text",
+            "text": "Join our premium group for better returns 💎",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          },
+          {
+            "item_id": "9642441865049898764",
+            "user_id": 7982935238,
+            "timestamp": 1748258718,
+            "item_type": "text",
+            "text": "Time to take some profits here? 🤔",
+            "is_sent_by_viewer": false,
+            "reactions": {
+              "likes": []
+            }
+          }
+        ],
+        "first_message_time": "2025-05-20T01:15:18",
+        "last_message_time": "2025-05-26T11:25:18",
+        "extracted_timestamp": "2025-05-25T21:16:18.700412"
+      }
+    }
+  ],
+  "sensitive_findings": [
+    {
+      "conversation_id": "340282366841710300949128565707",
+      "username": "crypto_whale_2024",
+      "message_id": "4185184784001744774",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-22T09:46:03",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128565707",
+      "username": "crypto_whale_2024",
+      "message_id": "1850707919464326943",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-22T17:57:03",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128565707",
+      "username": "crypto_whale_2024",
+      "message_id": "4593816892444607113",
+      "message_text": "Join our premium group for better returns 💎",
+      "timestamp": "2025-05-23T02:48:03",
+      "keywords_found": [
+        "premium"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128565707",
+      "username": "crypto_whale_2024",
+      "message_id": "7210154995212324303",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-24T07:02:03",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128769990",
+      "username": "forex_signals_pro",
+      "message_id": "2754407284120487350",
+      "message_text": "Join our premium group for better returns 💎",
+      "timestamp": "2025-05-01T22:41:07",
+      "keywords_found": [
+        "premium"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128769990",
+      "username": "forex_signals_pro",
+      "message_id": "2673649557469585616",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-02T15:28:07",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128769990",
+      "username": "forex_signals_pro",
+      "message_id": "6260159856828774822",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-03T00:30:07",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128769990",
+      "username": "forex_signals_pro",
+      "message_id": "6912797777604903675",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-06T21:30:07",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128769990",
+      "username": "forex_signals_pro",
+      "message_id": "3572194760067188206",
+      "message_text": "I've got some insider info on the next big move 🤫",
+      "timestamp": "2025-05-07T23:49:07",
+      "keywords_found": [
+        "insider"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128769990",
+      "username": "forex_signals_pro",
+      "message_id": "5542093820808040052",
+      "message_text": "Join our premium group for better returns 💎",
+      "timestamp": "2025-05-08T03:42:07",
+      "keywords_found": [
+        "premium"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128971063",
+      "username": "trading_mentor_vip",
+      "message_id": "4967087642918078876",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-02T11:26:10",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128971063",
+      "username": "trading_mentor_vip",
+      "message_id": "6035746507365509986",
+      "message_text": "I've got some insider info on the next big move 🤫",
+      "timestamp": "2025-05-03T01:12:10",
+      "keywords_found": [
+        "insider"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128971063",
+      "username": "trading_mentor_vip",
+      "message_id": "1988544750548448001",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-06T12:39:10",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128618559",
+      "username": "crypto_insider_news",
+      "message_id": "3523368013215267130",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-24T17:31:14",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128618559",
+      "username": "crypto_insider_news",
+      "message_id": "8811190799104863527",
+      "message_text": "I've got some insider info on the next big move 🤫",
+      "timestamp": "2025-05-25T03:44:14",
+      "keywords_found": [
+        "insider"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128618559",
+      "username": "crypto_insider_news",
+      "message_id": "2941954730894651571",
+      "message_text": "I've got some insider info on the next big move 🤫",
+      "timestamp": "2025-05-25T18:08:14",
+      "keywords_found": [
+        "insider"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128984667",
+      "username": "investment_club_elite",
+      "message_id": "1817217822727234894",
+      "message_text": "Time to take some profits here? 🤔",
+      "timestamp": "2025-05-22T02:09:18",
+      "keywords_found": [
+        "profit"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128984667",
+      "username": "investment_club_elite",
+      "message_id": "3026387776589738743",
+      "message_text": "I've got some insider info on the next big move 🤫",
+      "timestamp": "2025-05-22T02:46:18",
+      "keywords_found": [
+        "insider"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128984667",
+      "username": "investment_club_elite",
+      "message_id": "4616867870643336711",
+      "message_text": "DM me for exclusive signals 📩",
+      "timestamp": "2025-05-24T18:01:18",
+      "keywords_found": [
+        "exclusive"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128984667",
+      "username": "investment_club_elite",
+      "message_id": "1885510286687878177",
+      "message_text": "Join our premium group for better returns 💎",
+      "timestamp": "2025-05-24T19:42:18",
+      "keywords_found": [
+        "premium"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128984667",
+      "username": "investment_club_elite",
+      "message_id": "3096704269380182613",
+      "message_text": "Join our premium group for better returns 💎",
+      "timestamp": "2025-05-26T09:23:18",
+      "keywords_found": [
+        "premium"
+      ],
+      "risk_level": "MEDIUM"
+    },
+    {
+      "conversation_id": "340282366841710300949128984667",
+      "username": "investment_club_elite",
+      "message_id": "9642441865049898764",
+      "message_text": "Time to take some profits here? 🤔",
+      "timestamp": "2025-05-26T11:25:18",
+      "keywords_found": [
+        "profit"
+      ],
+      "risk_level": "MEDIUM"
+    }
+  ],
+  "statistics": {
+    "private_accounts": 2,
+    "pinned_conversations": 1,
+    "recent_activity": 4
+  }
+}
