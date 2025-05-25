@@ -1,0 +1,102 @@
+📱 Generated Device ID: android-7ba00f8c9ee9284b
+🆔 Generated UUID: fe12d605-58a5-4389-b4ef-25821574a668
+🚀 Starting Comprehensive Mobile API Bypass
+🎯 Target: alx.trading
+📱 Real Phone Numbers Available!
+============================================================
+📋 Testing 7 identifiers:
+  1. alx.trading
+  2. 0615414210
+  3. +66615414210
+  4. 66615414210
+  5. +447793127209
+  6. 447793127209
+  7. 07793127209
+
+🎯 MOBILE BYPASS ATTEMPT 1/7
+Identifier: alx.trading
+Password: Fleming654
+----------------------------------------
+
+📱 Testing mobile login: alx.trading / Fleming654
+📊 Status Code: 400
+📊 Response Length: 11
+⚠️ Response is not JSON
+⏱️ Waiting 5.9 seconds...
+
+🎯 MOBILE BYPASS ATTEMPT 2/7
+Identifier: 0615414210
+Password: Fleming654
+----------------------------------------
+
+📱 Testing mobile login: 0615414210 / Fleming654
+📊 Status Code: 400
+📊 Response Length: 11
+⚠️ Response is not JSON
+⏱️ Waiting 5.2 seconds...
+
+🎯 MOBILE BYPASS ATTEMPT 3/7
+Identifier: +66615414210
+Password: Fleming654
+----------------------------------------
+
+📱 Testing mobile login: +66615414210 / Fleming654
+📊 Status Code: 400
+📊 Response Length: 11
+⚠️ Response is not JSON
+⏱️ Waiting 5.4 seconds...
+
+🎯 MOBILE BYPASS ATTEMPT 4/7
+Identifier: 66615414210
+Password: Fleming654
+----------------------------------------
+
+📱 Testing mobile login: 66615414210 / Fleming654
+📊 Status Code: 400
+📊 Response Length: 11
+⚠️ Response is not JSON
+⏱️ Waiting 5.5 seconds...
+
+🎯 MOBILE BYPASS ATTEMPT 5/7
+Identifier: +447793127209
+Password: Fleming654
+----------------------------------------
+
+📱 Testing mobile login: +447793127209 / Fleming654
+📊 Status Code: 400
+📊 Response Length: 11
+⚠️ Response is not JSON
+⏱️ Waiting 4.4 seconds...
+
+🎯 MOBILE BYPASS ATTEMPT 6/7
+Identifier: 447793127209
+Password: Fleming654
+----------------------------------------
+
+📱 Testing mobile login: 447793127209 / Fleming654
+📊 Status Code: 400
+📊 Response Length: 11
+⚠️ Response is not JSON
+⏱️ Waiting 3.6 seconds...
+
+🎯 MOBILE BYPASS ATTEMPT 7/7
+Identifier: 07793127209
+Password: Fleming654
+----------------------------------------
+
+📱 Testing mobile login: 07793127209 / Fleming654
+📊 Status Code: 400
+📊 Response Length: 11
+⚠️ Response is not JSON
+
+💾 All results saved to: mobile_bypass_results_20250525_170105.json
+
+📊 MOBILE BYPASS SUMMARY
+============================================================
+🎯 Total identifiers tested: 7
+✅ Successful bypasses: 0
+🔍 Account confirmations: 0
+📊 Success rate: 0.0%
+
+🔄 CONTINUE INVESTIGATION
+📱 Try browser automation next
