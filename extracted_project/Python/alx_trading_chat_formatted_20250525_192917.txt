@@ -1,0 +1,62 @@
+============================================================
+ALX TRADING CHAT DATA SUMMARY
+============================================================
+
+Target Account: alx.trading
+Total Conversations: 5
+Total Messages: 271
+Extraction Time: 2025-05-25T19:28:11.402000
+
+CONVERSATIONS:
+------------------------------
+• john_trader: 45 messages
+  Last activity: 2025-05-25T10:30:00
+  Status: ✅ Extracted
+
+• crypto_expert: 32 messages
+  Last activity: 2025-05-25T09:15:00
+  Status: ✅ Extracted
+
+• investment_buddy: 67 messages
+  Last activity: 2025-05-25T08:45:00
+  Status: ✅ Extracted
+
+• forex_mentor: 28 messages
+  Last activity: 2025-05-24T22:30:00
+  Status: ✅ Extracted
+
+• trading_group: 89 messages
+  Last activity: 2025-05-24T20:15:00
+  Status: ✅ Extracted
+
+
+MESSAGES:
+------------------------------
+[RECEIVED] john_trader
+Time: 2025-05-25T10:30:00
+Text: Hey, did you see the market movement today?
+--------------------
+[SENT] john_trader
+Time: 2025-05-25T10:31:00
+Text: Yeah, incredible! Bitcoin is up 5%
+--------------------
+[RECEIVED] crypto_expert
+Time: 2025-05-25T09:15:00
+Text: Check out this new trading strategy
+--------------------
+[SENT] crypto_expert
+Time: 2025-05-25T09:16:00
+Text: Looks promising, let me analyze it
+--------------------
+[RECEIVED] investment_buddy
+Time: 2025-05-25T08:45:00
+Text: Portfolio update: +12% this week
+--------------------
+[RECEIVED] forex_mentor
+Time: 2025-05-24T22:30:00
+Text: EUR/USD looking bullish
+--------------------
+[RECEIVED] trading_group
+Time: 2025-05-24T20:15:00
+Text: Anyone trading TSLA options?
+--------------------
