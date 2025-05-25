@@ -800,3 +800,109 @@ class UltimateBrowserManager:
         except Exception as e:
             self.logger.error(f"Error extracting session data: {e}")
             return {'success': False, 'error': str(e)}
+    
+    def create_browser_session(self, browser_type: str = "chrome") -> Optional[webdriver.Chrome]:
+        """Create a new browser session with proxy and anti-detection"""
+        try:
+            self.logger.info(f"Creating {browser_type} browser session...")
+            
+            if browser_type.lower() == "chrome":
+                # Get proxy configuration
+                proxy_endpoint = None
+                if self.proxy_config:
+                    proxy_endpoint = self.proxy_config.get('endpoint')
+                
+                # Setup Chrome options
+                options = self._get_chrome_options(proxy_endpoint)
+                
+                # Create driver
+                try:
+                    from selenium.webdriver.chrome.service import Service
+                    from webdriver_manager.chrome import ChromeDriverManager
+                    
+                    service = Service(ChromeDriverManager().install())
+                    self.driver = webdriver.Chrome(service=service, options=options)
+                    
+                except Exception as e:
+                    self.logger.warning(f"ChromeDriverManager failed, trying system chromedriver: {e}")
+                    self.driver = webdriver.Chrome(options=options)
+                
+                # Configure driver
+                self.driver.implicitly_wait(10)
+                self.driver.set_page_load_timeout(30)
+                
+                # Anti-detection measures
+                self._apply_anti_detection()
+                
+                self.logger.info("✅ Browser session created successfully")
+                return self.driver
+                
+            else:
+                self.logger.error(f"Browser type {browser_type} not supported yet")
+                return None
+                
+        except Exception as e:
+            self.logger.error(f"Failed to create browser session: {e}")
+            return None
+    
+    def _apply_anti_detection(self):
+        """Apply anti-detection measures to the browser"""
+        try:
+            # Hide webdriver property
+            self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+            
+            # Override chrome property
+            self.driver.execute_script("""
+                Object.defineProperty(navigator, 'plugins', {
+                    get: () => [1, 2, 3, 4, 5],
+                });
+            """)
+            
+            # Override languages
+            self.driver.execute_script("""
+                Object.defineProperty(navigator, 'languages', {
+                    get: () => ['en-US', 'en'],
+                });
+            """)
+            
+            # Set realistic screen properties
+            self.driver.execute_script("""
+                Object.defineProperty(screen, 'width', {get: () => 1920});
+                Object.defineProperty(screen, 'height', {get: () => 1080});
+            """)
+            
+            self.logger.info("✅ Anti-detection measures applied")
+            
+        except Exception as e:
+            self.logger.warning(f"Failed to apply anti-detection measures: {e}")
+    
+    def cleanup(self):
+        """Clean up browser session and virtual display"""
+        try:
+            # Close browser
+            if hasattr(self, 'driver') and self.driver:
+                try:
+                    self.driver.quit()
+                    self.logger.info("✅ Browser session closed")
+                except:
+                    pass
+            
+            # Stop virtual display
+            if self.display_pid:
+                try:
+                    os.kill(self.display_pid, 9)
+                    self.logger.info("✅ Virtual display stopped")
+                except:
+                    pass
+            
+            # Reset environment
+            if 'DISPLAY' in os.environ and self.current_display:
+                if os.environ['DISPLAY'] == self.current_display:
+                    del os.environ['DISPLAY']
+                    
+        except Exception as e:
+            self.logger.warning(f"Cleanup warning: {e}")
+    
+    def __del__(self):
+        """Destructor to ensure cleanup"""
+        self.cleanup()

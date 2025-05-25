@@ -1,42 +1,53 @@
 {
-    "proxy_host": "brd.superproxy.io",
-    "proxy_port": "9222",
-    "proxy_user": "brd-customer-hl_63f0835e-zone-scraping_browser",
-    "proxy_pass": "59m84ggoef95",
-    "bearer_token": "74b573ce-4e26-46e3-bf55-0a9ca95f813f",
-    "api_endpoint": "https://api.brightdata.com/request",
-    "web_unlocker_zone": "web_unlocker",
-    "enabled": true,
-    "auto_fallback": true,
-    "proxy_type": "brightdata_scraping",
-    "rotation_enabled": true,
-    "session_rotation": true,
-    "country_targeting": ["US", "CA", "GB", "AU", "DE", "FR", "NL", "SG"],
-    "sticky_session": false,
-    "user_agent_rotation": true,
-    "connection_timeout": 30,
-    "read_timeout": 60,
-    "retry_attempts": 3,
-    "selenium_port": "9515",
+    "bright_data": {
+        "api_endpoint": "https://api.brightdata.com/request",
+        "bearer_token": "74b573ce-4e26-46e3-bf55-0a9ca95f813f",
+        "zones": {
+            "web_unlocker": "web_unlocker",
+            "mobile": "mobile",
+            "residential": "residential",
+            "scraping_browser": "scraping_browser"
+        },
+        "native_proxy": {
+            "host": "brd.superproxy.io",
+            "port": 33335,
+            "username": "brd-customer-hl_63f0835e-zone-mobile",
+            "password": "fl13j3qcjvqh"
+        },
+        "scraping_browser": {
+            "host": "brd.superproxy.io",
+            "port": "9222",
+            "username": "brd-customer-hl_63f0835e-zone-scraping_browser",
+            "password": "59m84ggoef95"
+        }
+    },
+    "countries": [
+        "US", "CA", "GB", "AU", "DE", "FR", "NL", "SG", 
+        "JP", "BR", "ES", "IT", "SE", "NO", "DK", "EG", "IN", "KR"
+    ],
     "advanced_features": {
         "geo_targeting": true,
         "smart_rotation": true,
         "failure_detection": true,
         "auto_retry": true,
-        "session_persistence": false,
-        "bandwidth_optimization": true
+        "session_persistence": true,
+        "bandwidth_optimization": true,
+        "mobile_targeting": true
     },
     "rate_limiting": {
-        "max_requests_per_session": 50,
-        "session_cooldown": 30,
+        "max_requests_per_session": 100,
+        "session_cooldown": 10,
         "rotate_on_rate_limit": true,
-        "progressive_delay": true
+        "progressive_delay": true,
+        "max_attempts_per_proxy": 50
     },
     "monitoring": {
         "log_proxy_usage": true,
         "track_success_rate": true,
         "alert_on_failures": true,
-        "performance_metrics": true
+        "performance_metrics": true,
+        "health_check_interval": 300
     },
-    "note": "Updated Bright Data Scraping Browser proxy config - May 24, 2025"
+    "fallback_proxies": [],
+    "note": "Updated Bright Data config with API + Native + Mobile - May 25, 2025"
 }
