@@ -37,8 +37,6 @@ class BrowserAPIManager:
         # Session management
         self.active_sessions = {}
         self.session_count = 0
-        self.driver = None  # Current active driver
-        self.current_session_key = None
         
         print(f"🌐 Bright Data Browser API initialized")
         if SELENIUM_AVAILABLE:
@@ -89,10 +87,6 @@ class BrowserAPIManager:
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-plugins")
             chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-            chrome_options.add_argument("--remote-debugging-port=0")  # ใช้ port สุ่ม
-            chrome_options.add_argument("--disable-web-security")
-            chrome_options.add_argument("--disable-features=VizDisplayCompositor")
-            chrome_options.add_argument("--disable-ipc-flooding-protection")
             chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
             chrome_options.add_experimental_option('useAutomationExtension', False)
             
@@ -104,7 +98,7 @@ class BrowserAPIManager:
             ]
             chrome_options.add_argument(f"--user-agent={random.choice(user_agents)}")
             
-            # ตั้งค่า Bright Data proxy - สำหรับ Scraping Browser ไม่ต้องใช้ proxy-server argument
+            # ตั้งค่า Bright Data proxy
             proxy_user = self.config['proxy_user']
             
             # เพิ่ม geo targeting ถ้าระบุ
@@ -115,11 +109,9 @@ class BrowserAPIManager:
             session_id = random.randint(1000, 9999)
             proxy_user += f"-session-{session_id}"
             
-            # สำหรับ Bright Data Scraping Browser ใช้ local Chrome แต่ traffic จะถูก route ผ่าน proxy อัตโนมัติ
-            print(f"🌐 Using Bright Data session: {proxy_user}")
-            
-            # เพิ่ม window size สำหรับความเสถียร
-            chrome_options.add_argument("--window-size=1920,1080")
+            # ตั้งค่า proxy ใน Chrome
+            proxy_url = f"{proxy_user}:{self.config['proxy_pass']}@{self.config['proxy_host']}:{self.config.get('selenium_port', '9515')}"
+            chrome_options.add_argument(f"--proxy-server=http://{proxy_url}")
             
             # สร้าง WebDriver
             service = Service(ChromeDriverManager().install())
@@ -145,31 +137,6 @@ class BrowserAPIManager:
         except Exception as e:
             print(f"❌ Error creating Selenium session: {e}")
             return None, None
-    
-    def create_session(self, country=None):
-        """Create a new browser session with optional country targeting"""
-        try:
-            self.driver, self.current_session_key = self.create_selenium_session(country=country, headless=True)
-            return self.driver is not None
-        except Exception as e:
-            print(f"❌ Error creating session: {e}")
-            return False
-    
-    def close_session(self):
-        """Close current browser session"""
-        try:
-            if self.driver:
-                self.driver.quit()
-                self.driver = None
-            
-            if self.current_session_key and self.current_session_key in self.active_sessions:
-                del self.active_sessions[self.current_session_key]
-                print(f"🗑️ Closed session: {self.current_session_key}")
-                
-            self.current_session_key = None
-            
-        except Exception as e:
-            print(f"❌ Error closing session: {e}")
     
     def instagram_login_with_browser(self, username, password, country=None):
         """ใช้ Browser API ทำการ login Instagram"""

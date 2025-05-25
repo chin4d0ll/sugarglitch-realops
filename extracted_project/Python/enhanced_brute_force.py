@@ -111,7 +111,7 @@ class EnhancedInstagramBruteForce:
             browser = self.get_browser_session()
             
             # Attempt login using browser automation
-            login_success = browser.login_instagram(target, password)
+            login_success = browser.instagram_login_with_browser(target, password)
             
             if login_success:
                 print(f"✅ Login successful for {target}")
