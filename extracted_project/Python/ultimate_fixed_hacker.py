@@ -573,7 +573,7 @@ if __name__ == "__main__":
         exit(1)
     
     try:
-        attacker.run_ultimate_attack(target_file)
+        attacker.start_ultimate_attack()
     except KeyboardInterrupt:
         print("\n🛑 Attack interrupted by user")
     except Exception as e:
