@@ -9,6 +9,8 @@ import time
 import random
 import json
 import requests
+import tempfile
+import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -18,7 +20,6 @@ from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.action_chains import ActionChains
 import re
 from datetime import datetime
-import os
 
 class RealPenetrationAttack:
     def __init__(self):
