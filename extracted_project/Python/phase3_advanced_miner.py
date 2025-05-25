@@ -22,7 +22,6 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
-import undetected_chromedriver as uc
 import sqlite3
 from urllib.parse import urlparse, parse_qs
 import hashlib
@@ -71,26 +70,40 @@ class AdvancedInstagramMiner:
         try:
             safe_print("🔧 Setting up advanced stealth browser for Phase 3...")
             
-            options = uc.ChromeOptions()
+            # Use regular Chrome with fixed config
+            from selenium.webdriver.chrome.options import Options
+            options = Options()
             
-            # Advanced stealth options
+            # Fixed browser configuration
+            import tempfile
+            user_data_dir = tempfile.mkdtemp()
+            options.add_argument(f'--user-data-dir={user_data_dir}')
+            
+            # Fixed stealth options
+            options.add_argument('--disable-blink-features=AutomationControlled')
+            options.add_argument('--disable-automation')
+            options.add_argument('--disable-extensions')
             options.add_argument('--no-sandbox')
             options.add_argument('--disable-dev-shm-usage')
-            options.add_argument('--disable-blink-features=AutomationControlled')
-            options.add_argument('--disable-web-security')
-            options.add_argument('--allow-running-insecure-content')
+            options.add_argument('--disable-gpu')
             options.add_argument('--disable-features=VizDisplayCompositor')
-            options.add_argument('--disable-logging')
-            options.add_argument('--disable-gpu-logging')
-            options.add_argument('--disable-default-apps')
             options.add_argument('--headless')
             
-            # Anti-detection headers
+            # Anti-detection
+            options.add_experimental_option('useAutomationExtension', False)
+            prefs = {
+                "profile.default_content_setting_values.notifications": 2,
+                "profile.default_content_settings.popups": 0,
+                "profile.managed_default_content_settings.images": 2
+            }
+            options.add_experimental_option("prefs", prefs)
+            
             options.add_argument('--user-agent=Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+            options.add_argument('--window-size=1920,1080')
             
-            self.driver = uc.Chrome(options=options)
+            self.driver = webdriver.Chrome(options=options)
             
-            # Enhanced stealth scripts
+            # Execute stealth scripts
             stealth_script = """
             Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
             Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]});

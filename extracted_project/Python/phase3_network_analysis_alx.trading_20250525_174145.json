@@ -1,0 +1,41 @@
+{
+  "network_metrics": {
+    "total_nodes": 1,
+    "total_edges": 0,
+    "network_density": 0,
+    "clustering_coefficient": 0,
+    "influential_followers": []
+  },
+  "behavioral_patterns": {
+    "account_characteristics": {},
+    "content_behavior": {},
+    "social_behavior": {
+      "network_size": 1,
+      "social_influence": "low",
+      "connection_strategy": "selective"
+    },
+    "risk_indicators": {
+      "exposure_level": "low",
+      "security_score": 10,
+      "vulnerability_factors": 0
+    },
+    "predictive_insights": {
+      "likely_online_hours": [],
+      "content_prediction": "general content",
+      "engagement_prediction": "moderate"
+    }
+  },
+  "content_analysis": {},
+  "temporal_patterns": {},
+  "relationship_insights": {},
+  "risk_assessment": {
+    "account_exposure": "low",
+    "content_sensitivity": "medium",
+    "network_risk": "low",
+    "behavioral_anomalies": [],
+    "risk_score": 0,
+    "recommendations": [],
+    "overall_risk": "low"
+  },
+  "prediction_models": {}
+}
