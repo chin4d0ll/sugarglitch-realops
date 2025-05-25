@@ -238,8 +238,8 @@ class UltimateProxyManager:
         try:
             # Find the proxy in our list
             for proxy in self.active_proxies:
-                if (proxy['username'] == proxy_config['username'] and 
-                    proxy['password'] == proxy_config['password']):
+                if (proxy.get('username') == proxy_config.get('username') and 
+                    proxy.get('password') == proxy_config.get('password')):
                     
                     if success:
                         proxy['successful_requests'] += 1
@@ -416,7 +416,7 @@ class UltimateProxyManager:
                 
             for proxy in self.active_proxies:
                 if (proxy.get('session_id') == proxy_config.get('session_id') or
-                    proxy['country'] == proxy_config.get('country')):
+                    proxy.get('country') == proxy_config.get('country')):
                     proxy['status'] = 'failed'
                     self.logger.warning(f"🚫 Marked proxy as failed: {proxy['country']}")
                     break
@@ -441,4 +441,20 @@ class UltimateProxyManager:
                     self.logger.info(f"🔄 Reset proxy status: {proxy['country']}")
             
         except Exception as e:
-            self.logger.error(f"❌ Health check failed: {e}")
+            def _perform_health_check(self):
+                """Perform health check on proxies"""
+                try:
+                    self.logger.info("🏥 Performing proxy health check...")
+                    self.last_health_check = time.time()
+                    
+                    # Simple health check - reset failed proxies after some time
+                    current_time = time.time()
+                    reset_threshold = 1800  # 30 minutes
+                    
+                    for proxy in self.active_proxies:
+                        if proxy['status'] == 'failed' and current_time - proxy['last_used'] > reset_threshold:
+                            proxy['status'] = 'unknown'
+                            self.logger.info(f"🔄 Reset proxy status: {proxy['country']}")
+                    
+                except Exception as e:
+                    self.logger.error(f"❌ Health check failed: {e}")

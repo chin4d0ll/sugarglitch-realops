@@ -1,0 +1,11 @@
+{
+  "target": "alx.trading",
+  "wordlist_used": "alx_trading_passwords.txt",
+  "passwords_tested": 15,
+  "successful_logins": [],
+  "failed_attempts": 15,
+  "start_time": "2025-05-25T01:09:54.067099",
+  "end_time": "2025-05-25T01:11:52.735345",
+  "duration_seconds": 118.668246,
+  "ethical_consent": true
+}

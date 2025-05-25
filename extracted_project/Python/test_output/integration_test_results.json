@@ -1,34 +1,34 @@
 {
-  "timestamp": "2025-05-25T00:41:00.883427",
+  "timestamp": "2025-05-25T00:59:13.279437",
   "total_tests": 5,
-  "passed_tests": 2,
-  "failed_tests": 3,
-  "success_rate": 40.0,
+  "passed_tests": 3,
+  "failed_tests": 2,
+  "success_rate": 60.0,
   "results": [
     {
       "name": "Virtual Display",
       "success": true,
-      "duration": 4.002384662628174
+      "duration": 4.002129793167114
     },
     {
       "name": "Proxy Manager",
-      "success": false,
-      "duration": 0.0004394054412841797
+      "success": true,
+      "duration": 0.0007038116455078125
     },
     {
       "name": "Browser Creation",
       "success": false,
-      "duration": 0.00035762786865234375
+      "duration": 14.926844835281372
     },
     {
       "name": "Login Attempt",
       "success": false,
-      "duration": 0.00023674964904785156
+      "duration": 14.714595556259155
     },
     {
       "name": "Ultimate Engine",
       "success": true,
-      "duration": 0.0019488334655761719
+      "duration": 0.0020377635955810547
     }
   ]
 }
