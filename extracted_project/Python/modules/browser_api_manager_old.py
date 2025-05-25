@@ -8,8 +8,6 @@ import json
 import time
 import random
 import requests
-import os
-import subprocess
 from datetime import datetime
 try:
     from selenium import webdriver
@@ -17,8 +15,6 @@ try:
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.chrome.service import Service
-    from webdriver_manager.chrome import ChromeDriverManager
     SELENIUM_AVAILABLE = True
 except ImportError:
     print("⚠️ Selenium not available. Browser API features will be limited.")
@@ -69,10 +65,6 @@ class BrowserAPIManager:
     
     def create_selenium_session(self, country=None, headless=True):
         """สร้าง Selenium WebDriver session ผ่าน Bright Data"""
-        if not SELENIUM_AVAILABLE:
-            print("❌ Selenium not available")
-            return None, None
-            
         try:
             chrome_options = Options()
             
@@ -86,23 +78,16 @@ class BrowserAPIManager:
             chrome_options.add_argument("--disable-gpu")
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-plugins")
-            chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-            chrome_options.add_argument("--remote-debugging-port=0")  # ใช้ port สุ่ม
-            chrome_options.add_argument("--disable-web-security")
-            chrome_options.add_argument("--disable-features=VizDisplayCompositor")
-            chrome_options.add_argument("--disable-ipc-flooding-protection")
-            chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-            chrome_options.add_experimental_option('useAutomationExtension', False)
             
             # ตั้งค่า User Agent แบบสุ่ม
             user_agents = [
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+                "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
+                "Mozilla/5.0 (Linux; Android 11; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Mobile Safari/537.36",
+                "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 219.0.0.12.117"
             ]
             chrome_options.add_argument(f"--user-agent={random.choice(user_agents)}")
             
-            # ตั้งค่า Bright Data proxy - สำหรับ Scraping Browser ไม่ต้องใช้ proxy-server argument
+            # ตั้งค่า Bright Data proxy
             proxy_user = self.config['proxy_user']
             
             # เพิ่ม geo targeting ถ้าระบุ
@@ -113,15 +98,12 @@ class BrowserAPIManager:
             session_id = random.randint(1000, 9999)
             proxy_user += f"-session-{session_id}"
             
-            # สำหรับ Bright Data Scraping Browser ใช้ local Chrome แต่ traffic จะถูก route ผ่าน proxy อัตโนมัติ
-            print(f"🌐 Using Bright Data session: {proxy_user}")
-            
-            # เพิ่ม window size สำหรับความเสถียร
-            chrome_options.add_argument("--window-size=1920,1080")
+            # ตั้งค่า proxy ใน Chrome
+            proxy_url = f"{proxy_user}:{self.config['proxy_pass']}@{self.config['proxy_host']}:{self.config.get('selenium_port', '9515')}"
+            chrome_options.add_argument(f"--proxy-server=http://{proxy_url}")
             
             # สร้าง WebDriver
-            service = Service(ChromeDriverManager().install())
-            driver = webdriver.Chrome(service=service, options=chrome_options)
+            driver = webdriver.Chrome(options=chrome_options)
             driver.set_page_load_timeout(self.config.get('connection_timeout', 30))
             
             # เก็บ session
@@ -140,10 +122,96 @@ class BrowserAPIManager:
             print(f"✅ Selenium session created: {session_key} (Country: {country or 'Any'})")
             return driver, session_key
             
-        except Exception as e:
-            print(f"❌ Error creating Selenium session: {e}")
+        except Exception as e:                print(f"❌ Error creating Selenium session: {e}")
             return None, None
     
+    def extract_instagram_data_via_browser(self, session_id):
+        """ดึงข้อมูล Instagram ผ่าน Browser API"""
+        try:
+            print("[~] กำลังดึงข้อมูล Instagram ผ่าน Browser API...")
+            
+            # สร้างไฟล์ JavaScript ชั่วคราวสำหรับรันการดึงข้อมูล
+            extract_script = f"""
+const {{ extractInstagramData }} = require('./browser_api.js');
+
+async function main() {{
+    const data = await extractInstagramData('{session_id}');
+    if (data) {{
+        console.log('BROWSER_API_RESULT:' + JSON.stringify(data));
+    }} else {{
+        console.log('BROWSER_API_ERROR:Failed to extract data');
+    }}
+}}
+
+main().catch(console.error);
+"""
+            
+            # เขียนไฟล์ชั่วคราว
+            with open("temp_extract.js", "w") as f:
+                f.write(extract_script)
+            
+            # รันสคริปต์
+            result = subprocess.run(
+                ["node", "temp_extract.js"],
+                capture_output=True,
+                text=True,
+                timeout=60
+            )
+            
+            # ลบไฟล์ชั่วคราว
+            if os.path.exists("temp_extract.js"):
+                os.remove("temp_extract.js")
+            
+            if result.returncode == 0:
+                # แยกผลลัพธ์จาก output
+                for line in result.stdout.split('\n'):
+                    if line.startswith('BROWSER_API_RESULT:'):
+                        data_json = line.replace('BROWSER_API_RESULT:', '')
+                        data = json.loads(data_json)
+                        print(f"[✓] ดึงข้อมูลสำเร็จ! จำนวน {len(data)} รายการ")
+                        return data
+                    elif line.startswith('BROWSER_API_ERROR:'):
+                        error_msg = line.replace('BROWSER_API_ERROR:', '')
+                        print(f"[!] {error_msg}")
+                        return None
+                
+                print("[!] ไม่พบผลลัพธ์จาก Browser API")
+                return None
+            else:
+                print(f"[!] Browser API ล้มเหลว: {result.stderr}")
+                return None
+                
+        except Exception as e:
+            print(f"[!] เกิดข้อผิดพลาด: {str(e)}")
+            return None
+
+def fetch_real_dms_browser_api(session_file):
+    """ฟังก์ชันหลักสำหรับดึง DMs ผ่าน Browser API"""
+    # โหลด session
+    try:
+        with open(session_file) as f:
+            session_data = json.load(f)
+        
+        session_id = session_data.get("sessionid")
+        if not session_id or session_id == "your_session_id_here":
+            print("[!] ไม่พบ session ID ที่ถูกต้อง")
+            return None
+        
+        # สร้าง BrowserAPIManager
+        browser_manager = BrowserAPIManager()
+        
+        # ทดสอบการเชื่อมต่อก่อน
+        if not browser_manager.test_browser_connection():
+            print("[!] Browser API ไม่พร้อมใช้งาน")
+            return None
+        
+        # ดึงข้อมูลจริง
+        return browser_manager.extract_instagram_data_via_browser(session_id)
+        
+    except Exception as e:
+        print(f"[!] เกิดข้อผิดพลาด: {str(e)}")
+        return None
+
     def instagram_login_with_browser(self, username, password, country=None):
         """ใช้ Browser API ทำการ login Instagram"""
         driver, session_key = self.create_selenium_session(country=country, headless=True)

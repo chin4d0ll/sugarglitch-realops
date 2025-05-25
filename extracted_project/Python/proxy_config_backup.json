@@ -1,11 +1,12 @@
+
 {
     "proxy_host": "brd.superproxy.io",
-    "proxy_port": "9222",
-    "proxy_user": "brd-customer-hl_63f0835e-zone-scraping_browser",
-    "proxy_pass": "59m84ggoef95",
+    "proxy_port": "33335",
+    "proxy_user": "brd-customer-hl_a3b13c04-zone-datacenter_proxy1",
+    "proxy_pass": "kuj2c8dn9kif",
     "enabled": true,
     "auto_fallback": true,
-    "proxy_type": "brightdata_scraping",
+    "proxy_type": "brightdata",
     "rotation_enabled": true,
     "session_rotation": true,
     "country_targeting": ["US", "CA", "GB", "AU", "DE", "FR", "NL", "SG"],
@@ -14,7 +15,6 @@
     "connection_timeout": 30,
     "read_timeout": 60,
     "retry_attempts": 3,
-    "selenium_port": "9515",
     "advanced_features": {
         "geo_targeting": true,
         "smart_rotation": true,
@@ -35,5 +35,5 @@
         "alert_on_failures": true,
         "performance_metrics": true
     },
-    "note": "Updated Bright Data Scraping Browser proxy config - May 24, 2025"
+    "note": "Advanced Bright Data proxy config for Instagram brute force with enhanced features"
 }

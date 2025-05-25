@@ -8,20 +8,17 @@ import json
 import time
 import random
 import requests
-import os
-import subprocess
 from datetime import datetime
+
 try:
     from selenium import webdriver
     from selenium.webdriver.chrome.options import Options
     from selenium.webdriver.common.by import By
     from selenium.webdriver.support.ui import WebDriverWait
     from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.chrome.service import Service
-    from webdriver_manager.chrome import ChromeDriverManager
     SELENIUM_AVAILABLE = True
 except ImportError:
-    print("⚠️ Selenium not available. Browser API features will be limited.")
+    print("⚠️ Selenium not available. Install with: pip install selenium")
     SELENIUM_AVAILABLE = False
 
 class BrowserAPIManager:
@@ -40,9 +37,9 @@ class BrowserAPIManager:
         
         print(f"🌐 Bright Data Browser API initialized")
         if SELENIUM_AVAILABLE:
-            print(f"   ✅ Selenium endpoint ready")
+            print(f"   ✅ Selenium available")
         else:
-            print(f"   ⚠️ Selenium not available - install with: pip install selenium")
+            print(f"   ⚠️ Selenium not available")
     
     def load_config(self, config_file):
         """โหลด configuration"""
@@ -86,23 +83,16 @@ class BrowserAPIManager:
             chrome_options.add_argument("--disable-gpu")
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-plugins")
-            chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-            chrome_options.add_argument("--remote-debugging-port=0")  # ใช้ port สุ่ม
-            chrome_options.add_argument("--disable-web-security")
-            chrome_options.add_argument("--disable-features=VizDisplayCompositor")
-            chrome_options.add_argument("--disable-ipc-flooding-protection")
-            chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-            chrome_options.add_experimental_option('useAutomationExtension', False)
             
             # ตั้งค่า User Agent แบบสุ่ม
             user_agents = [
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
-                "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
+                "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
+                "Mozilla/5.0 (Linux; Android 11; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Mobile Safari/537.36",
+                "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 219.0.0.12.117"
             ]
             chrome_options.add_argument(f"--user-agent={random.choice(user_agents)}")
             
-            # ตั้งค่า Bright Data proxy - สำหรับ Scraping Browser ไม่ต้องใช้ proxy-server argument
+            # ตั้งค่า Bright Data proxy
             proxy_user = self.config['proxy_user']
             
             # เพิ่ม geo targeting ถ้าระบุ
@@ -113,15 +103,12 @@ class BrowserAPIManager:
             session_id = random.randint(1000, 9999)
             proxy_user += f"-session-{session_id}"
             
-            # สำหรับ Bright Data Scraping Browser ใช้ local Chrome แต่ traffic จะถูก route ผ่าน proxy อัตโนมัติ
-            print(f"🌐 Using Bright Data session: {proxy_user}")
-            
-            # เพิ่ม window size สำหรับความเสถียร
-            chrome_options.add_argument("--window-size=1920,1080")
+            # ตั้งค่า proxy ใน Chrome
+            proxy_url = f"{proxy_user}:{self.config['proxy_pass']}@{self.config['proxy_host']}:{self.config.get('selenium_port', '9515')}"
+            chrome_options.add_argument(f"--proxy-server=http://{proxy_url}")
             
             # สร้าง WebDriver
-            service = Service(ChromeDriverManager().install())
-            driver = webdriver.Chrome(service=service, options=chrome_options)
+            driver = webdriver.Chrome(options=chrome_options)
             driver.set_page_load_timeout(self.config.get('connection_timeout', 30))
             
             # เก็บ session
@@ -146,6 +133,9 @@ class BrowserAPIManager:
     
     def instagram_login_with_browser(self, username, password, country=None):
         """ใช้ Browser API ทำการ login Instagram"""
+        if not SELENIUM_AVAILABLE:
+            return {"success": False, "error": "Selenium not available"}
+            
         driver, session_key = self.create_selenium_session(country=country, headless=True)
         
         if not driver:
@@ -241,6 +231,10 @@ class BrowserAPIManager:
     def test_browser_connection(self):
         """ทดสอบการเชื่อมต่อ Browser API"""
         print("🧪 Testing Bright Data Browser API...")
+        
+        if not SELENIUM_AVAILABLE:
+            print("❌ Selenium not available. Install with: pip install selenium")
+            return False
         
         # Test 1: Selenium connection
         print("\n1. Testing Selenium connection...")
