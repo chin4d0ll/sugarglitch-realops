@@ -26,8 +26,11 @@ class UltimateProxyManager:
     """🔥 Ultimate Proxy Manager with Maximum Power"""
     
     def __init__(self, config_file: str = "proxy_config.json"):
+        # Setup logging first
+        logging.basicConfig(level=logging.INFO)
+        self.logger = logging.getLogger(__name__)
+        
         self.config_file = config_file
-        self.config = self._load_config()
         self.active_proxies = []
         self.proxy_stats = {}
         self.current_proxy_index = 0
@@ -40,9 +43,8 @@ class UltimateProxyManager:
             'JP', 'BR', 'ES', 'IT', 'SE', 'NO', 'DK'
         ]
         
-        # Setup logging
-        logging.basicConfig(level=logging.INFO)
-        self.logger = logging.getLogger(__name__)
+        # Load config after logger is setup
+        self.config = self._load_config()
         
         # Initialize proxy pool
         self._initialize_proxy_pool()
@@ -336,3 +338,107 @@ class UltimateProxyManager:
             })
         
         return stats
+    
+    def get_next_proxy(self, preferred_country: str = None, session_id: str = None) -> Optional[Dict]:
+        """Get the next available proxy with smart selection"""
+        try:
+            # Check if we need health check
+            if time.time() - self.last_health_check > self.health_check_interval:
+                self._perform_health_check()
+            
+            # Filter proxies based on criteria
+            available_proxies = [p for p in self.active_proxies if p['status'] != 'failed']
+            
+            if not available_proxies:
+                self.logger.warning("⚠️ No healthy proxies available, using any proxy")
+                available_proxies = self.active_proxies
+            
+            if not available_proxies:
+                self.logger.error("❌ No proxies available at all")
+                return None
+            
+            # Prefer specific country if requested
+            if preferred_country:
+                country_proxies = [p for p in available_proxies if p['country'] == preferred_country.upper()]
+                if country_proxies:
+                    available_proxies = country_proxies
+            
+            # Prefer specific session if requested
+            if session_id:
+                session_proxies = [p for p in available_proxies if p.get('session_id') == session_id]
+                if session_proxies:
+                    available_proxies = session_proxies
+            
+            # Smart selection based on performance
+            if len(available_proxies) > 1:
+                # Sort by success rate and last used time
+                available_proxies.sort(key=lambda x: (-x['success_rate'], x['last_used']))
+            
+            # Select proxy (round-robin with performance weighting)
+            if self.config.get('rotation', {}).get('enabled', True):
+                # Use weighted random selection for better distribution
+                weights = [max(0.1, p['success_rate'] + 0.1) for p in available_proxies]
+                total_weight = sum(weights)
+                
+                if total_weight > 0:
+                    r = random.uniform(0, total_weight)
+                    cumulative = 0
+                    for i, weight in enumerate(weights):
+                        cumulative += weight
+                        if r <= cumulative:
+                            selected_proxy = available_proxies[i]
+                            break
+                    else:
+                        selected_proxy = available_proxies[0]
+                else:
+                    selected_proxy = random.choice(available_proxies)
+            else:
+                # Simple round-robin
+                selected_proxy = available_proxies[self.current_proxy_index % len(available_proxies)]
+                self.current_proxy_index += 1
+            
+            # Update usage stats
+            selected_proxy['last_used'] = time.time()
+            selected_proxy['total_requests'] += 1
+            
+            self.logger.info(f"🌐 Selected proxy: {selected_proxy['country']} ({selected_proxy['success_rate']:.1%} success rate)")
+            return selected_proxy
+            
+        except Exception as e:
+            self.logger.error(f"❌ Failed to get next proxy: {e}")
+            return None
+    
+    def mark_proxy_failed(self, proxy_config: Dict):
+        """Mark a proxy as failed"""
+        try:
+            if not proxy_config:
+                return
+                
+            for proxy in self.active_proxies:
+                if (proxy.get('session_id') == proxy_config.get('session_id') or
+                    proxy['country'] == proxy_config.get('country')):
+                    proxy['status'] = 'failed'
+                    self.logger.warning(f"🚫 Marked proxy as failed: {proxy['country']}")
+                    break
+                    
+        except Exception as e:
+            self.logger.error(f"❌ Failed to mark proxy as failed: {e}")
+    
+    def _perform_health_check(self):
+        """Perform health check on proxies"""
+        try:
+            self.logger.info("🏥 Performing proxy health check...")
+            self.last_health_check = time.time()
+            
+            # Simple health check - reset failed proxies after some time
+            current_time = time.time()
+            reset_threshold = 1800  # 30 minutes
+            
+            for proxy in self.active_proxies:
+                if (proxy['status'] == 'failed' and 
+                    current_time - proxy['last_used'] > reset_threshold):
+                    proxy['status'] = 'unknown'
+                    self.logger.info(f"🔄 Reset proxy status: {proxy['country']}")
+            
+        except Exception as e:
+            self.logger.error(f"❌ Health check failed: {e}")

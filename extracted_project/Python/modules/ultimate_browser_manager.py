@@ -19,6 +19,7 @@ import json
 import random
 import logging
 import subprocess
+from datetime import datetime
 from typing import Dict, List, Optional, Tuple, Any
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -514,3 +515,288 @@ class UltimateBrowserManager:
             'status': session['status'],
             'uptime': time.time() - session['created_at']
         }
+    
+    def setup_virtual_display(self) -> bool:
+        """Public method to setup virtual display"""
+        return self._setup_virtual_display()
+    
+    def navigate_to_instagram(self) -> bool:
+        """Navigate to Instagram login page"""
+        try:
+            self.logger.info("Navigating to Instagram login page...")
+            self.driver.get("https://www.instagram.com/accounts/login/")
+            
+            # Wait for page to load
+            wait = WebDriverWait(self.driver, 10)
+            wait.until(EC.presence_of_element_located((By.NAME, "username")))
+            
+            # Random delay to appear human
+            time.sleep(random.uniform(2, 4))
+            
+            self.logger.info("Successfully navigated to Instagram login")
+            return True
+            
+        except Exception as e:
+            self.logger.error(f"Failed to navigate to Instagram: {e}")
+            return False
+    
+    def perform_login(self, username: str, password: str) -> bool:
+        """Perform Instagram login with human-like behavior"""
+        try:
+            self.logger.info(f"Attempting login for username: {username}")
+            
+            # Wait for elements to be ready
+            wait = WebDriverWait(self.driver, 10)
+            
+            # Find username field
+            username_field = wait.until(EC.element_to_be_clickable((By.NAME, "username")))
+            
+            # Human-like typing for username
+            self._human_type(username_field, username)
+            
+            # Find password field
+            password_field = self.driver.find_element(By.NAME, "password")
+            
+            # Human-like typing for password
+            self._human_type(password_field, password)
+            
+            # Find and click login button
+            login_button = self.driver.find_element(By.XPATH, "//button[@type='submit']")
+            
+            # Human delay before clicking
+            time.sleep(random.uniform(0.5, 1.5))
+            
+            # Click login button
+            self._human_click(login_button)
+            
+            # Wait for response
+            time.sleep(random.uniform(3, 6))
+            
+            # Check if login was successful
+            return self._check_login_success()
+            
+        except Exception as e:
+            self.logger.error(f"Login attempt failed: {e}")
+            return False
+    
+    def _human_type(self, element, text: str):
+        """Type text with human-like behavior"""
+        element.clear()
+        
+        for char in text:
+            element.send_keys(char)
+            # Random typing delay
+            time.sleep(random.uniform(0.05, 0.15))
+            
+            # Occasional typos (for realism)
+            if random.random() < 0.02:  # 2% chance of typo
+                wrong_char = random.choice('abcdefghijklmnopqrstuvwxyz')
+                element.send_keys(wrong_char)
+                time.sleep(random.uniform(0.1, 0.3))
+                element.send_keys(Keys.BACKSPACE)
+                time.sleep(random.uniform(0.1, 0.2))
+                element.send_keys(char)
+    
+    def _human_click(self, element):
+        """Click element with human-like behavior"""
+        # Move mouse to element (for realism)
+        actions = ActionChains(self.driver)
+        actions.move_to_element(element)
+        
+        # Random delay before click
+        time.sleep(random.uniform(0.1, 0.3))
+        
+        # Click
+        actions.click().perform()
+    
+    def _check_login_success(self) -> bool:
+        """Check if login was successful"""
+        try:
+            # Check current URL
+            current_url = self.driver.current_url
+            
+            # If we're still on login page, login failed
+            if '/accounts/login/' in current_url:
+                self.logger.info("Still on login page - login likely failed")
+                return False
+            
+            # Check for common success indicators
+            success_indicators = [
+                "instagram.com/",
+                "instagram.com/accounts/onetap/",
+                "instagram.com/fxcal/",
+                "instagram.com/accounts/edit/"
+            ]
+            
+            for indicator in success_indicators:
+                if indicator in current_url:
+                    self.logger.info(f"Login success detected - URL: {current_url}")
+                    return True
+            
+            # Check for presence of elements that indicate successful login
+            try:
+                # Look for navigation elements that appear after login
+                WebDriverWait(self.driver, 5).until(
+                    EC.any_of(
+                        EC.presence_of_element_located((By.XPATH, "//a[@href='/']")),
+                        EC.presence_of_element_located((By.XPATH, "//svg[@aria-label='Home']")),
+                        EC.presence_of_element_located((By.XPATH, "//a[contains(@href, '/explore/')]"))
+                    )
+                )
+                self.logger.info("Login success detected - navigation elements found")
+                return True
+            except:
+                pass
+            
+            # Check for error messages
+            try:
+                error_element = self.driver.find_element(By.XPATH, "//*[contains(text(), 'incorrect') or contains(text(), 'wrong') or contains(text(), 'error')]")
+                if error_element.is_displayed():
+                    self.logger.info("Login failed - error message detected")
+                    return False
+            except:
+                pass
+            
+            self.logger.warning(f"Unclear login status - URL: {current_url}")
+            return False
+            
+        except Exception as e:
+            self.logger.error(f"Error checking login success: {e}")
+            return False
+    
+    def verify_profile_access(self, username: str) -> bool:
+        """Verify we can access the user's profile"""
+        try:
+            profile_url = f"https://www.instagram.com/{username}/"
+            self.driver.get(profile_url)
+            
+            # Wait for page to load
+            time.sleep(random.uniform(2, 4))
+            
+            # Check if we can see profile elements
+            try:
+                WebDriverWait(self.driver, 10).until(
+                    EC.any_of(
+                        EC.presence_of_element_located((By.XPATH, f"//h2[contains(text(), '{username}')]")),
+                        EC.presence_of_element_located((By.XPATH, "//header//h2")),
+                        EC.presence_of_element_located((By.XPATH, "//article"))
+                    )
+                )
+                self.logger.info(f"Successfully accessed profile for {username}")
+                return True
+            except:
+                self.logger.warning(f"Could not verify profile access for {username}")
+                return False
+                
+        except Exception as e:
+            self.logger.error(f"Error verifying profile access: {e}")
+            return False
+    
+    def verify_feed_access(self) -> bool:
+        """Verify we can access the Instagram feed"""
+        try:
+            self.driver.get("https://www.instagram.com/")
+            
+            # Wait for feed to load
+            time.sleep(random.uniform(3, 5))
+            
+            # Check for feed elements
+            try:
+                WebDriverWait(self.driver, 10).until(
+                    EC.any_of(
+                        EC.presence_of_element_located((By.XPATH, "//article")),
+                        EC.presence_of_element_located((By.XPATH, "//div[contains(@class, 'feed')]")),
+                        EC.presence_of_element_located((By.XPATH, "//main//section"))
+                    )
+                )
+                self.logger.info("Successfully accessed Instagram feed")
+                return True
+            except:
+                self.logger.warning("Could not verify feed access")
+                return False
+                
+        except Exception as e:
+            self.logger.error(f"Error verifying feed access: {e}")
+            return False
+    
+    def get_current_username(self) -> Optional[str]:
+        """Get the current logged-in username"""
+        try:
+            # Try multiple selectors for username
+            username_selectors = [
+                "//a[contains(@href, '/')]//span",
+                "//div[@data-testid='user-avatar']//img/@alt",
+                "//header//h2",
+                "//*[contains(@class, 'username')]"
+            ]
+            
+            for selector in username_selectors:
+                try:
+                    elements = self.driver.find_elements(By.XPATH, selector)
+                    for element in elements:
+                        text = element.text or element.get_attribute('alt') or element.get_attribute('title')
+                        if text and text.strip() and not text.startswith('@'):
+                            return text.strip()
+                except:
+                    continue
+            
+            # Fallback: parse from URL if on profile page
+            current_url = self.driver.current_url
+            if '/accounts/edit/' in current_url:
+                return "profile_edit_page"  # Indicates we're logged in
+            
+            return None
+            
+        except Exception as e:
+            self.logger.error(f"Error getting current username: {e}")
+            return None
+    
+    def extract_session_data(self) -> Dict:
+        """Extract comprehensive session data"""
+        try:
+            session_data = {
+                'cookies': {},
+                'local_storage': {},
+                'session_storage': {},
+                'current_url': self.driver.current_url,
+                'user_agent': self.driver.execute_script("return navigator.userAgent;"),
+                'timestamp': datetime.now().isoformat(),
+                'success': True
+            }
+            
+            # Extract cookies
+            cookies = self.driver.get_cookies()
+            for cookie in cookies:
+                session_data['cookies'][cookie['name']] = cookie
+            
+            # Extract local storage
+            try:
+                local_storage = self.driver.execute_script("return window.localStorage;")
+                if local_storage:
+                    session_data['local_storage'] = dict(local_storage)
+            except:
+                pass
+            
+            # Extract session storage
+            try:
+                session_storage = self.driver.execute_script("return window.sessionStorage;")
+                if session_storage:
+                    session_data['session_storage'] = dict(session_storage)
+            except:
+                pass
+            
+            # Check if we have essential Instagram cookies
+            essential_cookies = ['sessionid', 'csrftoken', 'ds_user_id']
+            found_cookies = [name for name in essential_cookies if name in session_data['cookies']]
+            
+            if len(found_cookies) >= 2:  # At least 2 essential cookies
+                self.logger.info(f"Session data extracted successfully - {len(session_data['cookies'])} cookies found")
+                return session_data
+            else:
+                self.logger.warning("Session data incomplete - missing essential cookies")
+                session_data['success'] = False
+                return session_data
+            
+        except Exception as e:
+            self.logger.error(f"Error extracting session data: {e}")
+            return {'success': False, 'error': str(e)}
