@@ -87,8 +87,9 @@ class BrowserAPIManager:
             chrome_options.add_argument("--disable-extensions")
             chrome_options.add_argument("--disable-plugins")
             chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-            chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-            chrome_options.add_experimental_option('useAutomationExtension', False)
+            # Anti-detection (compatible options)
+            chrome_options.add_argument('--disable-automation')
+            chrome_options.add_argument('--disable-blink-features=AutomationControlled')
             
             # ตั้งค่า User Agent แบบสุ่ม
             user_agents = [

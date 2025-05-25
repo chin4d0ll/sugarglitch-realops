@@ -3,33 +3,25 @@ from requests.auth import HTTPProxyAuth
 import json
 import random
 import time
-import websocket
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
 class ProxyManager:
     def __init__(self, config_file="proxy_config.json"):
-        # ค่าเริ่มต้นจาก Bright Data Scraping Browser
+        # ค่าเริ่มต้นจาก BrightData
         self.proxy_host = "brd.superproxy.io"
-        self.proxy_port = "9222"
-        self.proxy_user = "brd-customer-hl_63f0835e-zone-scraping_browser"
-        self.proxy_pass = "59m84ggoef95"
+        self.proxy_port = "33335"
+        self.proxy_user = "brd-customer-hl_a3b13c04-zone-datacenter_proxy1"
+        self.proxy_pass = "kuj2c8dn9kif"
         self.enabled = True
         
         # Bright Data specific settings
         self.rotation_enabled = True
         self.session_rotation = True
-        self.country_targeting = ["US", "CA", "GB", "AU", "DE", "FR"]
+        self.country_targeting = ["US", "CA", "GB", "AU"]
         self.sticky_session = False
         self.user_agent_rotation = True
         self.connection_timeout = 30
         self.read_timeout = 60
         self.retry_attempts = 3
-        
-        # Scraping Browser specific
-        self.selenium_port = "9515"
-        self.proxy_type = "brightdata_scraping"
         
         # Current session tracking
         self.current_session_id = None
