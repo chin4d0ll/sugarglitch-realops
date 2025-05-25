@@ -502,7 +502,7 @@ class RealPenetrationAttack:
             return
         
         # ตั้งค่า Chrome
-        if not self.setup_fixed_chrome():
+        if not self.setup_real_chrome():
             return
         
         # Extract CSRF token
