@@ -57,7 +57,7 @@ class RealInstagramExtractor:
         
         if not self.session_data:
             print("❌ No valid session data found!")
-            return False
+            raise ValueError("No valid session data found. Please provide a valid session file.")
         
         return True
     
