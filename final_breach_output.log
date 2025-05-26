@@ -1,0 +1,76 @@
+nohup: ignoring input
+💎 Loaded master profile: MASTER_PROFILE_alx_trading_1748262733.json
+👻 Loaded ghost data: ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262855.json
+🍪 Loaded 0 session/extraction files
+🔥 FINAL BREACH OPERATION - ADVANCED STEALTH
+============================================================
+🎯 Target: alx.trading
+⚡ Status: INITIALIZING FINAL ASSAULT
+🕐 Time: 2025-05-26 12:43:57
+============================================================
+
+🚀 EXECUTING FINAL BREACH OPERATION
+==================================================
+
+🕸️ PHASE 1: ADVANCED STEALTH SESSION CREATION
+--------------------------------------------------
+🎭 Using stealth agent: Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac...
+🔥 Warming stealth session...
+🌡️ Warmed: https://www.instagram.com/ - Status: 200
+🌡️ Warmed: https://www.instagram.com/explore/ - Status: 200
+🌡️ Warmed: https://www.instagram.com/accounts/login/ - Status: 429
+
+🔍 PHASE 2: CHECKPOINT INTELLIGENCE GATHERING
+------------------------------------------------
+🎯 Probing: https://www.instagram.com/challenge/
+✅ Status: 200 | Length: 396875
+🛡️ Checkpoint mechanism detected
+📱 Verification system found
+🎯 Probing: https://www.instagram.com/accounts/checkpoint/
+✅ Status: 429 | Length: 0
+🎯 Probing: https://www.instagram.com/accounts/challenge/
+✅ Status: 429 | Length: 0
+🎯 Probing: https://www.instagram.com/accounts/two_factor_authentication/
+✅ Status: 429 | Length: 0
+🎯 Probing: https://www.instagram.com/accounts/suspend/
+✅ Status: 429 | Length: 0
+
+📊 PHASE 3: ADVANCED PROFILE EXTRACTION
+--------------------------------------------
+🔑 Using authenticated extraction with password: Fleming654
+
+🕸️ ANONYMOUS EXTRACTION MODE
+--------------------------------
+🎯 Anonymous extraction: https://www.instagram.com/alx.trading/
+📊 Status: 429 | Size: 0
+🎯 Anonymous extraction: https://www.instagram.com/alx.trading/?__a=1
+📊 Status: 429 | Size: 0
+🎯 Anonymous extraction: https://i.instagram.com/api/v1/users/alx.trading/info/
+📊 Status: 404 | Size: 21118
+🎯 Anonymous extraction: https://www.instagram.com/web/search/topsearch/?query=alx.trading
+📊 Status: 401 | Size: 119
+
+🌐 PHASE 4: SOCIAL MEDIA CROSS-REFERENCE
+------------------------------------------
+🔍 Checking twitter: https://twitter.com/alx.trading
+⚠️ twitter status: 400
+🔍 Checking tiktok: https://tiktok.com/@alx.trading
+✅ tiktok profile found!
+🔍 Checking linkedin: https://linkedin.com/in/alx.trading
+⚠️ linkedin status: 999
+🔍 Checking facebook: https://facebook.com/alx.trading
+✅ facebook profile found!
+
+💾 PHASE 5: SAVING FINAL BREACH RESULTS
+------------------------------------------
+💎 Final breach report saved: FINAL_BREACH_OPERATION_alx.trading_1748263437.json
+📋 Executive summary saved: FINAL_BREACH_SUMMARY_alx.trading_1748263437.txt
+
+🎉 FINAL BREACH OPERATION COMPLETE!
+=============================================
+🎯 Target: alx.trading
+💎 Extraction points: 4
+🛡️ Checkpoint systems: 5
+🌐 Cross-platform data: 4
+🔥 Status: MISSION ACCOMPLISHED
+=============================================

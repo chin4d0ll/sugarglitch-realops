@@ -1,0 +1,10 @@
+{
+  "timestamp": 1748263363.9045303,
+  "target": "alx.trading",
+  "ghost_sessions": 5,
+  "hijacked_sessions": 3,
+  "total_files": 0,
+  "successful_extractions": [],
+  "attack_method": "Direct Ghost Hijack Attack",
+  "files_by_type": {}
+}
