@@ -1,0 +1,34 @@
+2025-05-26 05:57:50,552 - GHOST - INFO - 👻 Loaded 0 existing hijacked sessions
+2025-05-26 05:57:50,553 - GHOST - INFO - ================================================================================
+2025-05-26 05:57:50,553 - GHOST - INFO - 👻💀 BRIGHT DATA GHOST MODE HIJACK OPERATION INITIATED 💀👻
+2025-05-26 05:57:50,553 - GHOST - INFO - 🎯 TARGET: whatilove1728
+2025-05-26 05:57:50,553 - GHOST - INFO - 🆔 OPERATION: GHOST_OP_1748239070_4308
+2025-05-26 05:57:50,553 - GHOST - INFO - 👻 MAXIMUM STEALTH - ANTI-DETECTION ACTIVE
+2025-05-26 05:57:50,553 - GHOST - INFO - ================================================================================
+2025-05-26 05:57:50,553 - GHOST - INFO - 👻 GHOST ATTACK 1/3: MOBILE_US
+2025-05-26 05:57:50,553 - GHOST - INFO - 👻 INITIATING SESSION HIJACK WITH MOBILE_US PROXY
+2025-05-26 05:57:50,554 - GHOST - INFO - 👻 Phase 1: Ghost homepage infiltration
+2025-05-26 05:57:55,153 - GHOST - ERROR - ❌ Session hijack failed: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1000)')))
+2025-05-26 05:57:55,154 - GHOST - WARNING - ❌ GHOST HIJACK FAILED: mobile_us
+2025-05-26 05:57:55,154 - GHOST - INFO - 👻 Ghost mode cooling down...
+2025-05-26 05:58:06,515 - GHOST - INFO - 👻 GHOST ATTACK 2/3: RESIDENTIAL_US
+2025-05-26 05:58:06,515 - GHOST - INFO - 👻 INITIATING SESSION HIJACK WITH RESIDENTIAL_US PROXY
+2025-05-26 05:58:06,516 - GHOST - INFO - 👻 Phase 1: Ghost homepage infiltration
+2025-05-26 05:58:11,853 - GHOST - ERROR - ❌ Session hijack failed: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 407 Zone not found')))
+2025-05-26 05:58:11,853 - GHOST - WARNING - ❌ GHOST HIJACK FAILED: residential_us
+2025-05-26 05:58:11,853 - GHOST - INFO - 👻 Ghost mode cooling down...
+2025-05-26 05:58:29,409 - GHOST - INFO - 👻 GHOST ATTACK 3/3: DATACENTER
+2025-05-26 05:58:29,410 - GHOST - INFO - 👻 INITIATING SESSION HIJACK WITH DATACENTER PROXY
+2025-05-26 05:58:29,410 - GHOST - INFO - 👻 Phase 1: Ghost homepage infiltration
+2025-05-26 05:58:34,403 - GHOST - ERROR - ❌ Session hijack failed: HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 407 Zone not found')))
+2025-05-26 05:58:34,404 - GHOST - WARNING - ❌ GHOST HIJACK FAILED: datacenter
+2025-05-26 05:58:34,412 - GHOST - INFO - 👻 Ghost intelligence report saved: GHOST_INTELLIGENCE_REPORT_whatilove1728_1748239114.json
+2025-05-26 05:58:34,414 - GHOST - INFO - 👻 Ghost operation data saved: GHOST_OPERATION_DATA_whatilove1728_1748239114.json
+2025-05-26 05:58:34,414 - GHOST - INFO - ================================================================================
+2025-05-26 05:58:34,414 - GHOST - INFO - 👻💀 GHOST MODE OPERATION COMPLETE 💀👻
+2025-05-26 05:58:34,415 - GHOST - INFO - ⏱️  TOTAL EXECUTION TIME: 43.86 seconds
+2025-05-26 05:58:34,415 - GHOST - INFO - 👻 GHOST SCORE: 0.00%
+2025-05-26 05:58:34,416 - GHOST - INFO - ✅ SUCCESSFUL HIJACKS: 0/3
+2025-05-26 05:58:34,416 - GHOST - INFO - 🧠 INTELLIGENCE GATHERED: 0 data points
+2025-05-26 05:58:34,416 - GHOST - INFO - 👻 GHOST INTELLIGENCE REPORT GENERATED
+2025-05-26 05:58:34,417 - GHOST - INFO - ================================================================================

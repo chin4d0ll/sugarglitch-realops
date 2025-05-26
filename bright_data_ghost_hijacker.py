@@ -40,14 +40,14 @@ class BrightDataGhostHijacker:
         self.target = "whatilove1728"
         self.target_url = f"https://www.instagram.com/{self.target}/"
         
-        # Bright Data proxy endpoints (verified working)
+        # Bright Data proxy endpoints (corrected configuration)
         self.proxy_endpoints = {
             'mobile_us': {
-                'http': 'http://brd-customer-hl_63f0835e-zone-mobile:fl13j3qcjvqh@brd.superproxy.io:33335',
-                'https': 'http://brd-customer-hl_63f0835e-zone-mobile:fl13j3qcjvqh@brd.superproxy.io:33335'
+                'http': 'http://brd-customer-hl_63f0835e-zone-mobile_proxy1:fl13j3qcjvqh@brd.superproxy.io:33335',
+                'https': 'http://brd-customer-hl_63f0835e-zone-mobile_proxy1:fl13j3qcjvqh@brd.superproxy.io:33335'
             },
             'residential_us': {
-                'http': 'http://brd-customer-hl_63f0835e-zone-residential:fl13j3qcjvqh@brd.superproxy.io:22225',
+                'http': 'http://brd-customer-hl_63f0835e-zone-residential_proxy1:fl13j3qcjvqh@brd.superproxy.io:22225',
                 'https': 'http://brd-customer-hl_63f0835e-zone-residential:fl13j3qcjvqh@brd.superproxy.io:22225'
             },
             'datacenter': {
