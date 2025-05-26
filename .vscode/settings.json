@@ -1,0 +1,26 @@
+{
+  "sqltools.connections": [
+    {
+      "name": "Instagram Deep Data",
+      "driver": "SQLite",
+      "database": "./extracted_project/Python/instagram_deep_data_alx.trading.db",
+      "description": "Instagram analysis database",
+      "connectionMethod": "Database File"
+    }
+  ],
+  "sqltools.useNodeRuntime": true,
+  "sqltools.autoConnectTo": [
+    "Instagram Deep Data"
+  ],
+  "sqltools.defaultExportType": "csv",
+  "sql.format.keywordCase": "upper",
+  "sql.format.identifierCase": "lower",
+  "sql.format.stripComments": false,
+  "sql.format.reindent": true,
+  "[sql]": {
+    "editor.defaultFormatter": "bradymholt.pgformatter"
+  },
+  "[sqlite]": {
+    "editor.defaultFormatter": "alexcvzz.vscode-sqlite"
+  }
+}
