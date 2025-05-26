@@ -1,0 +1,117 @@
+{
+    "operation_metadata": {
+        "target_identifier": "Yuliana Safonova (@juulisaaf)",
+        "extraction_timestamp": "2025-05-26T20:25:17.012267",
+        "operation_status": "LIVE EXTRACTION COMPLETE",
+        "data_sources": [
+            "Telegram",
+            "Instagram",
+            "VK",
+            "Email Analysis"
+        ]
+    },
+    "target_profile": {
+        "telegram_username": "juulisaaf",
+        "full_name": "Yuliana Safonova",
+        "birth_date": "2006-08-02",
+        "age": 18,
+        "phone": "+79142928455",
+        "phone_clean": "79142928455",
+        "instagram": "juulisaaf",
+        "vk": "juuliisaaf",
+        "email": "mikhail76safonov@icloud.com",
+        "location": "Saint Petersburg, Russia"
+    },
+    "telegram_intelligence": {
+        "username": "juulisaaf",
+        "profile_accessible": true,
+        "public_data": {
+            "display_name": "yulikpulik",
+            "description": "You can contact @juulisaaf right away.",
+            "profile_image_url": "https://cdn4.cdn-telegram.org/file/VI4892TQs5qzjGvn3bMeyuXqSf2tNffPUtGcB5f-uvLZ79Ui-gsv01H2ULkNt_4SRsU-7yNjN3Ht-5Ylp6--5gJoVEtEOVri2FUl48mF0IpNfBEDIr2g9g_ufkC2nUXKfEJCqZjbaYKHaQiOthhOolr1bIlCJbR-hK0ChJgqdT4fj5k1nVbdCxn52vtsoaWf2aC_T4cRz--dpZkPKXAkzn0o-8uy8t6nRbel2naQWG9KQgAtlJXgSuKB201UrpwP718fbsy-GCVIw7TijfkSyhHB7ICWq5sstHRZuCpzACuvv0EuKISph4j7dSFHaHxlifhVSKRV3QyTnCtoa-jGyQ.jpg",
+            "is_private": false
+        },
+        "extraction_timestamp": "2025-05-26T20:25:14.089329",
+        "source_url": "https://t.me/juulisaaf"
+    },
+    "cross_platform_intelligence": {
+        "instagram_analysis": {
+            "username": "juulisaaf",
+            "profile_url": "https://instagram.com/juulisaaf",
+            "accessible": false,
+            "extracted_data": {}
+        },
+        "vk_analysis": {
+            "username": "juuliisaaf",
+            "profile_url": "https://vk.com/juuliisaaf",
+            "accessible": true,
+            "extracted_data": {
+                "name": "Юлиана Сафонова",
+                "is_private": true
+            }
+        },
+        "email_analysis": {
+            "email_address": "mikhail76safonov@icloud.com",
+            "domain": "icloud.com",
+            "username_part": "mikhail76safonov",
+            "analysis": {
+                "likely_relation": "Family member (Mikhail)",
+                "birth_year_indicator": "1976 (likely parent)",
+                "family_name": "Safonov family",
+                "platform": "Apple iCloud",
+                "security_implications": "Two-factor authentication likely enabled"
+            }
+        },
+        "cross_platform_correlation": {
+            "username_patterns": {
+                "telegram": "juulisaaf",
+                "instagram": "juulisaaf",
+                "vk": "juuliisaaf",
+                "consistency": "High - 'juuli' base consistent across platforms"
+            },
+            "identity_correlation": {
+                "names_found": [
+                    "Юлиана Сафонова"
+                ]
+            },
+            "vulnerability_assessment": {
+                "privacy_levels": [
+                    "instagram_analysis: Public",
+                    "vk_analysis: Private"
+                ],
+                "overall_exposure": "HIGH - Multiple public profiles with consistent usernames"
+            }
+        }
+    },
+    "phone_search_results": {
+        "phone_number": "79142928455",
+        "telegram_found": false,
+        "search_methods": [
+            "telegram_contact_search"
+        ],
+        "results": {
+            "contact_search": {
+                "status": "requires_telegram_api",
+                "note": "Phone number search requires authenticated Telegram session"
+            }
+        }
+    },
+    "intelligence_assessment": {
+        "data_availability": "HIGH",
+        "cross_platform_correlation": "CONFIRMED",
+        "vulnerability_score": 100,
+        "exploitation_readiness": "READY"
+    },
+    "extraction_log": [
+        {
+            "timestamp": "2025-05-26T20:25:14.588480",
+            "level": "SUCCESS",
+            "message": "Extracted data from https://t.me/juulisaaf"
+        },
+        {
+            "timestamp": "2025-05-26T20:25:17.012096",
+            "level": "SUCCESS",
+            "message": "VK profile juuliisaaf analyzed"
+        }
+    ]
+}
