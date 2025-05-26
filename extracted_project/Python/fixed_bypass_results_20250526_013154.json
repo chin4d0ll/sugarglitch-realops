@@ -1,0 +1,77 @@
+[
+  {
+    "identifier": "alx.trading",
+    "mobile_result": {
+      "status": "non_json",
+      "text": "Bad request"
+    },
+    "web_result": {
+      "status": "success",
+      "data": {
+        "message": "CSRF token missing or incorrect",
+        "status": "fail"
+      }
+    },
+    "timestamp": "2025-05-26T01:31:40.418374"
+  },
+  {
+    "identifier": "0615414210",
+    "mobile_result": {
+      "status": "non_json",
+      "text": "Bad request"
+    },
+    "web_result": {
+      "status": "success",
+      "data": {
+        "message": "CSRF token missing or incorrect",
+        "status": "fail"
+      }
+    },
+    "timestamp": "2025-05-26T01:31:44.038241"
+  },
+  {
+    "identifier": "+447793127209",
+    "mobile_result": {
+      "status": "non_json",
+      "text": "Bad request"
+    },
+    "web_result": {
+      "status": "success",
+      "data": {
+        "message": "CSRF token missing or incorrect",
+        "status": "fail"
+      }
+    },
+    "timestamp": "2025-05-26T01:31:47.666975"
+  },
+  {
+    "identifier": "615414210",
+    "mobile_result": {
+      "status": "non_json",
+      "text": "Bad request"
+    },
+    "web_result": {
+      "status": "success",
+      "data": {
+        "message": "CSRF token missing or incorrect",
+        "status": "fail"
+      }
+    },
+    "timestamp": "2025-05-26T01:31:51.259797"
+  },
+  {
+    "identifier": "447793127209",
+    "mobile_result": {
+      "status": "non_json",
+      "text": "Bad request"
+    },
+    "web_result": {
+      "status": "success",
+      "data": {
+        "message": "CSRF token missing or incorrect",
+        "status": "fail"
+      }
+    },
+    "timestamp": "2025-05-26T01:31:54.847420"
+  }
+]
