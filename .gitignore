@@ -1,0 +1,88 @@
+# SugarGlitch RealOps - Git Ignore
+
+# Environment & Secrets
+.env
+.env.local
+.env.production
+*.key
+*.pem
+secrets/
+
+# Session & Authentication
+*session*
+*cookie*
+*auth*
+*login*
+*token*
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+databases/*.db
+
+# Logs
+logs/
+*.log
+*.log.*
+
+# Cache & Temp
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+temp/
+tmp/
+.cache/
+.pytest_cache/
+
+# IDE
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Media files (large)
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wav
+*.mp3
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Sensitive data
+extractions/
+intelligence/
+private_*/
+sensitive_*/

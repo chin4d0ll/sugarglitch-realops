@@ -80,3 +80,33 @@ UnboundLocalError: cannot access local variable 'safe_print' where it is not ass
 2025-05-26 21:53:27,270 - utils.error_handler - INFO - ✅ Completed run_complete_validation successfully
 2025-05-26 21:53:27,280 - utils.error_handler - INFO - ✅ Completed run_tool successfully
 2025-05-26 21:53:27,280 - utils.error_handler - INFO - ✅ Completed quick_start successfully
+2025-05-26 22:15:26,862 - utils.error_handler - INFO - 🚀 Starting run_cleanup at 2025-05-26 22:15:26.862161
+2025-05-26 22:15:26,867 - utils.error_handler - INFO - 🚀 Starting analyze_space_usage at 2025-05-26 22:15:26.867647
+2025-05-26 22:15:27,397 - utils.error_handler - INFO - ✅ Completed analyze_space_usage successfully
+2025-05-26 22:15:27,397 - utils.error_handler - INFO - 🚀 Starting cleanup_pycache at 2025-05-26 22:15:27.397763
+2025-05-26 22:15:27,417 - utils.error_handler - INFO - ✅ Completed cleanup_pycache successfully
+2025-05-26 22:15:27,417 - utils.error_handler - INFO - 🚀 Starting cleanup_temp_files at 2025-05-26 22:15:27.417772
+2025-05-26 22:15:27,579 - utils.error_handler - INFO - ✅ Completed cleanup_temp_files successfully
+2025-05-26 22:15:27,580 - utils.error_handler - INFO - 🚀 Starting cleanup_old_logs at 2025-05-26 22:15:27.580087
+2025-05-26 22:15:27,598 - utils.error_handler - INFO - ✅ Completed cleanup_old_logs successfully
+2025-05-26 22:15:27,598 - utils.error_handler - INFO - 🚀 Starting cleanup_empty_folders at 2025-05-26 22:15:27.598297
+2025-05-26 22:15:27,648 - utils.error_handler - INFO - ✅ Completed cleanup_empty_folders successfully
+2025-05-26 22:15:27,649 - utils.error_handler - INFO - 🚀 Starting cleanup_duplicate_files at 2025-05-26 22:15:27.649048
+2025-05-26 22:15:27,818 - utils.error_handler - INFO - ✅ Completed cleanup_duplicate_files successfully
+2025-05-26 22:15:27,819 - utils.error_handler - INFO - ✅ Completed run_cleanup successfully
+2025-05-26 22:16:36,387 - utils.error_handler - INFO - 🚀 Starting run_cleanup at 2025-05-26 22:16:36.387642
+2025-05-26 22:16:36,387 - utils.error_handler - INFO - 🚀 Starting analyze_space_usage at 2025-05-26 22:16:36.387863
+2025-05-26 22:16:36,596 - utils.error_handler - INFO - ✅ Completed analyze_space_usage successfully
+2025-05-26 22:16:36,596 - utils.error_handler - INFO - 🚀 Starting cleanup_pycache at 2025-05-26 22:16:36.596963
+2025-05-26 22:16:36,814 - utils.error_handler - INFO - ✅ Completed cleanup_pycache successfully
+2025-05-26 22:16:36,814 - utils.error_handler - INFO - 🚀 Starting cleanup_temp_files at 2025-05-26 22:16:36.814665
+2025-05-26 22:16:36,975 - utils.error_handler - INFO - ✅ Completed cleanup_temp_files successfully
+2025-05-26 22:16:36,976 - utils.error_handler - INFO - 🚀 Starting cleanup_old_logs at 2025-05-26 22:16:36.975997
+2025-05-26 22:16:36,992 - utils.error_handler - INFO - ✅ Completed cleanup_old_logs successfully
+2025-05-26 22:16:36,992 - utils.error_handler - INFO - 🚀 Starting cleanup_empty_folders at 2025-05-26 22:16:36.992159
+2025-05-26 22:16:37,113 - utils.error_handler - INFO - ✅ Completed cleanup_empty_folders successfully
+2025-05-26 22:16:37,113 - utils.error_handler - INFO - 🚀 Starting cleanup_duplicate_files at 2025-05-26 22:16:37.113536
+2025-05-26 22:16:37,333 - utils.error_handler - INFO - ✅ Completed cleanup_duplicate_files successfully
+2025-05-26 22:16:37,334 - utils.error_handler - INFO - 🚀 Starting create_cleanup_summary at 2025-05-26 22:16:37.334040
+2025-05-26 22:16:37,334 - utils.error_handler - INFO - ✅ Completed create_cleanup_summary successfully
+2025-05-26 22:16:37,335 - utils.error_handler - INFO - ✅ Completed run_cleanup successfully

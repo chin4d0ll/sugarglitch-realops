@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-05-26T22:21:53.501376",
+  "total_files_deleted": 2,
+  "total_dirs_deleted": 2,
+  "total_space_saved": 391602,
+  "space_saved_formatted": "382.42 KB",
+  "deleted_files": [
+    "/workspaces/sugarglitch-realops/temp/debug_redirect.html",
+    "/workspaces/sugarglitch-realops/temp/cleanup_workspace.sh"
+  ],
+  "deleted_directories": [
+    "/workspaces/sugarglitch-realops/temp/sessions/backups",
+    "/workspaces/sugarglitch-realops/temp/media/extracted/whatilove1728_images"
+  ]
+}

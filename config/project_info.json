@@ -1,0 +1,19 @@
+{
+  "name": "SugarGlitch RealOps",
+  "version": "2.1.0",
+  "description": "Advanced Intelligence & Session Management Platform",
+  "author": "SugarGlitch Team",
+  "python_version": "3.8+",
+  "created": "2025-05-26",
+  "last_updated": "2025-05-26T22:39:28.516792",
+  "stats": {
+    "python_files": 375,
+    "json_files": 226,
+    "config_files": 32,
+    "script_files": 69,
+    "data_files": 54,
+    "last_updated": "2025-05-26T22:39:28.425859",
+    "total_size": 167362097,
+    "directories": 356
+  }
+}

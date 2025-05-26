@@ -1,0 +1,29 @@
+{
+  "project": {
+    "name": "SugarGlitch RealOps",
+    "version": "2.1.0",
+    "description": "Advanced Intelligence & Session Management Platform",
+    "author": "SugarGlitch Team",
+    "python_version": "3.8+",
+    "created": "2025-05-26",
+    "last_updated": "2025-05-26T22:30:23.108466"
+  },
+  "settings": {
+    "debug": false,
+    "log_level": "INFO",
+    "max_workers": 4,
+    "timeout": 30,
+    "retry_attempts": 3
+  },
+  "paths": {
+    "data_dir": "data",
+    "logs_dir": "logs",
+    "config_dir": "config",
+    "temp_dir": "temp"
+  },
+  "security": {
+    "encryption_enabled": true,
+    "session_timeout": 3600,
+    "max_login_attempts": 3
+  }
+}
