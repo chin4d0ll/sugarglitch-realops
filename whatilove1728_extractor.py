@@ -1,10 +1,20 @@
-import json
-import requests
-
 #!/usr/bin/env python3
 """
-Extractor for whatilove1728 data.
+🔥 REAL INSTAGRAM EXTRACTOR 🔥
+Target: whatilove1728
+Purpose: Extract real data from personal Instagram account
 """
+
+import json
+import requests
+import os
+import time
+import random
+from datetime import datetime
+from pathlib import Path
+from urllib.parse import urlparse
+import re
+from fake_useragent import UserAgent
 
 
 class WhatILove1728Extractor:
