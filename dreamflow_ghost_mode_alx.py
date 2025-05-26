@@ -58,17 +58,35 @@ class DreamflowGhostMode:
             "stealth_session_alx.txt"
         ]
         
+        # Also check for recently generated sessionid files
+        import glob
+        recent_files = glob.glob("alx_trading_sessionid_*.txt") + glob.glob("alx_trading_sessionid_*.json")
+        session_files.extend(recent_files)
+        
         for file in session_files:
             if os.path.exists(file):
                 try:
                     with open(file, 'r') as f:
                         content = f.read().strip()
+                        
+                        # Handle JSON files
+                        if file.endswith('.json'):
+                            import json
+                            data = json.loads(content)
+                            if 'sessionid' in data:
+                                self.sessionid = data['sessionid']
+                                print(f"✅ Loaded sessionid from JSON {file}: {self.sessionid[:20]}...")
+                                return True
+                        
+                        # Handle text files
                         if 'sessionid=' in content:
                             self.sessionid = content.split('sessionid=')[1].split(';')[0]
                         else:
                             self.sessionid = content
-                    print(f"✅ Loaded sessionid from {file}: {self.sessionid[:20]}...")
-                    return True
+                            
+                        if self.sessionid and len(self.sessionid) > 10:
+                            print(f"✅ Loaded sessionid from {file}: {self.sessionid[:20]}...")
+                            return True
                 except:
                     continue
         
