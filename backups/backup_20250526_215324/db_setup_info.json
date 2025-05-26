@@ -1,0 +1,11 @@
+{
+  "database_path": "quick_realops.db",
+  "setup_time": "2025-05-26T02:05:14.981983",
+  "tables_created": [
+    "targets",
+    "extracted_data",
+    "proxy_sessions",
+    "operation_logs"
+  ],
+  "status": "success"
+}

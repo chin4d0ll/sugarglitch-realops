@@ -1,0 +1,61 @@
+{
+    "enabled": true,
+    "proxy_type": "mixed",
+    "use_direct_fallback": true,
+    "free_proxies": [
+        {
+            "host": "50.168.72.112",
+            "port": "80",
+            "username": "",
+            "password": "",
+            "country": "US"
+        },
+        {
+            "host": "50.168.72.113",
+            "port": "80",
+            "username": "",
+            "password": "",
+            "country": "US"
+        },
+        {
+            "host": "50.168.72.114",
+            "port": "80",
+            "username": "",
+            "password": "",
+            "country": "US"
+        },
+        {
+            "host": "8.210.83.33",
+            "port": "80",
+            "username": "",
+            "password": "",
+            "country": "CN"
+        },
+        {
+            "host": "47.74.152.29",
+            "port": "80",
+            "username": "",
+            "password": "",
+            "country": "SG"
+        }
+    ],
+    "brightdata": {
+        "enabled": false,
+        "host": "brd.superproxy.io",
+        "port": "22225",
+        "username": "brd-customer-hl_63f0835e-zone-datacenter_proxy1",
+        "password": "59m84ggoef95"
+    },
+    "rotation": {
+        "enabled": true,
+        "interval": 30,
+        "test_url": "https://httpbin.org/ip",
+        "fallback_to_direct": true
+    },
+    "settings": {
+        "timeout": 10,
+        "retry_attempts": 3,
+        "user_agent_rotation": true,
+        "health_check_interval": 300
+    }
+}

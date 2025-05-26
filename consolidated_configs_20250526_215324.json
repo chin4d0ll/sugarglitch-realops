@@ -1,0 +1,38 @@
+{
+  "proxy_config_simple.json": {
+    "enabled": false,
+    "host": "",
+    "port": 0,
+    "username": "",
+    "password": "",
+    "rotation_enabled": false
+  },
+  "proxy_configs.json": {
+    "enabled": false,
+    "host": "",
+    "port": 0,
+    "username": "",
+    "password": "",
+    "rotation_enabled": false
+  },
+  "proxy_config_new.json": {
+    "enabled": false,
+    "host": "",
+    "port": 0,
+    "username": "",
+    "password": "",
+    "rotation_enabled": false
+  },
+  "proxy_config.json": {
+    "enabled": false,
+    "host": "",
+    "port": 0,
+    "username": "",
+    "password": "",
+    "rotation_enabled": false
+  },
+  "db_setup_info.json": {
+    "created_at": "2025-05-26T21:53:24.461513",
+    "description": "Configuration for /workspaces/sugarglitch-realops/db_setup_info.json"
+  }
+}

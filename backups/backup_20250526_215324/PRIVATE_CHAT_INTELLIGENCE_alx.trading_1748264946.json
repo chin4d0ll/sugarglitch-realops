@@ -1,0 +1,19 @@
+{
+  "target": "alx.trading",
+  "extraction_timestamp": "2025-05-26T13:09:06.644738",
+  "total_chats": 0,
+  "total_intimate_messages": 0,
+  "private_chats": [],
+  "intimate_messages": [],
+  "dating_contacts": {},
+  "personal_intelligence": {
+    "intimate_analysis": {
+      "total_intimate_messages": 0,
+      "dating_indicators": [],
+      "relationship_status": "unknown",
+      "frequent_contacts": {},
+      "intimate_keywords_found": [],
+      "time_patterns": {}
+    }
+  }
+}

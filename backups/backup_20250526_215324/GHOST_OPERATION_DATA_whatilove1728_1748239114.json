@@ -1,0 +1,37 @@
+{
+  "operation_id": "GHOST_OP_1748239070_4308",
+  "target": "whatilove1728",
+  "start_time": "2025-05-26T05:57:50.553759",
+  "proxy_attempts": [
+    {
+      "method": "ghost_hijack_mobile_us",
+      "success": false,
+      "session_data": null,
+      "proxy_type": "mobile_us",
+      "timestamp": "2025-05-26T05:57:50.553963",
+      "intelligence_extracted": {},
+      "error": "HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self signed certificate in certificate chain (_ssl.c:1000)')))"
+    },
+    {
+      "method": "ghost_hijack_residential_us",
+      "success": false,
+      "session_data": null,
+      "proxy_type": "residential_us",
+      "timestamp": "2025-05-26T05:58:06.516147",
+      "intelligence_extracted": {},
+      "error": "HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 407 Zone not found')))"
+    },
+    {
+      "method": "ghost_hijack_datacenter",
+      "success": false,
+      "session_data": null,
+      "proxy_type": "datacenter",
+      "timestamp": "2025-05-26T05:58:29.410372",
+      "intelligence_extracted": {},
+      "error": "HTTPSConnectionPool(host='www.instagram.com', port=443): Max retries exceeded with url: / (Caused by ProxyError('Unable to connect to proxy', OSError('Tunnel connection failed: 407 Zone not found')))"
+    }
+  ],
+  "successful_hijacks": [],
+  "intelligence_gathered": {},
+  "ghost_score": 0.0
+}

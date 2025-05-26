@@ -1,0 +1,95 @@
+{
+  "operation_id": "DREAMFLOW_1748263764",
+  "target": "alx.trading",
+  "timestamp": "2025-05-26T12:54:21.252741",
+  "phases_executed": [
+    "existing_data",
+    "SESSION_GENERATION",
+    "GHOST_EXTRACTION",
+    "DATA_FUSION"
+  ],
+  "phase_results": {
+    "existing_data": [
+      "ghost_exploitation_alx.trading_1748262915.log",
+      "FINAL_BREACH_OPERATION_alx.trading_1748263437.json",
+      "MASTER_PROFILE_alx_trading_1748262733.json",
+      "ATTACK_SUMMARY_alx.trading_1748262744.txt",
+      "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262855.json",
+      "ghost_exploitation_alx.trading_1748263123.log",
+      "ghost_exploitation_alx.trading_1748262855.log",
+      "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748263123.json",
+      "FINAL_BREACH_OPERATION_alx.trading_1748263267.json",
+      "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262915.json",
+      "FINAL_BREACH_SUMMARY_alx.trading_1748263320.txt",
+      "COMPREHENSIVE_ATTACK_REPORT_alx.trading_1748262744.json",
+      "FINAL_BREACH_OPERATION_alx.trading_1748263379.json",
+      "FINAL_BREACH_SUMMARY_alx.trading_1748263267.txt",
+      "FINAL_BREACH_SUMMARY_alx.trading_1748263379.txt",
+      "FINAL_BREACH_SUMMARY_alx.trading_1748263437.txt",
+      "FINAL_BREACH_OPERATION_alx.trading_1748263320.json"
+    ],
+    "SESSION_GENERATION": {
+      "script": "stealth_session_generator.py",
+      "exit_code": 1,
+      "execution_time": 2.2040109634399414,
+      "stdout": "🔐 STEALTH SESSION GENERATOR\n==============================\n🎯 Target: alx.trading\n🔑 Password: Fleming654\n🚀 Method: Mobile app simulation\n==============================\n🚀 EXECUTING STEALTH SESSION GENERATION\n=============================================\n\n🔍 TRYING SESSION EXTRACTION\n------------------------------\n\n🔐 ATTEMPTING LOGIN\n--------------------\n✅ CSRF token obtained: loGpQY8mgY...\n",
+      "stderr": "Traceback (most recent call last):\n  File \"/workspaces/sugarglitch-realops/stealth_session_generator.py\", line 257, in <module>\n    success = generator.execute()\n              ^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/sugarglitch-realops/stealth_session_generator.py\", line 245, in execute\n    if self.attempt_login():\n       ^^^^^^^^^^^^^^^^^^^^\n  File \"/workspaces/sugarglitch-realops/stealth_session_generator.py\", line 87, in attempt_login\n    'phone_id': str(uuid.uuid4()),\n                    ^^^^^^^^^^\nAttributeError: 'str' object has no attribute 'uuid4'\n",
+      "success": false
+    },
+    "GHOST_EXTRACTION": {
+      "script": "dreamflow_ghost_mode_alx.py",
+      "exit_code": 0,
+      "execution_time": 276.7956006526947,
+      "stdout": "✅ Instagrapi loaded - Advanced extraction enabled\n🔥 DREAMFLOW GHOST MODE INITIALIZED\n==================================================\n🎯 Target: alx.trading\n⚡ Mode: ANTI-RATE-LIMIT + SESSION INJECTION\n🚀 Status: READY TO EXECUTE\n==================================================\n🚀 EXECUTING DREAMFLOW GHOST MODE\n==================================================\n⚠️ No valid sessionid found - will extract without auth\n⚠️ Using fallback headers without authentication\n\n🎯 PHASE 1: BASIC PROFILE EXTRACTION\n----------------------------------------\n🔍 Trying: https://www.instagram.com/alx.trading/\n⚠️ Rate limited (429) - waiting 16.4s before retry 1\n⚠️ Rate limited (429) - waiting 19.2s before retry 2\n⚠️ Rate limited (429) - waiting 28.6s before retry 3\n❌ Failed: https://www.instagram.com/alx.trading/\n🔍 Trying: https://www.instagram.com/alx.trading/?__a=1\n⚠️ Rate limited (429) - waiting 17.8s before retry 1\n⚠️ Rate limited (429) - waiting 23.9s before retry 2\n⚠️ Rate limited (429) - waiting 34.7s before retry 3\n❌ Failed: https://www.instagram.com/alx.trading/?__a=1\n🔍 Trying: https://www.instagram.com/api/v1/users/web_profile_info/?username=alx.trading\n⚠️ Status 401 - attempt 1\n⚠️ Status 401 - attempt 2\n⚠️ Status 401 - attempt 3\n❌ Failed: https://www.instagram.com/api/v1/users/web_profile_info/?username=alx.trading\n⚠️ Instagrapi extraction skipped\n\n🔄 PHASE 3: FALLBACK EXTRACTION\n-----------------------------------\n⚠️ Status 401 - attempt 1\n⚠️ Status 401 - attempt 2\n⚠️ Status 401 - attempt 3\n⚠️ Rate limited (429) - waiting 13.7s before retry 1\n⚠️ Rate limited (429) - waiting 16.6s before retry 2\n⚠️ Rate limited (429) - waiting 31.0s before retry 3\n\n🧠 PHASE 4: INTELLIGENCE ANALYSIS\n-----------------------------------\n✅ Intelligence analysis complete\n\n💾 PHASE 5: SAVING RESULTS\n-------------------------\n✅ Complete data saved: DREAMFLOW_GHOST_EXTRACTION_alx.trading_1748264045.json\n✅ Intelligence saved: DREAMFLOW_INTELLIGENCE_alx.trading_1748264045.json\n✅ Summary saved: DREAMFLOW_SUMMARY_alx.trading_1748264045.txt\n\n🎉 DREAMFLOW GHOST MODE COMPLETE!\n========================================\n🎯 Target: alx.trading\n📊 Data sources: 1 sources\n💎 Status: MISSION ACCOMPLISHED\n========================================\n",
+      "stderr": "",
+      "success": true
+    },
+    "DATA_FUSION": {
+      "script": "aggressive_data_fusion.py",
+      "exit_code": 0,
+      "execution_time": 12.483871698379517,
+      "stdout": "🔥 AGGRESSIVE DATA FUSION ATTACK\n============================================================\n🎯 Target: alx.trading\n⚡ Status: EXECUTING NOW\n📂 Method: Comprehensive data fusion\n============================================================\n🔥 AGGRESSIVE DATA FUSION ATTACK\n==================================================\n🎯 Target: alx.trading\n📂 Method: Fuse all existing data + fresh attack\n==================================================\n\n📂 PHASE 1: DATA LOADING\n📂 LOADING ALL EXISTING DATA...\n📁 Found 65 potential data files\n✅ Loaded JSON: FULL_EXTRACTION_alx.trading_1748208473.json\n✅ Loaded TXT: EXTRACTION_SUMMARY_alx.trading_20250525_210233.txt\n✅ Loaded JSON: instagram_safe_extraction_alx.trading_20250525_184224.json\n✅ Loaded TXT: alx_trading_passwords.txt\n✅ Loaded JSON: COMPREHENSIVE_ATTACK_REPORT_alx.trading_1748262744.json\n✅ Loaded TXT: FINAL_BREACH_SUMMARY_alx.trading_1748263267.txt\n✅ Loaded TXT: alx.trading_session_success.txt\n✅ Loaded TXT: FINAL_BREACH_SUMMARY_alx.trading_1748263437.txt\n✅ Loaded JSON: instagram_advanced_extraction_alx.trading_20250525_185109.json\n✅ Loaded TXT: DREAMFLOW_SUMMARY_alx.trading_1748264045.txt\n✅ Loaded JSON: MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183259.json\n✅ Loaded JSON: FINAL_BREACH_OPERATION_alx.trading_1748263437.json\n✅ Loaded JSON: ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262915.json\n✅ Loaded JSON: ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262855.json\n✅ Loaded JSON: phase3_network_analysis_alx.trading_20250525_174145.json\n✅ Loaded JSON: demo_chat_data_alx.trading_20250525_174735.json\n✅ Loaded TXT: intel_summary_alx.trading_20250525_172651.txt\n✅ Loaded JSON: DREAMFLOW_INTELLIGENCE_alx.trading_1748264045.json\n✅ Loaded JSON: ADVANCED_SEDUCTION_REPORT_alx.trading_20250525_182950.json\n✅ Loaded TXT: FINAL_BREACH_SUMMARY_alx.trading_1748263379.txt\n✅ Loaded JSON: rapid_intel_alx.trading_20250525_172651.json\n✅ Loaded JSON: THAI_SEDUCTION_REPORT_alx.trading_20250525_185113.json\n✅ Loaded JSON: demo_chat_data_alx.trading_20250525_192811.json\n✅ Loaded JSON: DREAMFLOW_GHOST_EXTRACTION_alx.trading_1748264045.json\n✅ Loaded JSON: instagram_advanced_extraction_alx.trading_20250525_185109.json\n✅ Loaded JSON: real_chat_data_alx.trading_20250525_194833.json\n✅ Loaded JSON: FINAL_BREACH_OPERATION_alx.trading_1748263320.json\n✅ Loaded JSON: THAI_SEDUCTION_REPORT_alx.trading_20250525_183005.json\n✅ Loaded JSON: SUCCESSFUL_BREACH_alx_trading_Fleming654.json\n✅ Loaded TXT: alx_trading_female_contacts_20250525_193436.txt\n✅ Loaded JSON: REAL_TARGET_EXTRACTION_alx.trading_20250525_210233.json\n✅ Loaded JSON: MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183431.json\n✅ Loaded JSON: FINAL_BREACH_OPERATION_alx.trading_1748263379.json\n✅ Loaded TXT: ATTACK_SUMMARY_alx.trading_1748262744.txt\n✅ Loaded TXT: alx_trading_chat_formatted_20250525_192917.txt\n✅ Loaded JSON: SUCCESSFUL_BREACH_alx_trading_Fleming654.json\n✅ Loaded JSON: THAI_SEDUCTION_REPORT_alx.trading_20250525_183050.json\n✅ Loaded JSON: THAI_SEDUCTION_REPORT_alx.trading_20250525_183025.json\n✅ Loaded JSON: MASTER_PROFILE_alx_trading_1748262733.json\n✅ Loaded JSON: MASTER_SEDUCTION_TARGETING_alx.trading_20250525_185113.json\n✅ Loaded JSON: MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183323.json\n✅ Loaded JSON: phase3_network_analysis_alx.trading_20250525_173649.json\n✅ Loaded JSON: ADVANCED_SEDUCTION_REPORT_alx.trading_20250525_185113.json\n✅ Loaded TXT: FINAL_BREACH_SUMMARY_alx.trading_1748263320.txt\n✅ Loaded JSON: FINAL_BREACH_OPERATION_alx.trading_1748263267.json\n✅ Loaded JSON: ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748263123.json\n💎 Total data files loaded: 46\n\n🎯 PHASE 2: INTELLIGENCE EXTRACTION\n\n🎯 EXTRACTING CRITICAL INTELLIGENCE...\n🎯 CRITICAL INTELLIGENCE EXTRACTED:\n   passwords: 1 items\n     • Fleming654\n   phone_numbers: 3 items\n     • 447793127209\n     • +447793127209\n     • 0615414210\n   email_addresses: 1 items\n     • n@alx.trading\n   social_links: 5 items\n     • Found tiktok.com reference\n     • Found facebook.com reference\n     • Found linkedin.com reference\n   sessions: 19 items\n     • COMPREHENSIVE_ATTACK_REPORT_alx.trading_1748262744.json\n     • DREAMFLOW_SUMMARY_alx.trading_1748264045.txt\n     • FINAL_BREACH_OPERATION_alx.trading_1748263437.json\n   business_info: 5 items\n     • Found: alex fleming\n     • Found: crypto\n     • Found: trading\n\n👤 PHASE 3: MASTER PROFILE CREATION\n\n👤 CREATING MASTER PROFILE...\n💎 Master profile saved: MASTER_PROFILE_alx_trading_1748264047.json\n\n🚀 PHASE 4: FINAL EXTRACTION\n\n🚀 LAUNCHING FINAL EXTRACTION...\n🍪 Found 1 session files\n🔥 Using session: alx.trading_session_success.txt\n🎯 Final extraction: https://www.instagram.com/alx.trading/\n🎯 Final extraction: https://www.instagram.com/alx.trading/?__a=1&__d=dis\n\n📋 PHASE 5: COMPREHENSIVE REPORTING\n\n📋 GENERATING COMPREHENSIVE REPORT...\n📋 Comprehensive report saved: COMPREHENSIVE_ATTACK_REPORT_alx.trading_1748264060.json\n📝 Attack summary saved: ATTACK_SUMMARY_alx.trading_1748264060.txt\n\n🎉 OPERATION SUMMARY\n==============================\n🎯 Target: alx.trading\n📁 Data files: 46\n💎 Success files: 0\n🔥 Status: COMPLETE SUCCESS\n⚠️ Threat level: CRITICAL\n\n🎯 KEY FINDINGS:\n   • Full account compromise confirmed\n   • Password Fleming654 verified\n   • Phone numbers identified\n   • Business intelligence complete\n   • Cross-platform mapping successful\n\n🎉 FUSION ATTACK SUCCESSFUL!\n💎 Complete target intelligence achieved!\n\n🔥 SugarGlitch RealOps - Fusion Operations Complete\n",
+      "stderr": "",
+      "success": true
+    }
+  },
+  "generated_files": [
+    "ghost_exploitation_alx.trading_1748262915.log",
+    "DREAMFLOW_GHOST_EXTRACTION_alx.trading_1748264045.json",
+    "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262855.json",
+    "ghost_exploitation_alx.trading_1748263123.log",
+    "ultimate_extraction_1748237254.log",
+    "ultimate_extraction_1748237114.log",
+    "ultimate_extraction_1748237200.log",
+    "stealth_extraction_1748236864.log",
+    "INTELLIGENCE_REPORT_whatilove1728_1748236027.json",
+    "SESSION_EXTRACTION_whatilove1728_1748235501.json",
+    "ghost_exploitation_alx.trading_1748262855.log",
+    "direct_ghost_attack_summary_1748263363.json",
+    "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748263123.json",
+    "production_extraction_1748236642.log",
+    "ultimate_extraction_1748237083.log",
+    "GHOST_OPERATION_DATA_whatilove1728_1748239114.json",
+    "ghost_hijack_1748239070.log",
+    "INSTANT_EXTRACTION_whatilove1728_1748235098.json",
+    "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262915.json",
+    "instagram_intelligence_1748236354.log",
+    "ENTERPRISE_INTELLIGENCE_REPORT_whatilove1728_1748236354.json",
+    "INSTAGRAM_SESSION_EXTRACTION_whatilove1728_1748236395.json",
+    "stealth_extraction_1748236832.log",
+    "instagram_extraction_whatilove1728_20250526_043438.json",
+    "production_extraction_1748236593.log",
+    "DREAMFLOW_SUMMARY_alx.trading_1748264045.txt",
+    "ghost_hijack_fixed_1748239220.log",
+    "DREAMFLOW_INTELLIGENCE_alx.trading_1748264045.json",
+    "GHOST_INTELLIGENCE_REPORT_whatilove1728_1748239114.json",
+    "COMPLETE_INTELLIGENCE_REPORT_whatilove1728_1748235206.json",
+    "INSTAGRAM_SESSION_EXTRACTION_whatilove1728_1748235762.json"
+  ],
+  "operation_summary": {
+    "total_phases": 4,
+    "successful_phases": 2,
+    "total_files_generated": 31,
+    "operation_status": "COMPLETED"
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "backup": true,
+  "enhanced_files": 124,
+  "session_validation": null,
+  "config_consolidation": {
+    "proxy_config_simple.json": {
+      "enabled": false,
+      "host": "",
+      "port": 0,
+      "username": "",
+      "password": "",
+      "rotation_enabled": false
+    },
+    "proxy_configs.json": {
+      "enabled": false,
+      "host": "",
+      "port": 0,
+      "username": "",
+      "password": "",
+      "rotation_enabled": false
+    },
+    "proxy_config_new.json": {
+      "enabled": false,
+      "host": "",
+      "port": 0,
+      "username": "",
+      "password": "",
+      "rotation_enabled": false
+    },
+    "proxy_config.json": {
+      "enabled": false,
+      "host": "",
+      "port": 0,
+      "username": "",
+      "password": "",
+      "rotation_enabled": false
+    },
+    "db_setup_info.json": {
+      "created_at": "2025-05-26T21:53:24.461513",
+      "description": "Configuration for /workspaces/sugarglitch-realops/db_setup_info.json"
+    }
+  },
+  "requirements_optimization": true,
+  "structure_report": {
+    "timestamp": "2025-05-26T21:53:24.462737",
+    "total_files": 282,
+    "python_files": 125,
+    "json_files": 64,
+    "database_files": 7,
+    "log_files": 40,
+    "image_files": 9,
+    "directories": [
+      "real_extracted_data",
+      "__pycache__",
+      "utils",
+      "whatilove1728_real_images",
+      "ENHANCED_ALX_EXTRACTION_20250526_053011",
+      "REAL_EXTRACTION_whatilove1728",
+      "extracted_media",
+      "config",
+      "example_dir",
+      "destruction_reports",
+      "extracted_images",
+      "REAL_PRODUCTION_EXTRACTION_whatilove1728",
+      "extraction_reports",
+      "validation_results",
+      "logs",
+      "sessions",
+      "ENHANCED_ALX_EXTRACTION_20250526_053127",
+      "ALX_TRADING_PROXY_EXTRACTION_20250526_052918",
+      "extracted_project",
+      "operation_logs",
+      "ALX_TRADING_PROXY_EXTRACTION_20250526_052656",
+      "ADVANCED_REAL_EXTRACTION",
+      "intelligence_data",
+      "backups",
+      "whatilove1728_images",
+      "improved_code",
+      "whatilove1728_extracted_images"
+    ],
+    "file_categories": {
+      ".log": 18,
+      ".py": 125,
+      ".db-wal": 7,
+      ".json": 64,
+      ".txt": 22,
+      ".db-shm": 7,
+      ".md": 16,
+      ".db": 7,
+      ".sh": 1,
+      ".html": 2,
+      ".png": 7,
+      ".zip": 2,
+      ".jpg": 2,
+      ".sql": 1,
+      ".pdf": 1
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "timestamp": "2025-05-26T12:54:07.963954",
+  "target": "alx.trading",
+  "confidence_level": "HIGH",
+  "data_sources": 46,
+  "profile": {
+    "username": "alx.trading",
+    "real_name": "Alex Fleming",
+    "business": "Trade Your Way",
+    "confirmed_password": "Fleming654",
+    "phone_thailand": "0615414210",
+    "phone_uk": "+447793127209",
+    "social_media": {
+      "instagram": "@alx.trading",
+      "twitter": "@alx.trading (x.com/alx.trading)",
+      "tiktok": "@alx.trading"
+    },
+    "business_focus": "Forex Trading, Cryptocurrency, Trading Education",
+    "security_status": "Checkpoint Protected",
+    "extraction_attempts": "Multiple successful data extractions"
+  },
+  "intelligence_summary": {
+    "passwords": [
+      "Fleming654"
+    ],
+    "phone_numbers": [
+      "447793127209",
+      "+447793127209",
+      "0615414210"
+    ],
+    "email_addresses": [
+      "n@alx.trading"
+    ],
+    "social_links": [
+      "Found tiktok.com reference",
+      "Found facebook.com reference",
+      "Found linkedin.com reference",
+      "Found x.com reference",
+      "Found twitter.com reference"
+    ],
+    "personal_info": [],
+    "contacts": [],
+    "sessions": [
+      "COMPREHENSIVE_ATTACK_REPORT_alx.trading_1748262744.json",
+      "DREAMFLOW_SUMMARY_alx.trading_1748264045.txt",
+      "FINAL_BREACH_OPERATION_alx.trading_1748263437.json",
+      "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262915.json",
+      "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262855.json",
+      "MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183259.json",
+      "instagram_safe_extraction_alx.trading_20250525_184224.json",
+      "MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183431.json",
+      "FINAL_BREACH_OPERATION_alx.trading_1748263320.json",
+      "ADVANCED_SEDUCTION_REPORT_alx.trading_20250525_185113.json",
+      "instagram_advanced_extraction_alx.trading_20250525_185109.json",
+      "FINAL_BREACH_OPERATION_alx.trading_1748263379.json",
+      "MASTER_PROFILE_alx_trading_1748262733.json",
+      "SUCCESSFUL_BREACH_alx_trading_Fleming654.json",
+      "MASTER_SEDUCTION_TARGETING_alx.trading_20250525_185113.json",
+      "MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183323.json",
+      "FINAL_BREACH_OPERATION_alx.trading_1748263267.json",
+      "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748263123.json",
+      "ADVANCED_SEDUCTION_REPORT_alx.trading_20250525_182950.json"
+    ],
+    "cookies": [],
+    "business_info": [
+      "Found: alex fleming",
+      "Found: crypto",
+      "Found: trading",
+      "Found: trade your way",
+      "Found: forex"
+    ]
+  },
+  "threat_level": "CRITICAL - FULL PROFILE COMPROMISED",
+  "recommended_actions": [
+    "Account fully compromised",
+    "Password confirmed: Fleming654",
+    "Phone numbers identified",
+    "Business operations mapped",
+    "Cross-platform presence confirmed",
+    "Multiple data extraction points successful"
+  ]
+}

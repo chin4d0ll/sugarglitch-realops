@@ -1,0 +1,21 @@
+{
+  "sessionid": "YOUR_SESSION_ID_HERE",
+  "ds_user_id": "YOUR_USER_ID_HERE",
+  "csrftoken": "YOUR_CSRF_TOKEN_HERE",
+  "mid": "YOUR_MID_HERE",
+  "ig_did": "YOUR_IG_DID_HERE",
+  "rur": "YOUR_RUR_HERE",
+  "created": "2025-05-26T01:34:24.000418",
+  "source": "manual_extraction",
+  "instructions": {
+    "how_to_get": [
+      "1. Open Instagram in browser",
+      "2. Login manually to your account",
+      "3. Open Developer Tools (F12)",
+      "4. Go to Application/Storage -> Cookies",
+      "5. Copy sessionid, ds_user_id, csrftoken values",
+      "6. Paste into this template",
+      "7. Save as working_session.json"
+    ]
+  }
+}

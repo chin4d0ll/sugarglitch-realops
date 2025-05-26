@@ -1,0 +1,22 @@
+{
+  "target": "whatilove1728",
+  "timestamp": "2025-05-26T04:51:06.795754",
+  "extraction_results": {
+    "cache_mining": [],
+    "api_assault": [],
+    "stealth_browser": [
+      {
+        "success": true,
+        "method": "direct_access",
+        "data_file": "browser_data_1_1748235079.json",
+        "screenshot": "stealth_extract_1_1748235079.png",
+        "images_found": 1
+      }
+    ]
+  },
+  "images_found": [],
+  "profile_data": {},
+  "success_methods": [
+    "STEALTH_BROWSER"
+  ]
+}
