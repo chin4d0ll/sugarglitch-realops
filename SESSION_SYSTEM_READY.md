@@ -5,6 +5,7 @@
 ==================================
 
 📦 INSTALLED COMPONENTS:
+
 - ✅ All Python requirements installed
 - ✅ Advanced Session Manager with encryption
 - ✅ Session validation and testing tools
@@ -13,6 +14,7 @@
 - ✅ Browser automation framework (when Chrome works)
 
 📁 FILES CREATED:
+
 - ✅ requirements.txt - All dependencies
 - ✅ advanced_session_manager.py - Core session management
 - ✅ session_refresher.py - Browser automation
@@ -23,12 +25,13 @@
 - ✅ working_session_extractor.py - Browser automation
 - ✅ simple_session_capture.py - Simple browser capture
 
-🎯 HOW TO CAPTURE YOUR INSTAGRAM SESSION:
+🎯 HOW TO CAPTURE YOUR INSTAGRAM SESSION
 =========================================
 
 OPTION 1: Manual Extraction (RECOMMENDED)
 ------------------------------------------
-1. 🌐 Open browser: https://www.instagram.com/accounts/login/
+
+1. 🌐 Open browser: <https://www.instagram.com/accounts/login/>
 2. 🔐 Log in to your Instagram account  
 3. 🛠️ Open Developer Tools (F12)
 4. 📂 Go to Application/Storage > Cookies > instagram.com
@@ -43,14 +46,16 @@ OPTION 1: Manual Extraction (RECOMMENDED)
 
 OPTION 2: Direct Input
 ----------------------
+
 Run: python direct_session_capture.py
 Choose option 2 for manual cookie input
 
 OPTION 3: Browser Automation (if Chrome issues resolved)
 --------------------------------------------------------
+
 Run: python working_session_extractor.py
 
-🔧 AFTER CAPTURING SESSION:
+🔧 AFTER CAPTURING SESSION
 ===========================
 
 📊 Monitor sessions:
@@ -62,7 +67,7 @@ python session_tester.py
 🔄 Use Advanced Session Manager:
 python advanced_session_manager.py
 
-🚀 NEXT STEPS AFTER SESSION CAPTURE:
+🚀 NEXT STEPS AFTER SESSION CAPTURE
 ====================================
 
 1. ✅ Validate session works
@@ -70,8 +75,9 @@ python advanced_session_manager.py
 3. 🔄 Set up automatic session refresh
 4. 📊 Monitor session health
 
-💡 SYSTEM BENEFITS:
+💡 SYSTEM BENEFITS
 ==================
+
 - 🔒 Encrypted session storage
 - 🔄 Automatic session refresh
 - 📊 Session monitoring dashboard  
@@ -79,14 +85,16 @@ python advanced_session_manager.py
 - 💾 Backup and recovery
 - 🌐 Browser automation ready
 
-⚠️ SECURITY NOTES:
+⚠️ SECURITY NOTES
 ==================
+
 - Session data is encrypted locally
 - Keep sessionid values private
 - Sessions expire and need refresh
 - Use session validation before extraction
 
-🎉 THE SYSTEM IS READY FOR ACTION!
+🎉 THE SYSTEM IS READY FOR ACTION
 ==================================
+
 Once you capture a valid Instagram session, you'll have a complete
 session management infrastructure for reliable Instagram data extraction.
