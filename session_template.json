@@ -1,12 +1,21 @@
 {
-  "sessionid": "YOUR_REAL_SESSIONID_HERE",
+  "sessionid": "YOUR_SESSION_ID_HERE",
   "ds_user_id": "YOUR_USER_ID_HERE",
-  "username": "your_account",
-  "note": "Replace with real session data from successful login",
-  "instructions": [
-    "1. Use account without 2FA enabled",
-    "2. Or use test account created for this purpose",
-    "3. Login with instagrapi and extract sessionid",
-    "4. Replace template values with real data"
-  ]
+  "csrftoken": "YOUR_CSRF_TOKEN_HERE",
+  "mid": "YOUR_MID_HERE",
+  "ig_did": "YOUR_IG_DID_HERE",
+  "rur": "YOUR_RUR_HERE",
+  "created": "2025-05-26T01:34:24.000418",
+  "source": "manual_extraction",
+  "instructions": {
+    "how_to_get": [
+      "1. Open Instagram in browser",
+      "2. Login manually to your account",
+      "3. Open Developer Tools (F12)",
+      "4. Go to Application/Storage -> Cookies",
+      "5. Copy sessionid, ds_user_id, csrftoken values",
+      "6. Paste into this template",
+      "7. Save as working_session.json"
+    ]
+  }
 }
