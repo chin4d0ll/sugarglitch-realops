@@ -1,0 +1,16 @@
+{
+  "_info": "This is an example session structure",
+  "username": "example_user",
+  "cookies": {
+    "sessionid": "your_session_id_here",
+    "csrftoken": "your_csrf_token_here",
+    "mid": "machine_id_here",
+    "ig_did": "instagram_device_id_here"
+  },
+  "headers": {
+    "User-Agent": "your_user_agent_here"
+  },
+  "csrf_token": "csrf_token_here",
+  "created_at": "timestamp_here",
+  "notes": "Session capture notes"
+}
