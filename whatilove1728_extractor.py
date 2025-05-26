@@ -17,7 +17,49 @@ import re
 from fake_useragent import UserAgent
 
 
-class WhatILove1728Extractor:
+class RealInstagramExtractor:
+    def __init__(self):
+        self.session = requests.Session()
+        self.target_username = "whatilove1728"
+        self.output_folder = "/workspaces/sugarglitch-realops/real_extracted_data"
+        self.session_data = None
+        self.ua = UserAgent()
+        
+        # สร้าง output folder
+        Path(self.output_folder).mkdir(exist_ok=True)
+        
+        # โหลด session data
+        self.load_session_data()
+        
+        # ตั้งค่า session
+        self.setup_session()
+    
+    def load_session_data(self):
+        """โหลด session data จริง"""
+        session_files = [
+            "./extracted_project/Python/alx_trading_complete_package_20250525_231905/session.json",
+            "./extracted_project/Python/PRIVATE_BYPASS_SUCCESS_whatilove1728_20250525_234142.json"
+        ]
+        
+        for file in session_files:
+            if os.path.exists(file):
+                try:
+                    with open(file, 'r') as f:
+                        data = json.load(f)
+                    
+                    if 'sessionid' in data:
+                        self.session_data = data
+                        print(f"✅ Loaded session from: {file}")
+                        break
+                        
+                except Exception as e:
+                    print(f"❌ Error loading {file}: {e}")
+        
+        if not self.session_data:
+            print("❌ No valid session data found!")
+            return False
+        
+        return True
     def __init__(self, api_url, session_file):
         self.api_url = api_url
         self.session_file = session_file
