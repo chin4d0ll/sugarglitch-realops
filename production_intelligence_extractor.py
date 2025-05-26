@@ -509,7 +509,7 @@ class ProductionIntelligenceExtractor:
             assessment['account_privacy'] = 'public'
             assessment['accessibility'] = 'open'
             
-        profile = data.get('basic_profile', {})
+        profile = data.get('basic_profile') or {}
         if profile.get('is_verified'):
             assessment['security_indicators'].append('verified_account')
         if profile.get('is_business'):
