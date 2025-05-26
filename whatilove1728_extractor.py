@@ -60,34 +60,8 @@ class RealInstagramExtractor:
             return False
         
         return True
-    def __init__(self, api_url, session_file):
-        self.api_url = api_url
-        self.session_file = session_file
-        self.session = self.load_session()
-
-    def load_session(self):
-        """
-        Load session data from a JSON file.
-        """
-        try:
-            with open(self.session_file, 'r') as f:
-                session = json.load(f)
-                print("✅ Session loaded successfully.")
-                return session
-        except Exception as e:
-            print(f"❌ Failed to load session: {e}")
-            return None
-
-    def fetch_data(self):
-        """
-        Fetch data from the API using the session.
-        """
-        if not self.session:
-            print("❌ No session available. Cannot fetch data.")
-            return None
-
-        headers = {
-            "Authorization": f"Bearer {self.session.get('sessionid')}"
+    
+    def setup_session(self):
         }
 
         try:
