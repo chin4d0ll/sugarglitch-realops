@@ -13,7 +13,7 @@
 
 ✅ PROXY SYSTEMS:
    │── proxy_config.json (BrightData - CONFIGURED)
-   │── proxy_config_new.json (Mixed Proxies - ACTIVE)
+   │── proxy_config_new.json (Mixed Proxies - ACTIVE))
    │── proxy_config_simple.json (Free Proxies - BACKUP)
    │── smart_proxy_manager.py (READY)
    │── ghost_mode_engine.py (STEALTH MODE)
