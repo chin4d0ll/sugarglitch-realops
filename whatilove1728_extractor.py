@@ -62,10 +62,34 @@ class RealInstagramExtractor:
         return True
     
     def setup_session(self):
+        """ตั้งค่า session สำหรับ Instagram"""
+        if not self.session_data:
+            print("❌ No session data available")
+            return False
+            
+        # ตั้งค่า headers
+        headers = {
+            'User-Agent': self.ua.random,
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Accept-Encoding': 'gzip, deflate',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
         }
+        
+        self.session.headers.update(headers)
+        
+        # ตั้งค่า cookies ถ้ามี
+        if 'cookies' in self.session_data:
+            for cookie in self.session_data['cookies']:
+                self.session.cookies.set(cookie['name'], cookie['value'])
+        
+        return True
 
+    def extract_profile_data(self):
+        """ดึงข้อมูล profile จริง"""
         try:
-            response = requests.get(self.api_url, headers=headers)
+            response = requests.get(f"https://www.instagram.com/{self.target_username}/", headers=self.session.headers)
             response.raise_for_status()
             print("✅ Data fetched successfully.")
             return response.json()
