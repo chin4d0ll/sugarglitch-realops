@@ -171,7 +171,7 @@ class UltimateHardcoreExtractor:
             
     def inject_session_cookies(self):
         """Inject GODLIKE session cookies"""
-        print(f"{Fore.PURPLE + Style.BRIGHT}🍪 INJECTING GODLIKE COOKIES 🍪")
+        print(f"{Fore.MAGENTA + Style.BRIGHT}🍪 INJECTING GODLIKE COOKIES 🍪")
         
         if not self.session_data or not self.driver:
             print(f"{Fore.RED}❌ No session data or browser!")
