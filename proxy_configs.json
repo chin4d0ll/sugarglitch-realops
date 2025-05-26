@@ -92,7 +92,7 @@
             "description": "Bright Data Thailand Residential"
         },
         {
-            "type": "http", 
+            "type": "http",
             "host": "brd-customer-hl_12345678-zone-mobile.zproxy.lum-superproxy.io",
             "port": 22225,
             "user": "brd-customer-hl_12345678-zone-mobile-country-th",
@@ -103,7 +103,7 @@
         },
         {
             "type": "http",
-            "host": "brd-customer-hl_12345678-zone-datacenter.zproxy.lum-superproxy.io", 
+            "host": "brd-customer-hl_12345678-zone-datacenter.zproxy.lum-superproxy.io",
             "port": 22225,
             "user": "brd-customer-hl_12345678-zone-datacenter-country-uk",
             "pass": "brightdata_pass",
@@ -116,7 +116,7 @@
             "host": "brd-customer-hl_12345678-zone-residential.zproxy.lum-superproxy.io",
             "port": 22225,
             "user": "brd-customer-hl_12345678-zone-residential-country-us",
-            "pass": "brightdata_pass", 
+            "pass": "brightdata_pass",
             "country": "USA",
             "session_type": "rotating",
             "description": "Bright Data USA Residential"
