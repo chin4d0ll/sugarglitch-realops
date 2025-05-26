@@ -31,7 +31,6 @@ imageio>=2.31.0
 # Networking & Proxy
 httpx>=0.25.0
 aiohttp>=3.9.0
-socks>=1.7.1
 pysocks>=1.7.1
 
 # Utilities
