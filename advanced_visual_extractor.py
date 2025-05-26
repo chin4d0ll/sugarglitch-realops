@@ -12,6 +12,7 @@ import time
 import random
 from urllib.parse import urlparse
 from pathlib import Path
+from typing import Dict, List, Optional
 
 class AdvancedVisualExtractor:
     def __init__(self):
