@@ -154,9 +154,9 @@ class DreamflowGhostMode:
             print(f"🔄 Rotated to proxy {self.current_proxy + 1}")
 
     def safe_request(self, url, method='GET', **kwargs):
-        """Make safe request with retry logic"""
-        max_retries = 3
-        base_delay = 5
+        """Make safe request with retry logic and anti-detection"""
+        max_retries = 5
+        base_delay = 8
         
         for attempt in range(max_retries):
             try:
@@ -164,13 +164,44 @@ class DreamflowGhostMode:
                 if attempt > 0:
                     self.rotate_proxy()
                 
+                # Add random delay to avoid detection
+                delay = random.uniform(3, 8) + (attempt * 2)
+                time.sleep(delay)
+                
+                # Update headers to look more human
+                human_headers = {
+                    'User-Agent': random.choice([
+                        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                        'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                    ]),
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+                    'Accept-Language': 'en-US,en;q=0.5',
+                    'Accept-Encoding': 'gzip, deflate, br',
+                    'DNT': '1',
+                    'Connection': 'keep-alive',
+                    'Upgrade-Insecure-Requests': '1',
+                    'Sec-Fetch-Dest': 'document',
+                    'Sec-Fetch-Mode': 'navigate',
+                    'Sec-Fetch-Site': 'none',
+                    'Cache-Control': 'max-age=0'
+                }
+                
+                # Add sessionid if available
+                if self.sessionid:
+                    human_headers['Cookie'] = f'sessionid={self.sessionid}; csrftoken={self.csrf_token};'
+                
+                kwargs.setdefault('headers', {}).update(human_headers)
+                
                 if method.upper() == 'GET':
-                    response = self.session.get(url, timeout=30, **kwargs)
+                    response = self.session.get(url, timeout=45, **kwargs)
                 else:
-                    response = self.session.post(url, timeout=30, **kwargs)
+                    response = self.session.post(url, timeout=45, **kwargs)
+                
+                print(f"🎯 {method} {url} -> {response.status_code}")
                 
                 if response.status_code == 429:
-                    wait_time = base_delay * (2 ** attempt) + random.uniform(5, 15)
+                    wait_time = base_delay * (2 ** attempt) + random.uniform(15, 30)
                     print(f"⚠️ Rate limited (429) - waiting {wait_time:.1f}s before retry {attempt + 1}")
                     time.sleep(wait_time)
                     continue
@@ -178,13 +209,18 @@ class DreamflowGhostMode:
                 if response.status_code in [200, 201]:
                     return response
                 
+                if response.status_code == 404:
+                    print(f"⚠️ Endpoint not found (404): {url}")
+                    return None
+                
                 print(f"⚠️ Status {response.status_code} - attempt {attempt + 1}")
-                self.smart_delay(base_delay)
+                self.smart_delay(base_delay + attempt * 3)
                 
             except Exception as e:
                 print(f"⚠️ Request error: {e} - attempt {attempt + 1}")
-                self.smart_delay(base_delay)
+                self.smart_delay(base_delay + attempt * 2)
         
+        print(f"❌ All attempts failed for: {url}")
         return None
 
     def extract_basic_profile(self):
