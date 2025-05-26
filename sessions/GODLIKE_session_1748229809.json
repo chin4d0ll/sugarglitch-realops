@@ -1,0 +1,20 @@
+{
+  "username": "whatilove1728",
+  "cookies": {
+    "sessionid": "Great! Let's capture a fresh Instagram session. I'll run the session refresher to open a browser where you can manually log in, and then we'll capture and save that session. The session capture process should open a browser window. Let me also run it with explicit choice to make sure it starts: There's a Chrome user data directory conflict. Let me fix the session capture tool to use a unique data directory:",
+    "csrftoken": "```",
+    "datr": "Made changes."
+  },
+  "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "captured_at": 1748229787.4006467,
+  "method": "extreme_manual",
+  "power_level": 80,
+  "cookie_count": 3,
+  "validation_results": {
+    "basic_check": true,
+    "instagram_test": true,
+    "power_level": 80
+  },
+  "saved_at": 1748229809,
+  "filename": "GODLIKE_session_1748229809.json"
+}
