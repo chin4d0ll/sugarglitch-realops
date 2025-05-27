@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram - Super Easy</title>
+    <style>
+        body {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            min-height: 100vh;
+        }
+        
+        .box {
+            background: white;
+            color: black;
+            padding: 25px;
+            border-radius: 15px;
+            max-width: 320px;
+            margin: 20px auto;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .emoji {
+            font-size: 48px;
+            margin: 10px 0;
+        }
+        
+        .title {
+            font-size: 24px;
+            margin: 15px 0;
+            color: #333;
+            font-weight: bold;
+        }
+        
+        .big-link {
+            display: block;
+            background: linear-gradient(45deg, #405de6, #833ab4);
+            color: white;
+            padding: 20px;
+            text-decoration: none;
+            border-radius: 12px;
+            margin: 20px 0;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .big-link:active {
+            transform: scale(0.95);
+        }
+        
+        .instruction {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            font-size: 16px;
+            border-left: 4px solid #405de6;
+        }
+        
+        .url-box {
+            background: #000;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 14px;
+            margin: 15px 0;
+            word-break: break-all;
+            border: 2px solid #333;
+        }
+        
+        .copy-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 10px 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="emoji">📱</div>
+        <div class="title">Instagram Access</div>
+        <div class="title">@alx.trading</div>
+        
+        <div class="instruction">
+            <strong>🎯 วิธีที่ง่ายที่สุด:</strong><br>
+            Copy URL ด้านล่าง แล้วเปิดใน Safari ใหม่
+        </div>
+        
+        <div class="url-box" id="magic-url">
+https://www.instagram.com/alx.trading/?utm_source=ig_web_button_share_sheet&sessionid=4976283726%3A1JgRzA56Q8e8Qs%3A12
+        </div>
+        
+        <button class="copy-btn" onclick="copyUrl()">📋 Copy URL</button>
+        <button class="copy-btn" onclick="openInstagram()">🚀 เปิดเลย</button>
+        
+        <div class="instruction">
+            <strong>📝 ขั้นตอน:</strong><br>
+            1. กด "Copy URL"<br>
+            2. เปิด Safari หน้าใหม่<br>
+            3. Paste URL แล้วกด Go<br>
+            4. เสร็จ!
+        </div>
+        
+        <a href="https://www.instagram.com/alx.trading/" class="big-link">
+            👤 หรือลองกดที่นี่
+        </a>
+        
+        <div class="instruction">
+            <strong>💡 ถ้ายังไม่ได้:</strong><br>
+            ลองเปิด instagram.com ก่อน<br>
+            แล้วค่อยใช้ URL ด้านบน
+        </div>
+    </div>
+
+    <script>
+        function copyUrl() {
+            const url = document.getElementById('magic-url').textContent.trim();
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(function() {
+                    alert('✅ Copy แล้ว! ไปเปิด Safari หน้าใหม่แล้ว Paste');
+                });
+            } else {
+                // Fallback
+                const textArea = document.createElement('textarea');
+                textArea.value = url;
+                document.body.appendChild(textArea);
+                textArea.select();
+                textArea.setSelectionRange(0, 99999);
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('✅ Copy แล้ว! ไปเปิด Safari หน้าใหม่แล้ว Paste');
+            }
+        }
+        
+        function openInstagram() {
+            const url = "https://www.instagram.com/alx.trading/?utm_source=ig_web_button_share_sheet&sessionid=4976283726%3A1JgRzA56Q8e8Qs%3A12";
+            window.open(url, '_blank');
+        }
+        
+        // Auto-copy on page load for convenience
+        window.onload = function() {
+            setTimeout(() => {
+                const instruction = document.querySelector('.instruction');
+                instruction.style.background = '#d4edda';
+                instruction.innerHTML = '<strong>🎉 พร้อมแล้ว!</strong><br>กด Copy URL แล้วเปิดใน Safari ใหม่';
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
