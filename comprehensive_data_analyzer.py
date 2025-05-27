@@ -48,7 +48,7 @@ class ComprehensiveDataAnalyzer:
             'sensitive_content': []
         }
         
-        self.logger.info("🔍 Comprehensive Data Analyzer initialized")
+        self.logger.info("Comprehensive Data Analyzer initialized")
     
     def setup_logging(self):
         """Setup logging system"""
@@ -64,9 +64,19 @@ class ComprehensiveDataAnalyzer:
         )
         self.logger = logging.getLogger(__name__)
     
+    def sanitize_text(self, text):
+        """Remove non-ASCII characters and emojis for PDF compatibility"""
+        if not isinstance(text, str):
+            text = str(text)
+        # Remove emojis and other non-ASCII characters
+        text = re.sub(r'[^\x00-\x7F]+', ' ', text)
+        # Clean up multiple spaces
+        text = re.sub(r'\s+', ' ', text).strip()
+        return text
+    
     def analyze_all_data(self):
         """วิเคราะห์ข้อมูลจริงทั้งหมดในโปรเจค"""
-        self.logger.info("🔍 Starting comprehensive data analysis...")
+        self.logger.info("Starting comprehensive data analysis...")
         
         # 1. Analyze extracted conversations
         self.analyze_conversations()
@@ -83,13 +93,13 @@ class ComprehensiveDataAnalyzer:
         # 5. Analyze social media data
         self.analyze_social_media()
         
-        self.logger.info(f"✅ Analysis complete. Found {len(self.real_data['conversations'])} conversations")
+        self.logger.info(f"Analysis complete Analysis complete. Found {len(self.real_data['conversations'])} conversations")
         
         return self.real_data
     
     def analyze_conversations(self):
         """วิเคราะห์การสนทนาจริงทั้งหมด"""
-        self.logger.info("📱 Analyzing real conversations...")
+        self.logger.info("Analyzing real conversations Analyzing real conversations...")
         
         # Search for conversation files
         conversation_files = [
@@ -101,7 +111,7 @@ class ComprehensiveDataAnalyzer:
         
         for file_path in conversation_files:
             if file_path.exists():
-                self.logger.info(f"📄 Processing: {file_path.name}")
+                self.logger.info(f"Processing Processing: {file_path.name}")
                 self.process_conversation_file(file_path)
     
     def process_conversation_file(self, file_path):
@@ -187,7 +197,7 @@ class ComprehensiveDataAnalyzer:
     
     def analyze_women_contacts(self):
         """วิเคราะห์รายชื่อผู้หญิงที่ติดต่อ"""
-        self.logger.info("👩 Analyzing women contacts...")
+        self.logger.info("Analyzing women contacts Analyzing women contacts...")
         
         women_files = [
             self.temp_dir / "extracted_project/Python/detailed_women_conversations_20250525_194001.txt",
@@ -197,7 +207,7 @@ class ComprehensiveDataAnalyzer:
         
         for file_path in women_files:
             if file_path.exists():
-                self.logger.info(f"👩 Processing women file: {file_path.name}")
+                self.logger.info(f"Analyzing women contacts Processing women file: {file_path.name}")
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                 
@@ -238,7 +248,7 @@ class ComprehensiveDataAnalyzer:
     
     def analyze_trading_data(self):
         """วิเคราะห์ข้อมูลการเทรด"""
-        self.logger.info("💹 Analyzing trading intelligence...")
+        self.logger.info("Analyzing trading intelligence Analyzing trading intelligence...")
         
         # Search for trading-related files
         trading_files = list(self.temp_dir.rglob("*trading*"))
@@ -271,7 +281,7 @@ class ComprehensiveDataAnalyzer:
     
     def analyze_session_data(self):
         """วิเคราะห์ข้อมูล session"""
-        self.logger.info("🔐 Analyzing session data...")
+        self.logger.info("Analyzing session data Analyzing session data...")
         
         # Look for session files
         session_files = list(self.base_dir.rglob("*session*"))
@@ -298,7 +308,7 @@ class ComprehensiveDataAnalyzer:
     
     def analyze_social_media(self):
         """วิเคราะห์ข้อมูลโซเชียลมีเดีย"""
-        self.logger.info("🌐 Analyzing social media data...")
+        self.logger.info("Analyzing social media data Analyzing social media data...")
         
         # Extract unique social media accounts mentioned
         social_accounts = set()
@@ -318,7 +328,7 @@ class ComprehensiveDataAnalyzer:
     
     def generate_comprehensive_pdf(self, data):
         """สร้าง PDF รายงานแบบครอบคลุม"""
-        self.logger.info("📄 Generating comprehensive PDF report...")
+        self.logger.info("Processing Generating comprehensive PDF report...")
         
         pdf = FPDF()
         pdf.add_page()
@@ -355,7 +365,7 @@ class ComprehensiveDataAnalyzer:
         }
         
         for key, value in summary_stats.items():
-            pdf.cell(200, 8, txt=f"- {key}: {value}", ln=1)
+            pdf.cell(200, 8, txt=self.sanitize_text(f"- {key}: {value}"), ln=1)
         
         pdf.ln(10)
         
@@ -370,7 +380,7 @@ class ComprehensiveDataAnalyzer:
         pdf_filename = self.output_dir / f"COMPLETE_ALX_TRADING_ANALYSIS_{datetime.now().strftime('%Y%m%d_%H%M%S')}.pdf"
         pdf.output(str(pdf_filename))
         
-        self.logger.info(f"📄 PDF generated: {pdf_filename}")
+        self.logger.info(f"Processing PDF generated: {pdf_filename}")
         return str(pdf_filename)
     
     def add_conversations_section(self, pdf, conversations):
@@ -382,17 +392,17 @@ class ComprehensiveDataAnalyzer:
         
         for i, conv in enumerate(conversations[:10]):  # Show top 10
             pdf.set_font("Arial", "B", size=11)
-            pdf.cell(200, 8, txt=f"{i+1}. {conv.get('username', 'Unknown')}", ln=1)
+            pdf.cell(200, 8, txt=self.sanitize_text(f"{i+1}. {conv.get('username', 'Unknown')}"), ln=1)
             
             pdf.set_font("Arial", size=9)
             if conv.get('full_name'):
-                pdf.cell(200, 6, txt=f"   Full Name: {conv['full_name']}", ln=1)
+                pdf.cell(200, 6, txt=self.sanitize_text(f"   Full Name: {conv['full_name']}"), ln=1)
             if conv.get('message_count'):
-                pdf.cell(200, 6, txt=f"   Messages: {conv['message_count']}", ln=1)
+                pdf.cell(200, 6, txt=self.sanitize_text(f"   Messages: {conv['message_count']}"), ln=1)
             if conv.get('conversation_type'):
-                pdf.cell(200, 6, txt=f"   Type: {conv['conversation_type']}", ln=1)
+                pdf.cell(200, 6, txt=self.sanitize_text(f"   Type: {conv['conversation_type']}"), ln=1)
             if conv.get('last_activity'):
-                pdf.cell(200, 6, txt=f"   Last Activity: {conv['last_activity']}", ln=1)
+                pdf.cell(200, 6, txt=self.sanitize_text(f"   Last Activity: {conv['last_activity']}"), ln=1)
             
             pdf.ln(3)
     
@@ -488,7 +498,7 @@ class ComprehensiveDataAnalyzer:
     
     def generate_summary_report(self):
         """สร้างรายงานสรุปทั้งหมด"""
-        self.logger.info("🚀 Starting comprehensive analysis...")
+        self.logger.info("Starting comprehensive analysis...")
         
         # Analyze all data
         data = self.analyze_all_data()
@@ -519,7 +529,7 @@ class ComprehensiveDataAnalyzer:
 
 def main():
     """Main execution function"""
-    print("🔍 COMPREHENSIVE ALX.TRADING DATA ANALYSIS")
+    print("COMPREHENSIVE ALX.TRADING DATA ANALYSIS")
     print("=" * 50)
     
     analyzer = ComprehensiveDataAnalyzer()
@@ -531,11 +541,11 @@ def main():
         print("📊 ANALYSIS COMPLETE")
         print("=" * 50)
         
-        print(f"✅ Target Account: {summary['target_account']}")
+        print(f"Analysis complete Target Account: {summary['target_account']}")
         print(f"📈 Total Data Points: {summary['total_data_points']}")
-        print(f"⏰ Analysis Time: {summary['analysis_completed']}")
+        print(f"Analysis Time: {summary['analysis_completed']}")
         
-        print("\n🔍 KEY FINDINGS:")
+        print("\nKEY FINDINGS:")
         for key, value in summary['key_findings'].items():
             print(f"  - {key.replace('_', ' ').title()}: {value}")
         

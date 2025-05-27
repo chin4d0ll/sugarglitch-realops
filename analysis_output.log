@@ -1,0 +1,113 @@
+COMPREHENSIVE ALX.TRADING DATA ANALYSIS
+==================================================
+2025-05-27 16:30:48,340 - INFO - Comprehensive Data Analyzer initialized
+2025-05-27 16:30:48,341 - INFO - Starting comprehensive analysis...
+2025-05-27 16:30:48,341 - INFO - Starting comprehensive data analysis...
+2025-05-27 16:30:48,341 - INFO - 📱 Analyzing real conversations...
+2025-05-27 16:30:48,341 - INFO - 📄 Processing: REAL_PERSONAL_CONVERSATIONS_FINAL_20250525_230441.json
+2025-05-27 16:30:48,341 - INFO - 📄 Processing: PRIVATE_DATA_COMPLETE.md
+2025-05-27 16:30:48,342 - INFO - 📄 Processing: alx_trading_chat_formatted_20250525_192917.txt
+2025-05-27 16:30:48,342 - INFO - 📄 Processing: alx_trading_dms_advanced.json
+2025-05-27 16:30:48,342 - INFO - 👩 Analyzing women contacts...
+2025-05-27 16:30:48,342 - INFO - 👩 Processing women file: detailed_women_conversations_20250525_194001.txt
+2025-05-27 16:30:48,343 - INFO - 👩 Processing women file: real_women_contacts_20250525_194146.txt
+2025-05-27 16:30:48,343 - INFO - 👩 Processing women file: WOMEN_ANALYSIS_REPORT_20250525_202018.txt
+2025-05-27 16:30:48,343 - INFO - 💹 Analyzing trading intelligence...
+2025-05-27 16:31:23,081 - INFO - 🔐 Analyzing session data...
+2025-05-27 16:31:23,149 - INFO - 🌐 Analyzing social media data...
+2025-05-27 16:31:23,149 - INFO - ✅ Analysis complete. Found 8 conversations
+2025-05-27 16:31:23,149 - INFO - 📄 Generating comprehensive PDF report...
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:338: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=16)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:343: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 10, txt="COMPREHENSIVE INSTAGRAM DATA ANALYSIS", ln=1, align='C')
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:343: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 10, txt="COMPREHENSIVE INSTAGRAM DATA ANALYSIS", ln=1, align='C')
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:344: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 10, txt="alx.trading - Complete Intelligence Report", ln=1, align='C')
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:344: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 10, txt="alx.trading - Complete Intelligence Report", ln=1, align='C')
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:347: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=12)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:348: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 10, txt=f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", ln=1, align='C')
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:348: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 10, txt=f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}", ln=1, align='C')
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:349: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 10, txt="Classification: CONFIDENTIAL", ln=1, align='C')
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:349: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 10, txt="Classification: CONFIDENTIAL", ln=1, align='C')
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:353: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", "B", size=14)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:354: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 10, txt="EXECUTIVE SUMMARY", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:354: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 10, txt="EXECUTIVE SUMMARY", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:355: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=10)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:368: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 8, txt=self.sanitize_text(f"- {key}: {value}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:368: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 8, txt=self.sanitize_text(f"- {key}: {value}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:389: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", "B", size=14)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:390: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 10, txt="CONVERSATIONS ANALYSIS", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:390: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 10, txt="CONVERSATIONS ANALYSIS", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:391: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=10)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:394: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", "B", size=11)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:395: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 8, txt=self.sanitize_text(f"{i+1}. {conv.get('username', 'Unknown')}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:395: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 8, txt=self.sanitize_text(f"{i+1}. {conv.get('username', 'Unknown')}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:397: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=9)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:399: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 6, txt=self.sanitize_text(f"   Full Name: {conv['full_name']}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:399: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 6, txt=self.sanitize_text(f"   Full Name: {conv['full_name']}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:403: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 6, txt=self.sanitize_text(f"   Type: {conv['conversation_type']}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:403: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 6, txt=self.sanitize_text(f"   Type: {conv['conversation_type']}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:405: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 6, txt=self.sanitize_text(f"   Last Activity: {conv['last_activity']}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:405: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 6, txt=self.sanitize_text(f"   Last Activity: {conv['last_activity']}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:401: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 6, txt=self.sanitize_text(f"   Messages: {conv['message_count']}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:401: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 6, txt=self.sanitize_text(f"   Messages: {conv['message_count']}"), ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:412: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", "B", size=14)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:413: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 10, txt="WOMEN CONTACTS ANALYSIS", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:413: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 10, txt="WOMEN CONTACTS ANALYSIS", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:414: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=10)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:422: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", "B", size=14)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:423: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 10, txt="TRADING INTELLIGENCE", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:423: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 10, txt="TRADING INTELLIGENCE", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:424: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=10)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:435: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", "B", size=11)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:436: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 8, txt=f"{keyword.upper()}: {len(items)} instances", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:436: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 8, txt=f"{keyword.upper()}: {len(items)} instances", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:438: DeprecationWarning: Substituting font arial by core font helvetica - This is deprecated since v2.7.8, and will soon be removed
+  pdf.set_font("Arial", size=9)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:441: DeprecationWarning: The parameter "txt" has been renamed to "text" in 2.7.6
+  pdf.cell(200, 6, txt=f"   - {context}", ln=1)
+/workspaces/sugarglitch-realops/comprehensive_data_analyzer.py:441: DeprecationWarning: The parameter "ln" is deprecated since v2.5.2. Instead of ln=1 use new_x=XPos.LMARGIN, new_y=YPos.NEXT.
+  pdf.cell(200, 6, txt=f"   - {context}", ln=1)
+
+❌ Analysis failed: Character "⏰" at index 13 in text is outside the range of characters supported by the font used: "helvetica". Please consider using a Unicode font.
