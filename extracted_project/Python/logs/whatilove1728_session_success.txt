@@ -1,4 +1,0 @@
-
-username: whatilove1728
-password: xxxx5678
-success: true
