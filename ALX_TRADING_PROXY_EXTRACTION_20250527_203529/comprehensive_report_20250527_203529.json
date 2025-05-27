@@ -1,0 +1,38 @@
+{
+  "generation_timestamp": "2025-05-27T20:38:44.567629",
+  "target_username": "alx.trading",
+  "extraction_summary": {
+    "proxy_enabled": true,
+    "total_data_points": 0,
+    "extraction_methods": [
+      "public_scraping",
+      "external_search",
+      "footprint_analysis"
+    ]
+  },
+  "findings": {
+    "external_presence": {
+      "searches_performed": 0,
+      "search_visibility": "tracked"
+    },
+    "digital_footprint": {
+      "username_patterns": {
+        "has_numbers": false,
+        "has_dots": true,
+        "length": 11,
+        "pattern_type": "trading_related"
+      },
+      "possible_variations": [
+        "alx.tradingofficial",
+        "alx.tradingreal",
+        "alx.trading_",
+        "realalx.trading",
+        "alx.tradingfx",
+        "alx.tradingcrypto"
+      ]
+    }
+  },
+  "additional_insights": [
+    "📊 Username pattern suggests trading/finance focus"
+  ]
+}
