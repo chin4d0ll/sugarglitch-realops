@@ -17,10 +17,11 @@ sys.path.insert(0, str(project_root))
 
 # Import core modules
 try:
-    from utils.config_manager import ConfigManager
-    from utils.logger import setup_logger
-    from databases.enterprise_db_setup import DatabaseManager
-    from monitor_extensions import ExtensionMonitor
+    import psutil
+    from pathlib import Path
+    import json
+    from datetime import datetime
+    # Use simple imports that are available
 except ImportError as e:
     print(f"❌ Import error: {e}")
     print("Please install dependencies: pip install -r requirements.txt")
