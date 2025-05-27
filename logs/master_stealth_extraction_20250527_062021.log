@@ -1,0 +1,48 @@
+2025-05-27 06:20:21,101 - INFO - 🔥 Master Production Stealth DM Extractor initialized
+2025-05-27 06:20:21,101 - INFO - 🚀 STARTING ULTIMATE PRODUCTION STEALTH DM EXTRACTION
+2025-05-27 06:20:21,101 - INFO - 🔥 NO MORE BLOCKS - MAXIMUM STEALTH ACTIVATED!
+2025-05-27 06:20:21,101 - INFO - 🔄 TRYING PRODUCTION INSTAGRAPI...
+2025-05-27 06:20:21,101 - INFO - 🔄 Method 1: Production instagrapi login...
+2025-05-27 06:20:21,102 - INFO - 🔐 Attempting fresh production login...
+2025-05-27 06:20:26,947 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-05-27 06:20:27,797 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (276.0.0.18.119, samsung galaxy_s21_ultra_5g)
+2025-05-27 06:20:36,568 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-05-27 06:20:37,796 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (276.0.0.18.119, samsung galaxy_s21_ultra_5g)
+2025-05-27 06:20:37,796 - ERROR - ❌ Bad password - credentials may be incorrect
+2025-05-27 06:20:37,796 - ERROR - ❌ Production Instagrapi authentication FAILED
+2025-05-27 06:20:37,796 - INFO - 🔄 TRYING ULTIMATE STEALTH BROWSER...
+2025-05-27 06:20:37,796 - INFO - 🌐 Method 2: Ultimate stealth browser automation...
+2025-05-27 06:20:37,797 - INFO - 🤖 Setting up ULTIMATE stealth browser...
+2025-05-27 06:20:39,813 - INFO - 🧹 Cleaned existing Chrome processes
+2025-05-27 06:20:39,997 - INFO - patching driver executable /home/codespace/.local/share/undetected_chromedriver/undetected_chromedriver
+2025-05-27 06:20:40,054 - ERROR - ❌ Failed to setup stealth browser: Message: invalid argument: cannot parse capability: goog:chromeOptions
+from invalid argument: unrecognized chrome option: excludeSwitches
+Stacktrace:
+#0 0x56d06d24f71a <unknown>
+#1 0x56d06ccf20a0 <unknown>
+#2 0x56d06cd1f020 <unknown>
+#3 0x56d06cd20735 <unknown>
+#4 0x56d06cd1b8ad <unknown>
+#5 0x56d06cd75f58 <unknown>
+#6 0x56d06cd7579a <unknown>
+#7 0x56d06cd774b9 <unknown>
+#8 0x56d06cd77296 <unknown>
+#9 0x56d06cd69173 <unknown>
+#10 0x56d06cd35d4b <unknown>
+#11 0x56d06cd369b1 <unknown>
+#12 0x56d06d2148cb <unknown>
+#13 0x56d06d2187ca <unknown>
+#14 0x56d06d1fc622 <unknown>
+#15 0x56d06d219354 <unknown>
+#16 0x56d06d1e145f <unknown>
+#17 0x56d06d23d4f8 <unknown>
+#18 0x56d06d23d6d6 <unknown>
+#19 0x56d06d24e586 <unknown>
+#20 0x751993a72609 start_thread
+
+2025-05-27 06:20:40,054 - ERROR - ❌ Ultimate Stealth Browser authentication FAILED
+2025-05-27 06:20:40,054 - INFO - 🔄 TRYING ADVANCED SESSION HIJACKING...
+2025-05-27 06:20:40,054 - INFO - 🔧 Method 3: Advanced session hijacking...
+2025-05-27 06:20:40,054 - WARNING - ⚠️ No valid sessions found for hijacking
+2025-05-27 06:20:40,054 - ERROR - ❌ Advanced Session Hijacking authentication FAILED
+2025-05-27 06:20:42,072 - INFO - 🧹 Cleaned existing Chrome processes

@@ -1,0 +1,39 @@
+2025-05-27 06:09:05,468 - INFO - 🚀 Ultimate Working DM Extractor 2025 initialized
+2025-05-27 06:09:05,469 - INFO - 🚀 Starting Ultimate DM Extraction...
+2025-05-27 06:09:05,469 - INFO - 🔄 Trying Fresh Instagrapi Login...
+2025-05-27 06:09:05,469 - INFO - 🔄 Method 1: Attempting fresh instagrapi login...
+2025-05-27 06:09:05,469 - INFO - 🔐 Attempting fresh login...
+2025-05-27 06:09:07,626 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-05-27 06:09:08,431 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (203.0.0.29.118, samsung galaxy_s8)
+2025-05-27 06:09:11,747 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-05-27 06:09:12,466 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (203.0.0.29.118, samsung galaxy_s8)
+2025-05-27 06:09:12,466 - ERROR - ❌ Bad password - credentials may be incorrect
+2025-05-27 06:09:12,466 - ERROR - ❌ Fresh Instagrapi Login authentication failed
+2025-05-27 06:09:12,466 - INFO - 🔄 Trying Browser Automation...
+2025-05-27 06:09:12,467 - INFO - 🌐 Method 2: Starting browser automation...
+2025-05-27 06:09:12,467 - INFO - ====== WebDriver manager ======
+2025-05-27 06:09:12,536 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-27 06:09:12,546 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-27 06:09:12,558 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-27 06:09:12,743 - ERROR - ❌ Method 2 failed: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x60ade72e871a <unknown>
+#1 0x60ade6d8b0a0 <unknown>
+#2 0x60ade6dc51ff <unknown>
+#3 0x60ade6dc0c0f <unknown>
+#4 0x60ade6e10d75 <unknown>
+#5 0x60ade6e10296 <unknown>
+#6 0x60ade6e02173 <unknown>
+#7 0x60ade6dced4b <unknown>
+#8 0x60ade6dcf9b1 <unknown>
+#9 0x60ade72ad8cb <unknown>
+#10 0x60ade72b17ca <unknown>
+#11 0x60ade7295622 <unknown>
+#12 0x60ade72b2354 <unknown>
+#13 0x60ade727a45f <unknown>
+#14 0x60ade72d64f8 <unknown>
+#15 0x60ade72d66d6 <unknown>
+#16 0x60ade72e7586 <unknown>
+#17 0x7eaa0d22f609 start_thread
+
+2025-05-27 06:09:12,743 - ERROR - ❌ Browser Automation authentication failed

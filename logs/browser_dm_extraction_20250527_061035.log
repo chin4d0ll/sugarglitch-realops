@@ -1,0 +1,27 @@
+2025-05-27 06:10:35,209 - INFO - 🚀 Starting Browser-Only DM Extraction...
+2025-05-27 06:10:35,209 - INFO - 🌐 Setting up stealth browser...
+2025-05-27 06:10:35,269 - INFO - ====== WebDriver manager ======
+2025-05-27 06:10:35,338 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-27 06:10:35,360 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-27 06:10:35,371 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-27 06:10:35,559 - ERROR - ❌ Failed to setup browser: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x6461ae88b71a <unknown>
+#1 0x6461ae32e0a0 <unknown>
+#2 0x6461ae3681ff <unknown>
+#3 0x6461ae363c0f <unknown>
+#4 0x6461ae3b3d75 <unknown>
+#5 0x6461ae3b3296 <unknown>
+#6 0x6461ae3a5173 <unknown>
+#7 0x6461ae371d4b <unknown>
+#8 0x6461ae3729b1 <unknown>
+#9 0x6461ae8508cb <unknown>
+#10 0x6461ae8547ca <unknown>
+#11 0x6461ae838622 <unknown>
+#12 0x6461ae855354 <unknown>
+#13 0x6461ae81d45f <unknown>
+#14 0x6461ae8794f8 <unknown>
+#15 0x6461ae8796d6 <unknown>
+#16 0x6461ae88a586 <unknown>
+#17 0x6ffd77fbe609 start_thread
+

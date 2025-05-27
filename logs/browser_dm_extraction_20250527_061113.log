@@ -1,0 +1,9 @@
+2025-05-27 06:11:13,007 - INFO - 🚀 Starting Browser-Only DM Extraction...
+2025-05-27 06:11:13,007 - INFO - 🌐 Setting up stealth browser...
+2025-05-27 06:11:13,075 - INFO - ====== WebDriver manager ======
+2025-05-27 06:11:13,158 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-27 06:11:13,182 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-27 06:11:13,199 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-27 06:11:13,542 - INFO - ✅ Stealth browser setup complete
+2025-05-27 06:11:13,542 - INFO - 🔐 Navigating to Instagram login...
+2025-05-27 06:12:17,798 - ERROR - ❌ Login failed: Could not find username field
