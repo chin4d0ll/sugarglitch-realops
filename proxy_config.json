@@ -1,7 +1,35 @@
 {
   "enabled": true,
-  "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
-  "proxy_pass": "fl13j3qcjvqh",
-  "proxy_host": "brd.superproxy.io",
-  "proxy_port": 33335
+  "proxies": [
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 33335
+    },
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 22225
+    },
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 10001
+    },
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 20000
+    },
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 30000
+    }
+  ]
 }
