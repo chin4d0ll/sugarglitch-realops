@@ -1,0 +1,57 @@
+{
+    "folders": [
+        {
+            "path": "../.."
+        }
+    ],
+    "settings": {
+        "// 🚫 Prevent Extension Rerun Issues": true,
+        "remote.extensionKind": {
+            "ms-mssql.mssql": [
+                "workspace"
+            ],
+            "mtxr.sqltools": [
+                "workspace"
+            ],
+            "codeium.codeium": [
+                "workspace"
+            ],
+            "ms-python.python": [
+                "workspace"
+            ],
+            "ms-python.vscode-pylance": [
+                "workspace"
+            ]
+        },
+        "extensions.experimental.affinity": {
+            "mtxr.sqltools": 1,
+            "ms-mssql.mssql": 1,
+            "codeium.codeium": 1,
+            "ms-python.python": 1,
+            "ms-python.vscode-pylance": 1
+        },
+        "sqltools.autoConnectTo": [],
+        "sqltools.enableConnectionPooling": false,
+        "mssql.enableConnectionPooling": false,
+        "files.watcherExclude": {
+            "**/databases/**": true,
+            "**/data/**": true,
+            "**/logs/**": true,
+            "**/temp/**": true,
+            "**/media/**": true,
+            "**/__pycache__/**": true,
+            "**/improved_code/**": true
+        }
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.vscode-pylance",
+            "mtxr.sqltools",
+            "alexcvzz.vscode-sqlite"
+        ],
+        "unwantedRecommendations": [
+            "ms-mssql.mssql"
+        ]
+    }
+}

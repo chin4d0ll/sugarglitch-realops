@@ -1,4 +1,34 @@
 {
+  "// 🔧 Fixed Remote Extensions Rerun Issues": true,
+  "// Extension Management - Prevent Multiple Instances": true,
+  "extensions.autoUpdate": false,
+  "extensions.autoCheckUpdates": false,
+  "remote.extensionKind": {
+    "ms-mssql.mssql": [
+      "workspace"
+    ],
+    "codeium.codeium": [
+      "workspace"
+    ],
+    "ms-python.python": [
+      "workspace"
+    ],
+    "ms-python.vscode-pylance": [
+      "workspace"
+    ],
+    "mtxr.sqltools": [
+      "workspace"
+    ]
+  },
+  "// Force Extensions to Single Host": true,
+  "extensions.experimental.affinity": {
+    "ms-mssql.mssql": 1,
+    "codeium.codeium": 1,
+    "ms-python.python": 1,
+    "ms-python.vscode-pylance": 1,
+    "mtxr.sqltools": 1
+  },
+  "// SQL Tools Settings": true,
   "sqltools.connections": [
     {
       "name": "Instagram Deep Data",
@@ -9,16 +39,62 @@
     }
   ],
   "sqltools.useNodeRuntime": true,
-  "sqltools.autoConnectTo": [
-    "Instagram Deep Data"
-  ],
+  "sqltools.autoConnectTo": [],
   "sqltools.defaultExportType": "csv",
+  "sqltools.enableConnectionPooling": false,
+  "// Database Extension Settings - Prevent Duplication": true,
+  "mssql.enableConnectionPooling": false,
+  "mssql.maxRecentConnections": 3,
+  "mssql.persistQueryResultTabs": false,
+  "mssql.logDebugInfo": false,
+  "// Codeium Settings - Reduce Resource Usage": true,
+  "codeium.enableCodeLens": false,
+  "codeium.enableSearch": false,
+  "codeium.enableChatWebview": false,
+  "codeium.enableIndexService": false,
+  "// Python Settings - Reduce Extension Load": true,
+  "python.analysis.autoImportCompletions": false,
+  "python.analysis.indexing": false,
+  "python.analysis.packageIndexDepths": [
+    {
+      "name": "",
+      "depth": 1
+    }
+  ],
+  "// Performance Optimizations": true,
+  "extensions.ignoreRecommendations": true,
+  "workbench.enableExperiments": false,
+  "telemetry.telemetryLevel": "off",
+  "// File Watching Limits - Reduce Resource Usage": true,
+  "files.watcherExclude": {
+    "**/node_modules/**": true,
+    "**/.git/**": true,
+    "**/databases/**": true,
+    "**/data/**": true,
+    "**/logs/**": true,
+    "**/temp/**": true,
+    "**/media/**": true,
+    "**/__pycache__/**": true,
+    "**/*.pyc": true,
+    "**/improved_code/**": true
+  },
+  "// Search Exclusions": true,
+  "search.exclude": {
+    "**/databases": true,
+    "**/data": true,
+    "**/logs": true,
+    "**/temp": true,
+    "**/media": true,
+    "**/__pycache__": true,
+    "**/*.pyc": true
+  },
+  "// SQL Formatting": true,
   "sql.format.keywordCase": "upper",
   "sql.format.identifierCase": "lower",
   "sql.format.stripComments": false,
   "sql.format.reindent": true,
   "[sql]": {
-    "editor.defaultFormatter": "bradymholt.pgformatter"
+    "editor.defaultFormatter": "mtxr.sqltools"
   },
   "[sqlite]": {
     "editor.defaultFormatter": "alexcvzz.vscode-sqlite"
