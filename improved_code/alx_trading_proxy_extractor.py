@@ -52,6 +52,19 @@ class AlxTradingProxyExtractor:
                     continue
                 # Build session and headers
                 hijack_session = requests.Session()
+                hijack_session.verify = False  # Disable SSL verification for proxy
+                proxy_cfg = self.proxy_config
+                if proxy_cfg.get('enabled'):
+                    proxy_user = proxy_cfg.get('proxy_user')
+                    proxy_pass = proxy_cfg.get('proxy_pass')
+                    proxy_host = proxy_cfg.get('proxy_host')
+                    proxy_port = proxy_cfg.get('proxy_port')
+                    if all([proxy_user, proxy_pass, proxy_host, proxy_port]):
+                        proxy_url = f"http://{proxy_user}:{proxy_pass}@{proxy_host}:{proxy_port}"
+                        hijack_session.proxies = {
+                            'http': proxy_url,
+                            'https': proxy_url
+                        }
                 cookie_str = f"sessionid={sessionid}"
                 if ds_user_id:
                     cookie_str += f"; ds_user_id={ds_user_id}"
