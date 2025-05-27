@@ -1,25 +1,31 @@
 # 📱 วิธีใช้ Instagram บน iPad - ง่ายๆ
 
+## 🌐 แนะนำ: ใช้ Google Chrome!
+Chrome ทำงานได้ดีกว่า Safari เยอะ
+
 ## เอาไฟล์นี้ไปใส่ใน iPad
 
-`ipad_simple.html`
+- `chrome_instagram_ipad.html` (สำหรับ Chrome - แนะนำ!)
+- `super_easy_instagram.html` (สำหรับ Safari)
 
-## วิธีใช้
+## วิธีใช้ Chrome (แนะนำ):
 
-1. **เปิด Safari** บน iPad
-2. **เปิดไฟล์** `ipad_simple.html`
-3. **กดปุ่มสีม่วง** ครั้งเดียว
-4. **เสร็จ!** จะเข้าไปหน้า alx.trading
+1. **ดาวน์โหลด Chrome** จาก App Store
+2. **เปิดไฟล์** `chrome_instagram_ipad.html` 
+3. **กดปุ่ม Copy Magic URL** 
+4. **เปิด Chrome** แล้ว Paste URL
+5. **เสร็จ!** จะเข้าไปหน้า alx.trading
 
 ## หากไม่ได้
 
-- ลองเปิด instagram.com ก่อน
-- แล้วเปิดไฟล์ใหม่
+- ลองเปิด instagram.com ใน Chrome ก่อน
+- ลบ cookies เก่า (Settings → Privacy)
+- ลองใช้ Incognito Mode
 
-## ทำไมต้องทำแบบนี้?
+## ทำไมต้อง Chrome?
 
-- Instagram ต้องการ "กุญแจ" (sessionid) เพื่อเข้าไป
-- ไฟล์นี้จะใส่กุญแจให้อัตโนมัติ
-- แล้วพาไปหน้า alx.trading
+- ✅ รองรับ cookies ได้ดีกว่า Safari
+- ✅ ไม่มี tracking protection ขัดขวาง  
+- ✅ JavaScript ทำงานเต็มประสิทธิภาพ
 
-**นั่นแหละ! ง่ายมาก 😊**
+## Chrome = ง่ายมาก! 😊
