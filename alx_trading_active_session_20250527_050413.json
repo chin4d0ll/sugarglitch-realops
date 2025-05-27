@@ -1,0 +1,15 @@
+{
+  "target": "alx.trading",
+  "session_name": "session_1",
+  "sessionid": "4976283726%3A1JgRzA56Q8e8Qs%3A12",
+  "ds_user_id": "4976283726",
+  "csrf_token": "N/A",
+  "validated_at": "20250527_050413",
+  "status": "ACTIVE_VERIFIED",
+  "usage_instructions": {
+    "browser_cookie": "sessionid=4976283726%3A1JgRzA56Q8e8Qs%3A12",
+    "python_instagrapi": "cl.login_by_sessionid('4976283726%3A1JgRzA56Q8e8Qs%3A12')",
+    "direct_profile_url": "https://www.instagram.com/alx.trading/?sessionid=4976283726%3A1JgRzA56Q8e8Qs%3A12",
+    "bookmarklet": "javascript:(function(){document.cookie='sessionid=4976283726%3A1JgRzA56Q8e8Qs%3A12; domain=.instagram.com; path=/; secure';window.location.href='https://www.instagram.com/alx.trading/';})()"
+  }
+}
