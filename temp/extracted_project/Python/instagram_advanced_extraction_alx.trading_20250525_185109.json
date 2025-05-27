@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-05-25T18:50:23.865673",
+  "target": "alx.trading",
+  "status": "session_failed",
+  "session_info": {},
+  "data": {
+    "account_info": {},
+    "direct_messages": [],
+    "stories": [],
+    "posts": [],
+    "liked_posts": [],
+    "followers_sample": [],
+    "following_sample": [],
+    "recent_activity": [],
+    "search_history": []
+  },
+  "errors": [
+    "Session creation error: We can't find an account with alx.trading. Try another phone number or email, or if you don't have an Instagram account, you can sign up."
+  ],
+  "extraction_summary": {},
+  "stealth_metrics": {
+    "total_delays": 1,
+    "total_delay_time": 27.22872185275506,
+    "requests_made": 0,
+    "avg_delay": 0
+  }
+}

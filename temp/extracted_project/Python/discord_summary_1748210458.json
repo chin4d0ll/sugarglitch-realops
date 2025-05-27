@@ -1,0 +1,25 @@
+{
+  "content": "\ud83d\udd25 **INSTAGRAM BREACH SUCCESS** \ud83d\udd25\n**alx.trading** account fully compromised!\n\n\u2705 Password cracked: Fleming654\n\u2705 Checkpoint bypassed\n\u2705 Private messages extracted\n\u2705 Business data compromised",
+  "embeds": [
+    {
+      "title": "\u26a1 QUICK BREACH SUMMARY",
+      "description": "**Instagram Account Takeover Complete**",
+      "color": 16711680,
+      "fields": [
+        {
+          "name": "\ud83c\udfaf Target Compromised",
+          "value": "```\n\ud83d\udc64 alx.trading\n\ud83d\udd11 Fleming654\n\ud83d\udcf1 Full Access\n\ud83d\udcac Data Extracted\n```",
+          "inline": true
+        },
+        {
+          "name": "\ud83d\udcca Stats",
+          "value": "```\n\ud83d\udcac 5 conversations\n\ud83d\udcf1 67 messages\n\ud83d\udea8 22 sensitive items\n\ud83d\udcbc Business exposed\n```",
+          "inline": true
+        }
+      ],
+      "footer": {
+        "text": "Breach completed: 2025-05-25 22:00:58"
+      }
+    }
+  ]
+}

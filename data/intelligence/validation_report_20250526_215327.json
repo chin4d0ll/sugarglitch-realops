@@ -1,0 +1,1304 @@
+{
+  "timestamp": "2025-05-26T21:53:25.705123",
+  "tests_passed": 205,
+  "tests_failed": 11,
+  "test_details": [
+    {
+      "test_name": "Syntax Check: final_exploitation_dashboard.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.719065"
+    },
+    {
+      "test_name": "Syntax Check: instagram_advanced_extractor.py",
+      "passed": false,
+      "details": "Syntax error: invalid syntax (instagram_advanced_extractor.py, line 294)",
+      "timestamp": "2025-05-26T21:53:25.723160"
+    },
+    {
+      "test_name": "Syntax Check: alternative_sessionid_generator.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.724430"
+    },
+    {
+      "test_name": "Syntax Check: alx_trading_proxy_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.729896"
+    },
+    {
+      "test_name": "Syntax Check: advanced_stealth_intelligence.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.736813"
+    },
+    {
+      "test_name": "Syntax Check: advanced_intimate_conversation_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.740586"
+    },
+    {
+      "test_name": "Syntax Check: multi_vector_attack.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.746375"
+    },
+    {
+      "test_name": "Syntax Check: validate_codebase.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.751095"
+    },
+    {
+      "test_name": "Syntax Check: ultimate_ghost_session_exploitation.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.754722"
+    },
+    {
+      "test_name": "Syntax Check: simple_session_capture.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.756432"
+    },
+    {
+      "test_name": "Syntax Check: SCREEN_BREAKER.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.759260"
+    },
+    {
+      "test_name": "Syntax Check: instagram_session_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.763423"
+    },
+    {
+      "test_name": "Syntax Check: ULTIMATE_PRODUCTION_EXTRACTOR.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.766589"
+    },
+    {
+      "test_name": "Syntax Check: enhanced_ghost_attack.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.769755"
+    },
+    {
+      "test_name": "Syntax Check: quick_db_setup.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.770953"
+    },
+    {
+      "test_name": "Syntax Check: test_proxy_connection.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.771269"
+    },
+    {
+      "test_name": "Syntax Check: REAL_WHATILOVE1728_EXTRACTOR.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.775061"
+    },
+    {
+      "test_name": "Syntax Check: ULTRA_SCREEN_DESTROYER.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.778095"
+    },
+    {
+      "test_name": "Syntax Check: final_diagnosis.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.779364"
+    },
+    {
+      "test_name": "Syntax Check: quick_test.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.779829"
+    },
+    {
+      "test_name": "Syntax Check: database_integrator.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.779956"
+    },
+    {
+      "test_name": "Syntax Check: advanced_alx_checkpoint_bypass.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.786020"
+    },
+    {
+      "test_name": "Syntax Check: data_processor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.789015"
+    },
+    {
+      "test_name": "Syntax Check: test_all_proxies.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.791163"
+    },
+    {
+      "test_name": "Syntax Check: direct_ghost_attack.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.797261"
+    },
+    {
+      "test_name": "Syntax Check: session_resurrection_hijack.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.803434"
+    },
+    {
+      "test_name": "Syntax Check: intimate_relationship_mapper.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.806411"
+    },
+    {
+      "test_name": "Syntax Check: ULTIMATE_BYPASS_EXTRACTOR_V2.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.816097"
+    },
+    {
+      "test_name": "Syntax Check: advanced_session_manager.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.824501"
+    },
+    {
+      "test_name": "Syntax Check: session_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.831019"
+    },
+    {
+      "test_name": "Syntax Check: stealth_social_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.836756"
+    },
+    {
+      "test_name": "Syntax Check: reality_breaker.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.845153"
+    },
+    {
+      "test_name": "Syntax Check: extreme_launcher.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.850467"
+    },
+    {
+      "test_name": "Syntax Check: dreamflow_master_execution.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.852195"
+    },
+    {
+      "test_name": "Syntax Check: sessionid_extractor_alx.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.855236"
+    },
+    {
+      "test_name": "Syntax Check: ultimate_ghost_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.860773"
+    },
+    {
+      "test_name": "Syntax Check: aggressive_data_fusion.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.864974"
+    },
+    {
+      "test_name": "Syntax Check: ultimate_deep_warfare.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.871106"
+    },
+    {
+      "test_name": "Syntax Check: session_refresher.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.874364"
+    },
+    {
+      "test_name": "Syntax Check: tor_proxy_manager.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.876295"
+    },
+    {
+      "test_name": "Syntax Check: whatilove1728_image_downloader.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.881238"
+    },
+    {
+      "test_name": "Syntax Check: setup_sql_environment.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.881389"
+    },
+    {
+      "test_name": "Syntax Check: instagram_debug_utility.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.883300"
+    },
+    {
+      "test_name": "Syntax Check: test_working_session.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.883829"
+    },
+    {
+      "test_name": "Syntax Check: ghost_hijack_attack.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.887957"
+    },
+    {
+      "test_name": "Syntax Check: advanced_browser_automation.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.890648"
+    },
+    {
+      "test_name": "Syntax Check: master_control.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.893331"
+    },
+    {
+      "test_name": "Syntax Check: rate_limit_bypass_ghost.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.898151"
+    },
+    {
+      "test_name": "Syntax Check: test_quick_db.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.899025"
+    },
+    {
+      "test_name": "Syntax Check: matrix_breach_monitor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.901717"
+    },
+    {
+      "test_name": "Syntax Check: private_profile_handler.py",
+      "passed": false,
+      "details": "Syntax error: invalid syntax (private_profile_handler.py, line 238)",
+      "timestamp": "2025-05-26T21:53:25.905268"
+    },
+    {
+      "test_name": "Syntax Check: enhanced_alx_trading_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.911301"
+    },
+    {
+      "test_name": "Syntax Check: debug_access.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.912549"
+    },
+    {
+      "test_name": "Syntax Check: ultimate_private_conversation_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.915888"
+    },
+    {
+      "test_name": "Syntax Check: whatilove1728_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.918495"
+    },
+    {
+      "test_name": "Syntax Check: create_working_session.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.919257"
+    },
+    {
+      "test_name": "Syntax Check: test_bright_data_proxy.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.919578"
+    },
+    {
+      "test_name": "Syntax Check: rapid_fire_test.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.920813"
+    },
+    {
+      "test_name": "Syntax Check: instagram_session_exploiter.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.925756"
+    },
+    {
+      "test_name": "Syntax Check: ULTIMATE_REDIRECT_BYPASS_EXTRACTOR.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.930596"
+    },
+    {
+      "test_name": "Syntax Check: session_id_analyzer.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.933738"
+    },
+    {
+      "test_name": "Syntax Check: bright_data_ghost_hijacker.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.942317"
+    },
+    {
+      "test_name": "Syntax Check: ADVANCED_REAL_WHATILOVE1728_EXTRACTOR.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.946998"
+    },
+    {
+      "test_name": "Syntax Check: alternative_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.951087"
+    },
+    {
+      "test_name": "Syntax Check: simple_playwright_test.py",
+      "passed": false,
+      "details": "Syntax error: invalid syntax (simple_playwright_test.py, line 26)",
+      "timestamp": "2025-05-26T21:53:25.951627"
+    },
+    {
+      "test_name": "Syntax Check: active_telegram_penetration_yuliana.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.956297"
+    },
+    {
+      "test_name": "Syntax Check: db_helper.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.957303"
+    },
+    {
+      "test_name": "Syntax Check: live_telegram_penetration_launcher.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.960209"
+    },
+    {
+      "test_name": "Syntax Check: direct_session_capture.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.962639"
+    },
+    {
+      "test_name": "Syntax Check: test_db_connection.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.963356"
+    },
+    {
+      "test_name": "Syntax Check: test_proxy.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.964608"
+    },
+    {
+      "test_name": "Syntax Check: quick_add_target.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.965010"
+    },
+    {
+      "test_name": "Syntax Check: fixed_ghost_hijacker.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.968463"
+    },
+    {
+      "test_name": "Syntax Check: real_image_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.971130"
+    },
+    {
+      "test_name": "Syntax Check: ultimate_production_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.981734"
+    },
+    {
+      "test_name": "Syntax Check: ULTIMATE_LAUNCHER.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:25.984158"
+    },
+    {
+      "test_name": "Syntax Check: enterprise_intelligence_platform.py",
+      "passed": false,
+      "details": "Syntax error: invalid syntax (enterprise_intelligence_platform.py, line 717)",
+      "timestamp": "2025-05-26T21:53:25.997323"
+    },
+    {
+      "test_name": "Syntax Check: advanced_proxy_warfare.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.001119"
+    },
+    {
+      "test_name": "Syntax Check: proxy_manager.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.002519"
+    },
+    {
+      "test_name": "Syntax Check: session_recovery_tool.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.002632"
+    },
+    {
+      "test_name": "Syntax Check: quick_attack.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.004837"
+    },
+    {
+      "test_name": "Syntax Check: stealth_private_message_hunter.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.008946"
+    },
+    {
+      "test_name": "Syntax Check: private_profile_extractor.py",
+      "passed": false,
+      "details": "Syntax error: invalid syntax (private_profile_extractor.py, line 133)",
+      "timestamp": "2025-05-26T21:53:26.011143"
+    },
+    {
+      "test_name": "Syntax Check: ultimate_stealth_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.014836"
+    },
+    {
+      "test_name": "Syntax Check: simple_proxy_test.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.015591"
+    },
+    {
+      "test_name": "Syntax Check: stealth_bypass_system.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.026338"
+    },
+    {
+      "test_name": "Syntax Check: instagram_auth_setup.py",
+      "passed": false,
+      "details": "Syntax error: invalid syntax (instagram_auth_setup.py, line 120)",
+      "timestamp": "2025-05-26T21:53:26.032765"
+    },
+    {
+      "test_name": "Syntax Check: live_telegram_intelligence_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.037586"
+    },
+    {
+      "test_name": "Syntax Check: session_tester.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.039272"
+    },
+    {
+      "test_name": "Syntax Check: stealth_session_generator.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.040849"
+    },
+    {
+      "test_name": "Syntax Check: real_ops_status.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.040959"
+    },
+    {
+      "test_name": "Syntax Check: working_session_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.042702"
+    },
+    {
+      "test_name": "Syntax Check: ULTIMATE_PRODUCTION_STEALTH_EXTRACTOR.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.047860"
+    },
+    {
+      "test_name": "Syntax Check: telegram_infiltration_yuliana.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.052059"
+    },
+    {
+      "test_name": "Syntax Check: sql_interface.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.053966"
+    },
+    {
+      "test_name": "Syntax Check: rapid_intel_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.055921"
+    },
+    {
+      "test_name": "Syntax Check: manual_session_guide.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.057628"
+    },
+    {
+      "test_name": "Syntax Check: quick_status.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.057905"
+    },
+    {
+      "test_name": "Syntax Check: optimized_browser_automation.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.059324"
+    },
+    {
+      "test_name": "Syntax Check: image_analyzer.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.060787"
+    },
+    {
+      "test_name": "Syntax Check: intelligence_report_generator.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.064029"
+    },
+    {
+      "test_name": "Syntax Check: advanced_visual_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.065925"
+    },
+    {
+      "test_name": "Syntax Check: ultimate_hardcore_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.069981"
+    },
+    {
+      "test_name": "Syntax Check: pdf_intelligence_report_generator.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.073042"
+    },
+    {
+      "test_name": "Syntax Check: telegram_osint_research_yuliana.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.074380"
+    },
+    {
+      "test_name": "Syntax Check: ghost_mode_engine.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.078360"
+    },
+    {
+      "test_name": "Syntax Check: advanced_browser_automation_bypass.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.082585"
+    },
+    {
+      "test_name": "Syntax Check: smart_proxy_manager.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.085838"
+    },
+    {
+      "test_name": "Syntax Check: dreamflow_master_executor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.088615"
+    },
+    {
+      "test_name": "Syntax Check: proxy_usage_examples.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.089644"
+    },
+    {
+      "test_name": "Syntax Check: extreme_session_hunter.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.094625"
+    },
+    {
+      "test_name": "Syntax Check: master_improver.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.097711"
+    },
+    {
+      "test_name": "Syntax Check: advanced_session_harvester.py",
+      "passed": false,
+      "details": "Syntax error: invalid syntax (advanced_session_harvester.py, line 391)",
+      "timestamp": "2025-05-26T21:53:26.103553"
+    },
+    {
+      "test_name": "Syntax Check: intelligence_summary.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.104640"
+    },
+    {
+      "test_name": "Syntax Check: instant_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.109626"
+    },
+    {
+      "test_name": "Syntax Check: session_dashboard.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.112075"
+    },
+    {
+      "test_name": "Syntax Check: fixed_alx_checkpoint_bypass.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.118465"
+    },
+    {
+      "test_name": "Syntax Check: instant_intelligence_aggregator.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.121801"
+    },
+    {
+      "test_name": "Syntax Check: advanced_private_chat_extractor.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.128679"
+    },
+    {
+      "test_name": "Syntax Check: social_engineering_toolkit.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.132326"
+    },
+    {
+      "test_name": "Syntax Check: final_breach_operation.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.137446"
+    },
+    {
+      "test_name": "Syntax Check: production_intelligence_extractor.py",
+      "passed": false,
+      "details": "Syntax error: invalid syntax (production_intelligence_extractor.py, line 712)",
+      "timestamp": "2025-05-26T21:53:26.150901"
+    },
+    {
+      "test_name": "Syntax Check: dreamflow_ghost_mode_alx.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.156594"
+    },
+    {
+      "test_name": "Syntax Check: brightdata_ghost_hijacker.py",
+      "passed": true,
+      "details": "Valid Python syntax",
+      "timestamp": "2025-05-26T21:53:26.161592"
+    },
+    {
+      "test_name": "Overall Syntax Validation",
+      "passed": false,
+      "details": "8 files have syntax errors",
+      "timestamp": "2025-05-26T21:53:26.161626"
+    },
+    {
+      "test_name": "JSON Validity: FINAL_DIAGNOSIS_REPORT.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.163246"
+    },
+    {
+      "test_name": "JSON Validity: FINAL_BREACH_OPERATION_alx.trading_1748263437.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.163885"
+    },
+    {
+      "test_name": "JSON Validity: session_template.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.163967"
+    },
+    {
+      "test_name": "JSON Validity: mission_report_20250526_042802.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.164052"
+    },
+    {
+      "test_name": "JSON Validity: DREAMFLOW_GHOST_EXTRACTION_alx.trading_1748264045.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.164123"
+    },
+    {
+      "test_name": "JSON Validity: proxy_config_simple.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.164216"
+    },
+    {
+      "test_name": "JSON Validity: TELEGRAM_INFILTRATION_INTELLIGENCE_juulisaaf_1748290332.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.164379"
+    },
+    {
+      "test_name": "JSON Validity: proxy_configs.json.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.164457"
+    },
+    {
+      "test_name": "JSON Validity: COMPREHENSIVE_ATTACK_REPORT_alx.trading_1748264060.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.164573"
+    },
+    {
+      "test_name": "JSON Validity: ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748264932.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.165261"
+    },
+    {
+      "test_name": "JSON Validity: MASTER_PROFILE_alx_trading_1748262733.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.165353"
+    },
+    {
+      "test_name": "JSON Validity: ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262855.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.165928"
+    },
+    {
+      "test_name": "JSON Validity: MASTER_PROFILE_alx_trading_1748264047.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.166025"
+    },
+    {
+      "test_name": "JSON Validity: DREAMFLOW_INTELLIGENCE_alx.trading_1748265562.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.166097"
+    },
+    {
+      "test_name": "JSON Validity: recovery_plan.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.166186"
+    },
+    {
+      "test_name": "JSON Validity: proxy_configs.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.166295"
+    },
+    {
+      "test_name": "JSON Validity: LIVE_PENETRATION_LAUNCH_juulisaaf_1748291283.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.166491"
+    },
+    {
+      "test_name": "JSON Validity: project_structure_report_20250526_215324.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.166582"
+    },
+    {
+      "test_name": "JSON Validity: INTELLIGENCE_REPORT_whatilove1728_1748236027.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.166702"
+    },
+    {
+      "test_name": "JSON Validity: SESSION_EXTRACTION_whatilove1728_1748235501.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.167260"
+    },
+    {
+      "test_name": "JSON Validity: direct_ghost_attack_summary_1748263363.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.167354"
+    },
+    {
+      "test_name": "JSON Validity: proxy_config_new.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.167450"
+    },
+    {
+      "test_name": "JSON Validity: ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748263123.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.168073"
+    },
+    {
+      "test_name": "JSON Validity: PRIVATE_CONVERSATION_INTELLIGENCE_alx.trading_1748275978.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.168225"
+    },
+    {
+      "test_name": "JSON Validity: FINAL_BREACH_OPERATION_alx.trading_1748263267.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.168920"
+    },
+    {
+      "test_name": "JSON Validity: LIVE_TELEGRAM_INTELLIGENCE_juulisaaf_1748291117.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.169071"
+    },
+    {
+      "test_name": "JSON Validity: GHOST_OPERATION_DATA_whatilove1728_1748239114.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.169193"
+    },
+    {
+      "test_name": "JSON Validity: EXPLOITATION_RESULTS_whatilove1728_1748235941.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.169282"
+    },
+    {
+      "test_name": "JSON Validity: ACTIVE_TELEGRAM_PENETRATION_juulisaaf_1748290435.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.169434"
+    },
+    {
+      "test_name": "JSON Validity: INSTANT_EXTRACTION_whatilove1728_1748235098.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.169522"
+    },
+    {
+      "test_name": "JSON Validity: PRIVATE_CHAT_INTELLIGENCE_alx.trading_1748264946.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.169606"
+    },
+    {
+      "test_name": "JSON Validity: ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262915.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.170289"
+    },
+    {
+      "test_name": "JSON Validity: proxy_config.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.170429"
+    },
+    {
+      "test_name": "JSON Validity: debug_report.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.170512"
+    },
+    {
+      "test_name": "JSON Validity: COMPREHENSIVE_ATTACK_REPORT_alx.trading_1748262744.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.170640"
+    },
+    {
+      "test_name": "JSON Validity: ADVANCED_SESSION_HARVEST_whatilove1728_1748235632.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.170764"
+    },
+    {
+      "test_name": "JSON Validity: FINAL_BREACH_OPERATION_alx.trading_1748263379.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.171504"
+    },
+    {
+      "test_name": "JSON Validity: operation_dashboard.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.171619"
+    },
+    {
+      "test_name": "JSON Validity: ENTERPRISE_INTELLIGENCE_REPORT_whatilove1728_1748236354.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.171708"
+    },
+    {
+      "test_name": "JSON Validity: browser_data_1_1748235079.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.171787"
+    },
+    {
+      "test_name": "JSON Validity: INSTAGRAM_SESSION_EXTRACTION_whatilove1728_1748236395.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.171869"
+    },
+    {
+      "test_name": "JSON Validity: LIVE_INTELLIGENCE_REPORT_alx.trading_1748264697.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172114"
+    },
+    {
+      "test_name": "JSON Validity: INTIMATE_MESSAGES_alx.trading_1748264946.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172218"
+    },
+    {
+      "test_name": "JSON Validity: DREAMFLOW_GHOST_EXTRACTION_alx.trading_1748265562.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172299"
+    },
+    {
+      "test_name": "JSON Validity: STEALTH_PRIVATE_INTELLIGENCE_alx.trading_1748265070.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172417"
+    },
+    {
+      "test_name": "JSON Validity: proxy_config.json.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172541"
+    },
+    {
+      "test_name": "JSON Validity: alx_trading_sessionid_alt.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172620"
+    },
+    {
+      "test_name": "JSON Validity: db_setup_info.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172696"
+    },
+    {
+      "test_name": "JSON Validity: INTELLIGENCE_REPORT_whatilove1728_1748264984.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172840"
+    },
+    {
+      "test_name": "JSON Validity: instagram_extraction_whatilove1728_20250526_043438.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.172932"
+    },
+    {
+      "test_name": "JSON Validity: SESSION_ANALYSIS_whatilove1728_1748235853.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.173041"
+    },
+    {
+      "test_name": "JSON Validity: proxy_config_simple.json.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.173131"
+    },
+    {
+      "test_name": "JSON Validity: FINAL_BREACH_OPERATION_alx.trading_1748263320.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.173911"
+    },
+    {
+      "test_name": "JSON Validity: FINAL_DASHBOARD_REPORT_alx.trading_1748264756.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174007"
+    },
+    {
+      "test_name": "JSON Validity: db_setup_info.json.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174086"
+    },
+    {
+      "test_name": "JSON Validity: DREAMFLOW_INTELLIGENCE_alx.trading_1748264045.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174145"
+    },
+    {
+      "test_name": "JSON Validity: GHOST_INTELLIGENCE_REPORT_whatilove1728_1748239114.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174269"
+    },
+    {
+      "test_name": "JSON Validity: improvement_results_20250526_215324.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174365"
+    },
+    {
+      "test_name": "JSON Validity: consolidated_configs_20250526_215324.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174433"
+    },
+    {
+      "test_name": "JSON Validity: DREAMFLOW_MASTER_REPORT_alx.trading_1748264061.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174622"
+    },
+    {
+      "test_name": "JSON Validity: ultimate_bypass_results_1748232655.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174703"
+    },
+    {
+      "test_name": "JSON Validity: COMPLETE_INTELLIGENCE_REPORT_whatilove1728_1748235206.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174792"
+    },
+    {
+      "test_name": "JSON Validity: INSTAGRAM_SESSION_EXTRACTION_whatilove1728_1748235762.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174870"
+    },
+    {
+      "test_name": "JSON Validity: proxy_config_new.json.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.174950"
+    },
+    {
+      "test_name": "JSON Validity: rapid_intel_whatilove1728_1748234852.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.175063"
+    },
+    {
+      "test_name": "JSON Validity: session_data_20250526_042640.json",
+      "passed": true,
+      "details": "Valid JSON format",
+      "timestamp": "2025-05-26T21:53:26.175152"
+    },
+    {
+      "test_name": "Overall JSON Validation",
+      "passed": true,
+      "details": "All 66 JSON files are valid",
+      "timestamp": "2025-05-26T21:53:26.175792"
+    },
+    {
+      "test_name": "DB Connectivity: consolidated_intelligence.db",
+      "passed": true,
+      "details": "Connected successfully, 4 tables found",
+      "timestamp": "2025-05-26T21:53:26.179885"
+    },
+    {
+      "test_name": "DB Connectivity: instagram_intelligence.db",
+      "passed": true,
+      "details": "Connected successfully, 7 tables found",
+      "timestamp": "2025-05-26T21:53:26.182494"
+    },
+    {
+      "test_name": "DB Connectivity: ghost_operations.db",
+      "passed": true,
+      "details": "Connected successfully, 6 tables found",
+      "timestamp": "2025-05-26T21:53:26.185102"
+    },
+    {
+      "test_name": "DB Connectivity: ultimate_intelligence.db",
+      "passed": true,
+      "details": "Connected successfully, 6 tables found",
+      "timestamp": "2025-05-26T21:53:26.188468"
+    },
+    {
+      "test_name": "DB Connectivity: quick_realops.db",
+      "passed": true,
+      "details": "Connected successfully, 7 tables found",
+      "timestamp": "2025-05-26T21:53:26.189144"
+    },
+    {
+      "test_name": "DB Connectivity: production_intelligence.db",
+      "passed": true,
+      "details": "Connected successfully, 6 tables found",
+      "timestamp": "2025-05-26T21:53:26.189994"
+    },
+    {
+      "test_name": "DB Connectivity: ghost_operations_fixed.db",
+      "passed": true,
+      "details": "Connected successfully, 4 tables found",
+      "timestamp": "2025-05-26T21:53:26.190684"
+    },
+    {
+      "test_name": "DB Connectivity: stealth_intelligence.db",
+      "passed": true,
+      "details": "Connected successfully, 5 tables found",
+      "timestamp": "2025-05-26T21:53:26.191372"
+    },
+    {
+      "test_name": "Overall DB Connectivity",
+      "passed": true,
+      "details": "All 8 databases accessible",
+      "timestamp": "2025-05-26T21:53:26.191402"
+    },
+    {
+      "test_name": "Requirements File Format",
+      "passed": true,
+      "details": "Found 24 package requirements",
+      "timestamp": "2025-05-26T21:53:26.191791"
+    },
+    {
+      "test_name": "Package Dependencies",
+      "passed": false,
+      "details": "Dependency conflicts detected: ",
+      "timestamp": "2025-05-26T21:53:27.265407"
+    },
+    {
+      "test_name": "Executable Permission: cleanup_workspace.sh",
+      "passed": false,
+      "details": "File is not executable",
+      "timestamp": "2025-05-26T21:53:27.265851"
+    },
+    {
+      "test_name": "Read Permission: improve_codebase.py",
+      "passed": true,
+      "details": "File is readable",
+      "timestamp": "2025-05-26T21:53:27.265984"
+    },
+    {
+      "test_name": "Data Integrity: session_template.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.266913"
+    },
+    {
+      "test_name": "Data Integrity: DREAMFLOW_GHOST_EXTRACTION_alx.trading_1748264045.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.266989"
+    },
+    {
+      "test_name": "Data Integrity: TELEGRAM_INFILTRATION_INTELLIGENCE_juulisaaf_1748290332.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.267199"
+    },
+    {
+      "test_name": "Data Integrity: DREAMFLOW_INTELLIGENCE_alx.trading_1748265562.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.267295"
+    },
+    {
+      "test_name": "Data Integrity: INTELLIGENCE_REPORT_whatilove1728_1748236027.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.267425"
+    },
+    {
+      "test_name": "Data Integrity: SESSION_EXTRACTION_whatilove1728_1748235501.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.268019"
+    },
+    {
+      "test_name": "Data Integrity: PRIVATE_CONVERSATION_INTELLIGENCE_alx.trading_1748275978.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.268197"
+    },
+    {
+      "test_name": "Data Integrity: LIVE_TELEGRAM_INTELLIGENCE_juulisaaf_1748291117.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.268316"
+    },
+    {
+      "test_name": "Data Integrity: INSTANT_EXTRACTION_whatilove1728_1748235098.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.268390"
+    },
+    {
+      "test_name": "Data Integrity: PRIVATE_CHAT_INTELLIGENCE_alx.trading_1748264946.json",
+      "passed": true,
+      "details": "Valid data structure",
+      "timestamp": "2025-05-26T21:53:27.268453"
+    },
+    {
+      "test_name": "Overall Data Integrity",
+      "passed": true,
+      "details": "All tested files passed integrity checks",
+      "timestamp": "2025-05-26T21:53:27.268465"
+    }
+  ],
+  "overall_score": 94.91
+}

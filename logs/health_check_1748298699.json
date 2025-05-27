@@ -1,0 +1,19 @@
+{
+  "timestamp": "2025-05-26T22:31:39.506898",
+  "checks": {
+    "requirements.txt": "✅ พบ",
+    "setup.py": "✅ พบ",
+    "README.md": "✅ พบ",
+    "config/config.json": "✅ พบ",
+    "config/": "✅ 32 ไฟล์",
+    "scripts/": "✅ 69 ไฟล์",
+    "data/": "✅ 54 ไฟล์",
+    "logs/": "✅ 22 ไฟล์"
+  },
+  "overall_status": "needs_attention",
+  "project_size": 167360019,
+  "project_size_formatted": "159.61 MB",
+  "import_errors": [
+    "/workspaces/sugarglitch-realops/improved_code/validate_codebase.py:13 - Multiple imports: import importlib.util"
+  ]
+}

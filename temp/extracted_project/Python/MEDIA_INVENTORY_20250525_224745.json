@@ -1,0 +1,262 @@
+{
+  "extraction_timestamp": "2025-05-25 22:47:45",
+  "target_account": "alx.trading",
+  "session_id": "live_session_4976283726",
+  "download_directory": "downloaded_intimate_media",
+  "summary": {
+    "total_photos": 4,
+    "total_videos": 3,
+    "total_voice_messages": 3,
+    "total_highlights": 2,
+    "total_files": 12
+  },
+  "media_breakdown": {
+    "intimate_personal": 2,
+    "social_intimate": 2,
+    "lifestyle_personal": 1,
+    "close_friends_exclusive": 0
+  },
+  "owners_breakdown": {
+    "bella_thailand_99": 5,
+    "nong_pim_bkk": 4,
+    "amy_lifestyle_th": 3
+  },
+  "detailed_inventory": {
+    "photos": [
+      {
+        "photo_id": "CF_PHOTO_001",
+        "owner": "bella_thailand_99",
+        "filename": "bella_intimate_001.jpg",
+        "original_url": "https://instagram.com/cf/bella_intimate_001.jpg",
+        "timestamp": "2025-05-25T23:30:15",
+        "caption": "Just for you, my love 💕",
+        "location": "Private Bedroom, Bangkok",
+        "quality": "1080x1920",
+        "file_size": "2.5MB",
+        "content_type": "intimate_personal",
+        "viewers": [
+          "alx.trading"
+        ],
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/bella_intimate_001.jpg"
+      },
+      {
+        "photo_id": "CF_PHOTO_002",
+        "owner": "bella_thailand_99",
+        "filename": "bella_outfit_001.jpg",
+        "original_url": "https://instagram.com/cf/bella_outfit_001.jpg",
+        "timestamp": "2025-05-25T20:15:30",
+        "caption": "Getting ready for our date 👗✨",
+        "location": "Dressing Room, Bangkok",
+        "quality": "1080x1920",
+        "file_size": "1.8MB",
+        "content_type": "intimate_preparation",
+        "viewers": [
+          "alx.trading"
+        ],
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/bella_outfit_001.jpg"
+      },
+      {
+        "photo_id": "CF_PHOTO_003",
+        "owner": "nong_pim_bkk",
+        "filename": "pim_pool_001.jpg",
+        "original_url": "https://instagram.com/cf/pim_pool_001.jpg",
+        "timestamp": "2025-05-24T21:45:20",
+        "caption": "Pool party secrets 🏊‍♀️💦",
+        "location": "Private Pool Villa, Bangkok",
+        "quality": "1080x1920",
+        "file_size": "3.1MB",
+        "content_type": "social_intimate",
+        "viewers": [
+          "alx.trading",
+          "bella_thailand_99"
+        ],
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/pim_pool_001.jpg"
+      },
+      {
+        "photo_id": "CF_PHOTO_004",
+        "owner": "amy_lifestyle_th",
+        "filename": "amy_lifestyle_001.jpg",
+        "original_url": "https://instagram.com/cf/amy_lifestyle_001.jpg",
+        "timestamp": "2025-05-23T22:30:45",
+        "caption": "Living my best life 🌟",
+        "location": "Luxury Condo, Bangkok",
+        "quality": "1080x1920",
+        "file_size": "2.2MB",
+        "content_type": "lifestyle_intimate",
+        "viewers": [
+          "alx.trading"
+        ],
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/amy_lifestyle_001.jpg"
+      }
+    ],
+    "videos": [
+      {
+        "video_id": "CF_VIDEO_001",
+        "owner": "bella_thailand_99",
+        "filename": "bella_intimate_video_001.mp4",
+        "original_url": "https://instagram.com/cf/bella_intimate_video_001.mp4",
+        "timestamp": "2025-05-25T22:45:15",
+        "caption": "Missing you tonight 💕",
+        "location": "Private Bedroom, Bangkok",
+        "duration": "00:00:30",
+        "quality": "1080p",
+        "file_size": "15.2MB",
+        "content_type": "intimate_personal",
+        "viewers": [
+          "alx.trading"
+        ],
+        "audio_included": true,
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/bella_intimate_video_001.mp4"
+      },
+      {
+        "video_id": "CF_VIDEO_002",
+        "owner": "nong_pim_bkk",
+        "filename": "pim_pool_party_001.mp4",
+        "original_url": "https://instagram.com/cf/pim_pool_party_001.mp4",
+        "timestamp": "2025-05-24T20:30:45",
+        "caption": "Pool party vibes! 🎉🏊‍♀️",
+        "location": "Private Pool Villa, Bangkok",
+        "duration": "00:01:15",
+        "quality": "1080p",
+        "file_size": "28.7MB",
+        "content_type": "social_intimate",
+        "viewers": [
+          "alx.trading",
+          "bella_thailand_99",
+          "amy_lifestyle_th"
+        ],
+        "audio_included": true,
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/pim_pool_party_001.mp4"
+      },
+      {
+        "video_id": "CF_VIDEO_003",
+        "owner": "amy_lifestyle_th",
+        "filename": "amy_lifestyle_night_001.mp4",
+        "original_url": "https://instagram.com/cf/amy_lifestyle_night_001.mp4",
+        "timestamp": "2025-05-23T23:15:30",
+        "caption": "Late night thoughts 🌙✨",
+        "location": "Balcony, Bangkok",
+        "duration": "00:00:45",
+        "quality": "720p",
+        "file_size": "12.8MB",
+        "content_type": "lifestyle_personal",
+        "viewers": [
+          "alx.trading"
+        ],
+        "audio_included": true,
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/amy_lifestyle_night_001.mp4"
+      }
+    ],
+    "voice_messages": [
+      {
+        "voice_id": "VOICE_001",
+        "sender": "bella_thailand_99",
+        "filename": "bella_voice_intimate_001.m4a",
+        "timestamp": "2025-05-25T23:45:30",
+        "duration": "00:02:15",
+        "file_size": "3.2MB",
+        "content_summary": "Intimate personal message expressing feelings",
+        "emotion_detected": "affectionate",
+        "language": "Thai/English mixed",
+        "quality": "high",
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/bella_voice_intimate_001.m4a"
+      },
+      {
+        "voice_id": "VOICE_002",
+        "sender": "nong_pim_bkk",
+        "filename": "pim_voice_social_001.m4a",
+        "timestamp": "2025-05-24T19:30:20",
+        "duration": "00:01:30",
+        "file_size": "2.1MB",
+        "content_summary": "Social planning and personal thoughts",
+        "emotion_detected": "friendly",
+        "language": "Thai",
+        "quality": "normal",
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/pim_voice_social_001.m4a"
+      },
+      {
+        "voice_id": "VOICE_003",
+        "sender": "amy_lifestyle_th",
+        "filename": "amy_voice_lifestyle_001.m4a",
+        "timestamp": "2025-05-23T22:45:15",
+        "duration": "00:01:45",
+        "file_size": "2.5MB",
+        "content_summary": "Lifestyle sharing and personal updates",
+        "emotion_detected": "casual",
+        "language": "Thai/English",
+        "quality": "high",
+        "download_status": "success",
+        "local_path": "downloaded_intimate_media/amy_voice_lifestyle_001.m4a"
+      }
+    ],
+    "story_highlights": [
+      {
+        "highlight_id": "HIGHLIGHT_001",
+        "owner": "bella_thailand_99",
+        "title": "Our Moments 💕",
+        "cover_photo": "highlight_cover_001.jpg",
+        "story_count": 8,
+        "viewers": [
+          "alx.trading"
+        ],
+        "created": "2025-05-20T15:30:00",
+        "last_updated": "2025-05-25T22:00:00",
+        "stories": [
+          {
+            "story_id": "HL_STORY_001",
+            "media_type": "photo",
+            "filename": "our_moments_001.jpg",
+            "caption": "Perfect evening together 🌅",
+            "timestamp": "2025-05-25T19:30:15",
+            "local_path": "downloaded_intimate_media/highlights/HIGHLIGHT_001/our_moments_001.jpg"
+          },
+          {
+            "story_id": "HL_STORY_002",
+            "media_type": "video",
+            "filename": "our_moments_002.mp4",
+            "caption": "Dancing in the moonlight 🌙",
+            "duration": "00:00:20",
+            "timestamp": "2025-05-24T21:45:30",
+            "local_path": "downloaded_intimate_media/highlights/HIGHLIGHT_001/our_moments_002.mp4"
+          }
+        ],
+        "privacy_level": "close_friends",
+        "download_status": "success"
+      },
+      {
+        "highlight_id": "HIGHLIGHT_002",
+        "owner": "nong_pim_bkk",
+        "title": "Squad Goals 👥",
+        "cover_photo": "highlight_cover_002.jpg",
+        "story_count": 5,
+        "viewers": [
+          "alx.trading",
+          "bella_thailand_99"
+        ],
+        "created": "2025-05-18T10:20:00",
+        "last_updated": "2025-05-23T20:15:00",
+        "stories": [
+          {
+            "story_id": "HL_STORY_003",
+            "media_type": "photo",
+            "filename": "squad_goals_001.jpg",
+            "caption": "Best friends forever! 👭",
+            "timestamp": "2025-05-23T18:30:20",
+            "local_path": "downloaded_intimate_media/highlights/HIGHLIGHT_002/squad_goals_001.jpg"
+          }
+        ],
+        "privacy_level": "close_friends",
+        "download_status": "success"
+      }
+    ]
+  }
+}

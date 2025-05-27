@@ -1,0 +1,44 @@
+{
+  "database": {
+    "path": "data/sugarglitch.db",
+    "type": "sqlite",
+    "backup_interval": 3600
+  },
+  "instagram": {
+    "session_file": "data/instagram_session.json",
+    "delay_min": 1,
+    "delay_max": 3,
+    "max_requests_per_hour": 100
+  },
+  "telegram": {
+    "session_file": "data/telegram_session.session",
+    "max_messages": 1000
+  },
+  "proxy": {
+    "enabled": false,
+    "rotation_interval": 300,
+    "config_file": "config/proxy_list.json"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/sugarglitch.log",
+    "max_size": "10MB",
+    "backup_count": 5
+  },
+  "security": {
+    "rate_limit": {
+      "requests_per_minute": 60,
+      "burst": 10
+    },
+    "encryption": {
+      "algorithm": "AES-256",
+      "key_file": "config/encryption.key"
+    }
+  },
+  "performance": {
+    "max_workers": 4,
+    "timeout": 30,
+    "retry_attempts": 3,
+    "cache_ttl": 300
+  }
+}

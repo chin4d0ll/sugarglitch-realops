@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-05-26T05:29:21.483794",
+  "target": "alx.trading",
+  "analysis": {
+    "username_patterns": {
+      "has_numbers": false,
+      "has_dots": true,
+      "length": 11,
+      "pattern_type": "trading_related"
+    },
+    "possible_variations": [
+      "alx.tradingofficial",
+      "alx.tradingreal",
+      "alx.trading_",
+      "realalx.trading",
+      "alx.tradingfx",
+      "alx.tradingcrypto"
+    ]
+  }
+}

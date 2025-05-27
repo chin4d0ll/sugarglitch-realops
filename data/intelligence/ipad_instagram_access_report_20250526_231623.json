@@ -1,0 +1,47 @@
+{
+  "timestamp": "20250526_231623",
+  "target": "alx.trading",
+  "device": "iPad/iOS",
+  "session_info": {
+    "sessionid": "4976283726%3A1JgRzA56Q8e8Qs%3A12",
+    "ds_user_id": "4976283726"
+  },
+  "access_methods": {
+    "html_file": "temp/ipad_instagram_access.html",
+    "bookmarklet": "javascript:(function(){\n    document.cookie = \"sessionid=4976283726%3A1JgRzA56Q8e8Qs%3A12; domain=.instagram.com; path=/; secure; samesite=lax; max-age=31536000\";\n    document.cookie = \"ds_user_id=4976283726; domain=.instagram.com; path=/; secure; samesite=lax; max-age=31536000\";\n    alert(\"✅ Instagram session set! Redirecting...\");\n    setTimeout(() => {\n        window.location.href = \"https://www.instagram.com/alx.trading/\";\n    }, 1000);\n})();",
+    "universal_links": {
+      "profile_direct": "https://www.instagram.com/alx.trading/",
+      "profile_with_session": "https://www.instagram.com/alx.trading/?sessionid=4976283726%3A1JgRzA56Q8e8Qs%3A12",
+      "stories": "https://www.instagram.com/stories/alx.trading/",
+      "instagram_app": "instagram://user?username=alx.trading",
+      "instagram_web": "https://instagram.com/alx.trading"
+    }
+  },
+  "ipad_instructions": [
+    "📱 วิธีที่ 1: ใช้ไฟล์ HTML",
+    "1. เปิด Safari บน iPad",
+    "2. ไปยัง file://temp/ipad_instagram_access.html",
+    "3. กดปุ่ม 'เข้าสู่ระบบและไปยัง Profile'",
+    "",
+    "📱 วิธีที่ 2: ใช้ Bookmarklet",
+    "1. เปิด Safari และไปยัง instagram.com",
+    "2. เพิ่ม bookmark ใหม่",
+    "3. แก้ไข URL เป็น bookmarklet code",
+    "4. กด bookmark เพื่อเข้าสู่ระบบ",
+    "",
+    "📱 วิธีที่ 3: Manual Console (Advanced)",
+    "1. เปิด Safari Developer Tools",
+    "2. Settings → Advanced → Web Inspector",
+    "3. เชื่อมต่อ iPad กับ Mac",
+    "4. ใช้ Safari Developer → Console",
+    "5. รัน setInstagramSession()"
+  ],
+  "troubleshooting": [
+    "🔧 หากไม่สามารถเข้าถึงได้:",
+    "- ลองเปิด instagram.com ก่อน",
+    "- ตรวจสอบว่า JavaScript เปิดใช้งาน",
+    "- ลบ cookies เก่าแล้วลองใหม่",
+    "- ใช้ Private/Incognito mode",
+    "- ตรวจสอบการเชื่อมต่ือินเทอร์เน็ต"
+  ]
+}

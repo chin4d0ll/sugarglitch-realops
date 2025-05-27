@@ -1,0 +1,43 @@
+[
+  {
+    "target": "https://www.example.com",
+    "screenshot": "capture_20250526_042751.png",
+    "intelligence": {
+      "url": "https://www.example.com",
+      "title": "Example Domain",
+      "content_length": 1248,
+      "text_length": 189,
+      "links_count": 1,
+      "forms_count": 0,
+      "links": [
+        {
+          "text": "More information...",
+          "href": "https://www.iana.org/domains/example",
+          "target": "",
+          "rel": ""
+        }
+      ],
+      "forms": [],
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1"
+      },
+      "timestamp": "2025-05-26T04:28:00.006828"
+    },
+    "status": "SUCCESS"
+  },
+  {
+    "target": "https://httpbin.org/headers",
+    "error": "Page.goto: Protocol error (Page.navigate): Page.navigate limit reached\nCall log:\n  - navigating to \"https://httpbin.org/headers\", waiting until \"load\"\n",
+    "status": "FAILED"
+  },
+  {
+    "target": "https://geo.brdtest.com/mygeo.json",
+    "error": "Page.goto: Protocol error (Page.navigate): Page.navigate limit reached\nCall log:\n  - navigating to \"https://geo.brdtest.com/mygeo.json\", waiting until \"load\"\n",
+    "status": "FAILED"
+  },
+  {
+    "target": "https://httpbin.org/user-agent",
+    "error": "Page.goto: Protocol error (Page.navigate): Page.navigate limit reached\nCall log:\n  - navigating to \"https://httpbin.org/user-agent\", waiting until \"load\"\n",
+    "status": "FAILED"
+  }
+]

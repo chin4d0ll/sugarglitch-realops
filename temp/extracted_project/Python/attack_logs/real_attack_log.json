@@ -1,0 +1,7 @@
+{
+    "timestamp": "2025-05-25T13:37:58.245064",
+    "type": "REAL_ATTACK_START",
+    "target_system": "Instagram",
+    "attack_mode": "Real Penetration",
+    "warning": "This is not a demo - real attack in progress"
+}

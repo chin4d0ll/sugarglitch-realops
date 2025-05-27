@@ -1,0 +1,41 @@
+[
+  {
+    "name": "Web Login",
+    "identifier": "alx.trading",
+    "status_code": 400,
+    "response_length": 30,
+    "response_preview": "{\"message\":\"\",\"status\":\"fail\"}",
+    "timestamp": "2025-05-25T17:14:53.948247",
+    "json": {
+      "message": "",
+      "status": "fail"
+    }
+  },
+  {
+    "name": "Mobile API",
+    "identifier": "alx.trading",
+    "status_code": 400,
+    "response_length": 11,
+    "response_preview": "Bad request",
+    "timestamp": "2025-05-25T17:14:57.150449",
+    "json": null
+  },
+  {
+    "name": "Phone Login (TH)",
+    "identifier": "0615414210",
+    "status_code": 400,
+    "response_length": 11,
+    "response_preview": "Bad request",
+    "timestamp": "2025-05-25T17:15:00.318255",
+    "json": null
+  },
+  {
+    "name": "Phone Login (UK)",
+    "identifier": "+447793127209",
+    "status_code": 400,
+    "response_length": 11,
+    "response_preview": "Bad request",
+    "timestamp": "2025-05-25T17:15:03.487122",
+    "json": null
+  }
+]

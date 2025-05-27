@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-05-26T05:31:44.196211",
+  "target": "alx.trading",
+  "endpoints_tested": [
+    {
+      "name": "Profile Page",
+      "url": "https://www.instagram.com/alx.trading/",
+      "status_code": 429,
+      "content_length": 0,
+      "has_json": false,
+      "rate_limited": true,
+      "accessible": false
+    },
+    {
+      "name": "Profile Page with Channel",
+      "url": "https://www.instagram.com/alx.trading/channel/",
+      "status_code": 429,
+      "content_length": 0,
+      "has_json": false,
+      "rate_limited": true,
+      "accessible": false
+    },
+    {
+      "name": "Tagged Posts",
+      "url": "https://www.instagram.com/explore/tags/alx.trading/",
+      "status_code": 429,
+      "content_length": 0,
+      "has_json": false,
+      "rate_limited": true,
+      "accessible": false
+    }
+  ]
+}

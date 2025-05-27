@@ -1,0 +1,13 @@
+2025-05-26 05:12:34,073 - InstagramIntelligence - INFO - ================================================================================
+2025-05-26 05:12:34,074 - InstagramIntelligence - INFO - 🔥 ENTERPRISE INSTAGRAM INTELLIGENCE PLATFORM 🔥
+2025-05-26 05:12:34,074 - InstagramIntelligence - INFO - 🎯 TARGET: whatilove1728
+2025-05-26 05:12:34,074 - InstagramIntelligence - INFO - 🔥 PRODUCTION-LEVEL EXTRACTION INITIATED
+2025-05-26 05:12:34,074 - InstagramIntelligence - INFO - ================================================================================
+2025-05-26 05:12:34,074 - InstagramIntelligence - INFO - 📊 PHASE 1: PROFILE INTELLIGENCE EXTRACTION
+2025-05-26 05:12:34,074 - InstagramIntelligence - INFO - Extracting profile for whatilove1728
+2025-05-26 05:12:34,840 - InstagramIntelligence - ERROR - Failed to get profile: 401 - None
+2025-05-26 05:12:34,841 - InstagramIntelligence - INFO - ================================================================================
+2025-05-26 05:12:34,841 - InstagramIntelligence - INFO - 🔥 ENTERPRISE EXTRACTION COMPLETE!
+2025-05-26 05:12:34,841 - InstagramIntelligence - INFO - 📊 Report saved: ENTERPRISE_INTELLIGENCE_REPORT_whatilove1728_1748236354.json
+2025-05-26 05:12:34,841 - InstagramIntelligence - INFO - 🔥 PRODUCTION INTELLIGENCE READY!
+2025-05-26 05:12:34,841 - InstagramIntelligence - INFO - ================================================================================

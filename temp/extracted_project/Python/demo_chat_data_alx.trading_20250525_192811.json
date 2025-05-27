@@ -1,0 +1,84 @@
+{
+  "conversations": [
+    {
+      "name": "john_trader",
+      "timestamp": "2025-05-25T10:30:00",
+      "extracted": true,
+      "message_count": 45
+    },
+    {
+      "name": "crypto_expert",
+      "timestamp": "2025-05-25T09:15:00",
+      "extracted": true,
+      "message_count": 32
+    },
+    {
+      "name": "investment_buddy",
+      "timestamp": "2025-05-25T08:45:00",
+      "extracted": true,
+      "message_count": 67
+    },
+    {
+      "name": "forex_mentor",
+      "timestamp": "2025-05-24T22:30:00",
+      "extracted": true,
+      "message_count": 28
+    },
+    {
+      "name": "trading_group",
+      "timestamp": "2025-05-24T20:15:00",
+      "extracted": true,
+      "message_count": 89
+    }
+  ],
+  "direct_messages": [
+    {
+      "conversation": "john_trader",
+      "text": "Hey, did you see the market movement today?",
+      "timestamp": "2025-05-25T10:30:00",
+      "type": "received"
+    },
+    {
+      "conversation": "john_trader",
+      "text": "Yeah, incredible! Bitcoin is up 5%",
+      "timestamp": "2025-05-25T10:31:00",
+      "type": "sent"
+    },
+    {
+      "conversation": "crypto_expert",
+      "text": "Check out this new trading strategy",
+      "timestamp": "2025-05-25T09:15:00",
+      "type": "received"
+    },
+    {
+      "conversation": "crypto_expert",
+      "text": "Looks promising, let me analyze it",
+      "timestamp": "2025-05-25T09:16:00",
+      "type": "sent"
+    },
+    {
+      "conversation": "investment_buddy",
+      "text": "Portfolio update: +12% this week",
+      "timestamp": "2025-05-25T08:45:00",
+      "type": "received"
+    },
+    {
+      "conversation": "forex_mentor",
+      "text": "EUR/USD looking bullish",
+      "timestamp": "2025-05-24T22:30:00",
+      "type": "received"
+    },
+    {
+      "conversation": "trading_group",
+      "text": "Anyone trading TSLA options?",
+      "timestamp": "2025-05-24T20:15:00",
+      "type": "received"
+    }
+  ],
+  "chat_metadata": {
+    "total_conversations": 5,
+    "total_messages": 271,
+    "extraction_timestamp": "2025-05-25T19:28:11.402000",
+    "target_account": "alx.trading"
+  }
+}

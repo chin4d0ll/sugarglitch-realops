@@ -1,0 +1,8 @@
+
+def fetch_dms(session_file):
+    # Mock response เพื่อการทดสอบ
+    return [
+        {"user": "ex_boy", "last_message": "miss u"},
+        {"user": "queen.mochi", "last_message": "คิดถึงนะ ♥"},
+        {"user": "sugar.moon", "last_message": "ส่งรูปมาดูหน่อยค่ะ"}
+    ]

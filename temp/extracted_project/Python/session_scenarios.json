@@ -1,0 +1,18 @@
+{
+  "valid_session_example": {
+    "sessionid": "12345678%3AaBcDeFgHiJkLmNoP%3A12",
+    "ds_user_id": "12345678",
+    "status": "This would be a valid session format"
+  },
+  "checkpoint_required_session": {
+    "sessionid": "partial_session_before_checkpoint",
+    "ds_user_id": "user_id_known",
+    "checkpoint_url": "extracted_checkpoint_url",
+    "status": "Requires checkpoint verification to complete"
+  },
+  "expired_session": {
+    "sessionid": "old_session_id",
+    "ds_user_id": "user_id",
+    "status": "Session expired, needs fresh login"
+  }
+}
