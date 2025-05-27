@@ -12,6 +12,7 @@ git clone https://github.com/your-org/sugarglitch-realops.git && cd sugarglitch-
 ## 📋 Manual Setup
 
 ### 1. Prerequisites
+
 ```bash
 # Check requirements
 python3 --version  # Should be 3.12+
@@ -20,6 +21,7 @@ npm --version      # Should be 9+
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 # Python packages
 pip install -r requirements.txt
@@ -29,6 +31,7 @@ npm install
 ```
 
 ### 3. Configuration
+
 ```bash
 # Copy environment template
 cp .env.example .env
@@ -38,6 +41,7 @@ nano .env
 ```
 
 ### 4. Initialize Database
+
 ```bash
 cd databases/
 python3 enterprise_db_setup.py
@@ -45,6 +49,7 @@ cd ..
 ```
 
 ### 5. Start Platform
+
 ```bash
 # Interactive mode
 python3 main.py
@@ -56,6 +61,7 @@ npm start
 ## 🎯 Common Tasks
 
 ### Fix Extension Issues
+
 ```bash
 # Emergency fix
 ./fix_extensions_rerun.sh
@@ -65,6 +71,7 @@ python3 monitor_extensions.py &
 ```
 
 ### Instagram Extraction
+
 ```bash
 # Run main platform
 python3 main.py
@@ -74,6 +81,7 @@ python3 main.py
 ```
 
 ### System Monitoring
+
 ```bash
 # Check system status
 python3 main.py
@@ -102,6 +110,7 @@ ps aux | grep extensionHost    # Extension processes
 ## 🚨 Troubleshooting
 
 ### Memory Issues
+
 ```bash
 # Check memory usage
 free -h
@@ -111,6 +120,7 @@ free -h
 ```
 
 ### Database Issues
+
 ```bash
 # Reinitialize database
 cd databases/
@@ -118,6 +128,7 @@ python3 enterprise_db_setup.py --repair
 ```
 
 ### Permission Issues
+
 ```bash
 # Fix permissions
 chmod +x *.sh

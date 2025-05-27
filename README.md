@@ -11,6 +11,7 @@
 ## 🎯 **Overview**
 
 SugarGlitch RealOps is a cutting-edge platform designed for:
+
 - **Social Media Intelligence** - Advanced Instagram, Telegram data extraction
 - **Session Management** - Sophisticated proxy and session handling  
 - **Automated Operations** - Real-time monitoring and data processing
@@ -64,6 +65,7 @@ python3 main.py
 ## 📦 **Installation**
 
 ### Prerequisites
+
 - **Python 3.12+**
 - **Node.js 18+**
 - **Git**
@@ -167,6 +169,7 @@ python3 monitor_extensions.py &
 ### Common Issues
 
 #### Extensions Memory Issues
+
 ```bash
 # Quick fix for VS Code extension problems
 ./fix_extensions_rerun.sh
@@ -176,6 +179,7 @@ python3 monitor_extensions.py &
 ```
 
 #### Database Connection
+
 ```bash
 # Check database status
 python3 -c "import sqlite3; print('Database OK')"
@@ -185,6 +189,7 @@ cd databases/ && python3 enterprise_db_setup.py --repair
 ```
 
 #### Proxy Issues
+
 ```bash
 # Test proxy connectivity
 python3 utils/proxy_tester.py
@@ -196,18 +201,21 @@ python3 improved_code/advanced_proxy_warfare.py --rotate
 ## 🔍 **Available Modules**
 
 ### Core Extractors
+
 - `instagram_comprehensive_extractor.py` - Complete Instagram data extraction
 - `instagram_instagrapi_extractor.py` - InstagrAPI-based extractor  
 - `instagram_puppeteer_extractor.py` - Browser automation extractor
 - `ultimate_instagram_extractor.py` - Unified extraction interface
 
 ### Advanced Tools
+
 - `advanced_stealth_intelligence.py` - Stealth operations
 - `advanced_proxy_warfare.py` - Proxy management
 - `advanced_session_manager.py` - Session handling
 - `aggressive_data_fusion.py` - Data processing
 
 ### Utilities
+
 - `monitor_extensions.py` - VS Code extension monitor
 - `fix_extensions_rerun.sh` - Emergency memory fix
 - Database management tools

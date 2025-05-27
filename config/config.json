@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "SugarGlitch RealOps", 
+    "name": "SugarGlitch RealOps",
     "version": "1.0.0",
     "description": "Advanced Real-time Operations & Intelligence Platform",
     "author": "SugarGlitch Team",
@@ -38,7 +38,10 @@
   "proxy": {
     "enabled": true,
     "rotation_interval": 300,
-    "providers": ["brightdata", "residential"],
+    "providers": [
+      "brightdata",
+      "residential"
+    ],
     "max_retries": 5
   },
   "monitoring": {
