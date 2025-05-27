@@ -1,11 +1,12 @@
 # Extractor Scripts Directory
 
 **Directory:** `scripts/extractors`
-**Files:** 23
-**Last Updated:** 2025-05-26 22:07:39
+**Files:** 24
+**Last Updated:** 2025-05-27 01:06:36
 
 ## Files:
 
+- `README.md`
 - `advanced_private_chat_extractor.py`
 - `advanced_session_harvester.py`
 - `advanced_visual_extractor.py`

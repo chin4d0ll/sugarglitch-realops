@@ -1,11 +1,12 @@
 # Proxy Scripts Directory
 
 **Directory:** `scripts/proxies`
-**Files:** 7
-**Last Updated:** 2025-05-26 22:07:39
+**Files:** 8
+**Last Updated:** 2025-05-27 01:06:36
 
 ## Files:
 
+- `README.md`
 - `advanced_browser_automation_bypass.py`
 - `advanced_proxy_warfare.py`
 - `fixed_alx_checkpoint_bypass.py`

@@ -1,0 +1,23 @@
+{
+    "name": "openai-example",
+    "version": "1.0.0",
+    "description": "OpenAI API example with proper implementation",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "node --watch index.js",
+        "test": "node test-api.js"
+    },
+    "dependencies": {
+        "openai": "^4.52.0",
+        "dotenv": "^16.4.5"
+    },
+    "keywords": [
+        "openai",
+        "chatgpt",
+        "api"
+    ],
+    "author": "",
+    "license": "MIT"
+}
