@@ -10,6 +10,30 @@ from typing import Dict, Any, Optional, List
 from datetime import datetime
 
 class ConfigManager:
+    def get(self, key: str, default=None):
+        """Get a config value by dot notation key from config/config.json"""
+        config = self.load_config("config", create_if_missing=True)
+        keys = key.split('.')
+        value = config
+        for k in keys:
+            if isinstance(value, dict) and k in value:
+                value = value[k]
+            else:
+                return default
+        return value
+    def is_valid(self) -> bool:
+        """Check if the main config file exists and is valid JSON"""
+        config_file = self.config_dir / "config.json"
+        if not config_file.exists():
+            print(f"❌ Config file not found: {config_file}")
+            return False
+        try:
+            with open(config_file, 'r', encoding='utf-8') as f:
+                json.load(f)
+            return True
+        except Exception as e:
+            print(f"❌ Invalid config file: {e}")
+            return False
     def __init__(self, base_dir: str = "."):
         self.base_dir = Path(base_dir)
         self.config_dir = self.base_dir / "config"
