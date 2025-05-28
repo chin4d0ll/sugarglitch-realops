@@ -6,6 +6,9 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 
@@ -49,17 +52,33 @@ except:
     pass
 
 # --- GO TO PROFILE ---
-driver.get(f"https://www.instagram.com/{IG_USERNAME}/")
-time.sleep(3)
+try:
+    driver.get(f"https://www.instagram.com/{IG_USERNAME}/")
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//header"))
+    )
+except Exception as e:
+    print(f"❌ Failed to load profile page: {e}")
+    driver.quit()
+    exit(1)
 
 # --- EXTRACT DATA ---
-followers = driver.find_element(By.XPATH, "//a[contains(@href, '/followers')]/span")
-following = driver.find_element(By.XPATH, "//a[contains(@href, '/following')]/span")
-posts = driver.find_element(By.XPATH, "//span[contains(@class, '_ac2a')]" )
-
-print(f"Followers: {followers.text}")
-print(f"Following: {following.text}")
-print(f"Posts: {posts.text}")
+try:
+    followers = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//a[contains(@href, '/followers')]/span | //a[contains(@href, '/followers')]/div/span"))
+    )
+    following = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//a[contains(@href, '/following')]/span | //a[contains(@href, '/following')]/div/span"))
+    )
+    posts = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, "//span[contains(@class, '_ac2a')]"))
+    )
+    print(f"Followers: {followers.text}")
+    print(f"Following: {following.text}")
+    print(f"Posts: {posts.text}")
+except Exception as e:
+    print(f"❌ Data extraction failed: {e}")
 
 # --- CLOSE ---
+# (Handled in except block above if extraction fails)
 driver.quit()
