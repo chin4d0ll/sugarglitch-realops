@@ -1,4 +1,9 @@
 {
+  "_defaults": {
+    "debug": "none",
+    "logs": 0,
+    "lpm_auth": "none"
+  },
   "enabled": true,
   "proxies": [
     {
@@ -7,7 +12,20 @@
       "proxy_host": "brd.superproxy.io",
       "proxy_port": 24000,
       "zone": "sg_zone",
-      "country": "sg"
+      "country": "sg",
+      "preset": "session_long",
+      "proxy_type": "persist",
+      "area": 24000,
+      "name": "create_proxy_port",
+      "admin_whitelist_ips": [
+        "0.0.0.0"
+      ],
+      "proxy_whitelist_ips": [
+        "0.0.0.0"
+      ],
+      "request_details": "full",
+      "logs_limit": 0
     }
-  ]
+  ],
+  "ts": "2025-05-28T20:40:53.300Z"
 }
