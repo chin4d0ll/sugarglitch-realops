@@ -11,8 +11,9 @@ if len(sys.argv) < 2:
 
 TARGET_USERNAME = sys.argv[1]
 
-# Bright Data Scraping Browser proxy config
-BRD_PROXY = "http://brd-customer-hl_63f0835e-zone-scraping_browser1:bj0nymiw6mij@brd.superproxy.io:9515"
+
+# Proxy Manager endpoint (with Bright Data credentials)
+BRD_PROXY = "http://brd-auth-token:eackrzayqSbccMSji2QsEcrwEkMgPGPQ@fuzzy-fishstick-r4w55pwpvp59hvrg-22999.app.github.dev:24000"
 USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
 
 with sync_playwright() as p:
