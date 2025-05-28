@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 # วิธีที่ 1: ใช้ sessionid (bypass login block/blacklist)
-SESSIONID = os.getenv('IG_SESSIONID') or 'ใส่ sessionid ที่ได้จากเบราว์เซอร์/มือถือ'
+SESSIONID = os.getenv('IG_SESSIONID') or '4976283726%3A1JgRzA56Q8e8Qs%3A12'
 PROXY = os.getenv('IG_PROXY') or 'http://username:password@proxy_host:proxy_port'  # ใส่ proxy ที่ยังไม่โดนบล็อก
 
 cl = Client()
