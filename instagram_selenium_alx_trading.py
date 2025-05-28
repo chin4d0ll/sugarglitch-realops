@@ -1,6 +1,7 @@
 # Selenium IG Extractor for alx.trading
 # ใช้สำหรับดึงข้อมูล IG ด้วย Selenium แบบ advance
 
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
@@ -10,10 +11,17 @@ from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import os
+import sys
+import json
+
 
 
 # --- CONFIG ---
-IG_USERNAME = "alx.trading"
+# Allow username as command-line argument
+if len(sys.argv) > 1:
+    IG_USERNAME = sys.argv[1]
+else:
+    IG_USERNAME = "alx.trading"  # Default
 
 # --- COOKIES ---
 COOKIES = {
@@ -22,9 +30,12 @@ COOKIES = {
     "rur": "VLL"
 }
 
+
+
 # --- SETUP SELENIUM ---
+import tempfile
 chrome_options = Options()
-# chrome_options.add_argument('--headless')  # Disable headless for debug
+chrome_options.add_argument('--headless')  # Enable headless mode for server/CI
 chrome_options.add_argument('--disable-blink-features=AutomationControlled')
 chrome_options.add_argument('--window-size=1200,800')
 chrome_options.add_argument('--no-sandbox')
@@ -37,6 +48,27 @@ chrome_options.add_argument('--disable-infobars')
 chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_experimental_option('useAutomationExtension', False)
 chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36')
+# Use a unique temporary user data dir to avoid session errors
+tmp_user_data_dir = tempfile.mkdtemp(prefix="selenium_chrome_profile_")
+chrome_options.add_argument(f'--user-data-dir={tmp_user_data_dir}')
+
+# --- PROXY SETUP ---
+proxy_path = os.path.join(os.path.dirname(__file__), 'proxy_config_new.json')
+proxy = None
+if os.path.exists(proxy_path):
+    with open(proxy_path, 'r') as f:
+        proxies = json.load(f)
+        if proxies and isinstance(proxies, list):
+            proxy = proxies[0]  # Use the first proxy
+if proxy:
+    proxy_str = proxy.get('http')
+    if proxy_str:
+        chrome_options.add_argument(f'--proxy-server={proxy_str}')
+        print(f"[DEBUG] Using proxy: {proxy_str}")
+    else:
+        print("[DEBUG] Proxy config found but no 'http' key.")
+else:
+    print("[DEBUG] No proxy config found or file missing.")
 
 # (Removed --user-data-dir to avoid session not created error)
 
