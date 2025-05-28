@@ -17,6 +17,7 @@ IG_USERNAME = "alx.trading"
 IG_PASSWORD = "Fleming654"  # ใส่รหัสผ่านจริงของบัญชีทดสอบ
 
 # --- SETUP SELENIUM ---
+
 chrome_options = Options()
 chrome_options.add_argument('--headless')  # ถ้าอยากเห็น browser จริงๆ ให้คอมเมนต์บรรทัดนี้
 chrome_options.add_argument('--disable-blink-features=AutomationControlled')
@@ -24,14 +25,27 @@ chrome_options.add_argument('--window-size=1200,800')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument('--disable-gpu')
 chrome_options.add_argument('--disable-dev-shm-usage')
-
-# ปิด warning SSL (ถ้าเจอปัญหา SSL)
 chrome_options.add_argument('--ignore-certificate-errors')
+chrome_options.add_argument('--disable-software-rasterizer')
+chrome_options.add_argument('--disable-extensions')
+chrome_options.add_argument('--disable-infobars')
+chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
+chrome_options.add_experimental_option('useAutomationExtension', False)
 
 
 # --- START DRIVER (ใช้ webdriver-manager ดาวน์โหลด chromedriver อัตโนมัติ) ---
+
 service = Service(ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=chrome_options)
+
+# --- STEALTH PATCH ---
+def stealth(driver):
+    driver.execute_cdp_cmd(
+        "Page.addScriptToEvaluateOnNewDocument",
+        {"source": "Object.defineProperty(navigator, 'webdriver', {get: () => undefined})"}
+    )
+stealth(driver)
+
 driver.get("https://www.instagram.com/accounts/login/")
 time.sleep(3)
 
