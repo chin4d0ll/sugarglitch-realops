@@ -1,10 +1,10 @@
 [
     {
-        "http": "http://user:password@proxy1.example.com:8080",
-        "https": "http://user:password@proxy1.example.com:8080"
+        "http": "http://brd-customer-hl_63f0835e-zone-scraping_browser1:bj0nymiw6mij@brd.superproxy.io:9222",
+        "https": "http://brd-customer-hl_63f0835e-zone-scraping_browser1:bj0nymiw6mij@brd.superproxy.io:9222"
     },
     {
-        "http": "http://user:password@proxy2.example.com:8080",
-        "https": "http://user:password@proxy2.example.com:8080"
+        "http": "http://brd-customer-hl_63f0835e-zone-scraping_browser1:bj0nymiw6mij@brd.superproxy.io:9515",
+        "https": "http://brd-customer-hl_63f0835e-zone-scraping_browser1:bj0nymiw6mij@brd.superproxy.io:9515"
     }
 ]

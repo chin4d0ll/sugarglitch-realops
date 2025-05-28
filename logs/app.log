@@ -149,3 +149,5 @@ UnboundLocalError: cannot access local variable 'safe_print' where it is not ass
 2025-05-28 15:44:13,937 - WDM - INFO - Driver downloading response is 200
 2025-05-28 15:44:13,977 - WDM - INFO - Get LATEST chromedriver version for google-chrome
 2025-05-28 15:44:14,132 - WDM - INFO - Driver has been saved in cache [/home/codespace/.wdm/drivers/chromedriver/linux64/137.0.7151.55]
+2025-05-28 18:03:24,039 - utils.error_handler - INFO - 🚀 Starting main at 2025-05-28 18:03:24.039060
+2025-05-28 18:03:31,551 - utils.error_handler - INFO - ✅ Completed main successfully
