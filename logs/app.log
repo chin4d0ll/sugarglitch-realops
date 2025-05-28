@@ -124,3 +124,28 @@ UnboundLocalError: cannot access local variable 'safe_print' where it is not ass
 2025-05-27 20:30:24,165 - utils.error_handler - INFO - ✅ Completed main successfully
 2025-05-27 20:35:29,806 - utils.error_handler - INFO - 🚀 Starting main at 2025-05-27 20:35:29.806677
 2025-05-27 20:38:44,567 - utils.error_handler - INFO - ✅ Completed main successfully
+2025-05-28 15:32:36,566 - WDM - INFO - ====== WebDriver manager ======
+2025-05-28 15:32:36,577 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:32:36,592 - WDM - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+2025-05-28 15:32:36,603 - WDM - INFO - Driver downloading response is 200
+2025-05-28 15:32:36,642 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:32:36,781 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:32:36,796 - WDM - INFO - Driver has been saved in cache [/home/codespace/.wdm/drivers/chromedriver/linux64/114.0.5735.90]
+2025-05-28 15:36:04,256 - WDM - INFO - ====== WebDriver manager ======
+2025-05-28 15:36:04,267 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:36:04,277 - WDM - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+2025-05-28 15:36:04,287 - WDM - INFO - Driver downloading response is 200
+2025-05-28 15:36:04,327 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:36:04,455 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:36:04,470 - WDM - INFO - Driver has been saved in cache [/home/codespace/.wdm/drivers/chromedriver/linux64/114.0.5735.90]
+2025-05-28 15:44:13,742 - WDM - INFO - ====== WebDriver manager ======
+2025-05-28 15:44:13,836 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:44:13,851 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:44:13,865 - WDM - INFO - There is no [linux64] chromedriver "137.0.7151.55" for browser google-chrome "137.0.7151" in cache
+2025-05-28 15:44:13,865 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:44:13,920 - WDM - INFO - WebDriver version 137.0.7151.55 selected
+2025-05-28 15:44:13,923 - WDM - INFO - Modern chrome version https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.55/linux64/chromedriver-linux64.zip
+2025-05-28 15:44:13,923 - WDM - INFO - About to download new driver from https://storage.googleapis.com/chrome-for-testing-public/137.0.7151.55/linux64/chromedriver-linux64.zip
+2025-05-28 15:44:13,937 - WDM - INFO - Driver downloading response is 200
+2025-05-28 15:44:13,977 - WDM - INFO - Get LATEST chromedriver version for google-chrome
+2025-05-28 15:44:14,132 - WDM - INFO - Driver has been saved in cache [/home/codespace/.wdm/drivers/chromedriver/linux64/137.0.7151.55]

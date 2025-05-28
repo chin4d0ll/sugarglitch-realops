@@ -104,9 +104,11 @@ class RealStealthDMExtractor:
         print("🤖 กำลังตั้งค่า stealth browser...")
         
         chrome_options = Options()
+        # Explicitly set the binary location to Google Chrome (not Chromium)
+        chrome_options.binary_location = "/usr/bin/google-chrome"
         
         # Basic stealth options
-        chrome_options.add_argument("--headless")  # Run in headless mode for this environment
+        chrome_options.add_argument("--headless=new")  # Modern headless mode for Codespaces
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
         chrome_options.add_argument("--disable-blink-features=AutomationControlled")
