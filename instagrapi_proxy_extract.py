@@ -34,4 +34,7 @@ if proxy_str:
 cl.login(IG_USERNAME, IG_PASSWORD)
 user_info = cl.user_info_by_username(TARGET_USERNAME)
 print(f"[INFO] Extracted data for {TARGET_USERNAME}:")
-print(user_info.dict())
+# Save user_info to a JSON file
+with open(f"{TARGET_USERNAME}_info.json", "w") as f:
+    json.dump(user_info.dict(), f, indent=4)
+print(f"[INFO] User info saved to {TARGET_USERNAME}_info.json")
