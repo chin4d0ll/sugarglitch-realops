@@ -11,33 +11,18 @@ IG_USERNAME = sys.argv[1]
 TARGET_USERNAME = sys.argv[2]
 IG_PASSWORD = input(f"Enter password for {IG_USERNAME}: ")
 
-# Load proxy config
-proxy_path = "proxy_config_new.json"
-
-# Try proxies in order until one works
-proxy = None
-proxies = []
-if proxy_path:
-    with open(proxy_path, 'r') as f:
-        proxies = json.load(f)
-        if not isinstance(proxies, list):
-            proxies = []
-
-proxy_str = None
-for p in proxies:
-    try:
-        proxy_str = p['http']
-        cl = Client()
-        cl.set_proxy(proxy_str)
-        print(f"[DEBUG] Trying proxy: {proxy_str}")
-        cl.login(IG_USERNAME, IG_PASSWORD)
-        user_info = cl.user_info_by_username(TARGET_USERNAME)
-        print(f"[INFO] Extracted data for {TARGET_USERNAME}:")
-        print(user_info.dict())
-        break
-    except Exception as e:
-        print(f"[ERROR] Proxy failed: {proxy_str} => {e}")
-        continue
+# Use Proxy Manager endpoint for all requests
+proxy_str = "http://brd-auth-token:eackrzayqSbccMSji2QsEcrwEkMgPGPQ@fuzzy-fishstick-r4w55pwpvp59hvrg-22999.app.github.dev:24000"
+try:
+    cl = Client()
+    cl.set_proxy(proxy_str)
+    print(f"[DEBUG] Using Proxy Manager: {proxy_str}")
+    cl.login(IG_USERNAME, IG_PASSWORD)
+    user_info = cl.user_info_by_username(TARGET_USERNAME)
+    print(f"[INFO] Extracted data for {TARGET_USERNAME}:")
+    print(user_info.dict())
+except Exception as e:
+    print(f"[ERROR] Proxy Manager failed: {proxy_str} => {e}")
 else:
     print("[ERROR] All proxies failed. Try Playwright or check your proxy list.")
     sys.exit(1)
