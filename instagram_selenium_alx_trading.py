@@ -3,21 +3,28 @@
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
 import time
+import os
+
 
 # --- CONFIG ---
 IG_USERNAME = "alx.trading"
-IG_PASSWORD = "Fleming654"  # ใส่รหัสผ่านจริงของบัญชีทดสอบ
+
+# --- COOKIES ---
+COOKIES = {
+    "sessionid": "82d00883%3A1748264421%3A6f473b1c8d0b8d51",
+    "csrftoken": "8474a9868a2759304d6bc7c2810437ff",
+    "rur": "VLL"
+}
 
 # --- SETUP SELENIUM ---
 chrome_options = Options()
-chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--headless')  # Disable headless for debug
 chrome_options.add_argument('--disable-blink-features=AutomationControlled')
 chrome_options.add_argument('--window-size=1200,800')
 chrome_options.add_argument('--no-sandbox')
@@ -31,8 +38,14 @@ chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
 chrome_options.add_experimental_option('useAutomationExtension', False)
 chrome_options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36')
 
+# (Removed --user-data-dir to avoid session not created error)
+
 service = Service(ChromeDriverManager().install())
+
+print("[DEBUG] Starting Chrome WebDriver...")
 driver = webdriver.Chrome(service=service, options=chrome_options)
+print("[DEBUG] WebDriver started.")
+
 
 # --- STEALTH PATCH ---
 def stealth(driver):
@@ -42,27 +55,45 @@ def stealth(driver):
     )
 stealth(driver)
 
-driver.get("https://www.instagram.com/accounts/login/")
-time.sleep(3)
+# --- LOAD COOKIES ---
+def load_cookies_from_txt(txt_path):
+    cookies = []
+    if not os.path.exists(txt_path):
+        print(f"[ERROR] Cookie file not found: {txt_path}")
+        return cookies
+    with open(txt_path, "r") as f:
+        cookie_line = f.read().strip()
+        for part in cookie_line.split(';'):
+            if '=' in part:
+                name, value = part.strip().split('=', 1)
+                cookies.append({"name": name, "value": value, "domain": ".instagram.com", "path": "/"})
+    return cookies
 
-# --- LOGIN ---
-try:
-    username_input = driver.find_element(By.NAME, "username")
-    password_input = driver.find_element(By.NAME, "password")
-    username_input.send_keys(IG_USERNAME)
-    password_input.send_keys(IG_PASSWORD)
-    password_input.send_keys(Keys.RETURN)
-    time.sleep(5)
-    print("[DEBUG] Login submitted. Current URL:", driver.current_url)
-    print("[DEBUG] Login page source snippet:", driver.page_source[:1000])
-except Exception as e:
-    print(f"❌ Login step failed: {e}")
-    print("[DEBUG] Login page source snippet:", driver.page_source[:1000])
-    driver.quit()
-    exit(1)
+# --- INJECT COOKIES ---
+print("[DEBUG] Navigating to Instagram main page for cookie injection...")
+driver.get("https://www.instagram.com/")
+time.sleep(3)
+for name, value in COOKIES.items():
+    try:
+        driver.add_cookie({"name": name, "value": value, "domain": ".instagram.com"})
+        print(f"[DEBUG] Injected cookie: {name}")
+    except Exception as e:
+        print(f"[ERROR] Failed to inject cookie {name}: {e}")
+print("[DEBUG] All cookies injected. Refreshing page...")
+driver.get(f"https://instagram.com/{IG_USERNAME}/")
+time.sleep(5)
+print("[DEBUG] Loaded profile page. Current URL:", driver.current_url)
+
+# ตรวจสอบว่าหลุดไปหน้า login หรือเปล่า
+if "login" in driver.current_url:
+    print("❌ ยังโดน redirect ไป login อยู่จ้า~")
+    print("[DEBUG] Profile page source snippet:", driver.page_source[:1000])
+else:
+    print("[DEBUG] Profile page loaded OK!")
 
 # --- GO TO PROFILE ---
 try:
+    print(f"[DEBUG] Navigating to profile: https://www.instagram.com/{IG_USERNAME}/")
     driver.get(f"https://www.instagram.com/{IG_USERNAME}/")
     time.sleep(5)
     print("[DEBUG] Loaded profile page. Current URL:", driver.current_url)
