@@ -50,7 +50,7 @@ except:
     pass
 
 # --- GO TO PROFILE ---
-driver.get(f"https://www.instagram.com/{alx.tradingE}/")
+driver.get(f"https://www.instagram.com/{IG_USERNAME}/")
 time.sleep(3)
 
 # --- EXTRACT DATA ---
