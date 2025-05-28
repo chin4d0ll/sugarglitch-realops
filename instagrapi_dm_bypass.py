@@ -1,35 +1,38 @@
+
 from instagrapi import Client
 import os
 import json
 from datetime import datetime
+import time
 
-# วิธีที่ 1: ใช้ sessionid (bypass login block/blacklist)
-SESSIONID = os.getenv('IG_SESSIONID') or '4976283726%3A1JgRzA56Q8e8Qs%3A12'
-PROXY = os.getenv('IG_PROXY') or 'http://username:password@proxy_host:proxy_port'  # ใส่ proxy ที่ยังไม่โดนบล็อก
+# ตั้งค่าพอร์ต proxy ที่ต้องการวนลูป
+PROXY_PORTS = [24001, 24002, 24003, 24004]
+PROXY_BASE = "http://127.0.0.1:{}"
+SESSIONID = os.getenv('IG_SESSIONID') or 'ใส่ sessionid ที่สดใหม่'
 
-cl = Client()
-cl.set_proxy(PROXY)
-cl.login_by_sessionid(SESSIONID)
+def try_fetch_dm(proxy_url):
+    try:
+        cl = Client()
+        cl.set_proxy(proxy_url)
+        cl.login_by_sessionid(SESSIONID)
+        dm_inbox = cl.direct_threads()
+        print(f"✅ Proxy {proxy_url} พบ {len(dm_inbox)} threads")
+        if dm_inbox:
+            ts = datetime.now().strftime('%Y%m%d_%H%M%S')
+            os.makedirs('data/extractions', exist_ok=True)
+            with open(f'data/extractions/instagrapi_dm_{ts}.json', 'w', encoding='utf-8') as f:
+                json.dump([t.dict() for t in dm_inbox], f, ensure_ascii=False, indent=2)
+            print(f"💾 บันทึกไฟล์ data/extractions/instagrapi_dm_{ts}.json")
+        return True
+    except Exception as e:
+        print(f"❌ Proxy {proxy_url} error: {e}")
+        return False
 
-# ดึง Direct Message (inbox)
-dm_inbox = cl.direct_threads()
-print(f"✅ พบ {len(dm_inbox)} threads")
-
-# บันทึกไฟล์
-if dm_inbox:
-    ts = datetime.now().strftime('%Y%m%d_%H%M%S')
-    os.makedirs('data/extractions', exist_ok=True)
-    with open(f'data/extractions/instagrapi_dm_{ts}.json', 'w', encoding='utf-8') as f:
-        json.dump([t.dict() for t in dm_inbox], f, ensure_ascii=False, indent=2)
-    print(f"💾 บันทึกไฟล์ data/extractions/instagrapi_dm_{ts}.json")
-
-# วิธี brute-force (ไม่แนะนำและเสี่ยงโดนแบน):
-# for password in open('passwords.txt'):
-#     try:
-#         cl = Client()
-#         cl.set_proxy(PROXY)
-#         cl.login('your_username', password.strip())
-#         print('Login success:', password)
-#         break
-#     except Exception as e:
-#         print('Login fail:', password, e)
+if __name__ == "__main__":
+    for port in PROXY_PORTS:
+        proxy_url = PROXY_BASE.format(port)
+        print(f"\n[INFO] ลอง proxy: {proxy_url}")
+        success = try_fetch_dm(proxy_url)
+        if success:
+            break
+        time.sleep(2)
