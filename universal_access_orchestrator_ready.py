@@ -9,7 +9,6 @@ import os
 import json
 import time
 import random
-from improved_code.advanced_proxy_warfare import AdvancedProxyWarfare
 from REAL_DATA_ONLY_20250527.real_stealth_dm_extractor import RealStealthDMExtractor
 
 # --- Load real session/cookie files ---
@@ -57,10 +56,9 @@ def main():
         # Add more credential sets as needed
     ]
     session_cookies_list = load_session_cookies()
-    proxy_manager = AdvancedProxyWarfare()
     extractor = RealStealthDMExtractor()
 
-    # Try each session cookie with proxy rotation
+    # Try each session cookie (no proxy)
     for session_data in session_cookies_list:
         print(f"\n[INFO] Trying session/cookie: {session_data}")
         proxy = proxy_manager.intelligent_proxy_selection()
