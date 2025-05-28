@@ -103,60 +103,20 @@ class RealStealthDMExtractor:
         """ตั้งค่า browser แบบ stealth เพื่อหลีกเลี่ยงการตรวจจับ"""
         print("🤖 กำลังตั้งค่า stealth browser...")
         
+        # Use remote Selenium endpoint (Browser API)
+        print("🌐 Connecting to remote Browser API endpoint for Selenium...")
+        selenium_remote_url = "https://brd-customer-hl_63f0835e-zone-scraping_browser1:bj0nymiw6mij@brd.superproxy.io:9515"
         chrome_options = Options()
-        # Explicitly set the binary location to Google Chrome (not Chromium)
-        chrome_options.binary_location = "/usr/bin/google-chrome"
-        
-        # Basic stealth options
-        chrome_options.add_argument("--headless=new")  # Modern headless mode for Codespaces
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
-        chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
-        chrome_options.add_experimental_option('useAutomationExtension', False)
-        
-        # Realistic user agent
-        chrome_options.add_argument(
-            "--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36"
-        )
-        
-        # Additional stealth options
-        chrome_options.add_argument("--disable-web-security")
-        chrome_options.add_argument("--allow-running-insecure-content")
-        chrome_options.add_argument("--disable-extensions")
-        chrome_options.add_argument("--disable-plugins")
-        chrome_options.add_argument("--disable-javascript-harmony-shipping")
-        chrome_options.add_argument("--disable-background-timer-throttling")
-        chrome_options.add_argument("--disable-backgrounding-occluded-windows")
-        chrome_options.add_argument("--disable-renderer-backgrounding")
-        chrome_options.add_argument("--disable-features=TranslateUI")
-        chrome_options.add_argument("--disable-ipc-flooding-protection")
-        
-        # Window size to avoid detection
-        chrome_options.add_argument("--window-size=1920,1080")
-        
-        # Additional anti-detection measures
-        chrome_options.add_argument("--disable-default-apps")
-        chrome_options.add_argument("--disable-sync")
-        chrome_options.add_argument("--disable-translate")
-        chrome_options.add_argument("--hide-scrollbars")
-        chrome_options.add_argument("--metrics-recording-only")
-        chrome_options.add_argument("--mute-audio")
-        chrome_options.add_argument("--no-first-run")
-        chrome_options.add_argument("--safebrowsing-disable-auto-update")
-        chrome_options.add_argument("--ignore-certificate-errors")
-        chrome_options.add_argument("--ignore-ssl-errors")
-        chrome_options.add_argument("--ignore-certificate-errors-spki-list")
-        
+        # You may still set user-agent and other stealth options if needed
+        chrome_options.add_argument("--user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36")
         try:
-            # Use webdriver-manager to automatically download and setup ChromeDriver
-            service = Service(ChromeDriverManager().install())
-            self.driver = webdriver.Chrome(service=service, options=chrome_options)
-            
+            self.driver = webdriver.Remote(
+                command_executor=selenium_remote_url,
+                options=chrome_options
+            )
             # Execute script to hide automation indicators
             self.driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-            
-            print("✅ Stealth browser initialized")
+            print("✅ Connected to remote Browser API and initialized browser!")
             return True
             
         except Exception as e:

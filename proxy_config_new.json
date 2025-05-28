@@ -1,10 +1,10 @@
 [
-  {
-    "http": "http://user:password@proxy1.example.com:8080",
-    "https": "http://user:password@proxy1.example.com:8080"
-  },
-  {
-    "http": "http://user:password@proxy2.example.com:8080",
-    "https": "http://user:password@proxy2.example.com:8080"
-  }
+    {
+        "http": "http://user:password@proxy1.example.com:8080",
+        "https": "http://user:password@proxy1.example.com:8080"
+    },
+    {
+        "http": "http://user:password@proxy2.example.com:8080",
+        "https": "http://user:password@proxy2.example.com:8080"
+    }
 ]
