@@ -6,7 +6,7 @@ psycopg2-binary
 pandas
 
 # เพิ่มไลบรารีสำหรับ OSINT/เว็บสแกน
-spiderfoot
+ # spiderfoot (ติดตั้งแยก)
 shodan
 instaloader
 selenium
