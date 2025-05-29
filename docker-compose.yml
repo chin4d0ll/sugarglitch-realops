@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  app:
+    build: ./app
+    volumes:
+      - ./app:/app
+    command: tail -f /dev/null
+    environment:
+      - PYTHONUNBUFFERED=1
+  db:
+    image: postgres:15
+    restart: always
+    environment:
+      POSTGRES_USER: osintuser
+      POSTGRES_PASSWORD: osintpass
+      POSTGRES_DB: osintdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+volumes:
+  db_data:
