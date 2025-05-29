@@ -19,7 +19,7 @@ services:
     volumes:
       - db_data:/var/lib/postgresql/data
   spiderfoot:
-    image: spiderfoot/spiderfoot:latest
+    image: smicallef/spiderfoot
     ports:
       - "5001:5001"
     restart: unless-stopped
