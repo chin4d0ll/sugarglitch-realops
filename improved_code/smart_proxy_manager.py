@@ -28,10 +28,26 @@ class SmartProxyManager:
         self.refresh_working_proxies()
     
     def load_config(self) -> Dict:
-        """โหลด proxy configuration"""
+        """โหลด proxy configuration และ override password จาก env ถ้ามี"""
+        import os
         try:
             with open(self.config_file, 'r') as f:
-                return json.load(f)
+                config = json.load(f)
+            # Override BrightData password from env if set
+            env_pwd = os.environ.get('BRIGHTDATA_PROXY_PASSWORD')
+            if 'brightdata' in config and env_pwd:
+                config['brightdata']['password'] = env_pwd
+            # Also patch free_proxies/working proxies if any use 'YOUR_PASSWORD'
+            for section in ['free_proxies', 'brightdata_proxies']:
+                if section in config:
+                    for proxy in config[section]:
+                        if proxy.get('pass') == 'YOUR_PASSWORD' or proxy.get('password') == 'YOUR_PASSWORD':
+                            if env_pwd:
+                                if 'pass' in proxy:
+                                    proxy['pass'] = env_pwd
+                                if 'password' in proxy:
+                                    proxy['password'] = env_pwd
+            return config
         except Exception as e:
             print(f"❌ Error loading config: {e}")
             return {"enabled": False, "use_direct_fallback": True}
@@ -109,13 +125,17 @@ class SmartProxyManager:
         brightdata = self.config.get('brightdata', {})
         if brightdata.get('enabled'):
             print("Testing BrightData proxy...")
+            import os
+            bd_password = brightdata.get('password')
+            env_pwd = os.environ.get('BRIGHTDATA_PROXY_PASSWORD')
+            if env_pwd:
+                bd_password = env_pwd
             bd_config = {
                 'host': brightdata['host'],
                 'port': brightdata['port'],
                 'username': brightdata['username'],
-                'password': brightdata['password']
+                'password': bd_password
             }
-            
             success, result = self.test_proxy(bd_config, timeout=8)
             if success:
                 print(f"✅ BrightData works - IP: {result}")
