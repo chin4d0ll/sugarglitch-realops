@@ -4,8 +4,7 @@
             "username": "alx.fleming",
             "password": "Fleming654",
             "proxies": [
-                "http://127.0.0.1:24000",
-                "http://brd.superproxy.io:22225"
+                "http://brd-customer-hl_63f0835e-zone-isp_proxy1:YOUR_PASSWORD@brd.superproxy.io:33335"
             ]
         }
     ],

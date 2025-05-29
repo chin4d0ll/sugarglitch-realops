@@ -40,11 +40,11 @@
         }
     ],
     "brightdata": {
-        "enabled": false,
+        "enabled": true,
         "host": "brd.superproxy.io",
-        "port": "22225",
-        "username": "brd-customer-hl_63f0835e-zone-datacenter_proxy1",
-        "password": "59m84ggoef95"
+        "port": "33335",
+        "username": "brd-customer-hl_63f0835e-zone-isp_proxy1",
+        "password": "YOUR_PASSWORD"
     },
     "rotation": {
         "enabled": true,

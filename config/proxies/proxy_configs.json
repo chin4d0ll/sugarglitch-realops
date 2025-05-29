@@ -83,43 +83,13 @@
     "brightdata_proxies": [
         {
             "type": "http",
-            "host": "brd-customer-hl_12345678-zone-residential.zproxy.lum-superproxy.io",
-            "port": 22225,
-            "user": "brd-customer-hl_12345678-zone-residential",
-            "pass": "brightdata_pass",
-            "country": "Thailand",
-            "session_type": "sticky",
-            "description": "Bright Data Thailand Residential"
-        },
-        {
-            "type": "http",
-            "host": "brd-customer-hl_12345678-zone-mobile.zproxy.lum-superproxy.io",
-            "port": 22225,
-            "user": "brd-customer-hl_12345678-zone-mobile-country-th",
-            "pass": "brightdata_pass",
-            "country": "Thailand",
+            "host": "brd.superproxy.io",
+            "port": 33335,
+            "user": "brd-customer-hl_63f0835e-zone-isp_proxy1",
+            "pass": "YOUR_PASSWORD",
+            "country": "Any",
             "session_type": "rotating",
-            "description": "Bright Data Thailand Mobile"
-        },
-        {
-            "type": "http",
-            "host": "brd-customer-hl_12345678-zone-datacenter.zproxy.lum-superproxy.io",
-            "port": 22225,
-            "user": "brd-customer-hl_12345678-zone-datacenter-country-uk",
-            "pass": "brightdata_pass",
-            "country": "UK",
-            "session_type": "sticky",
-            "description": "Bright Data UK Datacenter"
-        },
-        {
-            "type": "http",
-            "host": "brd-customer-hl_12345678-zone-residential.zproxy.lum-superproxy.io",
-            "port": 22225,
-            "user": "brd-customer-hl_12345678-zone-residential-country-us",
-            "pass": "brightdata_pass",
-            "country": "USA",
-            "session_type": "rotating",
-            "description": "Bright Data USA Residential"
+            "description": "Bright Data ISP Proxy (default)"
         }
     ],
     "free_proxies": [
