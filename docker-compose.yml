@@ -18,5 +18,12 @@ services:
       - "5432:5432"
     volumes:
       - db_data:/var/lib/postgresql/data
+  spiderfoot:
+    image: spiderfoot/spiderfoot:latest
+    ports:
+      - "5001:5001"
+    restart: unless-stopped
+    environment:
+      - SFPORT=5001
 volumes:
   db_data:
