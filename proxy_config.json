@@ -1,31 +1,35 @@
 {
-  "_defaults": {
-    "ask_sync_config": true,
-    "debug": "none",
-    "logs": 0,
-    "lpm_auth": "admin:changeme123",
-    "version": "1.519.10"
-  },
+  "enabled": true,
   "proxies": [
     {
-      "admin_whitelist_ips": [
-        "0.0.0.0"
-      ],
-      "area": 24000,
-      "country": "sg",
-      "logs_limit": 0,
-      "name": "create_proxy_port",
-      "port": 24000,
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
       "proxy_host": "brd.superproxy.io",
-      "proxy_pass": "your_brightdata_password",
-      "proxy_port": 24000,
-      "proxy_user": "brd-customer-hl_63f0835e-zone-sg",
-      "proxy_whitelist_ips": [
-        "0.0.0.0"
-      ],
-      "request_details": "full",
-      "zone": "sg_zone"
+      "proxy_port": 33335
+    },
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 22225
+    },
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 10001
+    },
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 20000
+    },
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-mobile",
+      "proxy_pass": "fl13j3qcjvqh",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 30000
     }
-  ],
-  "ts": "2025-05-28T20:40:53.300Z"
+  ]
 }
