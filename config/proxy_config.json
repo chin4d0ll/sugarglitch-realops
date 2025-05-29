@@ -4,7 +4,7 @@
             "username": "alx.fleming",
             "password": "Fleming654",
             "proxies": [
-                "http://brd-customer-hl_63f0835e-zone-isp_proxy1:YOUR_PASSWORD@brd.superproxy.io:33335"
+                "http://brd-customer-hl_63f0835e-zone-isp_proxy1:for your security, log in to the dashboard to see the password@brd.superproxy.io:33335"
             ]
         }
     ],

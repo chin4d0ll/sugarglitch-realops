@@ -86,7 +86,7 @@
             "host": "brd.superproxy.io",
             "port": 33335,
             "user": "brd-customer-hl_63f0835e-zone-isp_proxy1",
-            "pass": "YOUR_PASSWORD",
+            "pass": "for your security, log in to the dashboard to see the password",
             "country": "Any",
             "session_type": "rotating",
             "description": "Bright Data ISP Proxy (default)"
