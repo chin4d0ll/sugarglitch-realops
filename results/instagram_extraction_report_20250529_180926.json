@@ -1,0 +1,33 @@
+{
+  "timestamp": "20250529_180926",
+  "target_username": "alx.trading",
+  "target_accounts": [
+    "alx.trading",
+    "whatilove1728"
+  ],
+  "proxy_tests": {
+    "web_unlocker": false,
+    "residential": false,
+    "scraping_browser": false
+  },
+  "login_attempts": {
+    "no_proxy": false
+  },
+  "profile_extractions": {
+    "alx.trading": {
+      "username": "alx.trading",
+      "timestamp": "2025-05-29T18:09:30.726505",
+      "status_code": 200,
+      "content_length": 98383,
+      "accessible": false
+    },
+    "whatilove1728": {
+      "username": "whatilove1728",
+      "timestamp": "2025-05-29T18:09:31.341237",
+      "status_code": 200,
+      "content_length": 91086,
+      "accessible": false
+    }
+  },
+  "success": true
+}
