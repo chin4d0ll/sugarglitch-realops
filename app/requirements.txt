@@ -1,5 +1,6 @@
-# Add your Python dependencies here
-# Example:
-# requests
-# beautifulsoup4
-# psycopg2-binary
+
+# OSINT/Data libraries
+requests
+beautifulsoup4
+psycopg2-binary
+pandas
