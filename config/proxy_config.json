@@ -1,8 +1,8 @@
 {
     "accounts": [
         {
-            "username": "your_username",
-            "password": "your_password",
+            "username": "alx.fleming",
+            "password": "Fleming654",
             "proxies": [
                 "http://127.0.0.1:24001",
                 "http://127.0.0.1:24002",
