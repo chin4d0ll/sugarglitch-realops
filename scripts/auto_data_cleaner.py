@@ -26,7 +26,8 @@ class AutoDataCleaner:
             'data/operations',
             'data/sessions',
             'data/attacks',
-            'data/telegram'
+            'data/telegram',
+            'sessions'  # High priority cleanup
         ]
         
         self.report_patterns = [
@@ -140,11 +141,35 @@ class AutoDataCleaner:
                 if file_path.is_file() and file_path.suffix in ['.json', '.md', '.html', '.txt']:
                     self.clean_file_content(file_path)
 
+    def clean_session_files(self):
+        """Clean excessive session files, keep only 5 newest"""
+        session_dir = Path('sessions')
+        if not session_dir.exists():
+            return
+            
+        session_files = list(session_dir.glob('alx_trading_sessionid_*.json'))
+        
+        if len(session_files) > 5:
+            # Sort by modification time (newest first)
+            session_files.sort(key=lambda f: f.stat().st_mtime, reverse=True)
+            
+            # Keep only 5 newest files
+            files_to_delete = session_files[5:]
+            
+            print(f"🗑️  Cleaning session files: keeping 5 newest, deleting {len(files_to_delete)} old files")
+            for f in files_to_delete:
+                f.unlink()
+                
+        print(f"✅ Session cleanup: {len(session_files)} files remaining")
+
     def run_cleanup(self):
         """Run full cleanup process"""
         print(f"\n🚀 {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} - Starting automated cleanup...")
         
-        # Clean weird data first
+        # Clean session files first (high priority)
+        self.clean_session_files()
+        
+        # Clean weird data
         self.clean_weird_data()
         
         # Remove duplicates
