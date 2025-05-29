@@ -1,30 +1,30 @@
 {
   "_defaults": {
+    "ask_sync_config": true,
     "debug": "none",
     "logs": 0,
-    "lpm_auth": "none"
+    "lpm_auth": "admin:changeme123",
+    "version": "1.519.10"
   },
-  "enabled": true,
   "proxies": [
     {
-      "proxy_user": "brd-customer-hl_63f0835e-zone-sg",
-      "proxy_pass": "your_brightdata_password",
-      "proxy_host": "brd.superproxy.io",
-      "proxy_port": 24000,
-      "zone": "sg_zone",
-      "country": "sg",
-      "preset": "session_long",
-      "proxy_type": "persist",
-      "area": 24000,
-      "name": "create_proxy_port",
       "admin_whitelist_ips": [
         "0.0.0.0"
       ],
+      "area": 24000,
+      "country": "sg",
+      "logs_limit": 0,
+      "name": "create_proxy_port",
+      "port": 24000,
+      "proxy_host": "brd.superproxy.io",
+      "proxy_pass": "your_brightdata_password",
+      "proxy_port": 24000,
+      "proxy_user": "brd-customer-hl_63f0835e-zone-sg",
       "proxy_whitelist_ips": [
         "0.0.0.0"
       ],
       "request_details": "full",
-      "logs_limit": 0
+      "zone": "sg_zone"
     }
   ],
   "ts": "2025-05-28T20:40:53.300Z"

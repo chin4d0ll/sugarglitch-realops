@@ -4,9 +4,8 @@
             "username": "alx.fleming",
             "password": "Fleming654",
             "proxies": [
-                "http://127.0.0.1:24001",
-                "http://127.0.0.1:24002",
-                "http://127.0.0.1:24003"
+                "http://127.0.0.1:24000",
+                "http://brd.superproxy.io:22225"
             ]
         }
     ],
