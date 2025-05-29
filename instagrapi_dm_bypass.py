@@ -1,4 +1,36 @@
 
+import requests
+from requests.sessions import Session
+from functools import wraps
+import warnings
+
+# ปิด SSL warning
+warnings.filterwarnings("ignore")
+requests.packages.urllib3.disable_warnings()
+
+# Stealth headers
+STEALTH_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+    ),
+    "Accept-Language": "en-US,en;q=0.9,th;q=0.8",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+    "Connection": "keep-alive",
+    "Upgrade-Insecure-Requests": "1",
+}
+
+# Patch requests.Session เพื่อ force SSL=False และ inject headers
+_original_init = Session.__init__
+
+@wraps(_original_init)
+def patched_session_init(self, *args, **kwargs):
+    _original_init(self, *args, **kwargs)
+    self.verify = False
+    self.headers.update(STEALTH_HEADERS)
+
+Session.__init__ = patched_session_init
+
 from instagrapi import Client
 import os
 import json
