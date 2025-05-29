@@ -1,5 +1,3 @@
-from utils.error_handler import safe_execution, safe_print
-
 #!/usr/bin/env python3
 """
 🎯 ALX.TRADING ENHANCED PROXY INTELLIGENCE EXTRACTOR 🎯
@@ -17,7 +15,19 @@ import os
 import base64
 import hashlib
 from urllib.parse import urljoin, quote_plus
-import sqlite3
+def safe_execution(func):
+    """Simple decorator for safe execution"""
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            print(f"Error in {func.__name__}: {e}")
+            return None
+    return wrapper
+
+def safe_print(msg):
+    """Safe print function"""
+    print(msg)
 
 class EnhancedAlxTradingExtractor:
     def __init__(self):
