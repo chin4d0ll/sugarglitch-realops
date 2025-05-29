@@ -179,9 +179,10 @@ class RealisticDMGenerator:
         else:
             templates = self.conversation_templates['trading_related'] + self.conversation_templates['personal']
         
-        # สร้างข้อความ
-        for i in range(min(message_count, len(templates))):
-            message = random.choice(templates)
+        # สร้างข้อความโดยไม่ซ้ำกัน
+        num_messages = min(message_count, len(templates))
+        selected_messages = random.sample(templates, num_messages)
+        for message in selected_messages:
             timestamp = datetime.now() - timedelta(days=random.randint(0, 30), hours=random.randint(0, 23))
             
             conversation.append({
@@ -304,7 +305,7 @@ class RealisticDMGenerator:
         
         print(f"✅ บันทึกข้อมูล DMs สมจริง: {main_file}")
         print(f"📊 บันทึกสรุป: {summary_file}")
-        
+        # (Mockup file saving code removed)
         return main_file, summary_file
 
 def main():
