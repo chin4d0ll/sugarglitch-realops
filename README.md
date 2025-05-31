@@ -1,102 +1,58 @@
-# 🚀 SugarGlitch RealOps Platform
 
-[![Status](https://img.shields.io/badge/Status-Active%20Development-brightgreen)](https://github.com)
-[![Python](https://img.shields.io/badge/Python-3.12+-blue)](https://python.org)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://javascript.info)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
-
-> **Advanced Real-time Operations & Intelligence Platform**  
-> Comprehensive data extraction, social media intelligence, and automated penetration testing suite.
-
-## 🎯 **Overview**
-
-SugarGlitch RealOps is a cutting-edge platform designed for:
-
-- **Social Media Intelligence** - Advanced Instagram, Telegram data extraction
-- **Session Management** - Sophisticated proxy and session handling  
-- **Automated Operations** - Real-time monitoring and data processing
-- **Security Testing** - Penetration testing and vulnerability assessment
-
-## 📋 **Table of Contents**
-
-- [🚀 Quick Start](#-quick-start)
-- [🏗️ Architecture](#️-architecture)
-- [📦 Installation](#-installation)
-- [🔧 Configuration](#-configuration)
-- [📚 Usage Examples](#-usage-examples)
-- [🛠️ Troubleshooting](#️-troubleshooting)
-- [📖 Documentation](#-documentation)
-- [🤝 Contributing](#-contributing)
-
-## 🚀 **Quick Start**
-
-```bash
-# Clone the repository
-git clone https://github.com/your-org/sugarglitch-realops.git
-cd sugarglitch-realops
-
-# Install dependencies
-npm install
-pip install -r requirements.txt
-
-# Configure settings
-cp config/config.example.json config/config.json
-
-# Run the platform
-python3 main.py
-```
-
-## 🏗️ **Architecture**
-
-```
-📁 sugarglitch-realops/
-├── 📁 config/           # Configuration files
-├── 📁 data/             # Data storage (extractions, intelligence)
-├── 📁 databases/        # Database schemas and setup
-├── 📁 docs/             # Documentation
-├── 📁 extractors/       # Data extraction modules
-├── 📁 improved_code/    # Enhanced and optimized code
-├── 📁 logs/             # Application logs
-├── 📁 scripts/          # Utility scripts
-├── 📁 utils/            # Helper utilities
-└── 📄 README.md         # This file
-```
+# Sugarglitch RealOps
 
 ## 📦 **Installation**
 
-### Prerequisites
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-org/sugarglitch-realops.git
+   cd sugarglitch-realops
+   ```
 
-- **Python 3.12+**
-- **Node.js 18+**
-- **Git**
-- **Docker** (optional)
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### Dependencies
+3. Set up environment variables:
+   ```bash
+   cp .env.template .env
+   ```
 
-```bash
-# Python packages
-pip install -r requirements.txt
+4. Run the application:
+   ```bash
+   python main.py
+   ```
 
-# JavaScript packages  
-npm install puppeteer
+## � **Requirements**
 
-# System packages (Ubuntu/Debian)
-sudo apt update && sudo apt install -y chromium-browser
+- Python 3.12+
+- `structlog`, `python-dotenv`, `click`
+- SQLite for database management
+- ChromeDriver for browser automation
+
+## �️ **Project Structure**
+
+```plaintext
+sugarglitch-realops/
+├── src/
+│   ├── core/          # Core application logic
+│   ├── models/        # Data models
+│   ├── services/      # Service layer
+│   ├── utils/         # Utility functions
+├── config/            # Configuration files
+│   ├── templates/     # Template files
+│   ├── examples/      # Example configurations
+├── data/              # Data storage
+│   ├── input/         # Input data
+│   ├── output/        # Output data
+│   ├── reports/       # Reports and logs
+├── docs/              # Documentation
+├── scripts/           # Helper scripts
+├── tests/             # Unit and integration tests
+├── requirements.txt   # Python dependencies
+├── README.md          # Project documentation
 ```
-
-### Database Setup
-
-```bash
-# Initialize databases
-cd databases/
-python3 enterprise_db_setup.py
-```
-
-## 🔧 **Configuration**
-
-### Basic Configuration
-
-Edit `config/config.json`:
 
 ```json
 {

@@ -1,3 +1,11 @@
+## [1.1.0] - 2025-05-29
+### Added
+- Updated `README.md` with new installation and requirements sections.
+- Added `requirements.txt` with updated dependencies.
+
+### Changed
+- Restructured workspace for better organization.
+- Improved documentation in `docs/`.
 # Changelog
 
 All notable changes to the SugarGlitch RealOps Platform will be documented in this file.
