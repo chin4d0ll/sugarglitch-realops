@@ -22,7 +22,6 @@ import os
 import sys
 import time
 import random
-import threading
 import json
 from datetime import datetime
 from colorama import init, Fore, Back, Style
