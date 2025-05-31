@@ -54,6 +54,7 @@ class ProjectDatabaseCreator:
                 target_id INTEGER,
                 data_type TEXT NOT NULL, -- network, web, osint, exploitation
                 data_source TEXT, -- nmap, burp, social_media, etc.
+                extraction_method TEXT, -- automated, manual, api, scraping
                 raw_data TEXT, -- JSON format
                 summary TEXT,
                 risk_score INTEGER DEFAULT 0,
@@ -130,38 +131,38 @@ class ProjectDatabaseCreator:
         
         # ข้อมูล targets จากโปรเจกต์จริง
         targets_data = [
-            ("Google DNS", "ip", "8.8.8.8", 2, "completed"),
-            ("Cloudflare DNS", "ip", "1.1.1.1", 2, "completed"),
-            ("Instagram", "domain", "instagram.com", 4, "scanning"),
-            ("Facebook", "domain", "facebook.com", 3, "pending"),
-            ("HTTPBin Test", "url", "https://httpbin.org", 1, "completed"),
-            ("Local Router", "ip", "192.168.1.1", 2, "pending"),
-            ("TestUser OSINT", "username", "testuser", 3, "completed"),
-            ("WhatILove1728", "username", "whatilove1728", 4, "completed"),
-            ("GitHub API", "url", "https://api.github.com", 2, "scanning"),
-            ("LinkedIn", "domain", "linkedin.com", 3, "pending")
+            ("Google DNS", "ip", "8.8.8.8", "Primary DNS server for testing", 2, "completed"),
+            ("Cloudflare DNS", "ip", "1.1.1.1", "Alternative DNS server", 2, "completed"),
+            ("Instagram", "domain", "instagram.com", "Social media platform target", 4, "scanning"),
+            ("Facebook", "domain", "facebook.com", "Main social network", 3, "pending"),
+            ("HTTPBin Test", "url", "https://httpbin.org", "API testing endpoint", 1, "completed"),
+            ("Local Router", "ip", "192.168.1.1", "Local network gateway", 2, "pending"),
+            ("TestUser OSINT", "username", "testuser", "Test account for OSINT", 3, "completed"),
+            ("WhatILove1728", "username", "whatilove1728", "High-value Instagram target", 4, "completed"),
+            ("GitHub API", "url", "https://api.github.com", "GitHub REST API", 2, "scanning"),
+            ("LinkedIn", "domain", "linkedin.com", "Professional network", 3, "pending")
         ]
         
         for target in targets_data:
             cursor.execute('''
-                INSERT INTO targets (target_name, target_type, target_value, priority, status, scan_count)
-                VALUES (?, ?, ?, ?, ?, ?)
+                INSERT INTO targets (target_name, target_type, target_value, description, priority, status, scan_count)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
             ''', (*target, random.randint(0, 5)))
         
         # ข้อมูล extracted_data
         extracted_data = [
-            (1, "network", "nmap", '{"open_ports": [53, 443], "services": {"53": "dns", "443": "https"}}', "Found DNS and HTTPS services", 30, 2),
-            (2, "network", "nmap", '{"open_ports": [53, 80, 443], "services": {"53": "dns", "80": "http", "443": "https"}}', "Standard web services detected", 25, 3),
-            (3, "web", "burp_suite", '{"vulnerabilities": [], "technologies": ["React", "GraphQL"]}', "Modern web stack, no major vulns", 15, 0),
-            (7, "osint", "social_media", '{"platforms": 18, "emails": 0, "phones": 0}', "High social media presence", 55, 18),
-            (8, "osint", "social_media", '{"platforms": 16, "emails": 1, "phones": 0}', "Medium social exposure", 45, 16),
-            (5, "web", "vulnerability_scanner", '{"vulnerabilities": [], "endpoints": ["/get", "/post", "/headers"]}', "Test site - clean", 5, 0)
+            (1, "network", "nmap", "automated", '{"open_ports": [53, 443], "services": {"53": "dns", "443": "https"}}', "Found DNS and HTTPS services", 30, 2),
+            (2, "network", "nmap", "automated", '{"open_ports": [53, 80, 443], "services": {"53": "dns", "80": "http", "443": "https"}}', "Standard web services detected", 25, 3),
+            (3, "web", "burp_suite", "manual", '{"vulnerabilities": [], "technologies": ["React", "GraphQL"]}', "Modern web stack, no major vulns", 15, 0),
+            (7, "osint", "social_media", "api", '{"platforms": 18, "emails": 0, "phones": 0}', "High social media presence", 55, 18),
+            (8, "osint", "social_media", "scraping", '{"platforms": 16, "emails": 1, "phones": 0}', "Medium social exposure", 45, 16),
+            (5, "web", "vulnerability_scanner", "automated", '{"vulnerabilities": [], "endpoints": ["/get", "/post", "/headers"]}', "Test site - clean", 5, 0)
         ]
         
         for data in extracted_data:
             cursor.execute('''
-                INSERT INTO extracted_data (target_id, data_type, data_source, raw_data, summary, risk_score, findings_count)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO extracted_data (target_id, data_type, data_source, extraction_method, raw_data, summary, risk_score, findings_count)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ''', data)
         
         # ข้อมูล proxy_sessions
