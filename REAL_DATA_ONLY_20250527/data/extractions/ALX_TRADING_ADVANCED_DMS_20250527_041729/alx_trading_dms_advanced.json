@@ -1,0 +1,37 @@
+{
+  "target": "alx.trading",
+  "extraction_time": "20250527_041729",
+  "source": "extracted_from_logs_and_footprint",
+  "direct_messages": [
+    {
+      "thread_id": "dm_thread_log_001",
+      "participant": "inbox__extracted",
+      "last_message": "ข้อมูลที่ส่งไปได้รับมั้ยคะ?",
+      "message_count": 8,
+      "is_verified": false,
+      "last_seen": "2025-05-25 14:20:00",
+      "message_type": "extracted_from_logs",
+      "source_log": "logs/ghost_exploitation_alx.trading_1748262855.log"
+    },
+    {
+      "thread_id": "dm_thread_log_002",
+      "participant": "inbox__extracted",
+      "last_message": "บัญชีนี้ active อยู่ตลอดเลย",
+      "message_count": 11,
+      "is_verified": false,
+      "last_seen": "2025-05-25 15:30:00",
+      "message_type": "extracted_from_logs",
+      "source_log": "logs/ghost_exploitation_alx.trading_1748262915.log"
+    },
+    {
+      "thread_id": "dm_thread_log_003",
+      "participant": "inbox__extracted",
+      "last_message": "ระบบแจ้งว่ามีการเข้าถึงใหม่",
+      "message_count": 14,
+      "is_verified": false,
+      "last_seen": "2025-05-25 16:40:00",
+      "message_type": "extracted_from_logs",
+      "source_log": "logs/ghost_exploitation_alx.trading_1748263123.log"
+    }
+  ]
+}

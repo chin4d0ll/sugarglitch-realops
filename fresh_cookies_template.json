@@ -1,0 +1,11 @@
+{
+  "sessionid": "PASTE_YOUR_SESSIONID_HERE",
+  "csrftoken": "PASTE_YOUR_CSRFTOKEN_HERE",
+  "ds_user_id": "PASTE_YOUR_DS_USER_ID_HERE",
+  "mid": "PASTE_YOUR_MID_HERE",
+  "rur": "PASTE_YOUR_RUR_HERE",
+  "shbid": "PASTE_YOUR_SHBID_HERE (optional)",
+  "shbts": "PASTE_YOUR_SHBTS_HERE (optional)",
+  "extracted_at": "UPDATE_WITH_CURRENT_TIMESTAMP",
+  "instructions": "Replace all PASTE_YOUR_* values with actual cookie values from browser"
+}

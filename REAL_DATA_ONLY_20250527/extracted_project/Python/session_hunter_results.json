@@ -1,0 +1,210 @@
+{
+  "session_hunter": {
+    "version": "1.0",
+    "mode": "both",
+    "directory": ".",
+    "executed_at": null
+  },
+  "session_extraction": {
+    "directory": "logs",
+    "scanned_at": "2025-05-24T22:31:35.067253",
+    "files_scanned": 2,
+    "sessions_found": 0,
+    "files": [],
+    "summary": {
+      "instagram_sessions": 0,
+      "other_sessions": 0,
+      "valid_sessions": 0
+    },
+    "log_analysis": {
+      "success_logs": [],
+      "session_logs": [],
+      "error_logs": []
+    }
+  },
+  "log_conversion": {
+    "directory": "logs",
+    "converted_at": "2025-05-24T22:31:35.070850",
+    "files_processed": 2,
+    "total_sessions": 0,
+    "total_usernames": 1,
+    "files": [
+      {
+        "file_info": {
+          "path": "logs/whatilove1728_session_success.txt",
+          "name": "whatilove1728_session_success.txt",
+          "converted_at": "2025-05-24T22:31:35.070912",
+          "size_bytes": 58
+        },
+        "statistics": {
+          "total_lines": 4,
+          "parsed_lines": 3,
+          "sessions_found": 0,
+          "usernames_found": 1,
+          "emails_found": 0,
+          "phones_found": 0,
+          "success_events": 1,
+          "error_events": 0
+        },
+        "entries": [
+          {
+            "raw_line": "username: whatilove1728",
+            "timestamp": null,
+            "level": "INFO",
+            "session_id": null,
+            "username": "name",
+            "email": null,
+            "phone": null,
+            "ip_address": null,
+            "url": null,
+            "is_success": false,
+            "is_error": false,
+            "extracted_data": {},
+            "line_number": 2
+          },
+          {
+            "raw_line": "password: xxxx5678",
+            "timestamp": null,
+            "level": "INFO",
+            "session_id": null,
+            "username": null,
+            "email": null,
+            "phone": null,
+            "ip_address": null,
+            "url": null,
+            "is_success": false,
+            "is_error": false,
+            "extracted_data": {},
+            "line_number": 3
+          },
+          {
+            "raw_line": "success: true",
+            "timestamp": null,
+            "level": "SUCCESS",
+            "session_id": null,
+            "username": null,
+            "email": null,
+            "phone": null,
+            "ip_address": null,
+            "url": null,
+            "is_success": true,
+            "is_error": false,
+            "extracted_data": {},
+            "line_number": 4
+          }
+        ],
+        "extracted_credentials": {
+          "sessions": [],
+          "usernames": [
+            "name"
+          ],
+          "emails": [],
+          "phones": []
+        },
+        "timeline": [],
+        "status": "success",
+        "error": null
+      },
+      {
+        "file_info": {
+          "path": "logs/alx.trading_session_success.txt",
+          "name": "alx.trading_session_success.txt",
+          "converted_at": "2025-05-24T22:31:35.072110",
+          "size_bytes": 56
+        },
+        "statistics": {
+          "total_lines": 4,
+          "parsed_lines": 3,
+          "sessions_found": 0,
+          "usernames_found": 1,
+          "emails_found": 0,
+          "phones_found": 0,
+          "success_events": 1,
+          "error_events": 0
+        },
+        "entries": [
+          {
+            "raw_line": "username: alx.trading",
+            "timestamp": null,
+            "level": "INFO",
+            "session_id": null,
+            "username": "name",
+            "email": null,
+            "phone": null,
+            "ip_address": null,
+            "url": null,
+            "is_success": false,
+            "is_error": false,
+            "extracted_data": {},
+            "line_number": 2
+          },
+          {
+            "raw_line": "password: xxxx1234",
+            "timestamp": null,
+            "level": "INFO",
+            "session_id": null,
+            "username": null,
+            "email": null,
+            "phone": null,
+            "ip_address": null,
+            "url": null,
+            "is_success": false,
+            "is_error": false,
+            "extracted_data": {},
+            "line_number": 3
+          },
+          {
+            "raw_line": "success: true",
+            "timestamp": null,
+            "level": "SUCCESS",
+            "session_id": null,
+            "username": null,
+            "email": null,
+            "phone": null,
+            "ip_address": null,
+            "url": null,
+            "is_success": true,
+            "is_error": false,
+            "extracted_data": {},
+            "line_number": 4
+          }
+        ],
+        "extracted_credentials": {
+          "sessions": [],
+          "usernames": [
+            "name"
+          ],
+          "emails": [],
+          "phones": []
+        },
+        "timeline": [],
+        "status": "success",
+        "error": null
+      }
+    ],
+    "summary": {
+      "all_sessions": [],
+      "all_usernames": [
+        "name"
+      ],
+      "all_emails": [],
+      "all_phones": [],
+      "success_files": [
+        "whatilove1728_session_success.txt",
+        "alx.trading_session_success.txt"
+      ],
+      "error_files": []
+    }
+  },
+  "summary": {
+    "total_sessions": 0,
+    "total_usernames": 1,
+    "total_emails": 0,
+    "instagram_sessions": 0,
+    "valid_sessions": 0,
+    "unique_sessions": [],
+    "unique_usernames": [
+      "name"
+    ]
+  }
+}

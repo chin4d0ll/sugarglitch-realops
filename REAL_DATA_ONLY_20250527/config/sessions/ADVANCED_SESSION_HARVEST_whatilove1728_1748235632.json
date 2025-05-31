@@ -1,0 +1,35 @@
+{
+  "target": "whatilove1728",
+  "timestamp": "2025-05-26T05:00:23.564687",
+  "browser_sessions": {},
+  "api_sessions": {},
+  "authenticated_sessions": {},
+  "session_cookies": {},
+  "authentication_tokens": {},
+  "csrf_tokens": {},
+  "device_identifiers": {},
+  "session_analysis": {
+    "session_identifiers": [
+      {
+        "pattern": "session",
+        "found": true,
+        "context": "Multiple locations"
+      },
+      {
+        "pattern": "sess",
+        "found": true,
+        "context": "Multiple locations"
+      },
+      {
+        "pattern": "token",
+        "found": true,
+        "context": "Multiple locations"
+      }
+    ],
+    "csrf_tokens": [],
+    "authentication_tokens": [],
+    "device_identifiers": [],
+    "user_identifiers": [],
+    "app_identifiers": []
+  }
+}
