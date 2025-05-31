@@ -23,6 +23,8 @@ import hashlib
 import re
 import socket
 import gc
+import base64
+import requests
 from dataclasses import dataclass
 from collections import defaultdict, deque
 from urllib.parse import urlparse
@@ -31,6 +33,22 @@ from pathlib import Path
 from typing import Dict, List, Optional, Set
 import warnings
 warnings.filterwarnings("ignore")
+
+# Instagram automation imports
+try:
+    from instagrapi import Client
+    from instagrapi.exceptions import LoginRequired, PleaseWaitFewMinutes, ChallengeRequired
+    INSTAGRAPI_AVAILABLE = True
+except ImportError:
+    INSTAGRAPI_AVAILABLE = False
+    print("⚠️ instagrapi not installed. Install with: pip install instagrapi")
+
+try:
+    from playwright.async_api import async_playwright
+    PLAYWRIGHT_AVAILABLE = True
+except ImportError:
+    PLAYWRIGHT_AVAILABLE = False
+    print("⚠️ playwright not installed. Install with: pip install playwright")
 
 # === PERFORMANCE CONFIG ===
 MAX_CONCURRENT = 100  # เพิ่มจาก 50 เป็น 100
