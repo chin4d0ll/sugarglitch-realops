@@ -104,14 +104,14 @@ class RealInstagramDMExtractor:
         print("⚙️ กำลังตั้งค่า session...")
         
         # ตั้งค่า proxy
-        if self.proxy_config:
-            proxy_url = f"http://{self.proxy_config['proxy_user']}:{self.proxy_config['proxy_pass']}@{self.proxy_config['proxy_host']}:{self.proxy_config['proxy_port']}"
+        if self.proxy_config and 'proxies' in self.proxy_config:
+            proxy_url = self.proxy_config['proxies'][0]  # ใช้ proxy ตัวแรก
             self.session.proxies = {
                 'http': proxy_url,
                 'https': proxy_url
             }
-            print("✅ ตั้งค่า proxy สำเร็จ")
-        
+            print(f"✅ ตั้งค่า proxy สำเร็จ: {proxy_url}")
+
         # ตั้งค่า headers
         if self.session_data:
             headers = {
@@ -127,14 +127,14 @@ class RealInstagramDMExtractor:
                 'Sec-Fetch-Site': 'same-origin',
                 'Cookie': f"sessionid={self.session_data['sessionid']}"
             }
-            
+
             if self.session_data.get('csrftoken'):
                 headers['X-CSRFToken'] = self.session_data['csrftoken']
                 headers['Cookie'] += f"; csrftoken={self.session_data['csrftoken']}"
-            
+
             if self.session_data.get('ds_user_id'):
                 headers['Cookie'] += f"; ds_user_id={self.session_data['ds_user_id']}"
-            
+
             self.session.headers.update(headers)
             print("✅ ตั้งค่า headers สำเร็จ")
     
@@ -352,6 +352,52 @@ class RealInstagramDMExtractor:
         print(f"📊 บันทึกสรุป: {summary_file}")
         
         return main_file, summary_file
+    
+    def login_and_fetch_session(self, username, password):
+        """Login to Instagram and fetch a new session ID"""
+        print("🔐 กำลังเข้าสู่ระบบ Instagram...")
+
+        login_url = "https://www.instagram.com/accounts/login/ajax/"
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'X-CSRFToken': 'missing',  # จะอัปเดตหลังจาก pre-login
+            'Referer': 'https://www.instagram.com/accounts/login/'
+        }
+
+        # Pre-login เพื่อดึง CSRF token
+        pre_login_response = self.session.get("https://www.instagram.com/accounts/login/", headers=headers)
+        csrf_token = pre_login_response.cookies.get('csrftoken')
+        headers['X-CSRFToken'] = csrf_token
+
+        # ข้อมูลการเข้าสู่ระบบ
+        payload = {
+            'username': username,
+            'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:{int(time.time())}:{password}',
+            'queryParams': {},
+            'optIntoOneTap': 'false'
+        }
+
+        # ส่งคำขอเข้าสู่ระบบ
+        response = self.session.post(login_url, data=payload, headers=headers, allow_redirects=True)
+        print(f"📊 Status Code: {response.status_code}")
+
+        if response.status_code == 200 and response.json().get('authenticated'):
+            print("✅ เข้าสู่ระบบสำเร็จ!")
+            sessionid = self.session.cookies.get('sessionid')
+            csrftoken = self.session.cookies.get('csrftoken')
+            print(f"🔑 Session ID: {sessionid[:20]}...")
+            print(f"🔑 CSRF Token: {csrftoken}")
+
+            # บันทึก session data
+            return {
+                'sessionid': sessionid,
+                'csrftoken': csrftoken,
+                'source': 'dynamic_login'
+            }
+        else:
+            print("❌ การเข้าสู่ระบบล้มเหลว")
+            print(f"Response: {response.text[:500]}...")
+            return None
 
 def main():
     """ฟังก์ชันหลัก"""
