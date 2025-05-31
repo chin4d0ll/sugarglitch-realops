@@ -90,8 +90,8 @@ class SmartIGBypass:
         print(f"[DEBUG] รวม proxy ทั้งหมด: {len(proxies)} ตัว")
         return proxies
 
-    async def test_proxy_health(self, proxy_url, timeout=8):
-        """ทดสอบ proxy ว่าใช้กับ IG ได้มั้ย (เร็ว + ประหยัดเมมโมรี่)"""
+    def test_proxy_health(self, proxy_url, timeout=8):
+        """ทดสอบ proxy ว่าใช้กับ IG ได้มั้ย (แก้ aiohttp ProxyConnector error)"""
         try:
             # Parse proxy
             if proxy_url.startswith('http://'):
@@ -111,16 +111,28 @@ class SmartIGBypass:
             else:
                 return False
 
-            # Quick test ด้วย aiohttp ก่อน (เร็วกว่า playwright)
-            connector = aiohttp.ProxyConnector.from_url(proxy_url)
-            async with aiohttp.ClientSession(connector=connector, timeout=aiohttp.ClientTimeout(total=timeout)) as session:
-                async with session.get('https://m.instagram.com/', allow_redirects=False) as response:
-                    if response.status in [200, 302, 301]:
-                        print(f"[DEBUG] ✅ Proxy OK: {host}:{port}")
-                        return proxy_config
-                    else:
-                        print(f"[DEBUG] ❌ Proxy failed: {host}:{port} (Status: {response.status})")
-                        return False
+            # ใช้ requests แทน aiohttp (แก้ ProxyConnector error)
+            import requests
+            proxy_dict = {
+                'http': proxy_url,
+                'https': proxy_url
+            }
+            
+            response = requests.get(
+                'https://httpbin.org/ip', 
+                proxies=proxy_dict, 
+                timeout=timeout,
+                headers={'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15'}
+            )
+            
+            if response.status_code == 200:
+                ip_data = response.json()
+                proxy_ip = ip_data.get('origin', 'unknown')
+                print(f"[DEBUG] ✅ Proxy OK: {proxy_ip}")
+                return proxy_config
+            else:
+                print(f"[DEBUG] ❌ Proxy failed: {host}:{port} (Status: {response.status_code})")
+                return False
                         
         except Exception as e:
             print(f"[DEBUG] ❌ Proxy error: {str(e)[:50]}...")
