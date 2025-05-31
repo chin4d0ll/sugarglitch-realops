@@ -96,7 +96,7 @@ class ProjectDatabaseCreator:
                 log_level TEXT DEFAULT 'INFO', -- DEBUG, INFO, WARNING, ERROR, CRITICAL
                 message TEXT NOT NULL,
                 details TEXT, -- JSON format for additional details
-                timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+                created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                 source_file TEXT,
                 function_name TEXT,
                 FOREIGN KEY (target_id) REFERENCES targets (id)
