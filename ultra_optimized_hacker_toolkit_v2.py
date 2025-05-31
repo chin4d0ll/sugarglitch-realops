@@ -56,6 +56,22 @@ TIMEOUT = 2  # ลดจาก 5 เป็น 2 วินาที
 CHUNK_SIZE = 50  # ประมวลผลครั้งละ 50 items
 CACHE_SIZE = 1000  # เก็บ cache ไว้ 1000 entries
 
+# === INSTAGRAM CONFIG ===
+INSTAGRAM_USER_AGENTS = [
+    "Instagram 219.0.0.12.117 Android",
+    "Instagram 218.0.0.26.144 Android", 
+    "Instagram 217.0.0.15.119 Android"
+]
+
+INSTAGRAM_ENDPOINTS = {
+    'login': 'https://www.instagram.com/accounts/login/ajax/',
+    'dm_threads': 'https://www.instagram.com/api/v1/direct_v2/inbox/',
+    'dm_messages': 'https://www.instagram.com/api/v1/direct_v2/threads/{}/messages/',
+    'user_info': 'https://www.instagram.com/api/v1/users/{}/info/',
+    'followers': 'https://www.instagram.com/api/v1/friendships/{}/followers/',
+    'following': 'https://www.instagram.com/api/v1/friendships/{}/following/'
+}
+
 # === GIRLY THEME ===
 GIRLY_EMOJIS = {
     'success': '✨💖',
