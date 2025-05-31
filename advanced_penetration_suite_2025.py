@@ -1779,4 +1779,3 @@ if __name__ == "__main__":
 
 # 💀💖 จบแล้วจ้า! Advanced Penetration Testing Suite 2025 💖💀
 # Created with ♥️ by น้องจิน (chin4d0ll) 
-# For Educational & Security Research Only!
