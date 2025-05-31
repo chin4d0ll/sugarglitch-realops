@@ -766,11 +766,16 @@ class AdvancedPenetrationSuite:
                     pass
         
         # Calculate risk assessment
-        intelligence['risk_assessment'] = self.calculate_osint_risk_score(intelligence)
+        risk_assessment = self.calculate_osint_risk_score(intelligence)
+        intelligence['risk_assessment'] = risk_assessment
         
+        # Update results with intelligence data
         self.results['social']['profiles'] = intelligence['platforms_detected']
         self.results['social']['emails'] = intelligence['personal_information']['emails']
         self.results['social']['phones'] = intelligence['personal_information']['phones']
+        self.results['intelligence']['risk_score'] = risk_assessment.get('vulnerability_score', 0)
+        self.results['intelligence']['attack_vectors'] = risk_assessment.get('attack_vectors', [])
+        self.results['intelligence']['recommendations'] = risk_assessment.get('recommendations', [])
         
         self.girly_print(f"🎉 OSINT gathering เสร็จ! เจอ {len(intelligence['platforms_detected'])} platforms", "SUCCESS", "🔥")
         return intelligence
@@ -1356,4 +1361,422 @@ Scan Efficiency: {(len(self.results['web']['vulnerabilities']) + len(self.result
         """
         if target.startswith('http://') or target.startswith('https://'):
             return 'url'
-        elif re.match(r'^\d{1,3}\.\
+        elif re.match(r'^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$', target):
+            return 'ip'
+        elif '.' in target and len(target.split('.')) >= 2:
+            return 'domain'
+        else:
+            return 'username'
+
+# 💀🔥 MAIN EXECUTION FUNCTIONS 🔥💀
+
+def girly_banner():
+    """แสดง banner น่ารักๆ"""
+    print(GIRLY_BANNER)
+    print("🎯 รองรับการทดสอบ: IP, Domain, URL, Username")
+    print("⚡ เร็วปรี๊ดดด พร้อม AI-powered analysis")
+    print("🛡️ สำหรับการศึกษาและการทดสอบที่ได้รับอนุญาตเท่านั้น!")
+    print("="*70)
+
+async def main():
+    """
+    🚀 Main execution function
+    """
+    girly_banner()
+    
+    # Interactive mode
+    while True:
+        print("\n💖 เลือกโหมดการทำงาน:")
+        print("1. 🔍 Network Penetration Test (IP/Domain)")
+        print("2. 🌐 Web Application Test (URL)")
+        print("3. 🕵️ OSINT Intelligence (Username)")
+        print("4. 🔥 Full Auto Test (ทดสอบทุกอย่าง)")
+        print("5. 📊 Load Previous Results")
+        print("6. 👋 Exit")
+        
+        choice = input("\n💋 เลือกเลย (1-6): ").strip()
+        
+        if choice == '1':
+            target = input("🎯 ใส่ IP หรือ Domain: ").strip()
+            if target:
+                suite = AdvancedPenetrationSuite(target)
+                print(f"\n🔍 เริ่ม Network Penetration Test: {target}")
+                
+                # Network scanning only
+                if suite.classify_target(target) == 'ip':
+                    results = suite.quantum_network_scanner(target)
+                else:
+                    # Resolve domain to IP first
+                    try:
+                        ip = socket.gethostbyname(target)
+                        print(f"🌐 Resolved {target} to {ip}")
+                        results = suite.quantum_network_scanner(ip)
+                    except Exception as e:
+                        print(f"❌ Cannot resolve domain: {e}")
+                        continue
+                
+                print(f"\n📊 Results: {json.dumps(results, indent=2)}")
+                
+        elif choice == '2':
+            target = input("🎯 ใส่ URL (http://example.com): ").strip()
+            if target:
+                suite = AdvancedPenetrationSuite(target)
+                print(f"\n🌐 เริ่ม Web Application Test: {target}")
+                
+                results = suite.ai_vulnerability_scanner(target)
+                print(f"\n📊 Found {len(results)} vulnerabilities")
+                for vuln in results[:5]:  # Show first 5
+                    print(f"  🚨 {vuln.get('type', 'Unknown')}: {vuln.get('description', 'No description')}")
+                
+        elif choice == '3':
+            target = input("🎯 ใส่ Username: ").strip()
+            if target:
+                suite = AdvancedPenetrationSuite(target)
+                print(f"\n🕵️ เริ่ม OSINT Intelligence: {target}")
+                
+                results = suite.quantum_osint_gathering(target)
+                print(f"\n📊 Found on {len(results['platforms_detected'])} platforms")
+                print(f"📧 Emails: {len(results['personal_information']['emails'])}")
+                print(f"📱 Phones: {len(results['personal_information']['phones'])}")
+                print(f"🎯 Risk Score: {results['risk_assessment']['vulnerability_score']}/100")
+                
+        elif choice == '4':
+            target = input("🎯 ใส่ Target (IP/Domain/URL/Username): ").strip()
+            if target:
+                suite = AdvancedPenetrationSuite(target)
+                print(f"\n🔥 เริ่ม Full Auto Test: {target}")
+                
+                results = await suite.execute_full_penetration_test(target)
+                
+                # Generate and save report
+                report = suite.generate_master_report()
+                timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+                report_file = f"/workspaces/sugarglitch-realops/pentest_report_{timestamp}.txt"
+                
+                with open(report_file, 'w', encoding='utf-8') as f:
+                    f.write(report)
+                
+                print(f"\n✅ รายงานบันทึกแล้ว: {report_file}")
+                print("📊 สรุปผลลัพธ์:")
+                print(f"  🔓 Open Ports: {len(results['network']['ports'])}")
+                print(f"  🚨 Vulnerabilities: {len(results['web']['vulnerabilities'])}")
+                print(f"  👤 Social Profiles: {len(results['social']['profiles'])}")
+                print(f"  🎯 Risk Score: {results['intelligence']['risk_score']}/100")
+                
+        elif choice == '5':
+            # List available reports
+            reports_dir = Path("/workspaces/sugarglitch-realops")
+            report_files = list(reports_dir.glob("pentest_report_*.txt"))
+            
+            if report_files:
+                print("\n📊 Available Reports:")
+                for i, report_file in enumerate(report_files[-10:], 1):  # Show last 10
+                    print(f"  {i}. {report_file.name}")
+                
+                try:
+                    choice_num = int(input("เลือกรายงาน (1-10): ").strip())
+                    if 1 <= choice_num <= len(report_files[-10:]):
+                        selected_report = report_files[-10:][choice_num-1]
+                        with open(selected_report, 'r', encoding='utf-8') as f:
+                            print(f.read())
+                except (ValueError, IndexError):
+                    print("❌ เลือกไม่ถูกต้อง")
+            else:
+                print("❌ ไม่มีรายงานที่บันทึกไว้")
+                
+        elif choice == '6':
+            print("👋 บายบาย! หวังว่าน้องจินจะช่วยได้นะคะ! 💖")
+            break
+            
+        else:
+            print("❌ เลือกไม่ถูกต้อง กรุณาเลือก 1-6")
+
+if __name__ == "__main__":
+    """
+    💀🔥 ADVANCED PENETRATION TESTING SUITE 2025 🔥💀
+    
+    🎯 วิธีใช้งาน:
+    python advanced_penetration_suite_2025.py
+    
+    ⚠️ Legal Notice:
+    - ใช้เพื่อการศึกษาและการทดสอบที่ได้รับอนุญาตเท่านั้น
+    - ผู้ใช้งานต้องรับผิดชอบการใช้งานเอง
+    - ห้ามใช้ผิดกฎหมายเด็ดขาด!
+    
+    💖 สร้างด้วยความรักโดย น้องจิน (chin4d0ll)
+    """
+    
+    try:
+        # Import required modules
+        import asyncio
+        import socket
+        import json
+        import warnings
+        import time
+        import threading
+        import queue
+        import subprocess
+        import re
+        import random
+        import requests
+        from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+        from datetime import datetime, timedelta
+        from pathlib import Path
+        from typing import Dict, List, Optional, Tuple, Union
+        
+        # Run the main function
+        asyncio.run(main())
+        
+    except KeyboardInterrupt:
+        print("\n\n💀 การทำงานถูกยกเลิกโดยผู้ใช้ (Ctrl+C)")
+        print("👋 บายบาย! ระวังตัวให้ดีนะคะ! 💖")
+        
+    except ImportError as e:
+        print(f"❌ ขาด module ที่จำเป็น: {e}")
+        print("💡 ติดตั้งด้วย: pip install requests asyncio")
+        
+    except Exception as e:
+        print(f"💥 เกิดข้อผิดพลาด: {e}")
+        print("🔍 ตรวจสอบ syntax หรือ dependencies")
+
+# === MAIN EXECUTION FUNCTION ===
+async def main():
+    """🚀 ฟังก์ชันหลักสำหรับรันระบบทั้งหมด"""
+    print(GIRLY_BANNER)
+    print("💀 เริ่มต้น Advanced Penetration Testing Suite...")
+    
+    # เลือกโหมดการทำงาน
+    print("\n🎯 เลือกโหมดการทำงาน:")
+    print("1. 🖥️  Network Penetration Testing")
+    print("2. 🌐 Web Application Testing") 
+    print("3. 🕵️  OSINT Intelligence Gathering")
+    print("4. 🔥 Full Automated Penetration Test")
+    print("5. 🎪 Interactive Mode (Advanced)")
+    
+    try:
+        choice = input("\n💖 เลือกโหมด (1-5): ").strip()
+        
+        if choice == "1":
+            await network_testing_mode()
+        elif choice == "2":
+            await web_testing_mode()
+        elif choice == "3":
+            await osint_mode()
+        elif choice == "4":
+            await full_penetration_mode()
+        elif choice == "5":
+            await interactive_mode()
+        else:
+            print("❌ โหมดไม่ถูกต้อง! กรุณาเลือก 1-5")
+            
+    except Exception as e:
+        print(f"💥 เกิดข้อผิดพลาดในฟังก์ชันหลัก: {e}")
+
+async def network_testing_mode():
+    """🖥️ โหมดทดสอบเครือข่าย"""
+    print("\n🖥️ เริ่มต้น Network Penetration Testing...")
+    
+    target = input("💎 ใส่ IP address หรือ domain: ").strip()
+    if not target:
+        print("❌ กรุณาใส่ target!")
+        return
+    
+    suite = AdvancedPenetrationSuite(target)
+    
+    print(f"🎯 เริ่มทดสอบ: {target}")
+    results = await suite.execute_full_penetration_test(target)
+    
+    # แสดงผลลัพธ์
+    print("\n📊 ผลลัพธ์การทดสอบ:")
+    if 'network_scan' in results:
+        print(f"🔍 พบพอร์ตที่เปิด: {len(results['network_scan'].get('open_ports', []))}")
+    
+    # บันทึกรายงาน
+    await suite.generate_detailed_report(results, f"network_test_{target}")
+    print("💾 รายงานถูกบันทึกแล้ว!")
+
+async def web_testing_mode():
+    """🌐 โหมดทดสอบเว็บแอปพลิเคชัน"""
+    print("\n🌐 เริ่มต้น Web Application Testing...")
+    
+    target = input("💎 ใส่ URL (เช่น https://example.com): ").strip()
+    if not target:
+        print("❌ กรุณาใส่ URL!")
+        return
+    
+    suite = AdvancedPenetrationSuite(target)
+    
+    print(f"🎯 เริ่มทดสอบ: {target}")
+    results = await suite.execute_full_penetration_test(target)
+    
+    # แสดงผลลัพธ์
+    print("\n📊 ผลลัพธ์การทดสอบ:")
+    if 'vulnerabilities' in results:
+        vulns = results['vulnerabilities']
+        print(f"🚨 พบช่องโหว่: {len(vulns)} รายการ")
+        for vuln in vulns[:3]:  # แสดงแค่ 3 อันแรก
+            print(f"   - {vuln.get('type', 'Unknown')}: {vuln.get('severity', 'Unknown')}")
+    
+    # บันทึกรายงาน
+    await suite.generate_detailed_report(results, f"web_test_{target.replace('://', '_').replace('/', '_')}")
+    print("💾 รายงานถูกบันทึกแล้ว!")
+
+async def osint_mode():
+    """🕵️ โหมด OSINT Intelligence Gathering"""
+    print("\n🕵️ เริ่มต้น OSINT Intelligence Gathering...")
+    
+    target = input("💎 ใส่ username หรือ identifier: ").strip()
+    if not target:
+        print("❌ กรุณาใส่ target!")
+        return
+    
+    suite = AdvancedPenetrationSuite(target)
+    
+    print(f"🎯 เริ่มรวบรวมข้อมูล: {target}")
+    results = await suite.execute_full_penetration_test(target)
+    
+    # แสดงผลลัพธ์
+    print("\n📊 ผลลัพธ์การรวบรวมข้อมูล:")
+    if 'osint_intelligence' in results:
+        intel = results['osint_intelligence']
+        print(f"🕵️ พบแพลตฟอร์ม: {len(intel.get('platforms_detected', []))}")
+        print(f"📧 พบอีเมล: {len(intel.get('emails', []))}")
+        print(f"📱 พบเบอร์โทร: {len(intel.get('phones', []))}")
+        print(f"🎯 ความเสี่ยง: {intel.get('risk_score', 0)}/100")
+    
+    # บันทึกรายงาน
+    await suite.generate_detailed_report(results, f"osint_{target}")
+    print("💾 รายงานถูกบันทึกแล้ว!")
+
+async def full_penetration_mode():
+    """🔥 โหมดทดสอบแบบครบถ้วน"""
+    print("\n🔥 เริ่มต้น Full Automated Penetration Test...")
+    
+    target = input("💎 ใส่ target (IP/Domain/URL/Username): ").strip()
+    if not target:
+        print("❌ กรุณาใส่ target!")
+        return
+    
+    suite = AdvancedPenetrationSuite(target)
+    
+    print(f"🎯 เริ่มทดสอบแบบครบถ้วน: {target}")
+    print("⚡ ระบบจะทำการทดสอบทุกด้านอัตโนมัติ...")
+    
+    results = await suite.execute_full_penetration_test(target)
+    
+    # แสดงสรุปผลลัพธ์
+    print("\n🎉 การทดสอบเสร็จสมบูรณ์!")
+    print("📊 สรุปผลลัพธ์:")
+    
+    if 'network_scan' in results:
+        print(f"🖥️ Network: พบพอร์ตเปิด {len(results['network_scan'].get('open_ports', []))} พอร์ต")
+    
+    if 'vulnerabilities' in results:
+        print(f"🚨 Vulnerabilities: พบช่องโหว่ {len(results['vulnerabilities'])} รายการ")
+    
+    if 'osint_intelligence' in results:
+        intel = results['osint_intelligence']
+        print(f"🕵️ OSINT: ความเสี่ยง {intel.get('risk_score', 0)}/100")
+    
+    # บันทึกรายงาน
+    await suite.generate_detailed_report(results, f"full_pentest_{target}")
+    print("💾 รายงานครบถ้วนถูกบันทึกแล้ว!")
+
+async def interactive_mode():
+    """🎪 โหมดโต้ตอบแบบ Advanced"""
+    print("\n🎪 เริ่มต้น Interactive Mode...")
+    print("💡 พิมพ์ 'help' เพื่อดูคำสั่งที่ใช้ได้")
+    print("💡 พิมพ์ 'quit' เพื่อออก")
+    
+    suite = None
+    
+    while True:
+        try:
+            command = input("\n💖 [Interactive] > ").strip().lower()
+            
+            if command == 'quit' or command == 'exit':
+                print("👋 บายบาย! ระวังตัวให้ดีนะคะ! 💖")
+                break
+                
+            elif command == 'help':
+                print_interactive_help()
+                
+            elif command.startswith('target '):
+                target = command.split(' ', 1)[1]
+                suite = AdvancedPenetrationSuite(target)
+                print(f"🎯 ตั้งค่า target: {target}")
+                
+            elif command == 'scan':
+                if not suite:
+                    print("❌ กรุณาตั้งค่า target ก่อน! (ใช้คำสั่ง: target <ip/domain>)")
+                    continue
+                print("🔍 เริ่มการสแกน...")
+                results = await suite.quantum_network_scanner(suite.target)
+                print(f"✅ พบพอร์ตเปิด: {len(results.get('open_ports', []))}")
+                
+            elif command == 'vulns':
+                if not suite:
+                    print("❌ กรุณาตั้งค่า target ก่อน!")
+                    continue
+                print("🚨 เริ่มการหาช่องโหว่...")
+                results = await suite.ai_vulnerability_scanner(suite.target)
+                print(f"✅ พบช่องโหว่: {len(results)}")
+                
+            elif command == 'osint':
+                if not suite:
+                    print("❌ กรุณาตั้งค่า target ก่อน!")
+                    continue
+                print("🕵️ เริ่มรวบรวมข้อมูล...")
+                results = await suite.quantum_osint_gathering(suite.target)
+                print(f"✅ พบข้อมูล: {len(results.get('platforms_detected', []))} แพลตฟอร์ม")
+                
+            else:
+                print(f"❌ ไม่รู้จักคำสั่ง: {command}")
+                print("💡 พิมพ์ 'help' เพื่อดูคำสั่งที่ใช้ได้")
+                
+        except KeyboardInterrupt:
+            print("\n👋 บายบาย! ระวังตัวให้ดีนะคะ! 💖")
+            break
+        except Exception as e:
+            print(f"💥 เกิดข้อผิดพลาด: {e}")
+
+def print_interactive_help():
+    """📚 แสดงคำสั่งที่ใช้ได้ในโหมด Interactive"""
+    print("\n📚 คำสั่งที่ใช้ได้:")
+    print("🎯 target <ip/domain/url/username> - ตั้งค่า target")
+    print("🔍 scan                            - สแกนเครือข่าย")
+    print("🚨 vulns                           - หาช่องโหว่")
+    print("🕵️ osint                           - รวบรวมข้อมูล OSINT")
+    print("📚 help                            - แสดงความช่วยเหลือ")
+    print("👋 quit/exit                       - ออกจากโปรแกรม")
+
+if __name__ == "__main__":
+    """🚀 จุดเริ่มต้นของโปรแกรม"""
+    try:
+        # Check required modules
+        import asyncio
+        import requests
+        import socket
+        from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+        from datetime import datetime, timedelta
+        from pathlib import Path
+        from typing import Dict, List, Optional, Tuple, Union
+        
+        # Run the main function
+        asyncio.run(main())
+        
+    except KeyboardInterrupt:
+        print("\n\n💀 การทำงานถูกยกเลิกโดยผู้ใช้ (Ctrl+C)")
+        print("👋 บายบาย! ระวังตัวให้ดีนะคะ! 💖")
+        
+    except ImportError as e:
+        print(f"❌ ขาด module ที่จำเป็น: {e}")
+        print("💡 ติดตั้งด้วย: pip install requests asyncio")
+        
+    except Exception as e:
+        print(f"💥 เกิดข้อผิดพลาด: {e}")
+        print("🔍 ตรวจสอบ syntax หรือ dependencies")
+
+# 💀💖 จบแล้วจ้า! Advanced Penetration Testing Suite 2025 💖💀
+# Created with ♥️ by น้องจิน (chin4d0ll) 
+# For Educational & Security Research Only!
