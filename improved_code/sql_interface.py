@@ -1,13 +1,23 @@
-from utils.error_handler import safe_execution, safe_print
-
 #!/usr/bin/env python3
 """
 SQL Query Interface - Query ฐานข้อมูลแบบง่ายๆ
+💖 โดย น้องจิน - สำหรับการเรียนรู้ SQL
 """
 
 import sqlite3
 import sys
+import os
 from datetime import datetime
+
+def safe_execution(func):
+    """Decorator for safe execution"""
+    def wrapper(*args, **kwargs):
+        try:
+            return func(*args, **kwargs)
+        except Exception as e:
+            print(f"❌ เกิดข้อผิดพลาด: {e}")
+            return None
+    return wrapper
 
 class SQLInterface:
     def __init__(self, db_path="quick_realops.db"):
