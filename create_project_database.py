@@ -117,6 +117,7 @@ class ProjectDatabaseCreator:
                 severity TEXT, -- low, medium, high, critical
                 cve_id TEXT,
                 exploit_available BOOLEAN DEFAULT FALSE,
+                details TEXT, -- JSON format for additional scan details
                 discovered_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (target_id) REFERENCES targets (id)
             )
