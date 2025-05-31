@@ -148,13 +148,13 @@ setup_config() {
 init_database() {
     log_info "Initializing database..."
     
-    if [ -f "databases/enterprise_db_setup.py" ]; then
+    if [ -d "databases" ] && [ -f "databases/enterprise_db_setup.py" ]; then
         cd databases/
         python3 enterprise_db_setup.py
         cd ..
         log_success "Database initialized"
     else
-        log_warning "Database setup script not found"
+        log_warning "Database setup script or directory not found"
     fi
 }
 

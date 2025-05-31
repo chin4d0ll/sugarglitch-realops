@@ -1,4 +1,15 @@
-from utils.error_handler import safe_execution, safe_print
+try:
+    from utils.error_handler import safe_execution
+except ImportError:
+    # Fallbacks if utils/error_handler.py is missing
+    def safe_execution(func):
+        def wrapper(*args, **kwargs):
+            try:
+                return func(*args, **kwargs)
+            except Exception as e:
+                print(f"[ERROR] {e}")
+                raise  # Re-raise the exception after logging it
+        return wrapper
 
 #!/usr/bin/env python3
 """
@@ -20,19 +31,23 @@ Side Effects: Complete destruction of all screens in the multiverse
 
 import os
 import sys
+import os
 import time
 import random
 import json
 from datetime import datetime
-from colorama import init, Fore, Back, Style
-import subprocess
-
-# Initialize colorama
-init(autoreset=True)
-
-class UltraScreenDestroyer:
-    def __init__(self):
-        self.power_level = float('inf')  # Infinite power
+    # Initialize colorama
+    init(autoreset=True)
+try:
+    from colorama import init, Fore, Style
+    # Initialize colorama
+    init(autoreset=True)
+except ImportError:
+    # Fallbacks if colorama is not installed
+    class Dummy:
+        def __getattr__(self, _):
+            return ''
+    Fore = Style = Dummy()
         self.destruction_level = 0
         self.screens_destroyed = 0
         self.universes_annihilated = 0
@@ -290,13 +305,13 @@ class UltraScreenDestroyer:
                 for _ in range(80):
                     char = random.choice([' ', '·', '°', '∙', '•', '◦', '∘', '○', '◯'])
                     transcendence_line += char
+            for _ in range(30):
+                transcendence_line = ""
+                for _ in range(80):
+                    char = random.choice([' ', '·', '°', '∙', '•', '◦', '∘', '○', '◯'])
+                    transcendence_line += char
                 
                 print(Fore.WHITE + transcendence_line)
-            
-            time.sleep(2)
-            os.system('clear' if os.name == 'posix' else 'cls')
-        
-        # Final message
         print(Fore.MAGENTA + Style.BRIGHT + """
         
         ╔══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗

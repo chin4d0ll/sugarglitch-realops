@@ -1,3 +1,23 @@
+<!--
+README Documentation Overview
+
+This README provides comprehensive instructions and reference for the Sugarglitch RealOps project. It covers installation steps, environment setup, project structure, configuration examples, and usage scenarios for core modules and advanced tools. The document also includes troubleshooting guidance, performance metrics, system status, and contribution guidelines. Links to detailed documentation and support resources are provided for further reference.
+
+Key Sections:
+- Installation and setup instructions for dependencies and environment variables.
+- Project directory structure and configuration file examples.
+- Usage examples for Instagram extraction, session management, and monitoring.
+- Troubleshooting steps for common issues (extensions, database, proxy).
+- Overview of available modules and their functionalities.
+- Performance metrics for core components.
+- System status and operational readiness.
+- Contribution process and licensing information.
+- Quick access links to documentation, issues, and discussions.
+
+Intended Audience:
+- Developers and contributors seeking to set up, use, or extend the Sugarglitch RealOps platform.
+- Users requiring operational guidance or troubleshooting support.
+-->
 
 # Sugarglitch RealOps
 
