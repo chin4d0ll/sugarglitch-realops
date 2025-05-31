@@ -37,6 +37,7 @@ class ProjectDatabaseCreator:
                 target_name TEXT NOT NULL,
                 target_type TEXT NOT NULL, -- ip, domain, url, username
                 target_value TEXT NOT NULL,
+                description TEXT, -- คำอธิบายเป้าหมาย
                 priority INTEGER DEFAULT 1, -- 1=low, 2=medium, 3=high, 4=critical
                 status TEXT DEFAULT 'pending', -- pending, scanning, completed, failed
                 created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
