@@ -555,6 +555,76 @@ class RealInstagramDMExtractor:
         print("❌ ทุกวิธี login ล้มเหลว")
         return None
 
+        # ข้อมูลการเข้าสู่ระบบ (mobile payload)
+        payload = {
+            'username': username,
+            'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:{int(time.time())}:{password}',
+            'queryParams': '{}',
+            'optIntoOneTap': 'false',
+        }
+
+        # Human-like delay ก่อน login
+        time.sleep(2)
+
+        # ส่งคำขอเข้าสู่ระบบ (data form)
+        response = self.session.post(login_url, data=payload, headers=headers, allow_redirects=True)
+        print(f"📊 Status Code: {response.status_code}")
+        print(f"[DEBUG] Login response headers: {response.headers}")
+        print(f"[DEBUG] Login response cookies: {self.session.cookies.get_dict()}")
+
+        # 1. สำเร็จ
+        if response.status_code == 200:
+            try:
+                resp_json = response.json()
+            except Exception:
+                resp_json = {}
+            if resp_json.get('authenticated'):
+                print("✅ เข้าสู่ระบบสำเร็จ!")
+                sessionid = self.session.cookies.get('sessionid')
+                csrftoken = self.session.cookies.get('csrftoken')
+                print(f"🔑 Session ID: {sessionid[:20]}...")
+                print(f"🔑 CSRF Token: {csrftoken}")
+                return {
+                    'sessionid': sessionid,
+                    'csrftoken': csrftoken,
+                    'source': 'dynamic_login'
+                }
+            # 2. พบ checkpoint
+            elif resp_json.get('message') == 'checkpoint_required' or 'checkpoint_url' in resp_json:
+                checkpoint_url = resp_json.get('checkpoint_url')
+                print(f"🛡️ พบ checkpoint_required: {checkpoint_url}")
+                # เรียก handle_checkpoint
+                if self.handle_checkpoint(username, password, checkpoint_url=checkpoint_url):
+                    print("✅ BYPASS CHECKPOINT สำเร็จ!")
+                    return self.session_data
+                else:
+                    print("❌ BYPASS CHECKPOINT ไม่สำเร็จ")
+                    return None
+            else:
+                print("❌ การเข้าสู่ระบบล้มเหลว (ไม่ authenticated)")
+                print(f"Response: {response.text[:500]}...")
+                return None
+        # 3. 403 หรือ error อื่น
+        elif response.status_code == 403:
+            print("❌ 403 Forbidden - อาจถูก block หรือ require checkpoint")
+            # ลอง handle_checkpoint แบบ fallback (ถ้ามีข้อมูล)
+            try:
+                resp_json = response.json()
+                checkpoint_url = resp_json.get('checkpoint_url')
+            except Exception:
+                checkpoint_url = None
+            if checkpoint_url:
+                print(f"🛡️ พบ checkpoint_required: {checkpoint_url}")
+                if self.handle_checkpoint(username, password, checkpoint_url=checkpoint_url):
+                    print("✅ BYPASS CHECKPOINT สำเร็จ!")
+                    return self.session_data
+            print(f"Response: {response.text[:500]}...")
+            return None
+        else:
+            print("❌ การเข้าสู่ระบบล้มเหลว (status code อื่น)")
+            print(f"Response: {response.text[:500]}...")
+            return None
+
 def main():
     """ฟังก์ชันหลัก"""
     print("🚀 Real Instagram DM Extractor สำหรับ alx.trading")
