@@ -1,0 +1,164 @@
+{
+  "timestamp": "2025-05-31T22:21:48.891312",
+  "total_images": 17,
+  "total_size_mb": 0.08,
+  "file_types": {
+    ".png": 15,
+    ".svg": 2
+  },
+  "images": [
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/direct_no_username_form.png",
+      "name": "direct_no_username_form.png",
+      "size": 4331,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 21:14:48",
+      "extension": ".png",
+      "relative_path": "screenshots/direct_no_username_form.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/test_instagram.png",
+      "name": "test_instagram.png",
+      "size": 4331,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 20:25:21",
+      "extension": ".png",
+      "relative_path": "screenshots/test_instagram.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/mobile_login_page.png",
+      "name": "mobile_login_page.png",
+      "size": 2184,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 21:28:25",
+      "extension": ".png",
+      "relative_path": "screenshots/mobile_login_page.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/error_main.png",
+      "name": "error_main.png",
+      "size": 4331,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 20:22:02",
+      "extension": ".png",
+      "relative_path": "screenshots/error_main.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/enhanced_03_no_form_debug.png",
+      "name": "enhanced_03_no_form_debug.png",
+      "size": 4900,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 20:37:25",
+      "extension": ".png",
+      "relative_path": "screenshots/enhanced_03_no_form_debug.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/direct_after_load.png",
+      "name": "direct_after_load.png",
+      "size": 4331,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 21:14:32",
+      "extension": ".png",
+      "relative_path": "screenshots/direct_after_load.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/s1_login_page.png",
+      "name": "s1_login_page.png",
+      "size": 4331,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 20:57:01",
+      "extension": ".png",
+      "relative_path": "screenshots/s1_login_page.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/debug_login_page.png",
+      "name": "debug_login_page.png",
+      "size": 2637,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 19:36:38",
+      "extension": ".png",
+      "relative_path": "screenshots/debug_login_page.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/test_httpbin.png",
+      "name": "test_httpbin.png",
+      "size": 8637,
+      "size_mb": 0.01,
+      "modified": "2025-05-31 20:25:20",
+      "extension": ".png",
+      "relative_path": "screenshots/test_httpbin.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/desktop_login_page.png",
+      "name": "desktop_login_page.png",
+      "size": 4331,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 21:25:43",
+      "extension": ".png",
+      "relative_path": "screenshots/desktop_login_page.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/s1_no_form.png",
+      "name": "s1_no_form.png",
+      "size": 4331,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 20:31:28",
+      "extension": ".png",
+      "relative_path": "screenshots/s1_no_form.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/enhanced_02_after_wait.png",
+      "name": "enhanced_02_after_wait.png",
+      "size": 4900,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 20:37:25",
+      "extension": ".png",
+      "relative_path": "screenshots/enhanced_02_after_wait.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/enhanced_01_after_navigation.png",
+      "name": "enhanced_01_after_navigation.png",
+      "size": 4900,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 21:09:17",
+      "extension": ".png",
+      "relative_path": "screenshots/enhanced_01_after_navigation.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/screenshots/debug_step1_login_page.png",
+      "name": "debug_step1_login_page.png",
+      "size": 2637,
+      "size_mb": 0.0,
+      "modified": "2025-05-31 19:36:37",
+      "extension": ".png",
+      "relative_path": "screenshots/debug_step1_login_page.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/.venv/lib/python3.12/site-packages/playwright/driver/package/lib/server/chromium/appIcon.png",
+      "name": "appIcon.png",
+      "size": 16565,
+      "size_mb": 0.02,
+      "modified": "2025-05-28 18:47:07",
+      "extension": ".png",
+      "relative_path": ".venv/lib/python3.12/site-packages/playwright/driver/package/lib/server/chromium/appIcon.png"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/.venv/lib/python3.12/site-packages/playwright/driver/package/lib/vite/traceViewer/playwright-logo.svg",
+      "name": "playwright-logo.svg",
+      "size": 5033,
+      "size_mb": 0.0,
+      "modified": "2025-05-28 18:47:07",
+      "extension": ".svg",
+      "relative_path": ".venv/lib/python3.12/site-packages/playwright/driver/package/lib/vite/traceViewer/playwright-logo.svg"
+    },
+    {
+      "path": "/workspaces/sugarglitch-realops/.venv/lib/python3.12/site-packages/playwright/driver/package/lib/vite/recorder/playwright-logo.svg",
+      "name": "playwright-logo.svg",
+      "size": 5033,
+      "size_mb": 0.0,
+      "modified": "2025-05-28 18:47:07",
+      "extension": ".svg",
+      "relative_path": ".venv/lib/python3.12/site-packages/playwright/driver/package/lib/vite/recorder/playwright-logo.svg"
+    }
+  ]
+}
