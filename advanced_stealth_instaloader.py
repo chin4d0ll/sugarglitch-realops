@@ -1,4 +1,10 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+⚡ ADVANCED STEALTH INSTALOADER ⚡
+ใช้ realistic delays + proper session management
+Enhanced for reliability, stealth, and maintainability.
+"""
 """
 ⚡ ADVANCED STEALTH INSTALOADER ⚡
 ใช้ realistic delays + proper session management
