@@ -349,15 +349,14 @@ class RealDataLoader:
         for log in logs_data:
             self.cursor.execute("""
                 INSERT INTO operation_logs 
-                (operation_type, log_level, message, details, timestamp, created_at)
-                VALUES (?, ?, ?, ?, ?, ?)
+                (operation_type, log_level, message, details, created_at)
+                VALUES (?, ?, ?, ?, ?)
             """, (
                 log['operation_type'],
                 log['log_level'],
                 log['message'],
                 log['details'],
-                log['timestamp'],
-                datetime.datetime.now().isoformat()
+                log['timestamp']  # Use timestamp value for created_at
             ))
         
         print(f"✅ Loaded {len(logs_data)} operation logs")
