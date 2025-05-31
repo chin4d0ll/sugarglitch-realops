@@ -119,6 +119,7 @@ class ProjectDatabaseCreator:
                 exploit_available BOOLEAN DEFAULT FALSE,
                 details TEXT, -- JSON format for additional scan details
                 discovered_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+                scanned_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                 FOREIGN KEY (target_id) REFERENCES targets (id)
             )
         ''')
@@ -198,17 +199,17 @@ class ProjectDatabaseCreator:
         
         # ข้อมูล scan_results
         scan_data = [
-            (1, "port_scan", "tcp", 53, "domain", "BIND 9.x", None, "low", None, False, '{"scan_duration": 5.2, "techniques": ["SYN"]}'),
-            (1, "port_scan", "tcp", 443, "https", "nginx/1.18", None, "low", None, False, '{"ssl_version": "TLSv1.3", "cipher": "AES256"}'),
-            (2, "port_scan", "tcp", 80, "http", "nginx/1.20", "HTTP Header Injection", "medium", "CVE-2021-1234", True, '{"headers_found": ["Server", "X-Frame-Options"], "exploitability": "medium"}'),
-            (3, "vuln_scan", "https", 443, "web_app", "React 18.x", "Information Disclosure", "high", "CVE-2023-5678", False, '{"components": ["React", "GraphQL"], "endpoints": 15}'),
-            (7, "osint_scan", None, None, "social_media", "Multiple Platforms", "Privacy Risk", "medium", None, False, '{"platforms_checked": 18, "data_exposure": "moderate"}')
+            (1, "port_scan", "tcp", 53, "domain", "BIND 9.x", None, "low", None, False, '{"scan_duration": 5.2, "techniques": ["SYN"]}', "2025-05-29 10:00:00"),
+            (1, "port_scan", "tcp", 443, "https", "nginx/1.18", None, "low", None, False, '{"ssl_version": "TLSv1.3", "cipher": "AES256"}', "2025-05-29 10:01:00"),
+            (2, "port_scan", "tcp", 80, "http", "nginx/1.20", "HTTP Header Injection", "medium", "CVE-2021-1234", True, '{"headers_found": ["Server", "X-Frame-Options"], "exploitability": "medium"}', "2025-05-29 10:02:00"),
+            (3, "vuln_scan", "https", 443, "web_app", "React 18.x", "Information Disclosure", "high", "CVE-2023-5678", False, '{"components": ["React", "GraphQL"], "endpoints": 15}', "2025-05-29 10:03:00"),
+            (7, "osint_scan", None, None, "social_media", "Multiple Platforms", "Privacy Risk", "medium", None, False, '{"platforms_checked": 18, "data_exposure": "moderate"}', "2025-05-29 10:04:00")
         ]
         
         for scan in scan_data:
             cursor.execute('''
-                INSERT INTO scan_results (target_id, scan_type, protocol, port, service, version, vulnerability, severity, cve_id, exploit_available, details)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO scan_results (target_id, scan_type, protocol, port, service, version, vulnerability, severity, cve_id, exploit_available, details, scanned_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', scan)
         
         self.conn.commit()
