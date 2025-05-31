@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รูปภาพที่พบ - Image Viewer</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .image-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #dee2e6;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .image-card img:hover {
+            border-color: #667eea;
+            transform: scale(1.02);
+        }
+        .image-title {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #495057;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        .section h2 {
+            color: #495057;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 90%;
+            max-width: 1000px;
+            max-height: 90%;
+            object-fit: contain;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover {
+            color: #667eea;
+        }
+        .no-images {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .search-box {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .search-box input {
+            width: 100%;
+            max-width: 400px;
+            padding: 12px 20px;
+            border: 2px solid #dee2e6;
+            border-radius: 25px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .search-box input:focus {
+            border-color: #667eea;
+        }
+        .html-files {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .html-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .html-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        .html-link {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            text-decoration: none;
+            color: #495057;
+        }
+        .html-icon {
+            font-size: 2em;
+            margin-right: 15px;
+        }
+        .html-info h3 {
+            margin: 0 0 5px 0;
+            color: #667eea;
+            font-size: 1.1em;
+        }
+        .html-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #6c757d;
+        }
+        .hidden {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🖼️ รูปภาพที่พบ - Found Images</h1>
+        
+        <div class="section">
+            <h2>📸 Screenshots - สกรีนช็อต</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="🔍 ค้นหารูปภาพ... Search images..." onkeyup="searchImages()">
+            </div>
+            <div class="image-grid" id="imageGrid">
+                <div class="image-card" data-title="enhanced navigation">
+                    <img src="screenshots/enhanced_01_after_navigation.png" alt="Enhanced Navigation" onclick="openModal(this.src)">
+                    <div class="image-title">Enhanced Navigation</div>
+                </div>
+                <div class="image-card" data-title="enhanced after wait">
+                    <img src="screenshots/enhanced_02_after_wait.png" alt="Enhanced After Wait" onclick="openModal(this.src)">
+                    <div class="image-title">Enhanced After Wait</div>
+                </div>
+                <div class="image-card" data-title="s1 no form">
+                    <img src="screenshots/s1_no_form.png" alt="S1 No Form" onclick="openModal(this.src)">
+                    <div class="image-title">S1 No Form</div>
+                </div>
+                <div class="image-card" data-title="test httpbin">
+                    <img src="screenshots/test_httpbin.png" alt="Test HTTPBin" onclick="openModal(this.src)">
+                    <div class="image-title">Test HTTPBin</div>
+                </div>
+                <div class="image-card" data-title="direct after load">
+                    <img src="screenshots/direct_after_load.png" alt="Direct After Load" onclick="openModal(this.src)">
+                    <div class="image-title">Direct After Load</div>
+                </div>
+                <div class="image-card" data-title="enhanced debug">
+                    <img src="screenshots/enhanced_03_no_form_debug.png" alt="Enhanced Debug" onclick="openModal(this.src)">
+                    <div class="image-title">Enhanced Debug</div>
+                </div>
+                <div class="image-card" data-title="error main">
+                    <img src="screenshots/error_main.png" alt="Error Main" onclick="openModal(this.src)">
+                    <div class="image-title">Error Main</div>
+                </div>
+                <div class="image-card" data-title="test instagram">
+                    <img src="screenshots/test_instagram.png" alt="Test Instagram" onclick="openModal(this.src)">
+                    <div class="image-title">Test Instagram</div>
+                </div>
+                <div class="image-card" data-title="direct no username form">
+                    <img src="screenshots/direct_no_username_form.png" alt="Direct No Username Form" onclick="openModal(this.src)">
+                    <div class="image-title">Direct No Username Form</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📄 HTML Content - เนื้อหา HTML</h2>
+            <div class="html-files">
+                <div class="html-card">
+                    <a href="screenshots/test_instagram.html" target="_blank" class="html-link">
+                        <span class="html-icon">🌐</span>
+                        <div class="html-info">
+                            <h3>Test Instagram HTML</h3>
+                            <p>HTML content from Instagram test</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="html-card">
+                    <a href="screenshots/s1_empty_content.html" target="_blank" class="html-link">
+                        <span class="html-icon">📝</span>
+                        <div class="html-info">
+                            <h3>S1 Empty Content</h3>
+                            <p>Empty content debugging HTML</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="html-card">
+                    <a href="screenshots/enhanced_01_content.html" target="_blank" class="html-link">
+                        <span class="html-icon">⚡</span>
+                        <div class="html-info">
+                            <h3>Enhanced Content</h3>
+                            <p>Enhanced extraction content</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="html-card">
+                    <a href="screenshots/enhanced_03_full_content_debug.html" target="_blank" class="html-link">
+                        <span class="html-icon">🔧</span>
+                        <div class="html-info">
+                            <h3>Full Content Debug</h3>
+                            <p>Complete debugging content</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="html-card">
+                    <a href="screenshots/direct_page_content.html" target="_blank" class="html-link">
+                        <span class="html-icon">🎯</span>
+                        <div class="html-info">
+                            <h3>Direct Page Content</h3>
+                            <p>Direct page extraction content</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="html-card">
+                    <a href="screenshots/error_main.html" target="_blank" class="html-link">
+                        <span class="html-icon">❌</span>
+                        <div class="html-info">
+                            <h3>Error Main HTML</h3>
+                            <p>Error page content</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>📱 Instagram Extracted Images - รูปจาก Instagram</h2>
+            <div class="no-images">
+                ⚠️ รูปภาพที่ดึงมาจาก Instagram (@whatilove1728) ไม่พบในขณะนี้<br>
+                The extracted Instagram images are not currently available in the workspace.<br><br>
+                ตามรายงานการวิเคราะห์ พบว่ามีรูปภาพ 19 ไฟล์ แต่ไฟล์จริงไม่อยู่ในโฟลเดอร์<br>
+                According to the analysis report, 19 image files were found but the actual files are not in the current directory.
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal สำหรับดูรูปขยาย -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById('imageModal').style.display = 'block';
+            document.getElementById('modalImage').src = src;
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+
+        function searchImages() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const imageCards = document.querySelectorAll('.image-card');
+            
+            imageCards.forEach(card => {
+                const title = card.getAttribute('data-title') || '';
+                const imageTitle = card.querySelector('.image-title').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || imageTitle.includes(searchTerm)) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        }
+
+        // Close modal เมื่อกด ESC
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Auto-refresh functionality
+        function refreshImages() {
+            // Add timestamp to prevent caching
+            const timestamp = new Date().getTime();
+            const images = document.querySelectorAll('img[src^="screenshots/"]');
+            
+            images.forEach(img => {
+                const originalSrc = img.src.split('?')[0];
+                img.src = originalSrc + '?' + timestamp;
+            });
+            
+            console.log('Images refreshed at:', new Date().toLocaleString());
+        }
+
+        // Refresh images every 30 seconds to catch new screenshots
+        setInterval(refreshImages, 30000);
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(event) {
+            // Ctrl+R to refresh images
+            if (event.ctrlKey && event.key === 'r') {
+                event.preventDefault();
+                refreshImages();
+                alert('🔄 รูปภาพได้รับการรีเฟรชแล้ว! Images refreshed!');
+            }
+            
+            // Ctrl+F to focus search
+            if (event.ctrlKey && event.key === 'f') {
+                event.preventDefault();
+                document.getElementById('searchInput').focus();
+            }
+        });
+    </script>
+</body>
+</html>
