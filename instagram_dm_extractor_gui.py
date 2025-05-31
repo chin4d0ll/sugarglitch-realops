@@ -2,7 +2,7 @@
 """
 💀📱 Instagram DM Extractor - Simple GUI Version 💀📱
 ====================================================
-เครื่องมือดึง DMs พร้อม GUI ใช้งานง่าย
+เครื่องมือดึง DMs พร้อม GUI ใช้ง่าย
 """
 
 import tkinter as tk
@@ -56,12 +56,32 @@ class InstagramDMExtractorGUI:
         login_frame.pack(fill='x', pady=5)
         
         ttk.Label(login_frame, text="Username:", style='Heading.TLabel').grid(row=0, column=0, sticky='w', pady=5)
-        self.username_entry = ttk.Entry(login_frame, width=30)
-        self.username_entry.grid(row=0, column=1, pady=5, padx=10)
+        self.username_entry = ttk.Entry(login_frame, width=30, font=('Arial', 11))
+        self.username_entry.grid(row=0, column=1, pady=5, padx=10, columnspan=2, sticky='ew')
         
         ttk.Label(login_frame, text="Password:", style='Heading.TLabel').grid(row=1, column=0, sticky='w', pady=5)
-        self.password_entry = ttk.Entry(login_frame, width=30, show='*')
-        self.password_entry.grid(row=1, column=1, pady=5, padx=10)
+        
+        # Password frame for entry + show/hide button
+        password_frame = ttk.Frame(login_frame)
+        password_frame.grid(row=1, column=1, pady=5, padx=10, columnspan=2, sticky='ew')
+        
+        self.password_entry = ttk.Entry(password_frame, width=25, show='*', font=('Arial', 11))
+        self.password_entry.pack(side='left', fill='x', expand=True)
+        
+        # Show/Hide password button
+        self.show_password_var = tk.BooleanVar()
+        self.show_password_btn = ttk.Button(password_frame, text="👁️", width=3, 
+                                          command=self.toggle_password_visibility)
+        self.show_password_btn.pack(side='right', padx=(5, 0))
+        
+        # Password strength indicator
+        self.password_strength_var = tk.StringVar()
+        self.password_strength_label = ttk.Label(login_frame, textvariable=self.password_strength_var, 
+                                               font=('Arial', 9), foreground='#888888')
+        self.password_strength_label.grid(row=2, column=1, sticky='w', padx=10)
+        
+        # Bind password entry to check strength
+        self.password_entry.bind('<KeyRelease>', self.check_password_strength)
         
         # Options section
         options_frame = ttk.LabelFrame(main_frame, text="⚙️ Extraction Options", padding=10)
@@ -94,8 +114,15 @@ class InstagramDMExtractorGUI:
         self.clear_btn = ttk.Button(button_frame, text="🗑️ Clear Log", command=self.clear_log)
         self.clear_btn.pack(side='left', padx=5)
         
+        self.help_btn = ttk.Button(button_frame, text="❓ ช่วยเหลือ", command=self.show_help)
+        self.help_btn.pack(side='left', padx=5)
+        
+        self.test_btn = ttk.Button(button_frame, text="🧪 ทดสอบการเชื่อมต่อ", command=self.test_connection)
+        self.test_btn.pack(side='left', padx=5)
+        
         # Progress bar
-        self.progress = ttk.Progressbar(main_frame, mode='indeterminate')\n        self.progress.pack(fill='x', pady=5)
+        self.progress = ttk.Progressbar(main_frame, mode='indeterminate')
+        self.progress.pack(fill='x', pady=5)
         
         # Log area
         log_frame = ttk.LabelFrame(main_frame, text="📝 Extraction Log", padding=5)
@@ -110,6 +137,12 @@ class InstagramDMExtractorGUI:
         
         # Results storage
         self.results = None
+        
+        # Load saved credentials
+        self.load_credentials()
+        
+        # Load saved credentials
+        self.load_credentials()
         
     def log(self, message, level='info'):
         """Add message to log"""
@@ -140,18 +173,38 @@ class InstagramDMExtractorGUI:
     def start_extraction(self):
         """Start DM extraction in background thread"""
         if not INSTAGRAPI_AVAILABLE:
-            messagebox.showerror("Error", "instagrapi not installed!")
+            messagebox.showerror("ข้อผิดพลาด", "instagrapi ไม่ได้ติดตั้ง!\nกรุณารัน: pip install instagrapi")
+            return
+        
+        # Validate credentials first
+        if not self.validate_credentials():
             return
             
         username = self.username_entry.get().strip()
         password = self.password_entry.get().strip()
         
-        if not username or not password:
-            messagebox.showerror("Error", "Username and password required!")
+        # Ask to save credentials
+        self.save_credentials()
+        
+        # Show confirmation dialog with security warning
+        confirm_message = f"""🔐 ยืนยันการเข้าสู่ระบบ
+
+Username: {username}
+Password: {'*' * len(password)}
+
+⚠️ คำเตือนความปลอดภัย:
+• ใช้ข้อมูลของคุณเองเท่านั้น
+• ปิด 2FA ชั่วคราวหากเปิดใช้งาน
+• ระวัง rate limiting จาก Instagram
+• ใช้เพื่อการศึกษาเท่านั้น
+
+ต้องการดำเนินการต่อหรือไม่?"""
+        
+        if not messagebox.askyesno("ยืนยันการดำเนินการ", confirm_message):
             return
-            
+        
         # Disable extract button and start progress
-        self.extract_btn.config(state='disabled')
+        self.extract_btn.config(state='disabled', text='🔄 กำลังดำเนินการ...')
         self.progress.start()
         
         # Start extraction in background
@@ -285,20 +338,40 @@ class InstagramDMExtractorGUI:
     def _extraction_complete(self):
         """Called when extraction completes"""
         self.progress.stop()
-        self.extract_btn.config(state='normal')
+        self.extract_btn.config(state='normal', text='🚀 Extract DMs')
         
         if self.results:
             self.save_btn.config(state='normal')
-            messagebox.showinfo("Success", f"Extraction complete!\n{self.results['total_messages']} messages extracted from {len(self.results['conversations'])} conversations")
+            success_message = f"""✅ การดึงข้อมูล DM เสร็จสิ้น!
+
+📊 สรุปผลลัพธ์:
+💬 ข้อความทั้งหมด: {self.results['total_messages']} ข้อความ
+🗣️ การสนทนา: {len(self.results['conversations'])} การสนทนา
+👥 ผู้ใช้ที่พบ: {len(set(p['username'] for conv in self.results['conversations'] for p in conv['participants']))} คน
+
+💾 คลิก "Save Results" เพื่อบันทึกข้อมูล"""
+            messagebox.showinfo("สำเร็จ!", success_message)
         else:
-            messagebox.showerror("Error", "Extraction failed - check log for details")
+            messagebox.showerror("ข้อผิดพลาด", "การดึงข้อมูลล้มเหลว - ตรวจสอบ log สำหรับรายละเอียด")
             
     def _extraction_error(self, error):
         """Called when extraction fails"""
         self.progress.stop()
-        self.extract_btn.config(state='normal')
-        self.log(f"💔 Extraction error: {error}", 'error')
-        messagebox.showerror("Error", f"Extraction failed: {error}")
+        self.extract_btn.config(state='normal', text='🚀 Extract DMs')
+        self.log(f"💔 ข้อผิดพลาดในการดึงข้อมูล: {error}", 'error')
+        
+        error_message = f"""❌ การดึงข้อมูลล้มเหลว
+
+ข้อผิดพลาด: {error}
+
+🔧 วิธีแก้ไขที่แนะนำ:
+• ตรวจสอบ username และ password
+• ปิด 2FA ชั่วคราว
+• ลองอีกครั้งหลังจาก 5-10 นาที
+• ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต
+• ดูรายละเอียดใน log"""
+        
+        messagebox.showerror("ข้อผิดพลาด", error_message)
         
     def save_results(self):
         """Save results to file"""
@@ -324,6 +397,224 @@ class InstagramDMExtractorGUI:
             except Exception as e:
                 self.log(f"❌ Save failed: {str(e)}", 'error')
                 messagebox.showerror("Error", f"Failed to save file: {str(e)}")
+
+    def toggle_password_visibility(self):
+        """Toggle password visibility"""
+        if self.show_password_var.get():
+            self.password_entry.config(show='')
+            self.show_password_btn.config(text='🙈')
+            self.show_password_var.set(False)
+        else:
+            self.password_entry.config(show='*')
+            self.show_password_btn.config(text='👁️')
+            self.show_password_var.set(True)
+    
+    def check_password_strength(self, event=None):
+        """Check password strength and provide feedback"""
+        password = self.password_entry.get()
+        
+        if not password:
+            self.password_strength_var.set("")
+            return
+        
+        strength_score = 0
+        feedback = []
+        
+        # Length check
+        if len(password) >= 8:
+            strength_score += 1
+        else:
+            feedback.append("ต้องมีอย่างน้อย 8 ตัวอักษร")
+        
+        # Has uppercase
+        if any(c.isupper() for c in password):
+            strength_score += 1
+        else:
+            feedback.append("ควรมีตัวพิมพ์ใหญ่")
+        
+        # Has lowercase  
+        if any(c.islower() for c in password):
+            strength_score += 1
+        else:
+            feedback.append("ควรมีตัวพิมพ์เล็ก")
+        
+        # Has numbers
+        if any(c.isdigit() for c in password):
+            strength_score += 1
+        else:
+            feedback.append("ควรมีตัวเลข")
+        
+        # Has special characters
+        special_chars = "!@#$%^&*()_+-=[]{}|;:,.<>?"
+        if any(c in special_chars for c in password):
+            strength_score += 1
+        else:
+            feedback.append("ควรมีอักขระพิเศษ")
+        
+        # Set strength indicator
+        if strength_score <= 2:
+            strength_text = "🔴 อ่อน"
+            color = '#ff4444'
+        elif strength_score <= 3:
+            strength_text = "🟡 ปานกลาง"
+            color = '#ffaa00'
+        elif strength_score <= 4:
+            strength_text = "🟢 ดี"
+            color = '#44ff44'
+        else:
+            strength_text = "💚 แข็งแกร่ง"
+            color = '#00ff00'
+        
+        if feedback:
+            strength_text += f" ({', '.join(feedback[:2])})"
+        
+        self.password_strength_var.set(strength_text)
+        self.password_strength_label.config(foreground=color)
+    
+    def validate_credentials(self):
+        """Validate user credentials before extraction"""
+        username = self.username_entry.get().strip()
+        password = self.password_entry.get().strip()
+        
+        errors = []
+        
+        if not username:
+            errors.append("กรุณาใส่ username")
+        elif len(username) < 3:
+            errors.append("Username สั้นเกินไป")
+        
+        if not password:
+            errors.append("กรุณาใส่รหัสผ่าน")
+        elif len(password) < 6:
+            errors.append("รหัสผ่านสั้นเกินไป (ต้องมีอย่างน้อย 6 ตัวอักษร)")
+        
+        if errors:
+            error_message = "ข้อมูลไม่ถูกต้อง:\n" + "\n".join(f"• {error}" for error in errors)
+            messagebox.showerror("ข้อผิดพลาด", error_message)
+            return False
+        
+        return True
+
+    def save_credentials(self):
+        """Save credentials for future use (optional)"""
+        username = self.username_entry.get().strip()
+        if username and messagebox.askyesno("บันทึกข้อมูล", "ต้องการบันทึก username สำหรับใช้ครั้งต่อไปหรือไม่?"):
+            try:
+                config_file = Path.home() / ".instagram_dm_extractor_config.json"
+                config = {"last_username": username}
+                with open(config_file, 'w') as f:
+                    json.dump(config, f)
+                self.log("💾 บันทึก username แล้ว", 'success')
+            except Exception as e:
+                self.log(f"❌ ไม่สามารถบันทึกข้อมูลได้: {e}", 'error')
+    
+    def load_credentials(self):
+        """Load saved credentials"""
+        try:
+            config_file = Path.home() / ".instagram_dm_extractor_config.json"
+            if config_file.exists():
+                with open(config_file, 'r') as f:
+                    config = json.load(f)
+                    last_username = config.get("last_username", "")
+                    if last_username:
+                        self.username_entry.insert(0, last_username)
+                        self.log("💡 โหลด username ที่บันทึกไว้แล้ว", 'info')
+        except Exception as e:
+            self.log(f"⚠️ ไม่สามารถโหลดข้อมูลได้: {e}", 'info')
+
+    def show_help(self):
+        """Show help dialog"""
+        help_text = """💀📱 Instagram DM Extractor - คู่มือการใช้งาน
+
+🔐 การเข้าสู่ระบบ:
+• ใส่ username และ password ของ Instagram
+• ปิด 2FA ชั่วคราวหรือรองรับ challenge
+• ระบบจะตรวจสอบความแข็งแกร่งของรหัสผ่าน
+
+⚙️ ตัวเลือกการดึงข้อมูล:
+• Target User: ระบุผู้ใช้เฉพาะ (ไม่ระบุ = ทั้งหมด)
+• Max Conversations: จำนวนการสนทนาสูงสุด
+• Messages per conversation: จำนวนข้อความต่อการสนทนา
+
+🚀 การดำเนินการ:
+1. ใส่ข้อมูล Instagram
+2. กำหนดตัวเลือก (ถ้าต้องการ)
+3. คลิก "Extract DMs"
+4. รอการประมวลผล
+5. บันทึกผลลัพธ์
+
+⚠️ ข้อควรระวัง:
+• ใช้ข้อมูลของคุณเองเท่านั้น
+• ระวัง rate limiting
+• เพื่อการศึกษาเท่านั้น
+• ปฏิบัติตาม Terms of Service
+
+🔧 การแก้ไขปัญหา:
+• Login failed: ตรวจสอบ username/password
+• Rate limited: รอ 5-15 นาที
+• Challenge required: ยืนยันตัวตนใน Instagram app
+• Connection error: ตรวจสอบการเชื่อมต่ออินเทอร์เน็ต"""
+        
+        messagebox.showinfo("คู่มือการใช้งาน", help_text)
+    
+    def test_connection(self):
+        """Test connection to Instagram"""
+        if not INSTAGRAPI_AVAILABLE:
+            messagebox.showerror("ข้อผิดพลาด", "instagrapi ไม่ได้ติดตั้ง!")
+            return
+        
+        # Validate credentials first
+        if not self.validate_credentials():
+            return
+        
+        username = self.username_entry.get().strip()
+        password = self.password_entry.get().strip()
+        
+        self.log("🧪 กำลังทดสอบการเชื่อมต่อ...", 'working')
+        
+        # Start test in background
+        thread = threading.Thread(target=self._test_connection_background, args=(username, password))
+        thread.daemon = True
+        thread.start()
+    
+    def _test_connection_background(self, username, password):
+        """Test connection in background"""
+        try:
+            # Test import
+            from instagrapi import Client
+            from instagrapi.exceptions import LoginRequired, PleaseWaitFewMinutes, ChallengeRequired
+            
+            client = Client()
+            client.delay_range = [1, 2]
+            
+            # Try to login
+            client.login(username, password)
+            
+            # Try to get basic info
+            user_info = client.account_info()
+            
+            # Logout
+            client.logout()
+            
+            # Success
+            self.root.after(0, self._test_success, user_info.username)
+            
+        except ChallengeRequired:
+            self.root.after(0, self._test_error, "Challenge required - กรุณายืนยันตัวตนใน Instagram app")
+        except PleaseWaitFewMinutes:
+            self.root.after(0, self._test_error, "Rate limited - รอสักครู่แล้วลองใหม่")
+        except Exception as e:
+            self.root.after(0, self._test_error, f"เชื่อมต่อไม่สำเร็จ: {str(e)}")
+    
+    def _test_success(self, logged_username):
+        """Called when test succeeds"""
+        self.log(f"✅ เชื่อมต่อสำเร็จ! ยืนยันตัวตน: {logged_username}", 'success')
+        messagebox.showinfo("ทดสอบสำเร็จ", f"✅ เชื่อมต่อ Instagram สำเร็จ!\n\nยืนยันตัวตน: {logged_username}\n\nพร้อมสำหรับการดึง DMs แล้ว!")
+    
+    def _test_error(self, error_msg):
+        """Called when test fails"""
+        self.log(f"❌ ทดสอบการเชื่อมต่อล้มเหลว: {error_msg}", 'error')
+        messagebox.showerror("ทดสอบล้มเหลว", f"❌ การเชื่อมต่อล้มเหลว\n\n{error_msg}\n\nกรุณาตรวจสอบข้อมูลและลองใหม่")
 
 def main():
     """Main function"""
