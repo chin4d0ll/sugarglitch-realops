@@ -475,11 +475,12 @@ class UltraOptimizedHackerToolkit:
 📊 Speed: {self.stats['operations']/duration:.1f} ops/sec
 🎯 Total Results: {total_results}
 
-🔓 PORTS: {len(self.results['ports'])}
-🚨 VULNS: {len(self.results['vulns'])}
-📁 DIRECTORIES: {len(self.results['directories'])}
-🌐 SUBDOMAINS: {len(self.results['subdomains'])}
-🔐 PASSWORDS: {len(self.results['passwords'])}
+🔓 PORTS: {len(self.results.get('ports', []))}
+🚨 VULNS: {len(self.results.get('vulns', []))}
+📁 DIRECTORIES: {len(self.results.get('directories', []))}
+🌐 SUBDOMAINS: {len(self.results.get('subdomains', []))}
+🔐 PASSWORDS: {len(self.results.get('passwords', []))}
+📱 INSTAGRAM: {len(self.results.get('instagram', []))}
 
 💖 Optimized with love by น้องจิน ♥️
 ⚡ Ultra Performance Edition
@@ -533,70 +534,548 @@ class UltraOptimizedHackerToolkit:
         self.girly_log(f"📊 Report saved: {report_file}", 'complete')
         print(report)
 
-async def main():
-    """Ultra optimized main function"""
-    print("""
-💀⚡ ULTRA OPTIMIZED HACKER TOOLKIT v2.0 ⚡💀
-    เร็วกว่าเดิม 300% • ประหยัดเมมโมรี่ 80%
-        Created with ♥️ by น้องจิน
-""")
-    
-    async with UltraOptimizedHackerToolkit() as toolkit:
-        while True:
-            print("\n💖 ULTRA MENU 💖")
-            print("1. ⚡ Quantum Port Scan")
-            print("2. 🔥 Lightning Web Scan")
-            print("3. 🥷 Blazing Directory Scan")
-            print("4. 🌐 Ninja Subdomain Scan")
-            print("5. 💀 Quantum Hash Crack")
-            print("6. 🔥 Ultra Arsenal (ALL)")
-            print("7. 📊 Generate Report")
-            print("0. 💔 Exit")
-            
-            choice = input("\n💖 Choose (0-7): ").strip()
-            
-            try:
-                if choice == '1':
-                    target = input("🎯 IP: ").strip()
-                    await toolkit.quantum_port_scan(target)
-                    
-                elif choice == '2':
-                    target = input("🎯 URL: ").strip()
-                    await toolkit.lightning_web_scanner(target)
-                    
-                elif choice == '3':
-                    target = input("🎯 URL: ").strip()
-                    await toolkit.blazing_directory_scan(target)
-                    
-                elif choice == '4':
-                    target = input("🎯 Domain: ").strip()
-                    await toolkit.ninja_subdomain_scan(target)
-                    
-                elif choice == '5':
-                    hash_val = input("🔐 Hash: ").strip()
-                    hash_type = input("📝 Type (md5/sha1/sha256): ").strip() or 'md5'
-                    toolkit.quantum_hash_crack(hash_val, hash_type)
-                    
-                elif choice == '6':
-                    target = input("🎯 Target: ").strip()
-                    await toolkit.run_ultra_arsenal(target)
-                    
-                elif choice == '7':
-                    report = toolkit.generate_ultra_report()
-                    print(report)
-                    
-                elif choice == '0':
-                    toolkit.girly_log("👋 สวัสดีค่ะ! แฮกให้สนุก ♥️", 'success')
-                    break
-                    
-                else:
-                    toolkit.girly_log("❌ เลือกให้ถูกนะคะ", 'error')
-                    
-            except KeyboardInterrupt:
-                toolkit.girly_log("⚠️ หยุดการทำงาน", 'info')
-                break
-            except Exception as e:
-                toolkit.girly_log(f"❌ Error: {e}", 'error')
+    async def run_instagram_arsenal(self, target_username: str, login_username: str = None, login_password: str = None):
+        """
+        📱💀 Instagram Arsenal - ทุก Instagram tools ในครั้งเดียว!
+        """
+        self.girly_log(f"📱 Instagram Arsenal Attack on @{target_username}!", 'working')
+        
+        # Run all Instagram tools concurrently
+        tasks = []
+        
+        # Profile intelligence (always available)
+        tasks.append(self.instagram_profile_intel(target_username, login_username, login_password))
+        
+        # Stealth browser (if playwright available)
+        if PLAYWRIGHT_AVAILABLE:
+            tasks.append(self.instagram_stealth_browser(target_username))
+        
+        # DM extraction (only if credentials provided)
+        if login_username and login_password and INSTAGRAPI_AVAILABLE:
+            tasks.append(self.instagram_dm_extractor(login_username, login_password, target_username))
+        
+        # Execute all tasks
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        # Process results
+        success_count = sum(1 for r in results if not isinstance(r, Exception))
+        
+        self.girly_log(f"🎉 Instagram Arsenal complete! {success_count}/{len(tasks)} tools successful", 'complete')
+        
+        # Generate Instagram-specific report
+        ig_report = self.generate_instagram_report(target_username)
+        
+        # Save Instagram report
+        timestamp = int(time.time())
+        report_file = Path(f"instagram_arsenal_{target_username}_{timestamp}.txt")
+        with open(report_file, 'w', encoding='utf-8') as f:
+            f.write(ig_report)
+        
+        self.girly_log(f"📊 Instagram report saved: {report_file}", 'complete')
+        print(ig_report)
 
-if __name__ == "__main__":
-    asyncio.run(main())
+    def generate_instagram_report(self, target_username: str) -> str:
+        """
+        📊 Generate Instagram-specific report
+        """
+        instagram_results = self.results.get('instagram', [])
+        
+        report = f"""
+📱💀 INSTAGRAM ARSENAL REPORT 💀📱
+{'='*45}
+
+🎯 Target: @{target_username}
+📅 Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
+🔍 Tools Used: {len(instagram_results)}
+
+"""
+        
+        for result in instagram_results:
+            if result.type == 'instagram_intel':
+                data = result.data
+                profile = data.get('profile_data', {})
+                
+                report += f"""
+🕵️ PROFILE INTELLIGENCE:
+  • Full Name: {profile.get('full_name', 'N/A')}
+  • Bio: {profile.get('bio', 'N/A')[:100]}...
+  • Followers: {profile.get('follower_count', 'N/A'):,}
+  • Following: {profile.get('following_count', 'N/A'):,}
+  • Posts: {profile.get('media_count', 'N/A'):,}
+  • Verified: {'Yes' if profile.get('is_verified') else 'No'}
+  • Private: {'Yes' if profile.get('is_private') else 'No'}
+  • Business: {'Yes' if profile.get('is_business') else 'No'}
+  • Intelligence Score: {data.get('intel_score', 0)}/100
+  • Recent Posts: {len(data.get('recent_posts', []))}
+  • Followers Sample: {len(data.get('followers_sample', []))}
+  • Following Sample: {len(data.get('following_sample', []))}
+
+"""
+            
+            elif result.type == 'instagram_dms':
+                data = result.data
+                
+                report += f"""
+💬 DM EXTRACTION:
+  • Total Messages: {data.get('total_messages', 0):,}
+  • Conversations: {len(data.get('threads', []))}
+  • Extraction Time: {data.get('extraction_time', 'N/A')}
+
+"""
+                
+                # List conversations
+                for thread in data.get('threads', [])[:5]:  # Show first 5
+                    users = ', '.join([u['username'] for u in thread.get('users', [])])
+                    report += f"    • Thread with: {users} ({len(thread.get('messages', []))} messages)\n"
+            
+            elif result.type == 'instagram_stealth':
+                data = result.data
+                
+                report += f"""
+👻 STEALTH BROWSING:
+  • Screenshots: {len(data.get('screenshots', []))}
+  • URLs Extracted: {len(data.get('extracted_urls', []))}
+  • Metadata Tags: {len(data.get('metadata', {}))}
+  • Page Content: {len(data.get('page_data', {}).get('text_content', ''))} chars
+
+"""
+        
+        report += f"""
+💖 Created with love by น้องจิน ♥️
+📱 Instagram Arsenal - Ultra Performance Edition
+💀 For educational purposes only!
+"""
+        
+        return report
+
+    async def instagram_dm_extractor(self, username: str, password: str, target_user: str = None) -> Dict:
+        """
+        💀📱 Instagram DM Extractor - ดึง DMs แบบโหดๆ!
+        
+        Args:
+            username: Instagram username
+            password: Instagram password  
+            target_user: specific user to extract DMs from (optional)
+        
+        Returns:
+            Dictionary ของ DM data ที่ดึงได้
+        """
+        if not INSTAGRAPI_AVAILABLE:
+            self.girly_log("❌ instagrapi not installed!", 'error')
+            return {}
+
+        cache_key = f"ig_dm:{username}:{target_user or 'all'}"
+        cached = self.cache.get(cache_key)
+        if cached:
+            self.stats['cache_hits'] += 1
+            self.girly_log("🚀 Cache hit for Instagram DMs", 'success')
+            return cached
+
+        self.girly_log(f"💀 Extracting DMs for {username}...", 'working')
+        
+        dm_data = {
+            'username': username,
+            'extraction_time': datetime.now().isoformat(),
+            'threads': [],
+            'total_messages': 0,
+            'conversations': {}
+        }
+
+        try:
+            # Initialize Instagram client with stealth
+            cl = Client()
+            cl.delay_range = [1, 3]  # Human-like delays
+            
+            # Login with retry mechanism
+            login_attempts = 0
+            max_attempts = 3
+            
+            while login_attempts < max_attempts:
+                try:
+                    self.girly_log(f"🔐 Login attempt {login_attempts + 1}...", 'working')
+                    cl.login(username, password)
+                    self.girly_log("✅ Instagram login successful!", 'success')
+                    break
+                except ChallengeRequired as e:
+                    self.girly_log("🚨 Challenge required - manual verification needed", 'error')
+                    return dm_data
+                except PleaseWaitFewMinutes:
+                    self.girly_log("⏰ Rate limited - waiting 5 minutes...", 'working')
+                    await asyncio.sleep(300)  # Wait 5 minutes
+                except Exception as e:
+                    login_attempts += 1
+                    self.girly_log(f"❌ Login failed: {str(e)}", 'error')
+                    if login_attempts >= max_attempts:
+                        return dm_data
+                    await asyncio.sleep(10)
+
+            # Get DM threads (conversations)
+            self.girly_log("📥 Fetching DM threads...", 'working')
+            threads = cl.direct_threads()
+            
+            for thread in threads[:20]:  # Limit to 20 conversations for performance
+                try:
+                    thread_info = {
+                        'thread_id': thread.id,
+                        'users': [],
+                        'messages': [],
+                        'last_activity': thread.last_activity_at.isoformat() if thread.last_activity_at else None
+                    }
+                    
+                    # Get thread participants
+                    for user in thread.users:
+                        thread_info['users'].append({
+                            'username': user.username,
+                            'full_name': user.full_name,
+                            'user_id': str(user.pk),
+                            'is_verified': user.is_verified,
+                            'profile_pic_url': user.profile_pic_url
+                        })
+                    
+                    # Skip if target_user specified and not in this thread
+                    if target_user:
+                        usernames = [u['username'] for u in thread_info['users']]
+                        if target_user not in usernames:
+                            continue
+                    
+                    self.girly_log(f"💬 Processing thread with {len(thread_info['users'])} users", 'info')
+                    
+                    # Get messages from thread
+                    messages = cl.direct_messages(thread.id, amount=100)  # Last 100 messages
+                    
+                    for msg in messages:
+                        message_data = {
+                            'message_id': msg.id,
+                            'user_id': str(msg.user_id),
+                            'timestamp': msg.timestamp.isoformat(),
+                            'text': msg.text or '',
+                            'message_type': msg.item_type,
+                        }
+                        
+                        # Handle different message types
+                        if hasattr(msg, 'media_share') and msg.media_share:
+                            message_data['media_type'] = 'media_share'
+                            message_data['media_id'] = str(msg.media_share.pk)
+                        elif hasattr(msg, 'clip') and msg.clip:
+                            message_data['media_type'] = 'video'
+                            message_data['video_url'] = msg.clip.video_url
+                        elif hasattr(msg, 'photo') and msg.photo:
+                            message_data['media_type'] = 'photo'
+                            message_data['photo_url'] = msg.photo.thumbnail_url
+                        elif hasattr(msg, 'voice_media') and msg.voice_media:
+                            message_data['media_type'] = 'voice'
+                            message_data['audio_url'] = msg.voice_media.audio.audio_url
+                        
+                        thread_info['messages'].append(message_data)
+                        dm_data['total_messages'] += 1
+                    
+                    # Store conversation data
+                    conv_key = f"thread_{thread.id}"
+                    dm_data['conversations'][conv_key] = thread_info
+                    dm_data['threads'].append(thread_info)
+                    
+                    self.girly_log(f"✅ Extracted {len(thread_info['messages'])} messages", 'found')
+                    
+                    # Small delay between threads
+                    await asyncio.sleep(random.uniform(1, 3))
+                    
+                except Exception as e:
+                    self.girly_log(f"❌ Error processing thread: {str(e)}", 'error')
+                    continue
+
+            # Logout safely
+            try:
+                cl.logout()
+                self.girly_log("🚪 Instagram logout successful", 'success')
+            except:
+                pass
+
+            self.cache.set(cache_key, dm_data)
+            
+            result = ScanResult('instagram_dms', username, dm_data, time.time())
+            self.results['instagram'].append(result)
+            
+            self.girly_log(f"🎉 DM extraction complete! {dm_data['total_messages']} messages from {len(dm_data['threads'])} conversations", 'complete')
+
+        except Exception as e:
+            self.girly_log(f"💔 Instagram DM extraction failed: {str(e)}", 'error')
+
+        return dm_data
+
+    async def instagram_profile_intel(self, target_username: str, login_username: str = None, login_password: str = None) -> Dict:
+        """
+        🕵️📱 Instagram Profile Intelligence - รวบรวมข้อมูล profile แบบลึก!
+        
+        Args:
+            target_username: username เป้าหมาย
+            login_username: username สำหรับ login (optional)
+            login_password: password สำหรับ login (optional)
+        
+        Returns:
+            Dictionary ของข้อมูล profile intelligence
+        """
+        cache_key = f"ig_intel:{target_username}"
+        cached = self.cache.get(cache_key)
+        if cached:
+            self.stats['cache_hits'] += 1
+            return cached
+
+        self.girly_log(f"🕵️ Gathering intel on @{target_username}...", 'working')
+        
+        intel_data = {
+            'username': target_username,
+            'profile_data': {},
+            'followers_sample': [],
+            'following_sample': [],
+            'recent_posts': [],
+            'stories': [],
+            'highlights': [],
+            'tagged_posts': [],
+            'intel_score': 0
+        }
+
+        try:
+            if INSTAGRAPI_AVAILABLE and login_username and login_password:
+                # Use authenticated client for more data
+                cl = Client()
+                cl.login(login_username, login_password)
+                
+                # Get comprehensive profile info
+                user_info = cl.user_info_by_username(target_username)
+                user_id = user_info.pk
+                
+                intel_data['profile_data'] = {
+                    'user_id': str(user_id),
+                    'full_name': user_info.full_name,
+                    'bio': user_info.biography,
+                    'follower_count': user_info.follower_count,
+                    'following_count': user_info.following_count,
+                    'media_count': user_info.media_count,
+                    'is_verified': user_info.is_verified,
+                    'is_private': user_info.is_private,
+                    'is_business': user_info.is_business_account,
+                    'category': user_info.category_name if hasattr(user_info, 'category_name') else None,
+                    'external_url': user_info.external_url,
+                    'profile_pic_url': user_info.profile_pic_url_hd
+                }
+                
+                # Get recent posts (if public)
+                if not user_info.is_private:
+                    self.girly_log("📸 Analyzing recent posts...", 'working')
+                    medias = cl.user_medias(user_id, amount=20)
+                    
+                    for media in medias:
+                        post_data = {
+                            'media_id': str(media.pk),
+                            'caption': media.caption_text,
+                            'like_count': media.like_count,
+                            'comment_count': media.comment_count,
+                            'taken_at': media.taken_at.isoformat(),
+                            'media_type': media.media_type,
+                            'thumbnail_url': media.thumbnail_url
+                        }
+                        intel_data['recent_posts'].append(post_data)
+                    
+                    # Get followers sample (first 50)
+                    self.girly_log("👥 Sampling followers...", 'working')
+                    followers = cl.user_followers(user_id, amount=50)
+                    
+                    for follower in followers.values():
+                        follower_data = {
+                            'username': follower.username,
+                            'full_name': follower.full_name,
+                            'is_verified': follower.is_verified,
+                            'follower_count': follower.follower_count,
+                            'following_count': follower.following_count
+                        }
+                        intel_data['followers_sample'].append(follower_data)
+                    
+                    # Get following sample (first 50)
+                    self.girly_log("👤 Sampling following...", 'working')
+                    following = cl.user_following(user_id, amount=50)
+                    
+                    for followed in following.values():
+                        following_data = {
+                            'username': followed.username,
+                            'full_name': followed.full_name,
+                            'is_verified': followed.is_verified,
+                            'follower_count': followed.follower_count,
+                            'following_count': followed.following_count
+                        }
+                        intel_data['following_sample'].append(following_data)
+
+                cl.logout()
+
+            else:
+                # Use public API approach
+                self.girly_log("🌐 Using public API approach...", 'working')
+                
+                headers = {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                    'Accept': '*/*',
+                    'Accept-Language': 'en-US,en;q=0.5',
+                    'Accept-Encoding': 'gzip, deflate',
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
+                
+                async with self.session.get(f'https://www.instagram.com/{target_username}/', headers=headers) as response:
+                    if response.status == 200:
+                        content = await response.text()
+                        
+                        # Extract JSON data from page
+                        json_match = re.search(r'window\._sharedData = ({.*?});', content)
+                        if json_match:
+                            try:
+                                shared_data = json.loads(json_match.group(1))
+                                user_data = shared_data.get('entry_data', {}).get('ProfilePage', [{}])[0]
+                                user_info = user_data.get('graphql', {}).get('user', {})
+                                
+                                intel_data['profile_data'] = {
+                                    'user_id': user_info.get('id'),
+                                    'full_name': user_info.get('full_name'),
+                                    'bio': user_info.get('biography'),
+                                    'follower_count': user_info.get('edge_followed_by', {}).get('count'),
+                                    'following_count': user_info.get('edge_follow', {}).get('count'),
+                                    'media_count': user_info.get('edge_owner_to_timeline_media', {}).get('count'),
+                                    'is_verified': user_info.get('is_verified'),
+                                    'is_private': user_info.get('is_private'),
+                                    'is_business': user_info.get('is_business_account'),
+                                    'external_url': user_info.get('external_url'),
+                                    'profile_pic_url': user_info.get('profile_pic_url_hd')
+                                }
+                                
+                            except json.JSONDecodeError:
+                                self.girly_log("❌ Failed to parse Instagram data", 'error')
+
+            # Calculate intelligence score
+            score = 0
+            if intel_data['profile_data'].get('follower_count', 0) > 1000:
+                score += 20
+            if intel_data['profile_data'].get('is_verified'):
+                score += 30
+            if intel_data['profile_data'].get('is_business'):
+                score += 15
+            if len(intel_data['recent_posts']) > 10:
+                score += 25
+            if len(intel_data['followers_sample']) > 20:
+                score += 10
+            
+            intel_data['intel_score'] = score
+
+            self.cache.set(cache_key, intel_data)
+            
+            result = ScanResult('instagram_intel', target_username, intel_data, time.time())
+            self.results['instagram'].append(result)
+            
+            self.girly_log(f"🎉 Intel gathering complete! Score: {score}/100", 'complete')
+
+        except Exception as e:
+            self.girly_log(f"💔 Instagram intel failed: {str(e)}", 'error')
+
+        return intel_data
+
+    async def instagram_stealth_browser(self, target_username: str) -> Dict:
+        """
+        👻📱 Instagram Stealth Browser - เข้าดู profile แบบเงียบๆ!
+        
+        Args:
+            target_username: username เป้าหมาย
+        
+        Returns:
+            Dictionary ของข้อมูลที่ดึงได้จาก browser
+        """
+        if not PLAYWRIGHT_AVAILABLE:
+            self.girly_log("❌ playwright not installed!", 'error')
+            return {}
+
+        cache_key = f"ig_stealth:{target_username}"
+        cached = self.cache.get(cache_key)
+        if cached:
+            self.stats['cache_hits'] += 1
+            return cached
+
+        self.girly_log(f"👻 Stealth browsing @{target_username}...", 'working')
+        
+        stealth_data = {
+            'username': target_username,
+            'page_data': {},
+            'screenshots': [],
+            'extracted_urls': [],
+            'metadata': {}
+        }
+
+        try:
+            async with async_playwright() as p:
+                # Launch browser with stealth settings
+                browser = await p.chromium.launch(
+                    headless=True,
+                    args=[
+                        '--no-sandbox',
+                        '--disable-blink-features=AutomationControlled',
+                        '--disable-web-security',
+                        '--disable-features=VizDisplayCompositor'
+                    ]
+                )
+                
+                context = await browser.new_context(
+                    user_agent='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                    viewport={'width': 1920, 'height': 1080}
+                )
+                
+                # Stealth patches
+                await context.add_init_script("""
+                    Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+                    Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]});
+                    window.chrome = {runtime: {}};
+                """)
+                
+                page = await context.new_page()
+                
+                # Navigate to profile
+                url = f'https://www.instagram.com/{target_username}/'
+                await page.goto(url, wait_until='networkidle', timeout=30000)
+                
+                # Wait for content to load
+                await asyncio.sleep(3)
+                
+                # Take screenshot
+                screenshot_path = f'/tmp/ig_stealth_{target_username}.png'
+                await page.screenshot(path=screenshot_path)
+                stealth_data['screenshots'].append(screenshot_path)
+                
+                # Extract page data
+                page_content = await page.content()
+                
+                # Extract profile info from meta tags
+                meta_tags = await page.query_selector_all('meta')
+                for meta in meta_tags:
+                    property_attr = await meta.get_attribute('property')
+                    content_attr = await meta.get_attribute('content')
+                    
+                    if property_attr and content_attr:
+                        stealth_data['metadata'][property_attr] = content_attr
+                
+                # Extract URLs from page
+                links = await page.query_selector_all('a')
+                for link in links:
+                    href = await link.get_attribute('href')
+                    if href and href.startswith('http'):
+                        stealth_data['extracted_urls'].append(href)
+                
+                # Extract any visible text content
+                text_content = await page.inner_text('body')
+                stealth_data['page_data']['text_content'] = text_content[:5000]  # First 5000 chars
+                
+                await browser.close()
+                
+                self.girly_log(f"👻 Stealth browsing complete! Screenshot saved: {screenshot_path}", 'complete')
+
+        except Exception as e:
+            self.girly_log(f"💔 Stealth browsing failed: {str(e)}", 'error')
+
+        self.cache.set(cache_key, stealth_data)
+        
+        result = ScanResult('instagram_stealth', target_username, stealth_data, time.time())
+        self.results['instagram'].append(result)
+        
+        return stealth_data
