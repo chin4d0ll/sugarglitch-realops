@@ -105,9 +105,33 @@ class RealInstagramDMExtractor:
         self.setup_session()
     
     def load_proxy_config(self):
-        """โหลด proxy configuration"""
-        print("🔧 กำลังโหลด proxy configuration...")
-        
+        """โหลด proxy configuration (ขั้นสูง: รองรับ proxy pool, rotation, country targeting)"""
+        import random
+        print("🔧 กำลังโหลด proxy configuration (ขั้นสูง)...")
+        # Try advanced config first
+        adv_config_file = "config/proxies/proxy_config.json"
+        if os.path.exists(adv_config_file):
+            with open(adv_config_file, 'r') as f:
+                adv_config = json.load(f)
+            print(f"✅ โหลด proxy config (ขั้นสูง) จาก {adv_config_file}")
+            # Build proxy pool
+            proxy_pool = []
+            if adv_config.get('rotation', {}).get('enabled'):
+                countries = adv_config['rotation'].get('countries', [])
+                for country in countries:
+                    # Build username with country targeting if supported
+                    user = adv_config['proxy_user']
+                    if '{country}' in user:
+                        user = user.replace('{country}', country.lower())
+                    proxy_url = f"http://{user}:{adv_config['proxy_pass']}@{adv_config['proxy_host']}:{adv_config['proxy_port']}"
+                    proxy_pool.append(proxy_url)
+            else:
+                proxy_url = f"http://{adv_config['proxy_user']}:{adv_config['proxy_pass']}@{adv_config['proxy_host']}:{adv_config['proxy_port']}"
+                proxy_pool.append(proxy_url)
+            adv_config['proxy_pool'] = proxy_pool
+            adv_config['get_random_proxy'] = lambda: random.choice(proxy_pool)
+            return adv_config
+        # Fallback to legacy config
         config_file = "config/proxy_config.json"
         if os.path.exists(config_file):
             with open(config_file, 'r') as f:
@@ -115,7 +139,7 @@ class RealInstagramDMExtractor:
             print(f"✅ โหลด proxy config จาก {config_file}")
             return config
         else:
-            print("❌ ไม่พบไฟล์ proxy_config.json")
+            print("❌ ไม่พบไฟล์ proxy_config.json หรือ proxy_config ขั้นสูง")
             return None
     
     def load_session_data(self):
@@ -180,22 +204,34 @@ class RealInstagramDMExtractor:
         return None
     
     def setup_session(self):
-        """ตั้งค่า session สำหรับการเรียก API"""
+        """ตั้งค่า session สำหรับการเรียก API (ขั้นสูง: proxy rotation, user-agent rotation)"""
+        import random
         print("⚙️ กำลังตั้งค่า session...")
-        
-        # ตั้งค่า proxy
-        if self.proxy_config and 'proxies' in self.proxy_config:
-            proxy_url = self.proxy_config['proxies'][0]  # ใช้ proxy ตัวแรก
-            self.session.proxies = {
-                'http': proxy_url,
-                'https': proxy_url
-            }
-            print(f"✅ ตั้งค่า proxy สำเร็จ: {proxy_url}")
+        # ตั้งค่า proxy (ขั้นสูง: proxy pool/rotation)
+        proxy_url = None
+        if self.proxy_config:
+            if 'proxy_pool' in self.proxy_config:
+                proxy_url = random.choice(self.proxy_config['proxy_pool'])
+                print(f"✅ [ADV] ตั้งค่า proxy (random/rotated): {proxy_url}")
+            elif 'proxies' in self.proxy_config:
+                proxy_url = self.proxy_config['proxies'][0]
+                print(f"✅ ตั้งค่า proxy: {proxy_url}")
+            if proxy_url:
+                self.session.proxies = {
+                    'http': proxy_url,
+                    'https': proxy_url
+                }
 
-        # ตั้งค่า headers
+        # ตั้งค่า headers (ขั้นสูง: user-agent rotation)
         if self.session_data:
+            user_agents = [
+                'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
+                'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+                'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15',
+                'Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36'
+            ]
             headers = {
-                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.0 Mobile/15E148 Safari/604.1',
+                'User-Agent': random.choice(user_agents),
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Language': 'en-US,en;q=0.9,th;q=0.8',
                 'Accept-Encoding': 'gzip, deflate, br',
@@ -207,16 +243,13 @@ class RealInstagramDMExtractor:
                 'Sec-Fetch-Site': 'same-origin',
                 'Cookie': f"sessionid={self.session_data['sessionid']}"
             }
-
             if self.session_data.get('csrftoken'):
                 headers['X-CSRFToken'] = self.session_data['csrftoken']
                 headers['Cookie'] += f"; csrftoken={self.session_data['csrftoken']}"
-
             if self.session_data.get('ds_user_id'):
                 headers['Cookie'] += f"; ds_user_id={self.session_data['ds_user_id']}"
-
             self.session.headers.update(headers)
-            print("✅ ตั้งค่า headers สำเร็จ")
+            print("✅ ตั้งค่า headers (randomized) สำเร็จ")
     
     def test_connection(self):
         """ทดสอบการเชื่อมต่อ"""
