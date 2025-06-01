@@ -65,18 +65,18 @@ Available Tools:
         """Initialize all available tools"""
         try:
             # Import Enhanced Private Bypass
-            from instagram_private_bypass_2025_enhanced import InstagramPrivateBypass2025Enhanced
-            self.tools['bypass'] = InstagramPrivateBypass2025Enhanced
+            from instagram_private_bypass_2025_enhanced import SuperEnhancedInstagramBypass
+            self.tools['bypass'] = SuperEnhancedInstagramBypass
             print("✅ Enhanced Private Bypass loaded")
             
             # Import Ultimate Image Analyzer
-            from ultimate_image_analyzer_2025 import UltimateImageAnalyzer2025
-            self.tools['image_analyzer'] = UltimateImageAnalyzer2025
+            from ultimate_image_analyzer_2025 import UltimateImageAnalyzer
+            self.tools['image_analyzer'] = UltimateImageAnalyzer
             print("✅ Ultimate Image Analyzer loaded")
             
             # Import Master Reconnaissance Suite
-            from ultimate_instagram_recon_suite_2025 import UltimateInstagramReconSuite2025
-            self.tools['recon_suite'] = UltimateInstagramReconSuite2025
+            from ultimate_instagram_recon_suite_2025 import UltimateInstagramReconSuite
+            self.tools['recon_suite'] = UltimateInstagramReconSuite
             print("✅ Ultimate Reconnaissance Suite loaded")
             
             # Import OSINT Toolkit
