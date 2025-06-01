@@ -72,8 +72,14 @@ class UltimateInstagramBypassSystem:
         """Initialize the system asynchronously"""
         print("🔄 Performing async initialization...")
         
-        # Initialize session manager
-        await self.session_manager.load_session_from_file()
+        # Session manager is already initialized in __init__
+        # Just validate existing sessions
+        if self.session_manager.active_sessions:
+            for username in list(self.session_manager.active_sessions.keys()):
+                try:
+                    await self.session_manager.validate_session(username)
+                except Exception as e:
+                    print(f"⚠️ Session validation failed for {username}: {e}")
         
         # Initialize connection pool if needed
         if hasattr(self.connection_pool, 'initialize'):
