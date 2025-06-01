@@ -1,0 +1,39 @@
+{
+  "max_connections": 100,
+  "connection_timeout": 15,
+  "read_timeout": 45,
+  "max_pools": 30,
+  "max_connections_per_pool": 100,
+  "session_dir": "sessions/",
+  "auto_refresh_sessions": true,
+  "instagram_endpoints": [
+    "https://www.instagram.com/api/v1/",
+    "https://i.instagram.com/api/v1/",
+    "https://graph.instagram.com/",
+    "https://edge-chat.instagram.com/api/v1/",
+    "https://z-p3-instagram.com/api/v1/"
+  ],
+  "rate_limits": {
+    "requests_per_minute": 200,
+    "requests_per_hour": 5000,
+    "burst_requests": 50
+  },
+  "advanced_settings": {
+    "enable_connection_pooling": true,
+    "enable_session_rotation": true,
+    "enable_proxy_rotation": true,
+    "enable_error_recovery": true,
+    "memory_optimization": true,
+    "aggressive_caching": true
+  },
+  "bypass_strategies": [
+    "multi_session_attack",
+    "endpoint_rotation", 
+    "mobile_spoofing",
+    "intelligent_timing",
+    "proxy_flooding",
+    "connection_pooling",
+    "session_hijacking",
+    "rate_limit_evasion"
+  ]
+}
