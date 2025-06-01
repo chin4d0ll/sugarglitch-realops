@@ -474,6 +474,761 @@ Choose option (0-9): """)
                 print(f"\n❌ Error: {e}")
                 input("Press Enter to continue...")
 
+    def create_image_analyzer(self):
+        """Create Ultimate Image Analyzer if it doesn't exist"""
+        print("🔧 Creating Ultimate Image Analyzer 2025...")
+        
+        image_analyzer_code = '''#!/usr/bin/env python3
+"""
+🔥💀 ULTIMATE IMAGE ANALYZER 2025 💀🔥
+=====================================
+
+Advanced Image Analysis Tool with AI Capabilities
+Features face detection, steganography detection, deepfake analysis,
+metadata extraction, aesthetic scoring, and Instagram filter detection.
+
+Created by: น้องจิน (chin4d0ll) ♥️
+For: Educational & Security Research Only!
+"""
+
+import os
+import json
+import time
+import asyncio
+import requests
+import base64
+from datetime import datetime
+from pathlib import Path
+from io import BytesIO
+from PIL import Image, ExifTags
+import numpy as np
+
+try:
+    import cv2
+    import face_recognition
+    FACE_DETECTION_AVAILABLE = True
+except ImportError:
+    FACE_DETECTION_AVAILABLE = False
+
+class UltimateImageAnalyzer:
+    def __init__(self):
+        self.version = "2025.2.0"
+        self.results_dir = Path("analyzed_images")
+        self.results_dir.mkdir(exist_ok=True)
+        
+        print(f"""
+        
+🔥💀 ULTIMATE IMAGE ANALYZER 2025 💀🔥
+=====================================
+
+Version: {self.version}
+Created by: น้องจิน (chin4d0ll) ♥️
+
+=====================================
+        """)
+        
+    async def analyze_image(self, image_path_or_url):
+        """Main analysis function for a single image"""
+        print(f"🖼️ Analyzing image: {image_path_or_url}")
+        start_time = time.time()
+        
+        # Load image based on path or URL
+        try:
+            image_data, pil_image = await self._load_image(image_path_or_url)
+            if not image_data or not pil_image:
+                return {"error": "Failed to load image"}
+        except Exception as e:
+            return {"error": f"Failed to load image: {str(e)}"}
+            
+        # Comprehensive analysis
+        result = {
+            "timestamp": datetime.now().isoformat(),
+            "image_source": image_path_or_url,
+            "analysis_version": self.version,
+        }
+        
+        # Run all analysis tasks concurrently
+        tasks = [
+            self._extract_metadata(pil_image),
+            self._detect_faces(image_data),
+            self._detect_steganography(image_data),
+            self._analyze_deepfake_indicators(image_data),
+            self._perform_technical_forensics(image_data),
+            self._calculate_aesthetic_score(pil_image),
+            self._detect_instagram_filters(pil_image)
+        ]
+        
+        # Gather results
+        task_results = await asyncio.gather(*tasks)
+        
+        # Combine results
+        result["metadata"] = task_results[0]
+        result["face_detection"] = task_results[1]
+        result["steganography"] = task_results[2]
+        result["deepfake_indicators"] = task_results[3]
+        result["technical_forensics"] = task_results[4]
+        result["aesthetic_scoring"] = task_results[5]
+        result["instagram_filters"] = task_results[6]
+        
+        # Calculate execution time
+        execution_time = time.time() - start_time
+        result["execution_time"] = f"{execution_time:.2f} seconds"
+        
+        print(f"✅ Analysis completed in {execution_time:.2f} seconds")
+        return result
+    
+    async def _load_image(self, image_path_or_url):
+        """Load image from file path or URL"""
+        try:
+            if image_path_or_url.startswith(("http://", "https://")):
+                # Load from URL
+                response = requests.get(image_path_or_url, timeout=15)
+                if response.status_code != 200:
+                    print(f"❌ Failed to download image: HTTP {response.status_code}")
+                    return None, None
+                    
+                image_data = response.content
+                pil_image = Image.open(BytesIO(image_data))
+            else:
+                # Load from local path
+                with open(image_path_or_url, "rb") as f:
+                    image_data = f.read()
+                pil_image = Image.open(BytesIO(image_data))
+                
+            return image_data, pil_image
+        except Exception as e:
+            print(f"❌ Error loading image: {e}")
+            return None, None
+    
+    async def _extract_metadata(self, pil_image):
+        """Extract detailed metadata from image"""
+        metadata = {
+            "format": pil_image.format,
+            "mode": pil_image.mode,
+            "size": {
+                "width": pil_image.width,
+                "height": pil_image.height,
+                "resolution": f"{pil_image.width}x{pil_image.height}",
+                "megapixels": round(pil_image.width * pil_image.height / 1000000, 2)
+            },
+            "exif": {}
+        }
+        
+        # Extract EXIF data if available
+        try:
+            exif_data = pil_image._getexif()
+            if exif_data:
+                for tag_id, value in exif_data.items():
+                    tag = ExifTags.TAGS.get(tag_id, tag_id)
+                    # Safely convert byte strings to regular strings where possible
+                    if isinstance(value, bytes):
+                        try:
+                            value = value.decode('utf-8')
+                        except:
+                            value = str(value)
+                    metadata["exif"][tag] = str(value)
+                
+                # Extract GPS coordinates if available
+                if "GPSInfo" in metadata["exif"]:
+                    metadata["location"] = self._parse_gps_info(metadata["exif"]["GPSInfo"])
+                
+                # Extract date taken if available
+                if "DateTime" in metadata["exif"]:
+                    metadata["date_taken"] = metadata["exif"]["DateTime"]
+                
+                # Extract camera info if available
+                camera_info = {}
+                if "Make" in metadata["exif"]:
+                    camera_info["make"] = metadata["exif"]["Make"]
+                if "Model" in metadata["exif"]:
+                    camera_info["model"] = metadata["exif"]["Model"]
+                if camera_info:
+                    metadata["camera"] = camera_info
+        except:
+            metadata["exif"] = "No EXIF data available"
+            
+        # Extract histogram data for analysis
+        try:
+            histogram = pil_image.histogram()
+            metadata["histogram"] = {
+                "length": len(histogram),
+                "max": max(histogram),
+                "min": min(histogram),
+                "avg": sum(histogram) / len(histogram) if histogram else 0
+            }
+        except:
+            metadata["histogram"] = "Histogram analysis failed"
+            
+        return metadata
+    
+    def _parse_gps_info(self, gps_info):
+        """Parse GPS information from EXIF data"""
+        try:
+            # This is a simplified GPS parser for demonstration
+            return {
+                "raw_gps_data": str(gps_info)
+            }
+        except:
+            return "GPS parsing failed"
+    
+    async def _detect_faces(self, image_data):
+        """Detect faces in the image and analyze them"""
+        if not FACE_DETECTION_AVAILABLE:
+            return {"status": "Face detection unavailable - requires opencv-python and face_recognition libraries"}
+        
+        try:
+            # Using face_recognition library for advanced face detection
+            np_array = np.frombuffer(image_data, dtype=np.uint8)
+            image = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
+            
+            # Convert to RGB for face_recognition library
+            rgb_image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            
+            # Find face locations and facial features
+            face_locations = face_recognition.face_locations(rgb_image)
+            face_landmarks = face_recognition.face_landmarks(rgb_image)
+            
+            # Analyze results
+            result = {
+                "face_count": len(face_locations),
+                "faces": []
+            }
+            
+            # Process each face
+            for i, (top, right, bottom, left) in enumerate(face_locations):
+                face_info = {
+                    "position": {
+                        "top": top,
+                        "right": right,
+                        "bottom": bottom,
+                        "left": left
+                    },
+                    "width": right - left,
+                    "height": bottom - top,
+                    "center": {
+                        "x": (left + right) // 2,
+                        "y": (top + bottom) // 2
+                    }
+                }
+                
+                # Add landmarks if available
+                if i < len(face_landmarks):
+                    face_info["landmarks"] = {
+                        "landmark_count": sum(len(points) for points in face_landmarks[i].values()),
+                        "features": list(face_landmarks[i].keys())
+                    }
+                
+                result["faces"].append(face_info)
+                
+            return result
+        except Exception as e:
+            return {"error": f"Face detection failed: {str(e)}"}
+    
+    async def _detect_steganography(self, image_data):
+        """Basic steganography detection indicators"""
+        # This is a placeholder for steganography detection
+        # In a real implementation, this would use more sophisticated techniques
+        # such as statistical analysis, LSB detection, etc.
+        try:
+            # Calculate simple entropy-based indicators
+            entropy = self._calculate_entropy(image_data)
+            
+            # Simple steganography indicators
+            result = {
+                "analysis_performed": True,
+                "entropy_score": entropy,
+                "unusual_patterns_detected": self._check_unusual_patterns(entropy),
+                "risk_indicators": []
+            }
+            
+            # Check for potential indicators
+            if entropy > 7.9:
+                result["risk_indicators"].append("High entropy (could indicate encrypted content)")
+            
+            if len(image_data) > 5000000:  # 5MB
+                result["risk_indicators"].append("Large file size (potential for hidden data)")
+                
+            return result
+        except Exception as e:
+            return {"error": f"Steganography detection failed: {str(e)}"}
+    
+    def _calculate_entropy(self, data):
+        """Calculate Shannon entropy of data"""
+        if not data:
+            return 0
+            
+        # Count byte frequency
+        byte_count = {}
+        for byte in data:
+            byte_count[byte] = byte_count.get(byte, 0) + 1
+        
+        # Calculate entropy
+        entropy = 0
+        for count in byte_count.values():
+            probability = count / len(data)
+            entropy -= probability * (np.log2(probability) if probability > 0 else 0)
+            
+        return round(entropy, 2)
+    
+    def _check_unusual_patterns(self, entropy):
+        """Check for unusual patterns based on entropy"""
+        if entropy < 6.8:
+            return "Lower than expected entropy (possible manipulation)"
+        elif entropy > 7.9:
+            return "Higher than expected entropy (possible hidden data)"
+        else:
+            return "No unusual entropy patterns detected"
+    
+    async def _analyze_deepfake_indicators(self, image_data):
+        """Analyze image for potential deepfake indicators"""
+        try:
+            # Load image for analysis
+            np_array = np.frombuffer(image_data, dtype=np.uint8)
+            image = cv2.imdecode(np_array, cv2.IMREAD_COLOR)
+            
+            # Initialize result
+            result = {
+                "analysis_performed": True,
+                "potential_indicators": []
+            }
+            
+            # Check for unusual edge patterns
+            edges = self._detect_edges(image)
+            if edges["unusual_pattern"]:
+                result["potential_indicators"].append("Unusual edge patterns detected")
+                
+            # Check for noise inconsistencies
+            noise = self._analyze_noise_patterns(image)
+            if noise["inconsistent"]:
+                result["potential_indicators"].append("Inconsistent noise patterns")
+                
+            # Check for color discrepancies
+            color = self._analyze_color_distribution(image)
+            if color["unusual_distribution"]:
+                result["potential_indicators"].append("Unusual color distribution")
+            
+            # Calculate confidence score
+            indicator_count = len(result["potential_indicators"])
+            if indicator_count == 0:
+                result["assessment"] = "No deepfake indicators detected"
+                result["confidence"] = "High"
+            elif indicator_count == 1:
+                result["assessment"] = "Low possibility of manipulation"
+                result["confidence"] = "Medium"
+            else:
+                result["assessment"] = "Potential signs of digital manipulation"
+                result["confidence"] = "Low"
+            
+            return result
+        except Exception as e:
+            return {"error": f"Deepfake analysis failed: {str(e)}"}
+    
+    def _detect_edges(self, image):
+        """Detect unusual edge patterns in image"""
+        try:
+            # Simple edge detection using Canny
+            edges = cv2.Canny(image, 100, 200)
+            edge_count = np.sum(edges > 0)
+            edge_ratio = edge_count / (image.shape[0] * image.shape[1])
+            
+            return {
+                "edge_ratio": round(float(edge_ratio), 4),
+                "unusual_pattern": edge_ratio > 0.2 or edge_ratio < 0.01
+            }
+        except:
+            return {"unusual_pattern": False}
+    
+    def _analyze_noise_patterns(self, image):
+        """Analyze noise patterns for inconsistencies"""
+        try:
+            # Simple noise analysis
+            gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+            noise = cv2.Laplacian(gray, cv2.CV_64F).var()
+            
+            return {
+                "noise_level": round(float(noise), 2),
+                "inconsistent": noise < 5 or noise > 1000
+            }
+        except:
+            return {"inconsistent": False}
+    
+    def _analyze_color_distribution(self, image):
+        """Analyze color distribution for anomalies"""
+        try:
+            # Simple color histogram analysis
+            channels = cv2.split(image)
+            unusual = False
+            
+            # Check for unusual distribution in each channel
+            for channel in channels:
+                hist = cv2.calcHist([channel], [0], None, [256], [0, 256])
+                max_count = np.max(hist)
+                avg_count = np.mean(hist)
+                
+                # Check for extreme peaking
+                if max_count > avg_count * 100:
+                    unusual = True
+                    break
+            
+            return {
+                "unusual_distribution": unusual
+            }
+        except:
+            return {"unusual_distribution": False}
+    
+    async def _perform_technical_forensics(self, image_data):
+        """Perform technical forensic analysis on image"""
+        try:
+            # Initialize results
+            result = {
+                "analysis_performed": True,
+                "file_signature": self._check_file_signature(image_data),
+                "compression_analysis": self._analyze_compression(image_data),
+                "digital_artifacts": []
+            }
+            
+            # Additional checks can be added here...
+            
+            return result
+        except Exception as e:
+            return {"error": f"Technical forensics failed: {str(e)}"}
+    
+    def _check_file_signature(self, image_data):
+        """Check file signature/magic numbers"""
+        try:
+            if not image_data:
+                return "No data"
+                
+            # Check common image signatures
+            if image_data[:2] == b'\xff\xd8':
+                return "JPEG signature verified"
+            elif image_data[:8] == b'\x89PNG\r\n\x1a\n':
+                return "PNG signature verified"
+            elif image_data[:3] == b'GIF':
+                return "GIF signature verified"
+            elif image_data[:2] == b'BM':
+                return "BMP signature verified"
+            else:
+                return "Unknown or modified signature"
+                
+        except:
+            return "Signature check failed"
+    
+    def _analyze_compression(self, image_data):
+        """Analyze image compression characteristics"""
+        try:
+            # Simple compression analysis based on entropy
+            entropy = self._calculate_entropy(image_data)
+            
+            if entropy < 7.0:
+                return "Likely high compression"
+            elif entropy > 7.8:
+                return "Likely low compression or lossless format"
+            else:
+                return "Standard compression detected"
+        except:
+            return "Compression analysis failed"
+    
+    async def _calculate_aesthetic_score(self, pil_image):
+        """Calculate aesthetic score based on image characteristics"""
+        try:
+            # Convert to numpy array for analysis
+            img_array = np.array(pil_image)
+            
+            # Calculate various aesthetic metrics
+            metrics = {}
+            
+            # 1. Aspect ratio - preferred ratios score higher
+            width, height = pil_image.size
+            aspect = width / height if height != 0 else 0
+            
+            # Golden ratio and other pleasing ratios
+            aspect_score = 10 - min(abs(aspect - 1.618) * 3, abs(aspect - 1.33) * 3, abs(aspect - 1.5) * 3, 9)
+            metrics["aspect_ratio"] = {
+                "value": round(aspect, 2),
+                "score": round(aspect_score, 1)
+            }
+            
+            # 2. Rule of thirds analysis
+            # (simplified implementation)
+            thirds_score = 7.5  # Placeholder score
+            metrics["rule_of_thirds"] = {
+                "score": thirds_score
+            }
+            
+            # 3. Colorfulness metric
+            try:
+                # Convert to LAB color space for better color analysis
+                if img_array.shape[2] == 3:  # Only for RGB images
+                    saturation = np.std(img_array, axis=2).mean()
+                    color_score = min(saturation / 15, 10)
+                    metrics["colorfulness"] = {
+                        "saturation": round(float(saturation), 2),
+                        "score": round(float(color_score), 1)
+                    }
+                else:
+                    metrics["colorfulness"] = {"score": 5.0, "note": "Non-RGB image"}
+            except:
+                metrics["colorfulness"] = {"score": 5.0, "note": "Analysis failed"}
+            
+            # 4. Contrast score
+            try:
+                if img_array.ndim >= 2:
+                    luminance = np.mean(img_array, axis=2) if img_array.ndim > 2 else img_array
+                    contrast = np.std(luminance)
+                    contrast_score = min(contrast / 25, 10)
+                    metrics["contrast"] = {
+                        "value": round(float(contrast), 2),
+                        "score": round(float(contrast_score), 1)
+                    }
+                else:
+                    metrics["contrast"] = {"score": 5.0, "note": "Analysis failed"}
+            except:
+                metrics["contrast"] = {"score": 5.0, "note": "Analysis failed"}
+            
+            # 5. Technical quality estimation
+            if pil_image.width >= 1920 and pil_image.height >= 1080:
+                technical_score = 8.5
+            elif pil_image.width >= 1280 and pil_image.height >= 720:
+                technical_score = 7.0
+            else:
+                technical_score = 5.5
+                
+            metrics["technical_quality"] = {
+                "score": technical_score,
+                "resolution_class": f"{pil_image.width}x{pil_image.height}"
+            }
+            
+            # Calculate composite aesthetic score
+            scores = [
+                aspect_score,
+                thirds_score,
+                metrics.get("colorfulness", {}).get("score", 5.0),
+                metrics.get("contrast", {}).get("score", 5.0),
+                technical_score
+            ]
+            
+            composite_score = sum(scores) / len(scores)
+            
+            # Return complete aesthetic analysis
+            return {
+                "composite_score": round(composite_score, 1),
+                "metrics": metrics,
+                "assessment": self._get_aesthetic_assessment(composite_score)
+            }
+            
+        except Exception as e:
+            return {"error": f"Aesthetic scoring failed: {str(e)}"}
+    
+    def _get_aesthetic_assessment(self, score):
+        """Convert aesthetic score to text assessment"""
+        if score >= 9:
+            return "Exceptional quality - professional grade"
+        elif score >= 8:
+            return "Excellent quality - very aesthetically pleasing"
+        elif score >= 7:
+            return "Very good quality - aesthetically appealing"
+        elif score >= 6:
+            return "Good quality - above average aesthetics"
+        elif score >= 5:
+            return "Average quality - typical consumer image"
+        elif score >= 4:
+            return "Below average quality - some aesthetic issues"
+        elif score >= 3:
+            return "Poor quality - significant aesthetic problems"
+        else:
+            return "Very poor quality - major aesthetic issues"
+    
+    async def _detect_instagram_filters(self, pil_image):
+        """Detect potential Instagram filters used"""
+        try:
+            # Convert to numpy array for analysis
+            img_array = np.array(pil_image)
+            
+            # Analyze color characteristics for filter detection
+            # This is a simplified version that makes educated guesses
+            # A real implementation would use machine learning with filter training data
+            
+            # Initialize results
+            result = {
+                "filter_detected": False,
+                "potential_filters": [],
+                "color_characteristics": {}
+            }
+            
+            # Skip non-color images
+            if len(img_array.shape) < 3 or img_array.shape[2] < 3:
+                result["note"] = "Not a color image - filter detection skipped"
+                return result
+            
+            # Calculate average color values
+            avg_r = np.mean(img_array[:, :, 0])
+            avg_g = np.mean(img_array[:, :, 1])
+            avg_b = np.mean(img_array[:, :, 2])
+            
+            # Calculate color ratios
+            r_g_ratio = avg_r / avg_g if avg_g > 0 else 0
+            b_g_ratio = avg_b / avg_g if avg_g > 0 else 0
+            
+            # Store color characteristics
+            result["color_characteristics"] = {
+                "avg_red": round(float(avg_r), 2),
+                "avg_green": round(float(avg_g), 2),
+                "avg_blue": round(float(avg_b), 2),
+                "r_g_ratio": round(float(r_g_ratio), 3),
+                "b_g_ratio": round(float(b_g_ratio), 3)
+            }
+            
+            # Simple filter detection based on color characteristics
+            # These are simplified heuristics for demonstration
+            filters_detected = []
+            
+            # Check for common Instagram filter characteristics
+            if r_g_ratio > 1.2 and b_g_ratio < 0.8:
+                filters_detected.append({
+                    "name": "Warm/Vintage Filter",
+                    "confidence": "Medium",
+                    "similar_to": ["Mayfair", "Rise", "Valencia"]
+                })
+            
+            if r_g_ratio < 0.9 and b_g_ratio > 1.2:
+                filters_detected.append({
+                    "name": "Cool Tone Filter",
+                    "confidence": "Medium",
+                    "similar_to": ["Moon", "Perpetua", "Reyes"]
+                })
+            
+            if r_g_ratio > 1.1 and b_g_ratio > 1.1:
+                filters_detected.append({
+                    "name": "High Contrast Filter",
+                    "confidence": "Low",
+                    "similar_to": ["X-Pro II", "Hefe"]
+                })
+                
+            if 0.95 < r_g_ratio < 1.05 and 0.95 < b_g_ratio < 1.05:
+                # Check for grayscale (equal RGB values)
+                std_r = np.std(img_array[:, :, 0])
+                std_g = np.std(img_array[:, :, 1])
+                std_b = np.std(img_array[:, :, 2])
+                
+                if abs(std_r - std_g) < 2 and abs(std_r - std_b) < 2:
+                    filters_detected.append({
+                        "name": "Black & White Filter",
+                        "confidence": "High",
+                        "similar_to": ["Willow", "Inkwell", "Moon"]
+                    })
+            
+            if avg_r > 180 and avg_g > 180 and avg_b > 180:
+                filters_detected.append({
+                    "name": "High Exposure/Brightness Filter",
+                    "confidence": "Medium",
+                    "similar_to": ["Aden", "Ludwig", "Skyline"]
+                })
+                
+            # Update results
+            if filters_detected:
+                result["filter_detected"] = True
+                result["potential_filters"] = filters_detected
+            else:
+                result["note"] = "No distinctive filter characteristics detected"
+            
+            return result
+            
+        except Exception as e:
+            return {"error": f"Instagram filter detection failed: {str(e)}"}
+
+async def analyze_image(image_path):
+    """Standalone function to analyze a single image"""
+    analyzer = UltimateImageAnalyzer()
+    result = await analyzer.analyze_image(image_path)
+    
+    # Save results
+    timestamp = int(time.time())
+    output_dir = Path("analyzed_images")
+    output_dir.mkdir(exist_ok=True)
+    
+    output_file = output_dir / f"image_analysis_{timestamp}.json"
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(result, f, indent=2)
+    
+    print(f"✅ Analysis saved to: {output_file}")
+    return result
+
+def main():
+    """Main function"""
+    parser = argparse.ArgumentParser(description='Ultimate Image Analyzer 2025')
+    parser.add_argument('--image', '-i', help='Path or URL to image for analysis')
+    args = parser.parse_args()
+    
+    if args.image:
+        asyncio.run(analyze_image(args.image))
+    else:
+        print("❌ No image specified. Use --image or -i to specify an image path or URL.")
+
+if __name__ == "__main__":
+    main()
+'''
+        
+        with open("ultimate_image_analyzer_2025.py", "w", encoding="utf-8") as f:
+            f.write(image_analyzer_code)
+            
+        print("✅ Ultimate Image Analyzer 2025 created successfully!")
+
+    def export_registry_json(self):
+        """Export registry of all tools and versions"""
+        registry = {
+            "version": self.version,
+            "generated_at": datetime.now().isoformat(),
+            "tools": {
+                "bypass": {
+                    "name": "Enhanced Instagram Private Bypass",
+                    "file": "instagram_private_bypass_2025_enhanced.py",
+                    "class": "SuperEnhancedInstagramBypass",
+                    "version": "2025.3.0"
+                },
+                "image_analyzer": {
+                    "name": "Ultimate Image Analyzer",
+                    "file": "ultimate_image_analyzer_2025.py",
+                    "class": "UltimateImageAnalyzer",
+                    "version": "2025.2.0"
+                },
+                "recon_suite": {
+                    "name": "Ultimate Instagram Reconnaissance Suite",
+                    "file": "ultimate_instagram_recon_suite_2025.py",
+                    "class": "UltimateInstagramReconSuite",
+                    "version": "2025.1.0"
+                },
+                "osint": {
+                    "name": "Advanced Instagram OSINT",
+                    "file": "advanced_instagram_osint_2025.py",
+                    "class": "AdvancedInstagramOSINT",
+                    "version": "2025.2.0"
+                },
+                "web_dashboard": {
+                    "name": "Ultimate Instagram Web Dashboard",
+                    "file": "ultimate_instagram_web_dashboard_2025.py",
+                    "version": "2025.1.0",
+                    "port": 5002
+                },
+                "gui": {
+                    "name": "Ultimate Instagram GUI",
+                    "file": "ultimate_instagram_gui_2025.py",
+                    "version": "2025.1.0"
+                },
+                "multi_tool": {
+                    "name": "Ultimate Instagram Multi-Tool Suite",
+                    "file": "ultimate_instagram_multi_tool_suite_2025.py",
+                    "version": "2025.1.0"
+                }
+            }
+        }
+        
+        # Save registry
+        with open("tools_registry.json", "w", encoding="utf-8") as f:
+            json.dump(registry, f, indent=2)
+            
+        print("✅ Tools registry exported to tools_registry.json")
+
 def main():
     """Main function"""
     parser = argparse.ArgumentParser(description='Ultimate Instagram Multi-Tool Suite 2025')
