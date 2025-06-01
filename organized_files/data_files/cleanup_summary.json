@@ -1,0 +1,11 @@
+{
+  "timestamp": "2025-05-26T22:16:37.334325",
+  "cleanup_stats": {
+    "files_deleted": 261,
+    "folders_deleted": 38,
+    "space_freed_mb": 3.4287633895874023
+  },
+  "total_files_deleted": 261,
+  "total_folders_deleted": 38,
+  "total_space_freed_mb": 3.4287633895874023
+}

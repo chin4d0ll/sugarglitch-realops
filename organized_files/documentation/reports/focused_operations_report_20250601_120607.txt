@@ -1,0 +1,24 @@
+🎯 FOCUSED TARGET OPERATIONS REPORT 2025
+==================================================
+Generated: 2025-06-01 12:06:07
+
+📊 OPERATION SUMMARY:
+  • Total Targets Processed: 2
+  • Successful Operations: 0
+  • Failed Operations: 2
+  • Data Items Extracted: 0
+  • Success Rate: 0.0%
+
+🎯 TARGET OPERATION DETAILS:
+  • @alx.trading:
+    ❌ FAILED - Error extracting @alx.trading: no such column: result
+
+  • @whatilove1728:
+    ❌ FAILED - Error extracting @whatilove1728: no such column: result
+
+📊 DATABASE STATISTICS:
+  • Total Targets: 15
+  • Active Targets: 3
+  • Total Operations: 11
+  • Completed Operations: 0
+  • Total Extracted Items: 0

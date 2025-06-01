@@ -1,0 +1,120 @@
+{
+  "project_name": "SugarGlitch RealOps",
+  "scan_date": "2025-06-01T20:34:20.909173",
+  "statistics": {
+    "total_files": 18185,
+    "total_size_mb": 849.17,
+    "python_files": 10194,
+    "database_files": 29,
+    "documentation_files": 412,
+    "categories": 14
+  },
+  "category_breakdown": {
+    "Python_Scripts": 10007,
+    "Export_Files": 58,
+    "Configuration": 257,
+    "Documentation": 412,
+    "DM_Extractors": 115,
+    "Analysis_Tools": 24,
+    "Shell_Scripts": 21,
+    "Other": 5191,
+    "Database_Tools": 48,
+    "Databases": 29,
+    "Test_Files": 1891,
+    "Data_Files": 46,
+    "Images": 84,
+    "Pipeline_Steps": 2
+  },
+  "largest_files": [
+    {
+      "name": "node",
+      "path": ".venv/lib/python3.12/site-packages/playwright/driver/node",
+      "full_path": "/workspaces/sugarglitch-realops/.venv/lib/python3.12/site-packages/playwright/driver/node",
+      "size": 120177224,
+      "modified": "2025-05-28T18:47:07.330907",
+      "extension": "",
+      "category": "Other"
+    },
+    {
+      "name": "libarrow.so.2000",
+      "path": ".venv/lib/python3.12/site-packages/pyarrow/libarrow.so.2000",
+      "full_path": "/workspaces/sugarglitch-realops/.venv/lib/python3.12/site-packages/pyarrow/libarrow.so.2000",
+      "size": 66239176,
+      "modified": "2025-06-01T16:50:56.752075",
+      "extension": ".2000",
+      "category": "Other"
+    },
+    {
+      "name": "python",
+      "path": ".venv/bin/python",
+      "full_path": "/workspaces/sugarglitch-realops/.venv/bin/python",
+      "size": 41105056,
+      "modified": "2025-05-06T20:30:32",
+      "extension": "",
+      "category": "Other"
+    },
+    {
+      "name": "python3",
+      "path": ".venv/bin/python3",
+      "full_path": "/workspaces/sugarglitch-realops/.venv/bin/python3",
+      "size": 41105056,
+      "modified": "2025-05-06T20:30:32",
+      "extension": "",
+      "category": "Other"
+    },
+    {
+      "name": "python3.12",
+      "path": ".venv/bin/python3.12",
+      "full_path": "/workspaces/sugarglitch-realops/.venv/bin/python3.12",
+      "size": 41105056,
+      "modified": "2025-05-06T20:30:32",
+      "extension": ".12",
+      "category": "Other"
+    },
+    {
+      "name": "ruff",
+      "path": ".venv/bin/ruff",
+      "full_path": "/workspaces/sugarglitch-realops/.venv/bin/ruff",
+      "size": 31191024,
+      "modified": "2025-05-31T19:16:47.383161",
+      "extension": "",
+      "category": "Other"
+    },
+    {
+      "name": "libscipy_openblas64_-56d6093b.so",
+      "path": ".venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "full_path": "/workspaces/sugarglitch-realops/.venv/lib/python3.12/site-packages/numpy.libs/libscipy_openblas64_-56d6093b.so",
+      "size": 25021457,
+      "modified": "2025-05-28T15:29:21.023030",
+      "extension": ".so",
+      "category": "Other"
+    },
+    {
+      "name": "libarrow_flight.so.2000",
+      "path": ".venv/lib/python3.12/site-packages/pyarrow/libarrow_flight.so.2000",
+      "full_path": "/workspaces/sugarglitch-realops/.venv/lib/python3.12/site-packages/pyarrow/libarrow_flight.so.2000",
+      "size": 20279608,
+      "modified": "2025-06-01T16:50:56.879075",
+      "extension": ".2000",
+      "category": "Other"
+    },
+    {
+      "name": "project_file_inventory.json",
+      "path": "project_file_inventory.json",
+      "full_path": "/workspaces/sugarglitch-realops/project_file_inventory.json",
+      "size": 14476466,
+      "modified": "2025-06-01T20:33:58.244511",
+      "extension": ".json",
+      "category": "Configuration"
+    },
+    {
+      "name": "REAL_DATA_ONLY_20250527.zip",
+      "path": "backups/REAL_DATA_ONLY_20250527.zip",
+      "full_path": "/workspaces/sugarglitch-realops/backups/REAL_DATA_ONLY_20250527.zip",
+      "size": 13510395,
+      "modified": "2025-06-01T07:44:11.892730",
+      "extension": ".zip",
+      "category": "Other"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+🔥 HARDCORE EXTRACTION REPORT 🔥
+==================================================
+
+🎯 Target: @whatilove1728
+⏰ Extraction Time: 2025-06-01 08:08:18.955511
+📸 Images Extracted: 0
+💬 DMs Extracted: 15
+💾 Database: hardcore_extraction_data.db
+📁 Images Folder: hardcore_extracted_images/
+📄 DMs Folder: hardcore_dm_exports/
+📊 This Report: hardcore_reports/hardcore_report_whatilove1728_1748765298.txt
+
+🔧 EXTRACTION METHODS USED:
+- GraphQL API queries
+- Web scraping techniques
+- Mobile API endpoints
+- Cookie-based authentication
+- Direct message scanning
+
+⚡ STEALTH FEATURES:
+- Mobile user agents
+- Random delays
+- Multiple extraction methods
+- Error handling
+- Cookie persistence

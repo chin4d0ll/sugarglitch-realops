@@ -1,0 +1,77 @@
+{
+  "start_time": "2025-06-01T11:24:07.415657",
+  "operations": [
+    {
+      "type": "profile_extraction",
+      "target": "instagram",
+      "start_time": "2025-06-01T11:24:08.194175",
+      "requests": [],
+      "data_extracted": {},
+      "success": false,
+      "error": "'NoneType' object has no attribute 'get'",
+      "duration": 0.022984743118286133,
+      "end_time": "2025-06-01T11:24:08.217160"
+    },
+    {
+      "type": "profile_extraction",
+      "target": "selenagomez",
+      "start_time": "2025-06-01T11:24:15.219765",
+      "requests": [],
+      "data_extracted": {},
+      "success": false,
+      "error": "'NoneType' object has no attribute 'get'",
+      "duration": 0.02285456657409668,
+      "end_time": "2025-06-01T11:24:15.242619"
+    },
+    {
+      "type": "profile_extraction",
+      "target": "therock",
+      "start_time": "2025-06-01T11:24:24.243285",
+      "requests": [],
+      "data_extracted": {},
+      "success": false,
+      "error": "'NoneType' object has no attribute 'get'",
+      "duration": 0.022794008255004883,
+      "end_time": "2025-06-01T11:24:24.266077"
+    },
+    {
+      "type": "profile_extraction",
+      "target": "cristiano",
+      "start_time": "2025-06-01T11:24:35.267108",
+      "requests": [],
+      "data_extracted": {},
+      "success": false,
+      "error": "'NoneType' object has no attribute 'get'",
+      "duration": 0.020709514617919922,
+      "end_time": "2025-06-01T11:24:35.287817"
+    },
+    {
+      "type": "profile_extraction",
+      "target": "kyliejenner",
+      "start_time": "2025-06-01T11:24:48.288965",
+      "requests": [],
+      "data_extracted": {},
+      "success": false,
+      "error": "'NoneType' object has no attribute 'get'",
+      "duration": 0.021538496017456055,
+      "end_time": "2025-06-01T11:24:48.310502"
+    }
+  ],
+  "statistics": {
+    "total_requests": 0,
+    "successful_requests": 0,
+    "failed_requests": 0,
+    "rate_limit_hits": 0,
+    "proxy_switches": 0,
+    "data_extracted": 0
+  },
+  "targets": [
+    "instagram",
+    "selenagomez",
+    "therock",
+    "cristiano",
+    "kyliejenner"
+  ],
+  "end_time": "2025-06-01T11:24:48.310517",
+  "total_duration": 40.89486
+}

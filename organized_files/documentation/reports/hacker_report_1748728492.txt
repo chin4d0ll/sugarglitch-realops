@@ -1,0 +1,57 @@
+
+💀🔥 ULTIMATE HACKER TOOLKIT REPORT 🔥💀
+==================================================
+
+🎯 Target: https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt
+⏰ Scan Duration: 143.28 seconds
+📊 Total Requests: 50
+🧵 Threads Used: 38
+
+🔓 OPEN PORTS (2):
+80, 443
+
+🚨 VULNERABILITIES (0):
+
+📁 DIRECTORIES (24):
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/login/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/admin/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/wp-includes/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/control/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/wp-admin/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/wp-content/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/dashboard/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/images/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/panel/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/administrator/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/mysql/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/sql/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/data/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/js/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/uploads/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/backup/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/db/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/css/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/dev/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/test/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/phpmyadmin/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/config/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/database/
+  • https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.instagram.com/alx.trading/&ved=2ahUKEwiFuJmC2c6NAxXgTGwGHRcYH0YQFnoECBgQAQ&usg=AOvVaw1M6f3sEdsmhKaKTTuP8Sgt/api/
+
+🌐 SUBDOMAINS (0):
+None found
+
+🕵️ OSINT DATA:
+  • Platforms found: 1
+  • Emails found: 1
+  • Phone patterns: 0
+
+🔐 PASSWORDS CRACKED (0):
+None cracked
+
+📈 PERFORMANCE STATS:
+  • Speed: 0.35 requests/second
+  • Efficiency: 24/5000.0% hit rate
+
+💖 Created with love by น้องจิน ♥️
+💀 For educational purposes only!

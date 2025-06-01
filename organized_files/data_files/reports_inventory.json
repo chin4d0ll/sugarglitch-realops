@@ -1,0 +1,2507 @@
+{
+  "scan_date": "2025-06-01T20:37:59.403944",
+  "total_files": 273,
+  "categories": {
+    "extraction_reports": {
+      "name": "Extraction Reports",
+      "description": "Reports from data extraction operations",
+      "file_count": 36,
+      "total_size": 72616
+    },
+    "operations_reports": {
+      "name": "Operations Reports",
+      "description": "General operational reports",
+      "file_count": 67,
+      "total_size": 5134640
+    },
+    "hacker_reports": {
+      "name": "Hacker & Security Reports",
+      "description": "Security and penetration testing reports",
+      "file_count": 5,
+      "total_size": 35717
+    },
+    "instagram_reports": {
+      "name": "Instagram Reports",
+      "description": "Instagram-specific operation reports",
+      "file_count": 7,
+      "total_size": 8667
+    },
+    "other": {
+      "name": "Other",
+      "description": "",
+      "file_count": 64,
+      "total_size": 633645
+    },
+    "json_reports": {
+      "name": "JSON Data Reports",
+      "description": "Structured data reports in JSON format",
+      "file_count": 17,
+      "total_size": 33502
+    },
+    "documentation": {
+      "name": "Documentation & Guides",
+      "description": "Documentation, guides, and informational files",
+      "file_count": 77,
+      "total_size": 2903292
+    }
+  },
+  "files": [
+    {
+      "name": "extraction_report_alx.trading_1748770473.txt",
+      "path": "extraction_report_alx.trading_1748770473.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_alx.trading_1748770473.txt",
+      "size": 1410,
+      "modified": "2025-06-01T09:34:33.262104",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "data_integration_report_20250601_203308.md",
+      "path": "data_integration_report_20250601_203308.md",
+      "full_path": "/workspaces/sugarglitch-realops/data_integration_report_20250601_203308.md",
+      "size": 1230,
+      "modified": "2025-06-01T20:33:08.232515",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_alx.trading_1748766452.txt",
+      "path": "extraction_report_alx.trading_1748766452.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_alx.trading_1748766452.txt",
+      "size": 304,
+      "modified": "2025-06-01T08:27:32.817583",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "focused_operations_report_20250601_120607.txt",
+      "path": "focused_operations_report_20250601_120607.txt",
+      "full_path": "/workspaces/sugarglitch-realops/focused_operations_report_20250601_120607.txt",
+      "size": 678,
+      "modified": "2025-06-01T12:06:07.607538",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "session_recovery_report_20250601_203243.md",
+      "path": "session_recovery_report_20250601_203243.md",
+      "full_path": "/workspaces/sugarglitch-realops/session_recovery_report_20250601_203243.md",
+      "size": 2459,
+      "modified": "2025-06-01T20:32:43.036516",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "project_analysis_report.py",
+      "path": "project_analysis_report.py",
+      "full_path": "/workspaces/sugarglitch-realops/project_analysis_report.py",
+      "size": 12318,
+      "modified": "2025-06-01T07:44:13.009730",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "hardcore_injection_report_1748766168.txt",
+      "path": "hardcore_injection_report_1748766168.txt",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_injection_report_1748766168.txt",
+      "size": 305,
+      "modified": "2025-06-01T08:22:48.022595",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "enhanced_report_johnsmith_1748739330.txt",
+      "path": "enhanced_report_johnsmith_1748739330.txt",
+      "full_path": "/workspaces/sugarglitch-realops/enhanced_report_johnsmith_1748739330.txt",
+      "size": 1455,
+      "modified": "2025-06-01T07:44:11.910730",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748765579.txt",
+      "path": "extraction_report_whatilove1728_1748765579.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_whatilove1728_1748765579.txt",
+      "size": 308,
+      "modified": "2025-06-01T08:12:59.964620",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "hacker_report_1748728433.txt",
+      "path": "hacker_report_1748728433.txt",
+      "full_path": "/workspaces/sugarglitch-realops/hacker_report_1748728433.txt",
+      "size": 5547,
+      "modified": "2025-06-01T07:44:11.918730",
+      "extension": ".txt",
+      "category": "hacker_reports"
+    },
+    {
+      "name": "reports_organizer.py",
+      "path": "reports_organizer.py",
+      "full_path": "/workspaces/sugarglitch-realops/reports_organizer.py",
+      "size": 15996,
+      "modified": "2025-06-01T20:37:55.084496",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "simple_report_generator.py",
+      "path": "simple_report_generator.py",
+      "full_path": "/workspaces/sugarglitch-realops/simple_report_generator.py",
+      "size": 0,
+      "modified": "2025-06-01T07:44:13.149730",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "instagram_report_whatilove1728_1748732161.txt",
+      "path": "instagram_report_whatilove1728_1748732161.txt",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_report_whatilove1728_1748732161.txt",
+      "size": 1351,
+      "modified": "2025-06-01T07:44:11.944730",
+      "extension": ".txt",
+      "category": "instagram_reports"
+    },
+    {
+      "name": "instagram_report_whatilove1728_1748733190.txt",
+      "path": "instagram_report_whatilove1728_1748733190.txt",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_report_whatilove1728_1748733190.txt",
+      "size": 1351,
+      "modified": "2025-06-01T07:44:11.944730",
+      "extension": ".txt",
+      "category": "instagram_reports"
+    },
+    {
+      "name": "enhanced_report_whatilove1728_1748739001.txt",
+      "path": "enhanced_report_whatilove1728_1748739001.txt",
+      "full_path": "/workspaces/sugarglitch-realops/enhanced_report_whatilove1728_1748739001.txt",
+      "size": 1428,
+      "modified": "2025-06-01T07:44:11.910730",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748765084.txt",
+      "path": "extraction_report_whatilove1728_1748765084.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_whatilove1728_1748765084.txt",
+      "size": 439,
+      "modified": "2025-06-01T08:04:44.987652",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "image_discovery_report_20250531_221156.json",
+      "path": "image_discovery_report_20250531_221156.json",
+      "full_path": "/workspaces/sugarglitch-realops/image_discovery_report_20250531_221156.json",
+      "size": 6013,
+      "modified": "2025-06-01T07:44:11.922730",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "enhanced_report_whatilove1728_1748739127.txt",
+      "path": "enhanced_report_whatilove1728_1748739127.txt",
+      "full_path": "/workspaces/sugarglitch-realops/enhanced_report_whatilove1728_1748739127.txt",
+      "size": 1428,
+      "modified": "2025-06-01T07:44:11.910730",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "target_integration_report_1748777609.txt",
+      "path": "target_integration_report_1748777609.txt",
+      "full_path": "/workspaces/sugarglitch-realops/target_integration_report_1748777609.txt",
+      "size": 1886,
+      "modified": "2025-06-01T11:33:29.822211",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "enhanced_report_whatilove1728_1748740016.txt",
+      "path": "enhanced_report_whatilove1728_1748740016.txt",
+      "full_path": "/workspaces/sugarglitch-realops/enhanced_report_whatilove1728_1748740016.txt",
+      "size": 1428,
+      "modified": "2025-06-01T07:44:11.910730",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "fast_report_generator.py",
+      "path": "fast_report_generator.py",
+      "full_path": "/workspaces/sugarglitch-realops/fast_report_generator.py",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.911730",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "hardcore_injection_report_1748766608.txt",
+      "path": "hardcore_injection_report_1748766608.txt",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_injection_report_1748766608.txt",
+      "size": 305,
+      "modified": "2025-06-01T08:30:08.530576",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748765606.txt",
+      "path": "extraction_report_whatilove1728_1748765606.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_whatilove1728_1748765606.txt",
+      "size": 308,
+      "modified": "2025-06-01T08:13:26.126619",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "hacker_report_1748728391.txt",
+      "path": "hacker_report_1748728391.txt",
+      "full_path": "/workspaces/sugarglitch-realops/hacker_report_1748728391.txt",
+      "size": 587,
+      "modified": "2025-06-01T07:44:11.918730",
+      "extension": ".txt",
+      "category": "hacker_reports"
+    },
+    {
+      "name": "focused_operations_report_20250601_164256.txt",
+      "path": "focused_operations_report_20250601_164256.txt",
+      "full_path": "/workspaces/sugarglitch-realops/focused_operations_report_20250601_164256.txt",
+      "size": 638,
+      "modified": "2025-06-01T16:42:56.026080",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748771268.txt",
+      "path": "extraction_report_whatilove1728_1748771268.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_whatilove1728_1748771268.txt",
+      "size": 426,
+      "modified": "2025-06-01T09:47:48.463230",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748770978.txt",
+      "path": "extraction_report_whatilove1728_1748770978.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_whatilove1728_1748770978.txt",
+      "size": 426,
+      "modified": "2025-06-01T09:42:58.998087",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "hardcore_assault_report_1748766646.txt",
+      "path": "hardcore_assault_report_1748766646.txt",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_assault_report_1748766646.txt",
+      "size": 199,
+      "modified": "2025-06-01T08:30:46.927574",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "enhanced_report_testuser123_1748740060.txt",
+      "path": "enhanced_report_testuser123_1748740060.txt",
+      "full_path": "/workspaces/sugarglitch-realops/enhanced_report_testuser123_1748740060.txt",
+      "size": 1464,
+      "modified": "2025-06-01T07:44:11.910730",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "hacker_report_1748728492.txt",
+      "path": "hacker_report_1748728492.txt",
+      "full_path": "/workspaces/sugarglitch-realops/hacker_report_1748728492.txt",
+      "size": 5619,
+      "modified": "2025-06-01T07:44:11.919730",
+      "extension": ".txt",
+      "category": "hacker_reports"
+    },
+    {
+      "name": "database_readiness_report_20250601_085431.json",
+      "path": "database_readiness_report_20250601_085431.json",
+      "full_path": "/workspaces/sugarglitch-realops/database_readiness_report_20250601_085431.json",
+      "size": 1440,
+      "modified": "2025-06-01T08:54:31.688357",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "image_discovery_report_20250531_215555.json",
+      "path": "image_discovery_report_20250531_215555.json",
+      "full_path": "/workspaces/sugarglitch-realops/image_discovery_report_20250531_215555.json",
+      "size": 6013,
+      "modified": "2025-06-01T07:44:11.921730",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "hardcore_assault_report_1748766941.txt",
+      "path": "hardcore_assault_report_1748766941.txt",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_assault_report_1748766941.txt",
+      "size": 199,
+      "modified": "2025-06-01T08:35:41.828562",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "sessionless_extraction_report_1748790052.json",
+      "path": "sessionless_extraction_report_1748790052.json",
+      "full_path": "/workspaces/sugarglitch-realops/sessionless_extraction_report_1748790052.json",
+      "size": 218,
+      "modified": "2025-06-01T15:00:52.595574",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_ultra_report_whatilove1728_1748770871.txt",
+      "path": "instagram_ultra_report_whatilove1728_1748770871.txt",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_ultra_report_whatilove1728_1748770871.txt",
+      "size": 1338,
+      "modified": "2025-06-01T09:41:11.885091",
+      "extension": ".txt",
+      "category": "instagram_reports"
+    },
+    {
+      "name": "extraction_report_alx.trading_1748770853.txt",
+      "path": "extraction_report_alx.trading_1748770853.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_alx.trading_1748770853.txt",
+      "size": 424,
+      "modified": "2025-06-01T09:40:53.781091",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "data_recovery_report_20250601_135242.json",
+      "path": "data_recovery_report_20250601_135242.json",
+      "full_path": "/workspaces/sugarglitch-realops/data_recovery_report_20250601_135242.json",
+      "size": 11962,
+      "modified": "2025-06-01T13:52:42.294286",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748766459.txt",
+      "path": "extraction_report_whatilove1728_1748766459.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_whatilove1728_1748766459.txt",
+      "size": 308,
+      "modified": "2025-06-01T08:27:39.075583",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "enhanced_report_johnsmith_1748740037.txt",
+      "path": "enhanced_report_johnsmith_1748740037.txt",
+      "full_path": "/workspaces/sugarglitch-realops/enhanced_report_johnsmith_1748740037.txt",
+      "size": 1455,
+      "modified": "2025-06-01T07:44:11.910730",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_alx.trading_1748765599.txt",
+      "path": "extraction_report_alx.trading_1748765599.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_alx.trading_1748765599.txt",
+      "size": 304,
+      "modified": "2025-06-01T08:13:19.659619",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "operations_status_report_2025.py",
+      "path": "operations_status_report_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/operations_status_report_2025.py",
+      "size": 0,
+      "modified": "2025-06-01T13:50:54.655293",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "instagram_lite_report_whatilove1728_1748735950.txt",
+      "path": "instagram_lite_report_whatilove1728_1748735950.txt",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_lite_report_whatilove1728_1748735950.txt",
+      "size": 556,
+      "modified": "2025-06-01T07:44:11.935730",
+      "extension": ".txt",
+      "category": "instagram_reports"
+    },
+    {
+      "name": "sensitive_data_pdf_report.py",
+      "path": "sensitive_data_pdf_report.py",
+      "full_path": "/workspaces/sugarglitch-realops/sensitive_data_pdf_report.py",
+      "size": 3131,
+      "modified": "2025-06-01T07:44:13.129730",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "database_readiness_report_20250601_085443.json",
+      "path": "database_readiness_report_20250601_085443.json",
+      "full_path": "/workspaces/sugarglitch-realops/database_readiness_report_20250601_085443.json",
+      "size": 1440,
+      "modified": "2025-06-01T08:54:43.457357",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "instagram_report_whatilove1728_1748732140.txt",
+      "path": "instagram_report_whatilove1728_1748732140.txt",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_report_whatilove1728_1748732140.txt",
+      "size": 1351,
+      "modified": "2025-06-01T07:44:11.944730",
+      "extension": ".txt",
+      "category": "instagram_reports"
+    },
+    {
+      "name": "injection_report_1748768104.json",
+      "path": "injection_report_1748768104.json",
+      "full_path": "/workspaces/sugarglitch-realops/injection_report_1748768104.json",
+      "size": 8396,
+      "modified": "2025-06-01T08:55:04.175357",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "instagram_report_whatilove1728_1748733243.txt",
+      "path": "instagram_report_whatilove1728_1748733243.txt",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_report_whatilove1728_1748733243.txt",
+      "size": 1360,
+      "modified": "2025-06-01T07:44:11.945730",
+      "extension": ".txt",
+      "category": "instagram_reports"
+    },
+    {
+      "name": "extraction_report_alx.trading_1748770722.txt",
+      "path": "extraction_report_alx.trading_1748770722.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_alx.trading_1748770722.txt",
+      "size": 424,
+      "modified": "2025-06-01T09:38:42.049096",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748770743.txt",
+      "path": "extraction_report_whatilove1728_1748770743.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_whatilove1728_1748770743.txt",
+      "size": 426,
+      "modified": "2025-06-01T09:39:03.088095",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_report_whatilove1728_1748734550.txt",
+      "path": "instagram_report_whatilove1728_1748734550.txt",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_report_whatilove1728_1748734550.txt",
+      "size": 1360,
+      "modified": "2025-06-01T07:44:11.945730",
+      "extension": ".txt",
+      "category": "instagram_reports"
+    },
+    {
+      "name": "data_recovery_report_20250601_135126.json",
+      "path": "data_recovery_report_20250601_135126.json",
+      "full_path": "/workspaces/sugarglitch-realops/data_recovery_report_20250601_135126.json",
+      "size": 11962,
+      "modified": "2025-06-01T13:51:26.803291",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "focused_operations_report_20250601_144750.txt",
+      "path": "focused_operations_report_20250601_144750.txt",
+      "full_path": "/workspaces/sugarglitch-realops/focused_operations_report_20250601_144750.txt",
+      "size": 638,
+      "modified": "2025-06-01T14:47:50.209601",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_alx.trading_1748765573.txt",
+      "path": "extraction_report_alx.trading_1748765573.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_alx.trading_1748765573.txt",
+      "size": 304,
+      "modified": "2025-06-01T08:12:53.449620",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748766780.txt",
+      "path": "extraction_report_whatilove1728_1748766780.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_whatilove1728_1748766780.txt",
+      "size": 308,
+      "modified": "2025-06-01T08:33:00.747569",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "images_report_20250531_222148.json",
+      "path": "images_report_20250531_222148.json",
+      "full_path": "/workspaces/sugarglitch-realops/images_report_20250531_222148.json",
+      "size": 5733,
+      "modified": "2025-06-01T07:44:11.923730",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "extraction_report_alx.trading_1748766774.txt",
+      "path": "extraction_report_alx.trading_1748766774.txt",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_report_alx.trading_1748766774.txt",
+      "size": 304,
+      "modified": "2025-06-01T08:32:54.522569",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "injection_report_1748768273.json",
+      "path": "injection_report_1748768273.json",
+      "full_path": "/workspaces/sugarglitch-realops/injection_report_1748768273.json",
+      "size": 7759,
+      "modified": "2025-06-01T08:57:53.620355",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "cookie_analysis_report.py",
+      "path": "cookie_analysis_report.py",
+      "full_path": "/workspaces/sugarglitch-realops/cookie_analysis_report.py",
+      "size": 12658,
+      "modified": "2025-06-01T00:05:48.635961",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "dm_analysis_report_20250601_125603.pdf",
+      "path": "exports/dm_analysis_report_20250601_125603.pdf",
+      "full_path": "/workspaces/sugarglitch-realops/exports/dm_analysis_report_20250601_125603.pdf",
+      "size": 1480,
+      "modified": "2025-06-01T12:56:03.320515",
+      "extension": ".pdf",
+      "category": "operations_reports"
+    },
+    {
+      "name": "master_report_whatilove1728_1748734551.json",
+      "path": "ultimate_hacker_results/master_report_whatilove1728_1748734551.json",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_hacker_results/master_report_whatilove1728_1748734551.json",
+      "size": 21454,
+      "modified": "2025-06-01T07:44:13.222730",
+      "extension": ".json",
+      "category": "hacker_reports"
+    },
+    {
+      "name": "master_report_whatilove1728_1748734551.txt",
+      "path": "ultimate_hacker_results/master_report_whatilove1728_1748734551.txt",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_hacker_results/master_report_whatilove1728_1748734551.txt",
+      "size": 2510,
+      "modified": "2025-06-01T07:44:13.222730",
+      "extension": ".txt",
+      "category": "hacker_reports"
+    },
+    {
+      "name": "extraction_report_whatilove1728_1748765178.txt",
+      "path": "ultimate_reports/extraction_report_whatilove1728_1748765178.txt",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_reports/extraction_report_whatilove1728_1748765178.txt",
+      "size": 436,
+      "modified": "2025-06-01T08:06:18.945646",
+      "extension": ".txt",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "comprehensive_report_whatilove1728_1748738019.txt",
+      "path": "ultimate_recon_results/comprehensive_report_whatilove1728_1748738019.txt",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_recon_results/comprehensive_report_whatilove1728_1748738019.txt",
+      "size": 1552,
+      "modified": "2025-06-01T07:44:13.285730",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "comprehensive_report_1748770289.json",
+      "path": "hardcore_results/comprehensive_report_1748770289.json",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_results/comprehensive_report_1748770289.json",
+      "size": 2369,
+      "modified": "2025-06-01T09:31:29.759111",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "clean_duplicate_reports.py",
+      "path": "scripts/clean_duplicate_reports.py",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/clean_duplicate_reports.py",
+      "size": 1592,
+      "modified": "2025-06-01T07:44:13.080730",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "session_validation_report.json",
+      "path": "validation_results/session_validation_report.json",
+      "full_path": "/workspaces/sugarglitch-realops/validation_results/session_validation_report.json",
+      "size": 4848693,
+      "modified": "2025-06-01T07:44:13.339730",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "hardcore_report_whatilove1728_1748765298.txt",
+      "path": "hardcore_reports/hardcore_report_whatilove1728_1748765298.txt",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_reports/hardcore_report_whatilove1728_1748765298.txt",
+      "size": 707,
+      "modified": "2025-06-01T08:08:18.954639",
+      "extension": ".txt",
+      "category": "operations_reports"
+    },
+    {
+      "name": "intelligence_report_generator.py",
+      "path": "improved_code/intelligence_report_generator.py",
+      "full_path": "/workspaces/sugarglitch-realops/improved_code/intelligence_report_generator.py",
+      "size": 16812,
+      "modified": "2025-06-01T00:43:46.153014",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "pdf_intelligence_report_generator.py",
+      "path": "improved_code/pdf_intelligence_report_generator.py",
+      "full_path": "/workspaces/sugarglitch-realops/improved_code/pdf_intelligence_report_generator.py",
+      "size": 25987,
+      "modified": "2025-06-01T00:43:46.154014",
+      "extension": ".py",
+      "category": "operations_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250531_165051.json",
+      "path": "results/instagram_extraction_report_20250531_165051.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250531_165051.json",
+      "size": 344,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250529_151353.json",
+      "path": "results/instagram_extraction_report_20250529_151353.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_151353.json",
+      "size": 307,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250529_154110.json",
+      "path": "results/instagram_extraction_report_20250529_154110.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_154110.json",
+      "size": 344,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250529_151339.json",
+      "path": "results/instagram_extraction_report_20250529_151339.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_151339.json",
+      "size": 307,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250529_151604.json",
+      "path": "results/instagram_extraction_report_20250529_151604.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_151604.json",
+      "size": 344,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250529_151549.json",
+      "path": "results/instagram_extraction_report_20250529_151549.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_151549.json",
+      "size": 344,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "smart_extraction_report_20250529_153212.json",
+      "path": "results/smart_extraction_report_20250529_153212.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_153212.json",
+      "size": 495,
+      "modified": "2025-06-01T07:44:13.069730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250529_180926.json",
+      "path": "results/instagram_extraction_report_20250529_180926.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_180926.json",
+      "size": 735,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250529_151417.json",
+      "path": "results/instagram_extraction_report_20250529_151417.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_151417.json",
+      "size": 307,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_extraction_report_20250529_151630.json",
+      "path": "results/instagram_extraction_report_20250529_151630.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_151630.json",
+      "size": 344,
+      "modified": "2025-06-01T07:44:13.066730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "smart_extraction_report_20250529_152745.json",
+      "path": "results/smart_extraction_report_20250529_152745.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_152745.json",
+      "size": 495,
+      "modified": "2025-06-01T07:44:13.069730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "smart_extraction_report_20250529_152030.json",
+      "path": "results/smart_extraction_report_20250529_152030.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_152030.json",
+      "size": 456,
+      "modified": "2025-06-01T07:44:13.069730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "smart_extraction_report_20250529_151822.json",
+      "path": "results/smart_extraction_report_20250529_151822.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_151822.json",
+      "size": 456,
+      "modified": "2025-06-01T07:44:13.069730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "extraction_report_20250531_223052.json",
+      "path": "quick_extracted_images/metadata/extraction_report_20250531_223052.json",
+      "full_path": "/workspaces/sugarglitch-realops/quick_extracted_images/metadata/extraction_report_20250531_223052.json",
+      "size": 205,
+      "modified": "2025-06-01T07:44:13.051730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "intelligence_report_generator.py",
+      "path": "scripts/extractors/intelligence_report_generator.py",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/extractors/intelligence_report_generator.py",
+      "size": 16736,
+      "modified": "2025-06-01T00:43:46.375014",
+      "extension": ".py",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "pdf_intelligence_report_generator.py",
+      "path": "scripts/extractors/pdf_intelligence_report_generator.py",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/extractors/pdf_intelligence_report_generator.py",
+      "size": 25927,
+      "modified": "2025-06-01T00:43:46.376014",
+      "extension": ".py",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "report.html",
+      "path": "recovered_github/Python/export/report.html",
+      "full_path": "/workspaces/sugarglitch-realops/recovered_github/Python/export/report.html",
+      "size": 602,
+      "modified": "2025-05-24T20:05:46",
+      "extension": ".html",
+      "category": "operations_reports"
+    },
+    {
+      "name": "image_analysis_report.json",
+      "path": "media/extracted/whatilove1728_extracted_images/metadata/image_analysis_report.json",
+      "full_path": "/workspaces/sugarglitch-realops/media/extracted/whatilove1728_extracted_images/metadata/image_analysis_report.json",
+      "size": 7733,
+      "modified": "2025-06-01T00:43:46.171014",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "DATA_RECOVERY_REPORT.md",
+      "path": "DATA_RECOVERY_REPORT.md",
+      "full_path": "/workspaces/sugarglitch-realops/DATA_RECOVERY_REPORT.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.808730",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "COMPREHENSIVE_DM_ANALYSIS_REPORT_20250601_202328.md",
+      "path": "COMPREHENSIVE_DM_ANALYSIS_REPORT_20250601_202328.md",
+      "full_path": "/workspaces/sugarglitch-realops/COMPREHENSIVE_DM_ANALYSIS_REPORT_20250601_202328.md",
+      "size": 954,
+      "modified": "2025-06-01T20:23:28.702554",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "PROJECT_CONTINUATION_REPORT_2025.md",
+      "path": "PROJECT_CONTINUATION_REPORT_2025.md",
+      "full_path": "/workspaces/sugarglitch-realops/PROJECT_CONTINUATION_REPORT_2025.md",
+      "size": 5608,
+      "modified": "2025-06-01T08:11:21.162624",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "ALX_TRADING_DM_EXTRACTION_REPORT.md",
+      "path": "ALX_TRADING_DM_EXTRACTION_REPORT.md",
+      "full_path": "/workspaces/sugarglitch-realops/ALX_TRADING_DM_EXTRACTION_REPORT.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.807730",
+      "extension": ".md",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "COMPREHENSIVE_DM_ANALYSIS_REPORT_20250601_203452.md",
+      "path": "COMPREHENSIVE_DM_ANALYSIS_REPORT_20250601_203452.md",
+      "full_path": "/workspaces/sugarglitch-realops/COMPREHENSIVE_DM_ANALYSIS_REPORT_20250601_203452.md",
+      "size": 994,
+      "modified": "2025-06-01T20:34:52.428508",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "PENETRATION_SUITE_COMPLETION_REPORT.md",
+      "path": "PENETRATION_SUITE_COMPLETION_REPORT.md",
+      "full_path": "/workspaces/sugarglitch-realops/PENETRATION_SUITE_COMPLETION_REPORT.md",
+      "size": 8871,
+      "modified": "2025-06-01T07:44:11.811730",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "WORKSPACE_ANALYSIS_REPORT.md",
+      "path": "WORKSPACE_ANALYSIS_REPORT.md",
+      "full_path": "/workspaces/sugarglitch-realops/WORKSPACE_ANALYSIS_REPORT.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.819730",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "PERSONAL_INTELLIGENCE_REPORT_20250601_203501.md",
+      "path": "PERSONAL_INTELLIGENCE_REPORT_20250601_203501.md",
+      "full_path": "/workspaces/sugarglitch-realops/PERSONAL_INTELLIGENCE_REPORT_20250601_203501.md",
+      "size": 8890,
+      "modified": "2025-06-01T20:35:01.886507",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "ALX_TRADING_SENSITIVE_DATA_REPORT_20250527_fixed.pdf",
+      "path": "FINAL_REAL_DATA_REPORTS/ALX_TRADING_SENSITIVE_DATA_REPORT_20250527_fixed.pdf",
+      "full_path": "/workspaces/sugarglitch-realops/FINAL_REAL_DATA_REPORTS/ALX_TRADING_SENSITIVE_DATA_REPORT_20250527_fixed.pdf",
+      "size": 18954,
+      "modified": "2025-06-01T07:44:11.808730",
+      "extension": ".pdf",
+      "category": "operations_reports"
+    },
+    {
+      "name": "ALX_TRADING_SENSITIVE_DATA_REPORT_20250527_repaired.pdf",
+      "path": "FINAL_REAL_DATA_REPORTS/ALX_TRADING_SENSITIVE_DATA_REPORT_20250527_repaired.pdf",
+      "full_path": "/workspaces/sugarglitch-realops/FINAL_REAL_DATA_REPORTS/ALX_TRADING_SENSITIVE_DATA_REPORT_20250527_repaired.pdf",
+      "size": 15806,
+      "modified": "2025-06-01T07:44:11.809730",
+      "extension": ".pdf",
+      "category": "operations_reports"
+    },
+    {
+      "name": "ALX_TRADING_SENSITIVE_DATA_REPORT_20250527.pdf",
+      "path": "FINAL_REAL_DATA_REPORTS/ALX_TRADING_SENSITIVE_DATA_REPORT_20250527.pdf",
+      "full_path": "/workspaces/sugarglitch-realops/FINAL_REAL_DATA_REPORTS/ALX_TRADING_SENSITIVE_DATA_REPORT_20250527.pdf",
+      "size": 18954,
+      "modified": "2025-06-01T07:44:11.808730",
+      "extension": ".pdf",
+      "category": "operations_reports"
+    },
+    {
+      "name": "MASTER_OPERATION_REPORT_MASTER_OP_1748810118.md",
+      "path": "master_operations_results_20250601_203518/MASTER_OPERATION_REPORT_MASTER_OP_1748810118.md",
+      "full_path": "/workspaces/sugarglitch-realops/master_operations_results_20250601_203518/MASTER_OPERATION_REPORT_MASTER_OP_1748810118.md",
+      "size": 1074,
+      "modified": "2025-06-01T20:35:18.466506",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "MASTER_OPERATION_REPORT_MASTER_OP_1748810118.json",
+      "path": "master_operations_results_20250601_203518/MASTER_OPERATION_REPORT_MASTER_OP_1748810118.json",
+      "full_path": "/workspaces/sugarglitch-realops/master_operations_results_20250601_203518/MASTER_OPERATION_REPORT_MASTER_OP_1748810118.json",
+      "size": 577,
+      "modified": "2025-06-01T20:35:18.466506",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "WORKSPACE_ANALYSIS_REPORT_1.md",
+      "path": "docs/WORKSPACE_ANALYSIS_REPORT_1.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/WORKSPACE_ANALYSIS_REPORT_1.md",
+      "size": 8893,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "WORKSPACE_ANALYSIS_REPORT.md",
+      "path": "docs/WORKSPACE_ANALYSIS_REPORT.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/WORKSPACE_ANALYSIS_REPORT.md",
+      "size": 8877,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "MASTER_OPERATION_REPORT_MASTER_OP_1748810268.md",
+      "path": "master_operations_results_20250601_203748/MASTER_OPERATION_REPORT_MASTER_OP_1748810268.md",
+      "full_path": "/workspaces/sugarglitch-realops/master_operations_results_20250601_203748/MASTER_OPERATION_REPORT_MASTER_OP_1748810268.md",
+      "size": 1076,
+      "modified": "2025-06-01T20:37:48.070496",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "MASTER_OPERATION_REPORT_MASTER_OP_1748810268.json",
+      "path": "master_operations_results_20250601_203748/MASTER_OPERATION_REPORT_MASTER_OP_1748810268.json",
+      "full_path": "/workspaces/sugarglitch-realops/master_operations_results_20250601_203748/MASTER_OPERATION_REPORT_MASTER_OP_1748810268.json",
+      "size": 576,
+      "modified": "2025-06-01T20:37:48.069496",
+      "extension": ".json",
+      "category": "operations_reports"
+    },
+    {
+      "name": "MASTER_INTELLIGENCE_REPORT_20250529_151120.json",
+      "path": "improved_code/ENHANCED_ALX_EXTRACTION_20250529_151120/MASTER_INTELLIGENCE_REPORT_20250529_151120.json",
+      "full_path": "/workspaces/sugarglitch-realops/improved_code/ENHANCED_ALX_EXTRACTION_20250529_151120/MASTER_INTELLIGENCE_REPORT_20250529_151120.json",
+      "size": 9660,
+      "modified": "2025-06-01T07:44:11.923730",
+      "extension": ".json",
+      "category": "extraction_reports"
+    },
+    {
+      "name": "instagram_analysis_1748774498.sqlite",
+      "path": "instagram_analysis_1748774498.sqlite",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_analysis_1748774498.sqlite",
+      "size": 16384,
+      "modified": "2025-06-01T10:41:39.497801",
+      "extension": ".sqlite",
+      "category": "other"
+    },
+    {
+      "name": "step1_data_analysis_dashboard_fixed.py",
+      "path": "step1_data_analysis_dashboard_fixed.py",
+      "full_path": "/workspaces/sugarglitch-realops/step1_data_analysis_dashboard_fixed.py",
+      "size": 7584,
+      "modified": "2025-06-01T16:50:51.297075",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "advanced_intelligence_analysis.py",
+      "path": "advanced_intelligence_analysis.py",
+      "full_path": "/workspaces/sugarglitch-realops/advanced_intelligence_analysis.py",
+      "size": 17566,
+      "modified": "2025-06-01T13:47:30.948308",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "analysis_20250601_164929.log",
+      "path": "final_reports/analysis_20250601_164929.log",
+      "full_path": "/workspaces/sugarglitch-realops/final_reports/analysis_20250601_164929.log",
+      "size": 1144,
+      "modified": "2025-06-01T16:49:29.538076",
+      "extension": ".log",
+      "category": "operations_reports"
+    },
+    {
+      "name": "analysis_20250527_163256.log",
+      "path": "final_reports/analysis_20250527_163256.log",
+      "full_path": "/workspaces/sugarglitch-realops/final_reports/analysis_20250527_163256.log",
+      "size": 1596,
+      "modified": "2025-06-01T07:44:11.912730",
+      "extension": ".log",
+      "category": "operations_reports"
+    },
+    {
+      "name": "analysis_20250527_162644.log",
+      "path": "final_reports/analysis_20250527_162644.log",
+      "full_path": "/workspaces/sugarglitch-realops/final_reports/analysis_20250527_162644.log",
+      "size": 1396,
+      "modified": "2025-06-01T07:44:11.912730",
+      "extension": ".log",
+      "category": "operations_reports"
+    },
+    {
+      "name": "analysis_20250527_163048.log",
+      "path": "final_reports/analysis_20250527_163048.log",
+      "full_path": "/workspaces/sugarglitch-realops/final_reports/analysis_20250527_163048.log",
+      "size": 1381,
+      "modified": "2025-06-01T07:44:11.912730",
+      "extension": ".log",
+      "category": "operations_reports"
+    },
+    {
+      "name": "analysis_20250527_162551.log",
+      "path": "final_reports/analysis_20250527_162551.log",
+      "full_path": "/workspaces/sugarglitch-realops/final_reports/analysis_20250527_162551.log",
+      "size": 1396,
+      "modified": "2025-06-01T07:44:11.912730",
+      "extension": ".log",
+      "category": "operations_reports"
+    },
+    {
+      "name": "analysis_20250527_162943.log",
+      "path": "final_reports/analysis_20250527_162943.log",
+      "full_path": "/workspaces/sugarglitch-realops/final_reports/analysis_20250527_162943.log",
+      "size": 1381,
+      "modified": "2025-06-01T07:44:11.912730",
+      "extension": ".log",
+      "category": "operations_reports"
+    },
+    {
+      "name": "analysis_20250527_163151.log",
+      "path": "final_reports/analysis_20250527_163151.log",
+      "full_path": "/workspaces/sugarglitch-realops/final_reports/analysis_20250527_163151.log",
+      "size": 1596,
+      "modified": "2025-06-01T07:44:11.912730",
+      "extension": ".log",
+      "category": "operations_reports"
+    },
+    {
+      "name": "analysis_20250527_162400.log",
+      "path": "final_reports/analysis_20250527_162400.log",
+      "full_path": "/workspaces/sugarglitch-realops/final_reports/analysis_20250527_162400.log",
+      "size": 1397,
+      "modified": "2025-06-01T07:44:11.911730",
+      "extension": ".log",
+      "category": "operations_reports"
+    },
+    {
+      "name": "dms_mock_data_analysis.json",
+      "path": "data/extractions/ALX_TRADING_DMS_20250527_041741/dms_mock_data_analysis.json",
+      "full_path": "/workspaces/sugarglitch-realops/data/extractions/ALX_TRADING_DMS_20250527_041741/dms_mock_data_analysis.json",
+      "size": 564,
+      "modified": "2025-06-01T07:44:11.902730",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "historical_analysis_20250526_053127.json",
+      "path": "data/extractions/ENHANCED_ALX_EXTRACTION_20250526_053127/historical_analysis_20250526_053127.json",
+      "full_path": "/workspaces/sugarglitch-realops/data/extractions/ENHANCED_ALX_EXTRACTION_20250526_053127/historical_analysis_20250526_053127.json",
+      "size": 3044,
+      "modified": "2025-06-01T07:44:11.903730",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "historical_analysis_20250529_151120.json",
+      "path": "improved_code/ENHANCED_ALX_EXTRACTION_20250529_151120/historical_analysis_20250529_151120.json",
+      "full_path": "/workspaces/sugarglitch-realops/improved_code/ENHANCED_ALX_EXTRACTION_20250529_151120/historical_analysis_20250529_151120.json",
+      "size": 3357,
+      "modified": "2025-06-01T07:44:11.923730",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "osint_results_whatilove1728_1748734194_summary.txt",
+      "path": "osint_results_whatilove1728_1748734194_summary.txt",
+      "full_path": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748734194_summary.txt",
+      "size": 1171,
+      "modified": "2025-06-01T07:44:12.995730",
+      "extension": ".txt",
+      "category": "other"
+    },
+    {
+      "name": "osint_results_whatilove1728_1748733696_summary.txt",
+      "path": "osint_results_whatilove1728_1748733696_summary.txt",
+      "full_path": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748733696_summary.txt",
+      "size": 1171,
+      "modified": "2025-06-01T07:44:12.992730",
+      "extension": ".txt",
+      "category": "other"
+    },
+    {
+      "name": "osint_results_whatilove1728_1748743769_summary.txt",
+      "path": "osint_results_whatilove1728_1748743769_summary.txt",
+      "full_path": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748743769_summary.txt",
+      "size": 1171,
+      "modified": "2025-06-01T07:44:12.998730",
+      "extension": ".txt",
+      "category": "other"
+    },
+    {
+      "name": "database_status_summary.md",
+      "path": "database_status_summary.md",
+      "full_path": "/workspaces/sugarglitch-realops/database_status_summary.md",
+      "size": 2578,
+      "modified": "2025-06-01T07:44:11.905730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "osint_results_whatilove1728_1748734519_summary.txt",
+      "path": "osint_results_whatilove1728_1748734519_summary.txt",
+      "full_path": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748734519_summary.txt",
+      "size": 1171,
+      "modified": "2025-06-01T07:44:12.996730",
+      "extension": ".txt",
+      "category": "other"
+    },
+    {
+      "name": "attack_summary_whatilove1728.py",
+      "path": "attack_summary_whatilove1728.py",
+      "full_path": "/workspaces/sugarglitch-realops/attack_summary_whatilove1728.py",
+      "size": 5923,
+      "modified": "2025-06-01T07:44:11.825730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "osint_results_whatilove1728_1748737879_summary.txt",
+      "path": "osint_results_whatilove1728_1748737879_summary.txt",
+      "full_path": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748737879_summary.txt",
+      "size": 1171,
+      "modified": "2025-06-01T07:44:12.998730",
+      "extension": ".txt",
+      "category": "other"
+    },
+    {
+      "name": "target_database_summary.py",
+      "path": "target_database_summary.py",
+      "full_path": "/workspaces/sugarglitch-realops/target_database_summary.py",
+      "size": 7344,
+      "modified": "2025-06-01T12:09:24.004548",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "project_summary.json",
+      "path": "project_summary.json",
+      "full_path": "/workspaces/sugarglitch-realops/project_summary.json",
+      "size": 3861,
+      "modified": "2025-06-01T20:34:20.912510",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "intelligence_summary.py",
+      "path": "improved_code/intelligence_summary.py",
+      "full_path": "/workspaces/sugarglitch-realops/improved_code/intelligence_summary.py",
+      "size": 4195,
+      "modified": "2025-06-01T00:43:46.153014",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "cleanup_summary.json",
+      "path": "config/json/cleanup_summary.json",
+      "full_path": "/workspaces/sugarglitch-realops/config/json/cleanup_summary.json",
+      "size": 274,
+      "modified": "2025-06-01T00:43:46.137014",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "extraction_summary.json",
+      "path": "data/extractions/ALX_TRADING_ADVANCED_DMS_20250527_041729/extraction_summary.json",
+      "full_path": "/workspaces/sugarglitch-realops/data/extractions/ALX_TRADING_ADVANCED_DMS_20250527_041729/extraction_summary.json",
+      "size": 835,
+      "modified": "2025-06-01T07:44:11.902730",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "intelligence_summary.py",
+      "path": "scripts/extractors/intelligence_summary.py",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/extractors/intelligence_summary.py",
+      "size": 4135,
+      "modified": "2025-06-01T00:43:46.375014",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "manual_session_guide.py",
+      "path": "improved_code/manual_session_guide.py",
+      "full_path": "/workspaces/sugarglitch-realops/improved_code/manual_session_guide.py",
+      "size": 8599,
+      "modified": "2025-06-01T00:43:46.153014",
+      "extension": ".py",
+      "category": "documentation"
+    },
+    {
+      "name": "manual_session_guide.py",
+      "path": "recovered_data/scripts/sessions/manual_session_guide.py",
+      "full_path": "/workspaces/sugarglitch-realops/recovered_data/scripts/sessions/manual_session_guide.py",
+      "size": 8523,
+      "modified": "2025-05-26T03:17:55",
+      "extension": ".py",
+      "category": "documentation"
+    },
+    {
+      "name": "PROJECT_IMPROVEMENT_SUMMARY.md",
+      "path": "PROJECT_IMPROVEMENT_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/PROJECT_IMPROVEMENT_SUMMARY.md",
+      "size": 5037,
+      "modified": "2025-06-01T07:44:11.812730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "FILE_RECOVERY_STATUS.md",
+      "path": "FILE_RECOVERY_STATUS.md",
+      "full_path": "/workspaces/sugarglitch-realops/FILE_RECOVERY_STATUS.md",
+      "size": 3421,
+      "modified": "2025-06-01T13:54:17.313279",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "copilot_hacker_prompts.md",
+      "path": "copilot_hacker_prompts.md",
+      "full_path": "/workspaces/sugarglitch-realops/copilot_hacker_prompts.md",
+      "size": 1778,
+      "modified": "2025-06-01T07:44:11.900730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "IMPROVEMENT_SUMMARY.md",
+      "path": "IMPROVEMENT_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/IMPROVEMENT_SUMMARY.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.809730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "COMPLETE_DATA_SUMMARY.md",
+      "path": "COMPLETE_DATA_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/COMPLETE_DATA_SUMMARY.md",
+      "size": 4931,
+      "modified": "2025-06-01T16:53:47.838073",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "PRODUCTION_READY_SUMMARY.md",
+      "path": "PRODUCTION_READY_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/PRODUCTION_READY_SUMMARY.md",
+      "size": 4945,
+      "modified": "2025-06-01T07:44:11.811730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README_DM_SUITE_2025.md",
+      "path": "README_DM_SUITE_2025.md",
+      "full_path": "/workspaces/sugarglitch-realops/README_DM_SUITE_2025.md",
+      "size": 1657,
+      "modified": "2025-06-01T07:44:11.813730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "SETUP_PROXY_MANAGER_SUCCESS_20250529.md",
+      "path": "SETUP_PROXY_MANAGER_SUCCESS_20250529.md",
+      "full_path": "/workspaces/sugarglitch-realops/SETUP_PROXY_MANAGER_SUCCESS_20250529.md",
+      "size": 1358,
+      "modified": "2025-06-01T07:44:11.813730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "PROJECT_INSPECTION_COMPLETE.md",
+      "path": "PROJECT_INSPECTION_COMPLETE.md",
+      "full_path": "/workspaces/sugarglitch-realops/PROJECT_INSPECTION_COMPLETE.md",
+      "size": 0,
+      "modified": "2025-06-01T08:10:54.077625",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "PASSWORD_SECURITY_UPDATE.md",
+      "path": "PASSWORD_SECURITY_UPDATE.md",
+      "full_path": "/workspaces/sugarglitch-realops/PASSWORD_SECURITY_UPDATE.md",
+      "size": 6655,
+      "modified": "2025-06-01T07:44:11.810730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "ADVANCED_SYSTEM_ENHANCEMENTS.md",
+      "path": "ADVANCED_SYSTEM_ENHANCEMENTS.md",
+      "full_path": "/workspaces/sugarglitch-realops/ADVANCED_SYSTEM_ENHANCEMENTS.md",
+      "size": 8458,
+      "modified": "2025-06-01T07:44:11.807730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "COOKIE_DATA_INTEGRATION.md",
+      "path": "COOKIE_DATA_INTEGRATION.md",
+      "full_path": "/workspaces/sugarglitch-realops/COOKIE_DATA_INTEGRATION.md",
+      "size": 3695,
+      "modified": "2025-06-01T07:44:11.807730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "backup_system_documentation.md",
+      "path": "backup_system_documentation.md",
+      "full_path": "/workspaces/sugarglitch-realops/backup_system_documentation.md",
+      "size": 3066,
+      "modified": "2025-06-01T07:44:11.827730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "EXTREME_SCRIPTS_INVENTORY_2025.md",
+      "path": "EXTREME_SCRIPTS_INVENTORY_2025.md",
+      "full_path": "/workspaces/sugarglitch-realops/EXTREME_SCRIPTS_INVENTORY_2025.md",
+      "size": 5208,
+      "modified": "2025-06-01T08:11:21.163624",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "PACKAGE_README.md",
+      "path": "PACKAGE_README.md",
+      "full_path": "/workspaces/sugarglitch-realops/PACKAGE_README.md",
+      "size": 1369,
+      "modified": "2025-06-01T07:44:11.810730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "QUICKSTART.md",
+      "path": "QUICKSTART.md",
+      "full_path": "/workspaces/sugarglitch-realops/QUICKSTART.md",
+      "size": 2794,
+      "modified": "2025-06-01T07:44:11.812730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "WORKSPACE_STRUCTURE_20250527_010636.md",
+      "path": "WORKSPACE_STRUCTURE_20250527_010636.md",
+      "full_path": "/workspaces/sugarglitch-realops/WORKSPACE_STRUCTURE_20250527_010636.md",
+      "size": 2663,
+      "modified": "2025-06-01T00:43:45.926014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "IMMEDIATE_ACTION_CHECKLIST.md",
+      "path": "IMMEDIATE_ACTION_CHECKLIST.md",
+      "full_path": "/workspaces/sugarglitch-realops/IMMEDIATE_ACTION_CHECKLIST.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.809730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "INSTAGRAM_DM_SUITE_2025_DOCS.md",
+      "path": "INSTAGRAM_DM_SUITE_2025_DOCS.md",
+      "full_path": "/workspaces/sugarglitch-realops/INSTAGRAM_DM_SUITE_2025_DOCS.md",
+      "size": 8562,
+      "modified": "2025-06-01T07:44:11.809730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "AUTO_SAVE_GUIDE.md",
+      "path": "AUTO_SAVE_GUIDE.md",
+      "full_path": "/workspaces/sugarglitch-realops/AUTO_SAVE_GUIDE.md",
+      "size": 4848,
+      "modified": "2025-06-01T08:22:15.619596",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "INSTAGRAM_LOGIN_DEBUG_SUMMARY.md",
+      "path": "INSTAGRAM_LOGIN_DEBUG_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/INSTAGRAM_LOGIN_DEBUG_SUMMARY.md",
+      "size": 4809,
+      "modified": "2025-06-01T07:44:11.809730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "EXTENSIONS_FIX_SUMMARY.md",
+      "path": "EXTENSIONS_FIX_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/EXTENSIONS_FIX_SUMMARY.md",
+      "size": 1796,
+      "modified": "2025-06-01T00:43:45.274014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "CODE_IMPROVEMENT_PLAN.md",
+      "path": "CODE_IMPROVEMENT_PLAN.md",
+      "full_path": "/workspaces/sugarglitch-realops/CODE_IMPROVEMENT_PLAN.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.807730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "PROJECT_DATABASE_COMPLETED.md",
+      "path": "PROJECT_DATABASE_COMPLETED.md",
+      "full_path": "/workspaces/sugarglitch-realops/PROJECT_DATABASE_COMPLETED.md",
+      "size": 5862,
+      "modified": "2025-06-01T07:44:11.812730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "COOKIE_EXTRACTION_GUIDE.md",
+      "path": "COOKIE_EXTRACTION_GUIDE.md",
+      "full_path": "/workspaces/sugarglitch-realops/COOKIE_EXTRACTION_GUIDE.md",
+      "size": 2446,
+      "modified": "2025-06-01T07:44:11.808730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "SYSTEM_COMPLETE_SUMMARY.md",
+      "path": "SYSTEM_COMPLETE_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/SYSTEM_COMPLETE_SUMMARY.md",
+      "size": 7149,
+      "modified": "2025-06-01T07:44:11.816730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "DATABASE_CATALOG.md",
+      "path": "DATABASE_CATALOG.md",
+      "full_path": "/workspaces/sugarglitch-realops/DATABASE_CATALOG.md",
+      "size": 8200,
+      "modified": "2025-06-01T20:34:20.906510",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "SQL_QUERY_EXAMPLES.md",
+      "path": "SQL_QUERY_EXAMPLES.md",
+      "full_path": "/workspaces/sugarglitch-realops/SQL_QUERY_EXAMPLES.md",
+      "size": 8206,
+      "modified": "2025-06-01T07:44:11.815730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "SQL_DATABASE_BENEFITS_GUIDE.md",
+      "path": "SQL_DATABASE_BENEFITS_GUIDE.md",
+      "full_path": "/workspaces/sugarglitch-realops/SQL_DATABASE_BENEFITS_GUIDE.md",
+      "size": 11940,
+      "modified": "2025-06-01T07:44:11.814730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "วิธีใช้_iPad.md",
+      "path": "วิธีใช้_iPad.md",
+      "full_path": "/workspaces/sugarglitch-realops/วิธีใช้_iPad.md",
+      "size": 1208,
+      "modified": "2025-06-01T07:44:13.341730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "CHANGELOG.md",
+      "path": "CHANGELOG.md",
+      "full_path": "/workspaces/sugarglitch-realops/CHANGELOG.md",
+      "size": 2311,
+      "modified": "2025-06-01T07:44:11.807730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "project_reorganization_plan.md",
+      "path": "project_reorganization_plan.md",
+      "full_path": "/workspaces/sugarglitch-realops/project_reorganization_plan.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:13.009730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "DM_EXTRACTOR_GUIDE.md",
+      "path": "DM_EXTRACTOR_GUIDE.md",
+      "full_path": "/workspaces/sugarglitch-realops/DM_EXTRACTOR_GUIDE.md",
+      "size": 6328,
+      "modified": "2025-06-01T07:44:11.808730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README_FLEMING_OPS.md",
+      "path": "README_FLEMING_OPS.md",
+      "full_path": "/workspaces/sugarglitch-realops/README_FLEMING_OPS.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.813730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "README.md",
+      "full_path": "/workspaces/sugarglitch-realops/README.md",
+      "size": 6863,
+      "modified": "2025-06-01T07:44:11.813730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "PROJECT_FILE_DOCUMENTATION.md",
+      "path": "PROJECT_FILE_DOCUMENTATION.md",
+      "full_path": "/workspaces/sugarglitch-realops/PROJECT_FILE_DOCUMENTATION.md",
+      "size": 2677867,
+      "modified": "2025-06-01T20:34:20.500510",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "utils/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/utils/README.md",
+      "size": 79,
+      "modified": "2025-06-01T00:43:46.398014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "fleming_deploy_package/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/fleming_deploy_package/README.md",
+      "size": 1307,
+      "modified": "2025-06-01T07:44:11.915730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "openai-example/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/openai-example/README.md",
+      "size": 0,
+      "modified": "2025-06-01T00:43:46.173014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "rapid_intel_whatilove1728_1748234852.md",
+      "path": "COMPLETE_SENSITIVE_REPORTS/rapid_intel_whatilove1728_1748234852.md",
+      "full_path": "/workspaces/sugarglitch-realops/COMPLETE_SENSITIVE_REPORTS/rapid_intel_whatilove1728_1748234852.md",
+      "size": 1439,
+      "modified": "2025-06-01T07:44:11.807730",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "README.md",
+      "path": "databases/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/databases/README.md",
+      "size": 155,
+      "modified": "2025-06-01T00:43:46.139014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "ALX_TRADING_COMPREHENSIVE_ANALYSIS_SUMMARY.md",
+      "path": "FINAL_REPORTS/ALX_TRADING_COMPREHENSIVE_ANALYSIS_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/FINAL_REPORTS/ALX_TRADING_COMPREHENSIVE_ANALYSIS_SUMMARY.md",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.809730",
+      "extension": ".md",
+      "category": "operations_reports"
+    },
+    {
+      "name": "README.md",
+      "path": "logs/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/logs/README.md",
+      "size": 1015,
+      "modified": "2025-06-01T07:44:11.950730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "IMPROVEMENT_SUMMARY.md",
+      "path": "docs/IMPROVEMENT_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/IMPROVEMENT_SUMMARY.md",
+      "size": 5187,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "PROJECT_MANAGEMENT_SUMMARY.md",
+      "path": "docs/PROJECT_MANAGEMENT_SUMMARY.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/PROJECT_MANAGEMENT_SUMMARY.md",
+      "size": 8104,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "CODE_IMPROVEMENT_PLAN_1.md",
+      "path": "docs/CODE_IMPROVEMENT_PLAN_1.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/CODE_IMPROVEMENT_PLAN_1.md",
+      "size": 13936,
+      "modified": "2025-06-01T00:43:46.139014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "IMPROVEMENT_SUMMARY_1.md",
+      "path": "docs/IMPROVEMENT_SUMMARY_1.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/IMPROVEMENT_SUMMARY_1.md",
+      "size": 5199,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "CODE_IMPROVEMENT_PLAN.md",
+      "path": "docs/CODE_IMPROVEMENT_PLAN.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/CODE_IMPROVEMENT_PLAN.md",
+      "size": 13924,
+      "modified": "2025-06-01T00:43:46.139014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "project_reorganization_plan_1.md",
+      "path": "docs/project_reorganization_plan_1.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/project_reorganization_plan_1.md",
+      "size": 2151,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "project_reorganization_plan.md",
+      "path": "docs/project_reorganization_plan.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/project_reorganization_plan.md",
+      "size": 2149,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "docs/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/README.md",
+      "size": 537,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README_1.md",
+      "path": "docs/README_1.md",
+      "full_path": "/workspaces/sugarglitch-realops/docs/README_1.md",
+      "size": 2263,
+      "modified": "2025-06-01T00:43:46.140014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "backups/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/backups/README.md",
+      "size": 123,
+      "modified": "2025-06-01T00:43:45.929014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "config/proxies/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/config/proxies/README.md",
+      "size": 264,
+      "modified": "2025-06-01T00:43:46.137014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "config/json/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/config/json/README.md",
+      "size": 636,
+      "modified": "2025-06-01T00:43:46.136014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "config/sessions/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/config/sessions/README.md",
+      "size": 573,
+      "modified": "2025-06-01T07:44:11.900730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "data/intelligence/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/data/intelligence/README.md",
+      "size": 1624,
+      "modified": "2025-06-01T07:44:11.903730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "data/instagram/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/data/instagram/README.md",
+      "size": 183,
+      "modified": "2025-06-01T00:43:46.138014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "data/sessions/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/data/sessions/README.md",
+      "size": 162,
+      "modified": "2025-06-01T07:44:11.903730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "data/extractions/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/data/extractions/README.md",
+      "size": 140,
+      "modified": "2025-06-01T07:44:11.903730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/database/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/database/README.md",
+      "size": 162,
+      "modified": "2025-06-01T00:43:46.196014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/core/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/core/README.md",
+      "size": 445,
+      "modified": "2025-06-01T00:43:46.194014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/proxies/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/proxies/README.md",
+      "size": 345,
+      "modified": "2025-06-01T00:43:46.379014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/instagram/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/instagram/README.md",
+      "size": 266,
+      "modified": "2025-06-01T00:43:46.376014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/extractors/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/extractors/README.md",
+      "size": 917,
+      "modified": "2025-06-01T00:43:46.373014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/examples/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/examples/README.md",
+      "size": 3128,
+      "modified": "2025-06-01T00:43:46.196014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/sessions/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/sessions/README.md",
+      "size": 277,
+      "modified": "2025-06-01T07:44:13.129730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/telegram/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/telegram/README.md",
+      "size": 217,
+      "modified": "2025-06-01T00:43:46.379014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/browser/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/browser/README.md",
+      "size": 175,
+      "modified": "2025-06-01T00:43:46.194014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "scripts/utilities/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/scripts/utilities/README.md",
+      "size": 412,
+      "modified": "2025-06-01T00:43:46.381014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "content-1747891302967.md",
+      "path": "recovered_github/Python/attached_assets/content-1747891302967.md",
+      "full_path": "/workspaces/sugarglitch-realops/recovered_github/Python/attached_assets/content-1747891302967.md",
+      "size": 58,
+      "modified": "2025-05-24T20:05:46",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "recovered_github/Python/attached_assets/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/recovered_github/Python/attached_assets/README.md",
+      "size": 604,
+      "modified": "2025-05-24T20:05:46",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "recovered_github/Python/extracted_files/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/recovered_github/Python/extracted_files/README.md",
+      "size": 564,
+      "modified": "2025-05-24T20:05:46",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "recovered_github/Python/attached_assets/extracted_files_v3/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/recovered_github/Python/attached_assets/extracted_files_v3/README.md",
+      "size": 604,
+      "modified": "2025-05-24T20:05:46",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "media/screenshots/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/media/screenshots/README.md",
+      "size": 138,
+      "modified": "2025-06-01T07:44:11.954730",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "README.md",
+      "path": "media/extracted/README.md",
+      "full_path": "/workspaces/sugarglitch-realops/media/extracted/README.md",
+      "size": 139,
+      "modified": "2025-06-01T00:43:46.171014",
+      "extension": ".md",
+      "category": "documentation"
+    },
+    {
+      "name": "hybrid_extraction.db",
+      "path": "hybrid_extraction.db",
+      "full_path": "/workspaces/sugarglitch-realops/hybrid_extraction.db",
+      "size": 12288,
+      "modified": "2025-06-01T07:44:11.919730",
+      "extension": ".db",
+      "category": "other"
+    },
+    {
+      "name": "hardcore_extraction_2025.db",
+      "path": "hardcore_extraction_2025.db",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_extraction_2025.db",
+      "size": 16384,
+      "modified": "2025-06-01T08:28:39.169580",
+      "extension": ".db",
+      "category": "other"
+    },
+    {
+      "name": "ultimate_extraction_data.db",
+      "path": "ultimate_extraction_data.db",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_extraction_data.db",
+      "size": 16384,
+      "modified": "2025-06-01T08:06:18.944646",
+      "extension": ".db",
+      "category": "other"
+    },
+    {
+      "name": "instagram_dm_advanced_extraction_2025.py",
+      "path": "instagram_dm_advanced_extraction_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_dm_advanced_extraction_2025.py",
+      "size": 82660,
+      "modified": "2025-06-01T07:44:11.928730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "ultimate_extraction_suite_2025.py",
+      "path": "ultimate_extraction_suite_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_extraction_suite_2025.py",
+      "size": 13620,
+      "modified": "2025-06-01T07:44:13.219730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "hardcore_extraction_data.db",
+      "path": "hardcore_extraction_data.db",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_extraction_data.db",
+      "size": 20480,
+      "modified": "2025-06-01T08:08:18.956639",
+      "extension": ".db",
+      "category": "other"
+    },
+    {
+      "name": "extraction_master_controller.py",
+      "path": "extraction_master_controller.py",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_master_controller.py",
+      "size": 17605,
+      "modified": "2025-06-01T07:44:11.911730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "instagram_dm_extraction_integration_2025.py",
+      "path": "instagram_dm_extraction_integration_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_dm_extraction_integration_2025.py",
+      "size": 8651,
+      "modified": "2025-06-01T07:44:11.928730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "target_extraction_results.db",
+      "path": "target_extraction_results.db",
+      "full_path": "/workspaces/sugarglitch-realops/target_extraction_results.db",
+      "size": 0,
+      "modified": "2025-06-01T04:06:57.224895",
+      "extension": ".db",
+      "category": "other"
+    },
+    {
+      "name": "extraction_data.db",
+      "path": "extraction_data.db",
+      "full_path": "/workspaces/sugarglitch-realops/extraction_data.db",
+      "size": 16384,
+      "modified": "2025-06-01T07:32:45.514356",
+      "extension": ".db",
+      "category": "other"
+    },
+    {
+      "name": "cookie_extraction_tools.py",
+      "path": "cookie_extraction_tools.py",
+      "full_path": "/workspaces/sugarglitch-realops/cookie_extraction_tools.py",
+      "size": 9015,
+      "modified": "2025-06-01T07:44:11.900730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "tor_dm_extraction_1748779146.json",
+      "path": "tor_dm_extraction_1748779146.json",
+      "full_path": "/workspaces/sugarglitch-realops/tor_dm_extraction_1748779146.json",
+      "size": 145,
+      "modified": "2025-06-01T11:59:06.914517",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "dm_extraction_alx.trading_1926.json",
+      "path": "dm_extraction_alx.trading_1926.json",
+      "full_path": "/workspaces/sugarglitch-realops/dm_extraction_alx.trading_1926.json",
+      "size": 145,
+      "modified": "2025-06-01T11:34:51.113206",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "tor_dm_extraction_1748777878.json",
+      "path": "tor_dm_extraction_1748777878.json",
+      "full_path": "/workspaces/sugarglitch-realops/tor_dm_extraction_1748777878.json",
+      "size": 145,
+      "modified": "2025-06-01T11:37:58.404193",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "instagram_extraction_runner.py",
+      "path": "instagram_extraction_runner.py",
+      "full_path": "/workspaces/sugarglitch-realops/instagram_extraction_runner.py",
+      "size": 13825,
+      "modified": "2025-06-01T07:44:11.930730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "browser_dm_extraction_20250527_061035.log",
+      "path": "logs/browser_dm_extraction_20250527_061035.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/browser_dm_extraction_20250527_061035.log",
+      "size": 1290,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "dm_extraction_20250601_112936.log",
+      "path": "logs/dm_extraction_20250601_112936.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250601_112936.log",
+      "size": 2616,
+      "modified": "2025-06-01T11:29:41.886226",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "dm_extraction_20250527_060905.log",
+      "path": "logs/dm_extraction_20250527_060905.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250527_060905.log",
+      "size": 2341,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "browser_dm_extraction_20250527_060954.log",
+      "path": "logs/browser_dm_extraction_20250527_060954.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/browser_dm_extraction_20250527_060954.log",
+      "size": 1290,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "ultimate_extraction_1748237254.log",
+      "path": "logs/ultimate_extraction_1748237254.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/ultimate_extraction_1748237254.log",
+      "size": 2289,
+      "modified": "2025-06-01T07:44:11.952730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "master_stealth_extraction_20250527_062021.log",
+      "path": "logs/master_stealth_extraction_20250527_062021.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/master_stealth_extraction_20250527_062021.log",
+      "size": 2852,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "ultimate_extraction_1748237114.log",
+      "path": "logs/ultimate_extraction_1748237114.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/ultimate_extraction_1748237114.log",
+      "size": 2289,
+      "modified": "2025-06-01T07:44:11.952730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "ultimate_extraction_1748237200.log",
+      "path": "logs/ultimate_extraction_1748237200.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/ultimate_extraction_1748237200.log",
+      "size": 2289,
+      "modified": "2025-06-01T07:44:11.952730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "browser_dm_extraction_20250527_061051.log",
+      "path": "logs/browser_dm_extraction_20250527_061051.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/browser_dm_extraction_20250527_061051.log",
+      "size": 1290,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "stealth_extraction_1748236864.log",
+      "path": "logs/stealth_extraction_1748236864.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/stealth_extraction_1748236864.log",
+      "size": 2812,
+      "modified": "2025-06-01T07:44:11.952730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "production_extraction_1748236642.log",
+      "path": "logs/production_extraction_1748236642.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/production_extraction_1748236642.log",
+      "size": 2178,
+      "modified": "2025-06-01T07:44:11.952730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "ultimate_extraction_1748237083.log",
+      "path": "logs/ultimate_extraction_1748237083.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/ultimate_extraction_1748237083.log",
+      "size": 2289,
+      "modified": "2025-06-01T07:44:11.952730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "browser_dm_extraction_20250601_113150.log",
+      "path": "logs/browser_dm_extraction_20250601_113150.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/browser_dm_extraction_20250601_113150.log",
+      "size": 3092,
+      "modified": "2025-06-01T11:32:55.765213",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "stealth_extraction_1748236832.log",
+      "path": "logs/stealth_extraction_1748236832.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/stealth_extraction_1748236832.log",
+      "size": 2827,
+      "modified": "2025-06-01T07:44:11.952730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "dm_extraction_20250527_060841.log",
+      "path": "logs/dm_extraction_20250527_060841.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250527_060841.log",
+      "size": 2341,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "master_stealth_extraction_20250601_112916.log",
+      "path": "logs/master_stealth_extraction_20250601_112916.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/master_stealth_extraction_20250601_112916.log",
+      "size": 3055,
+      "modified": "2025-06-01T11:29:40.289227",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "production_extraction_1748236593.log",
+      "path": "logs/production_extraction_1748236593.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/production_extraction_1748236593.log",
+      "size": 2179,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "browser_dm_extraction_20250527_061113.log",
+      "path": "logs/browser_dm_extraction_20250527_061113.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/browser_dm_extraction_20250527_061113.log",
+      "size": 753,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "dm_extraction_20250527_060921.log",
+      "path": "logs/dm_extraction_20250527_060921.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250527_060921.log",
+      "size": 2341,
+      "modified": "2025-06-01T07:44:11.951730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "simple_dm_extraction_20250527_061352.log",
+      "path": "logs/simple_dm_extraction_20250527_061352.log",
+      "full_path": "/workspaces/sugarglitch-realops/logs/simple_dm_extraction_20250527_061352.log",
+      "size": 1615,
+      "modified": "2025-06-01T07:44:11.952730",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "instagram_extraction_whatilove1728_20250526_043438.json",
+      "path": "data/intelligence/instagram_extraction_whatilove1728_20250526_043438.json",
+      "full_path": "/workspaces/sugarglitch-realops/data/intelligence/instagram_extraction_whatilove1728_20250526_043438.json",
+      "size": 777,
+      "modified": "2025-06-01T07:44:11.903730",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "alternative_extraction.json",
+      "path": "media/extracted/whatilove1728_extracted_images/metadata/alternative_extraction.json",
+      "full_path": "/workspaces/sugarglitch-realops/media/extracted/whatilove1728_extracted_images/metadata/alternative_extraction.json",
+      "size": 12881,
+      "modified": "2025-06-01T00:43:46.171014",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "real_instagram_operations.py",
+      "path": "real_instagram_operations.py",
+      "full_path": "/workspaces/sugarglitch-realops/real_instagram_operations.py",
+      "size": 12609,
+      "modified": "2025-06-01T11:05:16.720752",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "execute_real_operations.py",
+      "path": "execute_real_operations.py",
+      "full_path": "/workspaces/sugarglitch-realops/execute_real_operations.py",
+      "size": 17001,
+      "modified": "2025-06-01T11:20:29.660263",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "ultra_simple_real_operations.log",
+      "path": "ultra_simple_real_operations.log",
+      "full_path": "/workspaces/sugarglitch-realops/ultra_simple_real_operations.log",
+      "size": 0,
+      "modified": "2025-06-01T09:38:39.907096",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "target_operations.db",
+      "path": "target_operations.db",
+      "full_path": "/workspaces/sugarglitch-realops/target_operations.db",
+      "size": 32768,
+      "modified": "2025-06-01T14:35:24.117627",
+      "extension": ".db",
+      "category": "other"
+    },
+    {
+      "name": "no_mockup_real_operations.py",
+      "path": "no_mockup_real_operations.py",
+      "full_path": "/workspaces/sugarglitch-realops/no_mockup_real_operations.py",
+      "size": 36505,
+      "modified": "2025-06-01T09:38:21.781096",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "no_mockup_real_operations.log",
+      "path": "no_mockup_real_operations.log",
+      "full_path": "/workspaces/sugarglitch-realops/no_mockup_real_operations.log",
+      "size": 0,
+      "modified": "2025-06-01T09:34:20.468105",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "automated_operations.py",
+      "path": "automated_operations.py",
+      "full_path": "/workspaces/sugarglitch-realops/automated_operations.py",
+      "size": 13821,
+      "modified": "2025-06-01T07:44:11.826730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "focused_target_operations.py",
+      "path": "focused_target_operations.py",
+      "full_path": "/workspaces/sugarglitch-realops/focused_target_operations.py",
+      "size": 10015,
+      "modified": "2025-06-01T12:04:07.748532",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "master_real_operations_2025.py",
+      "path": "master_real_operations_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/master_real_operations_2025.py",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.953730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "master_fleming_operations_2025.py",
+      "path": "master_fleming_operations_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/master_fleming_operations_2025.py",
+      "size": 0,
+      "modified": "2025-06-01T07:44:11.953730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "real_operations_data.db",
+      "path": "real_operations_data.db",
+      "full_path": "/workspaces/sugarglitch-realops/real_operations_data.db",
+      "size": 16384,
+      "modified": "2025-06-01T09:34:33.260104",
+      "extension": ".db",
+      "category": "other"
+    },
+    {
+      "name": "improved_real_operations.py",
+      "path": "improved_real_operations.py",
+      "full_path": "/workspaces/sugarglitch-realops/improved_real_operations.py",
+      "size": 14681,
+      "modified": "2025-06-01T11:27:00.397237",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "no_mockup_real_operations_1748770226.log",
+      "path": "hardcore_results/no_mockup_real_operations_1748770226.log",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_results/no_mockup_real_operations_1748770226.log",
+      "size": 234,
+      "modified": "2025-06-01T09:30:31.409113",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "no_mockup_real_operations_1748770279.log",
+      "path": "hardcore_results/no_mockup_real_operations_1748770279.log",
+      "full_path": "/workspaces/sugarglitch-realops/hardcore_results/no_mockup_real_operations_1748770279.log",
+      "size": 234,
+      "modified": "2025-06-01T09:31:24.760111",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "master_operations_MASTER_OP_1748810118.log",
+      "path": "master_operations_results_20250601_203518/master_operations_MASTER_OP_1748810118.log",
+      "full_path": "/workspaces/sugarglitch-realops/master_operations_results_20250601_203518/master_operations_MASTER_OP_1748810118.log",
+      "size": 3258,
+      "modified": "2025-06-01T20:35:18.467506",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "master_operations_MASTER_OP_1748810268.log",
+      "path": "master_operations_results_20250601_203748/master_operations_MASTER_OP_1748810268.log",
+      "full_path": "/workspaces/sugarglitch-realops/master_operations_results_20250601_203748/master_operations_MASTER_OP_1748810268.log",
+      "size": 8200,
+      "modified": "2025-06-01T20:37:48.070496",
+      "extension": ".log",
+      "category": "other"
+    },
+    {
+      "name": "real_operations_realops_1748777047.json",
+      "path": "results/real_operations_realops_1748777047.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/real_operations_realops_1748777047.json",
+      "size": 2170,
+      "modified": "2025-06-01T11:24:48.309246",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "real_operations_realops_1748777102.json",
+      "path": "results/real_operations_realops_1748777102.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/real_operations_realops_1748777102.json",
+      "size": 2171,
+      "modified": "2025-06-01T11:25:43.467242",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "real_operations_realops_1748776585.json",
+      "path": "results/real_operations_realops_1748776585.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/real_operations_realops_1748776585.json",
+      "size": 337,
+      "modified": "2025-06-01T11:16:25.476280",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "improved_operations_improved_realops_1748777225.json",
+      "path": "results/improved_operations_improved_realops_1748777225.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/improved_operations_improved_realops_1748777225.json",
+      "size": 2121,
+      "modified": "2025-06-01T11:27:15.102236",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "real_operations_realops_1748776724.json",
+      "path": "results/real_operations_realops_1748776724.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/real_operations_realops_1748776724.json",
+      "size": 338,
+      "modified": "2025-06-01T11:18:45.068270",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "real_operations_realops_1748776512.json",
+      "path": "results/real_operations_realops_1748776512.json",
+      "full_path": "/workspaces/sugarglitch-realops/results/real_operations_realops_1748776512.json",
+      "size": 337,
+      "modified": "2025-06-01T11:15:12.328285",
+      "extension": ".json",
+      "category": "json_reports"
+    },
+    {
+      "name": "ultimate_hacker_suite_2025.py",
+      "path": "ultimate_hacker_suite_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_hacker_suite_2025.py",
+      "size": 22490,
+      "modified": "2025-06-01T07:44:13.234730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "ultimate_hacker_toolkit_2025.py",
+      "path": "ultimate_hacker_toolkit_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_hacker_toolkit_2025.py",
+      "size": 30533,
+      "modified": "2025-06-01T07:44:13.235730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "ultra_optimized_hacker_toolkit_v2.py",
+      "path": "ultra_optimized_hacker_toolkit_v2.py",
+      "full_path": "/workspaces/sugarglitch-realops/ultra_optimized_hacker_toolkit_v2.py",
+      "size": 43991,
+      "modified": "2025-06-01T07:44:13.294730",
+      "extension": ".py",
+      "category": "other"
+    },
+    {
+      "name": "ultimate_instagram_hacker_suite_2025.py",
+      "path": "ultimate_instagram_hacker_suite_2025.py",
+      "full_path": "/workspaces/sugarglitch-realops/ultimate_instagram_hacker_suite_2025.py",
+      "size": 30611,
+      "modified": "2025-06-01T07:44:13.252730",
+      "extension": ".py",
+      "category": "other"
+    }
+  ]
+}

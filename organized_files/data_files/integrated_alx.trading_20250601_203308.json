@@ -1,0 +1,460 @@
+{
+  "username": "alx.trading",
+  "data_sources": [
+    "COMPLETE_DATABASE_EXTRACT_20250601_165226.json",
+    "SpiderFoot 2.json",
+    "SpiderFoot.json",
+    "TARGET_alx.trading_20250601_165226.json",
+    "data_recovery_report_20250601_135242.json",
+    "tor_dm_extraction_1748779146.json",
+    "dm_extraction_alx.trading_1926.json",
+    "data_recovery_report_20250601_135126.json",
+    "tor_dm_extraction_1748777878.json",
+    "WORKSPACE_STRUCTURE_20250527_010636.json",
+    "integrated_targets_2025.db",
+    "ultra_simple_real_data.db",
+    "instagram_sessions_2025.db",
+    "extraction_data.db",
+    "focused_target_results.db",
+    "real_operations_data.db",
+    "enhanced_sessions_2025.db",
+    "instagram_analysis_1748774498.sqlite",
+    "advanced_dm_database_1748742706.sqlite",
+    "tor_dm_extraction_1748779146.json",
+    "dm_extraction_alx.trading_1926.json",
+    "tor_dm_extraction_1748777878.json",
+    "tor_dm_extraction_1748779146.json",
+    "dm_extraction_alx.trading_1926.json",
+    "tor_dm_extraction_1748777878.json"
+  ],
+  "conversations": [
+    {
+      "source_path": "tables.extracted_data.data[0]",
+      "timestamp": "2025-06-01 09:38:42",
+      "participants": [],
+      "messages": []
+    }
+  ],
+  "media_items": [
+    {
+      "source_path": "extracted_data[1].parsed_content.methods_used[1]",
+      "type": "unknown",
+      "url": "https://i.instagram.com/api/v1/users/whatilove1728/usernameinfo/",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[2].parsed_content.cross_platform_results.platforms_checked.pinterest.profiles_found[0]",
+      "type": "unknown",
+      "url": "https://www.pinterest.com/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[2].parsed_content.cross_platform_results.platforms_checked.pinterest.profiles_found[1]",
+      "type": "unknown",
+      "url": "https://www.pinterest.com/whatilove1728_",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[2].parsed_content.cross_platform_results.platforms_checked.pinterest.profiles_found[2]",
+      "type": "unknown",
+      "url": "https://www.pinterest.com/_whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[2].parsed_content.cross_platform_results.platforms_checked.pinterest.profiles_found[3]",
+      "type": "unknown",
+      "url": "https://www.pinterest.com/whatilove17281",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[2].parsed_content.cross_platform_results.platforms_checked.pinterest.profiles_found[4]",
+      "type": "unknown",
+      "url": "https://www.pinterest.com/whatilove17282",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[2].parsed_content.cross_platform_results.platforms_checked.telegram.profiles_found[0]",
+      "type": "unknown",
+      "url": "https://t.me/whatilove1728_",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[2].parsed_content.cross_platform_results.platforms_checked.telegram.profiles_found[1]",
+      "type": "unknown",
+      "url": "https://t.me/_whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[4].parsed_content.results.methods_used[1].platforms_found[0]",
+      "type": "unknown",
+      "url": "https://twitter.com/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[4].parsed_content.results.methods_used[1].platforms_found[1]",
+      "type": "unknown",
+      "url": "https://tiktok.com/@whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[4].parsed_content.results.methods_used[1].platforms_found[2]",
+      "type": "unknown",
+      "url": "https://pinterest.com/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[0].endpoints_tested[0]",
+      "type": "unknown",
+      "url": "https://www.instagram.com/api/v1/users/whatilove1728/info/",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[0].endpoints_tested[1]",
+      "type": "unknown",
+      "url": "https://www.instagram.com/api/v1/users/web_profile_info/?username=whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[0].endpoints_tested[2]",
+      "type": "unknown",
+      "url": "https://www.instagram.com/whatilove1728/?__a=1&__d=dis",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[0].endpoints_tested[3]",
+      "type": "unknown",
+      "url": "https://i.instagram.com/api/v1/users/whatilove1728/",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[0].endpoints_tested[4]",
+      "type": "unknown",
+      "url": "https://i.instagram.com/api/v1/users/web_profile_info/?username=whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[0].endpoints_tested[5]",
+      "type": "unknown",
+      "url": "https://www.instagram.com/web/search/topsearch/?query=whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[0].endpoints_tested[6]",
+      "type": "unknown",
+      "url": "https://graph.instagram.com/whatilove1728?fields=id,username,account_type,media_count",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[0].endpoints_tested[7]",
+      "type": "unknown",
+      "url": "https://www.instagram.com/whatilove1728/channel/?__a=1",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[3].cache_sources[0]",
+      "type": "unknown",
+      "url": "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[3].cache_sources[1]",
+      "type": "unknown",
+      "url": "https://www.google.com/search?q=site:instagram.com+whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[3].cache_sources[2]",
+      "type": "unknown",
+      "url": "https://www.bing.com/search?q=site:instagram.com+whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[3].cache_sources[3]",
+      "type": "unknown",
+      "url": "https://duckduckgo.com/?q=site:instagram.com+whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[3].cache_sources[4]",
+      "type": "unknown",
+      "url": "https://archive.org/wayback/available?url=https://www.instagram.com/whatilove1728/",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[3].cache_sources[5]",
+      "type": "unknown",
+      "url": "https://yandex.com/search/?text=site:instagram.com+whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[4].platforms_checked[0]",
+      "type": "unknown",
+      "url": "https://youtube.com/c/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[4].platforms_checked[3]",
+      "type": "unknown",
+      "url": "https://linkedin.com/in/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[4].platforms_checked[4]",
+      "type": "unknown",
+      "url": "https://facebook.com/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[4].platforms_checked[5]",
+      "type": "unknown",
+      "url": "https://github.com/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[4].platforms_checked[6]",
+      "type": "unknown",
+      "url": "https://reddit.com/u/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[4].platforms_checked[7]",
+      "type": "unknown",
+      "url": "https://snapchat.com/add/whatilove1728",
+      "dimensions": {},
+      "caption": null
+    },
+    {
+      "source_path": "extracted_data[6].parsed_content.bypass_methods_used[4].platforms_checked[9]",
+      "type": "unknown",
+      "url": "https://whatilove1728.tumblr.com",
+      "dimensions": {},
+      "caption": null
+    }
+  ],
+  "profile_data": {
+    "user123": {
+      "username": "user123",
+      "user_id": 194,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "member1": {
+      "username": "member1",
+      "user_id": 195,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "contact456": {
+      "username": "contact456",
+      "user_id": 196,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "target_user123": {
+      "username": "target_user123",
+      "user_id": 197,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "test_account": {
+      "username": "test_account",
+      "user_id": 198,
+      "full_name": "Test Account",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "sugarglitch_ops": {
+      "username": "sugarglitch_ops",
+      "user_id": 199,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "image": {
+      "username": "image",
+      "user_id": 200,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "images": {
+      "username": "images",
+      "user_id": 201,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "enhanced": {
+      "username": "enhanced",
+      "user_id": 202,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "osint": {
+      "username": "osint",
+      "user_id": 203,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "system_analysis": {
+      "username": "system_analysis",
+      "user_id": 204,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "test_user_1": {
+      "username": "test_user_1",
+      "user_id": 205,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "test_user_2": {
+      "username": "test_user_2",
+      "user_id": 206,
+      "full_name": "",
+      "bio": "",
+      "follower_count": 0,
+      "following_count": 0,
+      "profile_pic_url": "",
+      "is_verified": 0,
+      "is_private": 0
+    },
+    "alx.trading": {
+      "username": "alx.trading",
+      "user_id": 207,
+      "full_name": "ALX Trading Solutions",
+      "bio": "Professional Trading & Investment Solutions | DM for consultations",
+      "follower_count": 12847,
+      "following_count": 234,
+      "profile_pic_url": "https://instagram.com/alx.trading/profile.jpg",
+      "is_verified": 1
+    },
+    "whatilove1728": {
+      "username": "whatilove1728",
+      "user_id": 213,
+      "full_name": "Private User",
+      "bio": "Private account",
+      "follower_count": 1847,
+      "following_count": 892,
+      "profile_pic_url": "https://instagram.com/whatilove1728/profile.jpg",
+      "is_private": 1
+    },
+    "whatilove1728_": {
+      "username": "whatilove1728_"
+    },
+    "_whatilove1728": {
+      "username": "_whatilove1728"
+    },
+    "whatilove17281": {
+      "username": "whatilove17281"
+    },
+    "whatilove17282": {
+      "username": "whatilove17282"
+    },
+    "instagram.com/whatilove1728": {
+      "username": "instagram.com/whatilove1728",
+      "full_name": "JS'+l+'"
+    },
+    "user_0": {
+      "username": "user_0",
+      "user_id": 2
+    }
+  },
+  "timeline": [],
+  "relationships": [],
+  "statistics": {
+    "total_conversations": 1,
+    "total_messages": 0,
+    "total_media": 32,
+    "date_range": {
+      "earliest": null,
+      "latest": null
+    }
+  }
+}

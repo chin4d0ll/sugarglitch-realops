@@ -1,0 +1,15 @@
+{
+  "scan_date": "2025-06-01T20:37:59.408103",
+  "total_files": 273,
+  "total_size_mb": 8.413390159606934,
+  "categories_count": 7,
+  "category_breakdown": {
+    "extraction_reports": 36,
+    "operations_reports": 67,
+    "hacker_reports": 5,
+    "instagram_reports": 7,
+    "other": 64,
+    "json_reports": 17,
+    "documentation": 77
+  }
+}

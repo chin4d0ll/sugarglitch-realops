@@ -1,0 +1,17 @@
+{
+  "timestamp": "20250529_151353",
+  "target_username": "alx.trading",
+  "target_accounts": [
+    "alx.trading",
+    "whatilove1728"
+  ],
+  "proxy_tests": {
+    "mobile": false,
+    "residential": false
+  },
+  "login_attempts": {
+    "no_proxy": false
+  },
+  "profile_extractions": {},
+  "success": false
+}

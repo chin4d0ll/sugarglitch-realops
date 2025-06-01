@@ -1,0 +1,15 @@
+{
+  "start_time": "2025-06-01T11:18:44.854999",
+  "operations": [],
+  "statistics": {
+    "total_requests": 0,
+    "successful_requests": 0,
+    "failed_requests": 0,
+    "rate_limit_hits": 0,
+    "proxy_switches": 0,
+    "data_extracted": 0
+  },
+  "targets": [],
+  "end_time": "2025-06-01T11:18:45.069877",
+  "total_duration": 0.214878
+}
