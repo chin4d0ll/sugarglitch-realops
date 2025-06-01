@@ -28,6 +28,19 @@ from pathlib import Path
 from typing import Dict, List, Optional, Any
 import uuid
 
+# Selenium imports
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options as ChromeOptions
+from selenium.webdriver.firefox.options import Options as FirefoxOptions
+from selenium.common.exceptions import (
+    TimeoutException, NoSuchElementException, WebDriverException,
+    ElementClickInterceptedException, StaleElementReferenceException
+)
+
 # Import advanced stealth libraries
 try:
     import undetected_chromedriver as uc

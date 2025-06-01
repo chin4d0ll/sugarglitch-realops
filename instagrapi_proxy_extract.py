@@ -18,8 +18,9 @@ try:
     cl.set_proxy(proxy_str)
     print(f"[DEBUG] Using Proxy Manager: {proxy_str}")
     cl.login(IG_USERNAME, IG_PASSWORD)
+    user_info = cl.user_info_by_username(TARGET_USERNAME)
     print(f"[INFO] Extracted data for {TARGET_USERNAME}:")
-    print(user_info.dict())
+    print(user_info.dict() if hasattr(user_info, 'dict') else user_info)
 except Exception as e:
     print(f"[ERROR] Proxy Manager failed: {proxy_str} => {e}")
 else:

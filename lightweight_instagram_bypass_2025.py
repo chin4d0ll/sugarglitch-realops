@@ -341,8 +341,6 @@ class InstagramPrivateBypassLite:
         """
         📊 สร้าง report แบบ lightweight
         """
-        global TOTAL_REQUESTS, SUCCESS_COUNT, TOTAL_METHODS, SUCCESS_METHODS, START_TIME
-        
         end_time = datetime.now()
         start_time = datetime.fromisoformat(self.results['start_time'])
         duration = (end_time - start_time).total_seconds()
