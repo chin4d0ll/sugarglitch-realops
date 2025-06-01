@@ -103,51 +103,40 @@ class PenetrationTestDB:
         print("✅ สร้างตารางทั้งหมดเรียบร้อย!")
     
     def insert_sample_data(self):
-        """ใส่ข้อมูลตัวอย่าง"""
-        print("📝 ใส่ข้อมูลตัวอย่าง...")
-        
-        # Sample targets
-        targets = [
-            ('Google DNS', 'ip', '8.8.8.8', 1, 'completed'),
-            ('Test Website', 'url', 'https://httpbin.org', 2, 'pending'),
-            ('Instagram User', 'username', 'testuser', 1, 'scanning'),
-            ('Facebook', 'domain', 'facebook.com', 3, 'failed'),
-            ('Local Server', 'ip', '192.168.1.1', 2, 'completed')
-        ]
-        
-        for target in targets:
-            self.conn.execute('''
-            INSERT INTO targets (target_name, target_type, target_value, priority, status)
-            VALUES (?, ?, ?, ?, ?)
-            ''', target)
-        
-        # Sample proxy sessions
-        proxies = [
-            ('203.142.71.13', 3128, 'http', 'active', 150.5, 0.95, 25, 'TH', 'ProxyProvider1'),
-            ('45.76.97.109', 8080, 'http', 'active', 89.2, 0.88, 12, 'US', 'ProxyProvider2'),
-            ('178.128.83.165', 1080, 'socks5', 'blocked', 0, 0.0, 0, 'SG', 'ProxyProvider3'),
-            ('134.209.29.120', 3128, 'https', 'active', 234.1, 0.76, 8, 'DE', 'ProxyProvider4')
-        ]
-        
-        for proxy in proxies:
-            self.conn.execute('''
-            INSERT INTO proxy_sessions (proxy_ip, proxy_port, proxy_type, status, 
-                                      response_time, success_rate, used_count, country, provider)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', proxy)
-        
-        # Sample extracted data
-        sample_extracts = [
-            (1, 'network', '{"open_ports": [53, 443], "services": {"53": "DNS", "443": "HTTPS"}}', 'nmap', 0.9),
-            (3, 'osint', '{"platforms": ["instagram", "facebook", "twitter"], "risk_score": 65}', 'social_scan', 0.8),
-            (5, 'vulnerability', '{"vulns": ["weak_ssl"], "severity": "medium"}', 'ssl_scan', 0.7)
-        ]
-        
-        for extract in sample_extracts:
-            self.conn.execute('''
-            INSERT INTO extracted_data (target_id, data_type, data_content, extraction_method, confidence_score)
-            VALUES (?, ?, ?, ?, ?)
-            ''', extract)
+        """ใส่ข้อมูลจริงจากฐานข้อมูล Master แทนข้อมูลตัวอย่าง"""
+        print("📝 ใส่ข้อมูลจริง...")
+        try:
+            from real_data_provider import get_real_targets, get_real_sessions
+            real_targets = get_real_targets()
+            for target in real_targets:
+                self.conn.execute('''
+                    INSERT INTO targets (target_name, target_type, target_value, priority, status)
+                    VALUES (?, ?, ?, ?, ?)
+                ''', (
+                    f"Instagram User: {target['username']}",
+                    'username',
+                    target['username'],
+                    1,
+                    target['status']
+                ))
+            real_sessions = get_real_sessions()
+            for session in real_sessions:
+                self.conn.execute('''
+                    INSERT INTO proxy_sessions (proxy_ip, proxy_port, proxy_type, status, response_time, success_rate, used_count, country, provider)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (
+                    '198.23.239.134',
+                    22225,
+                    'http',
+                    session['status'],
+                    100.0,
+                    0.95,
+                    10,
+                    'US',
+                    'BrightData'
+                ))
+        except Exception as e:
+            print(f"⚠️ ข้อผิดพลาดใส่ข้อมูลจริง: {e}")
         
         # Sample operation logs
         sample_logs = [
