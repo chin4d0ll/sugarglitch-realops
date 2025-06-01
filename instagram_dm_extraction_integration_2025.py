@@ -63,7 +63,7 @@ class ExtractorIntegration:
         pool_success = await self.session_pool.initialize_attack_pool()
         
         if pool_success:
-            initial_pool_size = self.session_pool.get_pool_size()
+            initial_pool_size = len(getattr(self.session_pool, 'sessions', []))
             print(f"✅ Session pool initialized with {initial_pool_size} sessions")
             self.integration_status['session_pool_size'] = initial_pool_size
         else:
