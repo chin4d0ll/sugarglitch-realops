@@ -113,8 +113,8 @@ Choose your tool:
 3. 🌐 Launch Web Dashboard (Real-time Interface)
 4. 🖥️ Launch Desktop GUI (Standalone App)
 5. 📊 Advanced OSINT Reconnaissance
-6. � Ultimate DM Extractor (Extract Direct Messages)
-7. �🚀 Master Orchestrator (All-in-One)
+6. 💬 Ultimate DM Extractor (Extract Direct Messages)
+7. 🚀 Master Orchestrator (All-in-One)
 8. 🔄 Batch Processing (Multiple Targets)
 9. 💾 Export & Reports Manager
 10. ⚙️ Configuration & Settings
@@ -452,12 +452,12 @@ Choose option (0-10): """)
                         await self.run_osint_reconnaissance(username)
                 
                 elif choice == "6":
-                    username = input("\n� Enter Instagram username for DM extraction: ").strip()
+                    username = input("\n💬 Enter Instagram username for DM extraction: ").strip()
                     if username:
                         await self.run_dm_extraction(username)
                 
                 elif choice == "7":
-                    username = input("\n�🚀 Enter Instagram username for complete analysis: ").strip()
+                    username = input("\n🚀 Enter Instagram username for complete analysis: ").strip()
                     if username:
                         await self.run_master_orchestrator(username)
                 
@@ -1147,6 +1147,30 @@ Created by: น้องจิน (chin4d0ll) ♥️
             
         except Exception as e:
             return {"error": f"Instagram filter detection failed: {str(e)}"}
+
+    async def run_dm_extraction(self, username):
+        """Run Ultimate DM extraction"""
+        print(f"\n💬 Starting Ultimate DM Extraction for: {username}")
+        
+        try:
+            dm_extractor = self.tools['dm_extractor']()
+            result = await dm_extractor.execute_dm_extraction(username)
+            
+            if result['success']:
+                print(f"\n✅ DM extraction completed successfully!")
+                print(f"📊 Threads found: {result['metrics']['threads_found']}")
+                print(f"💬 Messages extracted: {result['metrics']['messages_found']}")
+                print(f"📁 Report saved to: {result['report_file']}")
+                print(f"💾 JSON export: {result['json_file']}")
+                print(f"🗄️ Database: {result['database_file']}")
+            else:
+                print(f"❌ DM extraction failed: {result.get('error', 'Unknown error')}")
+            
+            return result
+            
+        except Exception as e:
+            print(f"❌ Error during DM extraction: {e}")
+            return None
 
 async def analyze_image(image_path):
     """Standalone function to analyze a single image"""

@@ -67,6 +67,22 @@ class UltimateVersionManager2025:
                     ],
                     "integration": "Complete ecosystem",
                     "output_formats": ["JSON", "HTML", "PDF"]
+                },
+                "ultimate_dm_extractor_integration_2025.py": {
+                    "version": "2025.1.0",
+                    "status": "NEW - Advanced DM Extraction",
+                    "description": "Ultimate DM extraction with stealth capabilities",
+                    "features": [
+                        "Advanced stealth session management",
+                        "SQLite database storage",
+                        "Real-time progress tracking",
+                        "Multi-format export (JSON, reports)",
+                        "Ethical compliance system",
+                        "Message pattern analysis",
+                        "Activity timeline tracking"
+                    ],
+                    "integration": "Multi-tool suite compatible",
+                    "demo_mode": "Simulation for testing"
                 }
             },
             "interface_tools": {
