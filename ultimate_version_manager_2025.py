@@ -413,6 +413,12 @@ python ultimate_instagram_gui_2025.py
 - **Memory Optimization:** {self.performance_stats['enhanced_bypass']['memory_optimization']}
 - **Speed Improvement:** {self.performance_stats['enhanced_bypass']['speed_improvement']}
 
+### DM Extractor Performance
+- **Success Rate:** {self.performance_stats['dm_extractor']['success_rate']}
+- **Average Time:** {self.performance_stats['dm_extractor']['average_time']}
+- **Stealth Rating:** {self.performance_stats['dm_extractor']['stealth_rating']}
+- **Message Accuracy:** {self.performance_stats['dm_extractor']['message_extraction_accuracy']}
+
 ## 🔧 Installation
 
 ```bash
