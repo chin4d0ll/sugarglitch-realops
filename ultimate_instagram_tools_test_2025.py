@@ -44,13 +44,13 @@ Run Date: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
 
     async def test_all_components(self):
         """Run tests on all components"""
-        await self.test_tools_availability()
-        await self.test_enhanced_bypass()
-        await self.test_image_analyzer()
-        await self.test_recon_suite()
-        await self.test_web_dashboard()
-        await self.test_multi_tool_suite()
-        await self.test_integration()
+        await self.run_test("Tools Availability", self.test_tools_availability)
+        await self.run_test("Enhanced Bypass", self.test_enhanced_bypass)
+        await self.run_test("Image Analyzer", self.test_image_analyzer)
+        await self.run_test("Recon Suite", self.test_recon_suite)
+        await self.run_test("Web Dashboard", self.test_web_dashboard)
+        await self.run_test("Multi-Tool Suite", self.test_multi_tool_suite)
+        await self.run_test("Integration", self.test_integration)
         
         self.report_results()
 
@@ -60,6 +60,7 @@ Run Date: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
         print("-" * 50)
         
         start_time = time.time()
+        result = None
         try:
             result = await test_function(*args)
             success = result.get("success", False)
@@ -85,9 +86,9 @@ Run Date: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
         # Record test result
         test_result = {
             "test_name": test_name,
-            "success": result.get("success", False),
+            "success": result.get("success", False) if result else False,
             "execution_time": f"{execution_time:.2f} seconds",
-            "details": result
+            "details": result if result else {"error": "Test returned no result"}
         }
         
         self.test_results.append(test_result)
@@ -436,14 +437,17 @@ Run Date: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
         timestamp = int(time.time())
         output_file = self.results_dir / f"test_results_{timestamp}.json"
         
+        total_tests = self.success_count + self.failure_count
+        success_rate = f"{self.success_count / total_tests * 100:.1f}%" if total_tests > 0 else "N/A"
+        
         report = {
             "timestamp": datetime.now().isoformat(),
             "version": self.version,
             "summary": {
-                "total_tests": self.success_count + self.failure_count,
+                "total_tests": total_tests,
                 "passed": self.success_count,
                 "failed": self.failure_count,
-                "success_rate": f"{self.success_count / (self.success_count + self.failure_count) * 100:.1f}%"
+                "success_rate": success_rate
             },
             "results": self.test_results
         }
