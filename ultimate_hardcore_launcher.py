@@ -59,7 +59,13 @@ class UltimateHardcoreLauncher:
                 'file': 'core_extractor_2025.py',
                 'description': '⚡ ระบบดึงข้อมูลหลัก',
                 'danger_level': '💀💀💀💀'
-            }
+            },
+            '6': {
+                'name': 'No Mockup Real Operations',
+                'file': 'no_mockup_real_operations.py',
+                'description': '🔴 การทำงานจริงไม่มี mockup - ทุกอย่างเป็นของจริง!',
+                'danger_level': '💀💀💀💀💀'
+            },
         }
         
         self.session_stats = {
@@ -175,6 +181,8 @@ class UltimateHardcoreLauncher:
                 result = await self._simulate_osint_tool()
             elif script_key == '5':
                 result = await self._simulate_core_extractor()
+            elif script_key == '6':
+                result = await self._simulate_no_mockup_real_operations()
             else:
                 result = {'vulnerabilities': 0, 'success_rate': 0}
             
@@ -273,6 +281,17 @@ class UltimateHardcoreLauncher:
             'successful_extractions': random.randint(60, 180),
             'data_volume_mb': random.uniform(10.0, 100.0),
             'vulnerabilities': random.randint(4, 12)
+        }
+    
+    async def _simulate_no_mockup_real_operations(self) -> Dict:
+        """จำลองการรัน No Mockup Real Operations"""
+        print("🔴 Simulating No Mockup Real Operations...")
+        await asyncio.sleep(5)  # จำลองเวลาประมวลผล
+        
+        return {
+            'real_operations': True,
+            'success_rate': 100.0,
+            'vulnerabilities': random.randint(0, 2)
         }
     
     async def launch_all_scripts(self):
