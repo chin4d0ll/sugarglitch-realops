@@ -98,37 +98,44 @@ class DatabaseIntegrator:
         
         for file_path in json_files:
             try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                
-                # Extract username from filename
-                filename = os.path.basename(file_path)
-                username = self._extract_username_from_filename(filename)
-                
-                if username:
-                    # Add user if not exists
-                    if not self.db_manager.get_user(username):
-                        self.db_manager.add_user(username)
+                # Use safe database operation
+                def import_single_file():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
                     
-                    # Process extraction session data
-                    if isinstance(data, dict):
-                        session_id = str(uuid.uuid4())
+                    # Extract username from filename
+                    filename = os.path.basename(file_path)
+                    username = self._extract_username_from_filename(filename)
+                    
+                    if username:
+                        # Add user if not exists
+                        if not self.db_manager.get_user(username):
+                            self.db_manager.add_user(username)
                         
-                        # Determine extraction type from filename
-                        extraction_type = self._determine_extraction_type(filename)
-                        
-                        self.db_manager.add_extraction_session(
-                            session_id=session_id,
-                            account_username="system",
-                            extraction_type=extraction_type,
-                            method="file_import",
-                            target_username=username,
-                            status="imported",
-                            config_data=json.dumps(data, default=str),
-                            notes=f"Imported from {filename}"
-                        )
-                        
-                        print(f"   ✅ Imported: {filename}")
+                        # Process extraction session data
+                        if isinstance(data, dict):
+                            session_id = str(uuid.uuid4())
+                            
+                            # Determine extraction type from filename
+                            extraction_type = self._determine_extraction_type(filename)
+                            
+                            self.db_manager.add_extraction_session(
+                                session_id=session_id,
+                                account_username="system",
+                                extraction_type=extraction_type,
+                                method="file_import",
+                                target_username=username,
+                                status="imported",
+                                config_data=json.dumps(data, default=str),
+                                notes=f"Imported from {filename}"
+                            )
+                    
+                    return True
+                
+                # Execute with retry logic
+                result = self.safe_database_operation(import_single_file)
+                if result:
+                    print(f"   ✅ Imported: {os.path.basename(file_path)}")
                 
             except Exception as e:
                 print(f"   ❌ Error importing {file_path}: {str(e)}")
