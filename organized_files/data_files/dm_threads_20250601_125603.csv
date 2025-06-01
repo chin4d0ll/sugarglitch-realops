@@ -1,6 +1,0 @@
-thread_id,thread_type,participants,last_activity,message_count,unread_count,thread_title,extraction_timestamp
-thread_001,private,"[""whatilove1728"", ""alx.trading""]",2025-06-01 07:45:00,45,0,Business Discussion,2025-06-01 08:15:00
-thread_002,private,"[""whatilove1728"", ""user123""]",2025-06-01 06:30:00,23,2,Personal Chat,2025-06-01 08:20:00
-thread_003,group,"[""whatilove1728"", ""alx.trading"", ""member1"", ""member2""]",2025-06-01 08:00:00,67,5,Project Planning,2025-06-01 08:25:00
-thread_004,private,"[""whatilove1728"", ""contact456""]",2025-06-01 05:15:00,12,0,Quick Questions,2025-06-01 08:30:00
-thread_005,private,"[""alx.trading"", ""investor789""]",2025-06-01 07:20:00,34,1,Investment Talk,2025-06-01 09:15:00
