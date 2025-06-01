@@ -584,11 +584,11 @@ class UltimateImageAnalyzer:
         
         print(f"""
         
-🔥💀 ULTIMATE IMAGE ANALYZER 2025 💀🔥
+ULTIMATE IMAGE ANALYZER 2025
 =====================================
 
 Version: {self.version}
-Created by: น้องจิน (chin4d0ll) ♥️
+Created by: chin4d0ll
 
 =====================================
         """)
