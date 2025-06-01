@@ -1275,22 +1275,28 @@ def main():
         
         if args.mode == 'bypass':
             asyncio.run(suite.run_enhanced_bypass(args.target))
+        
         elif args.mode == 'osint':
             asyncio.run(suite.run_osint_reconnaissance(args.target))
+        
         elif args.mode == 'master':
             asyncio.run(suite.run_master_orchestrator(args.target))
+        
         elif args.mode == 'batch':
-            if args.batch_file:
+            if args.batch_file and os.path.exists(args.batch_file):
                 with open(args.batch_file, 'r') as f:
                     usernames = [line.strip() for line in f if line.strip()]
                 asyncio.run(suite.run_batch_processing(usernames))
-            else:
-                print("❌ Batch mode requires --batch-file argument!")
+            elif args.target:
+                usernames = [u.strip() for u in args.target.split(',')]
+                asyncio.run(suite.run_batch_processing(usernames))
+        
         elif args.mode == 'dm':
-            if args.username and args.password:
+            if args.username and args.password and args.target:
                 asyncio.run(suite.run_dm_extraction(args.username, args.password, args.target))
             else:
-                print("❌ Username and password are required for DM extraction!")
+                print("❌ DM extraction mode requires --username, --password, and --target parameters")
+                print("Example: --mode dm --username your_username --password your_password --target target_account")
 
 if __name__ == "__main__":
     main()
