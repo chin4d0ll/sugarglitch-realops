@@ -12,7 +12,7 @@ import sqlite3
 from datetime import datetime
 
 # Import our arsenal modules
-from ninja_ultimate_tor_integration_2025 import TorIntegration
+from ninja_ultimate_tor_integration_2025 import UltimateTorIntegration
 from advanced_tor_circuit_control_2025 import AdvancedTorControl
 from ninja_proxy_rotation_2025 import ProxyHarvester
 from target_execution_system_2025 import (
@@ -41,7 +41,7 @@ class AutomatedTargetExecutor:
         print("=" * 60)
         
         # TOR Integration
-        tor_integration = TorIntegration()
+        tor_integration = UltimateTorIntegration()
         await tor_integration.initialize()
         
         # Advanced TOR Control
