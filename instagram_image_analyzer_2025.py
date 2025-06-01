@@ -1273,30 +1273,266 @@ Aspect Ratio: {self.results['metadata'].get('aspect_ratio', 'Unknown')}
         return report
 
 
+# === INTEGRATION FUNCTIONS ===
+
+def analyze_instagram_profile_images(username: str, max_images: int = 5) -> Dict[str, Any]:
+    """
+    🔗 Integration function for analyzing images from Instagram profile
+    
+    Args:
+        username: Instagram username
+        max_images: Maximum number of images to analyze
+        
+    Returns:
+        Combined analysis results
+    """
+    print(f"\n🔗 ANALYZING IMAGES FOR @{username}")
+    
+    analyzer = InstagramImageAnalyzer()
+    
+    # This would integrate with the Ultimate Instagram Private Viewer
+    # For now, return a template for integration
+    return {
+        'username': username,
+        'status': 'Ready for integration',
+        'note': 'This function will integrate with Ultimate Instagram Private Viewer results'
+    }
+
+def batch_analyze_from_file(file_path: str) -> List[Dict[str, Any]]:
+    """
+    📂 Batch analyze images from a file containing URLs
+    
+    Args:
+        file_path: Path to file containing image URLs (one per line)
+        
+    Returns:
+        List of analysis results
+    """
+    results = []
+    
+    try:
+        with open(file_path, 'r') as f:
+            urls = [line.strip() for line in f if line.strip()]
+            
+        print(f"📂 Processing {len(urls)} URLs from {file_path}")
+        
+        for i, url in enumerate(urls, 1):
+            print(f"  📊 Analyzing {i}/{len(urls)}: {url[:50]}...")
+            
+            analyzer = InstagramImageAnalyzer()
+            result = analyzer.analyze_from_url(url)
+            results.append(result)
+            
+            # Rate limiting
+            time.sleep(2)
+            
+    except Exception as e:
+        print(f"❌ Error processing file: {e}")
+        
+    return results
+
+# === MAIN EXECUTION ===
+
 def main():
-    """Main interactive function"""
+    """Enhanced main interactive function with advanced features"""
     print(GIRLY_BANNER)
     
     analyzer = InstagramImageAnalyzer()
     
+    # Show available features based on installed packages
+    print("\n🔧 AVAILABLE FEATURES:")
+    print(f"  • OpenCV Face Detection: {'✅ Available' if OPENCV_AVAILABLE else '❌ Not installed'}")
+    print(f"  • Face Recognition: {'✅ Available' if FACE_RECOGNITION_AVAILABLE else '❌ Not installed'}")
+    print("  • AI Analysis: ✅ Available")
+    print("  • Steganography Detection: ✅ Available")
+    print("  • Deepfake Indicators: ✅ Available")
+    print("  • Technical Forensics: ✅ Available")
+    
     while True:
-        print("\n💖 INSTAGRAM IMAGE ANALYZER 2025 MENU 💖")
-        print("1. 🚀 Analyze Image from URL")
+        print("\n💖 ENHANCED INSTAGRAM IMAGE ANALYZER 2025 MENU 💖")
+        print("1. 🚀 Analyze Single Image from URL")
+        print("2. 📂 Batch Analyze Multiple URLs")
+        print("3. 🔗 Integration with Instagram Tools")
+        print("4. 🎯 Quick Security Scan")
+        print("5. 📊 View Previous Analysis")
         print("0. 💔 Exit")
         
-        choice = input("\n💖 เลือกเมนู (0-1): ").strip()
+        choice = input("\n💖 เลือกเมนู (0-5): ").strip()
         
         try:
             if choice == '1':
                 image_url = input("🖼️ Instagram image URL: ").strip()
                 if image_url:
-                    analyzer.analyze_from_url(image_url)
+                    print(f"\n🚀 Starting comprehensive analysis...")
+                    results = analyzer.analyze_from_url(image_url)
                     
-                    # Show report
-                    print(analyzer.generate_report())
+                    if results.get('success'):
+                        # Show report
+                        print(analyzer.generate_report())
+                        
+                        # Offer to save report
+                        save_report = input("\n💾 Save report as text file? (y/n): ").strip().lower()
+                        if save_report in ['y', 'yes']:
+                            timestamp = int(time.time())
+                            url_hash = hashlib.md5(image_url.encode()).hexdigest()[:10]
+                            report_file = analyzer.output_dir / f"report_{url_hash}_{timestamp}.txt"
+                            
+                            with open(report_file, 'w', encoding='utf-8') as f:
+                                f.write(analyzer.generate_report())
+                            print(f"✅ Report saved: {report_file}")
+                    else:
+                        print(f"❌ Analysis failed: {results.get('error', 'Unknown error')}")
+                
+            elif choice == '2':
+                print("📂 BATCH ANALYSIS MODE")
+                urls_input = input("🔗 Enter URLs (comma-separated): ").strip()
+                
+                if urls_input:
+                    urls = [url.strip() for url in urls_input.split(',') if url.strip()]
+                    print(f"\n🚀 Starting batch analysis of {len(urls)} images...")
+                    
+                    batch_results = []
+                    for i, url in enumerate(urls, 1):
+                        print(f"\n📊 Analyzing image {i}/{len(urls)}: {url[:50]}...")
+                        analyzer = InstagramImageAnalyzer()  # Fresh instance for each
+                        result = analyzer.analyze_from_url(url)
+                        
+                        if result.get('success'):
+                            batch_results.append({
+                                'url': url,
+                                'risk_level': result.get('overall_assessment', {}).get('total_risk_level', 'Unknown'),
+                                'has_faces': result.get('face_analysis', {}).get('has_faces', False),
+                                'ai_generated': result.get('deepfake_indicators', {}).get('likely_ai_generated', False)
+                            })
+                        time.sleep(1)  # Rate limiting
+                    
+                    # Summary report
+                    print(f"\n📋 BATCH ANALYSIS SUMMARY")
+                    print(f"Total Images: {len(urls)}")
+                    print(f"Successfully Analyzed: {len(batch_results)}")
+                    
+                    high_risk = sum(1 for r in batch_results if r['risk_level'] == 'High')
+                    with_faces = sum(1 for r in batch_results if r['has_faces'])
+                    ai_generated = sum(1 for r in batch_results if r['ai_generated'])
+                    
+                    print(f"High Risk Images: {high_risk}")
+                    print(f"Images with Faces: {with_faces}")
+                    print(f"Possible AI Generated: {ai_generated}")
+                
+            elif choice == '3':
+                print("🔗 INTEGRATION WITH INSTAGRAM TOOLS")
+                print("1. Load from Ultimate Instagram Private Viewer results")
+                print("2. Load from Instagram OSINT results")
+                print("3. Export to Ultimate Hacker Suite")
+                
+                integration_choice = input("Choose integration (1-3): ").strip()
+                
+                if integration_choice == '1':
+                    # Look for recent Instagram extraction results
+                    results_files = list(Path('.').glob('instagram_private_viewer_*.json'))
+                    if results_files:
+                        latest_file = max(results_files, key=lambda f: f.stat().st_mtime)
+                        print(f"Found recent results: {latest_file}")
+                        
+                        try:
+                            with open(latest_file, 'r') as f:
+                                instagram_data = json.load(f)
+                                
+                            # Extract image URLs from Instagram data
+                            image_urls = []
+                            if 'profile_pic_url' in instagram_data:
+                                image_urls.append(instagram_data['profile_pic_url'])
+                            if 'posts' in instagram_data:
+                                for post in instagram_data['posts'][:5]:  # Limit to 5 recent
+                                    if 'image_url' in post:
+                                        image_urls.append(post['image_url'])
+                            
+                            if image_urls:
+                                print(f"Found {len(image_urls)} images to analyze")
+                                for url in image_urls[:3]:  # Analyze top 3
+                                    analyzer = InstagramImageAnalyzer()
+                                    analyzer.analyze_from_url(url)
+                                    print(f"✅ Analyzed: {url[:50]}...")
+                            else:
+                                print("No image URLs found in Instagram data")
+                                
+                        except Exception as e:
+                            print(f"❌ Error loading Instagram data: {e}")
+                    else:
+                        print("No Instagram extraction results found")
+                
+                elif integration_choice == '2':
+                    print("🔍 Integration with OSINT data coming soon...")
+                
+                elif integration_choice == '3':
+                    print("📤 Export functionality coming soon...")
+                
+            elif choice == '4':
+                print("🎯 QUICK SECURITY SCAN MODE")
+                image_url = input("🖼️ Image URL for security scan: ").strip()
+                
+                if image_url:
+                    analyzer = InstagramImageAnalyzer()
+                    
+                    # Quick scan - only security features
+                    image_data = analyzer.download_image(image_url)
+                    if image_data:
+                        print("🔍 Performing quick security scan...")
+                        
+                        # Security-focused analysis
+                        stego_results = analyzer.steganography_analysis(image_data)
+                        deepfake_results = analyzer.deepfake_indicators(image_data)
+                        forensics_results = analyzer.technical_forensics(image_data)
+                        
+                        print(f"\n🎯 QUICK SECURITY SCAN RESULTS")
+                        print(f"Steganography Risk: {stego_results.get('steganography_risk', 'Unknown')}")
+                        print(f"Deepfake Risk: {deepfake_results.get('deepfake_risk', 'Unknown')}")
+                        print(f"Editing Evidence: {'Yes' if forensics_results.get('likely_edited') else 'No'}")
+                        
+                        # Quick risk assessment
+                        risks = [
+                            stego_results.get('steganography_risk') == 'High',
+                            deepfake_results.get('deepfake_risk') == 'High',
+                            forensics_results.get('likely_edited')
+                        ]
+                        
+                        risk_count = sum(risks)
+                        if risk_count >= 2:
+                            print("⚠️ HIGH SECURITY RISK - Multiple indicators detected")
+                        elif risk_count == 1:
+                            print("⚠️ MEDIUM SECURITY RISK - Some indicators detected")
+                        else:
+                            print("✅ LOW SECURITY RISK - No major indicators")
+                
+            elif choice == '5':
+                print("📊 PREVIOUS ANALYSIS VIEWER")
+                analysis_files = list(analyzer.output_dir.glob('enhanced_analysis_*.json'))
+                
+                if analysis_files:
+                    print(f"Found {len(analysis_files)} previous analyses:")
+                    for i, file in enumerate(analysis_files[-5:], 1):  # Show last 5
+                        mtime = datetime.fromtimestamp(file.stat().st_mtime)
+                        print(f"{i}. {file.name} ({mtime.strftime('%Y-%m-%d %H:%M')})")
+                    
+                    file_choice = input("Enter number to view (or 0 to go back): ").strip()
+                    try:
+                        file_idx = int(file_choice) - 1
+                        if 0 <= file_idx < len(analysis_files[-5:]):
+                            selected_file = analysis_files[-(5-file_idx)]
+                            
+                            with open(selected_file, 'r') as f:
+                                old_results = json.load(f)
+                            
+                            analyzer.results = old_results
+                            print(analyzer.generate_report())
+                    except (ValueError, IndexError):
+                        if file_choice != '0':
+                            print("❌ Invalid selection")
+                else:
+                    print("No previous analyses found")
                 
             elif choice == '0':
-                print("👋 บาย! นะคะ ♥️")
+                print("👋 บาย! ขอบคุณที่ใช้ Enhanced Instagram Image Analyzer 2025 นะคะ ♥️")
                 break
                 
             else:
@@ -1307,6 +1543,8 @@ def main():
             break
         except Exception as e:
             print(f"❌ Error: {e}")
+            import traceback
+            traceback.print_exc()
 
 if __name__ == "__main__":
     main()
