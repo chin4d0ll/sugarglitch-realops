@@ -14,8 +14,8 @@ import os
 from typing import Dict, List, Optional
 import subprocess
 import smtplib
-from email.mime.text import MimeText
-from email.mime.multipart import MimeMultipart
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 
 class AutomatedOperationManager:
     def __init__(self, db_path: str = "project_realops.db"):
@@ -264,7 +264,7 @@ class AutomatedOperationManager:
             return
         
         try:
-            msg = MimeMultipart()
+            msg = MIMEMultipart()
             msg['From'] = self.config["notifications"]["smtp_username"]
             msg['Subject'] = f"[RealOps Alert] {subject}"
             
@@ -280,7 +280,7 @@ Details:
 This is an automated alert from the RealOps Operation Manager.
             """
             
-            msg.attach(MimeText(body, 'plain'))
+            msg.attach(MIMEText(body, 'plain'))
             
             server = smtplib.SMTP(
                 self.config["notifications"]["smtp_server"],
