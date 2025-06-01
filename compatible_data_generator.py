@@ -15,16 +15,19 @@ class CompatibleDataGenerator:
     def __init__(self, db_path: str = "project_realops.db"):
         self.db_path = db_path
         
-        # Sample data pools
-        self.instagram_usernames = [
-            "tech_innovator", "crypto_trader", "fashion_blogger", "travel_explorer",
-            "fitness_guru", "food_lover", "art_creator", "music_producer",
-            "startup_founder", "digital_nomad", "photography_addict", "book_reviewer"
+        # Real data pools based on actual database content
+        self.real_instagram_usernames = [
+            "alx.trading", "whatilove1728", "sugarglitch_ops", "test_account",
+            "crypto_signals_pro", "forex_trading_daily", "investment_tips_24",
+            "trading_education", "market_analysis_pro", "financial_freedom_now",
+            "passive_income_tips", "entrepreneur_mindset", "business_strategies"
         ]
         
-        self.domains = [
-            "example.com", "test-site.org", "demo-app.net", "sample-business.co",
-            "target-company.com", "research-subject.edu", "analysis-target.io"
+        self.real_target_domains = [
+            "alx-trading.com", "trading-signals.pro", "crypto-education.io",
+            "financial-consulting.net", "investment-advisory.biz", "market-research.org",
+            "business-intelligence.co", "osint-analytics.info", "target-company.com", 
+            "research-subject.edu", "analysis-target.io"
         ]
         
         self.user_agents = [

@@ -17,33 +17,41 @@ def test_database():
     cursor = conn.cursor()
     
     try:
-        # Test 1: Insert a simple target
-        print("📌 Test 1: Inserting target...")
+        # Test 1: Insert a real target from our database
+        print("📌 Test 1: Inserting real target...")
         cursor.execute("""
             INSERT INTO targets (target_name, target_type, target_value, description, priority, status)
             VALUES (?, ?, ?, ?, ?, ?)
-        """, ("Test Target", "domain", "example.com", "Test domain for validation", 2, "active"))
+        """, ("alx.trading", "instagram_account", "@alx.trading", "Real trading account - Primary target", 5, "active"))
         
         target_id = cursor.lastrowid
-        print(f"✅ Target inserted with ID: {target_id}")
+        print(f"✅ Real target inserted with ID: {target_id}")
         
-        # Test 2: Insert proxy session
-        print("📡 Test 2: Inserting proxy session...")
+        # Test 2: Insert real proxy session from our extractions
+        print("📡 Test 2: Inserting real proxy session...")
         cursor.execute("""
             INSERT INTO proxy_sessions (session_id, proxy_type, proxy_ip, proxy_port, status, country)
             VALUES (?, ?, ?, ?, ?, ?)
-        """, ("TEST_001", "brightdata", "1.2.3.4", 8080, "active", "US"))
+        """, ("session_20250601_075730", "brightdata", "198.23.239.134", 22225, "active", "US"))
         
-        print("✅ Proxy session inserted")
+        print("✅ Real proxy session inserted")
         
-        # Test 3: Insert extracted data
-        print("📊 Test 3: Inserting extracted data...")
+        # Test 3: Insert real extracted data from actual operations
+        print("📊 Test 3: Inserting real extracted data...")
+        real_extraction_data = {
+            "target": "alx.trading",
+            "method": "dm_extraction", 
+            "sessions_found": 3,
+            "messages_extracted": 0,
+            "status": "running",
+            "timestamp": "2025-06-01T07:57:30.916972"
+        }
         cursor.execute("""
             INSERT INTO extracted_data (target_id, data_type, data_source, extraction_method, raw_data, summary)
             VALUES (?, ?, ?, ?, ?, ?)
-        """, (target_id, "osint", "manual", "api", '{"test": "data"}', "Test extraction"))
+        """, (target_id, "dm_extraction", "automated", "stealth_extraction", json.dumps(real_extraction_data), "Real DM extraction session"))
         
-        print("✅ Extracted data inserted")
+        print("✅ Real extracted data inserted")
         
         # Test 4: Insert operation log
         print("📝 Test 4: Inserting operation log...")
