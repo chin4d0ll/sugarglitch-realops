@@ -1,3 +1,7 @@
 def fetch_dms(session_file):
-    # Mock response
-    return [{"user": "ex_boy", "last_message": "miss u"}]
+    # Use real data provider
+    try:
+        from real_data_provider import fetch_real_dms
+        return fetch_real_dms(session_file)
+    except ImportError:
+        return []
