@@ -1,0 +1,46 @@
+{
+  "version": "2025.1.0",
+  "generated_at": "2025-06-01T01:39:21.935441",
+  "tools": {
+    "bypass": {
+      "name": "Enhanced Instagram Private Bypass",
+      "file": "instagram_private_bypass_2025_enhanced.py",
+      "class": "SuperEnhancedInstagramBypass",
+      "version": "2025.3.0"
+    },
+    "image_analyzer": {
+      "name": "Ultimate Image Analyzer",
+      "file": "ultimate_image_analyzer_2025.py",
+      "class": "UltimateImageAnalyzer",
+      "version": "2025.2.0"
+    },
+    "recon_suite": {
+      "name": "Ultimate Instagram Reconnaissance Suite",
+      "file": "ultimate_instagram_recon_suite_2025.py",
+      "class": "UltimateInstagramReconSuite",
+      "version": "2025.1.0"
+    },
+    "osint": {
+      "name": "Advanced Instagram OSINT",
+      "file": "advanced_instagram_osint_2025.py",
+      "class": "AdvancedInstagramOSINT",
+      "version": "2025.2.0"
+    },
+    "web_dashboard": {
+      "name": "Ultimate Instagram Web Dashboard",
+      "file": "ultimate_instagram_web_dashboard_2025.py",
+      "version": "2025.1.0",
+      "port": 5002
+    },
+    "gui": {
+      "name": "Ultimate Instagram GUI",
+      "file": "ultimate_instagram_gui_2025.py",
+      "version": "2025.1.0"
+    },
+    "multi_tool": {
+      "name": "Ultimate Instagram Multi-Tool Suite",
+      "file": "ultimate_instagram_multi_tool_suite_2025.py",
+      "version": "2025.1.0"
+    }
+  }
+}

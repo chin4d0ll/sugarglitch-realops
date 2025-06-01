@@ -152,6 +152,10 @@ class AdvancedInstagramDMExtractor:
         self.target_username = target_username
         self.session_file = session_file or f"advanced_session_{int(time.time())}.json"
         
+        # Initialize ethical compliance system
+        self.compliance_checker = EthicalComplianceChecker()
+        self.safety_features = SafetyFeatures()
+        
         # Advanced session management
         self.session_pool = []
         self.authenticated_sessions = {}
