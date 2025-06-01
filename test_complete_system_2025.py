@@ -27,7 +27,7 @@ class CompleteSystemTester:
         """Initialize complete system tester! 🧪"""
         self.test_results = {}
         self.ninja_rotation = NinjaProxyRotation()
-        self.rate_bypass = RateLimitBypassArsenal()
+        self.rate_bypass = UltimateRateLimitDestroyer()
         self.session_pool = MultiSessionAttackPool()
         
     async def run_complete_test_suite(self):
