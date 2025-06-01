@@ -1,0 +1,20 @@
+ULTRA SIMPLE REAL EXTRACTION REPORT - whatilove1728
+Timestamp: 2025-06-01 09:47:48.464103
+Duration: 2.13 seconds
+==================================================
+
+PROFILE:
+- Success: False
+- Message: Invalid response format
+- Status Code: 200
+
+IMAGES:
+- Success: False
+- Message: Image request failed with status 401
+- Status Code: 401
+
+DMS:
+- Success: False
+- Message: DM request failed with status 403
+- Status Code: 403
+
