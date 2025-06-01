@@ -26,11 +26,10 @@ import threading
 from datetime import datetime, timedelta
 
 class UltimateRateLimitDestroyer:
-    def __init__(self):
-        """Initialize the beast! 👹"""
+    def __init__(self, session_cookie_path=None, proxy_config_path=None):
+        """Initialize the beast! 👹 (TON AUTH + Real Session)"""
         self.target = "instagram.com"
-        
-        # 🎭 Multiple endpoints for confusion
+        # Endpoints
         self.endpoints = [
             "https://www.instagram.com",
             "https://i.instagram.com", 
@@ -39,19 +38,8 @@ class UltimateRateLimitDestroyer:
             "https://edge-chat.instagram.com",
             "https://z-p3-instagram.com"
         ]
-        
-        # 🔄 Proxy sources (FREE but powerful!)
-        self.proxy_sources = [
-            "https://raw.githubusercontent.com/TheSpeedX/PROXY-List/master/http.txt",
-            "https://raw.githubusercontent.com/ShiftyTR/Proxy-List/master/http.txt", 
-            "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
-            "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt"
-        ]
-        
-        # 🤖 Advanced User-Agent rotation
+        # User-Agent rotation
         self.ua = UserAgent(browsers=['chrome', 'firefox', 'safari'])
-        
-        # 📱 Mobile-first strategy (IG ปล่อยยาวกว่า!)
         self.mobile_agents = [
             'Instagram 308.0.0.16.113 Android (30/11; 450dpi; 1080x2400; samsung; SM-G991B)',
             'Instagram 307.0.0.15.107 Android (29/10; 420dpi; 1080x2340; OnePlus; HD1903)',
@@ -60,10 +48,14 @@ class UltimateRateLimitDestroyer:
             'Mozilla/5.0 (Linux; Android 13; SM-S918B) Chrome/121.0.0.0 Mobile Safari/537.36',
             'Mozilla/5.0 (Linux; Android 12; Pixel 6) Chrome/120.0.0.0 Mobile Safari/537.36'
         ]
-        
-        # 💾 Memory-efficient session pool
+        # Proxy config
+        self.proxy_config_path = proxy_config_path or "config/proxies/proxy_configs.json"
+        self.working_proxies = self.load_all_proxies(self.proxy_config_path)
+        # Session/cookie
+        self.session_cookie_path = session_cookie_path or "sessions/alx_trading_sessionid_1748519701.json"
+        self.session_cookie = self.load_session_cookie(self.session_cookie_path)
+        # Memory-efficient session pool
         self.session_pool = []
-        self.working_proxies = []
         self.session_cycle = None
         self.stats = {
             'total_requests': 0,
@@ -72,8 +64,6 @@ class UltimateRateLimitDestroyer:
             'failed_requests': 0,
             'start_time': time.time()
         }
-        
-        # 🎯 Rate limit bypass strategies
         self.bypass_strategies = [
             'multi_session_attack',
             'endpoint_rotation',
@@ -81,10 +71,45 @@ class UltimateRateLimitDestroyer:
             'intelligent_timing',
             'proxy_flooding'
         ]
-        
-        # 🧠 AI-powered timing
         self.success_history = []
         self.timing_optimizer = TimingOptimizer()
+
+    def load_all_proxies(self, config_path):
+        """Load all proxies from TON AUTH config (TOR, mobile, datacenter, brightdata, free)"""
+        proxies = []
+        try:
+            with open(config_path, 'r') as f:
+                config = json.load(f)
+            for key in ["tor_proxies", "mobile_lte_proxies", "residential_proxies", "datacenter_proxies", "brightdata_proxies", "free_proxies"]:
+                for p in config.get(key, []):
+                    if p["type"].startswith("socks"):
+                        proxy_url = f"socks5://{p.get('user','')}:{p.get('pass','')}@{p['host']}:{p['port']}" if p.get('user') else f"socks5://{p['host']}:{p['port']}"
+                    else:
+                        if p.get('user'):
+                            proxy_url = f"http://{p['user']}:{p['pass']}@{p['host']}:{p['port']}"
+                        else:
+                            proxy_url = f"http://{p['host']}:{p['port']}"
+                    proxies.append(proxy_url)
+        except Exception as e:
+            print(f"[TON AUTH] Failed to load proxies: {e}")
+        print(f"[TON AUTH] Loaded {len(proxies)} proxies from {config_path}")
+        return proxies
+
+    def load_session_cookie(self, session_path):
+        """Load Instagram sessionid/cookie from file"""
+        try:
+            with open(session_path, 'r') as f:
+                data = json.load(f)
+            if 'sessionid' in data:
+                return {'sessionid': data['sessionid']}
+            elif 'cookies' in data and 'sessionid' in data['cookies']:
+                return {'sessionid': data['cookies']['sessionid']}
+            else:
+                print(f"[AUTH] No sessionid found in {session_path}")
+                return {}
+        except Exception as e:
+            print(f"[AUTH] Failed to load session cookie: {e}")
+            return {}
         
     async def harvest_proxies_aggressive(self):
         """เก็บ proxies แบบ aggressive และ concurrent! 🕷️"""
