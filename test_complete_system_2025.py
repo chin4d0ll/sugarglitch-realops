@@ -14,6 +14,7 @@ import sys
 import time
 import json
 from pathlib import Path
+from fake_useragent import UserAgent
 
 # Import our modules
 sys.path.append('/workspaces/sugarglitch-realops')
