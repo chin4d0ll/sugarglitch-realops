@@ -22,6 +22,7 @@ from pathlib import Path
 import hashlib
 from urllib.parse import urlparse
 import cloudscraper
+import base64
 
 class UltimateInstagramExtractor:
     def __init__(self):
