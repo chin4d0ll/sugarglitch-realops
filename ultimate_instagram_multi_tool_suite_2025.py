@@ -70,18 +70,18 @@ Available Tools:
             print("✅ Enhanced Private Bypass loaded")
             
             # Import Ultimate Image Analyzer
-            from ultimate_image_analyzer_2025 import UltimateImageAnalyzer
-            self.tools['image_analyzer'] = UltimateImageAnalyzer
+            from ultimate_image_analyzer_2025 import UltimateImageAnalyzer2025
+            self.tools['image_analyzer'] = UltimateImageAnalyzer2025
             print("✅ Ultimate Image Analyzer loaded")
             
             # Import Master Reconnaissance Suite
-            from ultimate_instagram_recon_suite_2025 import UltimateInstagramReconSuite
-            self.tools['recon_suite'] = UltimateInstagramReconSuite
+            from ultimate_instagram_recon_suite_2025 import UltimateInstagramReconSuite2025
+            self.tools['recon_suite'] = UltimateInstagramReconSuite2025
             print("✅ Ultimate Reconnaissance Suite loaded")
             
             # Import OSINT Toolkit
-            from advanced_instagram_osint_2025 import AdvancedInstagramOSINT
-            self.tools['osint'] = AdvancedInstagramOSINT
+            from advanced_instagram_osint_2025 import AdvancedInstagramOSINT2025
+            self.tools['osint'] = AdvancedInstagramOSINT2025
             print("✅ Advanced OSINT Toolkit loaded")
             
             print("\n🚀 All tools initialized successfully!")
@@ -115,8 +115,8 @@ Choose option (0-9): """)
         print(f"\n🎯 Starting Enhanced Private Bypass for: {username}")
         
         try:
-            bypass = self.tools['bypass'](username)
-            result = await bypass.execute_enhanced_bypass()
+            bypass = self.tools['bypass']()
+            result = await bypass.bypass_private_account(username)
             
             # Save results
             timestamp = int(time.time())
