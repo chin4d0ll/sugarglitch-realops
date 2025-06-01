@@ -126,14 +126,19 @@ class AlternativeDataProcessor:
         operation_id = self.target_manager.add_operation(
             target_id=target_id,
             operation_type=file_info['data_type'],
-            status='completed',
-            result_data=json.dumps({
+            operation_data={
                 'filename': file_info['filename'],
                 'item_count': file_info['item_count'],
                 'file_size': file_info['size'],
                 'processed_at': datetime.now().isoformat()
-            })
+            }
         )
+        
+        # Update operation to completed status
+        self.target_manager.update_operation_status(operation_id, 'completed', {
+            'data_extracted': file_info['item_count'],
+            'result_summary': f"Processed {file_info['item_count']} items from {file_info['filename']}"
+        })
         
         # Add extracted data record
         cursor.execute("""
