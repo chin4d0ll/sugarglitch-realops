@@ -1112,56 +1112,140 @@ class InstagramImageAnalyzer:
 
     def generate_report(self) -> str:
         """
-        📊 สร้างรายงานสวยๆ แบบ text
+        📊 สร้างรายงานสวยๆ แบบ text พร้อม AI Analysis
         
         Returns:
-            Formatted report
+            Formatted comprehensive report
         """
         report = f"""
-🖼️💕 INSTAGRAM IMAGE ANALYZER 2025 - REPORT 💕🖼️
-{'='*60}
+🖼️💕 ENHANCED INSTAGRAM IMAGE ANALYZER 2025 - COMPREHENSIVE REPORT 💕🖼️
+{'='*80}
 
-📷 IMAGE SOURCE
-URL: {self.results['image_url'][:60]}...
+📷 IMAGE SOURCE INFORMATION
+URL: {self.results['image_url'][:70]}...
 Download Time: {self.results['download_time']}
+Analysis Time: {self.results.get('analysis_timestamp', 'Unknown')}
 Image Signature: {self.results.get('image_signature', 'Unknown')}
 
-📊 IMAGE DATA
-Size: {self.results['image_data'].get('size_bytes', 'Unknown')} bytes
+📊 BASIC IMAGE DATA
+Size: {self.results['image_data'].get('size_bytes', 'Unknown'):,} bytes
 Type: {self.results['image_data'].get('content_type', 'Unknown')}
 Format: {self.results['metadata'].get('format', 'Unknown')}
 Resolution: {self.results['metadata'].get('resolution', 'Unknown')}
+Aspect Ratio: {self.results['metadata'].get('aspect_ratio', 'Unknown')}
 """
 
         # Add profile hints
         if self.results['profile_hints']:
-            report += "\n👤 PROFILE INSIGHTS\n"
+            report += "\n👤 INSTAGRAM PROFILE INSIGHTS\n"
             for hint in self.results['profile_hints']:
                 report += f"  • {hint}\n"
+
+        # Add AI Analysis
+        if self.results.get('ai_analysis'):
+            report += "\n🤖 AI-POWERED ANALYSIS\n"
+            ai = self.results['ai_analysis']
+            
+            if 'color_statistics' in ai:
+                report += f"  • Mean Brightness: {ai['color_statistics'].get('mean_brightness', 0):.1f}\n"
+                report += f"  • Contrast Level: {ai['color_statistics'].get('contrast_level', 0):.2f}\n"
+            
+            if 'filter_analysis' in ai:
+                filter_info = ai['filter_analysis']
+                report += f"  • Detected Filter: {filter_info.get('detected_filter', 'Unknown')}\n"
+                report += f"  • Saturation Level: {filter_info.get('saturation_level', 'Unknown')}\n"
+            
+            if 'scene_complexity' in ai:
+                scene = ai['scene_complexity']
+                report += f"  • Scene Type: {scene.get('scene_type', 'Unknown')}\n"
+                report += f"  • Color Richness: {scene.get('color_richness', 'Unknown')}\n"
+            
+            if 'aesthetic_score' in ai:
+                aesthetic = ai['aesthetic_score']
+                report += f"  • Aesthetic Score: {aesthetic.get('overall_score', 0)}/100\n"
+                report += f"  • Appeal Level: {aesthetic.get('appeal_level', 'Unknown')}\n"
+
+        # Add Face Analysis
+        if self.results.get('face_analysis'):
+            report += "\n👤 FACE DETECTION ANALYSIS\n"
+            face = self.results['face_analysis']
+            
+            if 'opencv_faces_detected' in face:
+                report += f"  • Faces Detected: {face['opencv_faces_detected']}\n"
+            elif 'face_recognition_faces' in face:
+                report += f"  • Faces Detected: {face['face_recognition_faces']}\n"
+            elif 'likely_has_faces' in face:
+                report += f"  • Likely Has Faces: {face['likely_has_faces']}\n"
+                
+            if 'scene_type' in face:
+                report += f"  • Scene Type: {face['scene_type']}\n"
+
+        # Add Security Analysis
+        report += "\n🔒 SECURITY & FORENSIC ANALYSIS\n"
+        
+        # Steganography
+        if self.results.get('steganography_check'):
+            stego = self.results['steganography_check']
+            report += f"  • Steganography Risk: {stego.get('steganography_risk', 'Unknown')}\n"
+            if 'suspicious_text' in stego:
+                report += f"  • Suspicious Patterns: {', '.join(stego['suspicious_text'])}\n"
+            if 'high_entropy_detected' in stego:
+                report += f"  • High Entropy Detected: {stego['high_entropy_detected']}\n"
+
+        # Deepfake Analysis
+        if self.results.get('deepfake_indicators'):
+            deepfake = self.results['deepfake_indicators']
+            report += f"  • Deepfake Risk: {deepfake.get('deepfake_risk', 'Unknown')}\n"
+            if 'likely_ai_generated' in deepfake:
+                report += f"  • AI Generated: {deepfake['likely_ai_generated']}\n"
+            if 'ai_generation_signatures' in deepfake:
+                report += f"  • AI Signatures: {', '.join(deepfake['ai_generation_signatures'])}\n"
+
+        # Technical Forensics
+        if self.results.get('technical_forensics'):
+            forensics = self.results['technical_forensics']
+            if 'likely_edited' in forensics:
+                report += f"  • Editing Evidence: {forensics['likely_edited']}\n"
+            if 'photoshop_edited' in forensics:
+                report += f"  • Photoshop Detected: {forensics['photoshop_edited']}\n"
+            if 'heavy_compression_detected' in forensics:
+                report += f"  • Heavy Compression: {forensics['heavy_compression_detected']}\n"
+
+        # Overall Assessment
+        if self.results.get('overall_assessment'):
+            assessment = self.results['overall_assessment']
+            report += f"\n⚠️ OVERALL RISK ASSESSMENT\n"
+            report += f"  • Risk Level: {assessment.get('total_risk_level', 'Unknown')}\n"
+            if assessment.get('risk_factors'):
+                report += f"  • Risk Factors:\n"
+                for factor in assessment['risk_factors']:
+                    report += f"    - {factor}\n"
+
+        # Add content analysis
+        if self.results['analysis']:
+            report += "\n🧠 CONTENT ANALYSIS\n"
+            for key, value in self.results['analysis'].items():
+                if key not in ['likely_edited']:  # Skip duplicates
+                    report += f"  • {key.replace('_', ' ').title()}: {value}\n"
 
         # Add metadata insights
         if self.results['metadata']:
             report += "\n🔍 METADATA INSIGHTS\n"
             
             # Add important metadata fields
-            important_fields = ['dominant_color', 'color_tone', 'aspect_ratio']
+            important_fields = ['dominant_color', 'color_tone']
             for field in important_fields:
                 if field in self.results['metadata']:
                     report += f"  • {field.replace('_', ' ').title()}: {self.results['metadata'][field]}\n"
             
             # Add EXIF if available
             if 'exif' in self.results['metadata']:
-                report += "  • EXIF Data:\n"
+                report += "  • EXIF Data Available:\n"
+                exif_count = len(self.results['metadata']['exif'])
                 for key, value in list(self.results['metadata']['exif'].items())[:3]:  # Show only first 3
-                    report += f"     - {key}: {value}\n"
-                if len(self.results['metadata']['exif']) > 3:
-                    report += f"     - ...and {len(self.results['metadata']['exif']) - 3} more fields\n"
-
-        # Add content analysis
-        if self.results['analysis']:
-            report += "\n🧠 CONTENT ANALYSIS\n"
-            for key, value in self.results['analysis'].items():
-                report += f"  • {key.replace('_', ' ').title()}: {value}\n"
+                    report += f"     - {key}: {str(value)[:50]}...\n"
+                if exif_count > 3:
+                    report += f"     - ...and {exif_count - 3} more EXIF fields\n"
 
         # Add related URLs
         if self.results['related_urls']:
@@ -1171,13 +1255,19 @@ Resolution: {self.results['metadata'].get('resolution', 'Unknown')}
 
         # Add reverse search
         if 'reverse_search_urls' in self.results:
-            report += "\n🔎 REVERSE IMAGE SEARCH\n"
-            for url in self.results['reverse_search_urls'][:2]:  # Show only first 2
-                report += f"  • {url[:70]}...\n"
+            report += "\n🔎 REVERSE IMAGE SEARCH TOOLS\n"
+            search_engines = ['Google Lens', 'Yandex', 'Bing', 'TinEye']
+            for i, url in enumerate(self.results['reverse_search_urls'][:4]):
+                engine = search_engines[i] if i < len(search_engines) else f"Engine {i+1}"
+                report += f"  • {engine}: {url[:60]}...\n"
 
         report += f"""
-💖 Generated with love by น้องจิน's Instagram Image Analyzer
-👻 For educational and authorized research only!
+{'='*80}
+💖 Generated with love by น้องจิน's Enhanced Instagram Image Analyzer 2025
+🤖 Powered by Advanced AI Analysis & Computer Vision
+👻 For educational and authorized security research only!
+⚠️  Always respect privacy and follow applicable laws
+{'='*80}
 """
 
         return report
