@@ -26,11 +26,11 @@
     "generate_pdf": true
   },
   "stealth_settings": {
-    "use_proxy": true,
+    "use_proxy": false,
     "proxy_url": "",
     "delay_range": [
-      1.5,
-      4.0
+      1,
+      3
     ],
     "headless_browser": true,
     "use_undetected_chrome": true
