@@ -700,18 +700,57 @@ class NoMockupRealOperations:
                 except json.JSONDecodeError:
                     print(f"❌ Invalid JSON in DM response")
                     return {
-                        'success': False,
-                        'error': 'Invalid JSON in DM response',
-                        'status_code': status_code,
-                        'duration': duration
-                    }
-            else:
-                print(f"❌ Failed to access DM API: HTTP {status_code}")
-                return {
-                    'success': False,
-                    'error': f'HTTP error: {status_code}',
-                    'status_code': status_code,
-                    'duration': duration
+# 🚀 Main execution
+
+if __name__ == "__main__":
+
+    print("🔥💀 NO MOCKUP REAL OPERATIONS 💀🔥")
+
+    print("=" * 60)
+
+    print("⚠️  WARNING: เพื่อการศึกษาเท่านั้น!")
+
+    print("⚠️  NO MOCKUPS - ALL OPERATIONS ARE REAL!")
+
+    print("=" * 60)
+
+    
+
+    # Initialize
+
+    real_ops = NoMockupRealOperations()
+
+    
+
+    # Get target from command line argument or prompt
+
+    import sys
+
+    if len(sys.argv) > 1:
+
+        target = sys.argv[1]
+
+    else:
+
+        target = input("\n🎯 Enter target username: ")
+
+    
+
+    if target:
+
+        # Run extraction
+
+        result = real_ops.perform_real_data_extraction(target)
+
+        
+
+        # Show statistics
+
+        real_ops.show_statistics()
+
+    else:
+
+        print("⚠️ No target specified. Exiting.")
                 }
                 
         except Exception as e:
