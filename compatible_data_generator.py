@@ -45,15 +45,17 @@ class CompatibleDataGenerator:
             target_type = random.choice(target_types)
             
             if target_type == "username":
-                username = random.choice(self.instagram_usernames) + str(random.randint(100, 999))
+                username = random.choice(self.real_instagram_usernames)
+                if username not in ["alx.trading", "whatilove1728", "sugarglitch_ops", "test_account"]:
+                    username += str(random.randint(100, 999))
                 target_name = f"Instagram User: {username}"
                 target_value = username
-                description = "Instagram account analysis target"
+                description = f"Real Instagram account target: @{username}"
             elif target_type == "domain":
-                domain = random.choice(self.domains)
+                domain = random.choice(self.real_target_domains)
                 target_name = f"Domain: {domain}"
                 target_value = domain
-                description = "Web domain reconnaissance target"
+                description = f"Real target domain: {domain}"
             elif target_type == "ip":
                 ip = f"{random.randint(1,255)}.{random.randint(1,255)}.{random.randint(1,255)}.{random.randint(1,255)}"
                 target_name = f"IP Address: {ip}"
