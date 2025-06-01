@@ -1017,7 +1017,7 @@ class InstagramImageAnalyzer:
 
     def analyze_from_url(self, image_url: str) -> Dict[str, Any]:
         """
-        🔍 วิเคราะห์รูปจาก URL
+        🔍 วิเคราะห์รูปจาก URL ด้วย AI ขั้นสูง
         
         Args:
             image_url: URL ของรูปภาพที่ต้องการวิเคราะห์
@@ -1025,7 +1025,7 @@ class InstagramImageAnalyzer:
         Returns:
             Dictionary ของผลการวิเคราะห์
         """
-        self.girly_print(f"🚀 เริ่มการวิเคราะห์รูปภาพ: {image_url[:50]}...", "INFO", "🔍")
+        self.girly_print(f"🚀 เริ่มการวิเคราะห์รูปภาพขั้นสูง: {image_url[:50]}...", "INFO", "🔍")
         
         # 1. ดาวน์โหลดรูปภาพ
         image_data = self.download_image(image_url)
@@ -1045,34 +1045,68 @@ class InstagramImageAnalyzer:
         # 4. Analyze image content
         self.analyze_image_content(image_data)
         
-        # 5. Generate image signature
+        # 5. Advanced AI Analysis
+        self.advanced_ai_analysis(image_data)
+        
+        # 6. Face detection and analysis
+        self.face_detection_analysis(image_data)
+        
+        # 7. Steganography check
+        self.steganography_analysis(image_data)
+        
+        # 8. Deepfake indicators
+        self.deepfake_indicators(image_data)
+        
+        # 9. Technical forensics
+        self.technical_forensics(image_data)
+        
+        # 10. Generate image signature
         signature = self.generate_image_signature(image_data)
         self.results['image_signature'] = signature
         
-        # 6. Find similar images (Optional)
+        # 11. Find similar images
         reverse_search_urls = self.find_similar_images(image_url)
         
-        # 7. Save the results
+        # 12. Save the results
         timestamp = int(time.time())
         
         # Create a sanitized filename from URL
         url_hash = hashlib.md5(image_url.encode()).hexdigest()[:10]
-        result_filename = self.output_dir / f"image_analysis_{url_hash}_{timestamp}.json"
+        result_filename = self.output_dir / f"enhanced_analysis_{url_hash}_{timestamp}.json"
         
         with open(result_filename, 'w', encoding='utf-8') as f:
-            json.dump(self.results, f, indent=2, default=str)
+            json.dump(self.results, f, indent=2, default=str, ensure_ascii=False)
         
-        # 8. Save the image
+        # 13. Save the image
         try:
             image_data.seek(0)
-            image_filename = self.output_dir / f"image_{url_hash}_{timestamp}.jpg"
+            image_filename = self.output_dir / f"analyzed_image_{url_hash}_{timestamp}.jpg"
             with open(image_filename, 'wb') as f:
                 f.write(image_data.getvalue())
             self.girly_print(f"💾 บันทึกรูปภาพไปที่: {image_filename}", "SUCCESS", "📸")
         except:
             pass
         
-        self.girly_print(f"✅ การวิเคราะห์เสร็จสมบูรณ์! ผลลัพธ์: {result_filename}", "SUCCESS", "🎉")
+        # 14. Add success flag and overall assessment
+        self.results['success'] = True
+        self.results['analysis_timestamp'] = datetime.now().isoformat()
+        
+        # Overall risk assessment
+        risk_factors = []
+        if self.results.get('steganography_check', {}).get('steganography_risk') == 'High':
+            risk_factors.append('Hidden data detected')
+        if self.results.get('deepfake_indicators', {}).get('deepfake_risk') == 'High':
+            risk_factors.append('Possible deepfake')
+        if self.results.get('technical_forensics', {}).get('likely_edited'):
+            risk_factors.append('Evidence of editing')
+            
+        self.results['overall_assessment'] = {
+            'risk_factors': risk_factors,
+            'total_risk_level': 'High' if len(risk_factors) >= 2 else 'Medium' if len(risk_factors) == 1 else 'Low'
+        }
+        
+        self.girly_print(f"✅ การวิเคราะห์ขั้นสูงเสร็จสมบูรณ์! Risk Level: {self.results['overall_assessment']['total_risk_level']}", "SUCCESS", "🎉")
+        self.girly_print(f"📁 ผลลัพธ์: {result_filename}", "INFO", "📊")
         
         return self.results
 
