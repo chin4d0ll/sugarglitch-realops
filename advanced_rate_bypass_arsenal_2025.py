@@ -281,8 +281,8 @@ class UltimateRateLimitDestroyer:
             'X-Instagram-AJAX': str(random.randint(1000000000, 9999999999)),
             'X-CSRFToken': self.generate_csrf_token(),
         })
-        # Apply proxy if available
-        if proxy:
+        # Apply proxy if available (skip if direct connection)
+        if proxy and proxy != "direct":
             if proxy.startswith('socks5://'):
                 # requests[socks] required
                 session.proxies.update({'http': proxy, 'https': proxy})
