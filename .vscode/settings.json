@@ -6,11 +6,27 @@
       "database": "./extracted_project/Python/instagram_deep_data_alx.trading.db",
       "description": "Instagram analysis database",
       "connectionMethod": "Database File"
+    },
+    {
+      "name": "Advanced DM Database 1",
+      "driver": "SQLite",
+      "database": "./advanced_dm_database_1748742706.sqlite",
+      "description": "Advanced DM extraction database 1",
+      "connectionMethod": "Database File"
+    },
+    {
+      "name": "Advanced DM Database 2",
+      "driver": "SQLite",
+      "database": "./advanced_dm_database_1748743051.sqlite",
+      "description": "Advanced DM extraction database 2",
+      "connectionMethod": "Database File"
     }
   ],
   "sqltools.useNodeRuntime": true,
   "sqltools.autoConnectTo": [
-    "Instagram Deep Data"
+    "Instagram Deep Data",
+    "Advanced DM Database 1",
+    "Advanced DM Database 2"
   ],
   "sqltools.defaultExportType": "csv",
   "sql.format.keywordCase": "upper",
