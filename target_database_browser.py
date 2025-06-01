@@ -172,8 +172,8 @@ class TargetDatabaseBrowser:
             print(f"  👤 Username: {target['username']}")
             print(f"  📊 Priority: {target['priority']}")
             print(f"  ⚡ Status: {target['status']}")
-            print(f"  👥 Followers: {target['followers'] or 'N/A'}")
-            print(f"  📝 Posts: {target['posts'] or 'N/A'}")
+            print(f"  👥 Followers: {target['follower_count'] or 'N/A'}")
+            print(f"  📝 Posts: {target['post_count'] or 'N/A'}")
             print(f"  📅 Created: {target['created_at']}")
             
             # Get operations
@@ -200,12 +200,12 @@ class TargetDatabaseBrowser:
             
         cursor = self.conn.cursor()
         cursor.execute("""
-            SELECT id, username, priority, status, followers, posts, created_at
+            SELECT id, username, priority, status, follower_count, post_count, created_at
             FROM targets 
             WHERE username LIKE ? OR 
                   CAST(id AS TEXT) LIKE ? OR
                   status LIKE ?
-            ORDER BY priority DESC, followers DESC NULLS LAST
+            ORDER BY priority DESC, follower_count DESC NULLS LAST
             LIMIT 20
         """, (f"%{search_term}%", f"%{search_term}%", f"%{search_term}%"))
         
