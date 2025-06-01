@@ -98,8 +98,24 @@ class UltimateRateLimitDestroyer:
         self.timing_optimizer = TimingOptimizer()
 
     def load_all_proxies(self, config_path):
-        """Load all proxies from TON AUTH config (TOR, mobile, datacenter, brightdata, free)"""
+        """Load all proxies from TON AUTH config + working proxies"""
         proxies = []
+        
+        # Try to load working proxies first
+        working_proxy_file = "config/working_proxies.json"
+        try:
+            with open(working_proxy_file, 'r') as f:
+                working_proxies = json.load(f)
+            for proxy_info in working_proxies:
+                proxies.append(proxy_info['proxy'])
+            print(f"[TON AUTH] Loaded {len(working_proxies)} working proxies")
+        except Exception as e:
+            print(f"[TON AUTH] No working proxies file found: {e}")
+        
+        # Add TOR proxy
+        proxies.append("socks5://127.0.0.1:9050")
+        
+        # Try original config file as backup
         try:
             with open(config_path, 'r') as f:
                 config = json.load(f)
@@ -114,8 +130,9 @@ class UltimateRateLimitDestroyer:
                             proxy_url = f"http://{p['host']}:{p['port']}"
                     proxies.append(proxy_url)
         except Exception as e:
-            print(f"[TON AUTH] Failed to load proxies: {e}")
-        print(f"[TON AUTH] Loaded {len(proxies)} proxies from {config_path}")
+            print(f"[TON AUTH] Failed to load config proxies: {e}")
+        
+        print(f"[TON AUTH] Total {len(proxies)} proxies loaded")
         return proxies
 
     def load_session_cookie(self, session_path):
