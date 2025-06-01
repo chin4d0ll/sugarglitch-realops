@@ -115,8 +115,8 @@ Choose option (0-9): """)
         print(f"\n🎯 Starting Enhanced Private Bypass for: {username}")
         
         try:
-            bypass = self.tools['bypass']()
-            result = await bypass.bypass_private_account(username)
+            bypass = self.tools['bypass'](username)
+            result = await bypass.execute_enhanced_bypass()
             
             # Save results
             timestamp = int(time.time())
