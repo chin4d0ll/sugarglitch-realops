@@ -1,4 +1,3 @@
-
 structlog==21.5.0
 python-dotenv==0.21.0
 click==8.1.3
@@ -39,3 +38,10 @@ pycryptodome>=3.18.0
 # Development
 black>=23.7.0
 flake8>=6.0.0
+
+# Advanced Rate Bypass Arsenal 2025 Dependencies
+aiohttp>=3.12.0
+psutil>=7.0.0
+fake-useragent>=2.2.0
+asyncio>=3.4.3
+itertools-recipes>=0.1.0
