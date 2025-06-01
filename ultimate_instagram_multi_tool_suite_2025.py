@@ -1241,90 +1241,17 @@ async def analyze_image(image_path):
 
 def main():
     """Main function"""
-    parser = argparse.ArgumentParser(description='Ultimate Image Analyzer 2025')
-    parser.add_argument('--image', '-i', help='Path or URL to image for analysis')
-    args = parser.parse_args()
-    
-    if args.image:
-        asyncio.run(analyze_image(args.image))
-    else:
-        print("❌ No image specified. Use --image or -i to specify an image path or URL.")
-
-if __name__ == "__main__":
-    main()
-'''
-        
-        with open("ultimate_image_analyzer_2025.py", "w", encoding="utf-8") as f:
-            f.write(image_analyzer_code)
-            
-        print("✅ Ultimate Image Analyzer 2025 created successfully!")
-
-    def export_registry_json(self):
-        """Export registry of all tools and versions"""
-        registry = {
-            "version": self.version,
-            "generated_at": datetime.now().isoformat(),
-            "tools": {
-                "bypass": {
-                    "name": "Enhanced Instagram Private Bypass",
-                    "file": "instagram_private_bypass_2025_enhanced.py",
-                    "class": "SuperEnhancedInstagramBypass",
-                    "version": "2025.3.0"
-                },
-                "image_analyzer": {
-                    "name": "Ultimate Image Analyzer",
-                    "file": "ultimate_image_analyzer_2025.py",
-                    "class": "UltimateImageAnalyzer",
-                    "version": "2025.2.0"
-                },
-                "recon_suite": {
-                    "name": "Ultimate Instagram Reconnaissance Suite",
-                    "file": "ultimate_instagram_recon_suite_2025.py",
-                    "class": "UltimateInstagramReconSuite",
-                    "version": "2025.1.0"
-                },
-                "osint": {
-                    "name": "Advanced Instagram OSINT",
-                    "file": "advanced_instagram_osint_2025.py",
-                    "class": "AdvancedInstagramOSINT",
-                    "version": "2025.2.0"
-                },
-                "web_dashboard": {
-                    "name": "Ultimate Instagram Web Dashboard",
-                    "file": "ultimate_instagram_web_dashboard_2025.py",
-                    "version": "2025.1.0",
-                    "port": 5002
-                },
-                "gui": {
-                    "name": "Ultimate Instagram GUI",
-                    "file": "ultimate_instagram_gui_2025.py",
-                    "version": "2025.1.0"
-                },
-                "multi_tool": {
-                    "name": "Ultimate Instagram Multi-Tool Suite",
-                    "file": "ultimate_instagram_multi_tool_suite_2025.py",
-                    "version": "2025.1.0"
-                }
-            }
-        }
-        
-        # Save registry
-        with open("tools_registry.json", "w", encoding="utf-8") as f:
-            json.dump(registry, f, indent=2)
-            
-        print("✅ Tools registry exported to tools_registry.json")
-
-def main():
-    """Main function"""
     parser = argparse.ArgumentParser(description='Ultimate Instagram Multi-Tool Suite 2025')
     parser.add_argument('--target', '-t', help='Target username')
-    parser.add_argument('--mode', '-m', choices=['bypass', 'osint', 'master', 'batch'], 
+    parser.add_argument('--mode', '-m', choices=['bypass', 'osint', 'master', 'batch', 'dm'], 
                        default='interactive', help='Operation mode')
     parser.add_argument('--batch-file', '-b', help='File containing usernames for batch processing')
     parser.add_argument('--web-dashboard', '-w', action='store_true', 
                        help='Launch web dashboard only')
     parser.add_argument('--gui', '-g', action='store_true', 
                        help='Launch desktop GUI only')
+    parser.add_argument('--username', '-u', help='Instagram username for login (required for DM extraction)')
+    parser.add_argument('--password', '-p', help='Instagram password (required for DM extraction)')
     
     args = parser.parse_args()
     
@@ -1359,6 +1286,11 @@ def main():
                 asyncio.run(suite.run_batch_processing(usernames))
             else:
                 print("❌ Batch mode requires --batch-file argument!")
+        elif args.mode == 'dm':
+            if args.username and args.password:
+                asyncio.run(suite.run_dm_extraction(args.username, args.password, args.target))
+            else:
+                print("❌ Username and password are required for DM extraction!")
 
 if __name__ == "__main__":
     main()
