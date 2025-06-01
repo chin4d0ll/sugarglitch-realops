@@ -51,12 +51,9 @@ class RealOperationsExecutor:
         session_loaded = len(self.session_manager.active_sessions) > 0
         print(f"📱 Session Status: {'✅ LOADED' if session_loaded else '❌ NO SESSION - Using Anonymous Mode'}")
         
-        # Refresh proxy list
-        harvester = WorkingProxyHarvester()
-        print("🔄 Refreshing proxy arsenal...")
-        
-        # Quick proxy check (don't wait too long)
-        await asyncio.wait_for(harvester.harvest_all_proxies(), timeout=30)
+        # Refresh proxy list (skip for now, we already have working proxies)
+        print("🔄 Using existing proxy arsenal...")
+        print(f"📡 {len(self.system.working_proxies)} proxies ready for operations")
         
         print("✅ System initialized and ready for real operations!")
         
