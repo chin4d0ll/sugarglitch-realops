@@ -35,10 +35,10 @@ class TargetDatabaseBrowser:
             
         cursor = self.conn.cursor()
         cursor.execute("""
-            SELECT id, username, priority, status, followers, posts, 
-                   created_at, last_updated, metadata
+            SELECT id, username, priority, status, follower_count, post_count, 
+                   created_at, updated_at, full_name, biography
             FROM targets 
-            ORDER BY priority DESC, followers DESC NULLS LAST, created_at DESC
+            ORDER BY priority DESC, follower_count DESC NULLS LAST, created_at DESC
         """)
         
         targets = []
