@@ -257,6 +257,22 @@ class TargetDatabaseManager:
         
         return cursor.rowcount > 0
     
+    def update_operation_status(self, operation_id: int, status: str, result_data: Dict = None):
+        """Update operation status and result"""
+        cursor = self.conn.cursor()
+        
+        result_json = json.dumps(result_data) if result_data else None
+        
+        cursor.execute('''
+            UPDATE operations 
+            SET status = ?, result = ?, updated_at = CURRENT_TIMESTAMP
+            WHERE id = ?
+        ''', (status, result_json, operation_id))
+        
+        self.conn.commit()
+        self._update_stats()
+        print(f"📋 Operation {operation_id} status updated to: {status}")
+    
     def add_operation(self, target_id: int, operation_type: str, operation_data: Dict = None) -> int:
         """Add a new operation for a target"""
         cursor = self.conn.cursor()
@@ -409,6 +425,7 @@ class TargetDatabaseManager:
         # Data statistics
         cursor.execute("SELECT COUNT(*) as total FROM extracted_data")
         stats['total_extracted_data'] = cursor.fetchone()['total']
+        stats['total_extracted_items'] = stats['total_extracted_data']  # Alias for compatibility
         
         cursor.execute("SELECT SUM(data_size) as total_size FROM extracted_data")
         result = cursor.fetchone()
