@@ -23,7 +23,7 @@
       }
     },
     "initialized": true,
-    "start_time": "2025-06-01T22:59:56.136068"
+    "start_time": "2025-06-01T23:08:00.680412"
   },
   "security": {
     "encryption": {
@@ -90,19 +90,19 @@
   "database": {
     "runtime_path": "databases/instagram_intelligence_2025.db",
     "initialized": true,
-    "initialization_time": "2025-06-01T22:59:56.128033"
+    "initialization_time": "2025-06-01T23:08:00.664572"
   },
   "proxy": {
     "configured": true,
-    "last_check": "2025-06-01T22:59:56.129304"
+    "last_check": "2025-06-01T23:08:00.670047"
   },
   "sessions": {
     "configured": true,
     "count": 2,
-    "last_check": "2025-06-01T22:59:56.131251"
+    "last_check": "2025-06-01T23:08:00.672930"
   },
   "monitoring": {
     "initialized": true,
-    "start_time": "2025-06-01T22:59:56.132758"
+    "start_time": "2025-06-01T23:08:00.674725"
   }
 }

@@ -1,0 +1,63 @@
+{
+  "fleming_integration": {
+    "enabled": true,
+    "version": "2025.1.FLEMING",
+    "last_updated": "2025-06-01T00:00:00Z"
+  },
+  "extraction": {
+    "dm_extraction": {
+      "enabled": true,
+      "max_threads_per_target": 50,
+      "max_messages_per_thread": 200,
+      "store_media": true,
+      "include_reactions": true,
+      "pagination_mode": "infinite"
+    },
+    "story_extraction": {
+      "enabled": true,
+      "max_stories": 100,
+      "include_highlights": true,
+      "download_media": true
+    },
+    "post_extraction": {
+      "enabled": true,
+      "max_posts": 100,
+      "include_comments": true,
+      "include_likes": true
+    },
+    "media": {
+      "download_enabled": true,
+      "max_size_mb": 100,
+      "types": ["image", "video", "audio"],
+      "compression_enabled": false
+    },
+    "reporting": {
+      "pdf_enabled": true,
+      "json_export": true,
+      "csv_export": true,
+      "include_statistics": true
+    }
+  },
+  "fleming_paths": {
+    "package_dir": "fleming_deploy_package",
+    "extractor_module": "master_production_extractor_2025.py",
+    "config_file": "config.json",
+    "sessions_dir": "sessions",
+    "results_dir": "results"
+  },
+  "fleming_sessions": {
+    "session_files": [
+      "fleming_session_2025001.json",
+      "fleming_session_2025002.json"
+    ],
+    "session_template": "fresh_session_template.json",
+    "auto_regenerate": true
+  },
+  "integration_settings": {
+    "sync_config": true,
+    "sync_sessions": true,
+    "use_master_proxy": true,
+    "use_master_monitoring": true,
+    "launch_with_dashboard": true
+  }
+}
