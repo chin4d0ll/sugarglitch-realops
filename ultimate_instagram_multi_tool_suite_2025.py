@@ -91,9 +91,19 @@ Available Tools:
             print("✅ Advanced OSINT Toolkit loaded")
             
             # Import DM Extractor
-            from ultimate_dm_extractor_integration_2025 import UltimateInstagramDMExtractor2025
-            self.tools['dm_extractor'] = UltimateInstagramDMExtractor2025
-            print("✅ Ultimate DM Extractor loaded")
+            try:
+                from ultimate_dm_extractor_integration_2025 import UltimateDMExtractorIntegration2025
+                self.tools['dm_extractor'] = UltimateDMExtractorIntegration2025
+                print("✅ Ultimate DM Extractor loaded")
+            except ImportError:
+                print("⚠️ DM Extractor module not found")
+                # Try loading advanced extraction module directly
+                try:
+                    from instagram_dm_advanced_extraction_2025 import AdvancedInstagramDMExtractor
+                    self.tools['dm_extractor'] = lambda: AdvancedInstagramDMExtractor
+                    print("✅ Using Advanced DM Extractor directly")
+                except ImportError:
+                    print("❌ DM Extraction modules not available")
             
             print("\n🚀 All tools initialized successfully!")
             return True
@@ -251,33 +261,64 @@ Choose option (0-10): """)
 
     async def run_batch_processing(self, usernames):
         """Run batch processing on multiple targets"""
-        print(f"\n🔄 Starting Batch Processing for {len(usernames)} targets...")
+        print(f"\n🔄 Starting Batch Processing for {len(usernames)} targets")
         
         results = {}
-        for i, username in enumerate(usernames, 1):
-            print(f"\n[{i}/{len(usernames)}] Processing: {username}")
-            
-            # Run enhanced bypass for each target
+        for username in usernames:
+            print(f"\n🎯 Processing target: {username}")
             result = await self.run_enhanced_bypass(username)
-            if result:
-                results[username] = result
+            results[username] = result
             
-            # Add delay between targets to avoid rate limiting
-            if i < len(usernames):
-                print("⏰ Waiting 30 seconds before next target...")
-                await asyncio.sleep(30)
+            # Small delay between targets
+            await asyncio.sleep(2)
         
-        # Save batch results
+        # Save consolidated results
         timestamp = int(time.time())
-        batch_file = self.results_dir / f"batch_results_{timestamp}.json"
+        output_file = self.results_dir / f"batch_results_{timestamp}.json"
         
-        with open(batch_file, 'w', encoding='utf-8') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=2, ensure_ascii=False)
         
-        print(f"\n✅ Batch processing completed!")
-        print(f"📁 Batch results saved to: {batch_file}")
+        print(f"\n✅ Batch processing completed for {len(usernames)} targets!")
+        print(f"📁 Consolidated results saved to: {output_file}")
         
         return results
+
+    async def run_dm_extraction(self, username, password, target=None):
+        """Run DM extraction"""
+        print(f"\n💬 Starting Ultimate DM Extraction for target: {target or username}")
+        
+        try:
+            if 'dm_extractor' not in self.tools:
+                print("❌ DM Extractor module not available")
+                return None
+                
+            # Create DM Extractor integration
+            dm_integration = self.tools['dm_extractor']()
+            
+            # Run DM extraction
+            result = await dm_integration.extract_dms(username, password, target)
+            
+            if result.get('success'):
+                print(f"\n✅ DM extraction completed successfully!")
+                print(f"💬 Extracted {len(result.get('threads', []))} conversation threads")
+                print(f"📊 Database: {result.get('database_file')}")
+                
+                # Generate additional reports
+                if result.get('database_file'):
+                    db_file = result.get('database_file')
+                    
+                    # Export to HTML
+                    html_export = dm_integration.export_dm_data(db_file, format_type='html')
+                    print(f"📄 HTML Report: {html_export}")
+            else:
+                print(f"❌ DM extraction failed: {result.get('error')}")
+            
+            return result
+            
+        except Exception as e:
+            print(f"❌ Error during DM extraction: {e}")
+            return None
 
     def generate_html_report(self, data, output_file):
         """Generate beautiful HTML report"""
@@ -452,9 +493,18 @@ Choose option (0-10): """)
                         await self.run_osint_reconnaissance(username)
                 
                 elif choice == "6":
-                    username = input("\n💬 Enter Instagram username for DM extraction: ").strip()
-                    if username:
-                        await self.run_dm_extraction(username)
+                    print("\n💬 Ultimate DM Extractor")
+                    print("This feature requires login credentials and a target username.")
+                    print("⚠️ Warning: Only use with proper authorization!")
+                    
+                    username = input("👤 Instagram username for login: ").strip()
+                    password = input("🔑 Instagram password: ").strip()
+                    target = input("🎯 Target username (leave blank for self-extraction): ").strip() or username
+                    
+                    if username and password:
+                        await self.run_dm_extraction(username, password, target)
+                    else:
+                        print("❌ Username and password are required!")
                 
                 elif choice == "7":
                     username = input("\n🚀 Enter Instagram username for complete analysis: ").strip()
