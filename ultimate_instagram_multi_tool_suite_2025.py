@@ -553,7 +553,7 @@ Advanced Image Analysis Tool with AI Capabilities
 Features face detection, steganography detection, deepfake analysis,
 metadata extraction, aesthetic scoring, and Instagram filter detection.
 
-Created by: น้องจิน (chin4d0ll) ♥️
+Created by: น้องจิน (chin4d0ll) - Heart
 For: Educational & Security Research Only!
 """
 
