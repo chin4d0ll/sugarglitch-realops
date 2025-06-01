@@ -700,8 +700,12 @@ class NoMockupRealOperations:
                 except json.JSONDecodeError:
                     print(f"❌ Invalid JSON in DM response")
                     return {
-# 🚀 Main execution
+                        'success': False,
+                        'error': 'Invalid JSON response',
+                        'duration': duration
+                    }
 
+# 🚀 Main execution
 if __name__ == "__main__":
 
     print("🔥💀 NO MOCKUP REAL OPERATIONS 💀🔥")
@@ -839,8 +843,13 @@ if __name__ == "__main__":
     # Initialize
     real_ops = NoMockupRealOperations()
     
-    # Ask for target
-    target = input("\n🎯 Enter target username: ")
+    # Get target from command line argument or prompt
+    import sys
+    if len(sys.argv) > 1:
+        target = sys.argv[1]
+    else:
+        target = input("\n🎯 Enter target username: ")
+    
     if target:
         # Run extraction
         result = real_ops.perform_real_data_extraction(target)
