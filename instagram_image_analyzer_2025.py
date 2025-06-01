@@ -19,14 +19,30 @@ import time
 import re
 import random
 import hashlib
+import urllib.parse
+import numpy as np
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 import base64
-from PIL import Image
+from PIL import Image, ImageStat, ImageFilter
+from PIL.ExifTags import TAGS
 from io import BytesIO
 import warnings
 warnings.filterwarnings("ignore")
+
+# Advanced analysis imports (optional)
+try:
+    import cv2
+    OPENCV_AVAILABLE = True
+except ImportError:
+    OPENCV_AVAILABLE = False
+
+try:
+    import face_recognition
+    FACE_RECOGNITION_AVAILABLE = True
+except ImportError:
+    FACE_RECOGNITION_AVAILABLE = False
 
 # === GIRLY CONFIG ===
 GIRLY_BANNER = """
@@ -58,8 +74,14 @@ class InstagramImageAnalyzer:
             'image_data': {},
             'metadata': {},
             'analysis': {},
+            'ai_analysis': {},
+            'face_analysis': {},
+            'steganography_check': {},
+            'deepfake_indicators': {},
             'related_urls': [],
-            'profile_hints': []
+            'profile_hints': [],
+            'reverse_search_urls': [],
+            'technical_forensics': {}
         }
         
         # Create output directory
@@ -152,21 +174,8 @@ class InstagramImageAnalyzer:
                 if hasattr(img, '_getexif') and img._getexif():
                     exif = img._getexif()
                     
-                    # EXIF tags mapping
-                    exif_tags = {
-                        271: 'Make',
-                        272: 'Model',
-                        306: 'DateTime',
-                        36867: 'DateTimeOriginal',
-                        33432: 'Copyright',
-                        37385: 'Flash',
-                        37386: 'FocalLength',
-                        41728: 'FileSource',
-                        41729: 'SceneType'
-                    }
-                    
                     for tag_id, value in exif.items():
-                        tag = exif_tags.get(tag_id, str(tag_id))
+                        tag = TAGS.get(tag_id, str(tag_id))
                         exif_data[tag] = str(value)
                 
                 if exif_data:
