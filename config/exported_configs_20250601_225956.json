@@ -1,0 +1,599 @@
+{
+  "export_timestamp": "2025-06-01T22:59:56.137729",
+  "configurations": {
+    "master": {
+      "app": {
+        "name": "SugarGlitch RealOps - Instagram Intelligence Platform",
+        "version": "2025.1.ULTIMATE",
+        "environment": "production",
+        "debug": false,
+        "created_at": "2025-06-01T00:00:00Z"
+      },
+      "database": {
+        "enabled": true,
+        "path": "databases/",
+        "main_db": "instagram_intelligence_2025.db",
+        "backup_enabled": true,
+        "backup_interval_hours": 24,
+        "max_connections": 10,
+        "timeout_seconds": 30
+      },
+      "instagram": {
+        "api": {
+          "enabled": true,
+          "timeout": 30,
+          "retry_attempts": 3,
+          "delay_range": [
+            1.5,
+            4.0
+          ],
+          "user_agents": {
+            "rotation_enabled": true,
+            "mobile_preferred": true
+          }
+        },
+        "rate_limiting": {
+          "enabled": true,
+          "requests_per_minute": 15,
+          "requests_per_hour": 200,
+          "requests_per_day": 2000,
+          "burst_protection": true,
+          "cooldown_minutes": 5
+        },
+        "bypass": {
+          "enabled": true,
+          "techniques": [
+            "user_agent_rotation",
+            "proxy_cycling",
+            "session_distribution"
+          ],
+          "stealth_mode": true,
+          "anti_detection": true
+        }
+      },
+      "proxy": {
+        "enabled": true,
+        "rotation_enabled": true,
+        "validation_enabled": true,
+        "timeout_seconds": 10,
+        "max_retries": 3,
+        "health_check_interval": 300,
+        "primary": {
+          "provider": "BrightData",
+          "host": "brd.superproxy.io",
+          "port": "33335",
+          "username": "brd-customer-hl_63f0835e-zone-mobile_proxy",
+          "password": "q9yhckpz3qk",
+          "zone": "mobile_proxy"
+        },
+        "backup_sources": [
+          "config/proxy_list.txt",
+          "config/working_proxies.json"
+        ]
+      },
+      "session_management": {
+        "enabled": true,
+        "validation_enabled": true,
+        "auto_recovery": true,
+        "backup_sessions": true,
+        "session_dir": "config/sessions/",
+        "max_sessions": 10,
+        "cleanup_expired": true,
+        "encryption_enabled": true
+      },
+      "monitoring": {
+        "enabled": true,
+        "real_time": true,
+        "dashboard": {
+          "enabled": true,
+          "port": 8080,
+          "auto_refresh": 30
+        },
+        "alerts": {
+          "enabled": true,
+          "rate_limit_warnings": true,
+          "proxy_failures": true,
+          "session_expiry": true
+        },
+        "logging": {
+          "level": "INFO",
+          "file_enabled": true,
+          "console_enabled": true,
+          "max_file_size_mb": 50,
+          "backup_count": 5
+        }
+      },
+      "extraction": {
+        "dm_extraction": {
+          "enabled": true,
+          "max_threads_per_target": 50,
+          "max_messages_per_thread": 200,
+          "media_download": true,
+          "metadata_extraction": true,
+          "sentiment_analysis": true
+        },
+        "profile_analysis": {
+          "enabled": true,
+          "deep_analysis": true,
+          "behavior_tracking": true,
+          "relationship_mapping": true
+        },
+        "data_processing": {
+          "encryption_enabled": true,
+          "compression_enabled": true,
+          "backup_enabled": true,
+          "cleanup_old_data": true
+        }
+      },
+      "security": {
+        "encryption": {
+          "enabled": true,
+          "algorithm": "AES-256",
+          "key_rotation": true,
+          "secure_storage": true
+        },
+        "stealth": {
+          "enabled": true,
+          "fingerprint_spoofing": true,
+          "traffic_obfuscation": true,
+          "behavior_randomization": true
+        },
+        "operational_security": {
+          "log_sanitization": true,
+          "trace_removal": true,
+          "secure_deletion": true
+        }
+      },
+      "performance": {
+        "concurrent_operations": 5,
+        "memory_limit_mb": 1024,
+        "disk_space_warning_mb": 500,
+        "cleanup_temp_files": true,
+        "optimize_database": true
+      },
+      "targets": {
+        "auto_discovery": true,
+        "priority_targets": [
+          "alx.trading",
+          "whatilove1728"
+        ],
+        "max_targets": 50,
+        "target_rotation": true,
+        "intelligence_gathering": true
+      }
+    },
+    "proxy": {
+      "enabled": true,
+      "provider": "BrightData",
+      "validation": {
+        "enabled": true,
+        "timeout_seconds": 10,
+        "retry_attempts": 3,
+        "health_check_interval": 300
+      },
+      "rotation": {
+        "enabled": true,
+        "rotation_interval": 60,
+        "failure_threshold": 3,
+        "auto_switch": true
+      },
+      "primary_proxy": {
+        "name": "BrightData Mobile",
+        "host": "brd.superproxy.io",
+        "port": "33335",
+        "username": "brd-customer-hl_63f0835e-zone-mobile_proxy",
+        "password": "q9yhckpz3qk",
+        "zone": "mobile_proxy",
+        "protocol": "http",
+        "country": "US",
+        "enabled": true
+      },
+      "backup_proxies": [
+        {
+          "name": "BrightData Residential",
+          "host": "brd.superproxy.io",
+          "port": "22225",
+          "username": "brd-customer-hl_63f0835e-zone-residential",
+          "password": "q9yhckpz3qk",
+          "zone": "residential",
+          "protocol": "http",
+          "country": "US",
+          "enabled": true
+        }
+      ],
+      "proxy_list_sources": [
+        "config/proxy_list.txt",
+        "config/working_proxies.json"
+      ],
+      "authentication": {
+        "enabled": true,
+        "method": "basic",
+        "credentials_encrypted": false
+      },
+      "performance": {
+        "connection_timeout": 10,
+        "read_timeout": 30,
+        "max_retries": 3,
+        "keep_alive": true,
+        "connection_pool_size": 10
+      },
+      "monitoring": {
+        "enabled": true,
+        "success_rate_threshold": 80,
+        "response_time_threshold": 5000,
+        "log_failures": true,
+        "alert_on_failure": true
+      },
+      "rate_limiting": {
+        "enabled": true,
+        "requests_per_minute": 30,
+        "burst_protection": true,
+        "adaptive_timing": true
+      }
+    },
+    "session": {
+      "session_management": {
+        "enabled": true,
+        "auto_validation": true,
+        "auto_recovery": true,
+        "backup_enabled": true,
+        "encryption_enabled": true
+      },
+      "validation": {
+        "required_fields": [
+          "sessionid",
+          "username"
+        ],
+        "optional_fields": [
+          "csrftoken",
+          "user_id",
+          "expires"
+        ],
+        "format_validation": true,
+        "expiry_checking": true,
+        "activity_validation": true
+      },
+      "recovery": {
+        "enabled": true,
+        "retry_attempts": 3,
+        "recovery_strategies": [
+          "session_refresh",
+          "re_authentication",
+          "backup_session"
+        ],
+        "fallback_sessions": true,
+        "auto_cleanup": true
+      },
+      "storage": {
+        "directory": "config/sessions/",
+        "backup_directory": "config/sessions/backups/",
+        "encryption_enabled": true,
+        "compression_enabled": true,
+        "max_sessions": 20,
+        "cleanup_expired": true
+      },
+      "monitoring": {
+        "enabled": true,
+        "health_checks": true,
+        "expiry_alerts": true,
+        "performance_tracking": true,
+        "usage_analytics": true
+      },
+      "security": {
+        "secure_storage": true,
+        "access_logging": true,
+        "session_isolation": true,
+        "anti_fingerprinting": true
+      },
+      "active_sessions": {
+        "alx.trading": {
+          "username": "alx.trading",
+          "status": "active",
+          "last_validated": "2025-06-01T00:00:00Z",
+          "source": "harvested",
+          "priority": "high"
+        },
+        "whatilove1728": {
+          "username": "whatilove1728",
+          "status": "active",
+          "last_validated": "2025-06-01T00:00:00Z",
+          "source": "harvested",
+          "priority": "high"
+        }
+      },
+      "session_sources": [
+        "config/sessions/",
+        "harvested_sessions/",
+        "backup_sessions/"
+      ],
+      "rotation": {
+        "enabled": true,
+        "rotation_interval": 300,
+        "random_rotation": true,
+        "load_balancing": true
+      }
+    },
+    "monitoring": {
+      "monitoring": {
+        "enabled": true,
+        "real_time": true,
+        "dashboard_enabled": true,
+        "auto_refresh_seconds": 30
+      },
+      "targets": {
+        "auto_discovery": true,
+        "priority_monitoring": true,
+        "real_time_tracking": true,
+        "intelligence_gathering": true,
+        "behavior_analysis": true
+      },
+      "data_collection": {
+        "dm_extraction": {
+          "enabled": true,
+          "max_threads": 50,
+          "max_messages": 200,
+          "media_download": true,
+          "metadata_extraction": true
+        },
+        "profile_monitoring": {
+          "enabled": true,
+          "activity_tracking": true,
+          "post_analysis": true,
+          "story_monitoring": true,
+          "contact_mapping": true
+        },
+        "behavioral_analysis": {
+          "enabled": true,
+          "pattern_recognition": true,
+          "sentiment_analysis": true,
+          "threat_assessment": true,
+          "relationship_mapping": true
+        }
+      },
+      "alerts": {
+        "enabled": true,
+        "real_time_alerts": true,
+        "alert_channels": [
+          "console",
+          "log",
+          "dashboard"
+        ],
+        "alert_types": {
+          "new_activity": true,
+          "rate_limits": true,
+          "proxy_failures": true,
+          "session_issues": true,
+          "security_threats": true
+        }
+      },
+      "reporting": {
+        "enabled": true,
+        "auto_reports": true,
+        "report_interval_hours": 6,
+        "detailed_analytics": true,
+        "export_formats": [
+          "json",
+          "csv",
+          "html"
+        ]
+      },
+      "performance": {
+        "concurrent_operations": 5,
+        "monitoring_interval": 60,
+        "data_retention_days": 30,
+        "optimization_enabled": true
+      },
+      "security": {
+        "stealth_mode": true,
+        "anti_detection": true,
+        "traffic_obfuscation": true,
+        "operational_security": true
+      }
+    },
+    "bypass": {
+      "rate_limiting": {
+        "enabled": true,
+        "adaptive": true,
+        "bypass_techniques": [
+          "timing_randomization",
+          "request_distribution",
+          "session_cycling"
+        ]
+      },
+      "bypass_strategies": {
+        "user_agent_rotation": {
+          "enabled": true,
+          "mobile_preference": true,
+          "instagram_specific": true,
+          "rotation_interval": 10
+        },
+        "proxy_cycling": {
+          "enabled": true,
+          "cycle_interval": 5,
+          "health_check": true,
+          "failure_tolerance": 3
+        },
+        "session_distribution": {
+          "enabled": true,
+          "load_balancing": true,
+          "session_isolation": true,
+          "failover": true
+        },
+        "timing_obfuscation": {
+          "enabled": true,
+          "random_delays": true,
+          "human_behavior": true,
+          "burst_prevention": true
+        }
+      },
+      "instagram_api": {
+        "endpoints": {
+          "inbox": "https://i.instagram.com/api/v1/direct_v2/inbox/",
+          "thread_items": "https://i.instagram.com/api/v1/direct_v2/threads/{thread_id}/items/",
+          "thread_info": "https://i.instagram.com/api/v1/direct_v2/threads/{thread_id}/",
+          "user_search": "https://i.instagram.com/api/v1/users/search/",
+          "user_info": "https://i.instagram.com/api/v1/users/{user_id}/info/"
+        },
+        "headers": {
+          "accept": "*/*",
+          "accept-encoding": "gzip, deflate, br",
+          "accept-language": "en-US,en;q=0.9",
+          "cache-control": "no-cache",
+          "pragma": "no-cache",
+          "sec-fetch-dest": "empty",
+          "sec-fetch-mode": "cors",
+          "sec-fetch-site": "same-origin"
+        }
+      },
+      "rate_limits": {
+        "requests_per_minute": 15,
+        "requests_per_hour": 200,
+        "requests_per_day": 2000,
+        "dm_requests_per_hour": 50,
+        "profile_requests_per_hour": 100
+      },
+      "bypass_parameters": {
+        "delay_min": 1.5,
+        "delay_max": 4.0,
+        "batch_size": 3,
+        "concurrent_sessions": 5,
+        "retry_attempts": 5,
+        "exponential_backoff": true,
+        "circuit_breaker": true
+      },
+      "stealth_features": {
+        "fingerprint_spoofing": true,
+        "behavior_randomization": true,
+        "traffic_obfuscation": true,
+        "anti_detection": true,
+        "trace_removal": true
+      }
+    },
+    "system": {
+      "logging": {
+        "enabled": true,
+        "level": "INFO",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        "handlers": {
+          "file": {
+            "enabled": true,
+            "filename": "logs/instagram_ops_{date}.log",
+            "max_size_mb": 50,
+            "backup_count": 10,
+            "encoding": "utf-8"
+          },
+          "console": {
+            "enabled": true,
+            "colored": true,
+            "detailed": true
+          },
+          "database": {
+            "enabled": true,
+            "table": "operation_logs",
+            "retention_days": 30
+          }
+        },
+        "initialized": true,
+        "start_time": "2025-06-01T22:59:56.136068"
+      },
+      "security": {
+        "encryption": {
+          "enabled": true,
+          "algorithm": "AES-256-GCM",
+          "key_derivation": "PBKDF2",
+          "iterations": 100000,
+          "salt_length": 32
+        },
+        "data_protection": {
+          "sanitize_logs": true,
+          "secure_deletion": true,
+          "access_control": true,
+          "audit_trail": true
+        },
+        "operational_security": {
+          "stealth_mode": true,
+          "anti_forensics": true,
+          "trace_removal": true,
+          "secure_communication": true
+        },
+        "configured": true,
+        "encryption_ready": true,
+        "stealth_mode": true
+      },
+      "performance": {
+        "optimization": {
+          "enabled": true,
+          "database_optimization": true,
+          "memory_management": true,
+          "cache_optimization": true
+        },
+        "limits": {
+          "max_memory_mb": 1024,
+          "max_cpu_percent": 80,
+          "max_disk_usage_percent": 85,
+          "connection_timeout": 30
+        },
+        "monitoring": {
+          "resource_monitoring": true,
+          "performance_metrics": true,
+          "bottleneck_detection": true,
+          "auto_scaling": false
+        }
+      },
+      "error_handling": {
+        "enabled": true,
+        "auto_recovery": true,
+        "retry_strategies": [
+          "exponential_backoff",
+          "circuit_breaker",
+          "fallback"
+        ],
+        "error_reporting": true,
+        "graceful_degradation": true
+      },
+      "maintenance": {
+        "auto_cleanup": true,
+        "database_vacuum": true,
+        "log_rotation": true,
+        "temp_file_cleanup": true,
+        "cache_cleanup": true
+      },
+      "database": {
+        "runtime_path": "databases/instagram_intelligence_2025.db",
+        "initialized": true,
+        "initialization_time": "2025-06-01T22:59:56.128033"
+      },
+      "proxy": {
+        "configured": true,
+        "last_check": "2025-06-01T22:59:56.129304"
+      },
+      "sessions": {
+        "configured": true,
+        "count": 2,
+        "last_check": "2025-06-01T22:59:56.131251"
+      },
+      "monitoring": {
+        "initialized": true,
+        "start_time": "2025-06-01T22:59:56.132758"
+      }
+    }
+  },
+  "metadata": {
+    "config_files": {
+      "master": "master_config.json",
+      "proxy": "proxy_master_config.json",
+      "session": "session_master_config.json",
+      "monitoring": "monitoring_config.json",
+      "bypass": "bypass_config.json",
+      "system": "system_config.json"
+    },
+    "last_loaded": {
+      "master": "2025-06-01T22:59:56.125101",
+      "proxy": "2025-06-01T22:59:56.125216",
+      "session": "2025-06-01T22:59:56.125344",
+      "monitoring": "2025-06-01T22:59:56.125452",
+      "bypass": "2025-06-01T22:59:56.125562",
+      "system": "2025-06-01T22:59:56.125766"
+    }
+  }
+}
