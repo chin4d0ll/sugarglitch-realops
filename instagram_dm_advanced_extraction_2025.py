@@ -397,57 +397,25 @@ class AdvancedInstagramDMExtractor:
                 'system_version': device['ios_version'].replace('_', '.'),
                 'user_agent': f"Instagram 318.0.0.18.111 ({device['model']}; iOS {device['ios_version']}; en_US; en-US; scale={device['scale']}; {device['resolution']}; 558123456)"
             }
-                'uuid': str(uuid.uuid4()),
-                'advertising_id': str(uuid.uuid4()),
-                'session_id': str(uuid.uuid4()),
-                'machine_id': hashlib.md5(f"{device_id}_{android_id}".encode()).hexdigest(),
-                
-                # Hardware specs
-                'brand': device['brand'],
-                'model': device['model'],
-                'android_version': device['android_version'],
-                'api_level': device['api_level'],
-                'dpi': device['dpi'], 
-                'resolution': device['resolution'],
-                'cpu': device['cpu'],
-                'gpu': device['gpu'],
-                'ram': device['ram'],
-                'storage': device['storage'],
-                
-                # Network & connectivity
-                'mac_address': mac_address,
-                'wifi_mac': ':'.join([f'{random.randint(0, 255):02x}' for _ in range(6)]),
-                'bluetooth_mac': ':'.join([f'{random.randint(0, 255):02x}' for _ in range(6)]),
-                
-                # Advanced identifiers
-                'build_fingerprint': f"{device['brand']}/{device['model']}/{device['model']}:{device['android_version']}/QP1A.190711.020/{random.randint(100000, 999999)}:user/release-keys",
-                'build_id': f"QP1A.{random.randint(190000, 200000)}.{random.randint(100, 999)}",
-                'build_type': 'user',
-                'build_tags': 'release-keys',
-                
-                # User agent
-                'user_agent': f"Instagram 318.0.0.31.120 Android ({device['android_version']}/{device['api_level']}; {device['dpi']}dpi; {device['resolution']}; {device['brand']}; {device['model']}; dm1q; {device['cpu']}; en_US; 558123456)"
-            }
-        else:
-            # iOS-specific advanced fingerprinting
-            device_id = str(uuid.uuid4()).upper()
-            
-            fingerprint = {
-                'device_type': 'ios',
-                'device_id': device_id,
-                'phone_id': str(uuid.uuid4()),
-                'uuid': str(uuid.uuid4()),
-                'advertising_id': str(uuid.uuid4()).upper(),
-                'vendor_id': str(uuid.uuid4()).upper(),
-                'session_id': str(uuid.uuid4()),
-                
-                # Hardware specs
-                'model': device['model'],
-                'ios_version': device['ios_version'],
-                'scale': device['scale'],
-                'resolution': device['resolution'],
-                'cpu': device['cpu'],
-                'ram': device['ram'],
+        
+        # Advanced entropy and timing
+        fingerprint.update({
+            'created_timestamp': datetime.now().isoformat(),
+            'timezone_offset': random.choice([25200, 28800, -18000, 0, 7200]),
+            'locale': random.choice(['en_US', 'en_GB', 'th_TH']),
+            'keyboard_language': random.choice(['en', 'th', 'en-TH']),
+            'carrier': random.choice(['Vodafone', 'AIS', 'TRUE', 'dtac', 'T-Mobile']),
+            'connection_type': random.choice(['WIFI', 'CELL_4G', 'CELL_5G', 'CELL_LTE']),
+            'battery_level': random.randint(20, 95),
+            'screen_brightness': random.uniform(0.3, 1.0),
+            'volume_level': random.uniform(0.5, 1.0)
+        })
+        
+        # Cache fingerprint
+        fingerprint_id = hashlib.md5(seed_data.encode()).hexdigest()
+        self.device_fingerprints[fingerprint_id] = fingerprint
+        
+        return fingerprint
                 'storage': device['storage'],
                 
                 # Network
