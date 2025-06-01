@@ -134,18 +134,39 @@ class NinjaProxyRotation:
     async def get_current_tor_ip(self):
         """ได้ IP ปัจจุบันของ TOR"""
         try:
-            # Configure session for TOR
+            # Configure session for TOR with timeout
             session = requests.Session()
             session.proxies = {
                 'http': 'socks5://127.0.0.1:9050',
                 'https': 'socks5://127.0.0.1:9050'
             }
+            session.timeout = 15
             
-            response = session.get('https://httpbin.org/ip', timeout=10)
-            if response.status_code == 200:
-                return response.json()['origin']
-        except:
-            pass
+            # Try multiple IP checking services
+            ip_services = [
+                'https://httpbin.org/ip',
+                'https://api.ipify.org?format=json',
+                'https://ipapi.co/json'
+            ]
+            
+            for service in ip_services:
+                try:
+                    response = session.get(service, timeout=10)
+                    if response.status_code == 200:
+                        data = response.json()
+                        # Handle different response formats
+                        if 'origin' in data:
+                            return data['origin']
+                        elif 'ip' in data:
+                            return data['ip']
+                        else:
+                            return str(data)
+                except:
+                    continue
+                    
+        except Exception as e:
+            print(f"🔍 TOR IP check failed: {e}")
+            
         return "Unknown"
     
     async def auto_tor_rotation(self):
