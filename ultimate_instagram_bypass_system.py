@@ -68,6 +68,19 @@ class UltimateInstagramBypassSystem:
         print("✅ Ultimate Instagram Bypass System ready!")
         self._print_system_status()
     
+    async def initialize(self):
+        """Initialize the system asynchronously"""
+        print("🔄 Performing async initialization...")
+        
+        # Initialize session manager
+        await self.session_manager.load_session_from_file()
+        
+        # Initialize connection pool if needed
+        if hasattr(self.connection_pool, 'initialize'):
+            await self.connection_pool.initialize()
+        
+        print("✅ Async initialization completed!")
+    
     def _load_config(self, config_file: str) -> dict:
         """โหลด configuration"""
         try:
