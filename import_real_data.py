@@ -245,16 +245,18 @@ class ResultsImporter:
                 
                 cursor.execute('''
                     INSERT INTO analysis_results 
-                    (analysis_id, analysis_type, target_username, result_data, 
-                     metadata, confidence_score, created_at)
-                    VALUES (?, ?, ?, ?, ?, ?, ?)
+                    (analysis_id, analysis_type, target_username, algorithm, 
+                     results_json, summary, score, confidence, created_at)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     analysis_id,
                     'extraction_performance',
                     'system_analysis',
+                    'auto_generated_stats',
                     json.dumps(analysis_result),
-                    json.dumps({'auto_generated': True, 'source': 'import_process'}),
+                    f"Performance analysis for {extraction_type}: {success_rate:.1f}% success rate",
                     success_rate,
+                    success_rate / 100,
                     datetime.datetime.now().isoformat()
                 ))
                 
