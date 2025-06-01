@@ -220,7 +220,7 @@ class TargetDatabaseBrowser:
             target = dict(row)
             print(f"ID: {target['id']} | @{target['username']} | "
                   f"Priority: {target['priority']} | Status: {target['status']} | "
-                  f"Followers: {target['followers'] or 'N/A'}")
+                  f"Followers: {target['follower_count'] or 'N/A'}")
         print()
         
     def get_statistics(self):
@@ -237,7 +237,7 @@ class TargetDatabaseBrowser:
         cursor.execute("SELECT COUNT(*) FROM targets WHERE status = 'active'")
         active_targets = cursor.fetchone()[0]
         
-        cursor.execute("SELECT COUNT(*) FROM targets WHERE followers IS NOT NULL")
+        cursor.execute("SELECT COUNT(*) FROM targets WHERE follower_count IS NOT NULL")
         targets_with_followers = cursor.fetchone()[0]
         
         # Operation stats
