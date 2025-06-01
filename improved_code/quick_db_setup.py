@@ -91,43 +91,35 @@ class QuickDBSetup:
     def insert_sample_data(self):
         """ใส่ข้อมูลจริงจากฐานข้อมูล Master แทนข้อมูลตัวอย่าง"""
         cursor = self.conn.cursor()
-        
-        # Real targets from master database
-        real_targets = [
-            ('alx.trading', 'instagram', 'active', 5, 'Primary target - Trading account with active sessions'),
-            ('whatilove1728', 'instagram', 'pending', 3, 'Secondary target - Personal account'),
-            ('test_account', 'instagram', 'completed', 1, 'Test account - Extraction completed'),
-            ('sugarglitch_ops', 'instagram', 'operational', 4, 'Operational account for extractions')
-        ]
-        
-        for target in real_targets:
-            try:
+        try:
+            from real_data_provider import get_real_targets, get_real_sessions
+            real_targets = get_real_targets()
+            for target in real_targets:
                 cursor.execute('''
                     INSERT OR IGNORE INTO targets (username, platform, status, priority, notes)
                     VALUES (?, ?, ?, ?, ?)
-                ''', target)
-            except Exception as e:
-                print(f"⚠️ ข้อผิดพลาดใส่ข้อมูล: {e}")
-        
-        # Real proxy sessions from actual extractions
-        real_proxies = [
-            ('198.23.239.134', 22225, 'session_20250601_075730', 'active'),
-            ('proxy.bright-data.com', 8080, 'session_20250601_075831', 'active'),
-            ('127.0.0.1', 24000, 'session_local_dev', 'standby'),
-            ('production.proxy.io', 3128, 'session_production', 'active')
-        ]
-        
-        for proxy in real_proxies:
-            try:
+                ''', (
+                    target['username'],
+                    'instagram',
+                    target['status'],
+                    3,
+                    f"Real target: {target['username']}"
+                ))
+            real_sessions = get_real_sessions()
+            for session in real_sessions:
                 cursor.execute('''
                     INSERT OR IGNORE INTO proxy_sessions (proxy_ip, proxy_port, session_id, status)
                     VALUES (?, ?, ?, ?)
-                ''', proxy)
-            except Exception as e:
-                print(f"⚠️ ข้อผิดพลาดใส่ proxy: {e}")
-        
+                ''', (
+                    '198.23.239.134',
+                    22225,
+                    session['session_id'],
+                    session['status']
+                ))
+        except Exception as e:
+            print(f"⚠️ ข้อผิดพลาดใส่ข้อมูลจริง: {e}")
         self.conn.commit()
-        print("📊 ใส่ข้อมูลตัวอย่างเสร็จแล้ว!")
+        print("📊 ใส่ข้อมูลจริงเสร็จแล้ว!")
     
     def quick_query(self, query, params=None):
         """Query แบบเร็วๆ"""
