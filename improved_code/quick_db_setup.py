@@ -1,5 +1,3 @@
-from utils.error_handler import safe_execution, safe_print
-
 #!/usr/bin/env python3
 """
 Quick SQL Database Setup - แปปปังๆ
