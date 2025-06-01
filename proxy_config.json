@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "proxies": [
+    {
+      "proxy_user": "brd-customer-hl_63f0835e-zone-isp_proxy1",
+      "proxy_pass": "for your security, log in to the dashboard to see the password",
+      "proxy_host": "brd.superproxy.io",
+      "proxy_port": 33335
+    }
+  ]
+}

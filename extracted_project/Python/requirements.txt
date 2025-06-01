@@ -1,5 +1,0 @@
-requests>=2.32.3
-flask>=2.3.0
-instagrapi>=2.0.0
-matplotlib>=3.7.0
-beautifulsoup4>=4.12.0

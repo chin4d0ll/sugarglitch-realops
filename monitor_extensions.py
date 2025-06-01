@@ -1,116 +1,108 @@
 #!/usr/bin/env python3
 """
-SugarGlitch RealOps - Extension Monitor
-Real-time monitoring of VS Code extension processes and memory usage
+VS Code Extension Monitor
+Prevents multiple extensionHost processes and monitors memory usage
 """
-
-import psutil
-import time
-import json
 import os
+import time
+import subprocess
+import psutil
+import signal
+import sys
 from datetime import datetime
 
 class ExtensionMonitor:
     def __init__(self):
-        self.memory_threshold = 1024 * 1024 * 1024  # 1GB in bytes
-        self.log_file = "logs/extension_monitor.log"
-        os.makedirs("logs", exist_ok=True)
-    
+        self.max_extension_hosts = 2  # Allow max 2 extension hosts
+        self.memory_threshold = 85    # Kill if memory usage > 85%
+        self.check_interval = 30      # Check every 30 seconds
+        
     def log(self, message):
-        """Log message with timestamp"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        log_entry = f"[{timestamp}] {message}\n"
-        print(log_entry.strip())
-        with open(self.log_file, "a") as f:
-            f.write(log_entry)
-    
-    def get_extension_processes(self):
-        """Find all VS Code extension processes"""
-        processes = []
-        for proc in psutil.process_iter(['pid', 'name', 'memory_info', 'cmdline']):
+        print(f"[{timestamp}] {message}")
+        
+    def get_extension_hosts(self):
+        """Get all extensionHost processes"""
+        procs = []
+        for proc in psutil.process_iter(['pid', 'name', 'cmdline', 'memory_percent', 'create_time']):
             try:
-                if 'extensionHost' in ' '.join(proc.info['cmdline']):
-                    processes.append(proc)
+                if 'extensionHost' in ' '.join(proc.info['cmdline'] or []):
+                    procs.append(proc)
             except (psutil.NoSuchProcess, psutil.AccessDenied):
                 continue
-        return processes
-    
-    def kill_memory_hogs(self):
-        """Kill extension processes using too much memory"""
-        killed = 0
-        for proc in self.get_extension_processes():
+        return procs
+        
+    def kill_old_extension_hosts(self, procs):
+        """Kill older extensionHost processes, keep the newest ones"""
+        if len(procs) <= self.max_extension_hosts:
+            return
+            
+        # Sort by creation time, newest first
+        procs.sort(key=lambda p: p.info['create_time'], reverse=True)
+        
+        # Kill older processes
+        for proc in procs[self.max_extension_hosts:]:
             try:
-                memory_usage = proc.memory_info().rss
-                if memory_usage > self.memory_threshold:
-                    self.log(f"Killing process {proc.pid} using {memory_usage // 1024 // 1024}MB")
-                    proc.kill()
-                    killed += 1
-                    time.sleep(1)
-            except (psutil.NoSuchProcess, psutil.AccessDenied):
-                continue
-        return killed
-    
-    def get_system_memory(self):
-        """Get current system memory usage"""
+                self.log(f"Killing old extensionHost PID {proc.pid}")
+                proc.kill()
+                proc.wait(timeout=5)
+            except (psutil.NoSuchProcess, psutil.TimeoutExpired):
+                pass
+                
+    def check_memory_usage(self):
+        """Check system memory usage"""
         memory = psutil.virtual_memory()
-        return {
-            'total': memory.total,
-            'available': memory.available,
-            'percent': memory.percent,
-            'used': memory.used
-        }
-    
-    def monitor(self, duration=60):
-        """Monitor extensions for specified duration"""
-        self.log("Starting extension monitoring...")
+        if memory.percent > self.memory_threshold:
+            self.log(f"⚠️  High memory usage: {memory.percent:.1f}%")
+            return True
+        return False
         
-        start_time = time.time()
-        check_interval = 5  # Check every 5 seconds
-        
-        while time.time() - start_time < duration:
-            # Get current system memory
-            memory = self.get_system_memory()
-            
-            # Get extension processes
-            ext_processes = self.get_extension_processes()
-            total_ext_memory = sum(proc.memory_info().rss for proc in ext_processes)
-            
-            # Log status
-            status = {
-                'timestamp': datetime.now().isoformat(),
-                'system_memory_percent': memory['percent'],
-                'system_memory_used_gb': memory['used'] / 1024 / 1024 / 1024,
-                'extension_processes': len(ext_processes),
-                'extension_memory_gb': total_ext_memory / 1024 / 1024 / 1024
-            }
-            
-            self.log(f"Memory: {memory['percent']:.1f}% | Extensions: {len(ext_processes)} | Ext Memory: {total_ext_memory / 1024 / 1024:.1f}MB")
-            
-            # Kill memory hogs if system memory is high
-            if memory['percent'] > 85:
-                killed = self.kill_memory_hogs()
-                if killed > 0:
-                    self.log(f"Killed {killed} memory-hungry extension processes")
-            
-            time.sleep(check_interval)
-        
-        self.log("Monitoring complete")
-
-def main():
-    monitor = ExtensionMonitor()
-    
-    if len(os.sys.argv) > 1:
+    def cleanup_temp_files(self):
+        """Clean up temporary VS Code files"""
         try:
-            duration = int(os.sys.argv[1])
-        except ValueError:
-            duration = 60
-    else:
-        duration = 60
-    
-    try:
-        monitor.monitor(duration)
-    except KeyboardInterrupt:
-        print("\nMonitoring stopped by user")
+            cmd = ["find", "/tmp", "-name", "*vscode*", "-type", "f", "-mmin", "+60", "-delete"]
+            subprocess.run(cmd, capture_output=True, timeout=10)
+        except subprocess.TimeoutExpired:
+            pass
+            
+    def monitor(self):
+        """Main monitoring loop"""
+        self.log("🔍 Starting Extension Monitor...")
+        
+        while True:
+            try:
+                # Get extension hosts
+                ext_hosts = self.get_extension_hosts()
+                
+                if len(ext_hosts) > self.max_extension_hosts:
+                    self.log(f"Found {len(ext_hosts)} extensionHost processes (max: {self.max_extension_hosts})")
+                    self.kill_old_extension_hosts(ext_hosts)
+                    
+                # Check memory
+                if self.check_memory_usage():
+                    # Force cleanup if memory is high
+                    self.cleanup_temp_files()
+                    
+                # Log status
+                memory = psutil.virtual_memory()
+                self.log(f"Status: {len(ext_hosts)} ext hosts, {memory.percent:.1f}% RAM used")
+                
+                time.sleep(self.check_interval)
+                
+            except KeyboardInterrupt:
+                self.log("Monitor stopped by user")
+                break
+            except Exception as e:
+                self.log(f"Error: {e}")
+                time.sleep(5)
+
+def signal_handler(sig, frame):
+    print("\n🛑 Extension monitor stopped")
+    sys.exit(0)
 
 if __name__ == "__main__":
-    main()
+    signal.signal(signal.SIGINT, signal_handler)
+    signal.signal(signal.SIGTERM, signal_handler)
+    
+    monitor = ExtensionMonitor()
+    monitor.monitor()

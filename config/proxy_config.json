@@ -1,7 +1,15 @@
-
 {
-    "proxy_host": "brd.superproxy.io",
-    "proxy_port": "33335",
-    "proxy_user": "brd-customer-hl_63f0835e-zone-mobile_proxy",
-    "proxy_pass": "q9yhckpz3qk"
+    "accounts": [
+        {
+            "username": "alx.fleming",
+            "password": "Fleming654",
+            "proxies": [
+                "http://brd-customer-hl_63f0835e-zone-isp_proxy1:for your security, log in to the dashboard to see the password@brd.superproxy.io:33335"
+            ]
+        }
+    ],
+    "user_agents": [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15"
+    ]
 }

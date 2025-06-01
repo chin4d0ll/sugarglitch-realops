@@ -1,192 +1,202 @@
 #!/usr/bin/env python3
 """
-SugarGlitch RealOps - Lightweight Version
-Memory-optimized version for low-resource environments
+SugarGlitch RealOps - Lightweight Memory-Optimized Version
+Minimal RAM usage with essential features only
 """
 
 import os
 import sys
-import json
-import sqlite3
-import psutil
-from datetime import datetime
+import gc
+from pathlib import Path
 
-class LightweightApp:
+# Force memory optimization from the start
+gc.set_threshold(100, 5, 5)  # More aggressive garbage collection
+os.environ['PYTHONMALLOC'] = 'pymalloc'
+os.environ['NODE_OPTIONS'] = '--max-old-space-size=512'
+
+# Minimal imports to reduce memory footprint
+try:
+    import psutil
+except ImportError:
+    print("⚠️ psutil not found. Install with: pip install psutil")
+    sys.exit(1)
+
+class LightweightRealOps:
     def __init__(self):
-        self.db_path = "databases/stealth_intelligence.db"
-        self.ensure_database()
-        print("🚀 SugarGlitch RealOps - Lightweight Mode")
-        print("💾 Memory-optimized for low-resource environments")
+        self.workspace = Path("/workspaces/sugarglitch-realops")
+        self.clear_screen()
+        self.show_header()
     
-    def ensure_database(self):
-        """Ensure database directory and file exist"""
-        os.makedirs("databases", exist_ok=True)
-        if not os.path.exists(self.db_path):
-            # Create a simple database
-            conn = sqlite3.connect(self.db_path)
-            conn.execute("""
-                CREATE TABLE IF NOT EXISTS sessions (
-                    id INTEGER PRIMARY KEY,
-                    username TEXT,
-                    session_data TEXT,
-                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                )
-            """)
-            conn.commit()
-            conn.close()
+    def clear_screen(self):
+        os.system('clear' if os.name == 'posix' else 'cls')
     
-    def get_system_info(self):
-        """Get basic system information"""
-        memory = psutil.virtual_memory()
-        disk = psutil.disk_usage('.')
-        cpu_percent = psutil.cpu_percent(interval=1)
-        
-        return {
-            'memory': {
-                'total_gb': memory.total / 1024 / 1024 / 1024,
-                'used_gb': memory.used / 1024 / 1024 / 1024,
-                'percent': memory.percent
-            },
-            'disk': {
-                'total_gb': disk.total / 1024 / 1024 / 1024,
-                'used_gb': disk.used / 1024 / 1024 / 1024,
-                'percent': (disk.used / disk.total) * 100
-            },
-            'cpu_percent': cpu_percent
-        }
+    def show_header(self):
+        print("🍭 SugarGlitch RealOps - Lightweight Mode")
+        print("=" * 50)
+        self.show_memory_status()
+        print("=" * 50)
     
-    def show_status(self):
-        """Show current system status"""
-        info = self.get_system_info()
-        
-        print("\n📊 System Status:")
-        print(f"  💾 Memory: {info['memory']['used_gb']:.1f}GB / {info['memory']['total_gb']:.1f}GB ({info['memory']['percent']:.1f}%)")
-        print(f"  💽 Disk: {info['disk']['used_gb']:.1f}GB / {info['disk']['total_gb']:.1f}GB ({info['disk']['percent']:.1f}%)")
-        print(f"  🔥 CPU: {info['cpu_percent']:.1f}%")
-        
-        # Memory warning
-        if info['memory']['percent'] > 80:
-            print("⚠️  High memory usage detected!")
-            print("💡 Consider running: ./optimize_memory.sh")
-    
-    def list_sessions(self):
-        """List all stored sessions"""
+    def show_memory_status(self):
+        """Show current memory usage"""
         try:
-            conn = sqlite3.connect(self.db_path)
-            cursor = conn.execute("SELECT id, username, created_at FROM sessions ORDER BY created_at DESC LIMIT 10")
-            sessions = cursor.fetchall()
-            conn.close()
+            memory = psutil.virtual_memory()
+            cpu_percent = psutil.cpu_percent(interval=1)
             
-            if sessions:
-                print("\n📱 Recent Sessions:")
-                for session_id, username, created_at in sessions:
-                    print(f"  {session_id}: {username} ({created_at})")
-            else:
-                print("\n📱 No sessions found")
+            print(f"💻 System Status:")
+            print(f"   RAM: {memory.used/1024**3:.1f}GB / {memory.total/1024**3:.1f}GB ({memory.percent:.1f}%)")
+            print(f"   CPU: {cpu_percent:.1f}%")
+            print(f"   Available: {memory.available/1024**3:.1f}GB")
+            
+            if memory.percent > 80:
+                print("⚠️ WARNING: High memory usage detected!")
         except Exception as e:
-            print(f"❌ Database error: {e}")
+            print(f"⚠️ Could not get system status: {e}")
     
-    def add_session(self, username, session_data):
-        """Add a new session to database"""
-        try:
-            conn = sqlite3.connect(self.db_path)
-            conn.execute("INSERT INTO sessions (username, session_data) VALUES (?, ?)", 
-                        (username, json.dumps(session_data)))
-            conn.commit()
-            conn.close()
-            print(f"✅ Session added for {username}")
-        except Exception as e:
-            print(f"❌ Failed to add session: {e}")
-    
-    def optimize_memory(self):
-        """Basic memory optimization"""
-        import gc
-        print("🧹 Optimizing memory...")
+    def quick_memory_cleanup(self):
+        """Quick memory cleanup"""
+        print("\n🧹 Quick Memory Cleanup...")
+        
+        # Python garbage collection
+        collected = gc.collect()
+        print(f"   Collected {collected} objects")
+        
+        # Clear unnecessary variables
+        for var in list(globals().keys()):
+            if var.startswith('_') and var != '__name__':
+                del globals()[var]
+        
+        print("✅ Memory cleanup completed")
         gc.collect()
-        print("✅ Memory optimization complete")
     
-    def show_menu(self):
-        """Show main menu"""
-        print("\n" + "="*50)
-        print("🎯 SugarGlitch RealOps - Lightweight Mode")
-        print("="*50)
-        print("1. 📊 Show System Status")
-        print("2. 📱 List Sessions")
-        print("3. ➕ Add Test Session")
-        print("4. 🧹 Optimize Memory")
-        print("5. 📋 Show Database Info")
-        print("6. 🔧 Run Memory Monitor")
+    def show_simple_menu(self):
+        """Show lightweight menu"""
+        print("\n📋 Available Actions:")
+        print("1. 🔍 System Status")
+        print("2. 🧹 Memory Cleanup") 
+        print("3. 📊 Process Monitor")
+        print("4. ⚙️ Run Memory Optimizer")
+        print("5. 🔧 Quick Instagram Test")
+        print("6. 📝 View Logs")
         print("0. 🚪 Exit")
-        print("="*50)
+        
+        return input("\n👉 Select option (0-6): ").strip()
     
-    def show_database_info(self):
-        """Show database information"""
+    def run_memory_optimizer(self):
+        """Run the comprehensive memory optimizer"""
+        print("\n🚀 Running Memory Optimizer...")
         try:
-            conn = sqlite3.connect(self.db_path)
-            cursor = conn.execute("SELECT COUNT(*) FROM sessions")
-            count = cursor.fetchone()[0]
-            conn.close()
-            
-            file_size = os.path.getsize(self.db_path) if os.path.exists(self.db_path) else 0
-            
-            print(f"\n🗄️ Database Info:")
-            print(f"  📁 File: {self.db_path}")
-            print(f"  📊 Records: {count}")
-            print(f"  💾 Size: {file_size / 1024:.1f} KB")
+            import subprocess
+            result = subprocess.run([sys.executable, "optimize_memory.py"], 
+                                  cwd=self.workspace, capture_output=True, text=True)
+            print(result.stdout)
+            if result.stderr:
+                print(f"⚠️ Warnings: {result.stderr}")
         except Exception as e:
-            print(f"❌ Database error: {e}")
+            print(f"❌ Error running optimizer: {e}")
     
-    def run_monitor(self):
-        """Run extension monitor"""
-        print("🔍 Starting extension monitor for 30 seconds...")
-        os.system("python3 monitor_extensions.py 30")
+    def show_process_monitor(self):
+        """Show top memory-consuming processes"""
+        print("\n📊 Top Memory Consumers:")
+        try:
+            processes = []
+            for proc in psutil.process_iter(['pid', 'name', 'memory_info']):
+                try:
+                    memory_mb = proc.info['memory_info'].rss / (1024 * 1024)
+                    if memory_mb > 50:  # Only show processes using >50MB
+                        processes.append((proc.info['name'], memory_mb, proc.info['pid']))
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    continue
+            
+            processes.sort(key=lambda x: x[1], reverse=True)
+            
+            for i, (name, memory_mb, pid) in enumerate(processes[:10]):
+                print(f"   {i+1:2d}. {name:<20} {memory_mb:>6.1f}MB (PID: {pid})")
+                
+        except Exception as e:
+            print(f"❌ Error getting processes: {e}")
+    
+    def quick_instagram_test(self):
+        """Quick Instagram connectivity test"""
+        print("\n🔍 Quick Instagram Test...")
+        try:
+            import requests
+            response = requests.get("https://www.instagram.com", timeout=5)
+            if response.status_code == 200:
+                print("✅ Instagram is accessible")
+            else:
+                print(f"⚠️ Instagram returned status: {response.status_code}")
+        except Exception as e:
+            print(f"❌ Instagram test failed: {e}")
+        finally:
+            # Clean up imports to save memory
+            if 'requests' in locals():
+                del requests
+            gc.collect()
+    
+    def view_logs(self):
+        """View recent logs"""
+        print("\n📝 Recent Logs:")
+        log_dir = self.workspace / "logs"
+        
+        if not log_dir.exists():
+            print("   No logs directory found")
+            return
+        
+        log_files = sorted(log_dir.glob("*.log"), key=lambda x: x.stat().st_mtime, reverse=True)
+        
+        if not log_files:
+            print("   No log files found")
+            return
+        
+        # Show last 10 lines of most recent log
+        latest_log = log_files[0]
+        print(f"   📄 {latest_log.name}:")
+        
+        try:
+            with open(latest_log, 'r') as f:
+                lines = f.readlines()
+                for line in lines[-10:]:
+                    print(f"     {line.strip()}")
+        except Exception as e:
+            print(f"   ❌ Error reading log: {e}")
     
     def run(self):
         """Main application loop"""
         while True:
-            self.show_menu()
-            
             try:
-                choice = input("\n👉 Select option: ").strip()
+                choice = self.show_simple_menu()
                 
                 if choice == '0':
-                    print("👋 Goodbye!")
+                    print("\n👋 Goodbye!")
                     break
                 elif choice == '1':
-                    self.show_status()
+                    self.clear_screen()
+                    self.show_header()
                 elif choice == '2':
-                    self.list_sessions()
+                    self.quick_memory_cleanup()
                 elif choice == '3':
-                    username = input("Enter username: ").strip()
-                    if username:
-                        test_data = {'test': True, 'timestamp': datetime.now().isoformat()}
-                        self.add_session(username, test_data)
+                    self.show_process_monitor()
                 elif choice == '4':
-                    self.optimize_memory()
+                    self.run_memory_optimizer()
                 elif choice == '5':
-                    self.show_database_info()
+                    self.quick_instagram_test()
                 elif choice == '6':
-                    self.run_monitor()
+                    self.view_logs()
                 else:
-                    print("❌ Invalid option!")
+                    print("❌ Invalid option. Please try again.")
+                
+                # Force garbage collection after each action
+                gc.collect()
                 
                 input("\nPress Enter to continue...")
                 
             except KeyboardInterrupt:
-                print("\n👋 Goodbye!")
+                print("\n\n👋 Goodbye!")
                 break
             except Exception as e:
-                print(f"❌ Error: {e}")
+                print(f"\n❌ Error: {e}")
                 input("Press Enter to continue...")
 
-def main():
-    """Main entry point"""
-    try:
-        app = LightweightApp()
-        app.run()
-    except Exception as e:
-        print(f"💥 Fatal error: {e}")
-        sys.exit(1)
-
 if __name__ == "__main__":
-    main()
+    app = LightweightRealOps()
+    app.run()

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-05-29T15:11:20.613243",
+  "target": "alx.trading",
+  "sources": {
+    "DuckDuckGo": [
+      {
+        "query": "alx.trading instagram profile",
+        "status": "success",
+        "instagram_links_found": 0,
+        "sample_links": []
+      },
+      {
+        "query": "alx trading forex instagram",
+        "status": "success",
+        "instagram_links_found": 0,
+        "sample_links": []
+      }
+    ]
+  }
+}

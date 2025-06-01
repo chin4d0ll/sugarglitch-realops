@@ -1,0 +1,138 @@
+{
+    "enabled": true,
+    "proxy_type": "brightdata",
+    "proxy_host": "brd.superproxy.io",
+    "proxy_port": "22225",
+    "selenium_port": "9515",
+    "proxy_user": "brd-customer-hl_63f0835e-zone-datacenter_proxy1",
+    "proxy_pass": "59m84ggoef95",
+    "rotation_enabled": true,
+    "session_rotation": true,
+    "country_targeting": [
+        "US",
+        "CA",
+        "GB",
+        "AU",
+        "DE",
+        "FR",
+        "NL"
+    ],
+    "sticky_session": false,
+    "user_agent_rotation": true,
+    "connection_timeout": 30,
+    "read_timeout": 60,
+    "retry_attempts": 3,
+    "session_change_interval": 10,
+    "bright_data": {
+        "endpoint": "brd.superproxy.io",
+        "port": 22225,
+        "username": "brd-customer-hl_63f0835e-zone-datacenter_proxy1",
+        "password": "59m84ggoef95",
+        "enabled": true
+    },
+    "rotation": {
+        "enabled": true,
+        "interval": 5,
+        "countries": [
+            "US",
+            "CA",
+            "GB",
+            "AU",
+            "DE",
+            "FR",
+            "NL",
+            "SG",
+            "JP",
+            "BR"
+        ],
+        "sticky_session": false,
+        "max_failures": 3,
+        "test_url": "https://httpbin.org/ip"
+    },
+    "advanced_settings": {
+        "health_check_interval": 300,
+        "proxy_pool_size": 10,
+        "load_balancing": "round_robin",
+        "failover_enabled": true,
+        "performance_monitoring": true
+    },
+    "mobile_lte_proxies": [
+        {
+            "type": "http",
+            "host": "mobile-proxy-th.proxyrotator.com",
+            "port": 8080,
+            "user": "lte_th_001",
+            "pass": "random_mobile_th",
+            "country": "TH",
+            "carrier": "AIS"
+        },
+        {
+            "type": "http",
+            "host": "mobile-proxy-uk.proxyrotator.com",
+            "port": 8080,
+            "user": "lte_uk_001",
+            "pass": "random_mobile_uk",
+            "country": "UK",
+            "carrier": "EE"
+        }
+    ],
+    "residential_proxies": [
+        {
+            "type": "http",
+            "host": "residential-th.proxychain.io",
+            "port": 3128,
+            "user": "res_th_user",
+            "pass": "res_th_pass",
+            "country": "TH",
+            "city": "Bangkok"
+        },
+        {
+            "type": "http",
+            "host": "residential-uk.proxychain.io",
+            "port": 3128,
+            "user": "res_uk_user",
+            "pass": "res_uk_pass",
+            "country": "UK",
+            "city": "London"
+        }
+    ],
+    "datacenter_proxies": [
+        {
+            "type": "http",
+            "host": "dc-proxy-1.fastproxy.net",
+            "port": 8080,
+            "user": "dc_user_1",
+            "pass": "dc_pass_1",
+            "location": "Singapore"
+        },
+        {
+            "type": "http",
+            "host": "dc-proxy-2.fastproxy.net",
+            "port": 8080,
+            "user": "dc_user_2",
+            "pass": "dc_pass_2",
+            "location": "Germany"
+        }
+    ],
+    "free_proxies": [
+        {
+            "type": "http",
+            "host": "free-proxy-1.proxylist.org",
+            "port": 8080,
+            "description": "Free HTTP Proxy 1"
+        },
+        {
+            "type": "http",
+            "host": "free-proxy-2.proxylist.org",
+            "port": 3128,
+            "description": "Free HTTP Proxy 2"
+        },
+        {
+            "type": "socks4",
+            "host": "socks4-free.proxylist.org",
+            "port": 1080,
+            "description": "Free SOCKS4 Proxy"
+        }
+    ],
+    "note": "Bright Data proxy configuration with advanced rotation and monitoring plus mobile, residential, datacenter, and free proxies"
+}

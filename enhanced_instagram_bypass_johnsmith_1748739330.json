@@ -1,0 +1,108 @@
+{
+  "results": {
+    "target": "johnsmith",
+    "scan_id": "ENHANCED_1748739308",
+    "profile_data": {
+      "username": "instagram.com/johnsmith",
+      "full_name": "JS'+l+'",
+      "source_url": "https://www.bing.com/search?q=\"johnsmith\"+site:instagram.com",
+      "extraction_timestamp": "2025-06-01T00:55:26.734642",
+      "open_graph": {
+        "og_title": "&quot;johnsmith&quot; site:instagram.com - Bing",
+        "og_description": "Intelligent search from Bing makes it easier to quickly find what you\u2019re looking for and rewards you.",
+        "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+        "og_url": "https://www.bing.com/search?q=&quot;johnsmith&quot;+site:instagram.com"
+      }
+    },
+    "success_rate": 100.0,
+    "methods_used": [
+      {
+        "method": "Enhanced Cache Mining",
+        "success": true,
+        "sources_found": [
+          "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/",
+          "https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith",
+          "https://www.bing.com/search?q=\"johnsmith\"+site:instagram.com"
+        ],
+        "data_extracted": {
+          "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/": {
+            "username": "instagram.com/johnsmith",
+            "full_name": "Google Search",
+            "source_url": "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/",
+            "extraction_timestamp": "2025-06-01T00:55:09.775908"
+          },
+          "https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith": {
+            "username": "instagram.com/johnsmith",
+            "full_name": "Google Search",
+            "source_url": "https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith",
+            "extraction_timestamp": "2025-06-01T00:55:11.107928"
+          },
+          "https://www.bing.com/search?q=\"johnsmith\"+site:instagram.com": {
+            "full_name": "JS'+l+'",
+            "open_graph": {
+              "og_title": "&quot;johnsmith&quot; site:instagram.com - Bing",
+              "og_description": "Intelligent search from Bing makes it easier to quickly find what you\u2019re looking for and rewards you.",
+              "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+              "og_url": "https://www.bing.com/search?q=&quot;johnsmith&quot;+site:instagram.com"
+            },
+            "source_url": "https://www.bing.com/search?q=\"johnsmith\"+site:instagram.com",
+            "extraction_timestamp": "2025-06-01T00:55:26.734642"
+          }
+        },
+        "total_sources": 3
+      },
+      {
+        "method": "Enhanced OSINT Gathering",
+        "success": true,
+        "platforms_found": [
+          {
+            "platform": "Twitter",
+            "url": "https://twitter.com/johnsmith",
+            "status": "found",
+            "confidence": 75
+          },
+          {
+            "platform": "TikTok",
+            "url": "https://tiktok.com/@johnsmith",
+            "status": "found",
+            "confidence": 100,
+            "bio": ",",
+            "followers": "37",
+            "name": "All",
+            "likes": "2"
+          },
+          {
+            "platform": "GitHub",
+            "url": "https://github.com/johnsmith",
+            "status": "found",
+            "confidence": 100,
+            "bio": "GitHub is where johnsmith builds software.",
+            "name": "johnsmith (John) \u00b7 GitHub"
+          }
+        ],
+        "related_data": {},
+        "total_platforms": 3
+      }
+    ],
+    "total_sources": 0
+  },
+  "extracted_data": {
+    "username": "instagram.com/johnsmith",
+    "full_name": "JS'+l+'",
+    "source_url": "https://www.bing.com/search?q=\"johnsmith\"+site:instagram.com",
+    "extraction_timestamp": "2025-06-01T00:55:26.734642",
+    "open_graph": {
+      "og_title": "&quot;johnsmith&quot; site:instagram.com - Bing",
+      "og_description": "Intelligent search from Bing makes it easier to quickly find what you\u2019re looking for and rewards you.",
+      "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+      "og_url": "https://www.bing.com/search?q=&quot;johnsmith&quot;+site:instagram.com"
+    },
+    "tiktok_bio": ",",
+    "tiktok_followers": "37",
+    "github_bio": "GitHub is where johnsmith builds software."
+  },
+  "success_methods": [
+    "Enhanced Cache Mining",
+    "Enhanced OSINT Gathering"
+  ]
+}

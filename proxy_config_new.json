@@ -1,0 +1,14 @@
+[
+    {
+        "http": "http://brd-customer-hl_63f0835e-zone-web_unlocker:xm031k7nc447@brd.superproxy.io:33335",
+        "https": "http://brd-customer-hl_63f0835e-zone-web_unlocker:xm031k7nc447@brd.superproxy.io:33335"
+    },
+    {
+        "http": "http://brd-customer-hl_63f0835e-zone-residential:password@brd.superproxy.io:22225",
+        "https": "http://brd-customer-hl_63f0835e-zone-residential:password@brd.superproxy.io:22225"
+    },
+    {
+        "http": "http://brd-customer-hl_63f0835e-zone-scraping_browser1:bj0nymiw6mij@brd.superproxy.io:9515",
+        "https": "http://brd-customer-hl_63f0835e-zone-scraping_browser1:bj0nymiw6mij@brd.superproxy.io:9515"
+    }
+]

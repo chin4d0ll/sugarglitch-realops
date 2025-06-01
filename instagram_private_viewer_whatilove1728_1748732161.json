@@ -1,0 +1,502 @@
+{
+  "target_username": "whatilove1728",
+  "scan_id": "INSTA_1748732129",
+  "start_time": "2025-05-31T22:55:29.054360",
+  "profile_data": {},
+  "posts_data": [],
+  "stories_data": [],
+  "followers_data": [],
+  "following_data": [],
+  "bypass_methods_used": [
+    {
+      "method": "Direct API Bypass",
+      "success": false,
+      "data_extracted": {},
+      "endpoints_tested": [
+        {
+          "url": "https://www.instagram.com/api/v1/users/whatilove1728/info/",
+          "status_code": 404,
+          "response_size": 21118,
+          "headers": {
+            "Content-Type": "text/html; charset=utf-8",
+            "Date": "Sat, 31 May 2025 22:55:29 GMT",
+            "Vary": "Accept-Language",
+            "Strict-Transport-Security": "max-age=31536000",
+            "Cache-Control": "private, no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "X-Frame-Options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net https://*.threads.com https://*.giphy.com; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com https://*.od.instagram.com https://i.threads.net https://i.threads.com https://*.od.threads.net https://*.od.threads.com wss://www.instagram.com wss://edge-chat.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net chrome-extension://boadgeojelhgndaghljhdicfkmllpafd blob:; worker-src 'self' blob: https://www.instagram.com; frame-src 'self' https://instagram.com https://www.instagram.com https://*.instagram.com https://staticxx.facebook.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://m.facebook.com https://*.fbsbx.com; object-src 'none'; upgrade-insecure-requests",
+            "cross-origin-embedder-policy-report-only": "require-corp;report-to=\"coep\"",
+            "report-to": "{\"group\": \"coep\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coep_report/\"}]},{\"group\": \"coop\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coop_report/\"}]}",
+            "cross-origin-opener-policy": "same-origin-allow-popups;report-to=\"coop\"",
+            "X-Content-Type-Options": "nosniff",
+            "X-XSS-Protection": "0",
+            "x-ig-push-state": "c2",
+            "x-ig-cache-control": "no-cache",
+            "x-aed": "450",
+            "x-ig-request-elapsed-time-ms": "16",
+            "x-ig-peak-v2": "0",
+            "x-ig-peak-time": "1",
+            "x-ig-capacity-level": "2",
+            "x-stack": "distillery",
+            "x-perf-stats": "0;0;0",
+            "Set-Cookie": "ig_did=4AEDCD7A-65D7-4CF7-A611-FD19BFF8F764; Domain=.instagram.com; expires=Sun, 31-May-2026 22:55:29 GMT; HttpOnly; Max-Age=31536000; Path=/; Secure, ig_nrcb=1; Domain=.instagram.com; expires=Sun, 31-May-2026 22:55:29 GMT; Max-Age=31536000; Path=/; Secure",
+            "x-ig-origin-region": "prn",
+            "Proxy-Status": "http_request_error; e_fb_responsebytes=\"AcPdkhtuRZui-AGvFzIfXVqEBIo-PBh2meOYl1Qo9Ns4TBKeD31KOqz5JV7SOKQ\"; e_fb_requesttime=\"AcNYdi2oATiqo5iTMWNsHxOO-piCVqkjx21PMITUOW5oMLqcfC0yQPKsKDFXz7FHHEmndBF3aw\"; e_proxy=\"AcPdR3X-BlBjjmNcuExGNlkaWKKw8huWVTXHMMoz9hZS7sBHYycOpZkCRiaglidRTmDnRdPen6W5Xi7T7NXb\"; e_fb_twtaskhandle=\"AcMsU8IYde2Tf6nuZlm_HBd9r6JzDCFFATTX9Fze5V3lQLn4M8b10q2jO4uMsQhXBbgnPnEUanYgIq1RgaL95ZY1D9fZJdEnCc812u0l9A\"; e_upip=\"AcPz2A1-eoaZ89wdTD1FrHYQTyaon30fmz3lfM7PkHcRshuFhZXh5deMYsGr9wvByw_kCkHXsLh2ZYb-NWE5vlvIQ-LpOJs\"; e_fb_requestsequencenumber=\"AcPnsGjSrDsEpvnC6OPGOcRo-HsYHlQccLDsVHm9H2RlZEN55gOqy1j4LgY\"; e_clientaddr=\"AcP5S9YQW0rGVwYN38WBezF6gsx_sJftCl-hEOIU1DRJ7DLGU5wdOurOeypGyoNRlGIKgzxLXKVRrofUqSvP0y-WP3lLZDHojcfjsGHcpiT5i5H3YQ\"; e_fb_requesthandler=\"AcPU5XJXBY8ROg_Cl7k_UwdxX4A5EoJ3ZtC7j4k3MDczZLkwPetvHPROyPDoMBDVZIXKRs2g0ysAM5LvLw\"; e_fb_zone=\"AcOgPY7RSPmz_odfOsvpVHpeQ1nSQNcXpr5LB4GNKTiWZjPnwbgxiMFvwhe-my0W\"; e_fb_binaryversion=\"AcPLn2sdRhY1EtsiVrM88pfZUbSTloHiu25GpXzz2rsjudTQdpMcT5jREImCPs3sdfz3p9V3I2W9DKBXV1GH_QV5TxBKIGFE0xA\"; e_fb_httpversion=\"AcNnbdLjGDwpVtXb5EKzSzxYsBrF2drWszBiuPxPu-djn_wUIO-cft_iufAl\"; e_fb_vipaddr=\"AcMXt0qsQwFEaEF32zTh49OxCfYZpt0KVoQvSmwx3nAYeTuZHxI_9oFPdhRA5VKuC1_ZDfxv_m9lNh06CX4FyLu8NVFhihyNo8Gg\"; e_fb_configversion=\"AcO3Li7bg-a69AOqyInSiyBzwTulOyVPHkFwFuiobSUah1gPgjy9r2wkpSKtkQ\"; e_fb_vipport=\"AcM2uuqBjKwsbvNgnG3qU9owqtP-FpTcFHjEhe5oU-vNTOottFEYP2x3pDea\"; e_fb_builduser=\"AcO7ytqervejGPydKdmtXYtloeBVqgUpFX2ctZvbuh_2y2lISsAqnR76Hiz_S9bWPdU\"; e_fb_hostheader=\"AcNYdyfmRzUkqTAOMnZFuGLv9VJXrQ1tF0-VlKkjvyUcmJhz3p5oj5_bxEkt6f8A8UXwXSs7j_0p9qE\", http_request_error; e_fb_responsebytes=\"AcPEAYmbdE2FZmf_nMtMos0S0yq58OZjhDce6J7bnd9yyGAxTzprUPkmc6xhemM\"; e_fb_requesttime=\"AcM6-qlULlWPcmoxeLQvVUlNqyLjdVzbKnFMESLD3LzkewXN9I-BmNwNxHRhqEc0lqlt_N-sCQ\"; e_proxy=\"AcON4cxfFbcEyXAwoEwny-MY1BDQ5wPQlI8Zg54Z7wyxllut0YNjz4GwXbjaFvfUxbYr6zCiLmynC6Me\"; e_fb_twtaskhandle=\"AcO54gdK_yyRai30FRJkmuKn1wA07cIXbiHSPOI5XFU23tmlISgstJmdAnqv4poFz3M2sGmVi0JEP_tuIIqISCxdzZwBjuiRzhZB\"; e_upip=\"AcPzu_bJS_LqcUQnrh9EbF6eySGQGauFC_U-TGj9gHmHNgAqcNELu7uh4-m9ODlKkrU_Br8Gy-SEGBtwjZozA2fyH10f6e3MmnE6\"; e_fb_requestsequencenumber=\"AcPmT4w5c7INsu2vpiF-JJdBLDyhHe7BgoYU7BjttlMZZ9U1P3vv7YPXHw\"; e_clientaddr=\"AcPdHyOrFaiv5owZ83cL00qg--M-FUJYnlAXOpQmDUCPDIamOQWUky0RbGLIYWmGDr_CTRCPoUcVY6-L\"; e_fb_requesthandler=\"AcMp9t7iTm6GJIzQ3Mq02ah5kzV6hrgW_11zJ4M7Na-FgMb5C2SK_-Uo05wBSPQAyFsCI0SQ6KaGKQ\"; e_fb_zone=\"AcMwEfQHz8HFclFz5rPobG4qlQhTJATSl5HbxpPS23hQyPFK6laVoYm_qe93wg\"; e_fb_binaryversion=\"AcOcXV0OGsFx-2xaarLnU5rh0Dv41vrYCCzzZbngWqvQqVYTjjMRKd3L0bq6-_V_h6bEACMRi6twRvpiR9G7JQpgXdpHvfhmkDA\"; e_fb_httpversion=\"AcOq6VRoXLfhgUO8etryfwI2BAt5EzvTZMXeEeX-luQ0b4M9JaULLwYm-70f\"; e_fb_vipaddr=\"AcNyQBms9FkTNMCQ6sBFHGZ4EnizDEGHwKr9RLBOV4gaTxFtaINimOt0eZTNw0iaaP_LkpDeuMg\"; e_fb_configversion=\"AcPj7a2DW9amQVE_7sU9Nl1eqRYOb0Mze3Zq34QPNHKenZwJTuqACeIRLcU_NQ\"; e_fb_vipport=\"AcO72HXoUK6sQ12tun4HYQrD6zuRYPElxAEeS5P3v68W0JeIuO4Y_wKK_nMf\"; e_fb_builduser=\"AcOnoKOpFUA2BYcSp3CBIZRlEVkH2Hpuwpkd-kZ64bRCJqKIph2VBkza2US8fjlrKj0\"; e_fb_hostheader=\"AcOmKaiqU0-YY1y5k9j0QyhEYs0kOV7keEkaDWTC9AOj_eRjDGchnkwAmJko59YxaSvZvrnniKNyors\"",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=6, rtx=0, c=14, mss=1380, tbw=3691, tp=-1, tpl=-1, uplat=179, ullat=0",
+            "Connection": "keep-alive",
+            "Content-Length": "21118"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/api/v1/users/web_profile_info/?username=whatilove1728",
+          "status_code": 401,
+          "response_size": 119,
+          "headers": {
+            "Content-Type": "application/json; charset=utf-8",
+            "Date": "Sat, 31 May 2025 22:55:29 GMT",
+            "Vary": "Accept-Language, Cookie",
+            "Content-Language": "en",
+            "Strict-Transport-Security": "max-age=31536000",
+            "Cache-Control": "private, no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "X-Frame-Options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net https://*.threads.com https://*.giphy.com; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com https://*.od.instagram.com https://i.threads.net https://i.threads.com https://*.od.threads.net https://*.od.threads.com wss://www.instagram.com wss://edge-chat.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net chrome-extension://boadgeojelhgndaghljhdicfkmllpafd blob:; worker-src 'self' blob: https://www.instagram.com; frame-src 'self' https://instagram.com https://www.instagram.com https://*.instagram.com https://staticxx.facebook.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://m.facebook.com https://*.fbsbx.com; object-src 'none'; upgrade-insecure-requests",
+            "cross-origin-embedder-policy-report-only": "require-corp;report-to=\"coep\"",
+            "report-to": "{\"group\": \"coep\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coep_report/\"}]},{\"group\": \"coop\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coop_report/\"}]}",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy": "same-origin-allow-popups;report-to=\"coop\"",
+            "X-Content-Type-Options": "nosniff",
+            "X-XSS-Protection": "0",
+            "x-ig-push-state": "c2",
+            "x-ig-cache-control": "no-cache",
+            "x-aed": "450",
+            "x-ig-request-elapsed-time-ms": "28",
+            "x-ig-peak-v2": "0",
+            "x-ig-peak-time": "1",
+            "x-ig-capacity-level": "2",
+            "x-stack": "distillery",
+            "ig-set-x-mid": "aDuI4QABAAETVp1i6sPKLHCyNfJ9",
+            "ig-set-ig-u-ig-direct-region-hint": "",
+            "ig-set-ig-u-shbid": "",
+            "ig-set-ig-u-shbts": "",
+            "ig-set-ig-u-rur": "",
+            "ig-set-ig-u-ds-user-id": "",
+            "x-perf-stats": "52959981;20170;28013",
+            "x-ig-origin-region": "prn",
+            "Proxy-Status": "http_request_error; e_fb_responsebytes=\"AcOlYcq7-6X_5sdDKpbz8XriZcN-fUVRaAdz0LZx9gksvw3DRTfMExuf1klD\"; e_fb_requesttime=\"AcNADm8JKUXUcoIKnnGo7C-JBsqkh9_5K5ns0N2f6kWknSj18IbyFmVe363Msg_wzLZLROOGEw\"; e_proxy=\"AcNxA0BXfekdnWvRQq4vuANCdK3N9Y6IcqP0FHa8u2HopwpC-wXqdcVaQdhuBjALvTl0qg02VywOnV1hvbOl\"; e_fb_twtaskhandle=\"AcN3YA6Ab44dFvZNZlIglQ8ThXYzSMPPJhMFRphu-NT35b-VMk8b0E7hND_cC946MR0ikfDEqH-ZBeLkB3NBEe4JTQKLBUxwJo6tZgD7rA\"; e_upip=\"AcOnXZFUsCr74_iLV3yeGKQXv_kic7ckiM-OYAIntHef0Gt2z_8HlZD61w6HrVm4gv9tmlFGdgRxpdzIU2Y5SBQkc637Ia11\"; e_fb_requestsequencenumber=\"AcOVPvGEHb3y-LBDZ6te3BO1pkk5rrNGaGl9MxXoZ6AZSD4H1IZxmfmKQRI\"; e_clientaddr=\"AcNnTBLWEhDZtarBKWkSLikOB7EiYa_84AjuO39T0X_XCIdyFtIMKHAlL6CQoP9ahVfj928DlO3nmCfU0ine9TMc3mSqElmbFpGdDK-3JGCcVapA8A\"; e_fb_requesthandler=\"AcNsBnKNzIydhSkFB1ak2zLJUOmG9JHEYU5_v8eBvXooUJU2pXWj-Mj1MvRQmnInzNsX3ie2aTJt0Ods1g\"; e_fb_zone=\"AcOm4EcuWswXpwT_NQCEw8zY-VG2vWOg_ybOvr7qrVlBhHLWiLtzOm8sTfU2ineu\"; e_fb_binaryversion=\"AcNZhbuGIyItn7q0Wcty7kypxlhvKJBkTge0r4foj8Bs-uGbCAFSeJbvuW5Q8dnFGdghElzTaJjqqlo1CiSIXYlVQayP2FXWYJo\"; e_fb_httpversion=\"AcN-ipJR10INs0nWMACTFqQR1xlvuPqqyP6hy48qMDnNAwoXjtlSdWm3O9S-\"; e_fb_vipaddr=\"AcPxmA_E_WT7l4u_awMZJ7OhBQ2ntrkNz_OCVPhCuNIS_E-FjGjnLXJbLdz1LQ1QTJaLU1N1afd0m5PvOXPFnfdxt9R4VeH2BYXx\"; e_fb_configversion=\"AcOgaro1q4yyDqFywjYWOHBPs9XMsmln9XM_BkEvsq70QY2D1I1gWo2F3_Oyzw\"; e_fb_vipport=\"AcPjm-aEQK8u3OUg-SwsSa4AjWXheS7cJdUHedSkgrFl1Og70zUuDUkb6R4m\"; e_fb_builduser=\"AcOKTQczc8ohpTSicAotuQ6S_S4dKLttwyKdjyK87n43BugoM6bAW63q-e7ezlfv0Cw\"; e_fb_hostheader=\"AcN-Jf4dOj7FTlqoWSPW44TxcuA7ocLHWJq4H-0tLdYtwA7pOzLmFcNV4URmqUAXZZlg4AYuptFmFT0\", http_request_error; e_fb_responsebytes=\"AcMpdIksGSZ0Qr0eKsMtC6I5ug02EFs7po974-zOHagVuOhOBvP8wBJvqbjv\"; e_fb_requesttime=\"AcOCFBmr2QI-2uP7hZEhW_0HA6do0UQai8xcIfM_CWje3lj_HL2I4qnb-O_TcmPl_map5j6q5A\"; e_proxy=\"AcMJkxg6EeVA9Teot7H2T4QSDOyyP1HdChSLJft53D8kJQ7_HCN8NWleagAhJ-InM-nXE0NGiwKJWdjW\"; e_fb_twtaskhandle=\"AcM2V-54sFh2F6GxGgln87uthlGg4gWFNGPl5vSTP3yb7yFgVS7Hiw2sVPaWBUPldrGuNcx2JQYNNCPeIPhnJ3kJ-QdJRJR6VwQ\"; e_upip=\"AcOEGS8mYEN7woQ5RcfwnKO_aQqAuE1LWAAum_nNC8jzgMJeujl-jT8uaioZNfsPZBxpOzzaMsZXTT7eQ2-M5iwzF-STZ2NzaM-r\"; e_fb_requestsequencenumber=\"AcNV0U1GOLkY7nNUqgMNz7tJD8UEPmxxFaaG1a2rtCYrEUmhJsOKGFtp1g\"; e_clientaddr=\"AcPy9eT4RC_iebfypFTKdDFqoPaGPPkKfnvdgGc-HpAtNOv4K6tCrLM5P0nkl9x5RzcCkxtbbm5fNPtQ\"; e_fb_requesthandler=\"AcPen83Lu7_g-tCsS2hs_QgmAqauuVkVgR1iWljArPIAAGpHRcOM8nc2-PEl3niUnUpLviGTSPRjDA\"; e_fb_zone=\"AcN0O0shNkM8UTLUjDUBvIZcM8NTsDVak1UUBZDeoQjLB6k_8_4fswEAM1B4pQ\"; e_fb_binaryversion=\"AcPe7DrUWBFMPIY-Dc0bge5F51U27D6IM1cFJR6VMx2-fW1lv-xH--bHx4YD-6JLzoGxnqfpuzmgYQ_dFonhUAR9AQQ966S_wWk\"; e_fb_httpversion=\"AcNoO6atPHvpmZpEmei5-h5jTDZxW5e3FWSHr8VupOBar2aj0vh9knxxt5lm\"; e_fb_vipaddr=\"AcMmjF1iJiYvGd4v2RYwWNY77WcmaUOG6l2a9FbWG-d4oIT71sNATJ2j37632VAbR96UDVL1E04\"; e_fb_configversion=\"AcOgLfEIDJanWhFHxdf2l2putn369LVEQswTFEwarlc0XmE92LAnccsRX58x2w\"; e_fb_vipport=\"AcPU5g4Tce9KB-aCww6NjMN1ZT5fEfwce6NKyjOA-EqyvwrP2IXQqdRH363A\"; e_fb_builduser=\"AcN3RxAXDcnRFbjl9SFLmVmuHfak4JbSFyQ226buC6FRxuUzM_L3UNjxsBT3yRe9qLU\"; e_fb_hostheader=\"AcOVO5yFGyEkmBgOyjGrdVshPBqQM-uViQaYl4zjvVq2roEzG8yiqTIDQLT-vHa_ChSss9SFDWC_gDg\"",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=7, rtx=0, c=14, mss=1380, tbw=3691, tp=-1, tpl=-1, uplat=190, ullat=0",
+            "Connection": "keep-alive",
+            "Content-Length": "119"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/whatilove1728/?__a=1&__d=dis",
+          "status_code": 201,
+          "response_size": 0,
+          "headers": {
+            "Content-Type": "text/html; charset=utf-8",
+            "Date": "Sat, 31 May 2025 22:55:29 GMT",
+            "Vary": "Accept-Language, Cookie",
+            "Content-Language": "en",
+            "Strict-Transport-Security": "max-age=31536000",
+            "Cache-Control": "private, no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "X-Frame-Options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net https://*.threads.com https://*.giphy.com; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com https://*.od.instagram.com https://i.threads.net https://i.threads.com https://*.od.threads.net https://*.od.threads.com wss://www.instagram.com wss://edge-chat.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net chrome-extension://boadgeojelhgndaghljhdicfkmllpafd blob:; worker-src 'self' blob: https://www.instagram.com; frame-src 'self' https://instagram.com https://www.instagram.com https://*.instagram.com https://staticxx.facebook.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://m.facebook.com https://*.fbsbx.com; object-src 'none'; upgrade-insecure-requests",
+            "cross-origin-embedder-policy-report-only": "require-corp;report-to=\"coep\"",
+            "report-to": "{\"group\": \"coep\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coep_report/\"}]},{\"group\": \"coop\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coop_report/\"}]}",
+            "cross-origin-opener-policy": "same-origin-allow-popups;report-to=\"coop\"",
+            "X-Content-Type-Options": "nosniff",
+            "X-XSS-Protection": "0",
+            "x-ig-push-state": "c2",
+            "x-ig-cache-control": "no-cache",
+            "x-aed": "450",
+            "x-ig-request-elapsed-time-ms": "32",
+            "x-ig-peak-v2": "0",
+            "x-ig-peak-time": "1",
+            "x-ig-capacity-level": "2",
+            "x-stack": "distillery",
+            "x-perf-stats": "34067374;16065;32455",
+            "Set-Cookie": "csrftoken=GQ8i41UOn3ODd8V8uUlmEPnqB6eel8On; Domain=.instagram.com; expires=Sun, 05-Jul-2026 22:55:29 GMT; Max-Age=34560000; Path=/; Secure, mid=aDuI4QAEAAGn27y65FWkZ-zqOgmh; Domain=.instagram.com; expires=Sun, 05-Jul-2026 22:55:29 GMT; Max-Age=34560000; Path=/; Secure, ig_did=03D8845B-B1EA-4542-8E56-4FC7F3560CD7; Domain=.instagram.com; expires=Sun, 31-May-2026 22:55:29 GMT; HttpOnly; Max-Age=31536000; Path=/; Secure, ig_nrcb=1; Domain=.instagram.com; expires=Sun, 31-May-2026 22:55:29 GMT; Max-Age=31536000; Path=/; Secure",
+            "x-ig-origin-region": "prn",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=6, rtx=0, c=14, mss=1380, tbw=3691, tp=-1, tpl=-1, uplat=193, ullat=0",
+            "Connection": "keep-alive",
+            "Content-Length": "0"
+          }
+        },
+        {
+          "url": "https://i.instagram.com/api/v1/users/whatilove1728/",
+          "status_code": 404,
+          "response_size": 21118,
+          "headers": {
+            "Content-Type": "text/html; charset=utf-8",
+            "Date": "Sat, 31 May 2025 22:55:29 GMT",
+            "Vary": "Accept-Language",
+            "Strict-Transport-Security": "max-age=31536000",
+            "Cache-Control": "private, no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "X-Frame-Options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net https://*.threads.com https://*.giphy.com; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com https://*.od.instagram.com https://i.threads.net https://i.threads.com https://*.od.threads.net https://*.od.threads.com wss://www.instagram.com wss://edge-chat.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net chrome-extension://boadgeojelhgndaghljhdicfkmllpafd blob:; worker-src 'self' blob: https://www.instagram.com; frame-src 'self' https://instagram.com https://www.instagram.com https://*.instagram.com https://staticxx.facebook.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://m.facebook.com https://*.fbsbx.com; object-src 'none'; upgrade-insecure-requests",
+            "cross-origin-embedder-policy-report-only": "require-corp;report-to=\"coep\"",
+            "report-to": "{\"group\": \"coep\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coep_report/\"}]},{\"group\": \"coop\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coop_report/\"}]}",
+            "cross-origin-opener-policy": "same-origin-allow-popups;report-to=\"coop\"",
+            "X-Content-Type-Options": "nosniff",
+            "X-XSS-Protection": "0",
+            "x-ig-push-state": "c2",
+            "x-ig-cache-control": "no-cache",
+            "x-aed": "450",
+            "x-ig-request-elapsed-time-ms": "18",
+            "x-ig-peak-v2": "0",
+            "x-ig-peak-time": "1",
+            "x-ig-capacity-level": "2",
+            "x-stack": "distillery",
+            "x-perf-stats": "0;0;0",
+            "Set-Cookie": "ig_did=7CF0D8ED-D198-4D4F-BDF5-1AEC631B7585; Domain=.instagram.com; expires=Sun, 31-May-2026 22:55:29 GMT; HttpOnly; Max-Age=31536000; Path=/; Secure, ig_nrcb=1; Domain=.instagram.com; expires=Sun, 31-May-2026 22:55:29 GMT; Max-Age=31536000; Path=/; Secure",
+            "x-ig-origin-region": "prn",
+            "Proxy-Status": "http_request_error; e_fb_responsebytes=\"AcOy2PCcaJmcsQ-4pTNW9hhGBkBcQgFDMaTcI9sSI4JNFWRa7kewM7UYt0f1k-8\"; e_fb_requesttime=\"AcOzLk4keiIvoxJS_x6nFPyBBIQv17csqqlG7rW0jV6kmsbxCFqMlDfIrF1CjSCGcDha3cZbAA\"; e_proxy=\"AcMWvDcKk71ym97Cx522xmA8Z7CfBsT9siorKaBPovo7OePwlTNKp6AYZDoe9AvNOBe0xXe6xr3soWwk2N5C\"; e_fb_twtaskhandle=\"AcOsCa2vLNn0FxeGklwyoPl0RXSwj2TdUhjJfv8UgkaKG_OxvxKFD6bcZ-0PfF5P1Jt0pn1Sgmt2N7lgOWC-QptQr-5CkHOQnyubJpFMoJM\"; e_upip=\"AcOoYVKsm-BAaKQdKVGkWIaaE8gW-3ph7Gj9D2PoSyvwRB868BJl5edJi_xxFS9r36kptFXoJq4EI9WRIQX5YhK9gkkna6A\"; e_fb_requestsequencenumber=\"AcPS9NFau0gYj6D9hNiyNFfX4fcQOQJ_CVHbGPs0mTyBAGQIQB6yn79vMQ\"; e_clientaddr=\"AcMWECe0CRZFsQRk4sztShcJtluGphoBfre78qyg8Ubo1dEPRI9g4bZG00JoIUkZYAITLw7gbapK-6w02hXd7dHxp7cfB3fYrse5MM896LfGJqOpYA\"; e_fb_requesthandler=\"AcOAaG2x0nEZ9zCL88rDRinVcSLk-OP0FwmWk87bsSi9-sLyuSh9qURsl8cUiBNbzaCwnV4Rw56pdbLFig\"; e_fb_zone=\"AcOeexmyH4QNaKryriEEGenP6lAQkgq-E_l99fuRJN1bXRMHoJTY2WaPgePt_b_k\"; e_fb_binaryversion=\"AcMa5fBEGs4ikjPlHY9gOi_e0NEUovNT2rThOFuzq0UcKtWTcEElaytdna5JMb5IxbFOWnAlYfwUNd0Y6HY6Xp9qFnTW6hlowLo\"; e_fb_httpversion=\"AcNpW9I250SAlSAJRR28rDIsd0JH8-v1U7Sl63PTaTPfuCDYEOJrrWDFaB9-\"; e_fb_vipaddr=\"AcO61K7jodC08wpB5G7iTD1An_4TYuW3ulqQ2hyqpynVbiGDQa31GRxpnbxX97qvsIwSq0ccLhvMnZXGzVPfmgFoq6Jv3HlepoqQ\"; e_fb_configversion=\"AcPM__3h_2S-eUgG1CMEiFnRYGhm0cL2E-0e6Edz8U1-iPBAM0xend1neMGPGQ\"; e_fb_vipport=\"AcPQAADhkKDR-EIgzCe2vsvWbJbeAR4DMowqeyar2cV73PkGyWxzfvgInmbM\"; e_fb_builduser=\"AcMhORA9eW-XsSSdQbnjbNG3cB5KbKEmVDUpfWo9B4_hykGWPIGIHFfoQUEK4L4V_Og\"; e_fb_hostheader=\"AcNjwk-Er286HHmQaO8LbMC_GLWqgWH_ePmXiTgbbXC_Olq8imFi77SMOwdXT35fM9oL4QSdt0hG\", http_request_error; e_fb_responsebytes=\"AcODz_kHESUGtduRUYSwCsSugR4atlf8hH0t-hvb8Zo0myC6C4oezl5hKdixXhw\"; e_fb_requesttime=\"AcMHtFtnFYzkbEHTSUcb984iqBsFBRvB0tSO2SZHoT_yRFQO938ja2Ftpm6wu1CzPby5aKvkJw\"; e_proxy=\"AcOostktATlh3wJkADsGjHkMNed6OqxvcZoPQgDkOdeQ5N9VNZLawcG_D1-HaMYl37XLVjtgTHICISW9\"; e_fb_twtaskhandle=\"AcPZ0bdOmVCBm41A-5m5IMUj-x4TrccuVzl1AJiZlxszTPQz2Ot4TNlC-A8pfU7Zws1x_reDnvAyulMdEqQ1XYiZyX9wESkrUkyD\"; e_upip=\"AcMzzFa17Hj1jhzK8HsKiT9ifrkpp3VkEoNjk6OdVxXAVFDo4Sd12tdi8QYyKjq-gFyanlr2KjKnw7-evCR3-q6chBat_IeziCeC\"; e_fb_requestsequencenumber=\"AcO0jMdwbH4J8ALSr3hA3V_xOG2WRCVkOEj3aMc--mZDfkTFGw-6V-El0g\"; e_clientaddr=\"AcOgatFqOh-TpxdqNrt55Kx43DvnpGwFQC_zfI9JuG-FY8hCCg49j5f0h8FHnkgLfqBKtUiIOtabKnMt\"; e_fb_requesthandler=\"AcMknJHCHqYKxcOslMmWnqTuDv3Woa-NO6tZDHuZzPTOIslDwJPEldQH2nyIIZHVwTXlM-jBWsTJkg\"; e_fb_zone=\"AcP25KoEQge40xp2VamrYAkF8ROZNpTYqJxcF80Gb8aN1iMMpkLcsQh7qsCuQA\"; e_fb_binaryversion=\"AcOFzIWaJ6DEpULX03Dgs50Y2clVyZwnUmmsnXw4O3SI-70rRxHirgWB_sNGgN2oEH6V6urgNHM-Vyi1EjREgT-rFFUivccQwoo\"; e_fb_httpversion=\"AcPXwPmWTJ2Qa42kYHJBEPbjrdX44mGJ1n-tpxfxsuew2gcQIU3SDhkTJWu9\"; e_fb_vipaddr=\"AcO5hG4fneZQVd_45GbwiLKqMJ-TD62sfrgSLoqZ1uIUXOwgpTa2enS_XcB4KnrcR5xjtEjVYw\"; e_fb_configversion=\"AcObQxNIf6VxYjW9wJy-LgcXcoJBEjyR2DxXM621D9erghvJIP9Qy_C6qO9joA\"; e_fb_vipport=\"AcOxxr7U-VvYomkpQByS3IQf-qqjCTRbSVMoQelTV_Jn3PLQzQnPuZO2_aaw\"; e_fb_builduser=\"AcM-w1w-4LAfvy6ub7Y9l7p9vOz3ee1mKQ6TzcNk3xAq6lPReKQ3wKXkAyL2_KcoYiY\"; e_fb_hostheader=\"AcPgStPrJvfaVekLdwglF7Mc7ZsdCNPicDy1DRqxco79Xm7DhzV8D4OVsXY75wHLYGE1-wiqoOfq\"",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=6, rtx=0, c=14, mss=1380, tbw=3293, tp=-1, tpl=-1, uplat=180, ullat=0",
+            "Connection": "keep-alive",
+            "Content-Length": "21118"
+          }
+        },
+        {
+          "url": "https://i.instagram.com/api/v1/users/web_profile_info/?username=whatilove1728",
+          "status_code": 401,
+          "response_size": 119,
+          "headers": {
+            "Content-Type": "application/json; charset=utf-8",
+            "Date": "Sat, 31 May 2025 22:55:29 GMT",
+            "Vary": "Accept-Language, Cookie",
+            "Content-Language": "en",
+            "Strict-Transport-Security": "max-age=31536000",
+            "Cache-Control": "private, no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "X-Frame-Options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net https://*.threads.com https://*.giphy.com; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com https://*.od.instagram.com https://i.threads.net https://i.threads.com https://*.od.threads.net https://*.od.threads.com wss://www.instagram.com wss://edge-chat.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net chrome-extension://boadgeojelhgndaghljhdicfkmllpafd blob:; worker-src 'self' blob: https://www.instagram.com; frame-src 'self' https://instagram.com https://www.instagram.com https://*.instagram.com https://staticxx.facebook.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://m.facebook.com https://*.fbsbx.com; object-src 'none'; upgrade-insecure-requests",
+            "cross-origin-embedder-policy-report-only": "require-corp;report-to=\"coep\"",
+            "report-to": "{\"group\": \"coep\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coep_report/\"}]},{\"group\": \"coop\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coop_report/\"}]}",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy": "same-origin-allow-popups;report-to=\"coop\"",
+            "X-Content-Type-Options": "nosniff",
+            "X-XSS-Protection": "0",
+            "x-ig-push-state": "experimental",
+            "x-ig-cache-control": "no-cache",
+            "x-aed": "450",
+            "x-ig-request-elapsed-time-ms": "86",
+            "x-ig-peak-v2": "0",
+            "x-ig-peak-time": "1",
+            "x-ig-capacity-level": "2",
+            "x-stack": "distillery",
+            "ig-set-x-mid": "aDuI4QABAAFKzJzspAD6i8eL4Xa9",
+            "ig-set-ig-u-ig-direct-region-hint": "",
+            "ig-set-ig-u-shbid": "",
+            "ig-set-ig-u-shbts": "",
+            "ig-set-ig-u-rur": "",
+            "ig-set-ig-u-ds-user-id": "",
+            "x-perf-stats": "56275761;25492;85912",
+            "x-fb-load": "309",
+            "x-ig-origin-region": "frc",
+            "Proxy-Status": "http_request_error; e_fb_responsebytes=\"AcNd-R716fIb8HJOn0FsDLhgJadl9AacWDN496C4uyvubCh3tSVeR2jsv-Xg\"; e_fb_requesttime=\"AcMgGkS1ZBOOOXaPfhpxCjk5uS2i2DZuUSV3UOcp6IdLhu02s-o8uoihDnbxuZfil4yYhDuWQg\"; e_proxy=\"AcMYC4Uo1YRtz2iRpG7K99_s6f6tNKa47nSXkwOlfn-5BenUSpmzHApOpPSH11fGNPgdKF0O-uKOPzpaUl9g\"; e_fb_twtaskhandle=\"AcMorRe9I1FuWrzx7ubbMpIj1GA5Z4EnLAstL6A_LJD__sa9fz8g5OKIVI2Rz-3Iqoeb2JWG4ppFUcG9qE8pLq3KDmY4L912HHKUZUA\"; e_upip=\"AcMMd7zLVtAsxN1TvURbFBfA9ei_V8RS_pIPIs9iSoUUFm5I66bu--FbEzpgMWobTAF50EUqpVTacPQjr6QJaX5y9IvFW02ghA\"; e_fb_requestsequencenumber=\"AcOwL9Eej3Kb-f3EPFsSebcCd8IfeD0dkrOqrwkxbsdsmoo_Ve-EpiDV5g\"; e_clientaddr=\"AcPqiPqJ1fBTmFGp0Q6B0v5WHoempjrOrFrXSAm_LZRn5tYXYL98t0WX89Vvyo1SkPfywU2Fst-xpMWbO_bnswlk7UXCzA3C-MjwfwmGxHFag_3gQQ\"; e_fb_requesthandler=\"AcNBSbRRAUhN69zDvRd9OLPhjpc5cyVefSAynefWORVPkUnluDY4j_PjWzo18icwiI4dDy4ZliISDSv7E78UvuA\"; e_fb_zone=\"AcNq7ZPld-TB2QYI-eNTKa1c8jTvfRzOcM5ODXHe2N7VphHnr-JE1xeVt_FfuXVW\"; e_fb_binaryversion=\"AcMVXFoGHmvWeZkB_g6m_77j6E6d-W02fNZ0ixOsCo8jT0O98sOrQsPrWs6PzyLkCkHaQJ-3osP_PyNSh9kdvIEkfrzDlwSSBVQ\"; e_fb_httpversion=\"AcMvtCI8wpm8Mj_gaVv4A40ToBVIpWSIHKKylgI0c0An-BkhjaFUGbcKwdVI\"; e_fb_vipaddr=\"AcNzXnCZ8PVKxP3s2kz1PvDgzsLhi8_vURsbTGgEy-lX2GcHfBApjqilup8AFwlXALdI3mA_hOSFugIXUBq-tel7EsvLnSqKU6Tt1X0t\"; e_fb_configversion=\"AcO9oHRdRf2YOog4Ntyad_1FTCWXDXP9nJnIo0uXHkahrLwCfrlKYRJ_9gqDPw\"; e_fb_vipport=\"AcMHLYPVXUbIO90aRFyR2tlAN_TLkjLVnG3haGzCr2-hDtQIEogBJlo9pYI0\"; e_fb_builduser=\"AcMA0vMf3vi8VGkR27dulr7fkALYTuUOhpUfqYbttRpSztGxt845PGREpFuBimd3M0U\"; e_fb_hostheader=\"AcPiPz8wrpEWJNh2NNUPgQm2zzDXJOoMkT5V3vmJW5uOildSVOyJvCa-m8Pd6ZddQlgvh3fRMSmi\", http_request_error; e_fb_responsebytes=\"AcM6clj7A7Fn9W0Z0hc379KXgLCsw8UAQrnE-K1SfPbmNrKvUGA2C7XsaRTJ\"; e_fb_requesttime=\"AcM1Lw6d_XPwmU_oK8RS1p0TfR_R4CeZBmoRWsujM4g53tbevjUAyZFH4I8pExypvkECNnpjAQ\"; e_proxy=\"AcNQIGVpGLG0UAkhFFN0CEfE1PdWdSGtmRB-YMbbT6yr_bmN0P5_L8sKtxGEmYpk-OaK1HSttAYLERlu\"; e_fb_twtaskhandle=\"AcOPQZKE1ZpB-79oF6qDKO-z8C1CqLYkvrBdnZFnBWvQjr3D38-6BjJmaYWO0Oqfg-NmI-syox1G5IUkBbs47AyRDYO1TEw_gD4\"; e_upip=\"AcN9wvPAVjZrlSLC8xk20z0J52g7_CjdLE1-cTCSes0-FJp9sX66p5NOVysFtxSF-OHNUBwrvEpkLYfv1NTh_UOheIlxLeDglFWMnp4P\"; e_fb_requestsequencenumber=\"AcNeaV-10TzM5maj2kJ00ghjOOZCOSu9frnBv_P1iLuVVzi6bfAv_Cihew\"; e_clientaddr=\"AcMYTTc5P3vYLzTDBHWCtqseBXIdsWZhIA9quH1W6UJdDSjWcjhs0EMs2gR_QdKc4Kp9FTY-ZirjQEqD\"; e_fb_requesthandler=\"AcPr6qu_oYa-gKURay9HvNyErQnOWcVZDrwvcaUuAw2H54kv4PNok2zBlLTOkZlhp8mXLZPQLtpmVA\"; e_fb_zone=\"AcPSwy9KlgpyuRWwhEzwR-879HQS2qYsi56tO9_nQy77vKCU1WQsO8lHWDZbXA\"; e_fb_binaryversion=\"AcOqW9gp102h4Fvgc99W7ZPLmNupNaM3RIKcsuC_u7b-wMQ1i46Pmm5z0wFyqed2rwLVPLLpG1kN0bdQevLrc6an51MGLOlZ8Fo\"; e_fb_httpversion=\"AcM5UWHB2SJlHKdae_1UgXFlWpgWatEtjaX0uGqxXB66zz63uIRn77FBjyNf\"; e_fb_vipaddr=\"AcMRjUFNuA-qCFHW6PO4GoZGbm_xv95bD_qSocF68uI5EKXDhEnGtmQLUROt6BZ9-3nolwbt8w\"; e_fb_configversion=\"AcN1vd0LSZJWIwjTk9cT362Y7UvSIqzxUtkDMHJSyOnj-zQp_GdFcmecSSXkAw\"; e_fb_vipport=\"AcOxWdvMGhogRVx_nIxA3-AlOAgAjFQp2DV2LENXZfQP50BS7vE-WdNtoihI\"; e_fb_builduser=\"AcPJcVTn-JM8Z80F5xBI8fppCi-D2_4o_Q9eubN2Nomg4hDhQVbc97eCVgLksCUoLrM\"; e_fb_hostheader=\"AcP7WhIHhlskzScYZ-0nnhOXPFN2myoNXbwj4WZqtQw2RyMZO5mYwrlKxr6zb8q061Pejt5XDvaA\"",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=6, rtx=0, c=14, mss=1380, tbw=3294, tp=-1, tpl=-1, uplat=721, ullat=0",
+            "Connection": "keep-alive",
+            "Content-Length": "119"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/web/search/topsearch/?query=whatilove1728",
+          "status_code": 403,
+          "response_size": 164,
+          "headers": {
+            "Content-Type": "application/json; charset=utf-8",
+            "Date": "Sat, 31 May 2025 22:55:30 GMT",
+            "Vary": "Accept-Language, Cookie",
+            "Content-Language": "en",
+            "Strict-Transport-Security": "max-age=31536000",
+            "Cache-Control": "private, no-cache, no-store, must-revalidate",
+            "Pragma": "no-cache",
+            "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "X-Frame-Options": "SAMEORIGIN",
+            "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net https://*.threads.com https://*.giphy.com; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com https://*.od.instagram.com https://i.threads.net https://i.threads.com https://*.od.threads.net https://*.od.threads.com wss://www.instagram.com wss://edge-chat.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net chrome-extension://boadgeojelhgndaghljhdicfkmllpafd blob:; worker-src 'self' blob: https://www.instagram.com; frame-src 'self' https://instagram.com https://www.instagram.com https://*.instagram.com https://staticxx.facebook.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://m.facebook.com https://*.fbsbx.com; object-src 'none'; upgrade-insecure-requests",
+            "cross-origin-embedder-policy-report-only": "require-corp;report-to=\"coep\"",
+            "report-to": "{\"group\": \"coep\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coep_report/\"}]},{\"group\": \"coop\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coop_report/\"}]}",
+            "cross-origin-resource-policy": "cross-origin",
+            "cross-origin-opener-policy": "same-origin-allow-popups;report-to=\"coop\"",
+            "X-Content-Type-Options": "nosniff",
+            "X-XSS-Protection": "0",
+            "x-ig-push-state": "c2",
+            "x-ig-cache-control": "no-cache",
+            "x-aed": "450",
+            "x-ig-request-elapsed-time-ms": "35",
+            "x-ig-peak-v2": "0",
+            "x-ig-peak-time": "1",
+            "x-ig-capacity-level": "2",
+            "x-stack": "distillery",
+            "ig-set-x-mid": "aDuI4gABAAEklNkcZE1I5S5-446q",
+            "ig-set-ig-u-ig-direct-region-hint": "",
+            "ig-set-ig-u-shbid": "",
+            "ig-set-ig-u-shbts": "",
+            "ig-set-ig-u-rur": "",
+            "ig-set-ig-u-ds-user-id": "",
+            "x-perf-stats": "47980273;19571;35435",
+            "x-ig-origin-region": "prn",
+            "Proxy-Status": "http_request_error; e_fb_responsebytes=\"AcMi2Mn3n96r_K3I0L45zj2htqE82CiIfAgXGSXCR8OcloiiIS-Zrr401IuP\"; e_fb_requesttime=\"AcOfsFqaqFe1wi3FZKisLoIRoPcUs925qcI4ONy0a7-oN-7qVGG2xF0tVRlXWV6S09cNzqFkbA\"; e_proxy=\"AcOFg_7ljAlFz2bhWLIbypbGZupz-qzaltqbyPjH0K-_6exjYHeoPIWdC0C-SU3inSeUtswIh7ZrumTX7yul\"; e_fb_twtaskhandle=\"AcM1BceY2S5DZhoWgpZJRxZ7hjc2tTU9z-z7NPYSAT3_VUVBPxflfsNGLTj1WEBuYSHiepFz07JqhUu6rfWlmvwyD2Xbr88wAc2Gt-uI\"; e_upip=\"AcOuqYubd8J4mKM8U82xKoq1AgHfJs2A5dik2Cp6QF4_uGISlrKg7wdwlGsechBUQ7dSSX-8dytEuu7NEtx01k2Tr2uBC9oV\"; e_fb_requestsequencenumber=\"AcNcEkeyiuYL9-R53Y9bz1pcNZkZ9A8I15SWrVPPDqb2OpSFPq-cJY2OEw\"; e_clientaddr=\"AcPo234PW45x4R5PEgUKe3RS3utCoGGbyJWWS7NB85vyWXse3ZvFFrp1msxta9jRrCBnwrSoswNOni-UsvA05W2sMOQz41fd7JN4E2_9Zj88g1q3GQ\"; e_fb_requesthandler=\"AcMDG_ruplhuHTHjRkv0QajM4mbESygA3XLNr4W_ykiCWCYO-PuZQKch6aSyyeVOa8hANWPDvE48WRBIyA\"; e_fb_zone=\"AcOITDBi7GGcFoZShp03j5-YQh9x2e-XUt6GgvDr7fIK9FHK0U3EYrQ2p0vYO4_X\"; e_fb_binaryversion=\"AcO11fwZg7FzHlRcbyRqLCESo-oGTpBVBbZd9w43xyzL0iOkMLiM-0iEDP9oRLYc8heGMD3oR0_9Be7sPXnyjHDQCzeMiSc22nw\"; e_fb_httpversion=\"AcMgVGVJeBaD21obFDflodp25RLI9RSZVqhkv6ouIefSbTuE6w8MbsKh36CH\"; e_fb_vipaddr=\"AcM8a3v_cU-OY4tF8vQ4GFwkag9wgPtso7zWsti9CdAezTsvr_tEEQoLUPIJl890FGHtNBpk9jb-t4d7-cHCJJSayamw4URmEQG4\"; e_fb_configversion=\"AcNl674IVieUr8AQxZvexs6zTOIm9IZ_DA_xir1onFTRSRK2C0mlKtM2qBFt8A\"; e_fb_vipport=\"AcOjQSrFQ6iA7R4kDN3_QtnrsJEw-pgD2EpPOOPsXOMLbYPX_H27kKYCuA3Y\"; e_fb_builduser=\"AcOHfRb07_3O9N9n6GUhseI0IHKWYBPU3SPx3hmVyX0PBlAHV1ixLqMNowmnlWf1aqI\"; e_fb_hostheader=\"AcNzIYcsfz5FLypVXmEieZeJaiHnBSgm71_UGoJYhAR6Tw0cr50mO6ZhCW_tbLrAK9RKdTyC8kjyWPs\", http_request_error; e_fb_responsebytes=\"AcPScBfWwbIqtWZczmf9Q6dMz8rpM8nDXhaa_VnLQR0IegVAIb6FN-HAUzDx\"; e_fb_requesttime=\"AcP4LKIxbNNTcpeCmfYN3jT_A4nQiUn_O9odW0CwHp1uygddrcxc96QeaseGboUtGcoqcdHYDg\"; e_proxy=\"AcN-7gcNRHdp7xZ0X0vkLobgluIxQ7843VVA4WsMWZcBJN2x2mpwEsZ5IosPFH9kAcERVWyNPYzSmAWn\"; e_fb_twtaskhandle=\"AcM_YHqmUotZ8EZG-jPFz1uwC2U06cOXT5-NG2H3oZcAqqJVWDACe0adodlhxGbRSucdliJRJQrR-bDsdTqo9pL8Gvtv7ZL6wDjn\"; e_upip=\"AcN9EQw3Cr6Dx4NIgeF63B_lXX0fsoV9PtCttrdXz0Dnd4MzAQB0C1kwXcb09s1zu20KqE4nrkk8Pix6YSNiZgwxReD4eAaYtq7M\"; e_fb_requestsequencenumber=\"AcPBykYHzNb8CFtxp0fPLNck44qMHmZZA67hG4kAn_i5C-hjZvBeJocAYw\"; e_clientaddr=\"AcPe8tkjTE_u2-NJeJZgkMxI6DP4V3N6FDFiStNqQBfIKBQAI9xNtzEiCquQkG44wL2qu4l296GrEvEc\"; e_fb_requesthandler=\"AcOhDeWdYPQeC0HVeJe2rskaTH4Ly4sUbQtfb4DpR86g3JsAN2_SfGIW_wDirhSQiu0d-N0LNejMpA\"; e_fb_zone=\"AcPr4Piq8fU8TQXJBHMMkOksL6zl0OD-687wM_Zblfw5I3xi02ZNCnUw4vcXaA\"; e_fb_binaryversion=\"AcPkbYJ7FAtcZlbEZXyu72jnVI19WxxBMovabZpWw4MN1xLz9Ap7PbkwqqMUoLhH7Vo82SgUSFj9MRsoDaoMNgz5OxwA21psgTM\"; e_fb_httpversion=\"AcMXY_ME-_d2ZW99E3-zwMGGBOV0U1L2vNsAGODPKXlcvIUlCM_Kdy2X7dzt\"; e_fb_vipaddr=\"AcOvjerSypCX5HHRdjBVGPmYYn1w5E1JW4d06ocFSmbi34V2OHYMxTKoWQioLmU1hK-FNBIrIf0\"; e_fb_configversion=\"AcMM1OtUXvIUS7J75f7dBfel8xRp1-2oCsCNCYHW5hZWcSBE8TAOrVf_PbuF2w\"; e_fb_vipport=\"AcOq62VH2JrXfDQaSAZJ6xBynWz8tOv4yy87X26GZLrLcJR4pSFEr42dOp_I\"; e_fb_builduser=\"AcPoGpRHzx53h-1MZdYL1qcLbwnCctW7esh40eZo2wzV9XGyAK285CqDr7wstfFSB-I\"; e_fb_hostheader=\"AcPIqkTjAXoen5Vxy7kTKkyBAgdB9bGWFjnMoRRjZyeqve4Kd3UIQ0bDWbq05fmQnq5kf1JgWe6q6c8\"",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=7, rtx=0, c=14, mss=1380, tbw=3691, tp=-1, tpl=-1, uplat=204, ullat=0",
+            "Connection": "keep-alive",
+            "Content-Length": "164"
+          }
+        },
+        {
+          "url": "https://graph.instagram.com/whatilove1728?fields=id,username,account_type,media_count",
+          "status_code": 400,
+          "response_size": 144,
+          "headers": {
+            "error-mid": "31b160a10b1aab8706548940e2b07763",
+            "Vary": "Origin",
+            "Content-Type": "application/json; charset=UTF-8",
+            "WWW-Authenticate": "OAuth \"Facebook Platform\" \"invalid_request\" \"Invalid OAuth 2.0 Access Token\"",
+            "Access-Control-Allow-Origin": "*",
+            "Strict-Transport-Security": "max-age=31536000; preload; includeSubDomains",
+            "Pragma": "no-cache",
+            "Cache-Control": "no-store",
+            "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "x-fb-request-id": "A8PExgGb2BO-xBwfAVMeDMC",
+            "x-fb-trace-id": "AAWPc/NdKOp",
+            "x-fb-rev": "1023378607",
+            "x-stack": "www",
+            "X-FB-Debug": "gCnrhAH/herdEkq2fHdx72MX6Nkl05q4vw7SkVdmiqtV+zuIUfSBfbWVl+BD4mxsdfmRDAhuRchqHTPRgn+hjA==",
+            "Date": "Sat, 31 May 2025 22:55:31 GMT",
+            "Proxy-Status": "http_request_error; e_fb_responsebytes=\"AcNSqdC4x1GlUDBCOai3uoga2mTQExcFzaySpufW63XJn5ZiKp9v8wcZlonY\"; e_fb_requesttime=\"AcOHcohc68J3WqQ8ijt-wN6FZIAuD50gl1--K2kH5vZqzSO166gzH3DP6nJKm3tGgrYhxihH2Q\"; e_proxy=\"AcOsqsPjJYFzHcDTKl2oBPoJ9U4a5PN17zMEYmFyWB132XbrX2aKTP1NpJu4U5UsYSjWCbjn5c7Psrnb7eO-\"; e_fb_twtaskhandle=\"AcPhM3fUJLwJik94WsASZuD43wmBkhukYOAEcSRwtcSkAdY3-HCqlC4RRbLS78Xw2BMDd9Czzg2NoD4gs4dJDwV-KdOdoJ9Mdxt-Ll9c\"; e_upip=\"AcNrCjnlrNPiKqupU7q_LvmzQFiFgadr-tBWrIE3vlJYcu_K53gF2T806U4J-yBKvPlrBXIw_fdp6Ht2qMK3yUFkxLTaTW1-_3asjLQ\"; e_fb_requestsequencenumber=\"AcOiylriCBV2WvKE61YjCB4LErYyC67SnrN5rgPu01zCDOnt04Scx7dZIsoO\"; e_clientaddr=\"AcNIyOXgCdkskkWKO39PFr72w2AscAoIf9FQ--8FEs7_If-xuAeokaVw8gKr7xJePLse5Sd3__Kre2vLjwZmtoHlPbJBeQBUac9adjdpukEqOVREtA\"; e_fb_requesthandler=\"AcMxX6wL7tnf_RRveA_d8-3s77WuKJjJvAf9__Kc9nDtjO1PnF1t9qNKVU7Mq32Vdfms87lUWW4ULas\"; e_fb_zone=\"AcMtWMsfKuHPrgkCMmThOu3V_Lq1Hh686H25h9Z5PXC6MK478im7Z_TtOiOBdf05\"; e_fb_binaryversion=\"AcORrXoxc7fU6qZNNiQYqipE6sIUkMd2fAspnO4m1gvyuQO44hjUidacUvJOeRiiMndZwTPKTqq-iQZqziMlxi5vZw8eN7eugHg\"; e_fb_httpversion=\"AcNhqWHamRYaMzZc1A7jjPJ_6SsHZhPcKtshcmJEpko_i7028EKFp10e6EQE\"; e_fb_vipaddr=\"AcPWCHXiEnOTdggo2C3dgQkB6s6XvRZ4UCITs7AInziSjwEtfBarV90Q6gW9NcUj2j-IBYkKzDbB3P2G2Ixv_TGk3dLraCfO-GZiqA\"; e_fb_configversion=\"AcNHurrRZjuOtZ3gVJE6Ezqx695Pglk9VS87umRT1eWSm6IAjZZuTgVQEBRovg\"; e_fb_vipport=\"AcNEvCzQHpsFohTBfhkvrqF9vKUhYxzQasSFGtfEK_KdUQz_ugvWMnxWjVd9\"; e_fb_builduser=\"AcOHrgMOihmWLWkwOckaxO_ETSpguKbAo8tSRQ_NIm8YRt8QE83WSMDG4QUGSdSXqKM\"; e_fb_hostheader=\"AcNqJMIU9_2KYgWKp4VrBjCGSJiv2aWamntuX5VY2QAhHqTlmu5vIkuOSo28iU1_9OiSo3SSXzBK4duatQ\", http_request_error; e_fb_responsebytes=\"AcPmvONnl-3n58GJC28s4-hvBmDZv00TAADUyvJHkBQDrjWvrcNmef--OdMb\"; e_fb_requesttime=\"AcN84TmtZnr7h6_U1dAry9IUKKi1pNbFnWpwEK4S9vz5cRfabwkEXTNDYb-dG9TXLLuTSIyTMw\"; e_proxy=\"AcMgWuEfQUv2AUMPZxfnOYhaJ_hZGiav2e_N8RPa9J0cPOjSTLrZ2rL5DB-zj9iZydXtoiyfis6xnt8\"; e_fb_twtaskhandle=\"AcPrg5Mva7ZaDN7AqLxZa9dJI8nw8WKmdCJibmOz2HaQFoQ__5lsie4H8qNRrogX9oRW7Y37CTFI3oNlPhQCKUdroIL2EZLdVK92\"; e_upip=\"AcM1prKA80PIrCbQCEkw-R0-MtFkva4vWkjzmHxvTKxjAOJYx2IZxodlSNzleqJrjRJLx030kvg9VuVeVziSFenr7oSBS1T7lgTlYA\"; e_fb_requestsequencenumber=\"AcO2CqKuzsPWVKEUnRHSzFiycSjXZkrcA8KHdhNu5BG4aa1jpF82Ug8kHA\"; e_clientaddr=\"AcPJV7JCkNvVOch1M9JupCRs_nqFVgt0DLztQohgjo6LDzNK4keMpQtoxnSWbuS6lSEuOWNuD3hjNAJS\"; e_fb_requesthandler=\"AcMfHbfleg_5MKMVHvJ_Wwsk0xn8DKgzwgURbcT7Trx9ic6tjliQgDLVAV0QKyfH4vq53_rxGPW-\"; e_fb_zone=\"AcNwOCL9V6CU_TkJdScM6c7e6nW4xlteFh-6x3GRM8DBaNFNfYFVT_40KuB3Pw\"; e_fb_binaryversion=\"AcNUQbrl4afDFwb-nKLm1RbisAYWhpsIpcbIChUDVuZt22QGSv0w-DCYgNHTo_Bsw7yE0ZrS6Sq7-9AUMzsmbXDI1IwTesRe0_I\"; e_fb_httpversion=\"AcO9sr45vx_GhMxvyaXzcS27VA8i72YG_z57-sXBAcmZ1_8rdDkApUvAhGZr\"; e_fb_vipaddr=\"AcPzliXu9UawVY0wHOGNS9Gl4HbojnZCDhfOY4WOwhJlpZSK4TKhsWnhUfjN6jFmPRjRt_OAMo8\"; e_fb_configversion=\"AcMJ6idIdCObZs4yaU4Ga0_-sY4KHZ2_aNTXv3AGI_JcLaJs4z041IWbMiGniQ\"; e_fb_vipport=\"AcMipHXaonS58v89wdTR7HBOr4ALmoEBHgw3hTOnxQ_A3_O6vsk5kcb8B7f8\"; e_fb_builduser=\"AcNmxJfEVX-ymrqEzo_kTMMXrVhl80ytfsbj3KBxa7mjUUz-QKKGIsRk_-peQXpFd5o\"; e_fb_hostheader=\"AcML6IsIvqUg6SWY6tjv9fXEG9Cp5noI8fFe3cRJoenI9gmsRXV4wi_Swn0pBCpgu8S_fhe_fnGyLEqhjw\"",
+            "X-FB-Connection-Quality": "MODERATE; q=0.3, rtt=222, rtx=0, c=13, mss=1380, tbw=3312, tp=-1, tpl=-1, uplat=72, ullat=0",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "Connection": "keep-alive",
+            "Content-Length": "144"
+          }
+        },
+        {
+          "url": "https://www.instagram.com/whatilove1728/channel/?__a=1",
+          "status_code": 200,
+          "response_size": 96455,
+          "headers": {
+            "Vary": "Accept-Encoding",
+            "Content-Encoding": "br",
+            "Set-Cookie": "csrftoken=hS4N9f8RdjkTFVR6c8HAWZ; expires=Sun, 05-Jul-2026 22:55:31 GMT; Max-Age=34560000; path=/; domain=.instagram.com; secure; SameSite=None",
+            "accept-ch-lifetime": "4838400",
+            "accept-ch": "viewport-width,dpr,Sec-CH-Prefers-Color-Scheme,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Platform-Version,Sec-CH-UA-Model",
+            "reporting-endpoints": "coop_report=\"https://www.facebook.com/browser_reporting/coop/?minimize=0\", default=\"https://www.instagram.com/error/ig_web_error_reports/?brsid=7510747313338914087&comet_app_key=7&cpp=C3&cv=1023378607&st=1748732131820\", permissions_policy=\"https://www.instagram.com/error/ig_web_error_reports/\"",
+            "report-to": "{\"max_age\":2592000,\"endpoints\":[{\"url\":\"https:\\/\\/www.facebook.com\\/browser_reporting\\/coop\\/?minimize=0\"}],\"group\":\"coop_report\",\"include_subdomains\":true}, {\"max_age\":259200,\"endpoints\":[{\"url\":\"https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/?brsid=7510747313338914087&comet_app_key=7&cpp=C3&cv=1023378607&st=1748732131820\"}]}, {\"max_age\":21600,\"endpoints\":[{\"url\":\"https:\\/\\/www.instagram.com\\/error\\/ig_web_error_reports\\/\"}],\"group\":\"permissions_policy\"}",
+            "content-security-policy": "default-src *.facebook.com *.fbcdn.net *.instagram.com blob:;script-src *.instagram.com static.cdninstagram.com *.facebook.com *.fbcdn.net *.facebook.net 127.0.0.1:* 'nonce-KxeDoY04' blob: 'self' 'unsafe-eval' https://*.google-analytics.com https://translate.google.com https://apis.google.com https://accounts.google.com;style-src *.instagram.com static.cdninstagram.com data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com;connect-src *.instagram.com wss://edge-chat.instagram.com connect.facebook.net *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* ws://localhost:* blob: *.cdninstagram.com wss://*.instagram.com:* 'self' https://meta.privacy-gateway.cloudflare.com/relay;font-src *.instagram.com static.cdninstagram.com data: *.fbcdn.net *.intern.facebook.com *.facebook.com https://fonts.gstatic.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: *.cdninstagram.com *.whatsapp.net blob: *.fbsbx.com android-webview-video-poster: *.oculuscdn.com *.giphy.com www.googleadservices.com *.doubleclick.net *.google.com *.google.co.uk https://www.gstatic.com https://*.google-analytics.com;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob: https://*.giphy.com;child-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data: www.googleadservices.com *.doubleclick.net *.google.com *.google.co.uk;manifest-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;object-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;block-all-mixed-content;upgrade-insecure-requests;",
+            "document-policy": "force-load-at-top, include-js-call-stacks-in-crash-reports",
+            "permissions-policy": "accelerometer=(self), attribution-reporting=(), autoplay=(), bluetooth=(), camera=(self), ch-device-memory=(), ch-downlink=(), ch-dpr=(), ch-ect=(), ch-rtt=(), ch-save-data=(), ch-ua-arch=(), ch-ua-bitness=(), ch-viewport-height=(), ch-viewport-width=(), ch-width=(), clipboard-read=(), clipboard-write=(self), compute-pressure=(), display-capture=(self), encrypted-media=(), fullscreen=(self), gamepad=(), geolocation=(self), gyroscope=(self), hid=(), idle-detection=(), interest-cohort=(), keyboard-map=(), local-fonts=(), magnetometer=(), microphone=(self), midi=(), otp-credentials=(), payment=(), picture-in-picture=(self), private-state-token-issuance=(), publickey-credentials-get=(), screen-wake-lock=(), serial=(), shared-storage=(), shared-storage-select-url=(), private-state-token-redemption=(), usb=(), unload=(self), window-management=(), xr-spatial-tracking=();report-to=\"permissions_policy\"",
+            "cross-origin-resource-policy": "same-origin",
+            "cross-origin-opener-policy": "unsafe-none",
+            "Pragma": "no-cache",
+            "Cache-Control": "private, no-cache, no-store, must-revalidate",
+            "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+            "X-Content-Type-Options": "nosniff",
+            "X-XSS-Protection": "0",
+            "X-Frame-Options": "DENY",
+            "origin-agent-cluster": "?1",
+            "Strict-Transport-Security": "max-age=31536000; preload; includeSubDomains",
+            "x-stack": "www",
+            "Content-Type": "text/html; charset=\"utf-8\"",
+            "X-FB-Debug": "1QOCdvwEDTxvIQJEX7OCPo5pDHqX4l9pPabUyIOpm4FwIVst82VeptCOTwK4lJ0hQHsVALsvJd8ppweCD4f4qw==",
+            "Date": "Sat, 31 May 2025 22:55:31 GMT",
+            "Alt-Svc": "h3=\":443\"; ma=86400",
+            "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=5, rtx=0, c=15, mss=1380, tbw=4311, tp=-1, tpl=-1, uplat=184, ullat=0",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive"
+          }
+        }
+      ],
+      "working_endpoints": []
+    },
+    {
+      "method": "GraphQL Exploitation",
+      "success": false,
+      "data_extracted": {},
+      "queries_tested": [
+        {
+          "query_hash": "c76146de99bb02f6415203be841dd25a",
+          "variables": "{\"user_id\": \"whatilove1728\"}",
+          "status_code": 401,
+          "response_size": 119
+        },
+        {
+          "query_hash": "58b6785bea111c67129decbe6a448951",
+          "variables": "{\"username\": \"whatilove1728\", \"fetch_mutual\": true}",
+          "status_code": 401,
+          "response_size": 119
+        },
+        {
+          "query_hash": "69cba40317214236af40e7efa697781d",
+          "variables": "{\"username\": \"whatilove1728\"}",
+          "status_code": 401,
+          "response_size": 119
+        },
+        {
+          "query_hash": "003056d32c2554def87228bc3fd9668a",
+          "variables": "{\"username\": \"whatilove1728\", \"include_chaining\": true}",
+          "status_code": 401,
+          "response_size": 119
+        },
+        {
+          "query_hash": "f2405b236d85e8296cf30347c9f08c2a",
+          "variables": "{\"username\": \"whatilove1728\", \"include_highlight_reels\": true}",
+          "status_code": 401,
+          "response_size": 119
+        }
+      ],
+      "working_queries": []
+    },
+    {
+      "method": "Session Hijacking",
+      "success": false,
+      "data_extracted": {},
+      "sessions_tested": 3,
+      "valid_sessions": []
+    },
+    {
+      "method": "Cached Data Mining",
+      "success": true,
+      "data_extracted": {
+        "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/": "<!DOCTYPE html><html lang=\"en-SG\"><head><title>Google Search</title><style>body{background-color:#fff}</style></head><body><noscript><style>table,div,span,p{display:none}</style><meta content=\"0;url=/httpservice/retry/enablejs?sei=94g7aIHcGozE4-EP6NPF-Ao\" http-equiv=\"refresh\"><div style=\"display:block\">Please click <a href=\"/httpservice/retry/enablejs?sei=94g7aIHcGozE4-EP6NPF-Ao\">here</a> if you are not redirected within a few seconds.</div></noscript><script nonce=\"HWWo7sFDdQcFoVMfi3XMug\">//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjogMywic291cmNlcyI6WyIiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJuYW1lcyI6WyJjbG9zdXJlRHluYW1pY0J1dHRvbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEifQ==\n(function(){function h(F){return F}var e=function(F){return h.call(this,F)},l=function(F,t,r,A,m,p,D,v,f,C,Q,O){Q=r;{O=22;while(![]==0)try{if(Q==12)break;else if(Q==48)O=23,f=v.createPolicy(p,{createHTML:e,createScript:e,createScriptURL:e}),Q=t;else if(Q==A)Q=v&&v.createPolicy?48:69;else if(Q==r)v=g.trustedTypes,f=D,Q=A;else if(Q==F)O=22,Q=52;else{if(Q==t)return O=22,f;if(Q==85)g.console[m](C.message),Q=t;else if(Q==52)Q=g.console?85:t;else if(Q==69)return f}}catch(z){if(O==22)throw z;O==23&&(C=z,Q=F)}}},g=this||self;(0,eval)(function(F,t){return(t=l(97,41,68,90,\"error\",\"ks\",null))&&F.eval(t.createScript(\"1\"))===1?function(r){return t.createScript(r)}:function(r){return\"\"+r}}(g)(Array(Math.random()*7824|0).join(\"\\n\")+['//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjogMywic291cmNlcyI6WyIiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJuYW1lcyI6WyJjbG9zdXJlRHluYW1pY0J1dHRvbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEifQ==',\n'(function(){/*',\n'',\n' Copyright Google LLC',\n' SPDX-License-Identifier: Apache-2.0',\n'*/',\n'var LD=function(Q,t,r,F,h,e,v,f,z,g,O){{z=22;while(z!=63)if(z==73)z=(F<<2&15)>=10&&(F|Q)>>Q<3?33:92;else if(z==22)z=86;else{if(z==92)return O;if(z==32){a:{switch(f){case h:O=v?\"disable\":\"enable\";break a;case r:O=v?\"highlight\":\"unhighlight\";break a;case 4:O=v?\"activate\":\"deactivate\";break a;case 8:O=v?\"select\":\"unselect\";break a;case 16:O=v?\"check\":\"uncheck\";break a;case e:O=v?\"focus\":\"blur\";break a;case t:O=v?\"open\":\"close\";break a}throw Error(\"Invalid component state\");}z=59}else if(z==38)g=function(){},v=void 0,f=XE(t,function(A,C){for(C=56;C!=12;)C==13?(r&&j2(r),v=A,g(),g=void 0,C=12):C==56&&(C=g?13:12)},!!r),e=f[1],h=f[0],O={top:function(A,C,p,m,D,B,l){for(B=69;B!=81;)if(B==14)B=C?31:59;else if(B==40)m=g,g=function(){(m(),j2)(l)},B=81;else if(B==69)l=function(){v(function(w){j2(function(){A(w)})},p)},B=14;else if(B==90)l(),B=81;else{if(B==59)return D=h(p),A&&A(D),D;B==31&&(B=v?90:40)}},pe:function(A){e&&e(A)}},z=73;else if(z==33){if((v=r.length,v)>t){for(e=(h=Array(v),t);e<v;e++)h[e]=r[e];O=h}else O=[];z=92}else z==86?z=(F-7|9)>=F&&(F-7^25)<F?32:59:z==59&&(z=(F|Q)<18&&(F>>2&11)>=1?38:73)}}},Nh=function(Q,t,r,F,h,e,v,f,z,g,O,A,C,p,m){{p=51;while(p!=10)if(p==71)f=r.src,p=42;else if(p==61)e=r.type,h=r.proxy,f.removeEventListener?f.removeEventListener(e,h,r.capture):f.detachEvent?f.detachEvent(hX(9,\"on\",e),h):f.addListener&&f.removeListener&&f.removeListener(h),rO--,v=vd(3,f),p=15;else if(p==29)p=(F+3&56)>=F&&(F-3|11)<F?80:46;else if(p==23)Yl(9,Q,v,r),p=3;else if(p==74)Yl(3,Q,f.P,r),p=46;else{if(p==58)return m;if(p==3)p=v.OK==0?63:46;else if(p==63)v.src=t,f[FE]=t,p=46;else if(p==46)p=(F|32)==F?92:58;else if(p==15)p=v?23:98;else if(p==80)p=typeof r!==\"number\"&&r&&!r.fr?71:46;else if(p==42)p=f&&f[TK]?74:61;else if(p==98)fD(26,75,t,r),p=46;else if(p==92){if(t.h=((t.Z+=(v=(A=(r||t.ci++,t.Pi>0&&t.So&&t.mo)&&t.ym<=1&&!t.G&&!t.s&&(!r||t.r$-h>1)&&document.hidden==0,(g=t.ci==4)||A?t.C():t.Cr),C=v-t.Cr,C>>14>0),t).R&&(t.R=(O=t.R,z=(t.Z+1>>2)*(C<<2),2*(~O&z)+(O|~z)-(~O|z))),t.Z+1)>>2!=0||t.h,g||A)t.ci=0,t.Cr=v;A?(t.Pi>t.aI&&(t.aI=t.Pi),v-t.m7<t.Pi-(e?255:r?5:2)?m=false:(t.r$=h,f=S(t,r?14:266),N(Q,t,t.Y),t.i.push([S2,f,r?h+1:h,t.N,t.W]),t.s=j2,m=true)):m=false,p=58}else p==51&&(p=29)}}},H=function(Q,t,r,F,h,e,v,f){{v=77;while(v!=51)if(v==61)r=\"\",e=0,v=58;else if(v==74)v=((Q|1)&14)<12&&(Q+8&31)>=20?1:7;else{if(v==7)return f;v==1?(typeof F.className==\"string\"?F.className=r:F.setAttribute&&F.setAttribute(t,r),v=7):v==19?(e+=8192,v=76):v==47?(f=h,v=75):v==58?v=76:v==77?v=89:v==41?v=Q>>2>=16&&(Q<<2&31)<15?50:33:v==70?(t.kC=function(){return t.Bi?t.Bi:t.Bi=new t},t.Bi=void 0,v=74):v==50?(F=typeof r,f=F==t&&r!=null||F==\"function\",v=33):v==15?(F=window.btoa,v=4):v==76?v=e<t.length?39:90:v==37?(h=void 0,v=47):v==89?v=(Q&60)==Q?96:41:v==33?v=(Q&31)==Q?15:75:v==39?(r+=String.fromCharCode.apply(null,t.slice(e,e+8192)),v=19):v==4?v=F?61:37:v==90?(h=F(r).replace(/\\\\+/g,\"-\").replace(/\\\\//g,\"_\").replace(/=/g,\"\"),v=47):v==75?v=(Q+6&13)==1?70:74:v==96&&(kl.call(this),this.P=new tX(this),this.kN=this,this.Vm=null,v=41)}}},$l=function(Q,t,r,F,h,e,v,f,z){for(f=79;f!=44;)if(f==42)F.O=((F.O?F.O+\"~\":\"E:\")+r.message+\":\"+r.stack).slice(t,2048),f=58;else if(f==83)r=Math.",
+        "https://www.google.com/search?q=site:instagram.com+whatilove1728": "<!DOCTYPE html><html lang=\"en-SG\"><head><title>Google Search</title><style>body{background-color:#fff}</style></head><body><noscript><style>table,div,span,p{display:none}</style><meta content=\"0;url=/httpservice/retry/enablejs?sei=94g7aNLUGtmeseMPs7m2yA4\" http-equiv=\"refresh\"><div style=\"display:block\">Please click <a href=\"/httpservice/retry/enablejs?sei=94g7aNLUGtmeseMPs7m2yA4\">here</a> if you are not redirected within a few seconds.</div></noscript><script nonce=\"VH3_0D2YSf_3Z_V4eQCS1g\">//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjogMywic291cmNlcyI6WyIiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJuYW1lcyI6WyJjbG9zdXJlRHluYW1pY0J1dHRvbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEifQ==\n(function(){function h(F){return F}var e=function(F){return h.call(this,F)},l=function(F,t,r,A,m,p,D,v,f,C,Q,O){Q=r;{O=22;while(![]==0)try{if(Q==12)break;else if(Q==48)O=23,f=v.createPolicy(p,{createHTML:e,createScript:e,createScriptURL:e}),Q=t;else if(Q==A)Q=v&&v.createPolicy?48:69;else if(Q==r)v=g.trustedTypes,f=D,Q=A;else if(Q==F)O=22,Q=52;else{if(Q==t)return O=22,f;if(Q==85)g.console[m](C.message),Q=t;else if(Q==52)Q=g.console?85:t;else if(Q==69)return f}}catch(z){if(O==22)throw z;O==23&&(C=z,Q=F)}}},g=this||self;(0,eval)(function(F,t){return(t=l(97,41,68,90,\"error\",\"ks\",null))&&F.eval(t.createScript(\"1\"))===1?function(r){return t.createScript(r)}:function(r){return\"\"+r}}(g)(Array(Math.random()*7824|0).join(\"\\n\")+['//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjogMywic291cmNlcyI6WyIiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJuYW1lcyI6WyJjbG9zdXJlRHluYW1pY0J1dHRvbiJdLCJtYXBwaW5ncyI6IkFBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEifQ==',\n'(function(){/*',\n'',\n' Copyright Google LLC',\n' SPDX-License-Identifier: Apache-2.0',\n'*/',\n'var LD=function(Q,t,r,F,h,e,v,f,z,g,O){{z=22;while(z!=63)if(z==73)z=(F<<2&15)>=10&&(F|Q)>>Q<3?33:92;else if(z==22)z=86;else{if(z==92)return O;if(z==32){a:{switch(f){case h:O=v?\"disable\":\"enable\";break a;case r:O=v?\"highlight\":\"unhighlight\";break a;case 4:O=v?\"activate\":\"deactivate\";break a;case 8:O=v?\"select\":\"unselect\";break a;case 16:O=v?\"check\":\"uncheck\";break a;case e:O=v?\"focus\":\"blur\";break a;case t:O=v?\"open\":\"close\";break a}throw Error(\"Invalid component state\");}z=59}else if(z==38)g=function(){},v=void 0,f=XE(t,function(A,C){for(C=56;C!=12;)C==13?(r&&j2(r),v=A,g(),g=void 0,C=12):C==56&&(C=g?13:12)},!!r),e=f[1],h=f[0],O={top:function(A,C,p,m,D,B,l){for(B=69;B!=81;)if(B==14)B=C?31:59;else if(B==40)m=g,g=function(){(m(),j2)(l)},B=81;else if(B==69)l=function(){v(function(w){j2(function(){A(w)})},p)},B=14;else if(B==90)l(),B=81;else{if(B==59)return D=h(p),A&&A(D),D;B==31&&(B=v?90:40)}},pe:function(A){e&&e(A)}},z=73;else if(z==33){if((v=r.length,v)>t){for(e=(h=Array(v),t);e<v;e++)h[e]=r[e];O=h}else O=[];z=92}else z==86?z=(F-7|9)>=F&&(F-7^25)<F?32:59:z==59&&(z=(F|Q)<18&&(F>>2&11)>=1?38:73)}}},Nh=function(Q,t,r,F,h,e,v,f,z,g,O,A,C,p,m){{p=51;while(p!=10)if(p==71)f=r.src,p=42;else if(p==61)e=r.type,h=r.proxy,f.removeEventListener?f.removeEventListener(e,h,r.capture):f.detachEvent?f.detachEvent(hX(9,\"on\",e),h):f.addListener&&f.removeListener&&f.removeListener(h),rO--,v=vd(3,f),p=15;else if(p==29)p=(F+3&56)>=F&&(F-3|11)<F?80:46;else if(p==23)Yl(9,Q,v,r),p=3;else if(p==74)Yl(3,Q,f.P,r),p=46;else{if(p==58)return m;if(p==3)p=v.OK==0?63:46;else if(p==63)v.src=t,f[FE]=t,p=46;else if(p==46)p=(F|32)==F?92:58;else if(p==15)p=v?23:98;else if(p==80)p=typeof r!==\"number\"&&r&&!r.fr?71:46;else if(p==42)p=f&&f[TK]?74:61;else if(p==98)fD(26,75,t,r),p=46;else if(p==92){if(t.h=((t.Z+=(v=(A=(r||t.ci++,t.Pi>0&&t.So&&t.mo)&&t.ym<=1&&!t.G&&!t.s&&(!r||t.r$-h>1)&&document.hidden==0,(g=t.ci==4)||A?t.C():t.Cr),C=v-t.Cr,C>>14>0),t).R&&(t.R=(O=t.R,z=(t.Z+1>>2)*(C<<2),2*(~O&z)+(O|~z)-(~O|z))),t.Z+1)>>2!=0||t.h,g||A)t.ci=0,t.Cr=v;A?(t.Pi>t.aI&&(t.aI=t.Pi),v-t.m7<t.Pi-(e?255:r?5:2)?m=false:(t.r$=h,f=S(t,r?14:266),N(Q,t,t.Y),t.i.push([S2,f,r?h+1:h,t.N,t.W]),t.s=j2,m=true)):m=false,p=58}else p==51&&(p=29)}}},H=function(Q,t,r,F,h,e,v,f){{v=77;while(v!=51)if(v==61)r=\"\",e=0,v=58;else if(v==74)v=((Q|1)&14)<12&&(Q+8&31)>=20?1:7;else{if(v==7)return f;v==1?(typeof F.className==\"string\"?F.className=r:F.setAttribute&&F.setAttribute(t,r),v=7):v==19?(e+=8192,v=76):v==47?(f=h,v=75):v==58?v=76:v==77?v=89:v==41?v=Q>>2>=16&&(Q<<2&31)<15?50:33:v==70?(t.kC=function(){return t.Bi?t.Bi:t.Bi=new t},t.Bi=void 0,v=74):v==50?(F=typeof r,f=F==t&&r!=null||F==\"function\",v=33):v==15?(F=window.btoa,v=4):v==76?v=e<t.length?39:90:v==37?(h=void 0,v=47):v==89?v=(Q&60)==Q?96:41:v==33?v=(Q&31)==Q?15:75:v==39?(r+=String.fromCharCode.apply(null,t.slice(e,e+8192)),v=19):v==4?v=F?61:37:v==90?(h=F(r).replace(/\\\\+/g,\"-\").replace(/\\\\//g,\"_\").replace(/=/g,\"\"),v=47):v==75?v=(Q+6&13)==1?70:74:v==96&&(kl.call(this),this.P=new tX(this),this.kN=this,this.Vm=null,v=41)}}},$l=function(Q,t,r,F,h,e,v,f,z){for(f=79;f!=44;)if(f==42)F.O=((F.O?F.O+\"~\":\"E:\")+r.message+\":\"+r.stack).slice(t,2048),f=58;else if(f==83)r=Math.",
+        "https://www.bing.com/search?q=site:instagram.com+whatilove1728": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"><html dir=\"ltr\" lang=\"en\" xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:Web=\"http://schemas.live.com/Web/\"><script type=\"text/javascript\" nonce=\"y4rZRadAKzZ+ZbF+TY9oH8XovaB9R7XiYgfXgvDzPeU=\" >//<![CDATA[\r\nsi_ST=new Date\r\n//]]></script><head><!--pc--><title>site:instagram.com whatilove1728 - Search</title><meta content=\"text/html; charset=utf-8\" http-equiv=\"content-type\" /><meta name=\"viewport\" content=\"width=device-width, minimum-scale=1.0, initial-scale=1.0, maximum-scale=1.0, user-scalable=no\" /><meta name=\"referrer\" content=\"origin-when-cross-origin\" /><meta name=\"SystemEntropyOriginTrialToken\" content=\"A5is4nwJJVnhaJpUr1URgj4vvAXSiHoK0VBbM9fawMskbDUj9WUREpa3JzGAo6xd1Cp2voQEG1h6NQ71AsMznU8AAABxeyJvcmlnaW4iOiJodHRwczovL3d3dy5iaW5nLmNvbTo0NDMiLCJmZWF0dXJlIjoiTXNVc2VyQWdlbnRMYXVuY2hOYXZUeXBlIiwiZXhwaXJ5IjoxNzUzNzQ3MjAwLCJpc1N1YmRvbWFpbiI6dHJ1ZX0=\" http-equiv=\"origin-trial\" /><meta name=\"mobileoptimized\" content=\"0\" /><meta property=\"og:description\" content=\"Intelligent search from Bing makes it easier to quickly find what you\u2019re looking for and rewards you.\" /><meta property=\"og:site_name\" content=\"Bing\" /><meta property=\"og:title\" content=\"site:instagram.com whatilove1728 - Bing\" /><meta property=\"og:url\" content=\"https://www.bing.com/search?q=site:instagram.com+whatilove1728\" /><meta property=\"fb:app_id\" content=\"3732605936979161\" /><meta property=\"og:image\" content=\"http://www.bing.com/sa/simg/facebook_sharing_5.png\" /><meta property=\"og:type\" content=\"website\" /><meta property=\"og:image:width\" content=\"600\" /><meta property=\"og:image:height\" content=\"315\" /><link rel=\"icon\" href=\"/sa/simg/favicon-trans-bg-blue-mg.ico\" data-orighref title=\"\" target=\"\" type=\"\" as=\"\" crossorigin=\"\" media=\"\" /><script type=\"text/javascript\" nonce=\"y4rZRadAKzZ+ZbF+TY9oH8XovaB9R7XiYgfXgvDzPeU=\">//<![CDATA[\n(function(){function n(n,t,i,r,u,f){var o,e;_G.DirectLogPost=_G.DLP;typeof Log!=\"undefined\"&&Log&&Log.DirectLogPost?Log.DirectLogPost(n,t,i,r,u,f):(o=\"<ClientInstRequest><Events><E><T>\".concat(n,\"<\\/T><IG>\").concat(t,\"<\\/IG><TS>\").concat(i,\"<\\/TS><D><![CDATA[\").concat(r,\"]\\]><\\/D><\\/E><\\/Events><\\/ClientInstRequest>\"),f?f.bind(navigator)(_G.LSP,o):(e=sj_gx(),e.open(\"POST\",_G.LSP,!0),e.setRequestHeader(\"Content-Type\",\"text/xml\"),e.send(o)))}window.directLogPost=n})();_G={Region:\"SG\",Lang:\"en-US\",ST:(typeof si_ST!=='undefined'?si_ST:new Date),Mkt:\"en-US\",RevIpCC:\"sg\",RTL:false,Ver:\"22\",IG:\"C09BEB34FC4B46C38CD59CDE8407E56A\",EventID:\"683b88f7755c43eb9ffff0dcfc06c65b\",V:\"web\",P:\"SERP\",DA:\"PUSE01\",CID:\"0142B9EC621162472FAAAC1163586330\",SUIH:\"BfEsokH98zrN8MNduITE-A\",adc:\"b_ad\",EF:{bmcov:1,bmasynctrigger:1,getslctspt:1,newtabsloppyclick:1,chevroncheckmousemove:1,sharepreview:1,shareoutimage:1,sharefixreadnum:1,clickbackRSFlare:1,sharepreviewthumbnailid:1,shareencodefix:1,chatskip2content:1,fablogfix:1,clearuspreo:1},gpUrl:\"\\/fd\\/ls\\/GLinkPing.aspx?\",Salt:\"CfDJ8Inh5QCoSQBNls38F2rbEpTTJJvR7yNYFuD-MrxI17m8ZLQckE0pI1RLNuKlMsxDikgIIKPMOIzycVBrpSEvty59mA1ekqhd0cqNFrRs8YAeQRli8jAssPqqpGFSy5o-XZTxOHJfHCq6ykapfhRuRELOINifoW7pVsFehh9tVovMTzw1Exh_YJe_ikCv4dFPdQ\" }; _G.lsUrl=\"/fd/ls/l?IG=\"+_G.IG+\"&CID=\"+_G.CID ;curUrl=\"https:\\/\\/www.bing.com\\/search\";_G.EnableCompression=true;_G.XLSC=\"\\/web\\/xlsc.aspx\"; _G.XLS=\"\\/web\\/xls.aspx\"; _G.XLSM=\"\\/threshold\\/xls.aspx\";_G.XLSOvr=8;_G.XLSThrottle=1000; _G.DirectLogFlight=3; function directLog(d,g,f){if(typeof Log!==\"undefined\"&&Log&&Log.DirectLog){Log.DirectLog(d,g,f);}else{(new Image()).src=_G.lsUrl+\"&Type=Event.ClientInst&DATA=\"+d+\"&dl=1\";}}; _G.LSP = \"fd/ls/lsp.aspx?dlp=1\"; _G.DLP = 0;function si_T(a){var ig='';if(!(a.length>2&&a.substring(0,3)===\"IG=\")){ig='IG='+_G.IG;}if(document.images){_G.GPImg=new Image;_G.GPImg.src=_G.gpUrl+ig+'&CID='+_G.CID+'&'+a;}return true;}_G.BAT=\"0\";_G.NTT=\"600000\";_G.CTT=\"3000\";_G.BNFN=\"Default\";_G.LG=\"160\";_G.FilterFlareInterval=5;;_G.SID='34AC584FEDC8659801F54DB2EC8164BC';\n//]]></script><link rel=\"stylesheet\" href=\"/rp/4gs4qYWtRQySpnLwromSaeIo9gY.br.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"/rp/EmgqB0JtESmJGF-LsirI0ucZgRo.br.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"https://r.bing.com/rb/19/cir3,cc,nc/rgokWcKVN_PllLlIeW1I6GU2wmI.css?bu=EcsF4gVpaagLzgrdCGmOCv0JvwmcCoUKafwFaWk&or=w\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"https://r.bing.com/rb/19/cir3,cc,nc/JW_YXJDtlnep_xeka_SLDKGSgZ0.css?bu=DOsDVs4DvgLfAsYC1QNpigppqANp&or=w\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"https://r.bing.com/rb/19/cir3,cc,nc/mO0ZSdJr1HepgOm1FLGuEr4eSWA.css?bu=BGlpaWk&or=w\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"/rp/A0x-D6PMgkqy1_sM7Dj_eukrh14.br.css\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"https://r.bing.com/rs/6r/4f/cc,nc/AMXGnaW6DcZhCS1RFU6K_U6siV8.css?or=w\" type=\"text/css\"/><link rel=\"stylesheet\" href=\"https://r.bing.com/rb/5U/cir3,cc,nc/6UXQoTNgi2qsMowqcClm2W9pjqY.css?bu=AXU&or=w\" type=\"text/css\"/><link rel=\"stylesheet\"",
+        "https://archive.org/wayback/available?url=https://www.instagram.com/whatilove1728/": "{\"url\": \"https://www.instagram.com/whatilove1728/\", \"archived_snapshots\": {}}"
+      },
+      "cache_sources": [
+        {
+          "url": "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/",
+          "status_code": 200,
+          "response_size": 83577
+        },
+        {
+          "url": "https://www.google.com/search?q=site:instagram.com+whatilove1728",
+          "status_code": 200,
+          "response_size": 83453
+        },
+        {
+          "url": "https://www.bing.com/search?q=site:instagram.com+whatilove1728",
+          "status_code": 200,
+          "response_size": 56133
+        },
+        {
+          "url": "https://duckduckgo.com/?q=site:instagram.com+whatilove1728",
+          "status_code": 200,
+          "response_size": 6653
+        },
+        {
+          "url": "https://archive.org/wayback/available?url=https://www.instagram.com/whatilove1728/",
+          "status_code": 200,
+          "response_size": 77
+        },
+        {
+          "url": "https://yandex.com/search/?text=site:instagram.com+whatilove1728",
+          "status_code": 200,
+          "response_size": 13504
+        }
+      ],
+      "working_sources": [
+        "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/",
+        "https://www.google.com/search?q=site:instagram.com+whatilove1728",
+        "https://www.bing.com/search?q=site:instagram.com+whatilove1728",
+        "https://archive.org/wayback/available?url=https://www.instagram.com/whatilove1728/"
+      ]
+    },
+    {
+      "method": "Social Engineering + OSINT",
+      "success": false,
+      "data_extracted": {},
+      "platforms_checked": [
+        {
+          "platform": "YouTube",
+          "url": "https://youtube.com/c/whatilove1728",
+          "status_code": 404,
+          "response_size": 264,
+          "found": false
+        },
+        {
+          "platform": "TikTok",
+          "url": "https://tiktok.com/@whatilove1728",
+          "status_code": 200,
+          "response_size": 31795,
+          "found": false
+        },
+        {
+          "platform": "Twitter",
+          "url": "https://twitter.com/whatilove1728",
+          "status_code": 403,
+          "response_size": 0,
+          "found": false
+        },
+        {
+          "platform": "LinkedIn",
+          "url": "https://linkedin.com/in/whatilove1728",
+          "status_code": 999,
+          "response_size": 1530,
+          "found": false
+        },
+        {
+          "platform": "Facebook",
+          "url": "https://facebook.com/whatilove1728",
+          "status_code": 200,
+          "response_size": 18499,
+          "found": false
+        },
+        {
+          "platform": "GitHub",
+          "url": "https://github.com/whatilove1728",
+          "status_code": 404,
+          "response_size": 9,
+          "found": false
+        },
+        {
+          "platform": "Reddit",
+          "url": "https://reddit.com/u/whatilove1728",
+          "status_code": 403,
+          "response_size": 190240,
+          "found": false
+        },
+        {
+          "platform": "Snapchat",
+          "url": "https://snapchat.com/add/whatilove1728",
+          "status_code": 404,
+          "response_size": 2786,
+          "found": false
+        },
+        {
+          "platform": "Pinterest",
+          "url": "https://pinterest.com/whatilove1728",
+          "status_code": 200,
+          "response_size": 61431,
+          "found": false
+        },
+        {
+          "platform": "Tumblr",
+          "url": "https://whatilove1728.tumblr.com",
+          "status_code": 404,
+          "response_size": 1215,
+          "found": false
+        }
+      ],
+      "related_accounts": []
+    }
+  ],
+  "success_rate": 20.0,
+  "performance": {
+    "requests_made": 30,
+    "time_elapsed": 32.291132
+  }
+}

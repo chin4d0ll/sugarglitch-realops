@@ -1,0 +1,143 @@
+{
+  "analysis_date": "2025-05-26T02:56:28.973871",
+  "total_files": 19,
+  "small_files_count": 12,
+  "medium_files_count": 6,
+  "large_files_count": 1,
+  "file_details": [
+    {
+      "filename": "whatilove1728_extracted_20250526_025511_018_70f9b8d2.png",
+      "size_bytes": 5719,
+      "size_category": "Small (likely icon/thumbnail)",
+      "name_analysis": "Downloaded from URL",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_extracted_20250526_025511_018_70f9b8d2.png"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_011_squad_goals_001.jpg",
+      "size_bytes": 46,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Cached file (from previous extraction)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_011_squad_goals_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_004_our_moments_001.jpg",
+      "size_bytes": 49,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Cached file (from previous extraction)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_004_our_moments_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_000_pim_pool_001.jpg",
+      "size_bytes": 60,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Descriptive name (possibly real content)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_000_pim_pool_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_extracted_20250526_025500_012_05b3b261.png",
+      "size_bytes": 8903,
+      "size_category": "Small (likely icon/thumbnail)",
+      "name_analysis": "Downloaded from URL",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_extracted_20250526_025500_012_05b3b261.png"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_002_bella_outfit_001.jpg",
+      "size_bytes": 58,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Descriptive name (possibly real content)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_002_bella_outfit_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_009_amy_lifestyle_001.jpg",
+      "size_bytes": 48,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Descriptive name (possibly real content)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_009_amy_lifestyle_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_010_our_moments_001.jpg",
+      "size_bytes": 49,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Cached file (from previous extraction)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_010_our_moments_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_008_bella_outfit_001.jpg",
+      "size_bytes": 58,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Descriptive name (possibly real content)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_008_bella_outfit_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_007_bella_intimate_001.jpg",
+      "size_bytes": 50,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Descriptive name (possibly real content)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_007_bella_intimate_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_extracted_20250526_025505_015_89a4ac38.png",
+      "size_bytes": 10012,
+      "size_category": "Medium (possible real image/logo)",
+      "name_analysis": "Downloaded from URL",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_extracted_20250526_025505_015_89a4ac38.png"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_006_pim_pool_001.jpg",
+      "size_bytes": 60,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Descriptive name (possibly real content)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_006_pim_pool_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_003_amy_lifestyle_001.jpg",
+      "size_bytes": 48,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Descriptive name (possibly real content)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_003_amy_lifestyle_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_extracted_20250526_025509_017_5d1fcb0e.png",
+      "size_bytes": 530952,
+      "size_category": "Large (likely real image)",
+      "name_analysis": "Downloaded from URL",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_extracted_20250526_025509_017_5d1fcb0e.png"
+    },
+    {
+      "filename": "whatilove1728_extracted_20250526_025502_013_1a476ae0.png",
+      "size_bytes": 9855,
+      "size_category": "Small (likely icon/thumbnail)",
+      "name_analysis": "Downloaded from URL",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_extracted_20250526_025502_013_1a476ae0.png"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_001_bella_intimate_001.jpg",
+      "size_bytes": 50,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Descriptive name (possibly real content)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_001_bella_intimate_001.jpg"
+    },
+    {
+      "filename": "whatilove1728_extracted_20250526_025504_014_257f8c14.png",
+      "size_bytes": 1772,
+      "size_category": "Small (likely icon/thumbnail)",
+      "name_analysis": "Downloaded from URL",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_extracted_20250526_025504_014_257f8c14.png"
+    },
+    {
+      "filename": "whatilove1728_extracted_20250526_025507_016_7b8a4fc2.png",
+      "size_bytes": 3633,
+      "size_category": "Small (likely icon/thumbnail)",
+      "name_analysis": "Downloaded from URL",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_extracted_20250526_025507_016_7b8a4fc2.png"
+    },
+    {
+      "filename": "whatilove1728_cached_20250526_025458_005_squad_goals_001.jpg",
+      "size_bytes": 46,
+      "size_category": "Very Small (likely placeholder/icon)",
+      "name_analysis": "Cached file (from previous extraction)",
+      "file_path": "/workspaces/sugarglitch-realops/whatilove1728_extracted_images/found_images/whatilove1728_cached_20250526_025458_005_squad_goals_001.jpg"
+    }
+  ],
+  "conclusion": "Mixed content with some real images"
+}

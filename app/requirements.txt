@@ -1,0 +1,13 @@
+
+# OSINT/Data libraries
+requests
+beautifulsoup4
+psycopg2-binary
+pandas
+
+# เพิ่มไลบรารีสำหรับ OSINT/เว็บสแกน
+ # spiderfoot (ติดตั้งแยก)
+shodan
+instaloader
+selenium
+playwright

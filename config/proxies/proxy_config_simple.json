@@ -1,0 +1,34 @@
+{
+    "enabled": true,
+    "proxy_type": "free",
+    "free_proxies": [
+        {
+            "host": "proxy-server.scraperapi.com",
+            "port": "8001",
+            "username": "scraperapi",
+            "password": "demo_key"
+        },
+        {
+            "host": "154.16.146.47",
+            "port": "80",
+            "username": "",
+            "password": ""
+        },
+        {
+            "host": "103.149.162.194",
+            "port": "80",
+            "username": "",
+            "password": ""
+        }
+    ],
+    "rotation": {
+        "enabled": true,
+        "interval": 10,
+        "test_url": "https://httpbin.org/ip"
+    },
+    "settings": {
+        "timeout": 15,
+        "retry_attempts": 2,
+        "user_agent_rotation": true
+    }
+}

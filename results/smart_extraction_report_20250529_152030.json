@@ -1,0 +1,24 @@
+{
+  "timestamp": "20250529_152030",
+  "targets": [
+    "alx.trading",
+    "whatilove1728"
+  ],
+  "methods_tried": [],
+  "successful_extractions": {
+    "alx.trading": {
+      "username": "alx.trading",
+      "attempts": [],
+      "success": false
+    },
+    "whatilove1728": {
+      "username": "whatilove1728",
+      "attempts": [],
+      "success": false
+    }
+  },
+  "errors": [],
+  "success": false,
+  "session_recovered": true,
+  "success_rate": 0.0
+}
