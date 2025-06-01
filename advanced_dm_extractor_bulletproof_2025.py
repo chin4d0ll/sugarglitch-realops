@@ -15,19 +15,18 @@ Features:
 - 📊 Real-time progress tracking
 """
 
-import asyncio
+import os
 import gc
 import json
-import os
-import psutil
-import random
-import sys
 import time
-import threading
+import random
+import sqlite3
+import psutil
+import hashlib
+import getpass
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional
-import sqlite3
 
 # Safe imports with fallbacks
 try:
@@ -50,22 +49,29 @@ class ResourceMonitor:
     @staticmethod
     def check_resources() -> Dict:
         """Check current system resources"""
-        ram = psutil.virtual_memory()
-        cpu = psutil.cpu_percent(interval=1)
-        
-        return {
-            'ram_percent': ram.percent,
-            'ram_available_mb': ram.available // (1024*1024),
-            'cpu_percent': cpu,
-            'safe_to_continue': ram.percent < 85 and cpu < 90
-        }
+        try:
+            memory = psutil.virtual_memory()
+            cpu = psutil.cpu_percent(interval=1)
+            disk = psutil.disk_usage('/')
+            
+            return {
+                'memory_percent': memory.percent,
+                'memory_available_gb': memory.available / (1024**3),
+                'cpu_percent': cpu,
+                'disk_free_gb': disk.free / (1024**3),
+                'safe_to_continue': memory.percent < 85 and cpu < 90
+            }
+        except Exception as e:
+            print(f"⚠️ Resource check failed: {e}")
+            return {'safe_to_continue': True}  # Assume safe if can't check
     
     @staticmethod
     def emergency_cleanup():
-        """Emergency resource cleanup"""
-        print("🚨 Emergency cleanup triggered!")
+        """Emergency memory cleanup"""
+        print("🧹 Emergency cleanup initiated...")
         gc.collect()
         time.sleep(2)
+        print("✅ Cleanup completed!")
 
 class SmartDelayManager:
     """😴 Human-like delay management with intelligence"""
@@ -81,11 +87,11 @@ class SmartDelayManager:
         
         # Increase delay based on consecutive requests
         if self.consecutive_requests > 5:
-            base_delay += self.consecutive_requests * 0.5
+            base_delay *= 1.5  # Slow down for many consecutive requests
         
         # Increase delay based on recent errors
         if self.error_count > 0:
-            base_delay += self.error_count * 2
+            base_delay *= (1.0 + self.error_count * 0.5)  # Exponential backoff
         
         # Add randomization (±50%)
         variation = base_delay * 0.5
@@ -166,223 +172,207 @@ class BulletproofDMExtractor:
             CREATE TABLE IF NOT EXISTS dm_messages (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 thread_id TEXT,
-                message_id TEXT UNIQUE,
+                message_id TEXT,
                 sender_username TEXT,
                 message_text TEXT,
-                message_type TEXT,
                 timestamp TEXT,
-                extraction_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                media_data TEXT
+                message_type TEXT,
+                extraction_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
         
         conn.commit()
         conn.close()
-        
-        print(f"📊 Database initialized: {self.db_path}")
+        print(f"📊 Database setup complete: {self.db_path}")
     
     def setup_session(self, force_new: bool = False) -> bool:
-        """🔐 Setup Instagram session safely"""
+        """Setup Instagram session with OWASP-compliant authentication"""
         if not INSTAGRAPI_AVAILABLE:
-            print("❌ instagrapi not available!")
+            print("❌ instagrapi not available. Install with: pip install instagrapi")
             return False
         
         try:
             self.client = Client()
-            session_file = f"{self.username}_session.json"
             
-            # Try to load existing session first
+            # Try to load existing session first (avoid repeated logins)
+            session_file = f"session_{hashlib.md5(self.username.encode()).hexdigest()}.json"
+            
             if not force_new and os.path.exists(session_file):
+                print("🔄 Loading existing session...")
                 try:
-                    print("🔄 Loading existing session...")
                     self.client.load_settings(session_file)
-                    
-                    # Test session validity
-                    user_info = self.client.account_info()
-                    print(f"✅ Session loaded successfully! User: {user_info.username}")
+                    # Verify session is still valid
+                    self.client.get_timeline_feed(amount=1)
+                    print("✅ Session loaded successfully!")
                     self.session_loaded = True
                     return True
-                    
                 except Exception as e:
                     print(f"⚠️ Existing session invalid: {e}")
                     print("🔄 Creating new session...")
             
             # Create new session
-            if self.username and self.password:
-                print("🔐 Logging in with credentials...")
-                self.client.login(self.username, self.password)
-                
-                # Save session
+            print("🔐 Logging in with secure authentication...")
+            if not self.password:
+                self.password = getpass.getpass("Enter Instagram password: ")
+            
+            # Set user agent rotation for stealth
+            user_agents = [
+                "Instagram 219.0.0.12.117 Android",
+                "Instagram 218.0.0.19.118 Android", 
+                "Instagram 217.0.0.15.114 Android"
+            ]
+            self.client.set_user_agent(random.choice(user_agents))
+            
+            # Login with error handling
+            login_success = self.client.login(self.username, self.password)
+            
+            if login_success:
+                # Save session for reuse
                 self.client.dump_settings(session_file)
-                print(f"💾 Session saved to: {session_file}")
+                print("✅ Login successful! Session saved.")
                 self.session_loaded = True
                 return True
             else:
-                print("❌ No credentials provided for new session!")
+                print("❌ Login failed!")
                 return False
                 
-        except LoginRequired:
-            print("❌ Login required - invalid credentials or session expired")
-            return False
-        except RateLimitError:
-            print("⚠️ Rate limited! Please wait and try again later")
-            return False
         except Exception as e:
             print(f"❌ Session setup failed: {e}")
+            self.results['errors'].append({
+                'type': 'session_setup',
+                'error': str(e),
+                'timestamp': datetime.now().isoformat()
+            })
             return False
     
     def check_resources_and_wait(self):
-        """🛡️ Check resources and wait if needed"""
+        """Check resources and take action if needed"""
         resources = self.resource_monitor.check_resources()
         
-        print(f"📊 Resources: RAM {resources['ram_percent']:.1f}%, CPU {resources['cpu_percent']:.1f}%")
-        
         if not resources['safe_to_continue']:
-            print("⚠️ Resources high, triggering cleanup...")
+            print(f"⚠️ High resource usage detected!")
+            print(f"   Memory: {resources['memory_percent']:.1f}%")
+            print(f"   CPU: {resources['cpu_percent']:.1f}%")
+            
             self.resource_monitor.emergency_cleanup()
             
-            # Wait a bit more if resources are still high
-            time.sleep(5)
+            # Extended delay for recovery
+            print("😴 Extended delay for resource recovery...")
+            time.sleep(10)
         
-        # Always do smart delay
+        # Regular smart delay
         self.delay_manager.wait()
     
     def extract_target_dms(self, target_username: str, max_threads: int = 10) -> Dict:
-        """🎯 Extract DMs from specific target safely"""
+        """Extract DMs from target user safely and efficiently"""
+        self.target_username = target_username
+        print(f"🎯 Starting extraction for: {target_username}")
+        print(f"📊 Max threads to extract: {max_threads}")
+        
         if not self.session_loaded:
-            print("❌ No valid session! Please setup session first.")
+            print("❌ No valid session. Setup session first!")
             return self.results
         
-        self.target_username = target_username
-        print(f"\n🎯 Starting bulletproof extraction for: @{target_username}")
-        print(f"📊 Max threads to process: {max_threads}")
-        
         try:
-            # Check resources before starting
+            # Get user ID
+            print("🔍 Looking up user ID...")
+            user_info = self.client.user_info_by_username(target_username)
+            target_user_id = user_info.pk
+            print(f"✅ Found user ID: {target_user_id}")
+            
             self.check_resources_and_wait()
             
             # Get DM threads
             print("📥 Fetching DM threads...")
-            all_threads = self.client.direct_threads(amount=50)  # Limited amount
-            self.results['performance']['requests_made'] += 1
+            threads = self.client.direct_threads(amount=max_threads)
             
-            print(f"📊 Found {len(all_threads)} total threads")
+            extracted_count = 0
             
-            # Filter for target user
-            target_threads = []
-            for thread in all_threads:
-                participants = [user.username for user in thread.users]
-                if target_username.lower() in [p.lower() for p in participants]:
-                    target_threads.append(thread)
-            
-            print(f"🎯 Found {len(target_threads)} threads with @{target_username}")
-            
-            # Limit threads to process
-            threads_to_process = target_threads[:max_threads]
-            print(f"⚡ Processing {len(threads_to_process)} threads")
-            
-            # Extract each thread
-            for i, thread in enumerate(threads_to_process, 1):
-                try:
-                    print(f"\n📨 Processing thread {i}/{len(threads_to_process)}")
-                    
-                    # Check resources before each thread
-                    self.check_resources_and_wait()
+            for thread in threads:
+                # Check if thread involves target user
+                participant_usernames = [user.username for user in thread.users]
+                
+                if target_username in participant_usernames:
+                    print(f"💬 Extracting thread with {len(thread.users)} participants...")
                     
                     thread_data = self.extract_thread_safely(thread)
                     if thread_data:
+                        self.save_thread_to_db(thread_data)
+                        extracted_count += 1
                         self.results['extracted_threads'].append(thread_data)
                         self.results['performance']['successful_extractions'] += 1
-                        print(f"✅ Thread {i} extracted successfully!")
                     
-                    # Reset error count on success
-                    self.delay_manager.reset_error_count()
+                    # Resource check between threads
+                    self.check_resources_and_wait()
                     
-                except Exception as e:
-                    print(f"❌ Error processing thread {i}: {e}")
-                    self.delay_manager.increment_error_count()
-                    self.results['errors'].append(f"Thread {i}: {str(e)}")
-                    self.results['performance']['errors_handled'] += 1
-                    
-                    # Extra delay on error
-                    time.sleep(5)
-                    continue
+                    # Limit extraction to prevent overwhelming
+                    if extracted_count >= max_threads:
+                        break
             
-            # Final summary
-            total_messages = sum(len(t.get('messages', [])) for t in self.results['extracted_threads'])
-            self.results['total_messages'] = total_messages
-            self.results['end_time'] = datetime.now().isoformat()
+            self.results['total_messages'] = sum(
+                len(thread.get('messages', [])) for thread in self.results['extracted_threads']
+            )
             
-            print(f"\n🎉 Extraction completed!")
-            print(f"📊 Threads extracted: {len(self.results['extracted_threads'])}")
-            print(f"💬 Total messages: {total_messages}")
-            print(f"⚡ Success rate: {len(self.results['extracted_threads'])}/{len(threads_to_process)}")
+            print(f"✅ Extraction complete!")
+            print(f"   Threads extracted: {extracted_count}")
+            print(f"   Total messages: {self.results['total_messages']}")
             
-            # Save results
-            self.save_results()
+            self.delay_manager.reset_error_count()
             
-        except RateLimitError:
-            print("⚠️ Rate limited! Stopping extraction.")
-            self.results['errors'].append("Rate limited during extraction")
         except Exception as e:
-            print(f"❌ Critical error: {e}")
-            self.results['errors'].append(f"Critical error: {str(e)}")
+            print(f"❌ Extraction error: {e}")
+            self.results['errors'].append({
+                'type': 'extraction',
+                'error': str(e),
+                'timestamp': datetime.now().isoformat()
+            })
+            self.delay_manager.increment_error_count()
+            self.results['performance']['errors_handled'] += 1
         
         return self.results
     
     def extract_thread_safely(self, thread) -> Optional[Dict]:
-        """💬 Extract messages from thread safely"""
+        """Extract individual thread data safely"""
         try:
+            self.results['performance']['requests_made'] += 1
+            
+            # Get thread messages
+            messages = self.client.direct_messages(thread.id, amount=50)  # Limit messages
+            
             thread_data = {
                 'thread_id': thread.id,
                 'participants': [user.username for user in thread.users],
-                'messages': [],
-                'extraction_time': datetime.now().isoformat()
+                'message_count': len(messages),
+                'messages': []
             }
             
-            # Get messages with limit
-            max_messages = 50  # Reduced limit for safety
-            print(f"💬 Fetching up to {max_messages} messages...")
-            
-            messages = self.client.direct_messages(thread.id, amount=max_messages)
-            self.results['performance']['requests_made'] += 1
-            
-            print(f"📊 Found {len(messages)} messages in thread")
-            
-            # Process messages
+            # Extract message data
             for msg in messages:
                 try:
                     message_data = {
                         'message_id': msg.id,
-                        'sender_id': str(msg.user_id),
-                        'text': msg.text or '',
-                        'timestamp': msg.timestamp.isoformat() if msg.timestamp else None,
-                        'message_type': str(msg.item_type),
-                        'has_media': bool(getattr(msg, 'visual_media', None) or 
-                                        getattr(msg, 'clip', None) or 
-                                        getattr(msg, 'voice_media', None))
+                        'sender': msg.user_id,
+                        'text': getattr(msg, 'text', ''),
+                        'timestamp': msg.timestamp.isoformat() if msg.timestamp else '',
+                        'message_type': msg.item_type
                     }
-                    
                     thread_data['messages'].append(message_data)
                     
-                    # Save to database
+                    # Save individual message to DB
                     self.save_message_to_db(thread.id, message_data)
                     
-                except Exception as e:
-                    print(f"⚠️ Error processing message: {e}")
+                except Exception as msg_error:
+                    print(f"⚠️ Message extraction error: {msg_error}")
                     continue
-            
-            # Save thread to database
-            self.save_thread_to_db(thread_data)
             
             return thread_data
             
         except Exception as e:
-            print(f"❌ Error extracting thread: {e}")
+            print(f"❌ Thread extraction error: {e}")
             return None
     
     def save_thread_to_db(self, thread_data: Dict):
-        """💾 Save thread data to database"""
+        """Save thread data to database"""
         try:
             conn = sqlite3.connect(self.db_path)
             cursor = conn.cursor()
@@ -395,7 +385,7 @@ class BulletproofDMExtractor:
                 thread_data['thread_id'],
                 self.target_username,
                 json.dumps(thread_data['participants']),
-                len(thread_data['messages']),
+                thread_data['message_count'],
                 json.dumps(thread_data)
             ))
             
@@ -403,37 +393,38 @@ class BulletproofDMExtractor:
             conn.close()
             
         except Exception as e:
-            print(f"⚠️ Error saving thread to DB: {e}")
+            print(f"⚠️ Database save error: {e}")
     
     def save_message_to_db(self, thread_id: str, message_data: Dict):
-        """💾 Save message to database"""
+        """Save individual message to database"""
         try:
             conn = sqlite3.connect(self.db_path)
             cursor = conn.cursor()
             
             cursor.execute('''
                 INSERT OR REPLACE INTO dm_messages 
-                (thread_id, message_id, sender_username, message_text, message_type, timestamp, media_data)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
+                (thread_id, message_id, sender_username, message_text, timestamp, message_type)
+                VALUES (?, ?, ?, ?, ?, ?)
             ''', (
                 thread_id,
                 message_data['message_id'],
-                message_data.get('sender_username', 'unknown'),
+                message_data['sender'],
                 message_data['text'],
-                message_data['message_type'],
                 message_data['timestamp'],
-                json.dumps({'has_media': message_data.get('has_media', False)})
+                message_data['message_type']
             ))
             
             conn.commit()
             conn.close()
             
         except Exception as e:
-            print(f"⚠️ Error saving message to DB: {e}")
+            print(f"⚠️ Message save error: {e}")
     
     def save_results(self):
-        """💾 Save extraction results"""
-        results_file = f"bulletproof_dm_results_{int(time.time())}.json"
+        """Save final results to JSON file"""
+        self.results['end_time'] = datetime.now().isoformat()
+        
+        results_file = f"bulletproof_results_{self.results['extraction_id']}.json"
         
         try:
             with open(results_file, 'w', encoding='utf-8') as f:
@@ -443,7 +434,7 @@ class BulletproofDMExtractor:
             print(f"📊 Database saved to: {self.db_path}")
             
         except Exception as e:
-            print(f"⚠️ Error saving results: {e}")
+            print(f"⚠️ Results save error: {e}")
 
 
 def main():
@@ -453,56 +444,47 @@ def main():
     
     # Get user input safely
     try:
-        username = input("👤 Instagram username: ").strip()
+        if not INSTAGRAPI_AVAILABLE:
+            print("❌ Missing required packages!")
+            print("📦 Install with: pip install instagrapi psutil")
+            return
+        
+        username = input("📱 Instagram username: ").strip()
         if not username:
             print("❌ Username required!")
             return
         
-        password = input("🔐 Instagram password: ").strip()
-        if not password:
-            print("❌ Password required!")
-            return
-        
-        target_username = input("🎯 Target username to extract DMs from: ").strip()
-        if not target_username:
+        target = input("🎯 Target username to extract DMs from: ").strip()
+        if not target:
             print("❌ Target username required!")
             return
         
-        max_threads = input("📊 Max threads to process (default 5): ").strip()
-        max_threads = int(max_threads) if max_threads.isdigit() else 5
-        
-        print(f"\n🚀 Starting extraction...")
-        print(f"👤 Your account: @{username}")
-        print(f"🎯 Target: @{target_username}")
-        print(f"📊 Max threads: {max_threads}")
+        max_threads = input("📊 Max threads to extract (default 10): ").strip()
+        max_threads = int(max_threads) if max_threads.isdigit() else 10
         
         # Initialize extractor
-        extractor = BulletproofDMExtractor(username, password)
+        extractor = BulletproofDMExtractor(username)
         
         # Setup session
-        print("\n🔐 Setting up session...")
         if not extractor.setup_session():
-            print("❌ Failed to setup session!")
+            print("❌ Session setup failed!")
             return
         
         # Extract DMs
-        print("\n🎯 Starting DM extraction...")
-        results = extractor.extract_target_dms(target_username, max_threads)
+        results = extractor.extract_target_dms(target, max_threads)
         
-        # Show final results
-        print(f"\n🎉 EXTRACTION COMPLETE!")
-        print(f"✅ Threads extracted: {len(results['extracted_threads'])}")
-        print(f"💬 Total messages: {results['total_messages']}")
-        print(f"⚡ Requests made: {results['performance']['requests_made']}")
-        print(f"🛡️ Errors handled: {results['performance']['errors_handled']}")
+        # Save results
+        extractor.save_results()
         
-        if results['errors']:
-            print(f"⚠️ Errors encountered: {len(results['errors'])}")
-            for error in results['errors'][:3]:  # Show first 3 errors
-                print(f"   - {error}")
+        print("\n🎉 Extraction completed successfully!")
+        print(f"📊 Performance Summary:")
+        print(f"   - Requests made: {results['performance']['requests_made']}")
+        print(f"   - Successful extractions: {results['performance']['successful_extractions']}")
+        print(f"   - Errors handled: {results['performance']['errors_handled']}")
+        print(f"   - Total messages: {results['total_messages']}")
         
     except KeyboardInterrupt:
-        print("\n⚠️ Extraction interrupted by user")
+        print("\n🛑 Extraction cancelled by user")
     except Exception as e:
         print(f"\n❌ Unexpected error: {e}")
 

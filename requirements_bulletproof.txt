@@ -1,0 +1,43 @@
+# 🥷 BULLETPROOF DM EXTRACTOR 2025 - Requirements
+# Install with: pip install -r requirements_bulletproof.txt
+
+# Core Instagram API
+instagrapi>=1.19.0
+
+# System monitoring and resource management
+psutil>=5.9.0
+
+# HTTP requests and networking
+requests>=2.31.0
+
+# Data encryption and security
+cryptography>=41.0.0
+
+# Fake user agents for stealth
+fake-useragent>=1.4.0
+
+# Advanced data processing (optional)
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Database support
+sqlite3  # Built-in with Python
+
+# Security and logging
+logging  # Built-in with Python
+hashlib  # Built-in with Python
+getpass  # Built-in with Python
+
+# System utilities
+pathlib  # Built-in with Python
+typing   # Built-in with Python
+json     # Built-in with Python
+time     # Built-in with Python
+random   # Built-in with Python
+gc       # Built-in with Python
+os       # Built-in with Python
+re       # Built-in with Python
+
+# Optional: Enhanced security
+#pycryptodome>=3.18.0
+#scapy>=2.5.0
