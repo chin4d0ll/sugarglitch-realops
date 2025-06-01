@@ -13,7 +13,7 @@ from datetime import datetime
 
 # Import our arsenal modules
 from ninja_ultimate_tor_integration_2025 import UltimateTorIntegration
-from advanced_tor_circuit_control_2025 import AdvancedTorControl
+from advanced_tor_circuit_control_2025 import AdvancedTorController
 from ninja_proxy_rotation_2025 import ProxyHarvester
 from target_execution_system_2025 import (
     MultiSessionPool, 
@@ -45,7 +45,7 @@ class AutomatedTargetExecutor:
         await tor_integration.initialize()
         
         # Advanced TOR Control
-        tor_control = AdvancedTorControl()
+        tor_control = AdvancedTorController()
         await tor_control.initialize()
         
         if tor_integration.is_active:
