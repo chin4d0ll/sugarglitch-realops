@@ -999,34 +999,45 @@ class AdvancedInstagramDMExtractor:
                 if 'image_versions2' in media_data:
                     for candidate in media_data['image_versions2'].get('candidates', []):
                         media_urls.append(candidate.get('url', ''))
-                        
+                
                 if 'video_versions' in media_data:
-                    for version in media_data.get('video_versions', []):
-                        media_urls.append(version.get('url', ''))
+                    for video in media_data.get('video_versions', []):
+                        media_urls.append(video.get('url', ''))
                         
             elif message_type == 'link':
                 link_data = item_data.get('link', {})
                 content = link_data.get('text', '')
+                media_urls = [link_data.get('url', '')]
                 
-            elif message_type == 'action_log':
-                content = item_data.get('action_log', {}).get('description', '')
+            elif message_type == 'voice_media':
+                voice_data = item_data.get('voice_media', {})
+                content = '[Voice Message]'
+                media_urls = [voice_data.get('media', {}).get('audio', {}).get('audio_src', '')]
+                
+            elif message_type == 'reel_share':
+                reel_data = item_data.get('reel_share', {})
+                content = f"[Shared Reel: {reel_data.get('text', '')}]"
+                media = reel_data.get('media', {})
+                if 'image_versions2' in media:
+                    for candidate in media['image_versions2'].get('candidates', []):
+                        media_urls.append(candidate.get('url', ''))
             
             # Parse reactions
             reactions = []
             for reaction in item_data.get('reactions', {}).get('emojis', []):
                 reactions.append({
                     'emoji': reaction.get('emoji', ''),
-                    'user_id': reaction.get('sender_id', ''),
+                    'sender_id': reaction.get('sender_id', ''),
                     'timestamp': reaction.get('timestamp', 0)
                 })
             
             # Parse additional metadata
-            is_seen = item_data.get('seen', {}).get('count', 0) > 0
-            reply_to = item_data.get('replied_to_message', {}).get('item_id', None)
-            forwarded_from = item_data.get('forwarded_from_user', {}).get('username', None)
+            is_seen = len(item_data.get('seen_user_ids', [])) > 0
+            reply_to = item_data.get('replied_to_message', {}).get('item_id')
+            forwarded_from = item_data.get('forwarded_from_user', {}).get('username')
             
-            # Get username (might need additional lookup)
-            username = 'unknown'  # TODO: Implement username lookup
+            # Get username (might need to lookup from participants)
+            username = 'unknown'
             
             # Create DMMessage object
             dm_message = DMMessage(
@@ -1072,49 +1083,57 @@ class AdvancedInstagramDMExtractor:
         messages = []
         cursor = None
         page_count = 0
+        max_pages = 100  # Limit to prevent infinite loops
         
         try:
-            while page_count < 100:  # Prevent infinite loops
-                page_count += 1
+            while page_count < max_pages:
+                await self.advanced_rate_limiter('dm_messages')
                 
-                # Build thread URL with pagination
+                # Build thread items URL
                 thread_url = INSTAGRAM_DM_ENDPOINTS_2025['dm_thread_items'].format(thread_id=thread_id)
                 if cursor:
                     thread_url += f"?cursor={cursor}"
                 
-                self.advanced_print(f"📄 Loading messages page {page_count}", "STEALTH", "📃")
-                await self.advanced_rate_limiter('dm_messages')
+                self.advanced_print(f"📥 Fetching messages page {page_count + 1} for thread {thread_id[:10]}...", "HACK", "📄")
                 
                 async with session.get(thread_url) as response:
-                    if response.status == 200:
-                        thread_data = await response.json()
-                        
-                        # Extract messages
-                        items = thread_data.get('items', [])
-                        
-                        for item in items:
-                            message = await self.parse_dm_message_advanced(item, thread_id)
-                            if message:
-                                messages.append(message)
-                        
-                        # Check pagination
-                        pagination = thread_data.get('pagination_token')
-                        if pagination and len(items) > 0:
-                            cursor = pagination
-                        else:
-                            break
-                            
-                    elif response.status == 429:
-                        self.advanced_print("⚠️ Rate limited on message extraction", "WARNING", "⏰")
-                        await asyncio.sleep(random.uniform(15, 30))
-                        continue
-                        
-                    else:
-                        self.advanced_print(f"❌ Message extraction failed: {response.status}", "ERROR", "💔")
+                    self.extraction_results['performance_metrics']['requests_made'] += 1
+                    
+                    if response.status != 200:
+                        self.advanced_print(f"❌ Thread request failed: {response.status}", "ERROR", "💔")
                         break
+                    
+                    data = await response.json()
+                    
+                    # Check for success
+                    if data.get('status') != 'ok':
+                        self.advanced_print(f"❌ Thread API error: {data.get('message', 'Unknown error')}", "ERROR", "💔")
+                        break
+                    
+                    # Extract messages from response
+                    thread_data = data.get('thread', {})
+                    items_data = thread_data.get('items', [])
+                    
+                    self.advanced_print(f"🔍 Found {len(items_data)} messages in page {page_count + 1}", "INFO", "📊")
+                    
+                    # Parse each message
+                    for item_data in items_data:
+                        message = await self.parse_dm_message_advanced(item_data, thread_id)
+                        if message:
+                            messages.append(message)
+                    
+                    # Check for more pages
+                    has_more = thread_data.get('has_more', False)
+                    cursor = thread_data.get('next_cursor')
+                    
+                    if not has_more or not cursor:
+                        self.advanced_print(f"✅ Reached end of thread {thread_id[:10]}...", "SUCCESS", "🏁")
+                        break
+                    
+                    page_count += 1
         
         except Exception as e:
-            self.advanced_print(f"❌ Thread message extraction error: {e}", "ERROR", "💔")
+            self.advanced_print(f"💥 Thread extraction error: {e}", "ERROR", "💔")
         
         self.advanced_print(f"✅ Thread {thread_id[:10]}... complete: {len(messages)} messages", "SUCCESS", "💎")
         return messages
@@ -1132,10 +1151,14 @@ class AdvancedInstagramDMExtractor:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
             
+            extraction_timestamp = datetime.now().isoformat()
+            
             for thread in threads:
                 # Save thread data
                 cursor.execute('''
-                    INSERT OR REPLACE INTO dm_threads VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                    INSERT OR REPLACE INTO dm_threads 
+                    (thread_id, thread_type, participants, last_activity, message_count, unread_count, thread_title, extraction_timestamp)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
                     thread.thread_id,
                     thread.thread_type,
@@ -1144,13 +1167,16 @@ class AdvancedInstagramDMExtractor:
                     thread.message_count,
                     thread.unread_count,
                     thread.thread_title,
-                    datetime.now().isoformat()
+                    extraction_timestamp
                 ))
                 
                 # Save messages
                 for message in thread.messages:
                     cursor.execute('''
-                        INSERT OR REPLACE INTO dm_messages VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                        INSERT OR REPLACE INTO dm_messages 
+                        (message_id, thread_id, user_id, username, timestamp, message_type, content, 
+                         media_urls, reactions, is_seen, reply_to, forwarded_from, extraction_timestamp)
+                        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
                     ''', (
                         message.message_id,
                         message.thread_id,
@@ -1164,27 +1190,29 @@ class AdvancedInstagramDMExtractor:
                         message.is_seen,
                         message.reply_to,
                         message.forwarded_from,
-                        datetime.now().isoformat()
+                        extraction_timestamp
                     ))
             
-            # Save session info
+            # Save extraction session info
             cursor.execute('''
-                INSERT INTO extraction_sessions VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO extraction_sessions 
+                (session_id, target_username, start_time, end_time, threads_extracted, messages_extracted, success_rate, notes)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
                 self.extraction_results['scan_id'],
-                self.target_username,
+                self.target_username or 'Multiple targets',
                 self.extraction_results['start_time'],
                 datetime.now().isoformat(),
                 len(threads),
-                sum(len(t.messages) for t in threads),
+                sum(len(thread.messages) for thread in threads),
                 self.extraction_results['performance_metrics']['success_rate'],
-                'Advanced DM extraction completed'
+                f"Advanced extraction completed - {len(threads)} threads, {sum(len(thread.messages) for thread in threads)} messages"
             ))
             
             conn.commit()
             conn.close()
             
-            self.advanced_print(f"✅ Database save complete: {len(threads)} threads, {sum(len(t.messages) for t in threads)} messages", "SUCCESS", "💾")
+            self.advanced_print(f"✅ Successfully saved {len(threads)} threads to database", "SUCCESS", "💾")
             
         except Exception as e:
             self.advanced_print(f"❌ Database save error: {e}", "ERROR", "💔")
@@ -1213,6 +1241,27 @@ class AdvancedInstagramDMExtractor:
             'success_rate': (len(threads) / max(len(threads), 1)) * 100
         })
         
+        # Analyze message types
+        message_types = {}
+        participants_analysis = {}
+        timeline_analysis = {'first_message': None, 'last_message': None}
+        
+        for thread in threads:
+            for message in thread.messages:
+                # Count message types
+                msg_type = message.message_type
+                message_types[msg_type] = message_types.get(msg_type, 0) + 1
+                
+                # Count participants
+                username = message.username
+                participants_analysis[username] = participants_analysis.get(username, 0) + 1
+                
+                # Timeline analysis
+                if not timeline_analysis['first_message'] or message.timestamp < timeline_analysis['first_message']:
+                    timeline_analysis['first_message'] = message.timestamp
+                if not timeline_analysis['last_message'] or message.timestamp > timeline_analysis['last_message']:
+                    timeline_analysis['last_message'] = message.timestamp
+        
         report = f"""
 💀🔥 ADVANCED INSTAGRAM DM EXTRACTION REPORT 2025 🔥💀
 {'='*80}
@@ -1236,41 +1285,36 @@ Success Rate: {self.extraction_results['performance_metrics']['success_rate']:.1
         
         # Analyze threads
         if threads:
-            # Thread type analysis
             thread_types = {}
+            unread_analysis = {'total_unread': 0, 'threads_with_unread': 0}
+            
             for thread in threads:
-                thread_type = thread.thread_type
-                thread_types[thread_type] = thread_types.get(thread_type, 0) + 1
+                # Thread type analysis
+                thread_types[thread.thread_type] = thread_types.get(thread.thread_type, 0) + 1
+                
+                # Unread analysis
+                if thread.unread_count > 0:
+                    unread_analysis['threads_with_unread'] += 1
+                    unread_analysis['total_unread'] += thread.unread_count
             
-            report += "Thread Types:\n"
-            for t_type, count in thread_types.items():
-                report += f"  • {t_type}: {count} threads\n"
+            for thread_type, count in thread_types.items():
+                report += f"  {thread_type.title()} Threads: {count}\n"
             
-            # Participant analysis
-            unique_participants = set()
-            for thread in threads:
-                for participant in thread.participants:
-                    unique_participants.add(participant['username'])
-            
-            report += f"\nUnique Participants: {len(unique_participants)}\n"
-            
-            # Message type analysis
-            message_types = {}
-            for thread in threads:
-                for message in thread.messages:
-                    msg_type = message.message_type
-                    message_types[msg_type] = message_types.get(msg_type, 0) + 1
-            
-            report += "\nMessage Types:\n"
+            report += f"\n💬 MESSAGE ANALYSIS\n"
             for msg_type, count in message_types.items():
-                report += f"  • {msg_type}: {count} messages\n"
+                report += f"  {msg_type.title()} Messages: {count}\n"
             
-            # Top active threads
-            active_threads = sorted(threads, key=lambda t: len(t.messages), reverse=True)[:5]
-            report += "\nTop Active Threads:\n"
-            for i, thread in enumerate(active_threads, 1):
-                participant_names = [p['username'] for p in thread.participants[:3]]
-                report += f"  {i}. {', '.join(participant_names)}: {len(thread.messages)} messages\n"
+            report += f"\n👥 PARTICIPANT ANALYSIS\n"
+            sorted_participants = sorted(participants_analysis.items(), key=lambda x: x[1], reverse=True)
+            for username, count in sorted_participants[:10]:  # Top 10
+                report += f"  @{username}: {count} messages\n"
+            
+            if timeline_analysis['first_message'] and timeline_analysis['last_message']:
+                time_span = timeline_analysis['last_message'] - timeline_analysis['first_message']
+                report += f"\n📅 TIMELINE ANALYSIS\n"
+                report += f"  First Message: {timeline_analysis['first_message'].strftime('%Y-%m-%d %H:%M:%S')}\n"
+                report += f"  Last Message: {timeline_analysis['last_message'].strftime('%Y-%m-%d %H:%M:%S')}\n"
+                report += f"  Time Span: {time_span.days} days, {time_span.seconds//3600} hours\n"
         
         report += f"""
 🔥 PERFORMANCE METRICS
@@ -1325,101 +1369,86 @@ Cleanup: Automatic temporary data removal
         self.advanced_print(f"🎯 Target Authentication: {username}", "INFO", "🎯")
         
         try:
-            # Step 0: Ethical Compliance Verification
-            self.advanced_print("🛡️ Step 0: Ethical Compliance Verification", "CRITICAL", "🔒")
-            
+            # Step 1: Ethical compliance check
             if not self.compliance_checker.verify_authorized_usage(username, self.target_username or username):
-                self.advanced_print("❌ Ethical compliance verification failed", "CRITICAL", "🚫")
-                return {'success': False, 'error': 'Ethical compliance verification failed'}
+                return {
+                    'success': False,
+                    'error': 'Ethical compliance check failed',
+                    'threads': [],
+                    'report': ''
+                }
             
-            self.compliance_checker.log_usage("DM_EXTRACTION_START", f"User: {username}, Target: {self.target_username}")
-            
-            # Step 1: Advanced Authentication
-            self.advanced_print("🔐 Step 1: Advanced Authentication", "HACK", "👻")
+            # Step 2: Advanced authentication
+            self.advanced_print("🔐 Performing advanced authentication", "HACK", "🚀")
             auth_result = await self.advanced_instagram_authentication(username, password)
             
-            if not auth_result['success']:
-                self.advanced_print(f"❌ Authentication failed: {auth_result.get('error', 'Unknown error')}", "ERROR", "💔")
-                return {'success': False, 'error': 'Authentication failed'}
+            if not auth_result.get('success'):
+                return {
+                    'success': False,
+                    'error': f"Authentication failed: {auth_result.get('error')}",
+                    'threads': [],
+                    'report': ''
+                }
             
-            # Get authenticated session
+            # Step 3: Extract DM inbox
             session = self.authenticated_sessions.get(username)
             if not session:
-                self.advanced_print("❌ No authenticated session available", "ERROR", "💔")
-                return {'success': False, 'error': 'No authenticated session'}
+                return {
+                    'success': False,
+                    'error': 'No authenticated session available',
+                    'threads': [],
+                    'report': ''
+                }
             
-            # Step 2: Extract DM Inbox
-            self.advanced_print("📱 Step 2: Advanced DM Inbox Extraction", "HACK", "💎")
+            self.advanced_print("📥 Extracting DM inbox with advanced techniques", "HACK", "💎")
             dm_threads = await self.extract_dm_inbox_advanced(session)
             
-            if not dm_threads:
-                self.advanced_print("⚠️ No DM threads found", "WARNING", "😢")
-                return {'success': False, 'error': 'No DM threads found'}
+            # Step 4: Extract detailed messages for each thread
+            self.advanced_print("💬 Extracting detailed messages from all threads", "HACK", "📱")
             
-            # Step 3: Extract Detailed Messages (for selected threads)
-            self.advanced_print("💬 Step 3: Detailed Message Extraction", "HACK", "🔥")
-            
-            # Extract messages for top threads (limit for performance)
-            top_threads = sorted(dm_threads, key=lambda t: t.message_count, reverse=True)[:10]
-            
-            for thread in top_threads:
-                self.advanced_print(f"📱 Processing thread: {thread.thread_id[:10]}...", "STEALTH", "💎")
+            detailed_threads = []
+            for thread in dm_threads:
+                # Get detailed messages for this thread
                 detailed_messages = await self.extract_thread_messages_detailed(session, thread.thread_id)
-                thread.messages = detailed_messages
                 
-                # Update extraction results
-                self.extraction_results['threads_extracted'].append(asdict(thread))
-                self.extraction_results['messages_extracted'].extend([asdict(msg) for msg in detailed_messages])
+                # Update thread with detailed messages
+                thread.messages = detailed_messages
+                detailed_threads.append(thread)
+                
+                # Safety check - don't extract too many threads at once
+                if len(detailed_threads) >= 50:  # Limit for safety
+                    self.advanced_print("⚠️ Reached thread extraction limit for safety", "WARNING", "🛡️")
+                    break
             
-            # Step 4: Save to Database
-            self.advanced_print("💾 Step 4: Advanced Database Storage", "INFO", "🗄️")
-            await self.save_to_database_advanced(top_threads)
+            # Step 5: Save to database
+            await self.save_to_database_advanced(detailed_threads)
             
-            # Step 5: Generate Report
-            self.advanced_print("📊 Step 5: Advanced Report Generation", "INFO", "📋")
-            report = await self.generate_advanced_report(top_threads)
+            # Step 6: Generate comprehensive report
+            self.advanced_print("📊 Generating advanced analysis report", "INFO", "📋")
+            report = await self.generate_advanced_report(detailed_threads)
             
-            # Save reports
-            timestamp = int(time.time())
-            
-            # JSON Report
-            json_file = Path(f"advanced_dm_extraction_{username}_{timestamp}.json")
-            with open(json_file, 'w', encoding='utf-8') as f:
-                json.dump({
-                    'extraction_results': self.extraction_results,
-                    'threads': [asdict(thread) for thread in top_threads]
-                }, f, indent=2, default=str)
-            
-            # Text Report
-            txt_file = Path(f"advanced_dm_report_{username}_{timestamp}.txt")
-            with open(txt_file, 'w', encoding='utf-8') as f:
-                f.write(report)
-            
-            self.advanced_print(f"📊 Reports saved: {json_file.name}, {txt_file.name}", "SUCCESS", "💾")
-            self.advanced_print("🎉 Advanced Instagram DM Extraction Complete!", "SUCCESS", "🔥")
-            
-            # Display report
-            print(report)
-            
-            # Cleanup
+            # Step 7: Cleanup sessions
             await session.close()
+            
+            self.advanced_print("🎉 Advanced DM extraction completed successfully!", "SUCCESS", "✨")
             
             return {
                 'success': True,
-                'threads_extracted': len(top_threads),
-                'messages_extracted': sum(len(t.messages) for t in top_threads),
-                'extraction_results': self.extraction_results,
+                'threads': detailed_threads,
                 'report': report,
-                'files': {
-                    'json': str(json_file),
-                    'txt': str(txt_file),
-                    'database': self.db_file
-                }
+                'database_file': self.db_file,
+                'performance_metrics': self.extraction_results['performance_metrics'],
+                'scan_id': self.extraction_results['scan_id']
             }
             
         except Exception as e:
-            self.advanced_print(f"❌ Advanced extraction failed: {e}", "ERROR", "💔")
-            return {'success': False, 'error': str(e)}
+            self.advanced_print(f"💥 Critical extraction error: {e}", "CRITICAL", "💀")
+            return {
+                'success': False,
+                'error': str(e),
+                'threads': [],
+                'report': ''
+            }
 
 # === ETHICAL COMPLIANCE SYSTEM ===
 class EthicalComplianceChecker:
@@ -1870,17 +1899,7 @@ def main():
                     
                     if username and password:
                         extractor = AdvancedInstagramDMExtractor(target)
-                        # สำหรับ demo, เราจะแสดงการจำลอง
-                        print("\n🔥 Starting Advanced DM Extraction...")
-                        print("⚡ Initializing stealth mode...")
-                        print("🔐 Attempting authentication...")
-                        print("📱 Scanning DM inbox...")
-                        print("💎 Processing messages...")
-                        print("\n✅ DEMO MODE - Extraction simulation complete!")
-                        print("🎯 Found: 15 DM threads")
-                        print("💬 Extracted: 247 messages")
-                        print("📊 Analysis: 5 high-priority conversations")
-                        print("🔒 All data encrypted and stored securely")
+                        asyncio.run(extractor.execute_advanced_dm_extraction(username, password))
                     else:
                         print("❌ Username and password required")
                 
@@ -1888,6 +1907,8 @@ def main():
                 print("\n🕵️ DM RECONNAISSANCE MODE")
                 print("💡 This mode attempts DM discovery without authentication")
                 target = input("🎯 Target username: ").strip()
+                
+
                 
                 if target:
                     print(f"\n🔍 Starting reconnaissance for @{target}...")
