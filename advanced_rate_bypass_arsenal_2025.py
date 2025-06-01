@@ -28,6 +28,11 @@ from datetime import datetime, timedelta
 class UltimateRateLimitDestroyer:
     def validate_proxies(self, test_url="https://httpbin.org/ip", timeout=8, max_proxies=30):
         """Validate proxies by connecting to a test endpoint. Returns only working proxies."""
+        # Skip validation for direct connection
+        if self.working_proxies == ["direct"]:
+            print(f"[TON AUTH] Skipping proxy validation for direct connection")
+            return ["direct"]
+            
         print(f"[TON AUTH] Validating up to {max_proxies} proxies...")
         import concurrent.futures
         working = []
