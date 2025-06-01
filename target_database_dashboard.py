@@ -168,8 +168,9 @@ class TargetDatabaseDashboard:
                 )
                 
                 # Execute bypass operation
-                profile_data = await self.bypass_system.ultimate_bypass(
-                    f"https://www.instagram.com/{target['username']}/"
+                profile_data = await self.bypass_system.ultimate_bypass_request(
+                    f"https://www.instagram.com/{target['username']}/",
+                    target['username']
                 )
                 
                 if profile_data and isinstance(profile_data, dict):
@@ -262,18 +263,18 @@ class TargetDatabaseDashboard:
         
         # Recent operations
         cursor.execute("""
-            SELECT o.operation_type, t.username, o.status, o.created_at
+            SELECT o.operation_type, t.username, o.status, o.updated_at
             FROM operations o
             JOIN targets t ON o.target_id = t.id
-            ORDER BY o.created_at DESC
+            ORDER BY o.updated_at DESC
             LIMIT 10
         """)
         
         recent_ops = cursor.fetchall()
         if recent_ops:
             report.append("🕒 RECENT OPERATIONS:")
-            for op_type, username, status, created_at in recent_ops:
-                report.append(f"  • {op_type} on @{username} - {status} ({created_at})")
+            for op_type, username, status, updated_at in recent_ops:
+                report.append(f"  • {op_type} on @{username} - {status} ({updated_at})")
         report.append("")
         
         # Top targets by operations
