@@ -44,11 +44,8 @@ class TargetDatabaseBrowser:
         targets = []
         for row in cursor.fetchall():
             target = dict(row)
-            if target['metadata']:
-                try:
-                    target['metadata'] = json.loads(target['metadata'])
-                except:
-                    target['metadata'] = {}
+            # No metadata column in current schema
+            target['metadata'] = {}
             targets.append(target)
             
         return targets
@@ -60,11 +57,11 @@ class TargetDatabaseBrowser:
             
         cursor = self.conn.cursor()
         cursor.execute("""
-            SELECT id, username, priority, status, followers, posts,
-                   created_at, last_updated, metadata
+            SELECT id, username, priority, status, follower_count, post_count,
+                   created_at, updated_at, full_name, biography
             FROM targets 
             WHERE username LIKE ?
-            ORDER BY priority DESC, followers DESC NULLS LAST
+            ORDER BY priority DESC, follower_count DESC NULLS LAST
         """, (f"%{username}%",))
         
         targets = []
