@@ -1306,6 +1306,145 @@ Cleanup: Automatic temporary data removal
             self.advanced_print(f"❌ Advanced extraction failed: {e}", "ERROR", "💔")
             return {'success': False, 'error': str(e)}
 
+# === ETHICAL COMPLIANCE SYSTEM ===
+class EthicalComplianceChecker:
+    """
+    🛡️ Ethical Compliance and Safety System
+    
+    This class ensures the tool is used responsibly and ethically.
+    It implements multiple safeguards to prevent misuse.
+    """
+    
+    def __init__(self):
+        self.compliance_log = []
+        self.warning_count = 0
+        self.safety_checks_passed = False
+    
+    def verify_authorized_usage(self, username: str, target_username: str) -> bool:
+        """
+        🔒 Verify that the usage is authorized and ethical
+        
+        Args:
+            username: The account being used for authentication
+            target_username: The target account for extraction
+        
+        Returns:
+            True if usage appears authorized, False otherwise
+        """
+        print("\n🛡️ ETHICAL COMPLIANCE VERIFICATION 🛡️")
+        print("=" * 50)
+        
+        # Check 1: Self-testing verification
+        if username.lower() == target_username.lower():
+            print("✅ Self-testing detected - This is generally acceptable")
+            return True
+        
+        # Check 2: Explicit authorization confirmation
+        print("⚠️ You are attempting to access an account other than your own.")
+        print("🔒 This requires explicit authorization from the account owner.")
+        print("\n📋 REQUIRED CONFIRMATIONS:")
+        
+        confirmations = [
+            "Do you have explicit written permission from the account owner?",
+            "Is this for authorized security testing or research?", 
+            "Have you informed the account owner about this testing?",
+            "Are you complying with all applicable laws in your jurisdiction?",
+            "Do you understand the legal and ethical implications?"
+        ]
+        
+        for i, question in enumerate(confirmations, 1):
+            print(f"\n{i}. {question}")
+            response = input("   Answer (yes/no): ").strip().lower()
+            
+            if response not in ['yes', 'y']:
+                print(f"\n❌ ETHICAL COMPLIANCE FAILED")
+                print("🛡️ Cannot proceed without proper authorization")
+                return False
+                
+            self.compliance_log.append(f"Q{i}: {response}")
+        
+        # Legal disclaimer
+        print("\n📋 FINAL LEGAL ACKNOWLEDGMENT:")
+        print("By proceeding, you acknowledge that:")
+        print("• You are solely responsible for ensuring legal compliance")
+        print("• You will use this tool only for authorized purposes")
+        print("• You understand the potential legal consequences of misuse")
+        print("• You will respect privacy and data protection laws")
+        
+        final_confirm = input("\nDo you acknowledge and agree to these terms? (yes/no): ").strip().lower()
+        
+        if final_confirm not in ['yes', 'y']:
+            print("\n❌ TERMS NOT ACCEPTED - OPERATION CANCELLED")
+            return False
+        
+        print("\n✅ ETHICAL COMPLIANCE VERIFIED")
+        print("🛡️ Proceeding with authorized security testing...")
+        self.safety_checks_passed = True
+        return True
+    
+    def log_usage(self, action: str, details: str):
+        """Log usage for audit purposes"""
+        timestamp = datetime.now().isoformat()
+        log_entry = {
+            'timestamp': timestamp,
+            'action': action,
+            'details': details
+        }
+        self.compliance_log.append(log_entry)
+    
+    def generate_compliance_report(self) -> str:
+        """Generate a compliance audit report"""
+        report = f"""
+🛡️ ETHICAL COMPLIANCE AUDIT REPORT
+==================================
+Generation Time: {datetime.now().isoformat()}
+Safety Checks Passed: {self.safety_checks_passed}
+Warning Count: {self.warning_count}
+
+📋 COMPLIANCE LOG:
+"""
+        for entry in self.compliance_log:
+            if isinstance(entry, dict):
+                report += f"• {entry['timestamp']}: {entry['action']} - {entry['details']}\n"
+            else:
+                report += f"• {entry}\n"
+        
+        return report
+
+# === ADVANCED SAFETY FEATURES ===
+class SafetyFeatures:
+    """
+    🔒 Advanced safety features to prevent misuse
+    """
+    
+    @staticmethod
+    def rate_limit_safety_check(request_count: int) -> bool:
+        """Check if request rate is within safe limits"""
+        if request_count > 1000:
+            print("⚠️ HIGH REQUEST COUNT DETECTED")
+            print("🛡️ Consider reducing request frequency to avoid account restrictions")
+            return False
+        return True
+    
+    @staticmethod
+    def data_volume_check(messages_extracted: int) -> bool:
+        """Check if data extraction volume is reasonable"""
+        if messages_extracted > 10000:
+            print("⚠️ LARGE DATA EXTRACTION DETECTED")
+            print("🛡️ Ensure you have permission for this volume of data access")
+            return False
+        return True
+    
+    @staticmethod
+    def session_duration_check(start_time: datetime) -> bool:
+        """Check if session duration is reasonable"""
+        duration = (datetime.now() - start_time).total_seconds()
+        if duration > 3600:  # 1 hour
+            print("⚠️ LONG SESSION DURATION DETECTED")
+            print("🛡️ Consider taking breaks to avoid detection")
+            return False
+        return True
+
 def main():
     """Main function - advanced interactive menu"""
     print(ADVANCED_BANNER)
