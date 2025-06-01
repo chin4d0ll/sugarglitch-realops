@@ -189,15 +189,15 @@ class DataExporter:
         cursor = conn.cursor()
         
         # Get all threads
-        cursor.execute("SELECT thread_id, participants, thread_name FROM dm_threads")
+        cursor.execute("SELECT thread_id, participants, thread_title FROM dm_threads")
         threads = cursor.fetchall()
         
         conversation_files = []
         
-        for thread_id, participants, thread_name in threads:
+        for thread_id, participants, thread_title in threads:
             # Get messages for this thread
             cursor.execute("""
-                SELECT sender_username, content, timestamp, message_type 
+                SELECT username, content, timestamp, message_type 
                 FROM dm_messages 
                 WHERE thread_id = ? 
                 ORDER BY timestamp
@@ -211,7 +211,7 @@ class DataExporter:
                     'thread_info': {
                         'thread_id': thread_id,
                         'participants': participants,
-                        'thread_name': thread_name,
+                        'thread_title': thread_title,
                         'message_count': len(messages)
                     },
                     'messages': [
