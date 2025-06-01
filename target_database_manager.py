@@ -265,7 +265,7 @@ class TargetDatabaseManager:
         
         cursor.execute('''
             UPDATE operations 
-            SET status = ?, result = ?, updated_at = CURRENT_TIMESTAMP
+            SET status = ?, result_data = ?, completed_at = CURRENT_TIMESTAMP
             WHERE id = ?
         ''', (status, result_json, operation_id))
         
