@@ -1,0 +1,5 @@
+{
+  "name": "Advanced DM Database 1 - Direct",
+  "driver": "SQLite",
+  "connectString": "advanced_dm_database_1748742706.sqlite"
+}
