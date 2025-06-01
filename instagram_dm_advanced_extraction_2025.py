@@ -39,26 +39,24 @@ The creators assume no liability for misuse of this software.
 🛡️ ห้ามใช้ในทางที่ผิดกฎหมาย!
 """
 
+import os
+import sys
+import time
+import json
+import random
 import asyncio
 import aiohttp
-import json
-import time
-import random
-import re
+import sqlite3
 import hashlib
-import base64
-import hmac
 import uuid
-import struct
+import warnings
 from datetime import datetime, timedelta
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Union, Any
 from dataclasses import dataclass, asdict
 from urllib.parse import quote, unquote
-import sqlite3
-import threading
 from concurrent.futures import ThreadPoolExecutor
-import warnings
+
 warnings.filterwarnings("ignore")
 
 # === ADVANCED GIRLY CONFIG ===
