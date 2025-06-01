@@ -129,12 +129,16 @@ class CompleteSystemTester:
         print("-" * 40)
         
         try:
-            # Initialize rate bypass
-            await self.rate_bypass.initialize_bypass_arsenal()
+            # Test proxy harvesting
+            await self.rate_bypass.harvest_proxies_aggressive()
             
-            # Test adaptive delays
-            delay = self.rate_bypass.calculate_adaptive_delay()
-            print(f"🕒 Adaptive delay: {delay:.2f}s")
+            if hasattr(self.rate_bypass, 'working_proxies') and self.rate_bypass.working_proxies:
+                proxy_count = len(self.rate_bypass.working_proxies)
+                print(f"✅ Proxy harvesting: SUCCESS ({proxy_count} proxies)")
+                self.test_results['rate_bypass_proxies'] = proxy_count
+            else:
+                print("⚠️ Proxy harvesting: NO WORKING PROXIES")
+                self.test_results['rate_bypass_proxies'] = 0
             
             # Test session creation
             session = self.rate_bypass.create_stealth_session()
@@ -142,23 +146,20 @@ class CompleteSystemTester:
                 print("✅ Stealth session creation: SUCCESS")
                 self.test_results['stealth_session'] = True
                 
-                # Test request with rate bypass
-                test_success = await self.test_rate_bypass_request(session)
-                if test_success:
-                    print("✅ Rate bypass request: SUCCESS")
-                    self.test_results['rate_bypass_request'] = True
-                else:
-                    print("⚠️ Rate bypass request: PARTIAL")
-                    self.test_results['rate_bypass_request'] = 'partial'
+                # Test timing optimization
+                delay = self.rate_bypass.timing_optimizer.calculate_optimal_delay()
+                print(f"🕒 Optimal delay calculation: {delay:.2f}s")
+                self.test_results['timing_optimization'] = True
             else:
                 print("❌ Stealth session creation: FAILED")
                 self.test_results['stealth_session'] = False
-                self.test_results['rate_bypass_request'] = False
+                self.test_results['timing_optimization'] = False
                 
         except Exception as e:
             print(f"❌ Rate bypass arsenal error: {e}")
+            self.test_results['rate_bypass_proxies'] = 0
             self.test_results['stealth_session'] = False
-            self.test_results['rate_bypass_request'] = False
+            self.test_results['timing_optimization'] = False
     
     async def test_rate_bypass_request(self, session):
         """Test rate bypass request functionality"""

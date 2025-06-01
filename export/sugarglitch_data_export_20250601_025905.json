@@ -1,0 +1,453 @@
+{
+  "export_info": {
+    "timestamp": "20250601_025905",
+    "database_path": "/workspaces/sugarglitch-realops/databases/sugarglitch_realops_master.db",
+    "export_type": "complete_data_export",
+    "tables_count": 13
+  },
+  "data": {
+    "users": {
+      "columns": [
+        "id",
+        "username",
+        "display_name",
+        "user_id",
+        "profile_pic_url",
+        "follower_count",
+        "following_count",
+        "posts_count",
+        "is_private",
+        "is_verified",
+        "bio",
+        "external_url",
+        "created_at",
+        "updated_at",
+        "last_seen",
+        "status"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "sqlite_sequence": {
+      "columns": [
+        "name",
+        "seq"
+      ],
+      "records": [
+        {
+          "name": "osint_data",
+          "seq": 13
+        }
+      ],
+      "count": 1
+    },
+    "instagram_accounts": {
+      "columns": [
+        "id",
+        "username",
+        "password_hash",
+        "email",
+        "phone",
+        "session_data",
+        "cookies",
+        "user_agent",
+        "device_id",
+        "device_fingerprint",
+        "proxy_config",
+        "login_count",
+        "last_login",
+        "is_active",
+        "risk_level",
+        "notes",
+        "created_at",
+        "updated_at"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "dm_messages": {
+      "columns": [
+        "id",
+        "message_id",
+        "thread_id",
+        "sender_username",
+        "recipient_username",
+        "message_type",
+        "message_content",
+        "media_url",
+        "media_type",
+        "media_size",
+        "timestamp",
+        "is_read",
+        "is_sent",
+        "is_delivered",
+        "reply_to_message_id",
+        "reaction",
+        "extraction_method",
+        "raw_data",
+        "created_at"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "dm_threads": {
+      "columns": [
+        "id",
+        "thread_id",
+        "account_username",
+        "participant_usernames",
+        "thread_title",
+        "thread_type",
+        "is_group",
+        "message_count",
+        "unread_count",
+        "last_message_timestamp",
+        "last_message_preview",
+        "created_at",
+        "updated_at",
+        "archived"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "extraction_sessions": {
+      "columns": [
+        "id",
+        "session_id",
+        "account_username",
+        "target_username",
+        "extraction_type",
+        "method",
+        "start_time",
+        "end_time",
+        "status",
+        "messages_extracted",
+        "threads_extracted",
+        "media_extracted",
+        "errors_count",
+        "success_rate",
+        "config_data",
+        "log_data",
+        "notes"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "osint_data": {
+      "columns": [
+        "id",
+        "target_username",
+        "platform",
+        "data_type",
+        "data_value",
+        "data_json",
+        "confidence_score",
+        "source",
+        "verification_status",
+        "timestamp",
+        "created_at",
+        "notes"
+      ],
+      "records": [
+        {
+          "id": 1,
+          "target_username": "image",
+          "platform": "instagram",
+          "data_type": "extraction_report",
+          "data_value": null,
+          "data_json": "{\"scan_date\": \"2025-05-31T22:11:56.434135\", \"workspace_path\": \"/workspaces/sugarglitch-realops\", \"total_images_found\": 14, \"images_by_extension\": {\".png\": 14}, \"images_by_directory\": {\"screenshots\": 14}, \"largest_images\": [{\"path\": \"/workspaces/sugarglitch-realops/screenshots/test_httpbin.png\", \"name\": \"test_httpbin.png\", \"size\": 8637, \"size_mb\": 0.01, \"extension\": \".png\", \"directory\": \"screenshots\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/enhanced_03_no_form_debug.png\", \"name\": \"enhanced_03_no_form_debug.png\", \"size\": 4900, \"size_mb\": 0.0, \"extension\": \".png\", \"directory\": \"screenshots\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/enhanced_02_after_wait.png\", \"name\": \"enhanced_02_after_wait.png\", \"size\": 4900, \"size_mb\": 0.0, \"extension\": \".png\", \"directory\": \"screenshots\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/enhanced_01_after_navigation.png\", \"name\": \"enhanced_01_after_navigation.png\", \"size\": 4900, \"size_mb\": 0.0, \"extension\": \".png\", \"di",
+          "confidence_score": 0,
+          "source": "image_discovery_report_20250531_221156.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:00",
+          "created_at": "2025-06-01 02:53:00",
+          "notes": null
+        },
+        {
+          "id": 2,
+          "target_username": "image",
+          "platform": "instagram",
+          "data_type": "extraction_report",
+          "data_value": null,
+          "data_json": "{\"scan_date\": \"2025-05-31T21:55:55.487306\", \"workspace_path\": \"/workspaces/sugarglitch-realops\", \"total_images_found\": 14, \"images_by_extension\": {\".png\": 14}, \"images_by_directory\": {\"screenshots\": 14}, \"largest_images\": [{\"path\": \"/workspaces/sugarglitch-realops/screenshots/test_httpbin.png\", \"name\": \"test_httpbin.png\", \"size\": 8637, \"size_mb\": 0.01, \"extension\": \".png\", \"directory\": \"screenshots\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/enhanced_03_no_form_debug.png\", \"name\": \"enhanced_03_no_form_debug.png\", \"size\": 4900, \"size_mb\": 0.0, \"extension\": \".png\", \"directory\": \"screenshots\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/enhanced_02_after_wait.png\", \"name\": \"enhanced_02_after_wait.png\", \"size\": 4900, \"size_mb\": 0.0, \"extension\": \".png\", \"directory\": \"screenshots\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/enhanced_01_after_navigation.png\", \"name\": \"enhanced_01_after_navigation.png\", \"size\": 4900, \"size_mb\": 0.0, \"extension\": \".png\", \"di",
+          "confidence_score": 0,
+          "source": "image_discovery_report_20250531_215555.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:00",
+          "created_at": "2025-06-01 02:53:00",
+          "notes": null
+        },
+        {
+          "id": 3,
+          "target_username": "images",
+          "platform": "instagram",
+          "data_type": "extraction_report",
+          "data_value": null,
+          "data_json": "{\"timestamp\": \"2025-05-31T22:21:48.891312\", \"total_images\": 17, \"total_size_mb\": 0.08, \"file_types\": {\".png\": 15, \".svg\": 2}, \"images\": [{\"path\": \"/workspaces/sugarglitch-realops/screenshots/direct_no_username_form.png\", \"name\": \"direct_no_username_form.png\", \"size\": 4331, \"size_mb\": 0.0, \"modified\": \"2025-05-31 21:14:48\", \"extension\": \".png\", \"relative_path\": \"screenshots/direct_no_username_form.png\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/test_instagram.png\", \"name\": \"test_instagram.png\", \"size\": 4331, \"size_mb\": 0.0, \"modified\": \"2025-05-31 20:25:21\", \"extension\": \".png\", \"relative_path\": \"screenshots/test_instagram.png\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/mobile_login_page.png\", \"name\": \"mobile_login_page.png\", \"size\": 2184, \"size_mb\": 0.0, \"modified\": \"2025-05-31 21:28:25\", \"extension\": \".png\", \"relative_path\": \"screenshots/mobile_login_page.png\"}, {\"path\": \"/workspaces/sugarglitch-realops/screenshots/error_main.png\", \"name\": \"error_main.png\", \"",
+          "confidence_score": 0,
+          "source": "images_report_20250531_222148.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:00",
+          "created_at": "2025-06-01 02:53:00",
+          "notes": null
+        },
+        {
+          "id": 4,
+          "target_username": "enhanced",
+          "platform": "instagram",
+          "data_type": "bypass_attempt",
+          "data_value": null,
+          "data_json": "{\"results\": {\"target\": \"johnsmith\", \"scan_id\": \"ENHANCED_1748740018\", \"profile_data\": {\"username\": \"instagram.com/johnsmith\", \"full_name\": \"JS'+l+'\", \"source_url\": \"https://www.bing.com/search?q=\\\"johnsmith\\\"+site:instagram.com\", \"extraction_timestamp\": \"2025-06-01T01:07:13.343168\", \"open_graph\": {\"og_title\": \"&quot;johnsmith&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.com/sa/simg/facebook_sharing_5.png\", \"og_url\": \"https://www.bing.com/search?q=&quot;johnsmith&quot;+site:instagram.com\"}}, \"success_rate\": 100.0, \"methods_used\": [{\"method\": \"Enhanced Cache Mining\", \"success\": true, \"sources_found\": [\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/\", \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith\", \"https://www.bing.com/search?q=\\\"johnsmith\\\"+site:instagram.com\"], \"data_extracted\": {\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/\": {\"username\": \"instagram.com/johnsmith\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/\", \"extraction_timestamp\": \"2025-06-01T01:06:59.336476\"}, \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith\": {\"username\": \"instagram.com/johnsmith\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith\", \"extraction_timestamp\": \"2025-06-01T01:07:00.092269\"}, \"https://www.bing.com/search?q=\\\"johnsmith\\\"+site:instagram.com\": {\"full_name\": \"JS'+l+'\", \"open_graph\": {\"og_title\": \"&quot;johnsmith&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.com/sa/simg/facebook_sharing_5.p",
+          "confidence_score": 0.8,
+          "source": "enhanced_instagram_bypass_johnsmith_1748740037.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:30",
+          "created_at": "2025-06-01 02:53:30",
+          "notes": null
+        },
+        {
+          "id": 5,
+          "target_username": "enhanced",
+          "platform": "instagram",
+          "data_type": "bypass_attempt",
+          "data_value": null,
+          "data_json": "{\"results\": {\"target\": \"johnsmith\", \"scan_id\": \"ENHANCED_1748739308\", \"profile_data\": {\"username\": \"instagram.com/johnsmith\", \"full_name\": \"JS'+l+'\", \"source_url\": \"https://www.bing.com/search?q=\\\"johnsmith\\\"+site:instagram.com\", \"extraction_timestamp\": \"2025-06-01T00:55:26.734642\", \"open_graph\": {\"og_title\": \"&quot;johnsmith&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.com/sa/simg/facebook_sharing_5.png\", \"og_url\": \"https://www.bing.com/search?q=&quot;johnsmith&quot;+site:instagram.com\"}}, \"success_rate\": 100.0, \"methods_used\": [{\"method\": \"Enhanced Cache Mining\", \"success\": true, \"sources_found\": [\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/\", \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith\", \"https://www.bing.com/search?q=\\\"johnsmith\\\"+site:instagram.com\"], \"data_extracted\": {\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/\": {\"username\": \"instagram.com/johnsmith\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/johnsmith/\", \"extraction_timestamp\": \"2025-06-01T00:55:09.775908\"}, \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith\": {\"username\": \"instagram.com/johnsmith\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/johnsmith\", \"extraction_timestamp\": \"2025-06-01T00:55:11.107928\"}, \"https://www.bing.com/search?q=\\\"johnsmith\\\"+site:instagram.com\": {\"full_name\": \"JS'+l+'\", \"open_graph\": {\"og_title\": \"&quot;johnsmith&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.com/sa/simg/facebook_sharing_5.p",
+          "confidence_score": 0.8,
+          "source": "enhanced_instagram_bypass_johnsmith_1748739330.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        },
+        {
+          "id": 6,
+          "target_username": "enhanced",
+          "platform": "instagram",
+          "data_type": "bypass_attempt",
+          "data_value": null,
+          "data_json": "{\"results\": {\"target\": \"testuser123\", \"scan_id\": \"ENHANCED_1748740039\", \"profile_data\": {\"username\": \"instagram.com/testuser123\", \"full_name\": \"JS'+l+'\", \"source_url\": \"https://www.bing.com/search?q=\\\"testuser123\\\"+site:instagram.com\", \"extraction_timestamp\": \"2025-06-01T01:07:36.662279\", \"open_graph\": {\"og_title\": \"&quot;testuser123&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.com/sa/simg/facebook_sharing_5.png\", \"og_url\": \"https://www.bing.com/search?q=&quot;testuser123&quot;+site:instagram.com\"}}, \"success_rate\": 100.0, \"methods_used\": [{\"method\": \"Enhanced Cache Mining\", \"success\": true, \"sources_found\": [\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/testuser123/\", \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/testuser123\", \"https://www.bing.com/search?q=\\\"testuser123\\\"+site:instagram.com\"], \"data_extracted\": {\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/testuser123/\": {\"username\": \"instagram.com/testuser123\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/testuser123/\", \"extraction_timestamp\": \"2025-06-01T01:07:20.257578\"}, \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/testuser123\": {\"username\": \"instagram.com/testuser123\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/testuser123\", \"extraction_timestamp\": \"2025-06-01T01:07:21.458128\"}, \"https://www.bing.com/search?q=\\\"testuser123\\\"+site:instagram.com\": {\"full_name\": \"JS'+l+'\", \"open_graph\": {\"og_title\": \"&quot;testuser123&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.",
+          "confidence_score": 0.8,
+          "source": "enhanced_instagram_bypass_testuser123_1748740060.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        },
+        {
+          "id": 7,
+          "target_username": "enhanced",
+          "platform": "instagram",
+          "data_type": "bypass_attempt",
+          "data_value": null,
+          "data_json": "{\"results\": {\"target\": \"whatilove1728\", \"scan_id\": \"ENHANCED_1748739997\", \"profile_data\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"JS'+l+'\", \"source_url\": \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\", \"extraction_timestamp\": \"2025-06-01T01:06:50.311617\", \"open_graph\": {\"og_title\": \"&quot;whatilove1728&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.com/sa/simg/facebook_sharing_5.png\", \"og_url\": \"https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com\"}}, \"success_rate\": 100.0, \"methods_used\": [{\"method\": \"Enhanced Cache Mining\", \"success\": true, \"sources_found\": [\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\", \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\", \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\"], \"data_extracted\": {\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\", \"extraction_timestamp\": \"2025-06-01T01:06:38.268699\"}, \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\", \"extraction_timestamp\": \"2025-06-01T01:06:39.714940\"}, \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\": {\"full_name\": \"JS'+l+'\", \"open_graph\": {\"og_title\": \"&quot;whatilove1728&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.",
+          "confidence_score": 0.8,
+          "source": "enhanced_instagram_bypass_whatilove1728_1748740016.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        },
+        {
+          "id": 8,
+          "target_username": "enhanced",
+          "platform": "instagram",
+          "data_type": "bypass_attempt",
+          "data_value": null,
+          "data_json": "{\"results\": {\"target\": \"whatilove1728\", \"scan_id\": \"ENHANCED_1748739103\", \"profile_data\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"JS'+l+'\", \"source_url\": \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\", \"extraction_timestamp\": \"2025-06-01T00:52:00.802789\", \"open_graph\": {\"og_title\": \"&quot;whatilove1728&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.com/sa/simg/facebook_sharing_5.png\", \"og_url\": \"https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com\"}}, \"success_rate\": 100.0, \"methods_used\": [{\"method\": \"Enhanced Cache Mining\", \"success\": true, \"sources_found\": [\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\", \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\", \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\"], \"data_extracted\": {\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\", \"extraction_timestamp\": \"2025-06-01T00:51:44.961203\"}, \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\", \"extraction_timestamp\": \"2025-06-01T00:51:45.795954\"}, \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\": {\"full_name\": \"JS'+l+'\", \"open_graph\": {\"og_title\": \"&quot;whatilove1728&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.",
+          "confidence_score": 0.8,
+          "source": "enhanced_instagram_bypass_whatilove1728_1748739127.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        },
+        {
+          "id": 9,
+          "target_username": "enhanced",
+          "platform": "instagram",
+          "data_type": "bypass_attempt",
+          "data_value": null,
+          "data_json": "{\"results\": {\"target\": \"whatilove1728\", \"scan_id\": \"ENHANCED_1748738977\", \"profile_data\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"JS'+l+'\", \"source_url\": \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\", \"extraction_timestamp\": \"2025-06-01T00:49:54.901550\", \"open_graph\": {\"og_title\": \"&quot;whatilove1728&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.\", \"og_image\": \"http://www.bing.com/sa/simg/facebook_sharing_5.png\", \"og_url\": \"https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com\"}}, \"success_rate\": 100.0, \"methods_used\": [{\"method\": \"Enhanced Cache Mining\", \"success\": true, \"sources_found\": [\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\", \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\", \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\"], \"data_extracted\": {\"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/\", \"extraction_timestamp\": \"2025-06-01T00:49:39.373198\"}, \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\": {\"username\": \"instagram.com/whatilove1728\", \"full_name\": \"Google Search\", \"source_url\": \"https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728\", \"extraction_timestamp\": \"2025-06-01T00:49:40.829071\"}, \"https://www.bing.com/search?q=\\\"whatilove1728\\\"+site:instagram.com\": {\"full_name\": \"JS'+l+'\", \"open_graph\": {\"og_title\": \"&quot;whatilove1728&quot; site:instagram.com - Bing\", \"og_description\": \"Intelligent search from Bing makes it easier to quickly find what you\\u2019re looking for and rewards you.",
+          "confidence_score": 0.8,
+          "source": "enhanced_instagram_bypass_whatilove1728_1748739001.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        },
+        {
+          "id": 10,
+          "target_username": "osint",
+          "platform": "instagram",
+          "data_type": "osint_intelligence",
+          "data_value": null,
+          "data_json": "{\"target\": \"whatilove1728\", \"scan_timestamp\": \"2025-06-01T00:29:23.078285\", \"scan_duration\": 115.98825192451477, \"search_engine_results\": {\"target\": \"whatilove1728\", \"timestamp\": \"2025-06-01T00:29:23.078296\", \"search_engines\": {\"google\": {\"engine\": \"google\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" site:instagram.com\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram profile\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram account\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"instagram.com/whatilove1728\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" social media\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" facebook twitter\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" contact information\", \"status\": \"success\", \"results_count\": 0}], \"results_found\": [], \"error\": null}, \"bing\": {\"engine\": \"bing\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" site:instagram.com\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram profile\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram account\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"instagram.com/whatilove1728\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" social media\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" facebook twitter\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" contact information\", \"status\": \"success\", \"results_count\": 0}], \"results_found\": [], \"error\": null}, \"duckduckgo\": {\"engine\": \"duckduckgo\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" sit",
+          "confidence_score": 0.8,
+          "source": "osint_results_whatilove1728_1748737879.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        },
+        {
+          "id": 11,
+          "target_username": "osint",
+          "platform": "instagram",
+          "data_type": "osint_intelligence",
+          "data_value": null,
+          "data_json": "{\"target\": \"whatilove1728\", \"scan_timestamp\": \"2025-05-31T23:27:49.515768\", \"scan_duration\": 125.46833038330078, \"search_engine_results\": {\"target\": \"whatilove1728\", \"timestamp\": \"2025-05-31T23:27:49.515789\", \"search_engines\": {\"google\": {\"engine\": \"google\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" site:instagram.com\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram profile\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram account\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"instagram.com/whatilove1728\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" social media\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" facebook twitter\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" contact information\", \"status\": \"success\", \"results_count\": 0}], \"results_found\": [], \"error\": null}, \"bing\": {\"engine\": \"bing\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" site:instagram.com\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram profile\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram account\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"instagram.com/whatilove1728\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" social media\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" facebook twitter\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" contact information\", \"status\": \"success\", \"results_count\": 0}], \"results_found\": [], \"error\": null}, \"duckduckgo\": {\"engine\": \"duckduckgo\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"error_202\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" s",
+          "confidence_score": 0.8,
+          "source": "osint_results_whatilove1728_1748734194.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        },
+        {
+          "id": 12,
+          "target_username": "osint",
+          "platform": "instagram",
+          "data_type": "osint_intelligence",
+          "data_value": null,
+          "data_json": "{\"target\": \"whatilove1728\", \"scan_timestamp\": \"2025-06-01T02:07:17.113536\", \"scan_duration\": 132.02224254608154, \"search_engine_results\": {\"target\": \"whatilove1728\", \"timestamp\": \"2025-06-01T02:07:17.113546\", \"search_engines\": {\"google\": {\"engine\": \"google\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" site:instagram.com\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram profile\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram account\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"instagram.com/whatilove1728\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" social media\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" facebook twitter\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" contact information\", \"status\": \"success\", \"results_count\": 0}], \"results_found\": [], \"error\": null}, \"bing\": {\"engine\": \"bing\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" site:instagram.com\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram profile\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram account\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"instagram.com/whatilove1728\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" social media\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" facebook twitter\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" contact information\", \"status\": \"success\", \"results_count\": 0}], \"results_found\": [], \"error\": null}, \"duckduckgo\": {\"engine\": \"duckduckgo\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" sit",
+          "confidence_score": 0.8,
+          "source": "osint_results_whatilove1728_1748743769.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        },
+        {
+          "id": 13,
+          "target_username": "osint",
+          "platform": "instagram",
+          "data_type": "osint_intelligence",
+          "data_value": null,
+          "data_json": "{\"target\": \"whatilove1728\", \"scan_timestamp\": \"2025-05-31T23:33:17.577497\", \"scan_duration\": 121.46135425567627, \"search_engine_results\": {\"target\": \"whatilove1728\", \"timestamp\": \"2025-05-31T23:33:17.577505\", \"search_engines\": {\"google\": {\"engine\": \"google\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" site:instagram.com\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram profile\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram account\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"instagram.com/whatilove1728\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" social media\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" facebook twitter\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" contact information\", \"status\": \"success\", \"results_count\": 0}], \"results_found\": [], \"error\": null}, \"bing\": {\"engine\": \"bing\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" site:instagram.com\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram profile\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" instagram account\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"instagram.com/whatilove1728\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" social media\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" facebook twitter\", \"status\": \"success\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" contact information\", \"status\": \"success\", \"results_count\": 0}], \"results_found\": [], \"error\": null}, \"duckduckgo\": {\"engine\": \"duckduckgo\", \"queries_performed\": [{\"query\": \"\\\"whatilove1728\\\" instagram\", \"status\": \"error_202\", \"results_count\": 0}, {\"query\": \"\\\"whatilove1728\\\" s",
+          "confidence_score": 0.8,
+          "source": "osint_results_whatilove1728_1748734519.json",
+          "verification_status": "unverified",
+          "timestamp": "2025-06-01 02:53:31",
+          "created_at": "2025-06-01 02:53:31",
+          "notes": null
+        }
+      ],
+      "count": 13
+    },
+    "cookies": {
+      "columns": [
+        "id",
+        "account_username",
+        "domain",
+        "name",
+        "value",
+        "path",
+        "expires",
+        "secure",
+        "http_only",
+        "same_site",
+        "created_at",
+        "updated_at",
+        "is_active"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "proxy_data": {
+      "columns": [
+        "id",
+        "proxy_id",
+        "proxy_type",
+        "host",
+        "port",
+        "username",
+        "password",
+        "country",
+        "city",
+        "speed_mbps",
+        "uptime_percentage",
+        "last_used",
+        "usage_count",
+        "success_rate",
+        "is_active",
+        "notes",
+        "created_at",
+        "updated_at"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "system_logs": {
+      "columns": [
+        "id",
+        "log_id",
+        "level",
+        "component",
+        "action",
+        "message",
+        "details",
+        "user_agent",
+        "ip_address",
+        "session_id",
+        "account_username",
+        "timestamp"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "analysis_results": {
+      "columns": [
+        "id",
+        "analysis_id",
+        "target_username",
+        "analysis_type",
+        "algorithm",
+        "results_json",
+        "summary",
+        "score",
+        "confidence",
+        "created_at",
+        "updated_at"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "file_attachments": {
+      "columns": [
+        "id",
+        "file_id",
+        "original_filename",
+        "stored_filename",
+        "file_path",
+        "file_size",
+        "file_type",
+        "mime_type",
+        "checksum",
+        "related_table",
+        "related_id",
+        "upload_source",
+        "created_at",
+        "is_processed"
+      ],
+      "records": [],
+      "count": 0
+    },
+    "reconnaissance_data": {
+      "columns": [
+        "id",
+        "recon_id",
+        "target_username",
+        "scan_type",
+        "platform",
+        "data_found",
+        "metadata_json",
+        "risk_score",
+        "visibility_level",
+        "scan_timestamp",
+        "created_at"
+      ],
+      "records": [],
+      "count": 0
+    }
+  }
+}
