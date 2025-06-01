@@ -146,26 +146,32 @@ class DatabaseIntegrator:
         
         for file_path in osint_files:
             try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    data = json.load(f)
-                
-                filename = os.path.basename(file_path)
-                username = self._extract_username_from_filename(filename)
-                
-                if username and isinstance(data, dict):
-                    # Add OSINT data for each platform found
-                    for platform, platform_data in data.items():
-                        if isinstance(platform_data, dict):
-                            self.db_manager.add_osint_data(
-                                target_username=username,
-                                platform=platform,
-                                data_type="reconnaissance",
-                                data_json=json.dumps(platform_data, default=str),
-                                source="file_import",
-                                timestamp=datetime.datetime.now()
-                            )
+                def import_osint_file():
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
                     
-                    print(f"   ✅ Imported OSINT: {filename}")
+                    filename = os.path.basename(file_path)
+                    username = self._extract_username_from_filename(filename)
+                    
+                    if username and isinstance(data, dict):
+                        # Add OSINT data for each platform found
+                        for platform, platform_data in data.items():
+                            if isinstance(platform_data, dict):
+                                self.db_manager.add_osint_data(
+                                    target_username=username,
+                                    platform=platform,
+                                    data_type="reconnaissance",
+                                    data_json=json.dumps(platform_data, default=str),
+                                    source="file_import",
+                                    timestamp=datetime.datetime.now()
+                                )
+                    
+                    return True
+                
+                # Execute with retry logic
+                result = self.safe_database_operation(import_osint_file)
+                if result:
+                    print(f"   ✅ Imported OSINT: {os.path.basename(file_path)}")
                 
             except Exception as e:
                 print(f"   ❌ Error importing OSINT {file_path}: {str(e)}")
