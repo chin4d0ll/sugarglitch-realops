@@ -283,14 +283,25 @@ class UltimateRateLimitDestroyer:
         })
         # Apply proxy if available (skip if direct connection)
         if proxy and proxy != "direct":
-            if proxy.startswith('socks5://'):
-                # requests[socks] required
-                session.proxies.update({'http': proxy, 'https': proxy})
-            else:
-                session.proxies.update({'http': proxy, 'https': proxy})
+            try:
+                if proxy.startswith('socks5://'):
+                    # SOCKS5 proxy for TOR
+                    session.proxies.update({'http': proxy, 'https': proxy})
+                else:
+                    # HTTP proxy
+                    session.proxies.update({'http': proxy, 'https': proxy})
+                print(f"[SESSION] Using proxy: {proxy}")
+            except Exception as e:
+                print(f"[SESSION] Proxy error {proxy}: {e}, using direct connection")
+        else:
+            print(f"[SESSION] Using direct connection (no proxy)")
+            
         # Attach sessionid/cookie if available
         if self.session_cookie and 'sessionid' in self.session_cookie:
             session.cookies.set('sessionid', self.session_cookie['sessionid'])
+            print(f"[AUTH] Attached sessionid: {self.session_cookie['sessionid'][:20]}...")
+        else:
+            print(f"[AUTH] No sessionid available")
         return session
     
     def generate_device_fingerprint(self):
