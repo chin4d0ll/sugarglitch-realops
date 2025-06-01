@@ -1223,6 +1223,15 @@ Cleanup: Automatic temporary data removal
         self.advanced_print(f"🎯 Target Authentication: {username}", "INFO", "🎯")
         
         try:
+            # Step 0: Ethical Compliance Verification
+            self.advanced_print("🛡️ Step 0: Ethical Compliance Verification", "CRITICAL", "🔒")
+            
+            if not self.compliance_checker.verify_authorized_usage(username, self.target_username or username):
+                self.advanced_print("❌ Ethical compliance verification failed", "CRITICAL", "🚫")
+                return {'success': False, 'error': 'Ethical compliance verification failed'}
+            
+            self.compliance_checker.log_usage("DM_EXTRACTION_START", f"User: {username}, Target: {self.target_username}")
+            
             # Step 1: Advanced Authentication
             self.advanced_print("🔐 Step 1: Advanced Authentication", "HACK", "👻")
             auth_result = await self.advanced_instagram_authentication(username, password)

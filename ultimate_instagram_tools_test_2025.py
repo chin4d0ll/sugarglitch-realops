@@ -413,10 +413,16 @@ Run Date: {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
         print("=" * 60)
         print(f"🔍 TEST RESULTS SUMMARY")
         print("=" * 60)
-        print(f"Tests Run: {self.success_count + self.failure_count}")
+        total_tests = self.success_count + self.failure_count
+        print(f"Tests Run: {total_tests}")
         print(f"✅ Tests Passed: {self.success_count}")
         print(f"❌ Tests Failed: {self.failure_count}")
-        print(f"Success Rate: {self.success_count / (self.success_count + self.failure_count) * 100:.1f}%")
+        
+        if total_tests > 0:
+            success_rate = self.success_count / total_tests * 100
+            print(f"Success Rate: {success_rate:.1f}%")
+        else:
+            print("Success Rate: N/A (No tests completed)")
         print("=" * 60)
         
         # Report failed tests
