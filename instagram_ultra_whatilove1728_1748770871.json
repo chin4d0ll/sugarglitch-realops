@@ -1,0 +1,48 @@
+{
+  "target_username": "whatilove1728",
+  "scan_id": "ULTRA_1748770835",
+  "start_time": "2025-06-01T09:40:35.481315",
+  "profile_data": {},
+  "posts_data": [],
+  "success_methods": [
+    {
+      "method": "Direct API Advanced",
+      "success": true,
+      "data_extracted": {},
+      "csrf_tokens": [
+        "-WhZBmTgIPhL5EvfaoDOkX"
+      ],
+      "working_endpoints": [
+        "https://www.instagram.com/web/search/topsearch/",
+        "https://www.instagram.com/whatilove1728/"
+      ],
+      "rate_limits_hit": 0
+    }
+  ],
+  "failed_methods": [
+    {
+      "method": "Real Browser Automation",
+      "success": false,
+      "data_extracted": {},
+      "screenshots_taken": [],
+      "cookies_extracted": [],
+      "error": "Message: invalid argument: cannot parse capability: goog:chromeOptions\nfrom invalid argument: unrecognized chrome option: excludeSwitches\nStacktrace:\n#0 0x57741e2a729a <unknown>\n#1 0x57741dd13040 <unknown>\n#2 0x57741dd3ff9b <unknown>\n#3 0x57741dd416a5 <unknown>\n#4 0x57741dd3c84d <unknown>\n#5 0x57741dd974a8 <unknown>\n#6 0x57741dd96dfe <unknown>\n#7 0x57741dd98a12 <unknown>\n#8 0x57741dd987e6 <unknown>\n#9 0x57741dd8a463 <unknown>\n#10 0x57741dd56c55 <unknown>\n#11 0x57741dd578c1 <unknown>\n#12 0x57741e26c1bb <unknown>\n#13 0x57741e2700c9 <unknown>\n#14 0x57741e254a39 <unknown>\n#15 0x57741e270c78 <unknown>\n#16 0x57741e2396bf <unknown>\n#17 0x57741e294948 <unknown>\n#18 0x57741e294b26 <unknown>\n#19 0x57741e2a6176 <unknown>\n#20 0x7072b9ac7609 start_thread\n"
+    },
+    {
+      "method": "GraphQL Exploitation Advanced",
+      "success": false,
+      "data_extracted": {},
+      "working_hashes": [],
+      "introspection_data": null
+    }
+  ],
+  "total_requests": 10,
+  "success_rate": 33.33333333333333,
+  "performance_metrics": {
+    "speed_rps": 0.27,
+    "memory_mb": 0,
+    "detection_rate": 0,
+    "bypass_success": 33.3,
+    "total_duration": 36.4
+  }
+}

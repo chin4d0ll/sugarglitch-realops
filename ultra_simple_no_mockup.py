@@ -159,6 +159,17 @@ class UltraSimpleRealOps:
                     
                     self.statistics['successful_operations'] += 1
                     print(f"✅ Profile data extracted: Status {response.status_code}")
+                    
+                    # บันทึกด้วยว่าได้รับ response จริง
+                    with open(f'profile_raw_{target}.txt', 'w') as f:
+                        f.write(f"REAL INSTAGRAM RESPONSE - NO MOCKUP\n")
+                        f.write(f"Target: {target}\n")
+                        f.write(f"Timestamp: {datetime.now()}\n")
+                        f.write(f"Status Code: {response.status_code}\n")
+                        f.write("=" * 50 + "\n\n")
+                        f.write("Raw Response (first 500 chars):\n")
+                        f.write(response.text[:500])
+                    
                     return {
                         'success': True,
                         'message': 'Profile data extracted successfully',
@@ -166,6 +177,16 @@ class UltraSimpleRealOps:
                     }
                 except:
                     print(f"❌ Invalid response format: Status {response.status_code}")
+                    
+                    # บันทึก raw response แม้จะ parse ไม่ได้
+                    with open(f'profile_raw_{target}.txt', 'w') as f:
+                        f.write(f"REAL INSTAGRAM RESPONSE (PARSE ERROR) - NO MOCKUP\n")
+                        f.write(f"Target: {target}\n")
+                        f.write(f"Timestamp: {datetime.now()}\n")
+                        f.write(f"Status Code: {response.status_code}\n")
+                        f.write("=" * 50 + "\n\n")
+                        f.write("Raw Response (first 500 chars):\n")
+                        f.write(response.text[:500])
                     return {
                         'success': False,
                         'message': 'Invalid response format',
