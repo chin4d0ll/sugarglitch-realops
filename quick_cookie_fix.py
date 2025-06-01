@@ -109,7 +109,7 @@ class QuickCookieFix:
             print("🌐 Opening Instagram...")
             driver.get("https://www.instagram.com/accounts/login/")
 
-           time.sleep(5)
+            time.sleep(5)
 
             # Login automatically
             username = "alx.trading"
