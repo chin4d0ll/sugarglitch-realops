@@ -289,12 +289,14 @@ class SugarGlitchDatabaseManager:
                 ip_address TEXT,
                 session_id TEXT,
                 account_username TEXT,
-                timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-                INDEX idx_logs_timestamp (timestamp),
-                INDEX idx_logs_level (level),
-                INDEX idx_logs_component (component)
+                timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
             )
         ''')
+        
+        # Create indexes separately
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_logs_timestamp ON system_logs(timestamp)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_logs_level ON system_logs(level)')
+        cursor.execute('CREATE INDEX IF NOT EXISTS idx_logs_component ON system_logs(component)')
         
     def _create_analysis_results_table(self, cursor):
         """Create analysis results table"""
