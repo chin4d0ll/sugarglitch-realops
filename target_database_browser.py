@@ -67,11 +67,8 @@ class TargetDatabaseBrowser:
         targets = []
         for row in cursor.fetchall():
             target = dict(row)
-            if target['metadata']:
-                try:
-                    target['metadata'] = json.loads(target['metadata'])
-                except:
-                    target['metadata'] = {}
+            # No metadata column in current schema
+            target['metadata'] = {}
             targets.append(target)
             
         return targets
