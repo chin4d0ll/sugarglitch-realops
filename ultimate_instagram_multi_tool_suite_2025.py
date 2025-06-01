@@ -80,8 +80,8 @@ Available Tools:
             print("✅ Ultimate Reconnaissance Suite loaded")
             
             # Import OSINT Toolkit
-            from advanced_instagram_osint_2025 import AdvancedInstagramOSINT2025
-            self.tools['osint'] = AdvancedInstagramOSINT2025
+            from advanced_instagram_osint_2025 import AdvancedInstagramOSINT
+            self.tools['osint'] = AdvancedInstagramOSINT
             print("✅ Advanced OSINT Toolkit loaded")
             
             print("\n🚀 All tools initialized successfully!")
