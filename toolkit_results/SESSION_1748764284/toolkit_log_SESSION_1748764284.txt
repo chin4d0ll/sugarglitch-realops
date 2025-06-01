@@ -8,3 +8,4 @@ Started: 2025-06-01T07:51:24.981345
 ⚡ [07:51:42] 🚀 กำลังเรียกใช้งาน Instagram Private Viewer...
 📂 [07:51:42] 📄 ไฟล์: lightweight_instagram_bypass_2025.py
 🔄 [07:51:42] ⏳ กำลังรัน... (log: private_viewer_output_1748764302.txt)
+⏹️ [07:55:39] ⚠️ หยุดการทำงาน
