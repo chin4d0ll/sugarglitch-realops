@@ -90,6 +90,11 @@ Available Tools:
             self.tools['osint'] = AdvancedInstagramOSINT
             print("✅ Advanced OSINT Toolkit loaded")
             
+            # Import DM Extractor
+            from ultimate_dm_extractor_integration_2025 import UltimateInstagramDMExtractor2025
+            self.tools['dm_extractor'] = UltimateInstagramDMExtractor2025
+            print("✅ Ultimate DM Extractor loaded")
+            
             print("\n🚀 All tools initialized successfully!")
             return True
             
@@ -108,13 +113,14 @@ Choose your tool:
 3. 🌐 Launch Web Dashboard (Real-time Interface)
 4. 🖥️ Launch Desktop GUI (Standalone App)
 5. 📊 Advanced OSINT Reconnaissance
-6. 🚀 Master Orchestrator (All-in-One)
-7. 🔄 Batch Processing (Multiple Targets)
-8. 💾 Export & Reports Manager
-9. ⚙️ Configuration & Settings
+6. � Ultimate DM Extractor (Extract Direct Messages)
+7. �🚀 Master Orchestrator (All-in-One)
+8. 🔄 Batch Processing (Multiple Targets)
+9. 💾 Export & Reports Manager
+10. ⚙️ Configuration & Settings
 0. 🚪 Exit
 
-Choose option (0-9): """)
+Choose option (0-10): """)
 
     async def run_enhanced_bypass(self, username):
         """Run enhanced private bypass on single target"""
@@ -446,20 +452,25 @@ Choose option (0-9): """)
                         await self.run_osint_reconnaissance(username)
                 
                 elif choice == "6":
-                    username = input("\n🚀 Enter Instagram username for complete analysis: ").strip()
+                    username = input("\n� Enter Instagram username for DM extraction: ").strip()
+                    if username:
+                        await self.run_dm_extraction(username)
+                
+                elif choice == "7":
+                    username = input("\n�🚀 Enter Instagram username for complete analysis: ").strip()
                     if username:
                         await self.run_master_orchestrator(username)
                 
-                elif choice == "7":
+                elif choice == "8":
                     usernames_input = input("\n🔄 Enter usernames (comma separated): ").strip()
                     if usernames_input:
                         usernames = [u.strip() for u in usernames_input.split(',')]
                         await self.run_batch_processing(usernames)
                 
-                elif choice == "8":
+                elif choice == "9":
                     self.export_manager()
                 
-                elif choice == "9":
+                elif choice == "10":
                     self.show_configuration()
                 
                 else:
