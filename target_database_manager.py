@@ -24,15 +24,16 @@ class TargetDatabaseManager:
     def __init__(self, database_path="target_operations.db"):
         self.db_path = database_path
         self.conn = None
-        self.initialize_database()
         
-        # Statistics
+        # Statistics - initialize first
         self.stats = {
             'total_targets': 0,
             'active_targets': 0,
             'completed_operations': 0,
             'pending_operations': 0
         }
+        
+        self.initialize_database()
         
         print(f"🎯 Target Database Manager initialized: {database_path}")
         
