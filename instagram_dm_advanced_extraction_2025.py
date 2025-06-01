@@ -416,38 +416,6 @@ class AdvancedInstagramDMExtractor:
         self.device_fingerprints[fingerprint_id] = fingerprint
         
         return fingerprint
-                'storage': device['storage'],
-                
-                # Network
-                'mac_address': mac_address,
-                
-                # iOS-specific
-                'system_version': device['ios_version'].replace('_', '.'),
-                'build_version': f"21F{random.randint(10, 99)}",
-                'machine_identifier': device['model'],
-                
-                # User agent
-                'user_agent': f"Instagram 318.0.0.18.111 ({device['model']}; iOS {device['ios_version']}; en_US; en-US; scale={device['scale']}; {device['resolution']}; 558123456)"
-            }
-        
-        # Advanced entropy and timing
-        fingerprint.update({
-            'created_timestamp': datetime.now().isoformat(),
-            'timezone_offset': random.choice([25200, 28800, -18000, 0, 7200]),
-            'locale': random.choice(['en_US', 'en_GB', 'th_TH']),
-            'keyboard_language': random.choice(['en', 'th', 'en-TH']),
-            'carrier': random.choice(['Vodafone', 'AIS', 'TRUE', 'dtac', 'T-Mobile']),
-            'connection_type': random.choice(['WIFI', 'CELL_4G', 'CELL_5G', 'CELL_LTE']),
-            'battery_level': random.randint(20, 95),
-            'screen_brightness': random.uniform(0.3, 1.0),
-            'volume_level': random.uniform(0.5, 1.0)
-        })
-        
-        # Cache fingerprint
-        fingerprint_id = hashlib.md5(seed_data.encode()).hexdigest()
-        self.device_fingerprints[fingerprint_id] = fingerprint
-        
-        return fingerprint
 
     async def create_stealth_session_advanced(self) -> aiohttp.ClientSession:
         """
