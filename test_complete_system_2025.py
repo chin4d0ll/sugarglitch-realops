@@ -19,7 +19,7 @@ from pathlib import Path
 sys.path.append('/workspaces/sugarglitch-realops')
 
 from ninja_proxy_rotation_2025 import NinjaProxyRotation, NinjaIntegrationWrapper
-from advanced_rate_bypass_arsenal_2025 import RateLimitBypassArsenal
+from advanced_rate_bypass_arsenal_2025 import UltimateRateLimitDestroyer
 from multi_session_attack_pool_2025 import MultiSessionAttackPool
 
 class CompleteSystemTester:
