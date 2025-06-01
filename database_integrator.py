@@ -15,6 +15,8 @@ import json
 import sqlite3
 import datetime
 import glob
+import time
+import logging
 from pathlib import Path
 from database_manager_2025 import SugarGlitchDatabaseManager
 import uuid
@@ -25,6 +27,32 @@ class DatabaseIntegrator:
     def __init__(self):
         self.db_manager = SugarGlitchDatabaseManager()
         self.workspace_path = "/workspaces/sugarglitch-realops"
+        
+    def safe_database_operation(self, operation_func, *args, **kwargs):
+        """Safely execute database operation with retry logic"""
+        max_retries = 10
+        retry_delay = 1.0
+        
+        for attempt in range(max_retries):
+            try:
+                return operation_func(*args, **kwargs)
+            except sqlite3.OperationalError as e:
+                if "database is locked" in str(e).lower():
+                    if attempt < max_retries - 1:
+                        print(f"⏳ Database locked, retrying in {retry_delay}s... (attempt {attempt + 1}/{max_retries})")
+                        time.sleep(retry_delay)
+                        retry_delay = min(retry_delay * 1.5, 10)  # Exponential backoff
+                        continue
+                    else:
+                        print(f"❌ Database still locked after {max_retries} attempts")
+                        raise
+                else:
+                    raise
+            except Exception as e:
+                print(f"❌ Unexpected error: {e}")
+                raise
+                
+        return None
         
     def scan_existing_files(self):
         """Scan workspace for existing data files"""
