@@ -642,15 +642,17 @@ async def main():
     
     # Phase 1: Use proxies loaded from config (TON AUTH)
     if not destroyer.working_proxies:
-        print("⚠️ No working proxies found in config, exiting...")
-        return
-    print(f"[TON AUTH] Using {len(destroyer.working_proxies)} proxies from config.")
+        print("⚠️ No working proxies found in config, proceeding with direct connection...")
+        destroyer.working_proxies = ["direct"]  # Fallback to direct connection
+    else:
+        print(f"[TON AUTH] Using {len(destroyer.working_proxies)} proxies from config.")
 
-    # Phase 1.5: Validate proxies before use
-    destroyer.working_proxies = destroyer.validate_proxies()
-    if not destroyer.working_proxies:
-        print("❌ No working proxies after validation. Exiting.")
-        return
+    # Phase 1.5: Validate proxies before use (skip validation for direct connection)
+    if destroyer.working_proxies != ["direct"]:
+        destroyer.working_proxies = destroyer.validate_proxies()
+        if not destroyer.working_proxies:
+            print("❌ No working proxies after validation. Falling back to direct connection.")
+            destroyer.working_proxies = ["direct"]
 
     # Phase 2: Create optimized session pool
     pool_size = limit_session_pool(30)
