@@ -16,13 +16,18 @@ class AdvancedDataGenerator:
     def __init__(self, db_path: str = "project_realops.db"):
         self.db_path = db_path
         
-        # Sample data pools
-        self.instagram_usernames = [
-            "tech_innovator", "crypto_trader", "fashion_blogger", "travel_explorer",
-            "fitness_guru", "food_lover", "art_creator", "music_producer",
-            "startup_founder", "digital_nomad", "photography_addict", "book_reviewer",
-            "gaming_streamer", "wellness_coach", "movie_critic", "sports_analyst"
-        ]
+        # Use real usernames from real_data_provider
+        try:
+            from real_data_provider import get_real_targets
+            self.instagram_usernames = [u['username'] for u in get_real_targets()]
+            if not self.instagram_usernames:
+                self.instagram_usernames = [
+                    "alx.trading", "whatilove1728", "sugarglitch_ops", "test_account"
+                ]
+        except Exception:
+            self.instagram_usernames = [
+                "alx.trading", "whatilove1728", "sugarglitch_ops", "test_account"
+            ]
         
         self.target_descriptions = [
             "High-value influencer account with large following",
