@@ -47,11 +47,17 @@ class AdvancedTorController:
             
             # Try authentication methods
             try:
-                self.controller.authenticate()
-                logger.info("✅ TOR controller authenticated")
-            except Exception as auth_error:
-                logger.error(f"❌ TOR authentication failed: {auth_error}")
-                return False
+                # Try password authentication first
+                self.controller.authenticate(password="password")
+                logger.info("✅ TOR controller authenticated with password")
+            except:
+                try:
+                    # Try cookie authentication
+                    self.controller.authenticate()
+                    logger.info("✅ TOR controller authenticated with cookie")
+                except Exception as auth_error:
+                    logger.error(f"❌ TOR authentication failed: {auth_error}")
+                    return False
             
             # Create initial session
             self.session = self._create_tor_session()
