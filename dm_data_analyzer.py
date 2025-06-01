@@ -143,14 +143,14 @@ class DM_DataAnalyzer:
         total_messages = len(self.messages_df)
         
         # Message length analysis
-        self.messages_df['message_length'] = self.messages_df['message_text'].str.len()
+        self.messages_df['message_length'] = self.messages_df['content'].str.len()
         avg_message_length = self.messages_df['message_length'].mean()
         
         # Message type distribution
         message_types = self.messages_df['message_type'].value_counts()
         
         # Sender analysis
-        sender_counts = self.messages_df['sender_username'].value_counts()
+        sender_counts = self.messages_df['username'].value_counts()
         
         print(f"📊 Message Statistics:")
         print(f"   Total Messages: {total_messages}")
