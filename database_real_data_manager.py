@@ -77,22 +77,26 @@ class RealDataManager:
             conn.commit()
             print("🚀 เพิ่ม targets จริงเสร็จแล้ว!")
     
-    def add_extraction_session(self, target_username, session_type="dm_extraction"):
+    def add_extraction_session(self, target_username, extraction_type="dm_extraction"):
         """บันทึก extraction session"""
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
             
-            session_id = f"session_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}"
+            # สร้าง unique session ID
+            import uuid
+            session_id = f"session_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}_{str(uuid.uuid4())[:8]}"
             
             cursor.execute('''
                 INSERT INTO extraction_sessions 
-                (session_id, target_username, session_type, status, started_at)
-                VALUES (?, ?, ?, ?, ?)
+                (session_id, account_username, target_username, extraction_type, method, status, start_time)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
             ''', (
                 session_id,
+                'sugarglitch_ops',  # account doing the extraction
                 target_username,
-                session_type,
-                'active',
+                extraction_type,
+                'automated',
+                'running',
                 datetime.datetime.now().isoformat()
             ))
             
@@ -105,15 +109,20 @@ class RealDataManager:
         with sqlite3.connect(self.db_path) as conn:
             cursor = conn.cursor()
             
+            import uuid
+            log_id = f"log_{datetime.datetime.now().strftime('%Y%m%d_%H%M%S')}_{str(uuid.uuid4())[:8]}"
+            
             cursor.execute('''
                 INSERT INTO system_logs 
-                (log_level, component, message, metadata, timestamp)
-                VALUES (?, ?, ?, ?, ?)
+                (log_id, level, component, action, message, details, timestamp)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
             ''', (
+                log_id,
                 'INFO',
                 'operation',
+                operation_type,
                 f"{operation_type} for {target_username}: {status}",
-                json.dumps({'target': target_username, 'details': details}),
+                json.dumps({'target': target_username, 'details': details, 'status': status}),
                 datetime.datetime.now().isoformat()
             ))
             
