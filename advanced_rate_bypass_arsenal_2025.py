@@ -26,6 +26,29 @@ import threading
 from datetime import datetime, timedelta
 
 class UltimateRateLimitDestroyer:
+    def validate_proxies(self, test_url="https://httpbin.org/ip", timeout=8, max_proxies=30):
+        """Validate proxies by connecting to a test endpoint. Returns only working proxies."""
+        print(f"[TON AUTH] Validating up to {max_proxies} proxies...")
+        import concurrent.futures
+        working = []
+        test_list = self.working_proxies[:max_proxies]
+        def test_proxy(proxy):
+            try:
+                s = requests.Session()
+                s.proxies = {'http': proxy, 'https': proxy}
+                r = s.get(test_url, timeout=timeout)
+                if r.status_code == 200:
+                    return proxy
+            except Exception as e:
+                pass
+            return None
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            results = list(executor.map(test_proxy, test_list))
+        for p in results:
+            if p:
+                working.append(p)
+        print(f"[TON AUTH] {len(working)} proxies validated and working.")
+        return working
     def __init__(self, session_cookie_path=None, proxy_config_path=None):
         """Initialize the beast! 👹 (TON AUTH + Real Session)"""
         self.target = "instagram.com"
@@ -218,16 +241,11 @@ class UltimateRateLimitDestroyer:
         return working_proxies
     
     def create_stealth_session(self, proxy=None):
-        """สร้าง session แบบ stealth mode! 🥷"""
+        """สร้าง session แบบ stealth mode! 🥷 (TON AUTH + sessionid)"""
         session = requests.Session()
-        
         # Random mobile UA for less detection
         mobile_ua = random.choice(self.mobile_agents)
-        
-        # Generate random device fingerprint
         device_fingerprint = self.generate_device_fingerprint()
-        
-        # Advanced stealth headers
         session.headers.update({
             'User-Agent': mobile_ua,
             'Accept': 'application/json,text/plain,*/*',
@@ -236,30 +254,26 @@ class UltimateRateLimitDestroyer:
             'DNT': '1',
             'Connection': 'keep-alive',
             'Upgrade-Insecure-Requests': '1',
-            
-            # Mobile-specific stealth
             'sec-ch-ua-mobile': '?1',
             'sec-ch-ua-platform': device_fingerprint['platform'],
             'Viewport-Width': str(device_fingerprint['viewport_width']),
-            
-            # Instagram-specific headers
             'X-IG-App-ID': '936619743392459',
             'X-ASBD-ID': '129477',
             'X-IG-WWW-Claim': '0',
             'X-Requested-With': 'XMLHttpRequest',
-            
-            # Randomize some values for uniqueness
             'X-Instagram-AJAX': str(random.randint(1000000000, 9999999999)),
             'X-CSRFToken': self.generate_csrf_token(),
         })
-        
         # Apply proxy if available
         if proxy:
-            session.proxies.update({
-                'http': proxy,
-                'https': proxy
-            })
-            
+            if proxy.startswith('socks5://'):
+                # requests[socks] required
+                session.proxies.update({'http': proxy, 'https': proxy})
+            else:
+                session.proxies.update({'http': proxy, 'https': proxy})
+        # Attach sessionid/cookie if available
+        if self.session_cookie and 'sessionid' in self.session_cookie:
+            session.cookies.set('sessionid', self.session_cookie['sessionid'])
         return session
     
     def generate_device_fingerprint(self):
@@ -289,21 +303,14 @@ class UltimateRateLimitDestroyer:
         return ''.join(random.choices(string.ascii_letters + string.digits, k=32))
     
     def create_optimized_session_pool(self, pool_size=30):
-        """สร้าง session pool แบบ memory optimized! 🏊‍♀️"""
+        """สร้าง session pool แบบ memory optimized! 🏊‍♀️ (TON AUTH + sessionid)"""
         print(f"🏊‍♀️ สร้าง optimized session pool {pool_size} sessions...")
-        
-        # Clear existing pool
         self.session_pool.clear()
-        
-        # Optimize pool size based on available memory
         optimized_size = self.optimize_pool_size(pool_size)
-        
         proxy_cycle = cycle(self.working_proxies) if self.working_proxies else None
-        
         for i in range(optimized_size):
             proxy = next(proxy_cycle) if proxy_cycle else None
             session = self.create_stealth_session(proxy)
-            
             session_data = {
                 'session': session,
                 'proxy': proxy,
@@ -314,12 +321,9 @@ class UltimateRateLimitDestroyer:
                 'consecutive_failures': 0,
                 'strategy': random.choice(self.bypass_strategies)
             }
-            
             self.session_pool.append(session_data)
-            
-        # Create cycle for efficient rotation
         self.session_cycle = cycle(self.session_pool)
-        print(f"✅ Session pool ready with {len(self.session_pool)} sessions!")
+        print(f"✅ Session pool ready with {len(self.session_pool)} sessions! (TON AUTH + sessionid)")
         
     def optimize_pool_size(self, requested_size):
         """Optimize pool size based on available memory"""
@@ -619,27 +623,34 @@ async def main():
     
     print("🔥 Starting Ultimate Rate Limit Destroyer 2025!")
     
-    # Phase 1: Harvest proxies
-    proxy_success = await destroyer.harvest_proxies_aggressive()
-    
-    if not proxy_success:
-        print("⚠️ No working proxies found, continuing with direct connections...")
-    
+    # Phase 1: Use proxies loaded from config (TON AUTH)
+    if not destroyer.working_proxies:
+        print("⚠️ No working proxies found in config, exiting...")
+        return
+    print(f"[TON AUTH] Using {len(destroyer.working_proxies)} proxies from config.")
+
+    # Phase 1.5: Validate proxies before use
+    destroyer.working_proxies = destroyer.validate_proxies()
+    if not destroyer.working_proxies:
+        print("❌ No working proxies after validation. Exiting.")
+        return
+
     # Phase 2: Create optimized session pool
     pool_size = limit_session_pool(30)
     destroyer.create_optimized_session_pool(pool_size)
-    
+
     # Phase 3: Advanced attack!
-    target_url = "/api/v1/users/web_profile_info/?username=target"
-    response = await destroyer.advanced_rate_bypass(target_url, max_attempts=100)
-    
+    target_username = "alx.trading"
+    target_url = f"https://www.instagram.com/api/v1/users/web_profile_info/?username={target_username}"
+    response = await destroyer.advanced_rate_bypass(target_url, max_attempts=30)
+
     if response:
         print("🎉 RATE LIMIT BYPASSED SUCCESSFULLY!")
         print(f"📊 Response size: {len(response.content)} bytes")
-    
+
     # Show final statistics
     destroyer.print_final_stats()
-    
+
     # Clean up memory
     optimize_memory()
 
