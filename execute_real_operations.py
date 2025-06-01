@@ -48,7 +48,7 @@ class RealOperationsExecutor:
         await self.system.initialize()
         
         # Load sessions
-        session_loaded = await self.session_manager.load_session_from_file()
+        session_loaded = len(self.session_manager.active_sessions) > 0
         print(f"📱 Session Status: {'✅ LOADED' if session_loaded else '❌ NO SESSION - Using Anonymous Mode'}")
         
         # Refresh proxy list
