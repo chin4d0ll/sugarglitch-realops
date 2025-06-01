@@ -76,18 +76,35 @@ class NinjaProxyRotation:
         try:
             print("🕵️‍♀️ Initializing TOR ninja mode...")
             
-            # Try to connect to TOR control port
+            # Try to connect to TOR control port with proper authentication
             self.tor_controller = Controller.from_port(port=9051)
-            self.tor_controller.authenticate()
             
-            # Initial circuit rotation
-            await self.rotate_tor_circuit()
-            self.tor_enabled = True
+            # Try different authentication methods
+            try:
+                # Try cookie authentication first
+                self.tor_controller.authenticate()
+            except:
+                try:
+                    # Try no password authentication
+                    self.tor_controller.authenticate(password="")
+                except:
+                    # Try with default password
+                    self.tor_controller.authenticate(password=None)
             
-            print("✅ TOR ninja mode activated!")
-            
-            # Start automatic rotation
-            asyncio.create_task(self.auto_tor_rotation())
+            # Test controller connection
+            if self.tor_controller.is_authenticated():
+                print("🔐 TOR controller authenticated successfully!")
+                
+                # Initial circuit rotation
+                await self.rotate_tor_circuit()
+                self.tor_enabled = True
+                
+                print("✅ TOR ninja mode activated!")
+                
+                # Start automatic rotation
+                asyncio.create_task(self.auto_tor_rotation())
+            else:
+                raise Exception("Failed to authenticate TOR controller")
             
         except Exception as e:
             print(f"⚠️ TOR not available: {e}")
