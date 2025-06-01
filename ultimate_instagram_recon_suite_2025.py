@@ -879,30 +879,278 @@ All operations performed for educational and legitimate security research purpos
             except Exception as e:
                 self.girly_print(f"❌ Error: {e}", "ERROR", "💔")
 
-def main():
-    """Main function"""
-    print(GIRLY_BANNER)
-    
-    # Check component availability
-    if not BYPASS_AVAILABLE:
-        print("⚠️ Enhanced Private Bypass not available - some features will be limited")
-    
-    if not ANALYZER_AVAILABLE:
-        print("⚠️ Ultimate Image Analyzer not available - image analysis will be limited")
-    
-    if not BYPASS_AVAILABLE and not ANALYZER_AVAILABLE:
-        print("❌ No components available. Please check installations.")
-        return
-    
-    # Initialize and run suite
-    suite = UltimateInstagramReconSuite()
-    
-    try:
-        asyncio.run(suite.run_interactive_mode())
-    except KeyboardInterrupt:
-        print("\n⚠️ Suite interrupted by user")
-    except Exception as e:
-        print(f"❌ Suite error: {e}")
+    async def ultimate_target_reconnaissance(self, username):
+        """
+        Perform comprehensive target reconnaissance combining all tools
+        
+        This is the master orchestration function that runs:
+        1. Enhanced Private Bypass
+        2. Ultimate Image Analysis
+        3. Advanced OSINT Correlation
+        4. Security Assessment
+        5. Recommendations Generation
+        
+        Returns a complete analysis package with all results
+        """
+        print(f"🚀 Starting Ultimate Target Reconnaissance for: {username}")
+        result = {
+            "target": username,
+            "timestamp": time.time(),
+            "phases": {}
+        }
+        
+        try:
+            # Phase 1: Enhanced Private Bypass
+            print(f"\n📡 Phase 1: Enhanced Private Bypass")
+            try:
+                from instagram_private_bypass_2025_enhanced import SuperEnhancedInstagramBypass
+                bypass = SuperEnhancedInstagramBypass()
+                bypass_result = await bypass.bypass_private_account(username)
+                result["phases"]["bypass"] = {
+                    "status": "success",
+                    "data": bypass_result
+                }
+                print(f"✅ Phase 1 Complete: Private data accessed")
+            except Exception as e:
+                result["phases"]["bypass"] = {
+                    "status": "error",
+                    "error": str(e)
+                }
+                print(f"⚠️ Phase 1 Error: {e}")
+            
+            # Phase 2: Image Analysis (if images found)
+            print(f"\n🖼️ Phase 2: Ultimate Image Analysis")
+            try:
+                if "images" in result.get("phases", {}).get("bypass", {}).get("data", {}):
+                    images = result["phases"]["bypass"]["data"]["images"]
+                    if images and len(images) > 0:
+                        from ultimate_image_analyzer_2025 import UltimateImageAnalyzer
+                        analyzer = UltimateImageAnalyzer()
+                        
+                        image_results = []
+                        for i, image_url in enumerate(images[:5]):  # Analyze up to 5 images
+                            print(f"   Analyzing image {i+1}/{min(len(images), 5)}")
+                            image_result = await analyzer.analyze_image(image_url)
+                            image_results.append(image_result)
+                        
+                        result["phases"]["image_analysis"] = {
+                            "status": "success",
+                            "count": len(image_results),
+                            "data": image_results
+                        }
+                        print(f"✅ Phase 2 Complete: {len(image_results)} images analyzed")
+                    else:
+                        result["phases"]["image_analysis"] = {
+                            "status": "skipped",
+                            "reason": "No images found"
+                        }
+                        print(f"ℹ️ Phase 2 Skipped: No images to analyze")
+                else:
+                    result["phases"]["image_analysis"] = {
+                        "status": "skipped",
+                        "reason": "No image data available from bypass"
+                    }
+                    print(f"ℹ️ Phase 2 Skipped: No image data available")
+            except Exception as e:
+                result["phases"]["image_analysis"] = {
+                    "status": "error",
+                    "error": str(e)
+                }
+                print(f"⚠️ Phase 2 Error: {e}")
+            
+            # Phase 3: Advanced OSINT Correlation
+            print(f"\n🌐 Phase 3: Advanced OSINT Correlation")
+            try:
+                from advanced_instagram_osint_2025 import AdvancedInstagramOSINT
+                osint = AdvancedInstagramOSINT()
+                osint_result = await osint.comprehensive_osint_analysis(username)
+                result["phases"]["osint"] = {
+                    "status": "success",
+                    "data": osint_result
+                }
+                print(f"✅ Phase 3 Complete: OSINT data correlated")
+            except Exception as e:
+                result["phases"]["osint"] = {
+                    "status": "error",
+                    "error": str(e)
+                }
+                print(f"⚠️ Phase 3 Error: {e}")
+            
+            # Phase 4: Security Assessment
+            print(f"\n🔒 Phase 4: Security Assessment")
+            security_assessment = self._perform_security_assessment(result)
+            result["phases"]["security_assessment"] = security_assessment
+            print(f"✅ Phase 4 Complete: Security assessment generated")
+            
+            # Phase 5: Recommendations
+            print(f"\n💡 Phase 5: Recommendations Generation")
+            recommendations = self._generate_recommendations(result)
+            result["phases"]["recommendations"] = recommendations
+            print(f"✅ Phase 5 Complete: Recommendations generated")
+            
+            # Final Result
+            result["status"] = "complete"
+            result["completion_time"] = time.time()
+            result["execution_time"] = result["completion_time"] - result["timestamp"]
+            
+            print(f"\n✅ Ultimate Target Reconnaissance Completed in {result['execution_time']:.2f} seconds")
+            return result
+            
+        except Exception as e:
+            result["status"] = "error"
+            result["error"] = str(e)
+            print(f"\n❌ Ultimate Target Reconnaissance Failed: {e}")
+            return result
 
-if __name__ == "__main__":
-    main()
+    def _perform_security_assessment(self, data):
+        """Generate a security assessment based on gathered data"""
+        assessment = {
+            "timestamp": time.time(),
+            "risk_factors": [],
+            "security_score": 0,
+            "privacy_score": 0
+        }
+        
+        # Initialize scores (0-100, higher is better security)
+        base_security_score = 50
+        base_privacy_score = 50
+        
+        # Check bypass success
+        if data.get("phases", {}).get("bypass", {}).get("status") == "success":
+            assessment["risk_factors"].append({
+                "factor": "Private profile bypass successful",
+                "severity": "Critical",
+                "description": "The private profile protection was bypassed successfully"
+            })
+            base_security_score -= 30
+            base_privacy_score -= 40
+        
+        # Check image leakage
+        image_count = data.get("phases", {}).get("image_analysis", {}).get("count", 0)
+        if image_count > 0:
+            assessment["risk_factors"].append({
+                "factor": f"{image_count} images were successfully extracted",
+                "severity": "High",
+                "description": "Images were extracted and analyzed from private content"
+            })
+            base_privacy_score -= 10 * min(image_count, 5)  # Up to -50 for 5+ images
+        
+        # Check OSINT findings
+        osint_data = data.get("phases", {}).get("osint", {}).get("data", {})
+        if osint_data:
+            # Check for PII (Personally Identifiable Information)
+            pii_found = False
+            if "email" in str(osint_data) or "phone" in str(osint_data) or "address" in str(osint_data):
+                pii_found = True
+                
+            if pii_found:
+                assessment["risk_factors"].append({
+                    "factor": "Personally Identifiable Information (PII) found",
+                    "severity": "Critical",
+                    "description": "Email, phone, or address information was found via OSINT"
+                })
+                base_privacy_score -= 25
+                base_security_score -= 15
+            
+            # Check for cross-platform presence
+            platforms = []
+            if "platforms" in osint_data:
+                platforms = osint_data.get("platforms", [])
+            elif isinstance(osint_data, dict):
+                # Try to extract platform info from different OSINT result formats
+                for key in osint_data:
+                    if "twitter" in key.lower() or "facebook" in key.lower() or "tiktok" in key.lower():
+                        platforms.append(key)
+                        
+            if len(platforms) > 1:
+                assessment["risk_factors"].append({
+                    "factor": f"Found on multiple platforms ({len(platforms)})",
+                    "severity": "Medium",
+                    "description": "Username was identified across multiple platforms, increasing exposure"
+                })
+                base_privacy_score -= 5 * min(len(platforms), 5)  # Up to -25 for 5+ platforms
+        
+        # Finalize scores
+        assessment["security_score"] = max(0, min(100, base_security_score))
+        assessment["privacy_score"] = max(0, min(100, base_privacy_score))
+        
+        # Overall risk assessment
+        avg_score = (assessment["security_score"] + assessment["privacy_score"]) / 2
+        if avg_score < 30:
+            assessment["overall_risk"] = "Critical Risk"
+            assessment["overall_assessment"] = "Critical security and privacy vulnerabilities detected"
+        elif avg_score < 50:
+            assessment["overall_risk"] = "High Risk"
+            assessment["overall_assessment"] = "Significant security and privacy concerns identified"
+        elif avg_score < 70:
+            assessment["overall_risk"] = "Medium Risk" 
+            assessment["overall_assessment"] = "Moderate security and privacy issues found"
+        else:
+            assessment["overall_risk"] = "Low Risk"
+            assessment["overall_assessment"] = "Minor security and privacy concerns detected"
+        
+        return assessment
+    
+    def _generate_recommendations(self, data):
+        """Generate recommendations based on assessment"""
+        recommendations = {
+            "timestamp": time.time(),
+            "general_recommendations": [
+                "Enable two-factor authentication on all social media accounts",
+                "Review and restrict privacy settings on Instagram and other platforms",
+                "Avoid using the same username across multiple platforms",
+                "Regularly review and delete old content and images",
+                "Consider switching to a private account with careful follower acceptance"
+            ],
+            "specific_recommendations": []
+        }
+        
+        # Get security assessment
+        assessment = data.get("phases", {}).get("security_assessment", {})
+        risk_factors = assessment.get("risk_factors", [])
+        
+        # Add specific recommendations based on risk factors
+        for risk in risk_factors:
+            if "private profile bypass" in risk.get("factor", "").lower():
+                recommendations["specific_recommendations"].append(
+                    "Update Instagram account to use a different username that is not used elsewhere"
+                )
+                recommendations["specific_recommendations"].append(
+                    "Be extremely selective about follower requests and regularly audit follower list"
+                )
+            
+            if "images were successfully extracted" in risk.get("factor", "").lower():
+                recommendations["specific_recommendations"].append(
+                    "Review all posted images for metadata and remove sensitive images"
+                )
+                recommendations["specific_recommendations"].append(
+                    "Consider using Instagram's 'Close Friends' feature for more sensitive content"
+                )
+            
+            if "personally identifiable information" in risk.get("factor", "").lower():
+                recommendations["specific_recommendations"].append(
+                    "Audit all social profiles and remove any personal information like email, phone or address"
+                )
+                recommendations["specific_recommendations"].append(
+                    "Set up alerts for when your name or username appears in new online content"
+                )
+            
+            if "found on multiple platforms" in risk.get("factor", "").lower():
+                recommendations["specific_recommendations"].append(
+                    "Use different usernames across different platforms to prevent cross-platform correlation"
+                )
+                
+        # Remove duplicates while maintaining order
+        recommendations["specific_recommendations"] = list(dict.fromkeys(recommendations["specific_recommendations"]))
+        
+        # Add urgency based on risk level
+        if assessment.get("overall_risk") == "Critical Risk":
+            recommendations["urgency"] = "Immediate action required"
+        elif assessment.get("overall_risk") == "High Risk":
+            recommendations["urgency"] = "Action required within 24-48 hours"
+        elif assessment.get("overall_risk") == "Medium Risk":
+            recommendations["urgency"] = "Action recommended within 1 week"
+        else:
+            recommendations["urgency"] = "Action recommended at earliest convenience"
+        
+        return recommendations
