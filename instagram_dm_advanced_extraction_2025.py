@@ -11,6 +11,30 @@ Created by: น้องจิน (chin4d0ll) ♥️
 Updated: 2025-06-01 01:28:31 UTC
 For: Educational & Security Research Only!
 
+🚨 IMPORTANT ETHICAL AND LEGAL DISCLAIMER 🚨
+============================================
+⚠️ THIS TOOL IS FOR EDUCATIONAL AND SECURITY RESEARCH PURPOSES ONLY!
+🛡️ UNAUTHORIZED ACCESS TO OTHERS' ACCOUNTS IS ILLEGAL AND UNETHICAL!
+📋 ALWAYS OBTAIN PROPER AUTHORIZATION BEFORE TESTING ON ANY ACCOUNT!
+🔒 RESPECT PRIVACY AND FOLLOW ALL APPLICABLE LAWS AND REGULATIONS!
+
+💡 LEGITIMATE USE CASES:
+- Testing your own account security
+- Authorized penetration testing
+- Security research with proper permissions
+- Educational cybersecurity training
+
+❌ PROHIBITED USES:
+- Accessing accounts without permission
+- Stalking or harassment
+- Data theft or privacy violations
+- Any illegal surveillance activities
+
+🔑 USER RESPONSIBILITY:
+By using this tool, you acknowledge that you are solely responsible for
+ensuring your usage complies with all applicable laws and ethical standards.
+The creators assume no liability for misuse of this software.
+
 ⚠️ DISCLAIMER: ใช้เพื่อการศึกษาเท่านั้น!
 🛡️ ห้ามใช้ในทางที่ผิดกฎหมาย!
 """
