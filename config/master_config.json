@@ -1,0 +1,151 @@
+{
+  "app": {
+    "name": "SugarGlitch RealOps - Instagram Intelligence Platform",
+    "version": "2025.1.ULTIMATE",
+    "environment": "production",
+    "debug": false,
+    "created_at": "2025-06-01T00:00:00Z"
+  },
+  "database": {
+    "enabled": true,
+    "path": "databases/",
+    "main_db": "instagram_intelligence_2025.db",
+    "backup_enabled": true,
+    "backup_interval_hours": 24,
+    "max_connections": 10,
+    "timeout_seconds": 30
+  },
+  "instagram": {
+    "api": {
+      "enabled": true,
+      "timeout": 30,
+      "retry_attempts": 3,
+      "delay_range": [1.5, 4.0],
+      "user_agents": {
+        "rotation_enabled": true,
+        "mobile_preferred": true
+      }
+    },
+    "rate_limiting": {
+      "enabled": true,
+      "requests_per_minute": 15,
+      "requests_per_hour": 200,
+      "requests_per_day": 2000,
+      "burst_protection": true,
+      "cooldown_minutes": 5
+    },
+    "bypass": {
+      "enabled": true,
+      "techniques": ["user_agent_rotation", "proxy_cycling", "session_distribution"],
+      "stealth_mode": true,
+      "anti_detection": true
+    }
+  },
+  "proxy": {
+    "enabled": true,
+    "rotation_enabled": true,
+    "validation_enabled": true,
+    "timeout_seconds": 10,
+    "max_retries": 3,
+    "health_check_interval": 300,
+    "primary": {
+      "provider": "BrightData",
+      "host": "brd.superproxy.io",
+      "port": "33335",
+      "username": "brd-customer-hl_63f0835e-zone-mobile_proxy",
+      "password": "q9yhckpz3qk",
+      "zone": "mobile_proxy"
+    },
+    "backup_sources": [
+      "config/proxy_list.txt",
+      "config/working_proxies.json"
+    ]
+  },
+  "session_management": {
+    "enabled": true,
+    "validation_enabled": true,
+    "auto_recovery": true,
+    "backup_sessions": true,
+    "session_dir": "config/sessions/",
+    "max_sessions": 10,
+    "cleanup_expired": true,
+    "encryption_enabled": true
+  },
+  "monitoring": {
+    "enabled": true,
+    "real_time": true,
+    "dashboard": {
+      "enabled": true,
+      "port": 8080,
+      "auto_refresh": 30
+    },
+    "alerts": {
+      "enabled": true,
+      "rate_limit_warnings": true,
+      "proxy_failures": true,
+      "session_expiry": true
+    },
+    "logging": {
+      "level": "INFO",
+      "file_enabled": true,
+      "console_enabled": true,
+      "max_file_size_mb": 50,
+      "backup_count": 5
+    }
+  },
+  "extraction": {
+    "dm_extraction": {
+      "enabled": true,
+      "max_threads_per_target": 50,
+      "max_messages_per_thread": 200,
+      "media_download": true,
+      "metadata_extraction": true,
+      "sentiment_analysis": true
+    },
+    "profile_analysis": {
+      "enabled": true,
+      "deep_analysis": true,
+      "behavior_tracking": true,
+      "relationship_mapping": true
+    },
+    "data_processing": {
+      "encryption_enabled": true,
+      "compression_enabled": true,
+      "backup_enabled": true,
+      "cleanup_old_data": true
+    }
+  },
+  "security": {
+    "encryption": {
+      "enabled": true,
+      "algorithm": "AES-256",
+      "key_rotation": true,
+      "secure_storage": true
+    },
+    "stealth": {
+      "enabled": true,
+      "fingerprint_spoofing": true,
+      "traffic_obfuscation": true,
+      "behavior_randomization": true
+    },
+    "operational_security": {
+      "log_sanitization": true,
+      "trace_removal": true,
+      "secure_deletion": true
+    }
+  },
+  "performance": {
+    "concurrent_operations": 5,
+    "memory_limit_mb": 1024,
+    "disk_space_warning_mb": 500,
+    "cleanup_temp_files": true,
+    "optimize_database": true
+  },
+  "targets": {
+    "auto_discovery": true,
+    "priority_targets": ["alx.trading", "whatilove1728"],
+    "max_targets": 50,
+    "target_rotation": true,
+    "intelligence_gathering": true
+  }
+}

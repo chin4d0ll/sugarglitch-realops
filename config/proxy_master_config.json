@@ -1,0 +1,69 @@
+{
+  "enabled": true,
+  "provider": "BrightData",
+  "validation": {
+    "enabled": true,
+    "timeout_seconds": 10,
+    "retry_attempts": 3,
+    "health_check_interval": 300
+  },
+  "rotation": {
+    "enabled": true,
+    "rotation_interval": 60,
+    "failure_threshold": 3,
+    "auto_switch": true
+  },
+  "primary_proxy": {
+    "name": "BrightData Mobile",
+    "host": "brd.superproxy.io",
+    "port": "33335",
+    "username": "brd-customer-hl_63f0835e-zone-mobile_proxy",
+    "password": "q9yhckpz3qk",
+    "zone": "mobile_proxy",
+    "protocol": "http",
+    "country": "US",
+    "enabled": true
+  },
+  "backup_proxies": [
+    {
+      "name": "BrightData Residential",
+      "host": "brd.superproxy.io",
+      "port": "22225",
+      "username": "brd-customer-hl_63f0835e-zone-residential",
+      "password": "q9yhckpz3qk",
+      "zone": "residential",
+      "protocol": "http",
+      "country": "US",
+      "enabled": true
+    }
+  ],
+  "proxy_list_sources": [
+    "config/proxy_list.txt",
+    "config/working_proxies.json"
+  ],
+  "authentication": {
+    "enabled": true,
+    "method": "basic",
+    "credentials_encrypted": false
+  },
+  "performance": {
+    "connection_timeout": 10,
+    "read_timeout": 30,
+    "max_retries": 3,
+    "keep_alive": true,
+    "connection_pool_size": 10
+  },
+  "monitoring": {
+    "enabled": true,
+    "success_rate_threshold": 80,
+    "response_time_threshold": 5000,
+    "log_failures": true,
+    "alert_on_failure": true
+  },
+  "rate_limiting": {
+    "enabled": true,
+    "requests_per_minute": 30,
+    "burst_protection": true,
+    "adaptive_timing": true
+  }
+}
