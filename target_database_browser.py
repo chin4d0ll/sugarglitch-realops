@@ -339,14 +339,14 @@ def main():
             unique_targets = {}
             for target in targets:
                 username = target['username']
-                if username not in unique_targets or target['followers']:
+                if username not in unique_targets or target['follower_count']:
                     unique_targets[username] = target
                     
             sorted_targets = sorted(unique_targets.values(), 
-                                  key=lambda x: x['followers'] or 0, reverse=True)
+                                  key=lambda x: x['follower_count'] or 0, reverse=True)
             
             for i, target in enumerate(sorted_targets[:15], 1):
-                followers = target['followers'] or 'N/A'
+                followers = target['follower_count'] or 'N/A'
                 print(f"{i:2d}. @{target['username']:<20} | {followers:>8} followers")
                 
         else:
