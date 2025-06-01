@@ -51,14 +51,32 @@ class WorkingProxyHarvester:
     def test_proxy(self, proxy):
         """ทดสอบ proxy ตัวเดียว"""
         try:
-            test_url = "https://httpbin.org/ip"
+            # ลอง multiple test URLs
+            test_urls = [
+                "http://httpbin.org/ip",
+                "https://httpbin.org/ip", 
+                "http://icanhazip.com",
+                "https://api.ipify.org?format=json"
+            ]
+            
             proxies = {'http': proxy, 'https': proxy}
             
-            response = requests.get(test_url, proxies=proxies, timeout=8)
-            if response.status_code == 200:
-                data = response.json()
-                return {"proxy": proxy, "ip": data.get("origin", "unknown")}
-        except:
+            for test_url in test_urls:
+                try:
+                    response = requests.get(test_url, proxies=proxies, timeout=5)
+                    if response.status_code == 200:
+                        if "httpbin.org" in test_url:
+                            data = response.json()
+                            return {"proxy": proxy, "ip": data.get("origin", "unknown")}
+                        elif "ipify.org" in test_url:
+                            data = response.json()
+                            return {"proxy": proxy, "ip": data.get("ip", "unknown")}
+                        else:
+                            return {"proxy": proxy, "ip": response.text.strip()}
+                except:
+                    continue
+                    
+        except Exception as e:
             pass
         return None
         
