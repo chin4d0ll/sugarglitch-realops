@@ -69,19 +69,25 @@ Available Tools:
             self.tools['bypass'] = SuperEnhancedInstagramBypass
             print("✅ Enhanced Private Bypass loaded")
             
-            # Import Ultimate Image Analyzer
-            from ultimate_image_analyzer_2025 import UltimateImageAnalyzer2025
-            self.tools['image_analyzer'] = UltimateImageAnalyzer2025
+            # Import Ultimate Image Analyzer (create if needed)
+            try:
+                from ultimate_image_analyzer_2025 import UltimateImageAnalyzer
+                self.tools['image_analyzer'] = UltimateImageAnalyzer
+            except ImportError:
+                print("⚠️ Creating Ultimate Image Analyzer...")
+                self.create_image_analyzer()
+                from ultimate_image_analyzer_2025 import UltimateImageAnalyzer
+                self.tools['image_analyzer'] = UltimateImageAnalyzer
             print("✅ Ultimate Image Analyzer loaded")
             
             # Import Master Reconnaissance Suite
-            from ultimate_instagram_recon_suite_2025 import UltimateInstagramReconSuite2025
-            self.tools['recon_suite'] = UltimateInstagramReconSuite2025
+            from ultimate_instagram_recon_suite_2025 import UltimateInstagramReconSuite
+            self.tools['recon_suite'] = UltimateInstagramReconSuite
             print("✅ Ultimate Reconnaissance Suite loaded")
             
             # Import OSINT Toolkit
-            from advanced_instagram_osint_2025 import AdvancedInstagramOSINT2025
-            self.tools['osint'] = AdvancedInstagramOSINT2025
+            from advanced_instagram_osint_2025 import AdvancedInstagramOSINT
+            self.tools['osint'] = AdvancedInstagramOSINT
             print("✅ Advanced OSINT Toolkit loaded")
             
             print("\n🚀 All tools initialized successfully!")
