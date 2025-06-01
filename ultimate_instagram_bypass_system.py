@@ -134,11 +134,17 @@ class UltimateInstagramBypassSystem:
             print(f"\n🔄 Attempt {attempt + 1}/{max_attempts}")
             
             try:
-                # Step 1: Get best session
+                # Step 1: Get best session (or use fallback)
                 session_info = self.session_manager.get_best_session()
                 if not session_info:
-                    print("❌ No valid sessions available")
-                    continue
+                    print("⚠️ No valid sessions available, using anonymous mode")
+                    # Create fallback session data
+                    session_info = ("anonymous", {
+                        'data': {},
+                        'is_valid': True,
+                        'last_validated': time.time(),
+                        'rate_limit_until': None
+                    })
                 
                 username, session_data = session_info
                 self.stats['sessions_used'] += 1
@@ -228,7 +234,7 @@ class UltimateInstagramBypassSystem:
             'Connection': 'keep-alive'
         }
         
-        # Add session cookies
+        # Add session cookies (if available)
         if 'sessionid' in session_data.get('data', {}):
             headers['Cookie'] = f"sessionid={session_data['data']['sessionid']}"
         elif 'cookies' in session_data.get('data', {}):
@@ -236,6 +242,9 @@ class UltimateInstagramBypassSystem:
             for key, value in session_data['data']['cookies'].items():
                 cookie_parts.append(f"{key}={value}")
             headers['Cookie'] = "; ".join(cookie_parts)
+        else:
+            # Anonymous mode - use basic cookies
+            headers['Cookie'] = f"csrftoken={self._generate_csrf_token()[:16]}"
         
         # Merge custom headers
         if custom_headers:
