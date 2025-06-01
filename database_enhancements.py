@@ -74,7 +74,7 @@ class DatabaseEnhancements:
         # Check for missing session data
         cursor = self.conn.execute("""
             SELECT COUNT(*) as count FROM proxy_sessions ps 
-            WHERE ps.session_data IS NULL OR ps.session_data = ''
+            WHERE ps.proxy_ip IS NULL OR ps.proxy_ip = ''
         """)
         missing_sessions = cursor.fetchone()['count']
         if missing_sessions > 0:
