@@ -45,7 +45,6 @@ class HardcoreRateDestroyer:
         # Multiple session pools
         for i in range(50):
             session = requests.Session()
-            session.headers.update(self.generate_random_headers())
             self.session_pool.append(session)
             
         # Advanced proxy rotation
