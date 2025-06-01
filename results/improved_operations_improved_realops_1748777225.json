@@ -1,0 +1,80 @@
+{
+  "start_time": "2025-06-01T11:27:05.785169",
+  "operations": [
+    {
+      "type": "profile_extraction",
+      "target": "instagram",
+      "start_time": "2025-06-01T11:27:06.031515",
+      "requests": [
+        {
+          "url": "https://www.instagram.com/instagram/",
+          "method": "GET",
+          "status": 0,
+          "connection_type": "failed",
+          "response_size": 0,
+          "timestamp": "2025-06-01T11:27:06.051816"
+        }
+      ],
+      "data_extracted": {},
+      "success": false,
+      "error": "No response",
+      "duration": 0.020319223403930664,
+      "end_time": "2025-06-01T11:27:06.051834"
+    },
+    {
+      "type": "profile_extraction",
+      "target": "selenagomez",
+      "start_time": "2025-06-01T11:27:10.052889",
+      "requests": [
+        {
+          "url": "https://www.instagram.com/selenagomez/",
+          "method": "GET",
+          "status": 0,
+          "connection_type": "failed",
+          "response_size": 0,
+          "timestamp": "2025-06-01T11:27:10.077312"
+        }
+      ],
+      "data_extracted": {},
+      "success": false,
+      "error": "No response",
+      "duration": 0.024446964263916016,
+      "end_time": "2025-06-01T11:27:10.077334"
+    },
+    {
+      "type": "profile_extraction",
+      "target": "therock",
+      "start_time": "2025-06-01T11:27:15.080090",
+      "requests": [
+        {
+          "url": "https://www.instagram.com/therock/",
+          "method": "GET",
+          "status": 0,
+          "connection_type": "failed",
+          "response_size": 0,
+          "timestamp": "2025-06-01T11:27:15.103442"
+        }
+      ],
+      "data_extracted": {},
+      "success": false,
+      "error": "No response",
+      "duration": 0.023377656936645508,
+      "end_time": "2025-06-01T11:27:15.103467"
+    }
+  ],
+  "statistics": {
+    "total_requests": 3,
+    "successful_requests": 0,
+    "failed_requests": 3,
+    "data_extracted": 0,
+    "direct_connections": 0,
+    "proxy_connections": 3
+  },
+  "targets": [
+    "instagram",
+    "selenagomez",
+    "therock"
+  ],
+  "end_time": "2025-06-01T11:27:15.103475",
+  "total_duration": 9.318306
+}
