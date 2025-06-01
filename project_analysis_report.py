@@ -194,8 +194,62 @@ def generate_analysis_report():
                 for key, value in list(details.items())[:2]:  # Show max 2 details
                     print(f"     {key}: {value}")
     
-    # 6. Vulnerability Assessment
-    print(f"\n🔍 6. VULNERABILITY ASSESSMENT")
+    # 6. Authentication Data Analysis
+    print(f"\n🍪 6. AUTHENTICATION DATA ANALYSIS")
+    print("-" * 40)
+    
+    # Check if cookie_harvests table exists
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='cookie_harvests'")
+    cookie_table_exists = cursor.fetchone() is not None
+    
+    if cookie_table_exists:
+        cursor.execute('''
+            SELECT 
+                ch.id, 
+                ch.harvest_timestamp, 
+                ch.total_sessions, 
+                ch.successful_sessions, 
+                ch.total_unique_cookies,
+                ch.total_unique_tokens,
+                ch.success_rate
+            FROM cookie_harvests ch
+            ORDER BY ch.harvest_timestamp DESC
+            LIMIT 1
+        ''')
+        cookie_data = cursor.fetchone()
+        
+        if cookie_data:
+            print(f"Cookie Harvest Statistics:")
+            print(f"  🔑 Harvest ID: {cookie_data[0]}")
+            print(f"  📅 Timestamp: {cookie_data[1]}")
+            print(f"  📊 Sessions: {cookie_data[2]} ({cookie_data[3]} successful - {cookie_data[6]}% success rate)")
+            print(f"  🍪 Unique Cookies: {cookie_data[4]}")
+            print(f"  🔐 Unique Tokens: {cookie_data[5]}")
+            
+            # Get most common cookie names
+            cursor.execute('''
+                SELECT cookie_name, COUNT(*) as count
+                FROM collected_cookies c
+                JOIN harvest_sessions s ON c.session_id = s.id
+                WHERE s.harvest_id = ?
+                GROUP BY cookie_name
+                ORDER BY count DESC
+                LIMIT 5
+            ''', (cookie_data[0],))
+            
+            cookies = cursor.fetchall()
+            
+            if cookies:
+                print("\n  Most Common Cookies:")
+                cookie_data = []
+                for cookie in cookies:
+                    cookie_data.append([cookie[0], cookie[1]])
+                print("  " + tabulate(cookie_data, headers=['Cookie Name', 'Count'], tablefmt='simple'))
+    else:
+        print("  ⚠️ No authentication data available")
+    
+    # 7. Vulnerability Assessment
+    print(f"\n🔍 7. VULNERABILITY ASSESSMENT")
     print("-" * 40)
     
     cursor.execute('''
@@ -225,8 +279,8 @@ def generate_analysis_report():
     print("Vulnerability Distribution:")
     print(tabulate(vuln_data, headers=['Scan Type', 'Severity', 'Count'], tablefmt='grid'))
     
-    # 7. Recommendations
-    print(f"\n💡 7. RECOMMENDATIONS")
+    # 8. Recommendations
+    print(f"\n💡 8. RECOMMENDATIONS")
     print("-" * 40)
     
     recommendations = []
@@ -261,7 +315,7 @@ def generate_analysis_report():
     else:
         print("  ✅ No immediate action items identified")
     
-    print(f"\n🎯 8. NEXT STEPS")
+    print(f"\n🎯 9. NEXT STEPS")
     print("-" * 40)
     print("  1. 🔄 Schedule regular data extraction for active targets")
     print("  2. 📊 Implement automated risk scoring for new targets")
