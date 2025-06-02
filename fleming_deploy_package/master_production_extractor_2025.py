@@ -89,6 +89,9 @@ class MasterProductionExtractor:
                 print(f"❌ Failed to load session from {latest_file}: {e}")
         
         print("❌ No Fleming sessions found - run session_regenerator_fleming654.py first")
+        # Add a helper function to guide users
+        print("💡 To generate a session, run: python3 session_regenerator_fleming654.py")
+        
         return False
     
     def initialize_client_with_session(self, session_data):

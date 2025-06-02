@@ -19,7 +19,6 @@ Classification: TOP SECRET / EYES ONLY
 """
 
 import asyncio
-import aiohttp
 import json
 import sqlite3
 import time
@@ -58,6 +57,7 @@ try:
     import plotly.graph_objects as go
     import plotly.express as px
     import networkx as nx
+    import aiohttp
     
     ADVANCED_ANALYTICS_AVAILABLE = True
 except ImportError:
