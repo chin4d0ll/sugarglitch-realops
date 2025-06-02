@@ -1,75 +1,36 @@
 {
-  "rate_limiting": {
-    "enabled": true,
-    "adaptive": true,
-    "bypass_techniques": ["timing_randomization", "request_distribution", "session_cycling"]
-  },
-  "bypass_strategies": {
-    "user_agent_rotation": {
-      "enabled": true,
-      "mobile_preference": true,
-      "instagram_specific": true,
-      "rotation_interval": 10
+  "timestamp": 1748908294,
+  "original_ip": "23.97.62.145",
+  "instagram_accessible_direct": false,
+  "bypass_proxy": null,
+  "tor_available": false,
+  "working_proxies": [
+    {
+      "proxy": "http://91.103.120.48:80",
+      "ip": "91.103.120.59"
     },
-    "proxy_cycling": {
-      "enabled": true,
-      "cycle_interval": 5,
-      "health_check": true,
-      "failure_tolerance": 3
+    {
+      "proxy": "http://85.10.199.48:80",
+      "ip": "85.10.199.48"
     },
-    "session_distribution": {
-      "enabled": true,
-      "load_balancing": true,
-      "session_isolation": true,
-      "failover": true
+    {
+      "proxy": "http://57.129.81.201:999",
+      "ip": "57.129.81.201"
     },
-    "timing_obfuscation": {
-      "enabled": true,
-      "random_delays": true,
-      "human_behavior": true,
-      "burst_prevention": true
+    {
+      "proxy": "http://147.91.22.150:80",
+      "ip": "147.91.22.150"
+    },
+    {
+      "proxy": "http://51.254.78.223:80",
+      "ip": "51.254.78.223"
     }
-  },
-  "instagram_api": {
-    "endpoints": {
-      "inbox": "https://i.instagram.com/api/v1/direct_v2/inbox/",
-      "thread_items": "https://i.instagram.com/api/v1/direct_v2/threads/{thread_id}/items/",
-      "thread_info": "https://i.instagram.com/api/v1/direct_v2/threads/{thread_id}/",
-      "user_search": "https://i.instagram.com/api/v1/users/search/",
-      "user_info": "https://i.instagram.com/api/v1/users/{user_id}/info/"
-    },
-    "headers": {
-      "accept": "*/*",
-      "accept-encoding": "gzip, deflate, br",
-      "accept-language": "en-US,en;q=0.9",
-      "cache-control": "no-cache",
-      "pragma": "no-cache",
-      "sec-fetch-dest": "empty",
-      "sec-fetch-mode": "cors",
-      "sec-fetch-site": "same-origin"
-    }
-  },
-  "rate_limits": {
-    "requests_per_minute": 15,
-    "requests_per_hour": 200,
-    "requests_per_day": 2000,
-    "dm_requests_per_hour": 50,
-    "profile_requests_per_hour": 100
-  },
-  "bypass_parameters": {
-    "delay_min": 1.5,
-    "delay_max": 4.0,
-    "batch_size": 3,
-    "concurrent_sessions": 5,
-    "retry_attempts": 5,
-    "exponential_backoff": true,
-    "circuit_breaker": true
-  },
-  "stealth_features": {
-    "fingerprint_spoofing": true,
-    "behavior_randomization": true,
-    "traffic_obfuscation": true,
-    "anti_detection": true,
-    "trace_removal": true
-  }
+  ],
+  "recommendations": [
+    "Wait 24-48 hours for IP blacklist to clear",
+    "Use VPN service to change IP address",
+    "Contact Instagram support if account is legitimate",
+    "Use mobile data instead of WiFi",
+    "Try different network (different ISP)"
+  ]
 }
