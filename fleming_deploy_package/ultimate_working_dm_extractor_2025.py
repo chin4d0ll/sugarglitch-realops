@@ -62,8 +62,10 @@ class UltimateWorkingDMExtractor:
     """The ultimate Instagram DM extractor that actually works."""
     
     def __init__(self):
+        # Try backup passwords from config
         self.username = "alx.trading"
-        self.password = "Fleming654"
+        self.backup_passwords = ["Fleming786", "Fleming1004", "Fleming1060", "Fleming1182", "Fleming1998", "Fleming654"]
+        self.password = self.backup_passwords[0]  # Start with first backup
         self.target_accounts = ["alx.trading", "whatilove1728"]
         
         # Setup directories
@@ -137,18 +139,22 @@ class UltimateWorkingDMExtractor:
                 except Exception as e:
                     self.logger.warning(f"Failed to load existing session: {e}")
             
-            # Fresh login
-            self.logger.info("🔐 Attempting fresh login...")
-            success = self.instagrapi_client.login(self.username, self.password)
-            
-            if success:
-                # Save session for future use
-                self.instagrapi_client.dump_settings(str(session_file))
-                self.logger.info("✅ Fresh instagrapi login successful!")
-                return True
-            else:
-                self.logger.error("❌ Fresh login failed")
-                return False
+            # Fresh login with backup passwords
+            self.logger.info("🔐 Attempting fresh login with backup passwords...")
+            for i, password in enumerate(self.backup_passwords):
+                try:
+                    self.logger.info(f"Trying password {i+1}/{len(self.backup_passwords)}: {password[:4]}***")
+                    success = self.instagrapi_client.login(self.username, password)
+                    
+                    if success:
+                        self.password = password  # Update working password
+                        # Save session for future use
+                        self.instagrapi_client.dump_settings(str(session_file))
+                        self.logger.info(f"✅ Fresh instagrapi login successful with password: {password[:4]}***!")
+                        return True
+                except Exception as e:
+                    self.logger.warning(f"Password {password[:4]}*** failed: {e}")
+                    continue
                 
         except BadPassword:
             self.logger.error("❌ Bad password - credentials may be incorrect")
