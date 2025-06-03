@@ -1,0 +1,12 @@
+{
+  "target": "alx.trading",
+  "extraction_timestamp": "2025-06-03T10:53:20.696284",
+  "method": "real_instagram_api",
+  "results": {
+    "conversations": [],
+    "total_messages": 0,
+    "extraction_errors": [
+      "No conversations found with alx.trading"
+    ]
+  }
+}
