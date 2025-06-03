@@ -594,6 +594,63 @@ Database: {self.db_path}
         if self.conn:
             self.conn.close()
             print("🔒 Database connection closed")
+    
+    def get_stats(self) -> Dict:
+        """Alias for get_statistics for compatibility"""
+        return self.get_statistics()
+    
+    def log_operation(self, target_id: int, operation_type: str, **kwargs) -> int:
+        """Log an operation with additional parameters"""
+        cursor = self.conn.cursor()
+        
+        operation_data = kwargs.get('operation_data', '{}')
+        result_data = kwargs.get('result_data', None)
+        status = kwargs.get('status', 'pending')
+        data_extracted = kwargs.get('data_extracted', 0)
+        
+        cursor.execute('''
+            INSERT INTO operations 
+            (target_id, operation_type, operation_data, result_data, status, data_extracted)
+            VALUES (?, ?, ?, ?, ?, ?)
+        ''', (target_id, operation_type, operation_data, result_data, status, data_extracted))
+        
+        operation_id = cursor.lastrowid
+        self.conn.commit()
+        self._update_stats()
+        
+        return operation_id
+    
+    def add_target_relationship(self, source_target_id: int, related_target_id: int, 
+                               relationship_type: str, confidence_score: float = 0.5) -> int:
+        """Add a relationship between targets"""
+        cursor = self.conn.cursor()
+        
+        cursor.execute('''
+            INSERT INTO target_relationships 
+            (source_target_id, related_target_id, relationship_type, confidence_score)
+            VALUES (?, ?, ?, ?)
+        ''', (source_target_id, related_target_id, relationship_type, confidence_score))
+        
+        relationship_id = cursor.lastrowid
+        self.conn.commit()
+        
+        return relationship_id
+    
+    def add_monitoring_record(self, target_id: int, check_type: str, 
+                             check_result: str, changes_detected: str = None) -> int:
+        """Add a monitoring record"""
+        cursor = self.conn.cursor()
+        
+        cursor.execute('''
+            INSERT INTO monitoring 
+            (target_id, check_type, check_result, changes_detected)
+            VALUES (?, ?, ?, ?)
+        ''', (target_id, check_type, check_result, changes_detected))
+        
+        monitoring_id = cursor.lastrowid
+        self.conn.commit()
+        
+        return monitoring_id
 
 def demo_target_database():
     """Demonstration of target database functionality"""
