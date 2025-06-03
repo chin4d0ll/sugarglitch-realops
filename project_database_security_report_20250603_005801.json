@@ -1,0 +1,556 @@
+{
+  "report_metadata": {
+    "report_title": "Project Database Security Analysis Report",
+    "generated_at": "2025-06-03T00:58:01.859659",
+    "analyzer_version": "2025.1.0",
+    "database_analyzed": "integrated_targets_2025.db"
+  },
+  "executive_summary": {
+    "overall_security_status": "LOW",
+    "total_tables": 6,
+    "total_records": 0,
+    "database_size": "32.0 KB",
+    "critical_issues_count": 2,
+    "recommendations_count": 6
+  },
+  "database_structure": {
+    "database_file": "integrated_targets_2025.db",
+    "file_size_bytes": 32768,
+    "file_size_readable": "32.0 KB",
+    "tables": {
+      "targets": {
+        "name": "targets",
+        "columns": [
+          {
+            "id": 0,
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 1
+          },
+          {
+            "id": 1,
+            "name": "username",
+            "type": "TEXT",
+            "not_null": 1,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 2,
+            "name": "full_name",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 3,
+            "name": "profile_pic_url",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 4,
+            "name": "follower_count",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": "0",
+            "primary_key": 0
+          },
+          {
+            "id": 5,
+            "name": "following_count",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": "0",
+            "primary_key": 0
+          },
+          {
+            "id": 6,
+            "name": "post_count",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": "0",
+            "primary_key": 0
+          },
+          {
+            "id": 7,
+            "name": "is_private",
+            "type": "BOOLEAN",
+            "not_null": 0,
+            "default_value": "0",
+            "primary_key": 0
+          },
+          {
+            "id": 8,
+            "name": "is_verified",
+            "type": "BOOLEAN",
+            "not_null": 0,
+            "default_value": "0",
+            "primary_key": 0
+          },
+          {
+            "id": 9,
+            "name": "biography",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 10,
+            "name": "external_url",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 11,
+            "name": "target_type",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": "'standard'",
+            "primary_key": 0
+          },
+          {
+            "id": 12,
+            "name": "priority",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": "1",
+            "primary_key": 0
+          },
+          {
+            "id": 13,
+            "name": "status",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": "'pending'",
+            "primary_key": 0
+          },
+          {
+            "id": 14,
+            "name": "created_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default_value": "CURRENT_TIMESTAMP",
+            "primary_key": 0
+          },
+          {
+            "id": 15,
+            "name": "updated_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default_value": "CURRENT_TIMESTAMP",
+            "primary_key": 0
+          },
+          {
+            "id": 16,
+            "name": "last_accessed",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 17,
+            "name": "notes",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          }
+        ],
+        "row_count": 0,
+        "column_count": 18,
+        "sample_data": [],
+        "sensitive_columns": [
+          "is_private"
+        ],
+        "security_concerns": [
+          "Contains sensitive columns: is_private"
+        ]
+      },
+      "sqlite_sequence": {
+        "name": "sqlite_sequence",
+        "columns": [
+          {
+            "id": 0,
+            "name": "name",
+            "type": "",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 1,
+            "name": "seq",
+            "type": "",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          }
+        ],
+        "row_count": 0,
+        "column_count": 2,
+        "sample_data": [],
+        "sensitive_columns": [],
+        "security_concerns": [
+          "No primary key found - potential data integrity issues"
+        ]
+      },
+      "operations": {
+        "name": "operations",
+        "columns": [
+          {
+            "id": 0,
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 1
+          },
+          {
+            "id": 1,
+            "name": "target_id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 2,
+            "name": "operation_type",
+            "type": "TEXT",
+            "not_null": 1,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 3,
+            "name": "operation_data",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 4,
+            "name": "result_data",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 5,
+            "name": "status",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": "'pending'",
+            "primary_key": 0
+          },
+          {
+            "id": 6,
+            "name": "started_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default_value": "CURRENT_TIMESTAMP",
+            "primary_key": 0
+          },
+          {
+            "id": 7,
+            "name": "completed_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 8,
+            "name": "error_message",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 9,
+            "name": "proxy_used",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 10,
+            "name": "session_used",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 11,
+            "name": "duration_seconds",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 12,
+            "name": "data_extracted",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": "0",
+            "primary_key": 0
+          }
+        ],
+        "row_count": 0,
+        "column_count": 13,
+        "sample_data": [],
+        "sensitive_columns": [],
+        "security_concerns": []
+      },
+      "extracted_data": {
+        "name": "extracted_data",
+        "columns": [
+          {
+            "id": 0,
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 1
+          },
+          {
+            "id": 1,
+            "name": "target_id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 2,
+            "name": "operation_id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 3,
+            "name": "data_type",
+            "type": "TEXT",
+            "not_null": 1,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 4,
+            "name": "data_content",
+            "type": "TEXT",
+            "not_null": 1,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 5,
+            "name": "file_path",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 6,
+            "name": "extracted_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default_value": "CURRENT_TIMESTAMP",
+            "primary_key": 0
+          },
+          {
+            "id": 7,
+            "name": "data_size",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": "0",
+            "primary_key": 0
+          },
+          {
+            "id": 8,
+            "name": "is_sensitive",
+            "type": "BOOLEAN",
+            "not_null": 0,
+            "default_value": "0",
+            "primary_key": 0
+          }
+        ],
+        "row_count": 0,
+        "column_count": 9,
+        "sample_data": [],
+        "sensitive_columns": [],
+        "security_concerns": []
+      },
+      "target_relationships": {
+        "name": "target_relationships",
+        "columns": [
+          {
+            "id": 0,
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 1
+          },
+          {
+            "id": 1,
+            "name": "source_target_id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 2,
+            "name": "related_target_id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 3,
+            "name": "relationship_type",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 4,
+            "name": "discovered_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default_value": "CURRENT_TIMESTAMP",
+            "primary_key": 0
+          },
+          {
+            "id": 5,
+            "name": "confidence_score",
+            "type": "REAL",
+            "not_null": 0,
+            "default_value": "0.5",
+            "primary_key": 0
+          }
+        ],
+        "row_count": 0,
+        "column_count": 6,
+        "sample_data": [],
+        "sensitive_columns": [],
+        "security_concerns": []
+      },
+      "monitoring": {
+        "name": "monitoring",
+        "columns": [
+          {
+            "id": 0,
+            "name": "id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 1
+          },
+          {
+            "id": 1,
+            "name": "target_id",
+            "type": "INTEGER",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 2,
+            "name": "check_type",
+            "type": "TEXT",
+            "not_null": 1,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 3,
+            "name": "check_result",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 4,
+            "name": "changes_detected",
+            "type": "TEXT",
+            "not_null": 0,
+            "default_value": null,
+            "primary_key": 0
+          },
+          {
+            "id": 5,
+            "name": "checked_at",
+            "type": "TIMESTAMP",
+            "not_null": 0,
+            "default_value": "CURRENT_TIMESTAMP",
+            "primary_key": 0
+          }
+        ],
+        "row_count": 0,
+        "column_count": 6,
+        "sample_data": [],
+        "sensitive_columns": [],
+        "security_concerns": []
+      }
+    },
+    "total_records": 0,
+    "analysis_timestamp": "2025-06-03T00:58:01.858725"
+  },
+  "security_assessment": {
+    "overall_risk_level": "LOW",
+    "risk_factors": [
+      "Table 'targets' contains sensitive data: is_private"
+    ],
+    "critical_findings": [
+      "targets: Contains sensitive columns: is_private",
+      "sqlite_sequence: No primary key found - potential data integrity issues"
+    ],
+    "recommendations": [
+      "🔒 Implement database encryption for sensitive data",
+      "🛡️ Set strict file permissions (600 or 640) on database file",
+      "🔐 Use parameterized queries to prevent SQL injection",
+      "📊 Implement database access logging and monitoring",
+      "🚫 Remove or obfuscate sensitive data in development/test environments",
+      "🔏 Encrypt sensitive columns in table 'targets': is_private"
+    ],
+    "risk_score": 4
+  },
+  "compliance_checklist": {
+    "data_protection": {
+      "encryption_at_rest": "PASS",
+      "access_controls": "NEEDS_REVIEW",
+      "sensitive_data_handling": "FAIL"
+    },
+    "security_best_practices": {
+      "sql_injection_protection": "NEEDS_TESTING",
+      "file_permissions": "NEEDS_REVIEW",
+      "backup_security": "NEEDS_REVIEW",
+      "audit_logging": "NOT_IMPLEMENTED"
+    },
+    "compliance_score": 14
+  }
+}

