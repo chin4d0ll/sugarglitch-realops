@@ -1,0 +1,7 @@
+{
+  "vulnerable": false,
+  "https_enforced": true,
+  "cert_valid": true,
+  "hsts_present": true,
+  "timestamp": "2025-06-05T21:33:07.228715"
+}

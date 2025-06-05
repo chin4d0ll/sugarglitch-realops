@@ -1,0 +1,17 @@
+{
+  "test_timestamp": "2025-06-05T21:33:02.017100",
+  "target_domain": "instagram.com",
+  "tests_performed": {
+    "cookie_theft": true,
+    "session_fixation": false,
+    "mitm_attack": false,
+    "session_replay": true,
+    "csrf_vulnerability": true
+  },
+  "security_assessment": {
+    "vulnerabilities_found": 3,
+    "total_tests": 5,
+    "security_score": 40.0,
+    "risk_level": "HIGH"
+  }
+}

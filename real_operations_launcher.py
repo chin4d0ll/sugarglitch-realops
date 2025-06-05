@@ -36,7 +36,7 @@ def launch_real_extraction():
     print("="*50)
     print("⚠️  WARNING: This will perform REAL extraction against REAL targets!")
     print("📱 Make sure you have valid Instagram credentials")
-    print("🌐 Traffic interceptor should be running on port 8080")
+    print("🌐 Traffic interceptor should be running on port 8082")
     print()
     
     # Show targets
@@ -90,7 +90,7 @@ def launch_real_extraction():
         print(f"💀 Launching: {cmd}")
         print(f"🎯 Target: @{target}")
         print(f"👤 Using account: @{username}")
-        print("🌐 Traffic interceptor: Active on port 8080")
+        print("🌐 Traffic interceptor: Active on port 8082")
         print("📊 Database: data/real_operations.db")
         print()
         
@@ -102,7 +102,7 @@ def launch_real_extraction():
         print(f"   Database: real_operations.db")
         print("   Method: Advanced stealth extraction")
         print("   Rate limiting: Bypassed")
-        print("   Proxy: mitmproxy:8080")
+        print("   Proxy: mitmproxy:8082")
         print()
         
         # Update database
@@ -141,7 +141,7 @@ def check_interceptor_status():
     import socket
     try:
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        result = sock.connect_ex(('127.0.0.1', 8080))
+        result = sock.connect_ex(('127.0.0.1', 8082))
         sock.close()
         return result == 0
     except:
@@ -186,17 +186,17 @@ def start_real_traffic_interception():
     print("🌐 STARTING REAL TRAFFIC INTERCEPTION")
     print("="*45)
     print("🎯 Intercepting live ALX.Trading traffic...")
-    print("🔍 Proxy listening on port 8080")
+    print("🔍 Proxy listening on port 8082")
     print("💾 Real data saved to database")
     print()
-    print("⚠️  Configure your browser proxy to: 127.0.0.1:8080")
+    print("⚠️  Configure your browser proxy to: 127.0.0.1:8082")
     print("📱 Then browse to alx.trading to capture traffic")
     print()
     print("🚀 Starting mitmproxy...")
     
     try:
         subprocess.run(['mitmdump', '-s', 'real_alx_interceptor.py', 
-                       '--listen-port', '8080', '--set', 
+                       '--listen-port', '8082', '--set', 
                        'confdir=/workspaces/sugarglitch-realops/sessions/'],
                       cwd='/workspaces/sugarglitch-realops')
     except KeyboardInterrupt:
@@ -275,7 +275,7 @@ def combined_real_operation():
     print("🌐 Starting traffic interceptor...")
     interceptor_process = subprocess.Popen([
         'mitmdump', '-s', 'real_alx_interceptor.py', 
-        '--listen-port', '8080'
+        '--listen-port', '8082'
     ], cwd='/workspaces/sugarglitch-realops')
     
     print("✅ Traffic interceptor started (PID: {})".format(interceptor_process.pid))
