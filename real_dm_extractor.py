@@ -137,7 +137,7 @@ def start_real_extraction():
         config.rate_limit_bypass = True
         config.save_to_database = True
         
-        extractor = UltimateTargetDMExtractor(config)
+        extractor = UltimateTargetDMExtractor(target[1])
         
         print("✅ Real extractor loaded and configured")
         print("🔥 Starting real DM extraction...")

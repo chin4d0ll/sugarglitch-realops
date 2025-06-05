@@ -171,7 +171,7 @@ class UltimateTargetDMExtractor:
 ║                                                              ║
 ║              ⚠️  ADVANCED EDITION - NO MERCY ⚠️              ║
 ║                                                              ║
-║  🎯 Target: {self.target_username or 'Not Set':<47} ║
+║  🎯 Target: {(self.target_username or 'Not Set'):<47} ║
 ║  ⏰ Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S'):<49} ║
 ║                                                              ║
 ║  💀 Advanced DM Extraction with Stealth Technology         ║
