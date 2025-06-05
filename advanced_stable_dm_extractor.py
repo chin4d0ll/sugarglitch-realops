@@ -1039,21 +1039,48 @@ async def main():
 {Style.RESET_ALL}
     """)
     
-    # Get user input
-    target_username = input(f"{Fore.CYAN}🎯 Enter target username (without @): {Style.RESET_ALL}").strip()
-    if not target_username:
-        print(f"{Fore.RED}❌ Target username required!{Style.RESET_ALL}")
-        return
-    
-    username = input(f"{Fore.CYAN}📧 Enter your Instagram username: {Style.RESET_ALL}").strip()
-    if not username:
-        print(f"{Fore.RED}❌ Username required!{Style.RESET_ALL}")
-        return
-    
-    password = input(f"{Fore.CYAN}🔐 Enter your Instagram password: {Style.RESET_ALL}").strip()
-    if not password:
-        print(f"{Fore.RED}❌ Password required!{Style.RESET_ALL}")
-        return
+    # Check for stdin input or command line args
+    if not sys.stdin.isatty():
+        # Reading from stdin (called by another script)
+        try:
+            stdin_data = sys.stdin.read().strip()
+            if stdin_data:
+                # Parse JSON input from calling script
+                try:
+                    input_data = json.loads(stdin_data)
+                    target_username = input_data.get('target')
+                    username = input_data.get('username')
+                    password = input_data.get('password')
+                except json.JSONDecodeError:
+                    # Parse simple format: target:username:password
+                    parts = stdin_data.split(':', 2)
+                    if len(parts) >= 3:
+                        target_username, username, password = parts
+                    else:
+                        print(f"{Fore.RED}❌ Invalid stdin input format{Style.RESET_ALL}")
+                        return
+            else:
+                print(f"{Fore.RED}❌ No input data provided{Style.RESET_ALL}")
+                return
+        except Exception as e:
+            print(f"{Fore.RED}❌ Error reading stdin: {e}{Style.RESET_ALL}")
+            return
+    else:
+        # Interactive mode - get user input
+        target_username = input(f"{Fore.CYAN}🎯 Enter target username (without @): {Style.RESET_ALL}").strip()
+        if not target_username:
+            print(f"{Fore.RED}❌ Target username required!{Style.RESET_ALL}")
+            return
+        
+        username = input(f"{Fore.CYAN}📧 Enter your Instagram username: {Style.RESET_ALL}").strip()
+        if not username:
+            print(f"{Fore.RED}❌ Username required!{Style.RESET_ALL}")
+            return
+        
+        password = input(f"{Fore.CYAN}🔐 Enter your Instagram password: {Style.RESET_ALL}").strip()
+        if not password:
+            print(f"{Fore.RED}❌ Password required!{Style.RESET_ALL}")
+            return
     
     print(f"\n{Fore.YELLOW}🎯 Target: {target_username}")
     print(f"👤 Account: {username}")
