@@ -1,6 +1,33 @@
 from playwright.async_api import async_playwright
-import json, asyncio
+import json, asyncio, os
 from datetime import datetime
+
+def load_sessionid():
+    """โหลด sessionid จากไฟล์ที่บันทึกไว้"""
+    session_files = [
+        "current_sessionid.txt",
+        "extracted_session_config.json", 
+        "sessionid_alx_trading.txt"
+    ]
+    
+    for session_file in session_files:
+        if os.path.exists(session_file):
+            try:
+                if session_file.endswith('.json'):
+                    with open(session_file, 'r') as f:
+                        data = json.load(f)
+                        sessionid = data.get('sessionid', '')
+                else:
+                    with open(session_file, 'r') as f:
+                        sessionid = f.read().strip()
+                
+                if sessionid:
+                    print(f"✅ โหลด sessionid จาก {session_file}")
+                    return sessionid
+            except:
+                continue
+    
+    return None
 
 async def get_dms_from_alx_trading(sessionid: str):
     """ดึง DM จากบัญชี alx.trading โดยเฉพาะ"""
