@@ -1,0 +1,16 @@
+{
+  "extraction_summary": {
+    "scan_id": "ULTIMATE_DM_1749161291",
+    "target_username": "alx.trading",
+    "extraction_timestamp": "2025-06-05T22:08:19.624379",
+    "total_threads": 0,
+    "total_messages": 0,
+    "database_file": "ultimate_dm_extraction_1749161291.sqlite"
+  },
+  "thread_details": [],
+  "performance_metrics": {
+    "extraction_duration": 8.135249,
+    "messages_per_second": 0.0,
+    "success_rate": 0.0
+  }
+}
