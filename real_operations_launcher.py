@@ -9,6 +9,8 @@ import os
 import sys
 import sqlite3
 import json
+import subprocess
+import socket
 from datetime import datetime
 
 sys.path.append('/workspaces/sugarglitch-realops')
@@ -363,6 +365,20 @@ def configure_real_operation():
         print(f"  Proxy Rotation: {config.get('proxy_rotation', {}).get('enabled', 'unknown')}")
     else:
         print("⚠️  No configuration found - using defaults")
+
+def show_real_operations_menu():
+    """Display the real operations menu"""
+    print("\n" + "="*60)
+    print("🚨 REAL OPERATIONS LAUNCHER - LIVE MODE 🚨")
+    print("="*60)
+    print("1. Launch Real DM Extraction")
+    print("2. Start Real Traffic Interception")
+    print("3. View Real Target Intelligence")
+    print("4. Combined Real Operation (Full Attack)")
+    print("5. View Collected Real Data")
+    print("6. Configure Real Operation")
+    print("0. Exit")
+    print("="*60)
 
 def main():
     """Main launcher"""
