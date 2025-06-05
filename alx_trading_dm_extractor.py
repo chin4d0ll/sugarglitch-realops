@@ -165,7 +165,16 @@ async def main():
     print("🎯 Instagram DM Extractor - alx.trading")
     print("=" * 40)
     
-    sessionid = input("ใส่ sessionid ของคุณ: ").strip()
+    # ลองโหลด sessionid จากไฟล์
+    sessionid = load_sessionid()
+    
+    if not sessionid:
+        print("❌ ไม่พบ sessionid ที่บันทึกไว้")
+        print("💡 ลองรันคำสั่งนี้ก่อน: ./extract_session.sh")
+        print("หรือใส่ sessionid ด้วยตนเอง:")
+        sessionid = input("ใส่ sessionid ของคุณ: ").strip()
+    else:
+        print(f"✅ โหลด sessionid สำเร็จ: {sessionid[:15]}...")
     
     if not sessionid:
         print("❌ กรุณาใส่ sessionid")
