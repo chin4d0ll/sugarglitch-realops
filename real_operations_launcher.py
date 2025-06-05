@@ -148,7 +148,7 @@ def check_interceptor_status():
         return False
     
     # Show current real targets
-    conn = sqlite3.connect('data/project_operations.db')
+    conn = sqlite3.connect('data/real_operations.db')
     c = conn.cursor()
     c.execute('SELECT COUNT(*) FROM targets WHERE status = "active"')
     target_count = c.fetchone()[0]
@@ -196,8 +196,7 @@ def start_real_traffic_interception():
     
     try:
         subprocess.run(['mitmdump', '-s', 'real_alx_interceptor.py', 
-                       '--listen-port', '8082', '--set', 
-                       'confdir=/workspaces/sugarglitch-realops/sessions/'],
+                       '--listen-port', '8082'], 
                       cwd='/workspaces/sugarglitch-realops')
     except KeyboardInterrupt:
         print("\n⏹️  Traffic interception stopped")
