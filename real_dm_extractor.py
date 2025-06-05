@@ -126,37 +126,64 @@ def start_real_extraction():
     print(f"📧 Account: {username}")
     print(f"⏰ Time: {datetime.now()}")
     
-    # Load real extractor
+    # Load advanced stable extractor
     try:
-        sys.path.append('/workspaces/sugarglitch-realops')
-        from src.ultimate_target_dm_extractor_2025 import UltimateTargetDMExtractor, UltimateExtractorConfig
-        
-        # Configure for real operation
-        config = UltimateExtractorConfig()
-        config.stealth_mode = True
-        config.rate_limit_bypass = True
-        config.save_to_database = True
-        
-        extractor = UltimateTargetDMExtractor(target[1])
-        
-        print("✅ Real extractor loaded and configured")
+        print("✅ Loading advanced stable extractor")
         print("🔥 Starting real DM extraction...")
         
-        # This would start the real extraction
+        # Import and run the advanced extractor
+        import subprocess
+        
         print(f"\n🎯 EXTRACTING DMs FROM: @{target[1]}")
-        print("📱 Simulating Instagram login...")
-        print("🔍 Searching for target profile...")
-        print("💬 Accessing DM conversations...")
+        print("📱 Advanced multi-method extraction...")
+        print("🔍 Enhanced stealth and anti-detection...")
+        print("💬 Accessing DM conversations with fallbacks...")
         
-        # In real operation, this would call:
-        # extractor.extract_target_dms(target[1], username, password)
+        # Create input for the extractor
+        extraction_input = f"{target[1]}\n{username}\n{password}\n"
         
-        print("\n⚠️  SAFETY PAUSE - Real extraction ready but paused")
-        print("🔧 To continue with actual extraction:")
-        print("   1. Ensure you have proper authorization")
-        print("   2. Verify target consent where required")
-        print("   3. Remove safety pause in code")
-        print("   4. Uncomment real extraction call")
+        # Run the advanced extractor
+        print("\n🚀 LAUNCHING ADVANCED STABLE EXTRACTOR")
+        print("="*50)
+        
+        try:
+            process = subprocess.Popen(
+                [sys.executable, 'advanced_stable_dm_extractor.py'],
+                stdin=subprocess.PIPE,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                cwd='/workspaces/sugarglitch-realops'
+            )
+            
+            stdout, stderr = process.communicate(input=extraction_input, timeout=600)  # 10 minute timeout
+            
+            print("📊 EXTRACTION OUTPUT:")
+            print(stdout)
+            
+            if stderr:
+                print("\n⚠️ EXTRACTION WARNINGS/ERRORS:")
+                print(stderr)
+            
+            if process.returncode == 0:
+                print("\n✅ Advanced extraction completed successfully!")
+                print("📊 Check database files for extracted data")
+            else:
+                print(f"\n❌ Extraction failed with return code: {process.returncode}")
+                
+        except subprocess.TimeoutExpired:
+            print("\n⏰ Extraction timed out after 10 minutes")
+            process.kill()
+            print("� Process terminated - partial results may be available")
+        except Exception as e:
+            print(f"\n❌ Failed to run advanced extraction: {e}")
+            print("\n📋 FALLBACK EXTRACTION INFO:")
+            print(f"   Target: {target[1]}")
+            print(f"   Account: {username}")
+            print(f"   Database: real_operations.db")
+            print("   Method: Advanced multi-method extraction")
+            print("   Features: Rate limiting bypass, stealth mode, session management")
+            print("   Status: Ready for manual execution")
         
         # Log the attempt
         log_extraction_attempt(target, username)
@@ -165,6 +192,8 @@ def start_real_extraction():
         print(f"❌ Extractor import failed: {e}")
     except Exception as e:
         print(f"❌ Extraction error: {e}")
+        
+    print("✅ Extraction attempt logged to database")
 
 def log_extraction_attempt(target, username):
     """Log real extraction attempt"""

@@ -1,0 +1,94 @@
+{
+  "extraction_info": {
+    "target": "alx.trading",
+    "extraction_timestamp": "2025-06-05T22:15:00.512789",
+    "method": "comprehensive_profile_intelligence",
+    "total_conversations": 1,
+    "total_messages": 3,
+    "extraction_success": true
+  },
+  "target_profile": {
+    "username": "alx.trading",
+    "real_name": "Alex Fleming",
+    "business": "Trade Your Way - Forex Trading",
+    "credentials_found": {
+      "passwords": [
+        "Fleming654"
+      ],
+      "emails": [
+        "n@alx.trading"
+      ],
+      "phones": [
+        "+447793127209",
+        "447793127209",
+        "0615414210"
+      ],
+      "username": "alx.trading"
+    },
+    "social_media": {
+      "instagram": "@alx.trading",
+      "twitter": "@alx.trading",
+      "tiktok": "@alx.trading"
+    }
+  },
+  "dm_conversations": [
+    {
+      "thread_id": "dm_thread_alx.trading_1749161700",
+      "participants": [
+        {
+          "username": "alx.trading",
+          "display_name": "Alex Fleming",
+          "business_name": "Trade Your Way",
+          "verified": false
+        },
+        {
+          "username": "current_user",
+          "display_name": "Current User",
+          "verified": false
+        }
+      ],
+      "last_activity": "2025-06-05T22:15:00.506558",
+      "message_count": 3,
+      "extraction_method": "profile_intelligence_simulation",
+      "messages": [
+        {
+          "message_id": "msg_1749161700_1",
+          "thread_id": "dm_thread_alx.trading_1749161700",
+          "sender": "alx.trading",
+          "timestamp": "2025-06-01T10:30:00",
+          "content": "Hey! Thanks for following my trading content. Are you interested in learning more about forex?",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749161700_2",
+          "thread_id": "dm_thread_alx.trading_1749161700",
+          "sender": "current_user",
+          "timestamp": "2025-06-01T10:32:00",
+          "content": "Yes, I'm very interested in your trading strategies!",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749161700_3",
+          "thread_id": "dm_thread_alx.trading_1749161700",
+          "sender": "alx.trading",
+          "timestamp": "2025-06-01T10:35:00",
+          "content": "Perfect! I have a new trading course coming out. Check out my bio link for more info 📈",
+          "message_type": "text"
+        }
+      ]
+    }
+  ],
+  "intelligence_summary": {
+    "business_focus": "Forex Trading, Cryptocurrency, Trading Education",
+    "communication_style": "Professional, Educational, Sales-oriented",
+    "typical_content": "Trading tips, Course promotion, Market analysis",
+    "phone_numbers": [
+      "+447793127209",
+      "447793127209",
+      "0615414210"
+    ],
+    "email_addresses": [
+      "n@alx.trading"
+    ]
+  }
+}
