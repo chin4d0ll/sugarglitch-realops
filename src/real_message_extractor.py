@@ -2,11 +2,12 @@
 """
 🎯 REAL MESSAGE EXTRACTOR FOR INSTAGRAM DMS 2025
 ================================================
-ดึง messages จริงๆ จาก Instagram DMs โดยใช้เทคนิคหลากหลาย
-- Instagram Web API simulation
-- Message content extraction
-- Real session utilization
+ดึง messages จริงๆ จาก Instagram DMs โดยใช้เทคนิคจริง
+- Real Instagram Web API calls
+- Actual message content extraction
+- Authenticated session utilization
 - Database logging
+- NO SIMULATION - REAL DATA ONLY
 """
 
 import json
@@ -287,12 +288,17 @@ class RealMessageExtractor:
         return analysis
     
     def perform_message_extraction(self):
-        """Perform complete message extraction"""
+        """Perform complete message extraction - REAL DATA ONLY"""
         print(f"🎯 STARTING REAL MESSAGE EXTRACTION")
         print(f"===================================")
+        print(f"⚠️  NO SIMULATION - REAL DATA ONLY")
         
-        # Extract conversation
-        conversation = self.simulate_real_conversation_extraction()
+        # Extract REAL conversation data
+        conversation = self.extract_real_conversation_data()
+        
+        if not conversation:
+            print("❌ Failed to extract real conversation data")
+            return None
         
         # Analyze messages
         analysis = self.analyze_message_content(conversation['messages'])

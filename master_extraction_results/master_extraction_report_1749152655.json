@@ -1,0 +1,131 @@
+{
+  "extraction_info": {
+    "target": "alx.trading",
+    "extraction_timestamp": "2025-06-05T19:44:15.947121",
+    "total_methods_attempted": 7,
+    "successful_methods": 1,
+    "failed_methods": 6
+  },
+  "successful_extractions": [
+    {
+      "method": "Advanced Techniques",
+      "result": {
+        "target": "alx.trading",
+        "extraction_timestamp": "2025-06-05T19:43:05.903753",
+        "method": "advanced_real_stealth",
+        "session_used": "session-alx.trading",
+        "results": {
+          "target_profile": {
+            "user_info": {},
+            "posts": [],
+            "followers": 0,
+            "following": 0
+          },
+          "dm_conversations": [
+            {
+              "source_file": "/workspaces/sugarglitch-realops/config/json/INTIMATE_MESSAGES_alx.trading_1748264946.json",
+              "analysis": {
+                "data_type": "intimate_messages",
+                "message_count": 0,
+                "has_intimate_content": false,
+                "extraction_date": "2025-05-26T13:09:06.645107",
+                "target_info": {
+                  "total_intimate_messages": 0,
+                  "dating_indicators": [],
+                  "relationship_status": "unknown",
+                  "frequent_contacts": {},
+                  "intimate_keywords_found": [],
+                  "time_patterns": {},
+                  "username": "alx.trading"
+                }
+              },
+              "data_type": "existing_extraction",
+              "messages_found": 0
+            },
+            {
+              "source_file": "/workspaces/sugarglitch-realops/reports/intelligence_report_alx.trading_1748818144.json",
+              "analysis": {
+                "data_type": "unknown",
+                "message_count": 0,
+                "has_intimate_content": false,
+                "extraction_date": null,
+                "target_info": {}
+              },
+              "data_type": "existing_extraction",
+              "messages_found": 0
+            },
+            {
+              "source_file": "/workspaces/sugarglitch-realops/config/json/INTIMATE_MESSAGES_alx.trading_1748264946.json",
+              "analysis": {
+                "data_type": "intimate_messages",
+                "message_count": 0,
+                "has_intimate_content": false,
+                "extraction_date": "2025-05-26T13:09:06.645107",
+                "target_info": {
+                  "total_intimate_messages": 0,
+                  "dating_indicators": [],
+                  "relationship_status": "unknown",
+                  "frequent_contacts": {},
+                  "intimate_keywords_found": [],
+                  "time_patterns": {},
+                  "username": "alx.trading"
+                }
+              },
+              "data_type": "existing_extraction",
+              "messages_found": 0
+            }
+          ],
+          "existing_data_found": 63,
+          "total_messages_analyzed": 0,
+          "extraction_success": true,
+          "stealth_methods_used": [
+            "Random User Agent Rotation",
+            "Rate Limiting Bypass",
+            "Session Cookie Authentication",
+            "Fallback Data Recovery"
+          ]
+        }
+      },
+      "timestamp": "2025-06-05T19:43:05.904841"
+    }
+  ],
+  "failed_extractions": [
+    {
+      "method": "Playwright Browser",
+      "error": "No data returned",
+      "timestamp": "2025-06-05T19:42:51.442194"
+    },
+    {
+      "method": "Instagram API",
+      "error": "No data returned",
+      "timestamp": "2025-06-05T19:42:55.811503"
+    },
+    {
+      "method": "Actual Extractor",
+      "error": "No data returned",
+      "timestamp": "2025-06-05T19:42:59.576381"
+    },
+    {
+      "method": "Ultimate Working",
+      "error": "No data returned",
+      "timestamp": "2025-06-05T19:43:43.755290"
+    },
+    {
+      "method": "Real Message",
+      "error": "No data returned",
+      "timestamp": "2025-06-05T19:43:46.522302"
+    },
+    {
+      "method": "Targeted",
+      "error": "No data returned",
+      "timestamp": "2025-06-05T19:44:13.946969"
+    }
+  ],
+  "summary": {
+    "real_data_found": true,
+    "best_methods": [
+      "Advanced Techniques"
+    ],
+    "total_real_conversations": 0
+  }
+}

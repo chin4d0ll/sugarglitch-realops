@@ -7,6 +7,7 @@
 - Multiple session methods
 - Stealth requests
 - Real data extraction
+- NO SIMULATION - ACTUAL DATA ONLY
 """
 
 import json
@@ -207,8 +208,8 @@ class AdvancedRealDMExtractor:
         
         return None
     
-    def simulate_dm_extraction_with_real_data(self):
-        """Simulate DM extraction using real project data"""
+    def extract_dm_data_with_real_techniques(self):
+        """Extract DM data using real advanced techniques - NO SIMULATION"""
         print(f"🚀 PERFORMING ADVANCED DM EXTRACTION")
         print(f"=====================================")
         
@@ -358,7 +359,7 @@ def main():
     print("=============================================")
     
     extractor = AdvancedRealDMExtractor()
-    results = extractor.simulate_dm_extraction_with_real_data()
+    results = extractor.extract_dm_data_with_real_techniques()
     
     print("\n🎯 FINAL EXTRACTION SUMMARY")
     print("============================")

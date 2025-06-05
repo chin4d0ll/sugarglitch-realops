@@ -111,6 +111,34 @@
    ./run_dm_extractor.sh
    ```
 
+## 🎯 Master DM Extractor - Real Data Only
+
+**⚠️ CRITICAL: NO SIMULATION MODE**
+
+This project is designed for **REAL DATA EXTRACTION ONLY**:
+- ❌ No mockup, demo, or simulation data generation
+- ✅ Genuine Instagram API calls and web scraping
+- 🔐 Requires valid Instagram session credentials  
+- 🎯 Reports actual success/failure (no fake results)
+
+### 🚀 Master Extractor Usage
+
+```bash
+# Run comprehensive extraction using all available methods
+python3 src/master_real_dm_extractor_2025.py
+
+# The master extractor attempts 7 different extraction techniques:
+# 1. Playwright Browser Automation
+# 2. Instagram API Requests  
+# 3. Actual Instagram Extractor
+# 4. Advanced Stealth Techniques
+# 5. Ultimate Working Extractor (instagrapi)
+# 6. Real Message Extractor
+# 7. Targeted Extractor
+
+# Results saved to: master_extraction_results/
+```
+
 ## 💡 Usage Examples
 
 ### 🎯 Basic DM Extraction

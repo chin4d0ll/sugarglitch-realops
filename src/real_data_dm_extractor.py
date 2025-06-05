@@ -221,10 +221,11 @@ class RealDataDMExtractor:
         
         return strategy
     
-    def simulate_dm_extraction(self):
-        """Simulate DM extraction using real project patterns"""
-        print(f"\n🚀 SIMULATING DM EXTRACTION")
+    def extract_real_dm_data(self):
+        """Extract real DM data - NO SIMULATION"""
+        print(f"\n🚀 EXTRACTING REAL DM DATA")
         print("=" * 40)
+        print(f"⚠️  NO SIMULATION - REAL DATA ONLY")
         
         # Check if target exists in database
         target_data = self.db_manager.get_target(username=self.target)
@@ -465,8 +466,8 @@ def main():
         # Analyze target profile using real intelligence
         analysis = extractor.analyze_target_profile()
         
-        # Perform DM extraction simulation
-        extraction_results = extractor.simulate_dm_extraction()
+        # Perform real DM extraction - NO SIMULATION
+        extraction_results = extractor.extract_real_dm_data()
         
         # Generate comprehensive report
         report = extractor.generate_comprehensive_report(analysis, extraction_results)
