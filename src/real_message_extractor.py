@@ -51,122 +51,173 @@ class RealMessageExtractor:
             print(f"⚠️ Session error: {e}")
             return None
     
-    def generate_sample_messages(self):
-        """Generate sample messages based on target profile for demonstration"""
-        
-        # Sample message patterns based on trading theme
-        sample_messages = [
-            {
-                "id": str(uuid.uuid4()),
-                "sender": "alx.trading",
-                "recipient": "current_user",
-                "text": "Hey! Have you seen the market today? 📈",
-                "timestamp": (datetime.now() - timedelta(hours=2)).isoformat(),
-                "message_type": "text",
-                "read": True,
-                "reactions": []
-            },
-            {
-                "id": str(uuid.uuid4()),
-                "sender": "current_user", 
-                "recipient": "alx.trading",
-                "text": "Yes! Bitcoin is going crazy. What do you think about this pattern?",
-                "timestamp": (datetime.now() - timedelta(hours=1, minutes=45)).isoformat(),
-                "message_type": "text",
-                "read": True,
-                "reactions": ["👍"]
-            },
-            {
-                "id": str(uuid.uuid4()),
-                "sender": "alx.trading",
-                "recipient": "current_user", 
-                "text": "I think we're seeing a classic breakout pattern. Look at this chart 📊",
-                "timestamp": (datetime.now() - timedelta(hours=1, minutes=30)).isoformat(),
-                "message_type": "text",
-                "read": True,
-                "reactions": [],
-                "attachments": [
-                    {
-                        "type": "image",
-                        "url": "https://example.com/chart.jpg",
-                        "description": "Bitcoin chart analysis"
-                    }
-                ]
-            },
-            {
-                "id": str(uuid.uuid4()),
-                "sender": "alx.trading",
-                "recipient": "current_user",
-                "text": "Want to join my private trading group? We share signals there 💰",
-                "timestamp": (datetime.now() - timedelta(hours=1)).isoformat(),
-                "message_type": "text", 
-                "read": True,
-                "reactions": []
-            },
-            {
-                "id": str(uuid.uuid4()),
-                "sender": "current_user",
-                "recipient": "alx.trading",
-                "text": "That sounds interesting! How does it work?",
-                "timestamp": (datetime.now() - timedelta(minutes=45)).isoformat(),
-                "message_type": "text",
-                "read": True,
-                "reactions": []
-            },
-            {
-                "id": str(uuid.uuid4()),
-                "sender": "alx.trading", 
-                "recipient": "current_user",
-                "text": "We analyze trends together and share profitable setups. It's been working great! 🚀",
-                "timestamp": (datetime.now() - timedelta(minutes=30)).isoformat(),
-                "message_type": "text",
-                "read": False,
-                "reactions": []
-            }
-        ]
-        
-        return sample_messages
+    def load_session_data(self):
+        """Load real session data from files"""
+        try:
+            # Try loading from session file
+            session_file = "sessions/session-alx.trading"
+            if os.path.exists(session_file):
+                with open(session_file, 'r') as f:
+                    session_data = json.load(f)
+                    cookies = session_data.get('cookies', {})
+                    print(f"✅ Loaded session from {session_file}")
+                    return cookies
+                    
+            # Try loading from data/sessions
+            session_file = "data/sessions/session_example.json"
+            if os.path.exists(session_file):
+                with open(session_file, 'r') as f:
+                    session_data = json.load(f)
+                    print(f"✅ Loaded session from {session_file}")
+                    return session_data
+                    
+            print("⚠️ No session file found")
+            return None
+            
+        except Exception as e:
+            print(f"❌ Error loading session: {e}")
+            return None
     
-    def simulate_real_conversation_extraction(self):
-        """Simulate extraction of real conversation"""
-        print(f"\n🚀 EXTRACTING REAL MESSAGES")
+    def extract_real_conversation_data(self):
+        """Extract REAL conversation data from Instagram using authenticated session"""
+        print(f"\n🚀 EXTRACTING REAL MESSAGES FROM INSTAGRAM")
         print(f"===============================")
         
-        # Get sample messages (representing real extracted data)
-        messages = self.generate_sample_messages()
-        
-        # Create conversation structure
-        conversation = {
-            "conversation_id": f"dm_thread_{self.target}_{int(time.time())}",
-            "participants": [
-                {
-                    "username": self.target,
-                    "user_id": "123456789",
-                    "profile_pic": f"https://instagram.com/{self.target}/profile.jpg"
-                },
-                {
-                    "username": "current_user", 
-                    "user_id": "987654321",
-                    "profile_pic": "https://instagram.com/current_user/profile.jpg"
+        # Try to load real session data
+        session_data = self.load_session_data()
+        if not session_data:
+            print("❌ No valid session data available")
+            return None
+            
+        # Create authenticated HTTP session
+        try:
+            import requests
+            session = requests.Session()
+            
+            # Set Instagram headers
+            session.headers.update({
+                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15',
+                'Accept': '*/*',
+                'Accept-Language': 'en-US,en;q=0.5',
+                'Accept-Encoding': 'gzip, deflate',
+                'X-Requested-With': 'XMLHttpRequest',
+                'X-CSRFToken': session_data.get('csrftoken', ''),
+                'X-Instagram-AJAX': '1',
+                'Referer': 'https://www.instagram.com/',
+                'Origin': 'https://www.instagram.com'
+            })
+            
+            # Set cookies
+            if 'sessionid' in session_data:
+                session.cookies.set('sessionid', session_data['sessionid'], domain='.instagram.com')
+            if 'csrftoken' in session_data:
+                session.cookies.set('csrftoken', session_data['csrftoken'], domain='.instagram.com')
+            
+            # Test session validity
+            test_response = session.get('https://www.instagram.com/api/v1/users/web_profile_info/?username=' + self.target)
+            
+            if test_response.status_code == 200:
+                print(f"✅ Session valid - accessing {self.target} profile")
+                profile_data = test_response.json()
+                
+                # Try to get direct messages
+                dm_response = session.get('https://www.instagram.com/api/v1/direct_v2/inbox/')
+                
+                if dm_response.status_code == 200:
+                    dm_data = dm_response.json()
+                    return self.process_real_dm_data(dm_data, profile_data)
+                else:
+                    print(f"⚠️ Cannot access DMs (status: {dm_response.status_code})")
+                    return self.create_profile_based_conversation(profile_data)
+            else:
+                print(f"❌ Session invalid or expired (status: {test_response.status_code})")
+                return None
+                
+        except Exception as e:
+            print(f"❌ Error accessing Instagram: {e}")
+            return None
+    
+    def process_real_dm_data(self, dm_data, profile_data):
+        """Process real DM data from Instagram API"""
+        try:
+            conversations = []
+            inbox = dm_data.get('inbox', {})
+            threads = inbox.get('threads', [])
+            
+            for thread in threads:
+                # Look for conversations with target user
+                users = thread.get('users', [])
+                target_in_thread = any(user.get('username') == self.target for user in users)
+                
+                if target_in_thread:
+                    messages = []
+                    for item in thread.get('items', []):
+                        if item.get('item_type') == 'text':
+                            messages.append({
+                                "id": item.get('item_id'),
+                                "user_id": item.get('user_id'),
+                                "text": item.get('text', ''),
+                                "timestamp": datetime.fromtimestamp(item.get('timestamp', 0) / 1000000).isoformat()
+                            })
+                    
+                    conversation = {
+                        "conversation_id": f"real_thread_{thread.get('thread_id')}",
+                        "participants": [user.get('username') for user in users],
+                        "messages": messages,
+                        "conversation_metadata": {
+                            "thread_type": thread.get('thread_type'),
+                            "last_activity_at": datetime.fromtimestamp(thread.get('last_activity_at', 0) / 1000000).isoformat(),
+                            "total_messages": len(messages),
+                            "is_group": thread.get('is_group', False)
+                        }
+                    }
+                    conversations.append(conversation)
+            
+            if conversations:
+                print(f"✅ Found {len(conversations)} real conversations with {self.target}")
+                return conversations[0]  # Return first conversation
+            else:
+                print(f"ℹ️ No direct conversations found with {self.target}")
+                return self.create_profile_based_conversation(profile_data)
+                
+        except Exception as e:
+            print(f"❌ Error processing DM data: {e}")
+            return None
+    
+    def create_profile_based_conversation(self, profile_data):
+        """Create conversation structure based on real profile data"""
+        try:
+            user_data = profile_data.get('data', {}).get('user', {})
+            
+            conversation = {
+                "conversation_id": f"profile_based_{self.target}_{int(time.time())}",
+                "participants": [
+                    {
+                        "username": self.target,
+                        "user_id": user_data.get('id'),
+                        "full_name": user_data.get('full_name'),
+                        "profile_pic_url": user_data.get('profile_pic_url'),
+                        "is_verified": user_data.get('is_verified', False),
+                        "follower_count": user_data.get('edge_followed_by', {}).get('count', 0),
+                        "following_count": user_data.get('edge_follow', {}).get('count', 0)
+                    }
+                ],
+                "messages": [],
+                "conversation_metadata": {
+                    "created_at": datetime.now().isoformat(),
+                    "total_messages": 0,
+                    "conversation_type": "profile_based",
+                    "profile_access": "successful",
+                    "profile_data_extracted": True
                 }
-            ],
-            "messages": messages,
-            "conversation_metadata": {
-                "created_at": (datetime.now() - timedelta(days=7)).isoformat(),
-                "last_message_at": datetime.now().isoformat(),
-                "total_messages": len(messages),
-                "unread_count": sum(1 for msg in messages if not msg.get('read', True)),
-                "conversation_type": "direct",
-                "message_themes": [
-                    "trading_discussion",
-                    "market_analysis", 
-                    "investment_opportunities",
-                    "group_invitation"
-                ]
             }
-        }
-        
-        return conversation
+            
+            print(f"✅ Created profile-based conversation structure for {self.target}")
+            return conversation
+            
+        except Exception as e:
+            print(f"❌ Error creating profile-based conversation: {e}")
+            return None
     
     def analyze_message_content(self, messages):
         """Analyze extracted message content"""
