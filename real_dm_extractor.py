@@ -15,7 +15,7 @@ import getpass
 
 def get_real_targets():
     """Get list of real ALX.Trading targets"""
-    conn = sqlite3.connect('data/project_operations.db')
+    conn = sqlite3.connect('data/real_operations.db')
     c = conn.cursor()
     
     c.execute('''SELECT id, username, full_name, target_type, notes 
@@ -159,7 +159,7 @@ def start_real_extraction():
 
 def log_extraction_attempt(target, username):
     """Log real extraction attempt"""
-    conn = sqlite3.connect('data/project_operations.db')
+    conn = sqlite3.connect('data/real_operations.db')
     c = conn.cursor()
     
     # Create extraction log table if not exists
