@@ -1,0 +1,73 @@
+2025-06-02 23:40:32,652 - INFO - 🚀 Ultimate Working DM Extractor 2025 initialized
+2025-06-02 23:40:32,652 - INFO - 🚀 Starting Ultimate DM Extraction...
+2025-06-02 23:40:32,652 - INFO - 🔄 Trying Fresh Instagrapi Login...
+2025-06-02 23:40:32,653 - INFO - 🔄 Method 1: Attempting fresh instagrapi login...
+2025-06-02 23:40:32,653 - INFO - 🔐 Attempting fresh login with backup passwords...
+2025-06-02 23:40:32,653 - INFO - Trying password 1/6: Flem***
+2025-06-02 23:40:33,807 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-06-02 23:40:34,119 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:35,946 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-06-02 23:40:36,939 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:36,939 - WARNING - Password Flem*** failed: You can log in with your linked Facebook account. If you are sure that the password is correct, then change your IP address, because it is added to the blacklist of the Instagram Server
+2025-06-02 23:40:36,939 - INFO - Trying password 2/6: Flem***
+2025-06-02 23:40:39,886 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-06-02 23:40:40,130 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:42,591 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-06-02 23:40:43,203 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:43,204 - WARNING - Password Flem*** failed: You can log in with your linked Facebook account. If you are sure that the password is correct, then change your IP address, because it is added to the blacklist of the Instagram Server
+2025-06-02 23:40:43,204 - INFO - Trying password 3/6: Flem***
+2025-06-02 23:40:44,719 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-06-02 23:40:44,964 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:47,453 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-06-02 23:40:48,079 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:48,080 - WARNING - Password Flem*** failed: You can log in with your linked Facebook account. If you are sure that the password is correct, then change your IP address, because it is added to the blacklist of the Instagram Server
+2025-06-02 23:40:48,080 - INFO - Trying password 4/6: Flem***
+2025-06-02 23:40:50,820 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-06-02 23:40:51,111 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:53,802 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-06-02 23:40:54,360 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:54,360 - WARNING - Password Flem*** failed: You can log in with your linked Facebook account. If you are sure that the password is correct, then change your IP address, because it is added to the blacklist of the Instagram Server
+2025-06-02 23:40:54,360 - INFO - Trying password 5/6: Flem***
+2025-06-02 23:40:56,892 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-06-02 23:40:57,174 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:40:59,276 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-06-02 23:41:00,210 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:41:00,210 - WARNING - Password Flem*** failed: You can log in with your linked Facebook account. If you are sure that the password is correct, then change your IP address, because it is added to the blacklist of the Instagram Server
+2025-06-02 23:41:00,211 - INFO - Trying password 6/6: Flem***
+2025-06-02 23:41:01,852 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-06-02 23:41:02,157 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:41:03,916 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-06-02 23:41:04,547 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:41:04,547 - WARNING - Password Flem*** failed: You can log in with your linked Facebook account. If you are sure that the password is correct, then change your IP address, because it is added to the blacklist of the Instagram Server
+2025-06-02 23:41:04,548 - ERROR - ❌ Fresh Instagrapi Login authentication failed
+2025-06-02 23:41:04,548 - INFO - 🔄 Trying Browser Automation...
+2025-06-02 23:41:04,548 - INFO - 🌐 Method 2: Starting browser automation...
+2025-06-02 23:41:04,548 - INFO - ====== WebDriver manager ======
+2025-06-02 23:41:04,559 - INFO - Get LATEST chromedriver version for google-chrome
+2025-06-02 23:41:04,582 - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+2025-06-02 23:41:04,592 - INFO - Driver downloading response is 200
+2025-06-02 23:41:04,644 - INFO - Get LATEST chromedriver version for google-chrome
+2025-06-02 23:41:04,780 - INFO - Get LATEST chromedriver version for google-chrome
+2025-06-02 23:41:04,798 - INFO - Driver has been saved in cache [/home/codespace/.wdm/drivers/chromedriver/linux64/114.0.5735.90]
+2025-06-02 23:41:04,952 - ERROR - ❌ Method 2 failed: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5c38a4d0bc4a <unknown>
+#1 0x5c38a47b16e0 <unknown>
+#2 0x5c38a47ec0b2 <unknown>
+#3 0x5c38a47e724f <unknown>
+#4 0x5c38a48378b6 <unknown>
+#5 0x5c38a4836f76 <unknown>
+#6 0x5c38a4828c03 <unknown>
+#7 0x5c38a47f547b <unknown>
+#8 0x5c38a47f60e1 <unknown>
+#9 0x5c38a4cd03fb <unknown>
+#10 0x5c38a4cd432f <unknown>
+#11 0x5c38a4cb7f39 <unknown>
+#12 0x5c38a4cd4ec8 <unknown>
+#13 0x5c38a4c9c68f <unknown>
+#14 0x5c38a4cf92b8 <unknown>
+#15 0x5c38a4cf9496 <unknown>
+#16 0x5c38a4d0ab26 <unknown>
+#17 0x798229e48609 start_thread
+
+2025-06-02 23:41:04,953 - ERROR - ❌ Browser Automation authentication failed

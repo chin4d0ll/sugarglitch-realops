@@ -1,0 +1,42 @@
+2025-06-02 23:36:21,264 - INFO - 🚀 Ultimate Working DM Extractor 2025 initialized
+2025-06-02 23:36:21,264 - INFO - 🚀 Starting Ultimate DM Extraction...
+2025-06-02 23:36:21,264 - INFO - 🔄 Trying Fresh Instagrapi Login...
+2025-06-02 23:36:21,264 - INFO - 🔄 Method 1: Attempting fresh instagrapi login...
+2025-06-02 23:36:21,265 - INFO - 🔐 Attempting fresh login...
+2025-06-02 23:36:24,068 - INFO - https://i.instagram.com/api/v1/launcher/sync/
+2025-06-02 23:36:24,903 - INFO - alx.trading [200] POST https://i.instagram.com/api/v1/launcher/sync/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:36:28,556 - INFO - https://i.instagram.com/api/v1/accounts/login/
+2025-06-02 23:36:29,267 - INFO - alx.trading [400] POST https://i.instagram.com/api/v1/accounts/login/ (203.0.0.29.118, samsung galaxy_s8)
+2025-06-02 23:36:29,267 - ERROR - ❌ Bad password - credentials may be incorrect
+2025-06-02 23:36:29,268 - ERROR - ❌ Fresh Instagrapi Login authentication failed
+2025-06-02 23:36:29,268 - INFO - 🔄 Trying Browser Automation...
+2025-06-02 23:36:29,268 - INFO - 🌐 Method 2: Starting browser automation...
+2025-06-02 23:36:29,268 - INFO - ====== WebDriver manager ======
+2025-06-02 23:36:29,279 - INFO - Get LATEST chromedriver version for google-chrome
+2025-06-02 23:36:29,289 - INFO - About to download new driver from https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+2025-06-02 23:36:29,299 - INFO - Driver downloading response is 200
+2025-06-02 23:36:29,337 - INFO - Get LATEST chromedriver version for google-chrome
+2025-06-02 23:36:29,471 - INFO - Get LATEST chromedriver version for google-chrome
+2025-06-02 23:36:29,487 - INFO - Driver has been saved in cache [/home/codespace/.wdm/drivers/chromedriver/linux64/114.0.5735.90]
+2025-06-02 23:36:29,645 - ERROR - ❌ Method 2 failed: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5c7cc9b0dc4a <unknown>
+#1 0x5c7cc95b36e0 <unknown>
+#2 0x5c7cc95ee0b2 <unknown>
+#3 0x5c7cc95e924f <unknown>
+#4 0x5c7cc96398b6 <unknown>
+#5 0x5c7cc9638f76 <unknown>
+#6 0x5c7cc962ac03 <unknown>
+#7 0x5c7cc95f747b <unknown>
+#8 0x5c7cc95f80e1 <unknown>
+#9 0x5c7cc9ad23fb <unknown>
+#10 0x5c7cc9ad632f <unknown>
+#11 0x5c7cc9ab9f39 <unknown>
+#12 0x5c7cc9ad6ec8 <unknown>
+#13 0x5c7cc9a9e68f <unknown>
+#14 0x5c7cc9afb2b8 <unknown>
+#15 0x5c7cc9afb496 <unknown>
+#16 0x5c7cc9b0cb26 <unknown>
+#17 0x70497ab3a609 start_thread
+
+2025-06-02 23:36:29,645 - ERROR - ❌ Browser Automation authentication failed
