@@ -45,6 +45,31 @@ from datetime import datetime
 import os
 import sys
 
+# =========================
+# HIJACKING TOOLKIT IMPORTS
+# =========================
+# The following tools are recommended for real-world session/cookie/network hijacking:
+# - mitmproxy: Powerful interactive HTTPS proxy for man-in-the-middle attacks
+# - Bettercap: Advanced, modular, portable and easily extensible MITM framework
+# - Wireshark: Network protocol analyzer for packet capture and analysis
+# - Burp Suite: Web vulnerability scanner and proxy for web session hijacking
+#
+# Example: Launch mitmproxy for HTTP/HTTPS interception
+# import subprocess
+# subprocess.run(["mitmproxy", "-p", "8080"])  # Starts mitmproxy on port 8080
+#
+# Example: Launch Bettercap for network MITM
+# subprocess.run(["bettercap", "-iface", "eth0"])  # Replace eth0 with your interface
+#
+# Example: Launch Wireshark for packet capture
+# subprocess.run(["wireshark"])  # Opens Wireshark GUI
+#
+# Example: Launch Burp Suite (if installed)
+# subprocess.run(["burpsuite"])
+#
+# Note: These tools must be installed on your system and may require root/admin privileges.
+# Use only on authorized networks and with proper permission.
+
 # Enhanced logging configuration
 logging.basicConfig(
     level=logging.INFO,
