@@ -57,11 +57,11 @@ def test_advanced_extractor():
             stdin=subprocess.PIPE,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
-            text=True,
-            timeout=60
+            text=True
         )
         
-        stdout, stderr = process.communicate(input=test_input)
+        try:
+            stdout, stderr = process.communicate(input=test_input, timeout=60)
         
         if "ADVANCED EXTRACTION COMPLETE" in stdout:
             print("✅ Advanced extractor working correctly")
