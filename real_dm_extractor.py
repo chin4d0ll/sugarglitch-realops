@@ -18,8 +18,8 @@ def get_real_targets():
     conn = sqlite3.connect('data/real_operations.db')
     c = conn.cursor()
     
-    c.execute('''SELECT id, username, full_name, target_type, notes 
-                 FROM targets WHERE status = "active" 
+    c.execute('''SELECT id, username, target_type, platform, notes 
+                 FROM real_targets WHERE status = "active" 
                  ORDER BY priority, target_type''')
     targets = c.fetchall()
     conn.close()
@@ -38,16 +38,25 @@ def select_real_target():
             'support_channel': '🛠️',
             'signals_channel': '📊',
             'alx.trading': '💰'
-        }.get(target[3], '👤')
+        }.get(target[2], '👤')
         
-        print(f"{i}. {target_type_emoji} {target[2]} (@{target[1]})")
-        print(f"   Type: {target[3]}")
+        print(f"{i}. {target_type_emoji} {target[1]} (@{target[1]})")
+        print(f"   Type: {target[2]}")
         if target[4]:
             print(f"   Notes: {target[4]}")
         print()
     
     while True:
         try:
+            choice = int(input(f"Select target (1-{len(targets)}): "))
+            if 1 <= choice <= len(targets):
+                return targets[choice - 1]
+            else:
+                print("❌ Invalid selection!")
+        except ValueError:
+            print("❌ Please enter a number")
+        except KeyboardInterrupt:
+            return None
             choice = int(input(f"Select target (1-{len(targets)}): ")) - 1
             if 0 <= choice < len(targets):
                 return targets[choice]
