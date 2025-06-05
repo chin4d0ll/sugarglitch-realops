@@ -257,18 +257,16 @@ class UltimateTargetDMExtractor:
         except Exception as e:
             self.log(f"❌ Database initialization failed: {e}", "ERROR")
     
-    def setup_stealth_browser(self) -> webdriver.Chrome:
-        """🎭 Setup stealth browser with advanced anti-detection"""
+    def setup_stealth_browser(self) -> 'webdriver.Chrome':
+        """🎭 Setup stealth browser with advanced anti-detection and unique user data dir"""
         try:
             chrome_options = Options()
-            
             # Basic stealth options
             chrome_options.add_argument("--no-sandbox")
             chrome_options.add_argument("--disable-dev-shm-usage")
             chrome_options.add_argument("--disable-blink-features=AutomationControlled")
             chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
             chrome_options.add_experimental_option('useAutomationExtension', False)
-            
             # Advanced stealth options
             chrome_options.add_argument("--disable-web-security")
             chrome_options.add_argument("--disable-features=VizDisplayCompositor")
@@ -276,55 +274,46 @@ class UltimateTargetDMExtractor:
             chrome_options.add_argument("--disable-plugins")
             chrome_options.add_argument("--disable-images")
             chrome_options.add_argument("--disable-javascript")
-            
             # Randomize window size
             window_sizes = [
                 "--window-size=1366,768",
-                "--window-size=1920,1080", 
+                "--window-size=1920,1080",
                 "--window-size=1440,900",
                 "--window-size=1280,720"
             ]
             chrome_options.add_argument(random.choice(window_sizes))
-            
             # Random user agent
             user_agent = random.choice(UltimateExtractorConfig.BROWSER_USER_AGENTS)
             chrome_options.add_argument(f"--user-agent={user_agent}")
-            
+            # Add unique user data dir to avoid session conflict
+            unique_user_data_dir = f"/tmp/ig_chrome_userdata_{int(time.time() * 1000)}_{random.randint(1000,9999)}"
+            chrome_options.add_argument(f"--user-data-dir={unique_user_data_dir}")
             # Create driver
             driver = webdriver.Chrome(options=chrome_options)
-            
             # Execute stealth scripts
             stealth_script = """
                 Object.defineProperty(navigator, 'webdriver', {
                     get: () => undefined,
                 });
-                
                 Object.defineProperty(navigator, 'plugins', {
                     get: () => [1, 2, 3, 4, 5],
                 });
-                
                 Object.defineProperty(navigator, 'languages', {
                     get: () => ['en-US', 'en'],
                 });
-                
                 Object.defineProperty(screen, 'width', {
                     get: () => Math.floor(Math.random() * 1000) + 1200,
                 });
-                
                 Object.defineProperty(screen, 'height', {
                     get: () => Math.floor(Math.random() * 500) + 700,
                 });
-                
                 window.chrome = {
                     runtime: {},
                 };
             """
-            
             driver.execute_script(stealth_script)
-            
             self.log("🎭 Stealth browser setup complete", "STEALTH")
             return driver
-            
         except Exception as e:
             self.log(f"❌ Browser setup failed: {e}", "ERROR")
             return None
@@ -805,15 +794,13 @@ class UltimateTargetDMExtractor:
 
 async def main():
     """🚀 Main execution function"""
-    print(f"""
-{Fore.RED + Style.BRIGHT}
+    print("""
 💀🔥 ULTIMATE TARGET DM EXTRACTOR 2025 🔥💀
 ================================================
 🎯 Advanced DM extraction from specific targets
 💀 Rate limiting bypass & stealth technology
 ⚡ Multi-method extraction with fallbacks
 🛡️ Database storage & comprehensive reporting
-{Style.RESET_ALL}
     """)
     
     # Get user input
