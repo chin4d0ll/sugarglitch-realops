@@ -31,10 +31,18 @@ def test_extractor_components():
     
     # Test imports
     try:
-        from src.ultimate_target_dm_extractor_2025 import UltimateExtractor, RateLimitBypass
+        from src.ultimate_target_dm_extractor_2025 import UltimateTargetDMExtractor, UltimateExtractorConfig
         print("✅ Core extractor classes imported successfully")
+        
+        # Test class instantiation
+        config = UltimateExtractorConfig()
+        print("✅ Extractor configuration initialized")
+        
     except ImportError as e:
         print(f"❌ Import error: {e}")
+        return False
+    except Exception as e:
+        print(f"❌ Initialization error: {e}")
         return False
     
     # Test configuration loading

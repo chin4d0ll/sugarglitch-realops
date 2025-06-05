@@ -26,7 +26,7 @@ def start_mitmproxy(port=8080, save_file=None):
 def start_bettercap(iface="eth0", log_file=None):
     cmd = ["bettercap", "-iface", iface]
     if log_file:
-        cmd += ["-eval", f'events.stream on; set events.stream.output {log_file}"]
+        cmd += ["-eval", f'events.stream on; set events.stream.output {log_file}']
     print(f"[+] Starting Bettercap on interface {iface} ...")
     subprocess.run(cmd)
 
