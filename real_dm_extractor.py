@@ -139,8 +139,12 @@ def start_real_extraction():
         print("🔍 Enhanced stealth and anti-detection...")
         print("💬 Accessing DM conversations with fallbacks...")
         
-        # Create input for the extractor
-        extraction_input = f"{target[1]}\n{username}\n{password}\n"
+        # Create JSON input for the extractor
+        extraction_input = json.dumps({
+            "target": target[1],
+            "username": username,
+            "password": password
+        })
         
         # Run the advanced extractor
         print("\n🚀 LAUNCHING ADVANCED STABLE EXTRACTOR")
