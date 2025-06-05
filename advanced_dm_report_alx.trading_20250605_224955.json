@@ -1,0 +1,28 @@
+{
+  "summary": {
+    "scan_id": "STABLE_EXTRACT_1749163756",
+    "target": "alx.trading",
+    "timestamp": "2025-06-05T22:49:55.115335",
+    "duration_seconds": 38.893913,
+    "total_threads": 0,
+    "total_messages": 0,
+    "extraction_methods": [],
+    "database_file": "advanced_dm_extraction_STABLE_EXTRACT_1749163756.sqlite"
+  },
+  "performance": {
+    "messages_per_second": 0.0,
+    "threads_per_minute": 0.0,
+    "success_rate": 0.0,
+    "stealth_score": 100.0
+  },
+  "thread_analysis": [],
+  "statistics": {
+    "participants_found": [],
+    "media_messages": 0,
+    "text_messages": 0,
+    "date_range": {
+      "earliest": null,
+      "latest": null
+    }
+  }
+}
