@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """
-🌐 PROXY & IP ROTATION HANDLER 🌐
-================================
-Handle IP blocking and proxy rotation for ALX.Trading extraction
+IP Rotation Handler with Proxy Pool Management
+Manages proxy rotation, health checks, and automatic failover
 """
 
-import requests
-import random
-import time
 import json
-from typing import List, Dict, Optional
+import os
+import time
+import requests
+import threading
+from typing import List, Optional, Dict, Any
+from datetime import datetime, timedelta
+import logging
+
+logger = logging.getLogger(__name__)
 
 class ProxyManager:
     """Advanced proxy management for bypassing IP blocks"""
