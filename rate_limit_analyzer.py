@@ -326,6 +326,51 @@ class CuteRateLimitBypass:
             print(f"  ✅ Successful: {self.success_count} ({success_rate:.1f}%)")
             print(f"  🚫 Rate Limited: {self.rate_limit_count} ({rate_limit_rate:.1f}%)")
             print(f"  🎭 Current Strategy: {self._get_current_strategy().name}")
+    
+    def apply_cute_rate_limit(self):
+        """🌸 Apply cute rate limiting for synchronous requests"""
+        current_time = time.time()
+        
+        # Calculate time since last request
+        if hasattr(self, 'last_request_time') and self.last_request_time > 0:
+            time_since_last = current_time - self.last_request_time
+            
+            # Get current strategy
+            strategy = self._get_current_strategy()
+            min_delay = strategy.min_delay
+            
+            # If not enough time has passed, apply cute sleep
+            if time_since_last < min_delay:
+                sleep_time = min_delay - time_since_last
+                sleep_time += random.uniform(0.5, 2.0)  # Add jitter
+                
+                self.logger.info(f"😴 Cute sleep for {sleep_time:.2f}s...")
+                time.sleep(sleep_time)
+        
+        # Update last request time
+        self.last_request_time = current_time
+        self.request_count += 1
+        
+        # Apply adaptive delay if too many requests
+        if self.request_count > 10 and self.request_count % 5 == 0:
+            adaptive_delay = self._calculate_smart_delay()
+            self.logger.info(f"🧠 Adaptive delay: {adaptive_delay:.2f}s")
+            time.sleep(adaptive_delay)
+    
+    def emergency_cute_sleep(self):
+        """🚨 Emergency cute sleep for severe rate limiting"""
+        emergency_delay = random.uniform(60, 120)  # 1-2 minutes
+        self.logger.warning(f"🚨 Emergency rate limit detected! Sleeping for {emergency_delay:.0f}s...")
+        
+        # Show countdown
+        for i in range(int(emergency_delay)):
+            if i % 10 == 0:
+                remaining = int(emergency_delay) - i
+                print(f"🚨 Emergency sleep: {remaining}s remaining...", end='\r')
+            time.sleep(1)
+        
+        print()  # New line after countdown
+        self.logger.info("✅ Emergency sleep complete, resuming...")
 
 # 🚀 Main bypass script
 async def main():

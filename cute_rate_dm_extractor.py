@@ -30,10 +30,8 @@ class CuteRateDMExtractor:
         self.user_id = None
         self.username = None
         self.csrf_token = None
-        # Initialize session and headers first
-        self.init_session()
         
-        # Initialize cute bypass with session file
+        # Initialize cute bypass with session file FIRST
         try:
             self.cute_bypass = CuteRateLimitBypass(session_file)
             print("✅ CuteRateLimitBypass initialized successfully!")
@@ -41,6 +39,9 @@ class CuteRateDMExtractor:
             print(f"❌ Failed to initialize CuteRateLimitBypass: {e}")
             print("🔄 Creating fallback rate limiter...")
             self.cute_bypass = self.create_fallback_rate_limiter()
+        
+        # Initialize session and headers after bypass is ready
+        self.init_session()
         
         # Database setup
         self.setup_database()
@@ -84,6 +85,10 @@ class CuteRateDMExtractor:
             # Set cookies
             cookies = session_data.get('cookies', {})
             for name, value in cookies.items():
+                # URL decode the cookie value if needed
+                if '%' in value:
+                    from urllib.parse import unquote
+                    value = unquote(value)
                 self.session.cookies.set(name, value)
             
             # Set realistic headers
