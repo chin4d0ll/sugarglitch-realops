@@ -1,0 +1,6 @@
+[
+  "http://httpbin.org:80",
+  "http://1.1.1.1:80",
+  "http://8.8.8.8:80",
+  "http://invalid.test:8080"
+]
