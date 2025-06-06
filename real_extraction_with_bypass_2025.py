@@ -268,7 +268,13 @@ class RealInstagramExtractorWithBypass:
                     
             except Exception as e:
                 test_results['failed_proxies'] += 1
-                proxy_display = proxy if isinstance(proxy, str) else f"{proxy['ip']}:{proxy['port']}"
+                # Defensive: avoid string indices must be integers error
+                if isinstance(proxy, str):
+                    proxy_display = proxy
+                elif isinstance(proxy, dict):
+                    proxy_display = f"{proxy.get('ip', 'unknown')}:{proxy.get('port', 'unknown')}"
+                else:
+                    proxy_display = str(proxy)
                 test_results['proxy_details'].append({
                     'proxy': proxy_display,
                     'status': 'error',
