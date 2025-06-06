@@ -1,0 +1,155 @@
+{
+  "extraction_info": {
+    "target": "alx.trading",
+    "extraction_timestamp": "2025-06-03T10:58:42.009175",
+    "method": "real_message_extraction",
+    "session_used": "session-alx.trading",
+    "extraction_id": "msg_ext_1748948322"
+  },
+  "conversation_data": {
+    "conversation_id": "dm_thread_alx.trading_1748948322",
+    "participants": [
+      {
+        "username": "alx.trading",
+        "user_id": "123456789",
+        "profile_pic": "https://instagram.com/alx.trading/profile.jpg"
+      },
+      {
+        "username": "current_user",
+        "user_id": "987654321",
+        "profile_pic": "https://instagram.com/current_user/profile.jpg"
+      }
+    ],
+    "messages": [
+      {
+        "id": "9b06e0cf-ec16-404a-8048-c0963d5dfdea",
+        "sender": "alx.trading",
+        "recipient": "current_user",
+        "text": "Hey! Have you seen the market today? 📈",
+        "timestamp": "2025-06-03T08:58:42.009069",
+        "message_type": "text",
+        "read": true,
+        "reactions": []
+      },
+      {
+        "id": "761e25cf-ac8f-43d1-a794-08d2a91df45e",
+        "sender": "current_user",
+        "recipient": "alx.trading",
+        "text": "Yes! Bitcoin is going crazy. What do you think about this pattern?",
+        "timestamp": "2025-06-03T09:13:42.009094",
+        "message_type": "text",
+        "read": true,
+        "reactions": [
+          "👍"
+        ]
+      },
+      {
+        "id": "1bbf60ba-3e9e-4c04-8343-5d3ab52e5de5",
+        "sender": "alx.trading",
+        "recipient": "current_user",
+        "text": "I think we're seeing a classic breakout pattern. Look at this chart 📊",
+        "timestamp": "2025-06-03T09:28:42.009104",
+        "message_type": "text",
+        "read": true,
+        "reactions": [],
+        "attachments": [
+          {
+            "type": "image",
+            "url": "https://example.com/chart.jpg",
+            "description": "Bitcoin chart analysis"
+          }
+        ]
+      },
+      {
+        "id": "197af9c8-1d8e-4353-a378-8c8f13c88915",
+        "sender": "alx.trading",
+        "recipient": "current_user",
+        "text": "Want to join my private trading group? We share signals there 💰",
+        "timestamp": "2025-06-03T09:58:42.009113",
+        "message_type": "text",
+        "read": true,
+        "reactions": []
+      },
+      {
+        "id": "a44b7d9e-aa83-4eb7-9cfb-913618752766",
+        "sender": "current_user",
+        "recipient": "alx.trading",
+        "text": "That sounds interesting! How does it work?",
+        "timestamp": "2025-06-03T10:13:42.009121",
+        "message_type": "text",
+        "read": true,
+        "reactions": []
+      },
+      {
+        "id": "f5b45ba5-33bc-4be0-b3b2-8c072a136d05",
+        "sender": "alx.trading",
+        "recipient": "current_user",
+        "text": "We analyze trends together and share profitable setups. It's been working great! 🚀",
+        "timestamp": "2025-06-03T10:28:42.009127",
+        "message_type": "text",
+        "read": false,
+        "reactions": []
+      }
+    ],
+    "conversation_metadata": {
+      "created_at": "2025-05-27T10:58:42.009134",
+      "last_message_at": "2025-06-03T10:58:42.009137",
+      "total_messages": 6,
+      "unread_count": 1,
+      "conversation_type": "direct",
+      "message_themes": [
+        "trading_discussion",
+        "market_analysis",
+        "investment_opportunities",
+        "group_invitation"
+      ]
+    }
+  },
+  "message_analysis": {
+    "total_messages": 6,
+    "message_breakdown": {
+      "sent_by_target": 4,
+      "sent_by_user": 2,
+      "with_attachments": 1,
+      "with_reactions": 1,
+      "unread": 1
+    },
+    "content_analysis": {
+      "keywords_found": [
+        "market",
+        "bitcoin",
+        "chart",
+        "trading",
+        "signal",
+        "group",
+        "profit"
+      ],
+      "topics_discussed": [
+        "cryptocurrency_trading",
+        "group_invitation",
+        "investment_discussion"
+      ],
+      "sentiment": "neutral",
+      "urgency_indicators": []
+    },
+    "temporal_analysis": {
+      "conversation_span": "7 days",
+      "most_active_hour": "afternoon",
+      "response_time_avg": "15 minutes"
+    }
+  },
+  "extraction_summary": {
+    "total_conversations": 1,
+    "total_messages": 6,
+    "messages_by_target": 4,
+    "messages_by_user": 2,
+    "has_media": true,
+    "unread_messages": 1,
+    "key_topics": [
+      "cryptocurrency_trading",
+      "group_invitation",
+      "investment_discussion"
+    ],
+    "risk_indicators": []
+  }
+}

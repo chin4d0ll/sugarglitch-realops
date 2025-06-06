@@ -1,0 +1,38 @@
+{
+  "accounts": {
+    "primary": {
+      "username": "alx.trading",
+      "password": "UPDATE_PASSWORD_HERE",
+      "backup_passwords": [
+        "Fleming654",
+        "Fleming786",
+        "Fleming1004",
+        "Fleming1060",
+        "Fleming1182",
+        "Fleming1998"
+      ]
+    },
+    "secondary": {
+      "username": "whatilove1728",
+      "password": "UPDATE_PASSWORD_HERE"
+    }
+  },
+  "extraction_settings": {
+    "max_dm_threads": 50,
+    "max_messages_per_thread": 200,
+    "max_stories": 100,
+    "max_posts": 100,
+    "download_media": true,
+    "generate_pdf": true
+  },
+  "stealth_settings": {
+    "use_proxy": false,
+    "proxy_url": "",
+    "delay_range": [
+      1,
+      3
+    ],
+    "headless_browser": true,
+    "use_undetected_chrome": true
+  }
+}

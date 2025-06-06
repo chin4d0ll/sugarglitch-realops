@@ -1,0 +1,27 @@
+{
+  "target": "alx.trading",
+  "timestamp": "2025-06-03T11:18:49.343691",
+  "method": "enhanced_rate_limiting_protection",
+  "protection_features": [
+    "Intelligent delay patterns",
+    "Exponential backoff retry",
+    "Retry-After header detection",
+    "Session rotation",
+    "User-Agent rotation",
+    "Request throttling"
+  ],
+  "session_tests": [
+    {
+      "session_name": "quick_bypass_session.json",
+      "results": [
+        {
+          "response": null,
+          "status_code": 429,
+          "success": false,
+          "retry_count": 5,
+          "session_name": "quick_bypass_session.json",
+          "url": "https://www.instagram.com/alx.trading/",
+          "error": "Max retries exhausted"
+        },
+        {
+          "response":

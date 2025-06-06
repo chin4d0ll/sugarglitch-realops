@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Debug - iPad</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+            background: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .debug-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .debug-title {
+            color: #1877f2;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #e4e6ea;
+            padding-bottom: 10px;
+        }
+
+        .debug-info {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-size: 14px;
+            font-family: monospace;
+            border-left: 4px solid #42a5f5;
+        }
+
+        .error-box {
+            background: #ffebee;
+            border: 1px solid #f44336;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            color: #c62828;
+        }
+
+        .success-box {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            color: #2e7d32;
+        }
+
+        .test-btn {
+            background: #1877f2;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin: 8px 4px;
+            cursor: pointer;
+            min-width: 140px;
+        }
+
+        .test-btn:active {
+            background: #166fe5;
+        }
+
+        .log-area {
+            background: #000;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 12px;
+            height: 200px;
+            overflow-y: auto;
+            margin: 15px 0;
+            border: 2px solid #333;
+        }
+
+        .status {
+            padding: 8px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .status-ok {
+            background: #4caf50;
+            color: white;
+        }
+
+        .status-error {
+            background: #f44336;
+            color: white;
+        }
+
+        .status-warning {
+            background: #ff9800;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="debug-container">
+        <div class="debug-title">🔍 Instagram iPad Debug Tool</div>
+
+        <div class="debug-info">
+            <strong>🎯 Target:</strong> @alx.trading<br>
+            <strong>📱 Device:</strong> <span id="device-info">กำลังตรวจสอบ...</span><br>
+            <strong>🌐 Browser:</strong> <span id="browser-info">กำลังตรวจสอบ...</span>
+        </div>
+
+        <div id="status-indicators"></div>
+    </div>
+
+    <div class="debug-container">
+        <div class="debug-title">🧪 การทดสอบ</div>
+
+        <button class="test-btn" onclick="testJavaScript()">Test JavaScript</button>
+        <button class="test-btn" onclick="testCookies()">Test Cookies</button>
+        <button class="test-btn" onclick="testNetwork()">Test Network</button>
+        <button class="test-btn" onclick="testInstagram()">Test Instagram</button>
+
+        <div id="test-results"></div>
+    </div>
+
+    <div class="debug-container">
+        <div class="debug-title">📋 Console Log</div>
+        <div id="console-log" class="log-area">
+            กำลังเริ่มต้น debug session...<br>
+        </div>
+        <button class="test-btn" onclick="clearLog()">Clear Log</button>
+        <button class="test-btn" onclick="exportLog()">Export Log</button>
+    </div>
+
+    <div class="debug-container">
+        <div class="debug-title">🚀 การแก้ปัญหา</div>
+
+        <button class="test-btn" onclick="fixMethod1()">วิธีที่ 1: Direct Link</button>
+        <button class="test-btn" onclick="fixMethod2()">วิธีที่ 2: URL Parameter</button>
+        <button class="test-btn" onclick="fixMethod3()">วิธีที่ 3: Manual Cookie</button>
+
+        <div id="fix-results"></div>
+    </div>
+
+    <script>
+        let logArea = document.getElementById('console-log');
+        let logBuffer = [];
+
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = `[${timestamp}] ${type.toUpperCase()}: ${message}`;
+            logBuffer.push(logEntry);
+
+            const colorMap = {
+                'info': '#00ff00',
+                'error': '#ff4444',
+                'warning': '#ffaa00',
+                'success': '#44ff44'
+            };
+
+            logArea.innerHTML += `<span style="color: ${colorMap[type] || '#00ff00'}">${logEntry}</span><br>`;
+            logArea.scrollTop = logArea.scrollHeight;
+        }
+
+        function clearLog() {
+            logArea.innerHTML = '';
+            logBuffer = [];
+            log('Console cleared', 'info');
+        }
+
+        function exportLog() {
+            const logText = logBuffer.join('\n');
+            const blob = new Blob([logText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'instagram_debug_log.txt';
+            a.click();
+            URL.revokeObjectURL(url);
+            log('Log exported', 'success');
+        }
+
+        function detectDevice() {
+            const userAgent = navigator.userAgent;
+            const deviceInfo = document.getElementById('device-info');
+            const browserInfo = document.getElementById('browser-info');
+
+            if (/iPad/.test(userAgent)) {
+                deviceInfo.innerHTML = '✅ iPad detected';
+                deviceInfo.className = 'status status-ok';
+            } else if (/iPhone/.test(userAgent)) {
+                deviceInfo.innerHTML = '📱 iPhone detected';
+                deviceInfo.className = 'status status-warning';
+            } else {
+                deviceInfo.innerHTML = '❌ Not iOS device';
+                deviceInfo.className = 'status status-error';
+            }
+
+            if (/Safari/.test(userAgent) && !/Chrome/.test(userAgent)) {
+                browserInfo.innerHTML = '✅ Safari';
+                browserInfo.className = 'status status-ok';
+            } else {
+                browserInfo.innerHTML = '⚠️ Not Safari';
+                browserInfo.className = 'status status-warning';
+            }
+
+            log(`Device: ${userAgent}`, 'info');
+        }
+
+        function testJavaScript() {
+            log('Testing JavaScript functionality...', 'info');
+
+            try {
+                // Test basic functionality
+                const testObj = { test: 'value' };
+                const testArray = [1, 2, 3];
+                const testFunction = () => 'success';
+
+                if (testFunction() === 'success') {
+                    log('✅ JavaScript: Basic functions work', 'success');
+                } else {
+                    log('❌ JavaScript: Basic functions failed', 'error');
+                }
+
+                // Test modern features
+                if (typeof Promise !== 'undefined') {
+                    log('✅ JavaScript: Promises supported', 'success');
+                } else {
+                    log('⚠️ JavaScript: Promises not supported', 'warning');
+                }
+
+                if (typeof fetch !== 'undefined') {
+                    log('✅ JavaScript: Fetch API supported', 'success');
+                } else {
+                    log('⚠️ JavaScript: Fetch API not supported', 'warning');
+                }
+
+            } catch (error) {
+                log(`❌ JavaScript Error: ${error.message}`, 'error');
+            }
+        }
+
+        function testCookies() {
+            log('Testing cookie functionality...', 'info');
+
+            try {
+                // Test if cookies are enabled
+                document.cookie = "test=testvalue; path=/";
+                const cookies = document.cookie;
+
+                if (cookies.includes('test=testvalue')) {
+                    log('✅ Cookies: Basic functionality works', 'success');
+
+                    // Test Instagram-specific cookies
+                    document.cookie = "sessionid=test123; domain=.instagram.com; path=/; secure; max-age=3600";
+                    log('✅ Cookies: Instagram domain cookies set', 'success');
+
+                } else {
+                    log('❌ Cookies: Not working or disabled', 'error');
+                }
+
+                log(`Current cookies: ${cookies}`, 'info');
+
+            } catch (error) {
+                log(`❌ Cookie Error: ${error.message}`, 'error');
+            }
+        }
+
+        function testNetwork() {
+            log('Testing network connectivity...', 'info');
+
+            if (navigator.onLine) {
+                log('✅ Network: Online status detected', 'success');
+            } else {
+                log('❌ Network: Offline', 'error');
+                return;
+            }
+
+            // Test Instagram connectivity
+            fetch('https://www.instagram.com/', { mode: 'no-cors' })
+                .then(() => {
+                    log('✅ Network: Instagram accessible', 'success');
+                })
+                .catch(error => {
+                    log(`⚠️ Network: Instagram test failed - ${error.message}`, 'warning');
+                });
+        }
+
+        function testInstagram() {
+            log('Testing Instagram access...', 'info');
+
+            const sessionId = "4976283726%3A1JgRzA56Q8e8Qs%3A12";
+            const userId = "4976283726";
+
+            // Set cookies
+            document.cookie = `sessionid=${sessionId}; domain=.instagram.com; path=/; secure; max-age=31536000`;
+            document.cookie = `ds_user_id=${userId}; domain=.instagram.com; path=/; secure; max-age=31536000`;
+
+            log('✅ Instagram: Session cookies set', 'success');
+            log(`Session ID: ${sessionId}`, 'info');
+            log(`User ID: ${userId}`, 'info');
+
+            // Test profile URL
+            const profileUrl = "https://www.instagram.com/alx.trading/";
+            log(`Testing profile URL: ${profileUrl}`, 'info');
+        }
+
+        function fixMethod1() {
+            log('Attempting Fix Method 1: Direct Link...', 'info');
+
+            const url = "https://www.instagram.com/alx.trading/";
+            window.open(url, '_blank');
+
+            log('✅ Method 1: Direct link opened', 'success');
+            document.getElementById('fix-results').innerHTML = `
+                <div class="success-box">
+                    <strong>วิธีที่ 1:</strong> เปิดลิงค์โดยตรง<br>
+                    ถ้าเข้าไม่ได้ แสดงว่า session หมดอายุ
+                </div>
+            `;
+        }
+
+        function fixMethod2() {
+            log('Attempting Fix Method 2: URL Parameter...', 'info');
+
+            const sessionId = "4976283726%3A1JgRzA56Q8e8Qs%3A12";
+            const url = `https://www.instagram.com/alx.trading/?sessionid=${sessionId}`;
+            window.open(url, '_blank');
+
+            log('✅ Method 2: URL with session parameter opened', 'success');
+            document.getElementById('fix-results').innerHTML = `
+                <div class="success-box">
+                    <strong>วิธีที่ 2:</strong> URL พร้อม session parameter<br>
+                    Instagram อาจรับ sessionid ผ่าน URL parameter
+                </div>
+            `;
+        }
+
+        function fixMethod3() {
+            log('Attempting Fix Method 3: Manual Cookie Setting...', 'info');
+
+            const sessionId = "4976283726%3A1JgRzA56Q8e8Qs%3A12";
+            const userId = "4976283726";
+
+            // Show manual instructions
+            document.getElementById('fix-results').innerHTML = `
+                <div class="error-box">
+                    <strong>วิธีที่ 3: Manual Cookie Setting</strong><br><br>
+                    1. เปิด Safari Developer Console<br>
+                    2. ไป Settings → Advanced → Web Inspector<br>
+                    3. เชื่อมต่อ iPad กับ Mac<br>
+                    4. Copy และ Paste โค้ดนี้:<br><br>
+                    <code style="background: #000; color: #0f0; padding: 10px; display: block; margin: 10px 0;">
+document.cookie = "sessionid=${sessionId}; domain=.instagram.com; path=/; secure; max-age=31536000";<br>
+document.cookie = "ds_user_id=${userId}; domain=.instagram.com; path=/; secure; max-age=31536000";<br>
+window.location.href = "https://www.instagram.com/alx.trading/";
+                    </code>
+                </div>
+            `;
+
+            log('Manual cookie instructions displayed', 'info');
+        }
+
+        // Initialize on page load
+        window.onload = function () {
+            log('Debug tool initialized', 'success');
+            detectDevice();
+
+            // Auto-run basic tests
+            setTimeout(() => {
+                testJavaScript();
+                testCookies();
+                testNetwork();
+            }, 1000);
+        };
+
+        // Catch all errors
+        window.onerror = function (msg, url, line, col, error) {
+            log(`Global Error: ${msg} at ${url}:${line}:${col}`, 'error');
+            if (error) {
+                log(`Error object: ${error.toString()}`, 'error');
+            }
+        };
+
+        // Catch unhandled promise rejections
+        window.addEventListener('unhandledrejection', function (event) {
+            log(`Unhandled Promise Rejection: ${event.reason}`, 'error');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sugarglitch Session Extractor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #ff69b4;
+            text-align: center;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="file"], textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        .note {
+            font-size: 14px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>💋 Sugarglitch Session Extractor 💋</h1>
+    
+    <div class="container">
+        <h2>อัพโหลดไฟล์</h2>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="file">เลือกไฟล์ (cookies, logs, screenshots, etc.)</label>
+                <input type="file" id="file" name="file">
+                <p class="note">* รองรับไฟล์ .txt, .log, .json, .db, .sqlite, .jpg, .png</p>
+            </div>
+            <button type="submit">อัพโหลดและค้นหา Session ID</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <h2>วางข้อความ</h2>
+        <form action="/capture" method="POST">
+            <div class="form-group">
+                <label for="text">วางข้อความที่อาจมี session ID (cookies, log snippets, etc.)</label>
+                <textarea id="text" name="text" placeholder="วางข้อความที่ต้องการค้นหา session ID ที่นี่..."></textarea>
+            </div>
+            <button type="submit">วิเคราะห์และค้นหา Session ID</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <h2>คำแนะนำ</h2>
+        <p>1. อัพโหลดไฟล์ที่อาจมี session ID เช่น cookies, logs, screenshots</p>
+        <p>2. หรือวางข้อความที่คัดลอกมาจากเบราว์เซอร์หรือแอพพลิเคชั่น</p>
+        <p>3. ระบบจะค้นหา session ID และบันทึกลงในไฟล์ session.json</p>
+        <p>4. หลังจากนั้นคุณสามารถรัน Sugarglitch เพื่อดึงข้อมูลได้</p>
+        <p class="note">* session ID มักมีรูปแบบคล้าย: 8675309-real-session-id-here-5551212</p>
+    </div>
+</body>
+</html>
