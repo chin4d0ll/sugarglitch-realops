@@ -1,260 +1,143 @@
-<div align="center">
+# 🎯 SugarGlitch RealOps
 
-# 🍭 SugarGlitch RealOps
+## 🔥 Instagram DM Extraction & Operations Platform
 
-<img src="https://img.shields.io/badge/Python-3.8+-blue.svg" alt="Python Version">
-<img src="https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20WSL-green.svg" alt="Platform">
-<img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License">
-<img src="https://img.shields.io/badge/Status-Active-brightgreen.svg" alt="Status">
-
-**🔥 Professional Instagram Intelligence & DM Extraction Platform**
-
-*Advanced OSINT toolkit for legitimate security research and data recovery operations*
-
-[🚀 Quick Start](#-quick-start) • [📖 Documentation](#-documentation) • [🛠️ Features](#-features) • [💡 Examples](#-usage-examples)
-
-</div>
+**SugarGlitch RealOps** is a comprehensive Instagram Direct Message extraction and operational platform designed for advanced social media intelligence gathering and analysis.
 
 ---
 
-## 🎯 Project Overview
+## ✨ Key Features
 
-**SugarGlitch RealOps** is a cutting-edge Instagram DM extraction and analysis platform engineered for cybersecurity professionals, researchers, and digital forensics experts. Built with enterprise-grade security and scalability in mind.
+### 🎯 **Core Capabilities**
+- **📱 Instagram DM Extraction** - Extract direct messages from Instagram accounts
+- **🔓 Session Management** - Advanced session handling and authentication
+- **🕸️ Hijacked Session Support** - Utilize captured sessions for enhanced access
+- **📊 Database Storage** - SQLite-based data persistence and management
+- **🛡️ Anti-Detection** - IP rotation, rate limiting, and bypass mechanisms
 
-### 🏆 Why SugarGlitch RealOps?
+### 🚀 **Advanced Operations**
+- **🎭 Multi-Account Support** - Handle multiple Instagram targets
+- **⚡ Real-time Extraction** - Live DM monitoring and capture
+- **🔄 Session Recovery** - Automatic session repair and regeneration
+- **📈 Monitoring & Analytics** - System health monitoring and reporting
 
-- 🔐 **Enterprise Security**: OWASP-compliant with advanced session management
-- ⚡ **High Performance**: Optimized for large-scale data extraction
-- 🎨 **Professional Reports**: Beautiful HTML/PDF reports with data visualization
-- 🔧 **Modular Architecture**: Extensible and customizable for any use case
-- 🛡️ **Rate Limiting**: Smart anti-detection mechanisms
-- 📊 **Advanced Analytics**: Deep conversation insights and trend analysis
+---
 
-## 🛠️ Features
+## 🏗️ Project Structure
 
-### 🎯 Core Capabilities
-- **🔍 Advanced DM Extraction**: Session-based authentication with multi-target support
-- **📊 Data Analytics Engine**: Real-time conversation analysis and pattern recognition  
-- **📋 Professional Reporting**: Export to JSON, HTML, PDF with custom templates
-- **🎯 Targeted Operations**: Focus on specific accounts, conversations, or timeframes
-- **🤖 Intelligent Automation**: Smart scheduling and batch processing
-- **🛡️ Security & Compliance**: GDPR/OWASP compliant with data encryption
+### 📂 **Main Directories**
 
-### 🚀 Advanced Tools
-- **🕷️ Web Scraping Engine**: Playwright-powered with anti-detection
-- **💾 Database Integration**: SQLite/PostgreSQL support with ORM
-- **🔄 Session Management**: Persistent sessions with automatic renewal
-- **📈 Data Visualization**: Interactive charts and conversation timelines
-- **🌐 Proxy Support**: Rotating proxies with geolocation options
-- **📱 Mobile API Emulation**: iOS/Android user-agent simulation
+| Directory | Files | Description |
+|-----------|-------|-------------|
+| **`/extractors/`** | 25 | 📱 Instagram DM extraction tools |
+| **`/tools/`** | 31+ | 🔧 Utilities, session management, bypass tools |
+| **`/databases/`** | 23 | 🗃️ SQLite databases and extraction results |
+| **`/documentation/`** | 13 | 📚 Project documentation and reports |
+| **`/launchers/`** | 6 | 🚀 Launch scripts and demos |
+| **`/hijacked_sessions/`** | 40+ | 🕸️ Captured session files |
+| **`/config/`** | - | ⚙️ Configuration files and settings |
+| **`/extractions/`** | - | 📄 JSON extraction results |
+| **`/logs/`** | - | 📝 System logs and debug files |
 
-## 📁 Project Architecture
-
-```text
-🍭 SugarGlitch RealOps/
-├── 🔧 src/                      # 🎯 Core extraction engine
-│   ├── 🚀 advanced_tools/       # Enterprise-grade extractors
-│   ├── 📱 instagram_tools/      # Instagram-specific modules
-│   ├── 🎯 targeted/             # Precision targeting tools
-│   ├── ⚙️  dm_extractor.py      # Main extraction engine
-│   └── 📦 requirements.txt      # Python dependencies
-├── 🤖 scripts/                  # Automation & deployment
-│   └── 🔄 automation_scripts/   # Shell automation tools
-├── ⚙️  config/                  # Configuration management
-├── 💾 data/                     # Extracted data & databases
-├── 🔐 sessions/                 # Secure session storage
-├── 🗂️  temp/                    # Temporary files & logs
-├── 📊 reports/                  # Generated intelligence reports
-├── 💿 backups/                  # Data backup & recovery
-├── 📚 docs/                     # Technical documentation
-└── 🚀 run_dm_extractor.sh       # One-click launcher
-```
-
-### 🎨 Tech Stack
-
-- **Backend**: Python 3.8+ with asyncio support
-- **Web Engine**: Playwright with Chromium
-- **Database**: SQLite/PostgreSQL with SQLAlchemy ORM
-- **Frontend**: HTML5/CSS3 with Chart.js visualizations
-- **Security**: TLS encryption, session tokens, OWASP compliance
+---
 
 ## 🚀 Quick Start
 
-### 📋 Prerequisites
-
+### 1. **Main Launcher** (Recommended)
 ```bash
-🐍 Python 3.8+ (3.12+ recommended for optimal performance)
-🐧 Linux/macOS environment (Windows WSL2 supported)
-🔐 Valid Instagram session credentials
-💾 4GB+ RAM for large-scale operations
+python3 launchers/quick_launcher.py
 ```
 
-### ⚡ Installation
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/chin4d0ll/sugarglitch-realops.git
-   cd sugarglitch-realops
-   ```
-
-2. **Auto-setup environment:**
-
-   ```bash
-   chmod +x scripts/automation_scripts/setup_environment.sh
-   ./scripts/automation_scripts/setup_environment.sh
-   ```
-
-3. **Launch extraction:**
-
-   ```bash
-   ./run_dm_extractor.sh
-   ```
-
-## 🎯 Master DM Extractor - Real Data Only
-
-**⚠️ CRITICAL: NO SIMULATION MODE**
-
-This project is designed for **REAL DATA EXTRACTION ONLY**:
-- ❌ No mockup, demo, or simulation data generation
-- ✅ Genuine Instagram API calls and web scraping
-- 🔐 Requires valid Instagram session credentials  
-- 🎯 Reports actual success/failure (no fake results)
-
-### 🚀 Master Extractor Usage
-
+### 2. **Direct DM Extraction**
 ```bash
-# Run comprehensive extraction using all available methods
-python3 src/master_real_dm_extractor_2025.py
+# Stable extractor (most reliable)
+python3 extractors/advanced_stable_dm_extractor.py
 
-# The master extractor attempts 7 different extraction techniques:
-# 1. Playwright Browser Automation
-# 2. Instagram API Requests  
-# 3. Actual Instagram Extractor
-# 4. Advanced Stealth Techniques
-# 5. Ultimate Working Extractor (instagrapi)
-# 6. Real Message Extractor
-# 7. Targeted Extractor
+# Real-time extractor
+python3 extractors/real_dm_extractor.py
 
-# Results saved to: master_extraction_results/
+# Hijacked session extractor
+python3 extractors/hijacked_session_dm_extractor.py
 ```
 
-## 💡 Usage Examples
-
-### 🎯 Basic DM Extraction
-
+### 3. **System Tools**
 ```bash
-# Quick extraction with default settings
-./run_dm_extractor.sh
+# Check system health
+python3 tools/system_health_monitor_2025.py
 
-# Extract with custom target
-python3 src/dm_extractor.py --target @username --output data/results/
+# Validate sessions
+python3 tools/session_validator.py
+
+# Operations control center
+python3 tools/alx_operations_control_center.py
 ```
-
-### 🔧 Advanced Operations
-
-```bash
-# Targeted extraction with time range
-python3 src/targeted/ultimate_target_dm_extractor_2025.py \
-  --target @trading_account \
-  --start-date 2025-01-01 \
-  --end-date 2025-06-01 \
-  --format html,pdf
-
-# Bulk extraction with rate limiting
-python3 src/advanced_tools/bulk_extractor.py \
-  --targets-file data/target_list.txt \
-  --delay 5 \
-  --concurrent 3
-```
-
-### 📊 Data Analysis & Reporting
-
-```bash
-# Generate comprehensive analytics report
-python3 src/analyzer.py --input data/extracted/ --output reports/
-
-# Convert to professional PDF report
-python3 src/html_to_pdf_converter.py \
-  --template reports/professional.html \
-  --output reports/final_report.pdf
-```
-
-## 🤝 Contributing
-
-We welcome contributions from the cybersecurity community! Here's how you can help:
-
-- 🐛 **Bug Reports**: Submit detailed issue reports
-- 💡 **Feature Requests**: Propose new capabilities  
-- 🔧 **Pull Requests**: Contribute code improvements
-- 📚 **Documentation**: Help improve our guides
-
-### Development Setup
-
-```bash
-# Fork and clone your fork
-git clone https://github.com/YOUR_USERNAME/sugarglitch-realops.git
-cd sugarglitch-realops
-
-# Create feature branch
-git checkout -b feature/amazing-feature
-
-# Install development dependencies
-pip install -r src/requirements.txt
-pip install -r scripts/requirements.txt
-
-# Run tests
-python -m pytest tests/
-
-# Submit PR
-git push origin feature/amazing-feature
-```
-
-## ⚖️ Legal & Compliance
-
-### 📜 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-### ⚠️ Ethical Use Disclaimer
-
-**SugarGlitch RealOps** is designed for legitimate purposes only:
-
-- ✅ **Authorized Security Research**
-- ✅ **Digital Forensics Investigations**  
-- ✅ **Personal Data Recovery**
-- ✅ **Educational & Academic Research**
-
-**Users are responsible for compliance with applicable laws and platform terms of service.**
-
-## 📞 Support & Community
-
-### 🚨 Need Help?
-
-- 📧 **Email**: [chin4d0ll@security.com](mailto:chin4d0ll@security.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/chin4d0ll/sugarglitch-realops/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/chin4d0ll/sugarglitch-realops/discussions)
-
-### 🌟 Show Your Support
-
-If this project helped you, consider:
-- ⭐ **Starring** the repository
-- 🍴 **Forking** for your own use
-- 📣 **Sharing** with the community
 
 ---
 
-<div align="center">
+## 📖 Documentation
 
-### 🍭 **SugarGlitch RealOps**
-**Professional Instagram Intelligence Platform**
+- **[📋 Quick Access Guide](QUICK_ACCESS.md)** - Fast access to important files
+- **[📁 Project Structure](PROJECT_STRUCTURE.md)** - Detailed directory organization  
+- **[📚 Documentation Folder](documentation/)** - Complete project documentation
 
-*Engineered for cybersecurity professionals • Built by researchers, for researchers*
+---
 
-[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com/chin4d0ll/sugarglitch-realops)
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
-[![Security](https://img.shields.io/badge/Security-OWASP%20Compliant-green.svg)](https://owasp.org)
+## 🎯 Target Accounts
 
-**🚀 Happy Researching! �**
+### Primary Targets
+- **alx.trading** - Main target account for DM extraction
+- Support for multiple targets through configuration
 
-</div>
+### Extraction Methods
+1. **Direct Login** - Using account credentials
+2. **Hijacked Sessions** - Using captured authentication tokens
+3. **Session Injection** - Advanced session manipulation
+
+---
+
+## 📊 Project Statistics
+
+- **🐍 Python Scripts**: 80+ files
+- **🗄️ Databases**: 23 SQLite files  
+- **🕸️ Hijacked Sessions**: 40+ session files
+- **📄 Documentation**: 13 markdown files
+- **🔧 Tools & Utilities**: 31+ helper scripts
+
+---
+
+## ⚠️ Important Notes
+
+### Security & Ethics
+- This tool is for educational and authorized security testing only
+- Always ensure you have proper authorization before use
+- Respect Instagram's Terms of Service and applicable laws
+
+### Technical Requirements
+- Python 3.8+
+- Required packages: `requests`, `sqlite3`, `json`, `datetime`
+- Additional dependencies in `/config/requirements*.txt`
+
+---
+
+## 🔗 Quick Links
+
+| Resource | Description |
+|----------|-------------|
+| [� Quick Access](QUICK_ACCESS.md) | Essential commands and file locations |
+| [📁 Structure](PROJECT_STRUCTURE.md) | Detailed project organization |
+| [📊 Extractors](extractors/) | DM extraction tools |
+| [🔧 Tools](tools/) | Utility and helper scripts |
+| [📚 Docs](documentation/) | Complete documentation |
+
+---
+
+## � Recent Updates
+
+- **June 6, 2025**: Complete project reorganization
+- **June 6, 2025**: Added hijacked session DM extractor
+- **June 6, 2025**: Enhanced documentation structure
+- **June 6, 2025**: Improved file organization and quick access
+
+---
+
+*🎉 **SugarGlitch RealOps** - Professional Instagram Operations Platform*
