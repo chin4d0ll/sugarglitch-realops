@@ -1,0 +1,91 @@
+{
+  "timestamp": "2025-06-06T22:19:19.497939",
+  "checks": {
+    "session_files": {
+      "status": "fail",
+      "valid_sessions": [],
+      "total_checked": 5,
+      "valid_count": 0
+    },
+    "databases": {
+      "status": "pass",
+      "working_databases": [
+        {
+          "path": "data/alx_trading_dms.db",
+          "tables": [
+            "dm_messages",
+            "sqlite_sequence",
+            "dm_threads"
+          ]
+        },
+        {
+          "path": "data/alx_trading_dms_direct.db",
+          "tables": [
+            "dm_threads",
+            "dm_messages"
+          ]
+        }
+      ],
+      "total_checked": 3
+    },
+    "extractors": {
+      "status": "pass",
+      "working_extractors": [
+        "extractors/real_alx_dm_extractor.py",
+        "optimized_alx_extractor.py",
+        "alx_mobile_extractor.py"
+      ],
+      "total_checked": 4
+    },
+    "network": {
+      "status": "pass",
+      "results": [
+        {
+          "url": "https://www.instagram.com",
+          "status_code": 200,
+          "success": true
+        },
+        {
+          "url": "https://www.instagram.com/api/v1/users/web_profile_info/?username=instagram",
+          "status_code": 401,
+          "success": false
+        }
+      ],
+      "success_count": 1
+    },
+    "dependencies": {
+      "status": "pass",
+      "available": [
+        "requests",
+        "json",
+        "sqlite3",
+        "pathlib",
+        "datetime",
+        "logging"
+      ],
+      "missing": []
+    },
+    "directories": {
+      "status": "pass",
+      "existing": [
+        "data",
+        "extractions",
+        "results",
+        "sessions",
+        "logs"
+      ],
+      "missing": []
+    }
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "issue": "No valid session files found",
+      "solution": "Extract Instagram session cookies and save to sessions/"
+    }
+  ],
+  "overall_health": "excellent",
+  "health_percentage": 83.33333333333334,
+  "passed_checks": 5,
+  "total_checks": 6
+}

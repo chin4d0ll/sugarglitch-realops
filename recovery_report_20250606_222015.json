@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-06-06T22:20:15.764069",
+  "recovered_files": [],
+  "existing_files": [
+    "instagram_redirect_fix.py",
+    "optimized_alx_extractor.py",
+    "session_finder.py",
+    "extractors/simple_alx_extractor.py",
+    "extractors/real_alx_dm_extractor.py",
+    "src/instagram_tools/instagram_data_analyzer.py"
+  ],
+  "missing_files": [],
+  "empty_files": [],
+  "git_status": "has_changes",
+  "total_python_files": 576,
+  "all_empty_files": []
+}
