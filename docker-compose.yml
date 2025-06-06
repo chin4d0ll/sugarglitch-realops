@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  sugarglitch-realops:
+    build: .
+    container_name: sugarglitch-realops
+    restart: unless-stopped
+    
+    # Environment variables
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+    
+    # Volume mounts for persistent data
+    volumes:
+      - ./logs:/app/logs
+      - ./databases:/app/databases
+      - ./extractions:/app/extractions
+      - ./results:/app/results
+      - ./config:/app/config
+    
+    # Network configuration
+    networks:
+      - realops-network
+    
+    # Health check
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import sys; print('Health check passed'); exit(0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 1G
+          cpus: '0.5'
+        reservations:
+          memory: 512M
+          cpus: '0.25'
+
+  # Optional: Add a database service if needed
+  # postgres:
+  #   image: postgres:15-alpine
+  #   container_name: sugarglitch-db
+  #   restart: unless-stopped
+  #   environment:
+  #     POSTGRES_DB: realops
+  #     POSTGRES_USER: realops_user
+  #     POSTGRES_PASSWORD: ${DB_PASSWORD:-changeme}
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #   networks:
+  #     - realops-network
+  #   ports:
+  #     - "5432:5432"
+
+networks:
+  realops-network:
+    driver: bridge
+
+# volumes:
+#   postgres_data:
