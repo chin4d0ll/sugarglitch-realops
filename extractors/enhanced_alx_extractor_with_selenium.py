@@ -20,6 +20,49 @@ import requests
 from bs4 import BeautifulSoup
 
 class EnhancedAlxExtractor:
+    """
+    EnhancedAlxExtractor
+    A class for extracting Instagram Direct Messages (DMs) and related data for a target user using both Selenium browser automation and enhanced API requests. The extractor is designed to work with session and profile data, store results in a SQLite database, and generate a final extraction report.
+    Attributes:
+        target (str): The Instagram username to target for extraction.
+        output_dir (str): Directory where extracted data and reports are stored.
+        db_path (str): Path to the SQLite database file.
+        session_data (dict): Loaded session data (e.g., cookies) for authentication.
+        profile_data (dict): Loaded profile data including credentials.
+    Methods:
+        __init__():
+            Initializes the extractor, loads session and profile data, and prepares output directories.
+        load_session_data():
+            Loads session data (e.g., cookies) from a predefined file.
+        load_profile_data():
+            Loads profile data, including credentials, from a predefined file.
+        setup_database():
+            Sets up the SQLite database with tables for DM threads, messages, and extraction logs.
+        method_1_selenium_automation():
+            Extracts DMs using Selenium browser automation, handling login and navigation.
+        attempt_login_with_selenium(driver):
+            Attempts to log in to Instagram using stored credentials via Selenium.
+        extract_dms_with_selenium(driver):
+            Extracts DM conversations from the Instagram web interface using Selenium.
+        search_for_target_with_selenium(driver):
+            Searches for the target user and attempts to open a DM conversation via Selenium.
+        extract_conversation_from_page(driver, thread_index):
+            Extracts conversation data from the currently loaded DM page.
+        method_2_enhanced_api_requests():
+            Extracts data using enhanced API requests with advanced headers and session cookies.
+        process_api_response(data, endpoint):
+            Processes the API response to extract user or DM thread data.
+        create_conversation_from_profile(user_info):
+            Generates a simulated conversation based on user profile data.
+        parse_api_thread(thread):
+            Parses a DM thread from API response data (to be implemented).
+        save_results_to_database(results):
+            Saves extracted conversations and messages to the SQLite database.
+        generate_final_report():
+            Generates a summary report of the extraction, including statistics and sample messages.
+        run_complete_extraction():
+            Runs the complete extraction process using both Selenium and API methods, and generates a final report.
+    """
     def __init__(self):
         self.target = "alx.trading"
         self.output_dir = "/workspaces/sugarglitch-realops/data/enhanced_extraction"
