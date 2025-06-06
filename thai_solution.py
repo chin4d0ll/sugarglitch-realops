@@ -1,53 +1,199 @@
 #!/usr/bin/env python3
 """
-วิธีแก้ปัญหา Instagram DM Extraction - ง่ายๆ 
-How to fix Instagram DM extraction - Simple solution
+Thai Solution - ระบบสกัด DM อัตโนมัติ
+Real-time session capture + DM extraction with interceptor
 """
 
-import time
+import os
 import json
+import time
+import sys
+import requests
+import subprocess
+from datetime import datetime
 
-def show_solution():
-    print("🚨 ปัญหาที่เจอ (Current Problems):")
-    print("=" * 50)
-    print("❌ Instagram บล็อค IP (IP blocked)")
-    print("❌ Session หมดอายุ (Sessions expired)")
-    print("❌ ไม่สามารถดึงข้อมูลได้ (Cannot extract data)")
+class ThaiSolution:
+    def __init__(self):
+        self.target = "alx.trading"
+        self.session_file = "tools/session_alx_trading.json"
+        self.proxy_file = "config/proxies.json"
+        self.log_file = "logs/requests.log"
+        
+        # สร้างโฟลเดอร์
+        for folder in ["tools", "config", "logs", "extractions"]:
+            os.makedirs(folder, exist_ok=True)
     
-    print("\n🔧 วิธีแก้ (Solutions):")
-    print("=" * 30)
+    def capture_session_realtime(self):
+        """จับ sessionid แบบ real-time ตอน login สำเร็จ"""
+        print("🚀 จับ SESSION แบบ REAL-TIME")
+        print("="*40)
+        print("จะรัน realtime session interceptor")
+        
+        try:
+            script_path = "tools/realtime_session_interceptor.py"
+            result = subprocess.run([sys.executable, script_path], 
+                                 capture_output=False, text=True)
+            return result.returncode == 0
+        except Exception as e:
+            print(f"❌ ข้อผิดพลาด: {e}")
+            return False
     
-    print("\n1️⃣ วิธีที่ 1: ใช้ VPN")
-    print("   📱 เปิด VPN บนเครื่องคุณ")
-    print("   🌍 เปลี่ยน IP เป็นประเทศอื่น")
-    print("   ▶️ รันคำสั่ง: python3 extract_alx_trading.py")
+    def setup_proxies(self):
+        """ตั้งค่า proxies"""
+        print("\n🔧 ตั้งค่า PROXIES")
+        print("="*25)
+        
+        # รายการ proxy ฟรี
+        free_proxies = [
+            "http://173.245.49.63:80",
+            "http://172.67.254.149:80",
+            "http://188.114.97.8:80",
+            "http://141.101.122.54:80",
+            "http://104.21.48.84:80"
+        ]
+        
+        print("ทดสอบ proxies...")
+        working_proxies = []
+        
+        for proxy in free_proxies:
+            try:
+                response = requests.get(
+                    'http://httpbin.org/ip',
+                    proxies={'http': proxy, 'https': proxy},
+                    timeout=5
+                )
+                if response.status_code == 200:
+                    working_proxies.append(proxy)
+                    print(f"✅ {proxy}")
+                else:
+                    print(f"❌ {proxy}")
+            except:
+                print(f"❌ {proxy}")
+        
+        # บันทึก proxies ที่ใช้งานได้
+        with open(self.proxy_file, 'w') as f:
+            json.dump(working_proxies, f, indent=2)
+        
+        print(f"💾 บันทึก {len(working_proxies)} proxies ที่ใช้งานได้")
+        return len(working_proxies) > 0
     
-    print("\n2️⃣ วิธีที่ 2: ใช้ Browser Session")
-    print("   🌐 เปิด Instagram ในเบราว์เซอร์")
-    print("   🔑 Login เข้าบัญชี Instagram ของคุณ")
-    print("   🔍 ไป https://www.instagram.com/alx.trading")
-    print("   🛠️ กด F12 → Application → Cookies")
-    print("   📋 คัดลอก sessionid")
-    print("   💾 สร้างไฟล์ session.json:")
+    def run_dm_extraction(self):
+        """รัน DM extraction ด้วย interceptor"""
+        print("\n📱 สกัด DM ด้วย INTERCEPTOR")
+        print("="*35)
+        
+        extractor_script = "tools/dm_extraction_with_interceptor.py"
+        
+        if not os.path.exists(extractor_script):
+            print(f"❌ ไม่พบไฟล์ {extractor_script}")
+            return False
+        
+        try:
+            print("🚀 เริ่มสกัด DM...")
+            result = subprocess.run([sys.executable, extractor_script], 
+                                 capture_output=False, text=True)
+            return result.returncode == 0
+        except Exception as e:
+            print(f"❌ ข้อผิดพลาด: {e}")
+            return False
     
-    session_example = {
-        "sessionid": "YOUR_SESSION_ID_HERE"
-    }
+    def check_logs(self):
+        """ตรวจสอบ logs"""
+        print("\n📊 ตรวจสอบ LOGS")
+        print("="*20)
+        
+        if not os.path.exists(self.log_file):
+            print("❌ ไม่พบไฟล์ log")
+            return
+        
+        try:
+            with open(self.log_file, 'r') as f:
+                lines = f.readlines()
+            
+            print(f"📄 พบ {len(lines)} รายการ log")
+            
+            # แสดง log ล่าสุด
+            if lines:
+                print("\nLog ล่าสุด:")
+                for line in lines[-5:]:
+                    print(f"  {line.strip()}")
+            
+            # นับสถิติ
+            total = len(lines)
+            blocked = sum(1 for line in lines if any(code in line for code in ['429', '403', '401']))
+            success = sum(1 for line in lines if '200' in line)
+            
+            print(f"\n📈 สถิติ:")
+            print(f"  รวม: {total} requests")
+            print(f"  สำเร็จ: {success}")
+            print(f"  ถูกบล็อก: {blocked}")
+            
+        except Exception as e:
+            print(f"❌ อ่าน log ไม่ได้: {e}")
     
-    print(f"   {json.dumps(session_example, indent=4)}")
-    print("   ▶️ รันคำสั่ง: python3 extract_alx_trading.py")
+    def run_complete_process(self):
+        """รันกระบวนการทั้งหมด"""
+        print("🎯 ระบบสกัด DM INSTAGRAM อัตโนมัติ")
+        print("="*50)
+        print("by Thai Solution - Real-time Session Capture")
+        print()
+        
+        # เช็คสถานะปัจจุบัน
+        session_exists = os.path.exists(self.session_file)
+        proxy_exists = os.path.exists(self.proxy_file)
+        
+        print("📋 สถานะปัจจุบัน:")
+        print(f"  Session: {'✅' if session_exists else '❌'}")
+        print(f"  Proxies: {'✅' if proxy_exists else '❌'}")
+        print()
+        
+        # ขั้นตอนที่ 1: จับ Session
+        if not session_exists:
+            print("🔑 ต้องการ Session ใหม่!")
+            if input("จับ session ตอนนี้? (y/n): ").lower().startswith('y'):
+                if not self.capture_session_realtime():
+                    print("❌ จับ session ไม่สำเร็จ")
+                    return False
+        else:
+            print("✅ มี Session แล้ว")
+        
+        # ขั้นตอนที่ 2: ตั้งค่า Proxies
+        if not proxy_exists:
+            print("\n🔧 ต้องการ Proxies!")
+            if input("ตั้งค่า proxies ตอนนี้? (y/n): ").lower().startswith('y'):
+                if not self.setup_proxies():
+                    print("❌ ตั้งค่า proxies ไม่สำเร็จ")
+                    return False
+        else:
+            print("✅ มี Proxies แล้ว")
+        
+        # ขั้นตอนที่ 3: สกัด DM
+        print("\n🚀 พร้อมสกัด DM!")
+        if input("เริ่มสกัด DM ตอนนี้? (y/n): ").lower().startswith('y'):
+            self.run_dm_extraction()
+        
+        # ขั้นตอนที่ 4: ตรวจสอบผลลัพธ์
+        self.check_logs()
+        
+        print("\n🎉 เสร็จสิ้นกระบวนการ!")
+        print("ตรวจสอบโฟลเดอร์ extractions/ สำหรับผลลัพธ์")
+
+def main():
+    print("🇹🇭 THAI SOLUTION - INSTAGRAM DM EXTRACTOR")
+    print("Real-time Session Capture + Auto Extraction")
+    print("="*60)
     
-    print("\n3️⃣ วิธีที่ 3: รอ 24 ชั่วโมง")
-    print("   ⏰ รอ Instagram ปลดบล็อค IP")
-    print("   🔄 ลองใหม่พรุ่งนี้")
+    solution = ThaiSolution()
     
-    print("\n🎯 วิธีที่แนะนำสุด:")
-    print("=" * 25)
-    print("✨ ใช้วิธีที่ 2 (Browser Session) - ทำงานได้ 100%")
-    
-    print("\n📋 ขั้นตอนละเอียด:")
-    print("1. เปิด Chrome/Firefox")
-    print("2. ไป instagram.com")
+    try:
+        solution.run_complete_process()
+    except KeyboardInterrupt:
+        print("\n\n🛑 ยกเลิกการทำงาน")
+    except Exception as e:
+        print(f"\n❌ ข้อผิดพลาด: {e}")
+
+if __name__ == "__main__":
+    main()
     print("3. Login บัญชีของคุณ")
     print("4. ไป https://www.instagram.com/alx.trading")
     print("5. กด F12")
