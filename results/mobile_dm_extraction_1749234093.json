@@ -1,0 +1,13 @@
+{
+  "extraction_method": "mobile_api",
+  "timestamp": 1749234093,
+  "device_id": "b9cd2f24-85fe-4784-b1b2-f7b7a7265e62",
+  "total_messages": 0,
+  "extracted_messages": [],
+  "extraction_summary": {
+    "success": false,
+    "message_count": 0,
+    "extraction_time": "2025-06-06T18:21:33.057648",
+    "app_version": "290.0.0.18.118"
+  }
+}

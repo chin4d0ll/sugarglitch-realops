@@ -1,0 +1,120 @@
+{
+  "timestamp": "2025-06-06T18:18:31.918017",
+  "techniques_applied": [
+    "proxy_bypass",
+    "user_agent_bypass",
+    "header_obfuscation",
+    "timing_manipulation",
+    "bypass_arsenal"
+  ],
+  "results": {
+    "proxy_bypass": {
+      "total_proxies_tested": 0,
+      "working_proxies": 0,
+      "proxy_details": []
+    },
+    "user_agent_bypass": {
+      "total_agents_tested": 4,
+      "successful_requests": 4,
+      "agent_details": [
+        {
+          "index": 1,
+          "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...",
+          "status": "success"
+        },
+        {
+          "index": 2,
+          "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...",
+          "status": "success"
+        },
+        {
+          "index": 3,
+          "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac O...",
+          "status": "success"
+        },
+        {
+          "index": 4,
+          "user_agent": "Mozilla/5.0 (Android 11; Mobile; rv:68.0) Gecko/68...",
+          "status": "success"
+        }
+      ]
+    },
+    "header_obfuscation": {
+      "total_header_sets": 2,
+      "successful_requests": 2,
+      "header_details": [
+        {
+          "set_index": 1,
+          "status": "success",
+          "response_code": 200
+        },
+        {
+          "set_index": 2,
+          "status": "success",
+          "response_code": 200
+        }
+      ]
+    },
+    "timing_manipulation": {
+      "timing_tests": [
+        {
+          "delay": 0,
+          "response_time": 0.4079592227935791,
+          "status_code": 200,
+          "success": true
+        },
+        {
+          "delay": 1,
+          "response_time": 0.7406904697418213,
+          "status_code": 200,
+          "success": true
+        },
+        {
+          "delay": 3,
+          "response_time": 0.4280388355255127,
+          "status_code": 200,
+          "success": true
+        },
+        {
+          "delay": 5,
+          "response_time": 0.39740610122680664,
+          "status_code": 200,
+          "success": true
+        }
+      ],
+      "optimal_delay": 5
+    },
+    "bypass_arsenal": {
+      "status": "completed",
+      "success": true,
+      "results": {
+        "dns_over_https": {
+          "status": "SUCCESS",
+          "dns": "1.1.1.1"
+        },
+        "ipv6_fallback": {
+          "status": "FAILED"
+        },
+        "cloud_proxy": {
+          "status": "SUCCESS",
+          "service": "https://api.codetabs.com/v1/proxy?quest="
+        },
+        "mobile_ua": {
+          "status": "SUCCESS",
+          "agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+        },
+        "timing_bypass": {
+          "status": "SUCCESS",
+          "timing": "Immediate"
+        },
+        "distributed": {
+          "status": "SUCCESS",
+          "nodes": 3
+        },
+        "session_resurrection": {
+          "status": "FAILED"
+        }
+      }
+    }
+  }
+}
