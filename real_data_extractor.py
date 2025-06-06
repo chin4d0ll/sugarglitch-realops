@@ -14,7 +14,9 @@ from datetime import datetime
 class RealInstagramExtractor:
     def __init__(self):
         self.target_username = "alx.trading"
-        self.session_file = "real_session.json"
+        # Use the provided session file if available
+        # Always use the latest provided session file
+        self.session_file = "alx_trading_session_fleming654.json"
         self.output_dir = "REAL_EXTRACTIONS"
         
         # Create output directory
