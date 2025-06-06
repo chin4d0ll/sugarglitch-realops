@@ -2,10 +2,10 @@
   "target_username": "alx.trading",
   "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
   "session_data": {
-    "sessionid": "YOUR_SESSION_ID_HERE",
-    "csrftoken": "YOUR_CSRF_TOKEN_HERE",
-    "mid": "YOUR_MID_HERE",
-    "ig_did": "YOUR_IG_DID_HERE",
+    "sessionid": "4976283726%3AFlem654Success%3A19",
+    "csrftoken": "missing",
+    "mid": "YXgTfQAAAADFJEv20NDg3PQAAAAOi",
+    "ig_did": "9A8B7C6D-5E4F-3D2C-1B0A-9E8D7C6B5A4F",
     "ig_nrcb": "1"
   },
   "proxy": null,

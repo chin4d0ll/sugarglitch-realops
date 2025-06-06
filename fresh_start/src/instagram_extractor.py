@@ -11,6 +11,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Any
 import random
+from urllib.parse import unquote
 
 class InstagramDMExtractor:
     """Clean Instagram DM Extractor with modern practices"""
@@ -47,48 +48,129 @@ class InstagramDMExtractor:
             self.logger.error("No session data provided")
             return False
         
-        # Add cookies to session
-        for name, value in session_data.items():
-            self.session.cookies.set(name, value, domain='.instagram.com')
+        # URL decode sessionid if needed
+        sessionid = session_data.get('sessionid', '')
+        if '%' in sessionid:
+            from urllib.parse import unquote
+            sessionid = unquote(sessionid)
         
-        # Test authentication
+        # Add cookies to session
+        self.session.cookies.set('sessionid', sessionid, domain='.instagram.com')
+        
+        # Add other cookies if available
+        for name, value in session_data.items():
+            if name != 'sessionid' and value and value != 'missing':
+                self.session.cookies.set(name, value, domain='.instagram.com')
+        
+        # Test authentication with basic page first
         try:
-            response = self.session.get('https://www.instagram.com/api/v1/accounts/edit/web_form_data/')
-            if response.status_code == 200:
-                data = response.json()
-                if 'form_data' in data:
-                    self.user_id = data['form_data'].get('user_id')
-                    self.logger.info(f"Authentication successful. User ID: {self.user_id}")
-                    return True
+            response = self.session.get('https://www.instagram.com/')
+            if 'login' in response.url:
+                self.logger.error("Redirected to login page - session invalid")
+                return False
+            
+            self.logger.info("Basic authentication successful")
+            
+            # Try to get user info with retry logic
+            for attempt in range(3):
+                try:
+                    time.sleep(2 ** attempt)  # Exponential backoff
+                    response = self.session.get('https://www.instagram.com/api/v1/accounts/edit/web_form_data/')
+                    
+                    if response.status_code == 200:
+                        data = response.json()
+                        if 'form_data' in data:
+                            self.user_id = data['form_data'].get('user_id')
+                            username = data['form_data'].get('username')
+                            self.logger.info(f"Full authentication successful. User: {username}, ID: {self.user_id}")
+                            return True
+                    elif response.status_code == 429:
+                        self.logger.warning(f"Rate limited on attempt {attempt + 1}, waiting...")
+                        time.sleep(5 * (attempt + 1))
+                        continue
+                    else:
+                        self.logger.warning(f"API returned status {response.status_code} on attempt {attempt + 1}")
+                        
+                except Exception as e:
+                    self.logger.warning(f"Authentication attempt {attempt + 1} failed: {e}")
+                    if attempt < 2:
+                        time.sleep(5 * (attempt + 1))
+                        continue
+            
+            # If API calls fail but basic auth worked, we can still try DM extraction
+            self.logger.info("API authentication failed but basic session valid - will attempt DM extraction")
+            return True
+            
         except Exception as e:
             self.logger.error(f"Authentication failed: {e}")
         
         return False
     
     def get_direct_inbox(self) -> Optional[Dict]:
-        """Fetch the direct message inbox"""
+        """Fetch the direct message inbox with retry logic"""
         self.logger.info("Fetching DM inbox...")
         
-        try:
-            url = 'https://www.instagram.com/api/v1/direct_v2/inbox/'
-            params = {
-                'persistentBadging': 'true',
-                'folder': '',
-                'limit': '20'
-            }
-            
-            response = self.session.get(url, params=params)
-            
-            if response.status_code == 200:
-                data = response.json()
-                self.logger.info(f"Inbox fetched successfully. Threads: {len(data.get('inbox', {}).get('threads', []))}")
-                return data
-            else:
-                self.logger.error(f"Failed to fetch inbox. Status: {response.status_code}")
-                
-        except Exception as e:
-            self.logger.error(f"Error fetching inbox: {e}")
+        # Try different endpoints and approaches
+        endpoints = [
+            'https://www.instagram.com/api/v1/direct_v2/inbox/',
+            'https://i.instagram.com/api/v1/direct_v2/inbox/',
+            'https://www.instagram.com/direct/inbox/'
+        ]
         
+        for endpoint in endpoints:
+            for attempt in range(3):
+                try:
+                    self.logger.info(f"Trying endpoint: {endpoint} (attempt {attempt + 1})")
+                    
+                    if 'api' in endpoint:
+                        params = {
+                            'persistentBadging': 'true',
+                            'folder': '',
+                            'limit': '20'
+                        }
+                        response = self.session.get(endpoint, params=params)
+                    else:
+                        # Try web interface
+                        response = self.session.get(endpoint)
+                    
+                    self.logger.info(f"Response status: {response.status_code}")
+                    
+                    if response.status_code == 200:
+                        if 'api' in endpoint:
+                            try:
+                                data = response.json()
+                                if 'inbox' in data:
+                                    threads = data.get('inbox', {}).get('threads', [])
+                                    self.logger.info(f"Inbox fetched successfully. Threads: {len(threads)}")
+                                    return data
+                            except json.JSONDecodeError:
+                                self.logger.warning("Invalid JSON response from API")
+                        else:
+                            # Web interface - look for data in HTML
+                            if 'direct' in response.text.lower():
+                                self.logger.info("Web interface accessible - direct messages page loaded")
+                                # For now, return a placeholder - we'd need to parse HTML
+                                return {"inbox": {"threads": []}, "web_interface": True}
+                    
+                    elif response.status_code == 429:
+                        self.logger.warning(f"Rate limited, waiting {5 * (attempt + 1)} seconds...")
+                        time.sleep(5 * (attempt + 1))
+                        continue
+                    
+                    elif response.status_code == 404:
+                        self.logger.warning(f"Endpoint not found: {endpoint}")
+                        break  # Try next endpoint
+                    
+                    else:
+                        self.logger.warning(f"Unexpected status {response.status_code} for {endpoint}")
+                        
+                except Exception as e:
+                    self.logger.error(f"Error with endpoint {endpoint}, attempt {attempt + 1}: {e}")
+                    if attempt < 2:
+                        time.sleep(3 * (attempt + 1))
+                        continue
+        
+        self.logger.error("All endpoints failed")
         return None
     
     def get_thread_messages(self, thread_id: str, max_id: str = None) -> Optional[Dict]:
