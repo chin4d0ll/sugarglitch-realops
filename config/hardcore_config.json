@@ -1,0 +1,107 @@
+{
+  "extraction_config": {
+    "max_workers": 5,
+    "extraction_timeout": 300,
+    "retry_attempts": 3,
+    "rate_limit_delay": [2, 8],
+    "stealth_mode": true,
+    "headless": true
+  },
+  "proxy_config": {
+    "brightdata": {
+      "enabled": true,
+      "host": "brd-customer-hl_12345678-zone-zone1.brd.superproxy.io",
+      "port": 22225,
+      "username": "brd-customer-hl_12345678-zone-zone1",
+      "password": "your_brightdata_password_here",
+      "protocol": "http"
+    },
+    "backup_proxies": [
+      {
+        "host": "proxy1.example.com",
+        "port": 8080,
+        "protocol": "http"
+      },
+      {
+        "host": "proxy2.example.com",
+        "port": 3128,
+        "protocol": "http"
+      }
+    ],
+    "health_check_interval": 300,
+    "failure_threshold": 5
+  },
+  "session_config": {
+    "primary_session": {
+      "username": "alx.trading",
+      "sessionid": "your_instagram_sessionid_here",
+      "csrf_token": "your_csrf_token_here",
+      "user_id": "your_user_id_here"
+    },
+    "backup_sessions": [],
+    "session_rotation": true,
+    "max_failures_per_session": 5
+  },
+  "extraction_targets": [
+    {
+      "username": "alx.trading",
+      "priority": 1,
+      "max_dm_count": 10000,
+      "extract_media": true,
+      "extract_reactions": true
+    }
+  ],
+  "output_config": {
+    "formats": ["json", "sqlite", "csv"],
+    "compression": true,
+    "backup_enabled": true,
+    "retention_days": 30
+  },
+  "stealth_config": {
+    "user_agents": [
+      "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    ],
+    "viewports": [
+      {"width": 1920, "height": 1080},
+      {"width": 1366, "height": 768},
+      {"width": 1440, "height": 900}
+    ],
+    "random_delays": {
+      "min": 1,
+      "max": 5
+    },
+    "anti_detection": {
+      "webdriver_override": true,
+      "plugin_spoofing": true,
+      "language_spoofing": true,
+      "timezone_randomization": true
+    }
+  },
+  "monitoring_config": {
+    "real_time_logging": true,
+    "progress_reports": true,
+    "alert_thresholds": {
+      "failure_rate": 0.8,
+      "extraction_timeout": 600
+    },
+    "metrics_collection": true
+  },
+  "bypass_config": {
+    "rate_limit_bypass": {
+      "enabled": true,
+      "backoff_strategy": "exponential",
+      "max_backoff": 60
+    },
+    "captcha_handling": {
+      "enabled": false,
+      "service": "2captcha",
+      "api_key": ""
+    },
+    "ip_rotation": {
+      "enabled": true,
+      "rotation_interval": 300
+    }
+  }
+}
