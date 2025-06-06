@@ -139,11 +139,7 @@
 
 # สร้างฟังก์ชันสลับ Proxy Pool อัตโนมัติระหว่างงาน Recon/Exploit
 # Prompt:
-# “Generate a Python class `ProxyRotator` that:
-# 1. Loads a JSON array of proxy URLs from `config/proxies/proxy_config.json`,
-# 2. Provides a method `get_next_proxy()` returning the next proxy in a round-robin fashion,
-# 3. Has a health-check method `validate_proxy(proxy: str) -> bool` that tests a simple request (e.g., to https://httpbin.org/ip) and returns True if low latency (< 500ms), False otherwise.”
-
+# “แ
 # สร้างฟังก์ชันดึงแผนภาพ timeline การโต้ตอบ DM (จำนวนข้อความต่อวัน)
 # Prompt:
 # “Write a Python function `generate_dm_timeline(dms: dict, output_png: str)` that:

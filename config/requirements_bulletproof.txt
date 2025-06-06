@@ -20,6 +20,9 @@ fake-useragent>=1.4.0
 pandas>=2.0.0
 numpy>=1.24.0
 
+# Data visualization
+matplotlib>=3.7.0
+
 # Database support
 sqlite3  # Built-in with Python
 
