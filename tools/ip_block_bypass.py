@@ -24,7 +24,7 @@ except ImportError:
 # --- Configuration ---
 SESSION_FILE = "tools/session_alx_trading.json"
 PROXY_CONFIG = "config/proxies.json"
-TARGET_URL = "https://i.instagram.com/api/v1/direct_v2/inbox/"  # Example DM endpoint
+TARGET_URL = "https://i.instagram.com/api/v1/direct_v2/inbox/?visual_message_reply_chain_enabled=true&thread_message_limit=10&persistentBadging=true&limit=20"  # Enhanced DM endpoint
 CHECK_INTERVAL = 10  # seconds between checks
 MAX_RETRIES = 1  # Retry once after recovery
 
@@ -49,46 +49,72 @@ def fetch_dm_inbox(session, proxy=None):
 
 def main():
     logger.info("🚀 Starting IP Block Bypass Monitor...")
-    proxy_rotator = ProxyRotator(PROXY_CONFIG)
     block_recovery = InstagramBlockRecovery(SESSION_FILE)
+    proxy_rotator = block_recovery.proxy_rotator  # Use the rotator from block_recovery
     
-    while True:
-        # Get current proxy
-        proxy = proxy_rotator.get_current_proxy() or proxy_rotator.get_next_proxy()
-        logger.info(f"🌐 Using proxy: {proxy}")
-        
-        # Create session with proxy
-        session = block_recovery.create_session(proxy)
-        
-        # Attempt request
-        response = fetch_dm_inbox(session, proxy)
-        if response is None:
-            logger.warning(f"No response from endpoint using proxy {proxy}")
-            time.sleep(CHECK_INTERVAL)
-            continue
-        
-        if response.status_code in (403, 429):
-            logger.warning(f"Blocked on {proxy} (HTTP {response.status_code})")
-            # Attempt block recovery (rotate proxy and renew session)
-            recovery_result = block_recovery.recover_from_block()
-            if recovery_result and recovery_result.get("success"):
-                new_proxy = proxy_rotator.get_current_proxy()
-                logger.info(f"Switched to {new_proxy} after block recovery")
-                # Retry request once
-                session = block_recovery.create_session(new_proxy)
-                retry_response = fetch_dm_inbox(session, new_proxy)
-                if retry_response and retry_response.status_code == 200:
-                    logger.info("Request succeeded after proxy switch!")
+    # Load session data
+    if not block_recovery.load_session():
+        logger.error("❌ Failed to load session data. Cannot start monitoring.")
+        return
+    
+    # Initialize with first proxy
+    current_proxy = proxy_rotator.get_next_proxy()
+    if not current_proxy:
+        logger.error("❌ No proxies available. Cannot start monitoring.")
+        return
+    
+    try:
+        while True:
+            logger.info(f"🌐 Using proxy: {proxy_rotator._mask_proxy_url(current_proxy) if hasattr(proxy_rotator, '_mask_proxy_url') else current_proxy}")
+            
+            # Create session with current proxy
+            session = block_recovery.create_session(current_proxy)
+            
+            # Attempt request
+            response = fetch_dm_inbox(session, current_proxy)
+            if response is None:
+                logger.warning(f"⚠️ No response from endpoint using current proxy")
+                # Try next proxy
+                current_proxy = proxy_rotator.get_next_proxy()
+                if not current_proxy:
+                    logger.error("❌ No more proxies available. Exiting.")
+                    break
+                time.sleep(CHECK_INTERVAL)
+                continue
+            
+            if response.status_code in (403, 429):
+                logger.warning(f"🚫 Blocked! (HTTP {response.status_code})")
+                # Attempt block recovery (rotate proxy and renew session)
+                success, recovered_proxy = block_recovery.recover_from_block()
+                if success and recovered_proxy:
+                    current_proxy = recovered_proxy
+                    logger.info(f"✅ Recovery successful! Switched to new proxy")
+                    # Retry request once with recovered proxy
+                    session = block_recovery.create_session(current_proxy)
+                    retry_response = fetch_dm_inbox(session, current_proxy)
+                    if retry_response and retry_response.status_code == 200:
+                        logger.info("🎉 Request succeeded after block recovery!")
+                    else:
+                        logger.warning(f"⚠️ Retry failed (HTTP {retry_response.status_code if retry_response else 'N/A'})")
                 else:
-                    logger.warning(f"Retry failed (HTTP {retry_response.status_code if retry_response else 'N/A'})")
+                    logger.error("❌ Block recovery failed. No more working proxies available.")
+                    # Try to get any remaining proxy as last resort
+                    current_proxy = proxy_rotator.get_next_proxy()
+                    if not current_proxy:
+                        logger.error("❌ No proxies left. Exiting.")
+                        break
+            elif response.status_code == 200:
+                logger.info("✅ Request succeeded!")
             else:
-                logger.error("Block recovery failed. No more proxies or session renewal failed.")
-        elif response.status_code == 200:
-            logger.info("Request succeeded!")
-        else:
-            logger.info(f"Received HTTP {response.status_code} (not a block)")
-        
-        time.sleep(CHECK_INTERVAL)
+                logger.info(f"ℹ️ Received HTTP {response.status_code} (not a block)")
+            
+            time.sleep(CHECK_INTERVAL)
+            
+    except KeyboardInterrupt:
+        logger.info("🛑 Monitor stopped by user")
+    except Exception as e:
+        logger.error(f"❌ Unexpected error: {e}")
+        raise
 
 
 if __name__ == "__main__":
