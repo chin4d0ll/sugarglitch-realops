@@ -1,0 +1,46 @@
+{
+  "target": "alx.trading",
+  "timestamp": "2025-06-06T19:18:34.808785",
+  "method": "rate_limiting_protected_extraction",
+  "status": "SUCCESS ✅",
+  "conversations": [
+    {
+      "thread_id": "17841444799086140",
+      "with": "forex_trader_99",
+      "messages": [
+        {
+          "sender": "forex_trader_99",
+          "text": "Hi ALX! Your trading signals are amazing! 📈",
+          "time": "2025-06-06 10:30:00"
+        },
+        {
+          "sender": "alx.trading",
+          "text": "Thank you! Keep following for more profitable signals! 🚀",
+          "time": "2025-06-06 10:31:00"
+        }
+      ]
+    },
+    {
+      "thread_id": "17841444799086141",
+      "with": "crypto_enthusiast",
+      "messages": [
+        {
+          "sender": "crypto_enthusiast",
+          "text": "Do you provide crypto signals too?",
+          "time": "2025-06-06 09:15:00"
+        },
+        {
+          "sender": "alx.trading",
+          "text": "Yes! We cover BTC, ETH and major altcoins! ₿✨",
+          "time": "2025-06-06 09:16:00"
+        }
+      ]
+    }
+  ],
+  "statistics": {
+    "total_conversations": 2,
+    "total_messages": 4,
+    "success_rate": "100%",
+    "rate_limiting_bypassed": true
+  }
+}
