@@ -116,6 +116,18 @@ class ProxyRotator:
             logger.error(f"❌ Error saving proxies: {e}")
             return False
     
+    def get_current_proxy(self) -> Optional[str]:
+        """
+        Get the current proxy without advancing the rotation
+        
+        Returns:
+            str: Current proxy URL or None if no proxies available
+        """
+        with self.lock:
+            if not self.proxies:
+                return None
+            return self.proxies[self.current_index]
+    
     def get_next_proxy(self) -> Optional[str]:
         """
         Get the next usable proxy using round-robin rotation
@@ -254,6 +266,15 @@ class ProxyRotator:
         
         logger.error("❌ No working proxies found")
         return None
+    
+    def health_check(self) -> bool:
+        """
+        Simple health check - returns True if there are available proxies
+        
+        Returns:
+            bool: True if proxy pool is healthy (has available proxies)
+        """
+        return len(self.proxies) > 0
     
     def health_check_all(self) -> Dict[str, Any]:
         """
