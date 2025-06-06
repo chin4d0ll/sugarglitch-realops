@@ -9,6 +9,12 @@ import requests
 import time
 from datetime import datetime
 import os
+import sys
+
+def print_flush(text):
+    """Print with immediate flush"""
+    print(text, flush=True)
+    sys.stdout.flush()
 
 class AutoDMExtractor:
     def __init__(self):
@@ -18,10 +24,10 @@ class AutoDMExtractor:
         
         os.makedirs(self.output_dir, exist_ok=True)
         
-        print("🎯 AUTO DM EXTRACTOR - Using Project Session")
-        print("=" * 60)
-        print(f"Target: {self.target}")
-        print(f"Session file: {self.session_file}")
+        print_flush("🎯 AUTO DM EXTRACTOR - Using Project Session")
+        print_flush("=" * 60)
+        print_flush(f"Target: {self.target}")
+        print_flush(f"Session file: {self.session_file}")
         
     def load_session(self):
         """Load session from project file"""
