@@ -1,0 +1,44 @@
+{
+  "target": "alx.trading",
+  "timestamp": "2025-06-06T10:12:05.031879",
+  "methods_used": [],
+  "intelligence_gathered": {
+    "instagram_ip": "57.144.194.34",
+    "subdomains": [
+      {
+        "subdomain": "www.instagram.com",
+        "ip": "157.240.229.174"
+      },
+      {
+        "subdomain": "api.instagram.com",
+        "ip": "157.240.229.63"
+      },
+      {
+        "subdomain": "graph.instagram.com",
+        "ip": "157.240.15.63"
+      },
+      {
+        "subdomain": "i.instagram.com",
+        "ip": "157.240.15.63"
+      },
+      {
+        "subdomain": "m.instagram.com",
+        "ip": "157.240.15.174"
+      },
+      {
+        "subdomain": "help.instagram.com",
+        "ip": "57.144.194.34"
+      },
+      {
+        "subdomain": "business.instagram.com",
+        "ip": "157.240.15.63"
+      }
+    ],
+    "tech_stack": {
+      "server": "Unknown",
+      "x_frame_options": "DENY",
+      "content_security_policy": "default-src *.facebook.com *.fbcdn.net *.instagram.com blob:;script-src *.instagram.com static.cdninstagram.com *.facebook.com *.fbcdn.net *.facebook.net 127.0.0.1:* 'nonce-p50e2rzT' blob: 'self' 'wasm-unsafe-eval' https://*.google-analytics.com https://translate.google.com https://apis.google.com https://accounts.google.com;style-src *.instagram.com static.cdninstagram.com data: blob: 'unsafe-inline' *.fbcdn.net *.facebook.com;connect-src *.instagram.com wss://edge-chat.instagram.com connect.facebook.net *.facebook.com facebook.com *.fbcdn.net *.facebook.net wss://*.facebook.com:* ws://localhost:* blob: *.cdninstagram.com wss://*.instagram.com:* 'self';font-src *.instagram.com static.cdninstagram.com data: *.fbcdn.net *.intern.facebook.com *.facebook.com https://fonts.gstatic.com;img-src *.instagram.com *.facebook.com *.fbcdn.net data: *.cdninstagram.com *.whatsapp.net blob: *.fbsbx.com android-webview-video-poster: *.oculuscdn.com *.giphy.com *.tenor.co *.tenor.com www.googleadservices.com *.doubleclick.net *.google.com *.google.co.uk https://www.gstatic.com https://*.google-analytics.com;media-src *.facebook.com *.fbcdn.net *.instagram.com *.cdninstagram.com cdn.fbsbx.com data: blob: https://*.giphy.com *.tenor.co *.tenor.com;child-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;frame-src *.instagram.com *.facebook.com *.fbsbx.com fbsbx.com data: www.googleadservices.com *.doubleclick.net *.google.com *.google.co.uk;manifest-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;object-src *.facebook.com *.fbcdn.net *.instagram.com data: blob:;block-all-mixed-content;upgrade-insecure-requests;",
+      "x_content_type_options": "nosniff"
+    }
+  }
+}
