@@ -1,0 +1,75 @@
+{
+  "test_info": {
+    "target": "alx.trading",
+    "timestamp": "2025-06-06T18:50:34.659215",
+    "method": "cute_rate_limiting_protection",
+    "sessions_tested": 1,
+    "total_tests": 4
+  },
+  "results": [
+    {
+      "session": "session-alx.trading",
+      "test": "Basic Instagram",
+      "url": "https://www.instagram.com/",
+      "status_code": 200,
+      "response_size": 447847,
+      "success": true,
+      "timestamp": "2025-06-06T18:50:14.745683",
+      "analysis": {
+        "contains_login": true,
+        "contains_messages": true,
+        "contains_inbox": true,
+        "contains_user_data": true,
+        "is_json": false
+      }
+    },
+    {
+      "session": "session-alx.trading",
+      "test": "Target Profile",
+      "url": "https://www.instagram.com/alx.trading/",
+      "status_code": 200,
+      "response_size": 447839,
+      "success": true,
+      "timestamp": "2025-06-06T18:50:20.026430",
+      "analysis": {
+        "contains_login": true,
+        "contains_messages": true,
+        "contains_inbox": true,
+        "contains_user_data": true,
+        "is_json": false
+      }
+    },
+    {
+      "session": "session-alx.trading",
+      "test": "Direct Messages",
+      "url": "https://www.instagram.com/direct/inbox/",
+      "status_code": 200,
+      "response_size": 447965,
+      "success": true,
+      "timestamp": "2025-06-06T18:50:25.448162",
+      "analysis": {
+        "contains_login": true,
+        "contains_messages": true,
+        "contains_inbox": true,
+        "contains_user_data": true,
+        "is_json": false
+      }
+    },
+    {
+      "session": "session-alx.trading",
+      "test": "GraphQL API",
+      "url": "https://www.instagram.com/api/graphql/",
+      "status_code": 200,
+      "response_size": 373914,
+      "success": true,
+      "timestamp": "2025-06-06T18:50:30.004397",
+      "analysis": {
+        "contains_login": true,
+        "contains_messages": true,
+        "contains_inbox": true,
+        "contains_user_data": true,
+        "is_json": false
+      }
+    }
+  ]
+}
