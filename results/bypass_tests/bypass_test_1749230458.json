@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-06-06T17:20:49.258484",
+  "techniques_tested": [
+    "ip_detection",
+    "instagram_access_test",
+    "user_agent_rotation"
+  ],
+  "successful_techniques": [
+    "instagram_access_test",
+    "user_agent_rotation"
+  ],
+  "failed_techniques": [
+    "proxy_rotation"
+  ],
+  "current_ip": "23.97.62.130",
+  "instagram_accessible": true,
+  "user_agent_test": {
+    "total_agents": 4,
+    "successful_requests": 4,
+    "failed_requests": 0,
+    "agent_details": [
+      {
+        "index": 1,
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWeb...",
+        "status": "success"
+      },
+      {
+        "index": 2,
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) Ap...",
+        "status": "success"
+      },
+      {
+        "index": 3,
+        "user_agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36...",
+        "status": "success"
+      },
+      {
+        "index": 4,
+        "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac O...",
+        "status": "success"
+      }
+    ]
+  }
+}
