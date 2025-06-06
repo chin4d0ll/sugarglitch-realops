@@ -34,13 +34,45 @@ class CuteRateDMExtractor:
         self.init_session()
         
         # Initialize cute bypass with session file
-        self.cute_bypass = CuteRateLimitBypass(session_file)
+        try:
+            self.cute_bypass = CuteRateLimitBypass(session_file)
+            print("✅ CuteRateLimitBypass initialized successfully!")
+        except Exception as e:
+            print(f"❌ Failed to initialize CuteRateLimitBypass: {e}")
+            print("🔄 Creating fallback rate limiter...")
+            self.cute_bypass = self.create_fallback_rate_limiter()
         
         # Database setup
         self.setup_database()
         
         print(f"🌟 CuteRateDMExtractor initialized for {self.username}")
     
+    def create_fallback_rate_limiter(self):
+        """Create a fallback rate limiter if CuteRateLimitBypass fails"""
+        class FallbackRateLimiter:
+            def __init__(self):
+                self.last_request_time = 0
+                self.request_count = 0
+                
+            def apply_cute_rate_limit(self):
+                """Apply simple rate limiting"""
+                current_time = time.time()
+                if current_time - self.last_request_time < 2:
+                    cute_sleep = random.uniform(2, 5)
+                    print(f"😴 Cute sleep for {cute_sleep:.2f} seconds...")
+                    time.sleep(cute_sleep)
+                self.last_request_time = time.time()
+                self.request_count += 1
+                
+            def adaptive_delay(self):
+                """Adaptive delay based on request count"""
+                if self.request_count > 10:
+                    delay = random.uniform(5, 10)
+                    print(f"🐌 Adaptive delay: {delay:.2f} seconds")
+                    time.sleep(delay)
+                    
+        return FallbackRateLimiter()
+
     def init_session(self):
         """Initialize session with cookies and headers"""
         try:
