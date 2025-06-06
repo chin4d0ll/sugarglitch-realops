@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-06-06T06:49:51.573919",
+  "target_username": "alxtrading",
+  "extraction_method": "demo_automatic",
+  "status": "demo_mode",
+  "note": "Real session could not be acquired - this is demo data",
+  "available_data": {
+    "/workspaces/sugarglitch-realops/data": [
+      "/workspaces/sugarglitch-realops/data/targets_export.json",
+      "/workspaces/sugarglitch-realops/data/operations.db",
+      "/workspaces/sugarglitch-realops/data/Python",
+      "/workspaces/sugarglitch-realops/data/demo_targets.db",
+      "/workspaces/sugarglitch-realops/data/integrated_targets_2025.db",
+      "/workspaces/sugarglitch-realops/data/elite_report_ELITE_1748815317.txt",
+      "/workspaces/sugarglitch-realops/data/dm_extraction_results_20250605_160153.json",
+      "/workspaces/sugarglitch-realops/data/alx_trading_dms_direct.db",
+      "/workspaces/sugarglitch-realops/data/intelligence",
+      "/workspaces/sugarglitch-realops/data/elite_report_ELITE_1748877703.txt"
+    ],
+    "/workspaces/sugarglitch-realops/real_extraction": [
+      "/workspaces/sugarglitch-realops/real_extraction/alx_trading_advanced",
+      "/workspaces/sugarglitch-realops/real_extraction/alx_trading",
+      "/workspaces/sugarglitch-realops/real_extraction/alx.trading"
+    ],
+    "/workspaces/sugarglitch-realops/extractions": [
+      "/workspaces/sugarglitch-realops/extractions/ultimate_dm_extraction_alx.trading_20250605_211352.json",
+      "/workspaces/sugarglitch-realops/extractions/advanced_dm_report_alx.trading_20250605_222448.json",
+      "/workspaces/sugarglitch-realops/extractions/advanced_dm_extraction_alx.trading_20250606_003826.json",
+      "/workspaces/sugarglitch-realops/extractions/advanced_dm_report_alx.trading_20250605_222924.json",
+      "/workspaces/sugarglitch-realops/extractions/ultimate_dm_extraction_alx.trading_20250605_195247.json",
+      "/workspaces/sugarglitch-realops/extractions/advanced_dm_extraction_alx.trading_20250606_004310.json",
+      "/workspaces/sugarglitch-realops/extractions/ultimate_dm_report_alx.trading_20250605_211352.json",
+      "/workspaces/sugarglitch-realops/extractions/advanced_dm_extraction_alx.trading_20250605_222448.json",
+      "/workspaces/sugarglitch-realops/extractions/advanced_dm_extraction_alx.trading_20250605_224955.json",
+      "/workspaces/sugarglitch-realops/extractions/ultimate_dm_extraction_alx.trading_20250605_220819.json"
+    ]
+  }
+}
