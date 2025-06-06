@@ -1,64 +1,53 @@
 {
-  "sqltools.connections": [
+  "python.analysis.memory.keepLibraryAst": false,
+  "python.analysis.memory.keepLibraryLocalVariables": false,
+  "python.analysis.indexing": false,
+  "python.analysis.packageIndexDepths": [
     {
-      "name": "Instagram Deep Data",
-      "driver": "SQLite",
-      "database": "./extracted_project/Python/instagram_deep_data_alx.trading.db",
-      "description": "Instagram analysis database",
-      "connectionMethod": "Database File"
-    },
-    {
-      "name": "Advanced DM Database 1",
-      "driver": "SQLite",
-      "database": "./advanced_dm_database_1748742706.sqlite",
-      "description": "Advanced DM extraction database 1",
-      "connectionMethod": "Database File"
-    },
-    {
-      "name": "Advanced DM Database 2",
-      "driver": "SQLite",
-      "database": "./advanced_dm_database_1748743051.sqlite",
-      "description": "Advanced DM extraction database 2",
-      "connectionMethod": "Database File"
+      "name": "",
+      "depth": 1
     }
   ],
-  "sqltools.useNodeRuntime": true,
-  "sqltools.autoConnectTo": [
-    "Instagram Deep Data",
-    "Advanced DM Database 1",
-    "Advanced DM Database 2"
-  ],
-  "sqltools.defaultExportType": "csv",
-  "sql.format.keywordCase": "upper",
-  "sql.format.identifierCase": "lower",
-  "sql.format.stripComments": false,
-  "sql.format.reindent": true,
-  "[sql]": {
-    "editor.defaultFormatter": "bradymholt.pgformatter"
+  "python.analysis.autoImportCompletions": false,
+  "python.analysis.completeFunctionParens": false,
+  "python.analysis.inlayHints.variableTypes": false,
+  "python.analysis.inlayHints.functionReturnTypes": false,
+  "python.analysis.inlayHints.callArgumentNames": false,
+  "files.watcherExclude": {
+    "**/.git/**": true,
+    "**/node_modules/**": true,
+    "**/__pycache__/**": true,
+    "**/logs/**": true,
+    "**/temp/**": true,
+    "**/backups/**": true,
+    "**/data/**": true,
+    "**/results/**": true,
+    "**/extracted_project/**": true,
+    "**/hijacked_sessions/**": true,
+    "**/sessions/**": true,
+    "**/sessions_fresh/**": true
   },
-  "[sqlite]": {
-    "editor.defaultFormatter": "alexcvzz.vscode-sqlite"
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/__pycache__": true,
+    "**/logs": true,
+    "**/temp": true,
+    "**/backups": true,
+    "**/data": true,
+    "**/results": true
   },
-  "cmake.ignoreCMakeListsMissing": true,
-  "terminal.integrated.accessibleViewFocusOnCommandExecution": true,
-  "terminal.integrated.accessibleViewPreserveCursorPosition": true,
-  "terminal.integrated.confirmOnExit": "always",
-  "terminal.integrated.copyOnSelection": true,
-  "terminal.integrated.cursorBlinking": true,
-  "terminal.integrated.defaultLocation": "editor",
-  "terminal.integrated.defaultProfile.linux": "bash",
-  "terminal.integrated.fontLigatures.enabled": true,
-  "terminal.integrated.sendKeybindingsToShell": true,
-  "terminal.integrated.smoothScrolling": true,
-  "accessibility.underlineLinks": false,
-  "explorer.fileNesting.enabled": true,
-  "github.copilot.chat.codesearch.enabled": true,
-  "github.copilot.chat.agent.thinkingTool": true,
-  "github.copilot.chat.scopeSelection": true,
-  "github.copilot.chat.completionContext.typescript.mode": "on",
-  "github.copilot.chat.generateTests.codeLens": true,
-  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
-  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
-  "github.copilot.chat.languageContext.typescript.enabled": true,
-  "github.copilot.chat.notebook.followCellExecution.enabled": true
+  "editor.suggest.showStatusBar": false,
+  "editor.hover.delay": 1000,
+  "editor.quickSuggestions": {
+    "other": false,
+    "comments": false,
+    "strings": false
+  },
+  "extensions.autoCheckUpdates": false,
+  "extensions.autoUpdate": false,
+  "terminal.integrated.scrollback": 1000,
+  "git.autorefresh": false,
+  "git.decorations.enabled": false,
+  "telemetry.telemetryLevel": "off"
 }
