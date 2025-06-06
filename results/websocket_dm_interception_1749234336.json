@@ -1,0 +1,13 @@
+{
+  "interception_method": "websocket_intercept",
+  "timestamp": 1749234336,
+  "total_messages": 0,
+  "extracted_messages": [],
+  "raw_intercepted_messages": [],
+  "interception_summary": {
+    "success": false,
+    "message_count": 0,
+    "raw_message_count": 0,
+    "interception_time": "2025-06-06T18:25:36.479928"
+  }
+}

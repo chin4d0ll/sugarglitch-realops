@@ -488,7 +488,9 @@ class InstagramDMExtractor:
                         time.sleep(wait_time)
                         retry_count += 1
                         continue
-                    return response
+                    else:
+                        # Max retries reached, return the response
+                        return response
                     
             except requests.RequestException as e:
                 self.logger.error(f"💥 Request error: {e}")
