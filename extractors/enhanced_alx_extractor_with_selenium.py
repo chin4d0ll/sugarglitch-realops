@@ -33,6 +33,14 @@ import hashlib
 from urllib.parse import urljoin, urlparse
 
 class EnhancedAlxExtractor:
+    def smart_delay(self, attempt=1, min_delay=2, max_delay=8, backoff_multiplier=1.8):
+        """Exponential backoff + random jitter for rate limit evasion"""
+        base = random.uniform(min_delay, max_delay)
+        delay = base * (backoff_multiplier ** (attempt-1))
+        jitter = random.uniform(0.5, 2.5)
+        final_delay = min(delay + jitter, 60)
+        print(f"😴 [RateLimit] Sleeping {final_delay:.1f}s (attempt {attempt})...")
+        time.sleep(final_delay)
     """
     EnhancedAlxExtractor
     A class for extracting Instagram Direct Messages (DMs) and related data for a target user using both Selenium browser automation and enhanced API requests. The extractor is designed to work with session and profile data, store results in a SQLite database, and generate a final extraction report.
@@ -168,7 +176,6 @@ class EnhancedAlxExtractor:
                 chrome_options = uc.ChromeOptions()
             else:
                 chrome_options = Options()
-                
             chrome_options.add_argument('--headless')
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--disable-dev-shm-usage')
@@ -176,7 +183,7 @@ class EnhancedAlxExtractor:
             chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
             chrome_options.add_experimental_option('useAutomationExtension', False)
             chrome_options.add_argument('--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1')
-            
+
             # Create driver with error handling
             try:
                 if uc:
@@ -187,62 +194,59 @@ class EnhancedAlxExtractor:
                 print(f"❌ Chrome driver failed: {e}")
                 print("🔄 Trying Firefox...")
                 driver = webdriver.Firefox()
-            
+
             driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
-            
             print("✅ Browser initialized")
-            
+
             # 🌸 Rate limit protection - slow start
-            print("😴 Initial rate limit protection delay...")
-            time.sleep(random.uniform(3, 6))
-            
+            self.smart_delay(attempt=1, min_delay=3, max_delay=8)
+
             # Go to Instagram
             driver.get("https://www.instagram.com/")
             print("📱 Instagram homepage loaded")
-            time.sleep(random.uniform(4, 7))  # Human-like delay
-            
+            self.smart_delay(attempt=1, min_delay=4, max_delay=10)
+
             # Inject session cookies
             if self.session_data and 'cookies' in self.session_data:
                 sessionid = self.session_data['cookies'].get('sessionid', '')
                 if sessionid:
-                    # Add session cookie
                     driver.add_cookie({
                         'name': 'sessionid',
                         'value': sessionid,
                         'domain': '.instagram.com'
                     })
                     print("✅ Session cookie injected")
-                    
-                    # Refresh page
                     driver.refresh()
-                    time.sleep(5)
-            
-            # Try to navigate to DMs
+                    self.smart_delay(attempt=1, min_delay=4, max_delay=8)
+
+            # Try to navigate to DMs with retry/backoff
             print("🔍 Navigating to DM inbox...")
-            try:
-                driver.get("https://www.instagram.com/direct/inbox/")
-                time.sleep(5)
-                
-                # Check if we're logged in
-                if "login" in driver.current_url.lower():
-                    print("❌ Not logged in - attempting login...")
-                    return self.attempt_login_with_selenium(driver)
-                else:
-                    print("✅ Accessing DM inbox...")
-                    return self.extract_dms_with_selenium(driver)
-                    
-            except Exception as e:
-                print(f"❌ Navigation error: {e}")
-                
+            max_attempts = 4
+            for attempt in range(1, max_attempts+1):
+                try:
+                    driver.get("https://www.instagram.com/direct/inbox/")
+                    self.smart_delay(attempt=attempt, min_delay=4, max_delay=10)
+                    if "login" in driver.current_url.lower():
+                        print("❌ Not logged in - attempting login...")
+                        return self.attempt_login_with_selenium(driver)
+                    elif "challenge" in driver.current_url.lower() or "rate_limit" in driver.page_source.lower():
+                        print("🚨 Rate limit detected! Retrying with backoff...")
+                        self.smart_delay(attempt=attempt+1, min_delay=10, max_delay=30)
+                        continue
+                    else:
+                        print("✅ Accessing DM inbox...")
+                        return self.extract_dms_with_selenium(driver)
+                except Exception as e:
+                    print(f"❌ Navigation error: {e}")
+                    self.smart_delay(attempt=attempt+1, min_delay=10, max_delay=30)
+            print("❌ Could not access DM inbox after retries.")
         except Exception as e:
             print(f"❌ Selenium error: {e}")
-            
         finally:
             try:
                 driver.quit()
             except:
                 pass
-        
         return None
     
     def attempt_login_with_selenium(self, driver):
@@ -482,7 +486,6 @@ class EnhancedAlxExtractor:
         print("=" * 50)
         
         session = requests.Session()
-        
         # Advanced headers
         headers = {
             'User-Agent': 'Instagram 302.0.0.23.109 Android (33/13; 420dpi; 1080x2340; samsung; SM-G991B; o1s; exynos2100; en_US; 516184550)',
@@ -497,44 +500,45 @@ class EnhancedAlxExtractor:
             'Referer': 'https://www.instagram.com/',
             'Connection': 'keep-alive'
         }
-        
         session.headers.update(headers)
-        
         # Add session cookies
         if self.session_data and 'cookies' in self.session_data:
             session.cookies.update(self.session_data['cookies'])
             print("✅ Session cookies added")
-        
-        # Try multiple endpoints
+        # Try multiple endpoints with retry/backoff
         endpoints = [
             f"https://i.instagram.com/api/v1/users/{self.target}/info/",
             f"https://www.instagram.com/api/v1/users/web_profile_info/?username={self.target}",
             "https://i.instagram.com/api/v1/direct_v2/inbox/",
             "https://www.instagram.com/api/v1/direct_v2/threads/",
         ]
-        
+        max_attempts = 4
         for endpoint in endpoints:
-            try:
-                print(f"🔍 Testing: {endpoint}")
-                response = session.get(endpoint, timeout=15)
-                print(f"   Status: {response.status_code}")
-                
-                if response.status_code == 200:
-                    try:
-                        data = response.json()
-                        if data:
-                            print(f"   ✅ JSON data received")
-                            
-                            # Process data
-                            result = self.process_api_response(data, endpoint)
-                            if result:
-                                return result
-                    except:
-                        print(f"   ⚠️ Non-JSON response")
-                
-            except Exception as e:
-                print(f"   ❌ Error: {e}")
-        
+            for attempt in range(1, max_attempts+1):
+                try:
+                    print(f"🔍 Testing: {endpoint} (attempt {attempt})")
+                    response = session.get(endpoint, timeout=15)
+                    print(f"   Status: {response.status_code}")
+                    if response.status_code == 200:
+                        try:
+                            data = response.json()
+                            if data:
+                                print(f"   ✅ JSON data received")
+                                result = self.process_api_response(data, endpoint)
+                                if result:
+                                    return result
+                        except:
+                            print(f"   ⚠️ Non-JSON response")
+                    elif response.status_code == 429:
+                        print(f"🚨 Rate limit detected! Backing off...")
+                        self.smart_delay(attempt=attempt, min_delay=10, max_delay=30)
+                        continue
+                    else:
+                        print(f"   ⚠️ Status: {response.status_code}")
+                        self.smart_delay(attempt=attempt, min_delay=3, max_delay=8)
+                except Exception as e:
+                    print(f"   ❌ Error: {e}")
+                    self.smart_delay(attempt=attempt, min_delay=5, max_delay=15)
         return None
     
     def process_api_response(self, data, endpoint):
