@@ -1,0 +1,45 @@
+{
+  "conversation_id": "mock_conversation_001",
+  "participants": [
+    "user1",
+    "user2"
+  ],
+  "message_count": 15,
+  "messages": [
+    {
+      "id": "msg_001",
+      "sender": "user1",
+      "text": "Hey! How are you doing?",
+      "timestamp": "2025-06-06T09:00:00Z",
+      "read": true
+    },
+    {
+      "id": "msg_002",
+      "sender": "user2",
+      "text": "I'm good! Just working on some projects \ud83d\udcbb",
+      "timestamp": "2025-06-06T09:05:00Z",
+      "read": true
+    },
+    {
+      "id": "msg_003",
+      "sender": "user1",
+      "text": "Nice! What kind of projects?",
+      "timestamp": "2025-06-06T09:07:00Z",
+      "read": false
+    }
+  ],
+  "media_files": [
+    {
+      "type": "image",
+      "filename": "photo_001.jpg",
+      "size": "2.3MB",
+      "downloaded": true
+    }
+  ],
+  "extraction_info": {
+    "method": "session_based",
+    "proxy_used": true,
+    "stealth_mode": true,
+    "extraction_time": "2025-06-06T09:48:21.698268"
+  }
+}
