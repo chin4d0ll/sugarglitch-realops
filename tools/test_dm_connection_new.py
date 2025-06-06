@@ -28,39 +28,13 @@ def load_session(session_path: str) -> Optional[Dict[str, str]]:
         with open(session_path, 'r') as f:
             session_data = json.load(f)
         
-        # Handle different session formats
-        if isinstance(session_data, list):
-            # Cookie format - extract sessionid
-            sessionid = None
-            for cookie in session_data:
-                if cookie.get('name') == 'sessionid':
-                    sessionid = cookie.get('value')
-                    break
-            
-            if not sessionid:
-                print("❌ No sessionid found in cookie data")
-                return None
-            
-            if sessionid == "YOUR_SESSION_ID_HERE":
-                print("❌ Session file contains placeholder data - please update with real session")
-                return None
-            
-            # Create session data with default user agent
-            session_data = {
-                'sessionid': sessionid,
-                'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-            }
-        elif isinstance(session_data, dict):
-            # Direct session format
-            if 'sessionid' not in session_data:
-                print("❌ Missing 'sessionid' in session data")
-                return None
-            
-            if 'user_agent' not in session_data:
-                print("⚠️  Missing 'user_agent', using default")
-                session_data['user_agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        else:
-            print("❌ Invalid session file format")
+        # Validate required fields
+        if 'sessionid' not in session_data:
+            print("❌ Missing 'sessionid' in session data")
+            return None
+        
+        if 'user_agent' not in session_data:
+            print("❌ Missing 'user_agent' in session data")
             return None
         
         print(f"✅ Session loaded from: {session_path}")
