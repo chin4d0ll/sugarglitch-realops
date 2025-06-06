@@ -1,0 +1,190 @@
+{
+  "target": "alx.trading",
+  "timestamp": "2025-06-06T17:05:15.183291",
+  "reconnaissance_phases": [
+    "network",
+    "profile",
+    "endpoints",
+    "sessions"
+  ],
+  "findings": {
+    "network": {},
+    "profile": {
+      "https://www.instagram.com/alx.trading/": {
+        "status_code": 429,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "content_length": 0,
+        "accessible": false
+      },
+      "https://www.instagram.com/api/v1/users/web_profile_info/?username=alx.trading": {
+        "status_code": 401,
+        "content_type": "application/json; charset=utf-8",
+        "content_length": 119,
+        "accessible": false
+      },
+      "https://i.instagram.com/api/v1/users/alx.trading/info/": {
+        "status_code": 404,
+        "content_type": "text/html; charset=utf-8",
+        "content_length": 21118,
+        "accessible": false
+      }
+    },
+    "endpoints": {
+      "https://i.instagram.com/api/v1/direct_v2/inbox/": {
+        "status_code": 400,
+        "accessible": true,
+        "requires_auth": false,
+        "content_type": "text/javascript; charset=utf-8",
+        "server": "",
+        "response_size": 105
+      },
+      "https://www.instagram.com/api/v1/direct_v2/inbox/": {
+        "status_code": 404,
+        "accessible": false,
+        "requires_auth": false,
+        "content_type": "text/html; charset=utf-8",
+        "server": "",
+        "response_size": 21118
+      },
+      "https://i.instagram.com/api/v1/direct_v2/threads/": {
+        "status_code": 404,
+        "accessible": false,
+        "requires_auth": false,
+        "content_type": "text/html; charset=utf-8",
+        "server": "",
+        "response_size": 21118
+      },
+      "https://www.instagram.com/direct/inbox/": {
+        "status_code": 429,
+        "accessible": true,
+        "requires_auth": false,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "server": "",
+        "response_size": 0
+      },
+      "https://www.instagram.com/direct/t/": {
+        "status_code": 200,
+        "accessible": true,
+        "requires_auth": false,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "server": "",
+        "response_size": 382096,
+        "analysis": {
+          "type": "html",
+          "size": 382096,
+          "title": "Instagram",
+          "forms": 0,
+          "scripts": 88
+        }
+      },
+      "https://www.instagram.com/graphql/query/": {
+        "status_code": 401,
+        "accessible": true,
+        "requires_auth": true,
+        "content_type": "application/json; charset=utf-8",
+        "server": "",
+        "response_size": 119
+      },
+      "https://i.instagram.com/api/v1/feed/timeline/": {
+        "status_code": 404,
+        "accessible": false,
+        "requires_auth": false,
+        "content_type": "text/html; charset=utf-8",
+        "server": "",
+        "response_size": 21118
+      },
+      "https://www.instagram.com/api/v1/feed/timeline/": {
+        "status_code": 429,
+        "accessible": true,
+        "requires_auth": false,
+        "content_type": "text/html; charset=\"utf-8\"",
+        "server": "",
+        "response_size": 0
+      }
+    },
+    "sessions": {
+      "session_alx_trading.json": {
+        "session_file": "session_alx_trading.json",
+        "timestamp": "2025-06-06T17:05:36.352576",
+        "validation_results": {
+          "timestamp": "2025-06-06T17:05:36.352594",
+          "tests_performed": [
+            "https://www.instagram.com/accounts/edit/",
+            "https://www.instagram.com/api/v1/accounts/current_user/",
+            "https://i.instagram.com/api/v1/accounts/current_user/"
+          ],
+          "working_endpoints": [
+            "https://www.instagram.com/accounts/edit/"
+          ],
+          "failed_endpoints": [
+            {
+              "endpoint": "https://www.instagram.com/api/v1/accounts/current_user/",
+              "status_code": 429,
+              "reason": "HTTP error"
+            },
+            {
+              "endpoint": "https://i.instagram.com/api/v1/accounts/current_user/",
+              "status_code": 404,
+              "reason": "HTTP error"
+            }
+          ],
+          "overall_status": "working"
+        },
+        "structure": {
+          "keys": [
+            "sessionid",
+            "csrftoken",
+            "ds_user_id",
+            "target",
+            "created_at",
+            "status"
+          ],
+          "has_sessionid": true,
+          "has_csrftoken": true,
+          "total_cookies": 6
+        }
+      },
+      "session.json": {
+        "session_file": "session.json",
+        "timestamp": "2025-06-06T17:05:38.668391",
+        "validation_results": {
+          "timestamp": "2025-06-06T17:05:38.668407",
+          "tests_performed": [
+            "https://www.instagram.com/accounts/edit/",
+            "https://www.instagram.com/api/v1/accounts/current_user/",
+            "https://i.instagram.com/api/v1/accounts/current_user/"
+          ],
+          "working_endpoints": [],
+          "failed_endpoints": [
+            {
+              "endpoint": "https://www.instagram.com/accounts/edit/",
+              "status_code": 400,
+              "reason": "HTTP error"
+            },
+            {
+              "endpoint": "https://www.instagram.com/api/v1/accounts/current_user/",
+              "status_code": 400,
+              "reason": "HTTP error"
+            },
+            {
+              "endpoint": "https://i.instagram.com/api/v1/accounts/current_user/",
+              "status_code": 400,
+              "reason": "HTTP error"
+            }
+          ],
+          "overall_status": "expired"
+        },
+        "structure": {
+          "keys": [
+            "sessionid",
+            "created",
+            "target"
+          ],
+          "has_sessionid": true,
+          "has_csrftoken": false,
+          "total_cookies": 3
+        }
+      }
+    }
+  }
+}

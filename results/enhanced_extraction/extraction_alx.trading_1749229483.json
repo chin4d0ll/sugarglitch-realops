@@ -1,0 +1,221 @@
+{
+  "target": "alx.trading",
+  "timestamp": "2025-06-06T17:04:30.950047",
+  "extraction_phases": [
+    "direct_extraction",
+    "alternative_endpoints",
+    "session_rotation",
+    "intelligence_analysis"
+  ],
+  "data_extracted": {
+    "direct": {
+      "session_alx_trading.json": {
+        "https://i.instagram.com/api/v1/direct_v2/inbox/": {
+          "status_code": 400,
+          "content_type": "text/javascript; charset=utf-8",
+          "success": false
+        },
+        "https://www.instagram.com/api/v1/direct_v2/inbox/": {
+          "status_code": 404,
+          "content_type": "text/html; charset=utf-8",
+          "success": false
+        },
+        "https://i.instagram.com/api/v1/direct_v2/threads/": {
+          "status_code": 404,
+          "content_type": "text/html; charset=utf-8",
+          "success": false
+        }
+      },
+      "session.json": {
+        "https://i.instagram.com/api/v1/direct_v2/inbox/": {
+          "status_code": 400,
+          "content_type": "text/html; charset=utf-8",
+          "success": false
+        },
+        "https://www.instagram.com/api/v1/direct_v2/inbox/": {
+          "status_code": 400,
+          "content_type": "text/html; charset=utf-8",
+          "success": false
+        },
+        "https://i.instagram.com/api/v1/direct_v2/threads/": {
+          "status_code": 400,
+          "content_type": "text/html; charset=utf-8",
+          "success": false
+        }
+      }
+    },
+    "alternative": {
+      "session_alx_trading.json": {
+        "https://www.instagram.com/direct/inbox/": {
+          "status_code": 200,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "success": true,
+          "content_size": 448301,
+          "content_analysis": {
+            "content_size": 448301,
+            "target_mentions": 0,
+            "dm_indicators": 4,
+            "useful_data": {},
+            "useful_json_objects": 1
+          }
+        },
+        "https://www.instagram.com/direct/t/": {
+          "status_code": 200,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "success": true,
+          "content_size": 448838,
+          "content_analysis": {
+            "content_size": 448838,
+            "target_mentions": 0,
+            "dm_indicators": 4,
+            "useful_data": {},
+            "useful_json_objects": 1
+          }
+        },
+        "https://www.instagram.com/alx.trading/": {
+          "status_code": 200,
+          "content_type": "text/html; charset=\"utf-8\"",
+          "success": true,
+          "content_size": 448550,
+          "content_analysis": {
+            "content_size": 448550,
+            "target_mentions": 0,
+            "dm_indicators": 4,
+            "useful_data": {},
+            "useful_json_objects": 1
+          }
+        },
+        "https://www.instagram.com/graphql/query/": {
+          "status_code": 200,
+          "content_type": "application/json; charset=utf-8",
+          "success": true,
+          "content_size": 78,
+          "content_analysis": {
+            "content_size": 78,
+            "target_mentions": 0,
+            "dm_indicators": 1,
+            "useful_data": {},
+            "useful_json_objects": 0
+          }
+        }
+      },
+      "session.json": {
+        "https://www.instagram.com/direct/inbox/": {
+          "status_code": 400,
+          "content_type": "text/html; charset=utf-8",
+          "success": false,
+          "content_size": 105
+        },
+        "https://www.instagram.com/direct/t/": {
+          "status_code": 400,
+          "content_type": "text/html; charset=utf-8",
+          "success": false,
+          "content_size": 105
+        },
+        "https://www.instagram.com/alx.trading/": {
+          "status_code": 400,
+          "content_type": "text/html; charset=utf-8",
+          "success": false,
+          "content_size": 105
+        },
+        "https://www.instagram.com/graphql/query/": {
+          "status_code": 400,
+          "content_type": "text/html; charset=utf-8",
+          "success": false,
+          "content_size": 105
+        }
+      }
+    },
+    "session_rotation": {
+      "rotation_attempts": [
+        {
+          "session": "session_alx_trading.json",
+          "timestamp": "2025-06-06T17:04:40.888867",
+          "techniques_used": [
+            "standard_headers",
+            "mobile_headers",
+            "ajax_headers"
+          ],
+          "data_found": {
+            "standard_headers": {
+              "success": true,
+              "status_code": 200,
+              "content_size": 448716,
+              "method": "standard_headers"
+            },
+            "mobile_headers": {
+              "success": true,
+              "status_code": 200,
+              "content_size": 445088,
+              "method": "mobile_headers"
+            },
+            "ajax_headers": {
+              "success": false,
+              "status_code": 400,
+              "content_size": 105,
+              "method": "ajax_headers"
+            }
+          },
+          "success_score": 2
+        },
+        {
+          "session": "session.json",
+          "timestamp": "2025-06-06T17:04:43.242379",
+          "techniques_used": [
+            "standard_headers",
+            "mobile_headers",
+            "ajax_headers"
+          ],
+          "data_found": {
+            "standard_headers": {
+              "success": false,
+              "status_code": 400,
+              "content_size": 105,
+              "method": "standard_headers"
+            },
+            "mobile_headers": {
+              "success": false,
+              "status_code": 400,
+              "content_size": 105,
+              "method": "mobile_headers"
+            },
+            "ajax_headers": {
+              "success": false,
+              "status_code": 400,
+              "content_size": 105,
+              "method": "ajax_headers"
+            }
+          },
+          "success_score": 0
+        }
+      ],
+      "best_session": "session_alx_trading.json",
+      "total_data_found": 2
+    }
+  },
+  "intelligence_gathered": {
+    "summary": {
+      "total_extraction_attempts": 14,
+      "successful_extractions": 4,
+      "success_rate": 28.57142857142857
+    },
+    "patterns": {
+      "status_code_distribution": {
+        "400": 8,
+        "404": 2,
+        "200": 4
+      },
+      "error_type_distribution": {}
+    },
+    "recommendations": [
+      "Some extractions successful - focus on working methods"
+    ]
+  },
+  "success_metrics": {
+    "overall_success_rate": 28.57142857142857,
+    "best_performing_phase": "alternative",
+    "best_performing_session": "session_alx_trading.json",
+    "total_data_points": 14,
+    "successful_data_points": 4
+  }
+}

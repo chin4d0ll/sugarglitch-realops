@@ -1,0 +1,41 @@
+{
+  "timestamp": "20250606_170652",
+  "current_ip": "23.97.62.130",
+  "methods_tested": 7,
+  "successful_methods": 5,
+  "results": {
+    "dns_over_https": {
+      "status": "SUCCESS",
+      "dns": "1.1.1.1"
+    },
+    "ipv6_fallback": {
+      "status": "FAILED"
+    },
+    "cloud_proxy": {
+      "status": "SUCCESS",
+      "service": "https://api.codetabs.com/v1/proxy?quest="
+    },
+    "mobile_ua": {
+      "status": "SUCCESS",
+      "agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1"
+    },
+    "timing_bypass": {
+      "status": "SUCCESS",
+      "timing": "Immediate"
+    },
+    "distributed": {
+      "status": "SUCCESS",
+      "nodes": 3
+    },
+    "session_resurrection": {
+      "status": "FAILED"
+    }
+  },
+  "recommendations": [
+    "\u2705 Use dns_over_https - Successfully bypassed restrictions",
+    "\u2705 Use cloud_proxy - Successfully bypassed restrictions",
+    "\u2705 Use mobile_ua - Successfully bypassed restrictions",
+    "\u2705 Use timing_bypass - Successfully bypassed restrictions",
+    "\u2705 Use distributed - Successfully bypassed restrictions"
+  ]
+}
