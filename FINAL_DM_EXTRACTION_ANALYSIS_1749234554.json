@@ -1,0 +1,809 @@
+{
+  "analysis_timestamp": 1749234554,
+  "analysis_date": "2025-06-06T18:29:14.290523",
+  "comprehensive_analysis": {
+    "total_extraction_files": 49,
+    "total_raw_messages": 0,
+    "total_real_messages": 0,
+    "unique_real_messages": 0,
+    "total_metadata_entries": 0,
+    "method_statistics": {
+      "unknown": {
+        "files": 39,
+        "real_messages": 0,
+        "metadata": 0
+      },
+      "demo_automatic": {
+        "files": 2,
+        "real_messages": 0,
+        "metadata": 0
+      },
+      "browser_automation": {
+        "files": 3,
+        "real_messages": 0,
+        "metadata": 0
+      },
+      "mobile_api": {
+        "files": 3,
+        "real_messages": 0,
+        "metadata": 0
+      }
+    },
+    "real_messages": [],
+    "extraction_files": []
+  },
+  "all_extractions": [
+    {
+      "file_path": "/workspaces/sugarglitch-realops/advanced_alx_extraction_1749192959.json",
+      "file_name": "advanced_alx_extraction_1749192959.json",
+      "file_size": 1550,
+      "modified_time": "2025-06-06T06:55:59.908214",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/alx_trading_extraction_1749192802.json",
+      "file_name": "alx_trading_extraction_1749192802.json",
+      "file_size": 1367,
+      "modified_time": "2025-06-06T06:53:22.714224",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/alx_trading_extraction_1749192817.json",
+      "file_name": "alx_trading_extraction_1749192817.json",
+      "file_size": 1367,
+      "modified_time": "2025-06-06T06:53:37.845223",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/alx_trading_session_fleming654.json",
+      "file_name": "alx_trading_session_fleming654.json",
+      "file_size": 171,
+      "modified_time": "2025-06-06T17:09:55.083619",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/bypass_arsenal_report_20250606_101308.json",
+      "file_name": "bypass_arsenal_report_20250606_101308.json",
+      "file_size": 1178,
+      "modified_time": "2025-06-06T10:13:08.275610",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/bypass_arsenal_report_20250606_170430.json",
+      "file_name": "bypass_arsenal_report_20250606_170430.json",
+      "file_size": 1178,
+      "modified_time": "2025-06-06T17:04:30.948631",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/bypass_arsenal_report_20250606_170652.json",
+      "file_name": "bypass_arsenal_report_20250606_170652.json",
+      "file_size": 1178,
+      "modified_time": "2025-06-06T17:06:52.483626",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/bypass_arsenal_report_20250606_181940.json",
+      "file_name": "bypass_arsenal_report_20250606_181940.json",
+      "file_size": 1178,
+      "modified_time": "2025-06-06T18:19:40.420457",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/comprehensive_dm_scan_results_1749231518.json",
+      "file_name": "comprehensive_dm_scan_results_1749231518.json",
+      "error": "'list' object has no attribute 'get'",
+      "total_messages": 0,
+      "has_real_content": false
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/demo_extraction_1749192591.json",
+      "file_name": "demo_extraction_1749192591.json",
+      "file_size": 2404,
+      "modified_time": "2025-06-06T06:49:51.573238",
+      "extraction_method": "demo_automatic",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/demo_extraction_1749192621.json",
+      "file_name": "demo_extraction_1749192621.json",
+      "file_size": 2404,
+      "modified_time": "2025-06-06T06:50:21.855236",
+      "extraction_method": "demo_automatic",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/reconnaissance_report_1749204726.json",
+      "file_name": "reconnaissance_report_1749204726.json",
+      "file_size": 2627,
+      "modified_time": "2025-06-06T10:12:06.566611",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/browser_dm_extraction_1749233796.json",
+      "file_name": "browser_dm_extraction_1749233796.json",
+      "file_size": 244,
+      "modified_time": "2025-06-06T18:16:36.488464",
+      "extraction_method": "browser_automation",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/browser_dm_extraction_1749234243.json",
+      "file_name": "browser_dm_extraction_1749234243.json",
+      "file_size": 244,
+      "modified_time": "2025-06-06T18:24:03.869447",
+      "extraction_method": "browser_automation",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/browser_dm_extraction_1749234270.json",
+      "file_name": "browser_dm_extraction_1749234270.json",
+      "file_size": 244,
+      "modified_time": "2025-06-06T18:24:30.859446",
+      "extraction_method": "browser_automation",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/bypass_analysis/bypass_1749229470.json",
+      "file_name": "bypass_1749229470.json",
+      "file_size": 2992,
+      "modified_time": "2025-06-06T17:04:30.948631",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/bypass_analysis/bypass_1749229612.json",
+      "file_name": "bypass_1749229612.json",
+      "file_size": 2994,
+      "modified_time": "2025-06-06T17:06:52.483626",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/bypass_analysis/bypass_1749233980.json",
+      "file_name": "bypass_1749233980.json",
+      "file_size": 2993,
+      "modified_time": "2025-06-06T18:19:40.420457",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/bypass_tests/bypass_test_1749205849.json",
+      "file_name": "bypass_test_1749205849.json",
+      "file_size": 1067,
+      "modified_time": "2025-06-06T10:30:49.218599",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/bypass_tests/bypass_test_1749230091.json",
+      "file_name": "bypass_test_1749230091.json",
+      "file_size": 1067,
+      "modified_time": "2025-06-06T17:14:51.161607",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/bypass_tests/bypass_test_1749230458.json",
+      "file_name": "bypass_test_1749230458.json",
+      "file_size": 1067,
+      "modified_time": "2025-06-06T17:20:58.573593",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/bypass_tests/bypass_test_1749234033.json",
+      "file_name": "bypass_test_1749234033.json",
+      "file_size": 2816,
+      "modified_time": "2025-06-06T18:20:33.174455",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/dm_content_analysis/dm_content_analysis_1749233354.json",
+      "file_name": "dm_content_analysis_1749233354.json",
+      "file_size": 1506224,
+      "modified_time": "2025-06-06T18:09:16.327481",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/dm_content_analysis/extracted_messages_1749233354.json",
+      "file_name": "extracted_messages_1749233354.json",
+      "error": "'list' object has no attribute 'get'",
+      "total_messages": 0,
+      "has_real_content": false
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/dm_extraction_1749204133.json",
+      "file_name": "dm_extraction_1749204133.json",
+      "file_size": 124,
+      "modified_time": "2025-06-06T10:02:13.016617",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/enhanced_extraction/comprehensive_report_1749229483.json",
+      "file_name": "comprehensive_report_1749229483.json",
+      "file_size": 18161,
+      "modified_time": "2025-06-06T17:04:43.914631",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/enhanced_extraction/comprehensive_report_1749229632.json",
+      "file_name": "comprehensive_report_1749229632.json",
+      "file_size": 17673,
+      "modified_time": "2025-06-06T17:07:12.647625",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/enhanced_extraction/comprehensive_report_1749233990.json",
+      "file_name": "comprehensive_report_1749233990.json",
+      "file_size": 32527,
+      "modified_time": "2025-06-06T18:19:50.231456",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/enhanced_extraction/extraction_alx.trading_1749229483.json",
+      "file_name": "extraction_alx.trading_1749229483.json",
+      "file_size": 6652,
+      "modified_time": "2025-06-06T17:04:43.913631",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/enhanced_extraction/extraction_alx.trading_1749229632.json",
+      "file_name": "extraction_alx.trading_1749229632.json",
+      "file_size": 6516,
+      "modified_time": "2025-06-06T17:07:12.646625",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/mobile_dm_extraction_1749233888.json",
+      "file_name": "mobile_dm_extraction_1749233888.json",
+      "file_size": 338,
+      "modified_time": "2025-06-06T18:18:08.548460",
+      "extraction_method": "mobile_api",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/mobile_dm_extraction_1749234093.json",
+      "file_name": "mobile_dm_extraction_1749234093.json",
+      "file_size": 338,
+      "modified_time": "2025-06-06T18:21:33.056452",
+      "extraction_method": "mobile_api",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/mobile_dm_extraction_1749234366.json",
+      "file_name": "mobile_dm_extraction_1749234366.json",
+      "file_size": 338,
+      "modified_time": "2025-06-06T18:26:06.093442",
+      "extraction_method": "mobile_api",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/penetration/recon_alx.trading_1749230002.json",
+      "file_name": "recon_alx.trading_1749230002.json",
+      "file_size": 24392,
+      "modified_time": "2025-06-06T17:13:22.043611",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/penetration/recon_alx.trading_1749230049.json",
+      "file_name": "recon_alx.trading_1749230049.json",
+      "file_size": 24088,
+      "modified_time": "2025-06-06T17:14:09.319609",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/real_extraction/comprehensive_report_1749205875.json",
+      "file_name": "comprehensive_report_1749205875.json",
+      "file_size": 31088,
+      "modified_time": "2025-06-06T10:31:15.593599",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/real_extraction/comprehensive_report_1749230116.json",
+      "file_name": "comprehensive_report_1749230116.json",
+      "file_size": 1029525,
+      "modified_time": "2025-06-06T17:15:16.709606",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/real_extraction/comprehensive_report_1749230483.json",
+      "file_name": "comprehensive_report_1749230483.json",
+      "file_size": 1032209,
+      "modified_time": "2025-06-06T17:21:23.934592",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/real_extraction/comprehensive_report_1749234061.json",
+      "file_name": "comprehensive_report_1749234061.json",
+      "file_size": 1034492,
+      "modified_time": "2025-06-06T18:21:01.785454",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/real_extraction/extraction_alx.trading_1749205875.json",
+      "file_name": "extraction_alx.trading_1749205875.json",
+      "file_size": 28056,
+      "modified_time": "2025-06-06T10:31:15.592599",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/real_extraction/extraction_alx.trading_1749230116.json",
+      "file_name": "extraction_alx.trading_1749230116.json",
+      "file_size": 901417,
+      "modified_time": "2025-06-06T17:15:16.669606",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/real_extraction/extraction_alx.trading_1749230483.json",
+      "file_name": "extraction_alx.trading_1749230483.json",
+      "file_size": 904017,
+      "modified_time": "2025-06-06T17:21:23.896592",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/reconnaissance/recon_alx.trading_1749229399.json",
+      "file_name": "recon_alx.trading_1749229399.json",
+      "file_size": 6192,
+      "modified_time": "2025-06-06T17:03:19.595634",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/reconnaissance/recon_alx.trading_1749229539.json",
+      "file_name": "recon_alx.trading_1749229539.json",
+      "file_size": 5868,
+      "modified_time": "2025-06-06T17:05:39.337629",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/ultimate_master/ultimate_master_report_1749232516.json",
+      "file_name": "ultimate_master_report_1749232516.json",
+      "file_size": 338,
+      "modified_time": "2025-06-06T17:55:16.416513",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/websocket_dm_interception_1749233863.json",
+      "file_name": "websocket_dm_interception_1749233863.json",
+      "file_size": 323,
+      "modified_time": "2025-06-06T18:17:43.251461",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/results/websocket_dm_interception_1749234336.json",
+      "file_name": "websocket_dm_interception_1749234336.json",
+      "file_size": 323,
+      "modified_time": "2025-06-06T18:25:36.479443",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/ultimate_extraction_20250606_055406.json",
+      "file_name": "ultimate_extraction_20250606_055406.json",
+      "file_size": 223,
+      "modified_time": "2025-06-06T05:54:06.538477",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    },
+    {
+      "file_path": "/workspaces/sugarglitch-realops/ultimate_extraction_20250606_055459.json",
+      "file_name": "ultimate_extraction_20250606_055459.json",
+      "file_size": 223,
+      "modified_time": "2025-06-06T05:54:59.440478",
+      "extraction_method": "unknown",
+      "total_messages": 0,
+      "messages": [],
+      "has_real_content": false,
+      "analysis": {
+        "real_messages": [],
+        "metadata_messages": [],
+        "real_count": 0,
+        "metadata_count": 0
+      }
+    }
+  ],
+  "final_verdict": {
+    "real_dm_content_found": false,
+    "total_unique_real_messages": 0,
+    "extraction_success": "METADATA_ONLY",
+    "recommendation": "Only metadata/config data extracted - need fresh sessions or different approach"
+  }
+}
