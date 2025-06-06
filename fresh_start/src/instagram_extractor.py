@@ -24,15 +24,24 @@ class InstagramDMExtractor:
         self.user_id = None
         self.username = config.get('target_username', 'alx.trading')
         
-        # Setup session headers
+        # 💖 Rate limiting protection settings 💖
+        self.base_delay = 5  # Base delay between requests (seconds)
+        self.max_retry = 3   # Maximum retry attempts
+        self.last_request_time = 0
+        
+        # Setup session headers with cute user agent 💕
         self.session.headers.update({
-            'User-Agent': config.get('user_agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'),
-            'Accept': 'application/json',
-            'Accept-Language': 'en-US,en;q=0.9',
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
             'Accept-Encoding': 'gzip, deflate, br',
             'DNT': '1',
             'Connection': 'keep-alive',
             'Upgrade-Insecure-Requests': '1',
+            'Sec-Fetch-Dest': 'document',
+            'Sec-Fetch-Mode': 'navigate',
+            'Sec-Fetch-Site': 'none',
+            'Cache-Control': 'max-age=0'
         })
         
         # Setup proxies if configured
@@ -415,3 +424,77 @@ class InstagramDMExtractor:
         
         with open(output_path, 'w', encoding='utf-8') as f:
             f.write(html_content)
+    
+    def cute_request(self, url: str, params: Dict = None) -> Optional[requests.Response]:
+        """💖 Cute request with smart rate limiting protection 💖"""
+        
+        # Rate limiting protection - ensure minimum delay
+        elapsed = time.time() - self.last_request_time
+        if elapsed < self.base_delay:
+            sleep_time = self.base_delay - elapsed
+            self.logger.info(f"⏰ Rate limiting protection: waiting {sleep_time:.1f}s ✨")
+            time.sleep(sleep_time)
+        
+        retry_count = 0
+        while retry_count < self.max_retry:
+            try:
+                # Add cute random jitter 💕
+                jitter = random.uniform(1.0, 3.0)
+                if retry_count > 0:
+                    self.logger.info(f"🔄 Retry {retry_count}/{self.max_retry} with {jitter:.1f}s jitter 💝")
+                    time.sleep(jitter)
+                
+                self.last_request_time = time.time()
+                self.logger.info(f"📡 Requesting: {url[:50]}... 💖")
+                
+                # Make the request
+                response = self.session.get(url, params=params, timeout=30)
+                
+                # Handle HTTP 429 - Too Many Requests 🛡️
+                if response.status_code == 429:
+                    self.logger.warning(f"💔 HTTP 429 - Too Many Requests!")
+                    
+                    # Check for Retry-After header (Instagram sometimes provides this)
+                    retry_after = response.headers.get('Retry-After')
+                    if retry_after:
+                        wait_time = int(retry_after)
+                        self.logger.info(f"💤 Server says wait {wait_time}s (Retry-After header) 😴")
+                        time.sleep(wait_time)
+                    else:
+                        # Exponential backoff with cute randomization 
+                        wait_time = random.uniform(10, 25) * (retry_count + 1)
+                        self.logger.info(f"💤 Exponential backoff: waiting {wait_time:.1f}s 😴✨")
+                        time.sleep(wait_time)
+                    
+                    retry_count += 1
+                    continue
+                
+                # Success responses 🎉
+                elif response.status_code in [200, 201]:
+                    self.logger.info(f"✅ Success! HTTP {response.status_code} - {len(response.content)} bytes 🎉")
+                    return response
+                
+                # Other responses (404, etc.) 📝
+                else:
+                    self.logger.info(f"📝 HTTP {response.status_code} - {len(response.content)} bytes")
+                    if retry_count < self.max_retry - 1:
+                        wait_time = random.uniform(3, 8)
+                        self.logger.info(f"⏰ Retrying after {wait_time:.1f}s... 💫")
+                        time.sleep(wait_time)
+                        retry_count += 1
+                        continue
+                    return response
+                    
+            except requests.RequestException as e:
+                self.logger.error(f"💥 Request error: {e}")
+                if retry_count < self.max_retry - 1:
+                    wait_time = random.uniform(5, 12)
+                    self.logger.info(f"⏰ Network retry after {wait_time:.1f}s... 🌸")
+                    time.sleep(wait_time)
+                    retry_count += 1
+                    continue
+                raise
+        
+        # If we get here, all retries failed 😢
+        self.logger.error(f"😢 All retry attempts failed for {url}")
+        return response if 'response' in locals() else None
