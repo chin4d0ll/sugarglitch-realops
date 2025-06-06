@@ -1,0 +1,40 @@
+============================================================
+🔍 OFFLINE DATA ANALYSIS REPORT
+============================================================
+📅 วันที่: 2025-06-06 19:24:36
+📁 Base Path: /workspaces/sugarglitch-realops/fresh_start
+
+📈 Summary: พบไฟล์ทั้งหมด 22 ไฟล์
+  - JSON: 8 ไฟล์
+  - SESSION: 1 ไฟล์
+  - OTHER: 13 ไฟล์
+
+📄 JSON FILES ANALYSIS:
+  📝 real_data_analysis.json
+     Size: 158 bytes
+     Type: dict
+     Keys: analysis_time, real_session_available, user_id
+  📝 extraction_summary.json
+     Size: 131 bytes
+     Type: dict
+     Keys: successful_extractions, total_conversations, total_messages
+  📝 session_template.json
+     Size: 596 bytes
+     Type: dict
+     Keys: instructions, how_to_get, session_data
+  📝 settings.json
+     Size: 655 bytes
+     Type: dict
+     Keys: target_username, user_agent, session_data
+  📝 real_dm_extraction_1749237847.json
+     Size: 3517 bytes
+     Type: dict
+     Keys: extraction_info, conversations, statistics
+
+🚀 SESSION RECOVERY SUGGESTIONS:
+1. ตรวจสอบ network connection:
+   ping google.com
+2. ลองใช้ offline mode:
+   export OFFLINE_MODE=1
+3. ใช้ cached data แทน:
+   python offline_analyzer.py --use-cache

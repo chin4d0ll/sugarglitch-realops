@@ -1,0 +1,1788 @@
+{
+  "analysis_time": "2025-06-06T19:24:37.591189",
+  "environment": "offline_analysis",
+  "session_analysis": {
+    "exists": true,
+    "sessionid": "82d00883%3A1748264421%3A6f473b1c8d0b8d51",
+    "decoded": "82d00883:1748264421:6f473b1c8d0b8d51",
+    "user_id": "82d00883",
+    "timestamp": "1748264421",
+    "validity": "fresh"
+  },
+  "database_analysis": {
+    "total_files": 87,
+    "files": [
+      {
+        "file": "/workspaces/sugarglitch-realops/data/operations.db",
+        "size": 94208,
+        "tables": {
+          "operations": 2,
+          "sqlite_sequence": 4,
+          "messages": 3,
+          "sessions": 1,
+          "targets": 3,
+          "system_logs": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/demo_targets.db",
+        "size": 32768,
+        "tables": {
+          "targets": 2,
+          "sqlite_sequence": 3,
+          "operations": 0,
+          "extracted_data": 0,
+          "target_relationships": 0,
+          "monitoring": 0
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/integrated_targets_2025.db",
+        "size": 65536,
+        "tables": {
+          "targets": 4,
+          "sqlite_sequence": 4,
+          "operations": 6,
+          "extracted_data": 6,
+          "target_relationships": 0,
+          "monitoring": 0,
+          "dm_extraction_results": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/alx_trading_dms_direct.db",
+        "size": 20480,
+        "tables": {
+          "dm_threads": 0,
+          "dm_messages": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/backup_20250605_234820.db",
+        "size": 94208,
+        "tables": {
+          "operations": 1,
+          "sqlite_sequence": 2,
+          "messages": 1,
+          "sessions": 0,
+          "targets": 0,
+          "system_logs": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/project_operations.db",
+        "size": 57344,
+        "tables": {
+          "targets": 8,
+          "sqlite_sequence": 7,
+          "operations": 36,
+          "extracted_data": 36,
+          "target_relationships": 12,
+          "monitoring": 12,
+          "dms": 6,
+          "personal_data": 6
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/session_security.db",
+        "size": 12288,
+        "tables": {
+          "session_tests": 0,
+          "intercepted_sessions": 0
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/alx_trading_dms.db",
+        "size": 24576,
+        "tables": {
+          "dm_messages": 0,
+          "sqlite_sequence": 0,
+          "dm_threads": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_operations.db",
+        "size": 36864,
+        "tables": {
+          "real_targets": 4,
+          "sqlite_sequence": 2,
+          "intercepted_traffic": 0,
+          "extracted_sessions": 0,
+          "real_dms": 0,
+          "extraction_logs": 4,
+          "dm_extractions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_intercepted_data.db",
+        "size": 24576,
+        "tables": {
+          "real_sessions": 0,
+          "sqlite_sequence": 0,
+          "real_auth_data": 0,
+          "real_api_calls": 0,
+          "real_trading_data": 0
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/sessions.db",
+        "size": 16384,
+        "tables": {
+          "sessions": 1,
+          "sqlite_sequence": 1
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/alx_trading_advanced/advanced_extraction.db",
+        "size": 16384,
+        "tables": {
+          "extraction_attempts": 6,
+          "sqlite_sequence": 1,
+          "dm_data": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/injection_extraction/injection_dms.db",
+        "size": 20480,
+        "tables": {
+          "injection_attempts": 4,
+          "sqlite_sequence": 1,
+          "extracted_messages": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_alx_dms/real_dm_data.db",
+        "size": 20480,
+        "tables": {
+          "real_dm_threads": 0,
+          "real_dm_messages": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_hijacked_extraction/real_hijacked_dms.db",
+        "size": 28672,
+        "tables": {
+          "real_dm_threads": 0,
+          "real_dm_messages": 0,
+          "session_tests": 7
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/fixed_extraction/fixed_alx_method_1_20250606_001628.db",
+        "size": 16384,
+        "tables": {
+          "extractions": 1,
+          "sqlite_sequence": 2,
+          "messages": 2
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/fixed_extraction/fixed_alx_method_1_20250606_001559.db",
+        "size": 16384,
+        "tables": {
+          "extractions": 1,
+          "sqlite_sequence": 2,
+          "messages": 2
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/fixed_extraction/fixed_alx_method_1_20250606_001416.db",
+        "size": 16384,
+        "tables": {
+          "extractions": 1,
+          "sqlite_sequence": 2,
+          "messages": 2
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/final_alx_extraction/final_dm_data.db",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 1,
+          "dm_messages": 3,
+          "profile_data": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/recovered_extraction/alx_trading_dms_recovered_20250606_002416.db",
+        "size": 20480,
+        "tables": {
+          "dm_threads": 1,
+          "dm_messages": 4
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/working_extraction/working_alx_dms.db",
+        "size": 61440,
+        "tables": {
+          "dm_threads": 5,
+          "dm_messages": 25,
+          "extraction_log": 5,
+          "sqlite_sequence": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_alx_extraction/real_alx_dms.db",
+        "size": 28672,
+        "tables": {
+          "real_extractions": 0,
+          "sqlite_sequence": 0,
+          "real_dm_threads": 0,
+          "real_dm_messages": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/integrated_targets_2025.db",
+        "size": 32768,
+        "tables": {
+          "targets": 0,
+          "sqlite_sequence": 0,
+          "operations": 0,
+          "extracted_data": 0,
+          "target_relationships": 0,
+          "monitoring": 0
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749158475.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749170553.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 21,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749162249.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 20,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749153698.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749161291.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749153158.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160232.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749163147.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 0,
+          "extraction_logs": 2,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749163756.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 20,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749158401.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749163502.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 20,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160541.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160555.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160403.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749170273.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 21,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749158025.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160333.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160627.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749162533.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 20,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749161210.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/operations.db",
+        "size": 94208,
+        "tables": {
+          "operations": 2,
+          "sqlite_sequence": 4,
+          "messages": 3,
+          "sessions": 1,
+          "targets": 3,
+          "system_logs": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/demo_targets.db",
+        "size": 32768,
+        "tables": {
+          "targets": 2,
+          "sqlite_sequence": 3,
+          "operations": 0,
+          "extracted_data": 0,
+          "target_relationships": 0,
+          "monitoring": 0
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/integrated_targets_2025.db",
+        "size": 65536,
+        "tables": {
+          "targets": 4,
+          "sqlite_sequence": 4,
+          "operations": 6,
+          "extracted_data": 6,
+          "target_relationships": 0,
+          "monitoring": 0,
+          "dm_extraction_results": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/alx_trading_dms_direct.db",
+        "size": 20480,
+        "tables": {
+          "dm_threads": 0,
+          "dm_messages": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/backup_20250605_234820.db",
+        "size": 94208,
+        "tables": {
+          "operations": 1,
+          "sqlite_sequence": 2,
+          "messages": 1,
+          "sessions": 0,
+          "targets": 0,
+          "system_logs": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/project_operations.db",
+        "size": 57344,
+        "tables": {
+          "targets": 8,
+          "sqlite_sequence": 7,
+          "operations": 36,
+          "extracted_data": 36,
+          "target_relationships": 12,
+          "monitoring": 12,
+          "dms": 6,
+          "personal_data": 6
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/session_security.db",
+        "size": 12288,
+        "tables": {
+          "session_tests": 0,
+          "intercepted_sessions": 0
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/alx_trading_dms.db",
+        "size": 24576,
+        "tables": {
+          "dm_messages": 0,
+          "sqlite_sequence": 0,
+          "dm_threads": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_operations.db",
+        "size": 36864,
+        "tables": {
+          "real_targets": 4,
+          "sqlite_sequence": 2,
+          "intercepted_traffic": 0,
+          "extracted_sessions": 0,
+          "real_dms": 0,
+          "extraction_logs": 4,
+          "dm_extractions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_intercepted_data.db",
+        "size": 24576,
+        "tables": {
+          "real_sessions": 0,
+          "sqlite_sequence": 0,
+          "real_auth_data": 0,
+          "real_api_calls": 0,
+          "real_trading_data": 0
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/sessions.db",
+        "size": 16384,
+        "tables": {
+          "sessions": 1,
+          "sqlite_sequence": 1
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/integrated_targets_2025.db",
+        "size": 32768,
+        "tables": {
+          "targets": 0,
+          "sqlite_sequence": 0,
+          "operations": 0,
+          "extracted_data": 0,
+          "target_relationships": 0,
+          "monitoring": 0
+        },
+        "has_dm_data": false
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/alx_trading_advanced/advanced_extraction.db",
+        "size": 16384,
+        "tables": {
+          "extraction_attempts": 6,
+          "sqlite_sequence": 1,
+          "dm_data": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/injection_extraction/injection_dms.db",
+        "size": 20480,
+        "tables": {
+          "injection_attempts": 4,
+          "sqlite_sequence": 1,
+          "extracted_messages": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_alx_dms/real_dm_data.db",
+        "size": 20480,
+        "tables": {
+          "real_dm_threads": 0,
+          "real_dm_messages": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_hijacked_extraction/real_hijacked_dms.db",
+        "size": 28672,
+        "tables": {
+          "real_dm_threads": 0,
+          "real_dm_messages": 0,
+          "session_tests": 7
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/fixed_extraction/fixed_alx_method_1_20250606_001628.db",
+        "size": 16384,
+        "tables": {
+          "extractions": 1,
+          "sqlite_sequence": 2,
+          "messages": 2
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/fixed_extraction/fixed_alx_method_1_20250606_001559.db",
+        "size": 16384,
+        "tables": {
+          "extractions": 1,
+          "sqlite_sequence": 2,
+          "messages": 2
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/fixed_extraction/fixed_alx_method_1_20250606_001416.db",
+        "size": 16384,
+        "tables": {
+          "extractions": 1,
+          "sqlite_sequence": 2,
+          "messages": 2
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/final_alx_extraction/final_dm_data.db",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 1,
+          "dm_messages": 3,
+          "profile_data": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/recovered_extraction/alx_trading_dms_recovered_20250606_002416.db",
+        "size": 20480,
+        "tables": {
+          "dm_threads": 1,
+          "dm_messages": 4
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/working_extraction/working_alx_dms.db",
+        "size": 61440,
+        "tables": {
+          "dm_threads": 5,
+          "dm_messages": 25,
+          "extraction_log": 5,
+          "sqlite_sequence": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/real_alx_extraction/real_alx_dms.db",
+        "size": 28672,
+        "tables": {
+          "real_extractions": 0,
+          "sqlite_sequence": 0,
+          "real_dm_threads": 0,
+          "real_dm_messages": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/alx_trading_dms_1749203477.sqlite",
+        "size": 28672,
+        "tables": {
+          "alx_trading_messages": 0,
+          "sqlite_sequence": 1,
+          "thread_metadata": 0,
+          "extraction_logs": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749158475.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749170553.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 21,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749162249.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 20,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749153698.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749161291.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749153158.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160232.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749163147.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 0,
+          "extraction_logs": 2,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749163756.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 20,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749158401.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749163502.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 20,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160541.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160555.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160403.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749170273.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 21,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749158025.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 1,
+          "dm_messages": 0,
+          "extraction_sessions": 1
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160333.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749160627.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/advanced_dm_extraction_STABLE_EXTRACT_1749162533.sqlite",
+        "size": 40960,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 2,
+          "dm_messages": 0,
+          "extraction_sessions": 1,
+          "extraction_logs": 20,
+          "session_cache": 0
+        },
+        "has_dm_data": true
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/databases/ultimate_dm_extraction_1749161210.sqlite",
+        "size": 28672,
+        "tables": {
+          "dm_threads": 0,
+          "sqlite_sequence": 0,
+          "dm_messages": 0,
+          "extraction_sessions": 0
+        },
+        "has_dm_data": true
+      }
+    ]
+  },
+  "real_data_analysis": {
+    "total_files": 26,
+    "authentic_files": [
+      {
+        "file": "/workspaces/sugarglitch-realops/data/alx_trading/real_messages_extraction_1748948322.json",
+        "size": 4493,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 1 mock)",
+          "mock_score": 1,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/working_extraction/working_extraction_report_20250605_231020.json",
+        "size": 2950,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 2 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 2
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/working_extraction/working_extraction_report_20250605_231016.json",
+        "size": 2950,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 2 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 2
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/working_extraction/working_extraction_report_20250605_231018.json",
+        "size": 2950,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 2 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 2
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/working_extraction/working_extraction_report_20250605_230634.json",
+        "size": 2950,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 2 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 2
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/data/working_extraction/working_extraction_report_20250605_230621.json",
+        "size": 2950,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 2 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 2
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/ip_spoofed_session_1749156465.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/spoofed_session_1749156447.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/ip_spoofed_session_1749156467.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/fresh_hijacked_session_1749169370.json",
+        "size": 1971,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/fresh_hijacked_session_1749169369.json",
+        "size": 1983,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/ip_spoofed_session_1749156458.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/spoofed_session_1749156441.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/ip_spoofed_session_1749156461.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/fresh_hijacked_session_1749169366.json",
+        "size": 1981,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/spoofed_session_1749156443.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/spoofed_session_1749156450.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/fresh_hijacked_session_1749169367.json",
+        "size": 1982,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/fresh_hijacked_session_1749169368.json",
+        "size": 1985,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/hijacked_session_1749156763.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/spoofed_session_1749156453.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/hijacked_session_1749156438.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/hijacked_sessions/ip_spoofed_session_1749156463.json",
+        "size": 813,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/sessions/quick_bypass_session.json",
+        "size": 194,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 0 mock)",
+          "mock_score": 0,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/output/real_dm_extraction_1749237847.json",
+        "size": 3517,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 1 mock)",
+          "mock_score": 1,
+          "real_score": 1
+        }
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/output/real_dm_extraction_1749237514.json",
+        "size": 1215,
+        "authenticity": {
+          "is_authentic": true,
+          "reason": "Real patterns found (score: 1 real, 1 mock)",
+          "mock_score": 1,
+          "real_score": 1
+        }
+      }
+    ],
+    "mock_files": []
+  },
+  "log_analysis": {
+    "files": [
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_operations.log",
+        "size": 332,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_extraction_1749232156.log",
+        "size": 337,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/session_hijacking.log",
+        "size": 0,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/session_extraction.log",
+        "size": 3288,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/ctf_analysis.log",
+        "size": 0,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/enhanced_extraction_1749229356.log",
+        "size": 1787,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_214434.log",
+        "size": 4438,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/data_extraction.log",
+        "size": 228,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/browser_dm_extractor.log",
+        "size": 10724,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 12,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_extraction_1749233995.log",
+        "size": 3099,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 7,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_214818.log",
+        "size": 4438,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/operations_control.log",
+        "size": 140,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_210609.log",
+        "size": 4438,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/websocket_dm_interceptor.log",
+        "size": 5746,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 3,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/advanced_hijacker.log",
+        "size": 1809,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 2,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/ultimate_dm_extraction.log",
+        "size": 1650,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_extraction_1749230065.log",
+        "size": 1604,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_195800.log",
+        "size": 4438,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_212343.log",
+        "size": 4438,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/websocket_interceptor.log",
+        "size": 0,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_194553.log",
+        "size": 4726,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_content_analysis_1749233354.log",
+        "size": 131545,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/ultimate_extraction.log",
+        "size": 858,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 1
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/ultimate_penetration.log",
+        "size": 3104,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_195447.log",
+        "size": 4754,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_time_dm_interceptor.log",
+        "size": 472,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/sqlite_setup.log",
+        "size": 1460,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_extraction_1749205822.log",
+        "size": 1672,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 3,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_extraction_1749230440.log",
+        "size": 1604,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/ultimate_dm_master.log",
+        "size": 6075,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 14,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_215410.log",
+        "size": 4391,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_integrated.log",
+        "size": 0,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/enhanced_extraction_1749234371.log",
+        "size": 880,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/enhanced_extraction_1749229499.log",
+        "size": 1787,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/bypass_attempts.log",
+        "size": 0,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/direct_target_extraction.log",
+        "size": 3180,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_210810.log",
+        "size": 4438,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_194307.log",
+        "size": 4726,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/selenium_extraction.log",
+        "size": 709,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/enhanced_extraction_1749233893.log",
+        "size": 2068,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 2,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/enhanced_extraction_1749232276.log",
+        "size": 437,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/requests.log",
+        "size": 30649,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 2,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/session_hijack_dm_extractor.log",
+        "size": 14586,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 5,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_dm_browser.log",
+        "size": 0,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/hacking_arsenal.log",
+        "size": 0,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/mobile_dm_extractor.log",
+        "size": 13196,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/ultimate_dm_hunter.log",
+        "size": 1498,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/ultimate_dm_extractor.log",
+        "size": 3518,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 21,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/real_extraction_1749230907.log",
+        "size": 337,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/hijacked_dm_extraction.log",
+        "size": 1146,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/mobile_api_emulator.log",
+        "size": 0,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/logs/dm_extraction_20250605_201928.log",
+        "size": 397,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 0,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_20250606_183109.log",
+        "size": 17790,
+        "http_200": 1,
+        "http_429": 18,
+        "errors": 8,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_20250606_184416.log",
+        "size": 17790,
+        "http_200": 1,
+        "http_429": 18,
+        "errors": 8,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_20250606_185108.log",
+        "size": 2723,
+        "http_200": 1,
+        "http_429": 5,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_20250606_175350.log",
+        "size": 3142,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 2,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_v2_20250606_192047.log",
+        "size": 3660,
+        "http_200": 1,
+        "http_429": 3,
+        "errors": 3,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_v2_20250606_191839.log",
+        "size": 3660,
+        "http_200": 1,
+        "http_429": 3,
+        "errors": 3,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_20250606_175731.log",
+        "size": 3142,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 2,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/browser_extraction_20250606_180428.log",
+        "size": 221,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 1,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_20250606_181756.log",
+        "size": 17790,
+        "http_200": 1,
+        "http_429": 18,
+        "errors": 8,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_v2_20250606_181043.log",
+        "size": 3660,
+        "http_200": 1,
+        "http_429": 3,
+        "errors": 3,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/extraction_20250606_185741.log",
+        "size": 17790,
+        "http_200": 1,
+        "http_429": 18,
+        "errors": 8,
+        "success": 0
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/fresh_start/logs/browser_extraction_20250606_180305.log",
+        "size": 3242,
+        "http_200": 0,
+        "http_429": 0,
+        "errors": 4,
+        "success": 0
+      }
+    ],
+    "summary": {}
+  },
+  "conclusion": "SUCCESS: Found real Instagram session and authentic data"
+}

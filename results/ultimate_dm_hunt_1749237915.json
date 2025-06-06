@@ -1,0 +1,141 @@
+{
+  "start_time": "2025-06-06T19:24:58.042447",
+  "session_data": {
+    "sessionid": "5",
+    "csrftoken": "",
+    "ds_user_id": "",
+    "target": "alx.trading",
+    "created_at": "2025-06-06T08:51:58.788931",
+    "status": "active",
+    "device_id": "android-6cf7c22a465f342d",
+    "android_id": "f0d4f467491f5597",
+    "phone_id": "f4937512c7f4de9e281899b50e475d0a",
+    "uuid": "08db5cc8-71f8-4cbd-8192-723e32033065",
+    "client_session_id": "255f7400f49eeb1076860fae19987fbd",
+    "advertising_id": "64ed39b7fb0f82bf8e3c26b9573f71b9",
+    "session_id": "0f5ede65e9b3044662cc0552fb7de5df",
+    "machine_id": "738AC49601A6B3E7B7D2260D",
+    "surface_param": "4965",
+    "ig_u_shbid": "\"12345\\05412345678901234567:01f701821528ae17d173f5a20cca:4d48edd84b5b83efbe62260bef108940\"",
+    "ig_u_shbts": "1749237898",
+    "ig_u_rur": "\"CLN\\05412345678901234567:01f715a05d38247c907960722b21:1b4fcd1fabcd4ed82b8c697a1e1ee7db\""
+  },
+  "live_traffic_data": [
+    {
+      "endpoint": "https://i.instagram.com/api/v1/direct_v2/inbox/",
+      "method": "GET",
+      "status_code": 500,
+      "response_headers": {
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "cross-origin-opener-policy": "same-origin-allow-popups;report-to=\"coop_report\"",
+        "error-mid": "624bea61f8b29e65e7c6658984b6a14f",
+        "x-stack": "www",
+        "Content-Type": "text/html; charset=\"utf-8\"",
+        "X-FB-Debug": "sJtzorC8pgrqPbIP6m9k03FtNZkqGxDq2X8S6J2LmcJQZcyCPQLOwuBijQViiqhEnFhpoC7g7uw9501UxVG1NA==",
+        "Date": "Fri, 06 Jun 2025 19:24:58 GMT",
+        "Proxy-Status": "http_request_error; e_fb_vipaddr=\"AcMmZc1gJlUUNlw0GrvRtRV5KtIFb8xXhFf_9oeBfQaaVqkeNQ4G6N2CZn-q6tQR-Mesp5HMZfMhIhBrI4Gghg9GU2MEnhQUEKlugZ_P\"; e_clientaddr=\"AcO6J7KLTnLkQZr1d-5MLqt4K7EWmpAkahjWD3ZzWWdka7zqz06tzSbctJbjXa3d2FHF80lOwvIQJ8wHVrjC1b89aaIDk6SOb_gtas8naShGGZ6SIg\"; e_upip=\"AcPiJLj-_EABDcXihKAGhrvUDiGwZH9JY9Jcij7jSoDZCNIXTBaojNgy-1DDq8zYB0VSKcaDCxenAsEJyIE9W67O5vzO41DsSlP-Aw\"; e_fb_zone=\"AcOuu4d5mC1fLrNqKkVy4L9cEdu07voEIv1EwSzI7vPg6oxASTD67ALmJpxUqpfa\"; e_fb_twtaskhandle=\"AcNY9s46ZDICGXrjk4gl1hoBZdNMFsChp_jd56RXDJzYd_hihSdG294gUzlrXNjGG9JaQ9foWVVYcGTCVpn13yMKg6zSQPU4_OxwEGObog\"; e_proxy=\"AcN5k-7Tg1Y_eoIVbkQpPTYGjcN9cA9LGfAe0h5M-VAiKUumCgomyqoolHDCECdfYPnoD6upRu0bobWi1dIK\", http_request_error; e_fb_vipaddr=\"AcPOCqRl5Ij-UXFYGru6a-QuzN8J-DlE1fGllzxvb0d8fLbbDYX9dxul5zoFToIWM91nVZ_C-g\"; e_clientaddr=\"AcNN9PxivzMafVZq7Mt4xi_4wisAZPQxDv2itbriNc635SescmFm6FSEOjMrNgGzd1gzkry_ZonIvCqu\"; e_upip=\"AcPFo1EJJnaodEdXojPQ3dOGjBtjs-qdTpWZJS1whoIe1edbqcRV6lZEcUgHo4_fW33_bKa6f5I_mVaEw5EwA990qgnNIb_73IV-gx3L\"; e_fb_zone=\"AcNiKDojNJ0lSN0_iWOKwxRt6pQ7paWQ5tUKKHMrwHdMSpGho2LO6P-6PTeqxw\"; e_fb_twtaskhandle=\"AcPHxx3flxttER7ktSsiDrasUq-s1yogp4rXifXc8rTH4jlGRplLONR7i0M4OiCF8M2HrG9UGI-hliNQAUuQRTfA_R1lPVjIEAz0\"; e_proxy=\"AcOUA1w-bQYWb4T2_zSdBAeDZxItzpPHZZsfJOvOeNuTjORrWVZmISvigmMMVjwNlTBfvmhYN0eXgUAc\"",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=6, rtx=0, c=14, mss=1380, tbw=3297, tp=-1, tpl=-1, uplat=260, ullat=0",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "content_length": 1543,
+      "timestamp": "2025-06-06T19:24:58.318043",
+      "content_preview": "<?xml version=\"1.0\"?>\n<!DOCTYPE html>\n<html lang=\"en\" id=\"facebook\">\n  <head>\n    <title>Error</title>\n    <meta charset=\"utf-8\"/>\n    <meta http-equiv=\"Cache-Control\" content=\"no-cache\"/>\n    <meta name=\"robots\" content=\"noindex,nofollow\"/>\n    <style>\n      html, body { color: #333; font-family: 'Lucida Grande', 'Tahoma', 'Verdana', 'Arial', sans-serif; margin: 0; padding: 0; text-align: center;}\n      #header { height: 30px; padding-bottom: 10px; padding-top: 10px; text-align: center;}\n      #icon { width: 30px;}\n      .core { margin: auto; padding: 1em 0; text-align: left; width: 904px;}\n      h1 { font-size: 18px;}\n      p { font-size: 13px;}\n      .footer { border-top: 1px solid #ddd; color: #777; float: left; font-size: 11px; padding: 5px 8px 6px 0; width: 904px;}\n    </style>\n  </head>\n  <body>\n    <div id=\"header\">\n      <a href=\"//www.facebook.com/\">\n        <img id=\"icon\" src=\"//static.facebook.com/images/logos/facebook_2x.png\"/>\n      </a>\n    </div>\n    <div class=\"core\">\n"
+    },
+    {
+      "endpoint": "https://i.instagram.com/api/v1/direct_v2/get_by_participants/",
+      "method": "GET",
+      "status_code": 404,
+      "response_headers": {
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 06 Jun 2025 19:25:00 GMT",
+        "Vary": "Accept-Language",
+        "Strict-Transport-Security": "max-age=31536000",
+        "Cache-Control": "private, no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "Sat, 01 Jan 2000 00:00:00 GMT",
+        "X-Frame-Options": "SAMEORIGIN",
+        "content-security-policy": "report-uri https://www.instagram.com/security/csp_report/; default-src 'self' https://www.instagram.com; img-src data: blob: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com https://*.facebook.com https://*.fbsbx.com https://*.threads.net https://*.threads.com https://*.giphy.com; font-src data: https://*.fbcdn.net https://*.instagram.com https://*.cdninstagram.com; media-src 'self' blob: https://www.instagram.com https://*.cdninstagram.com https://*.fbcdn.net; manifest-src 'self' https://www.instagram.com; script-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://*.cdninstagram.com wss://www.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net 'unsafe-inline' 'unsafe-eval' blob:; style-src 'self' https://*.www.instagram.com https://www.instagram.com 'unsafe-inline'; connect-src 'self' https://instagram.com https://www.instagram.com https://*.www.instagram.com https://graph.instagram.com https://*.graph.instagram.com https://i.instagram.com/graphql_www https://graphql.instagram.com https://*.cdninstagram.com https://api.instagram.com https://i.instagram.com https://*.i.instagram.com https://*.od.instagram.com https://i.threads.net https://i.threads.com https://*.od.threads.net https://*.od.threads.com wss://www.instagram.com wss://edge-chat.instagram.com https://*.facebook.com https://*.fbcdn.net https://*.facebook.net chrome-extension://boadgeojelhgndaghljhdicfkmllpafd blob:; worker-src 'self' blob: https://www.instagram.com; frame-src 'self' https://instagram.com https://www.instagram.com https://*.instagram.com https://staticxx.facebook.com https://www.facebook.com https://web.facebook.com https://connect.facebook.net https://m.facebook.com https://*.fbsbx.com; object-src 'none'; upgrade-insecure-requests",
+        "cross-origin-embedder-policy-report-only": "require-corp;report-to=\"coep\"",
+        "report-to": "{\"group\": \"coep\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coep_report/\"}]},{\"group\": \"coop\", \"max_age\": 86400, \"endpoints\": [{\"url\": \"/security/coop_report/\"}]}",
+        "cross-origin-opener-policy": "same-origin-allow-popups;report-to=\"coop\"",
+        "X-Content-Type-Options": "nosniff",
+        "X-XSS-Protection": "0",
+        "x-ig-push-state": "c2",
+        "x-ig-cache-control": "no-cache",
+        "x-aed": "453",
+        "x-ig-request-elapsed-time-ms": "268",
+        "x-ig-peak-v2": "0",
+        "x-ig-peak-time": "1",
+        "x-ig-capacity-level": "2",
+        "x-stack": "distillery",
+        "ig-set-authorization": "Bearer IGT:2:",
+        "ig-set-use-auth-header-for-sso": "False",
+        "ig-set-ig-u-ig-direct-region-hint": "",
+        "ig-set-ig-u-shbid": "",
+        "ig-set-ig-u-shbts": "",
+        "ig-set-ig-u-rur": "",
+        "ig-set-ig-u-ds-user-id": "",
+        "x-perf-stats": "0;0;0",
+        "x-ig-origin-region": "hil",
+        "Proxy-Status": "http_request_error; e_fb_vipaddr=\"AcOTJ3KDFVbq8ip2I-R42ltawBlkWDPWS1wzEPPeqelfWE_6kYTm1KpBVbKpnDc0SWEFRqI4UOnwb8kKL2ipR7ay9cAyal_COSIu2g\"; e_clientaddr=\"AcPpISVwGgq1pJGGtodbr2P6ulPpKqCfhtsuhT5QM6BVJiM_t5e4ptWFk7MG_we4qDGu-PjZdfWjBEBY7ZOYI9H_lwPNoYs7PfNA8wIN8vqh-OYmsw\"; e_upip=\"AcOmplVey21AixD6vnuEjaFhLnyYqNOnXkTPkmh_OdZ8JHYqGK8FWDmmvNQExSRKTt9z4NPTwXvRJVluJGF6CUb5X_edsNUn\"; e_fb_zone=\"AcMNsUOM8zjgZueVtwNMIoQ28U1WVoeDULWkfR92Y3ZwxNklnPaGoi1G3tF-TIro\"; e_fb_twtaskhandle=\"AcOOJJ4AGF1Xtotxbpalz9bUd9GAy7LdDkr4Bdbq7ucQ1q8kOadyNmHaXzL-Drf1GE2WFPWwg8LBqhs8g7OFaulX6o0nKpk2iKFxuWWk\"; e_proxy=\"AcO4e1ccMAbAuPQ_rcO63JnaF-uFPrDu4WgvHcee2Mk6Q3KOOwr-oS07jirccnyCTU-2B0iFrSoh6auLYIk\", http_request_error; e_fb_vipaddr=\"AcOOHwjEyKJX1nyIIgowBfMQoq9hCna4H5sEkwCqST40utJY_9cmsu0LGEVFv3kZW8IQdW_V-g\"; e_clientaddr=\"AcPzk_vsvYPnrx-1x95YqdoajGz8kZZwmOHAPzSj8zTWZ40G_ZREoOVhsKrmRgKBxz6PC90f3k3GXJcN\"; e_upip=\"AcNcBwgI5xn7JrUXnE-omMUaG4H2bzGzxC4hqGlTXld3jHTS3fenwljclARB0VJYLn3MVmLfLMhDVvyWK5KteSSQCxv7whKD8rrstw\"; e_fb_zone=\"AcMGf6oKpidKnpofiQgnVaskJVbHenR_do4rMIYE6J_W7ymtue7bUguSE7rZSA\"; e_fb_twtaskhandle=\"AcPaXiPSUm3zAIapR9rMkCoGc_GCnKdzWCATfvtwMlUxOwbxSyQLOYWFtatrdPek1ocQU2TXq47liEcBcDIZ81r2hPRh4LUUZK_S\"; e_proxy=\"AcMIk_cHyawF88lUEPXxMkJxCp37cYIghunaNFd1gPxrl_I0_mUIX9QxeUzjITzBx7ML6Ypw1_mA0BGf\"",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=4, rtx=0, c=18, mss=1380, tbw=6093, tp=-1, tpl=-1, uplat=474, ullat=0",
+        "Connection": "keep-alive",
+        "Content-Length": "21118"
+      },
+      "content_length": 21118,
+      "timestamp": "2025-06-06T19:25:00.877107",
+      "content_preview": "<!DOCTYPE html>\n<html lang=\"None\" class=\"no-js not-logged-in \">\n    <head>\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\n        <title>\n                  Page Not Found &bull; Instagram\n                </title>\n\n        \n        <meta name=\"robots\" content=\"noimageindex, noarchive\">\n        <meta name=\"apple-mobile-web-app-status-bar-style\" content=\"default\">\n        <meta name=\"mobile-web-app-capable\" content=\"yes\">\n        <meta name=\"theme-color\" content=\"#ffffff\">\n        \n        <meta id=\"viewport\" name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover\">\n        <link rel=\"manifest\" href=\"/data/manifest.json\">\n\n        \n        \n\n        <script type=\"text/javascript\">\n        (function() {\n  var docElement = document.documentElement;\n  var classRE = new RegExp('(^|\\\\s)no-js(\\\\s|$)');\n  var className = docElement.className;\n  docElement.className = className.replace(classR"
+    },
+    {
+      "endpoint": "https://i.instagram.com/api/v1/direct_v2/threads/broadcast/",
+      "method": "POST",
+      "status_code": 500,
+      "response_headers": {
+        "Vary": "Accept-Encoding",
+        "Content-Encoding": "gzip",
+        "cross-origin-opener-policy": "same-origin-allow-popups",
+        "error-mid": "624bea61f8b29e65e7c6658984b6a14f",
+        "x-stack": "www",
+        "Content-Type": "text/html; charset=\"utf-8\"",
+        "X-FB-Debug": "doPzdkpefKrXYs4AgyaJnPqeRbxfW2dpwNWOpbWGqk9l5DL0Ptp31W21EDOMF+OW0VUHtFvgnefEcE8pp4BBDg==",
+        "Date": "Fri, 06 Jun 2025 19:25:03 GMT",
+        "Proxy-Status": "http_request_error; e_fb_vipaddr=\"AcPJfIhKz5K6Te6MuRMS07hUlEFbMJt2m2n3soK7_P60CetlSTPn87bjhVWY6lTkX-x0PwCAx_ZpUEUH5VYuKueOY1bPnjM7hO-zrjy1\"; e_clientaddr=\"AcPim4Dv2jt2sILv17mXR0cibNxh1yRAbP5U4hjk_iR3GfVUwHTXpqezt8rDmddS8LWTFOJ8yuCFcPliPgGynRhVb9kwWPlMTKDCEz1tXdNc-1VX_g\"; e_upip=\"AcOPaO9Ro4c162BxXHKTCe104CoPXoYFkRHOdwYYFVVaBRziRLk8ZMxkHQ2ZISmeUAihjyJmQNbVbNGq1nddaIep3LgyC2ubcGr5CmI\"; e_fb_zone=\"AcOTfF7PLFdAoNyZjZT-im--otDwvAV1rgUBZjVp6KgMiGWShW7ES16vaovkrmKW\"; e_fb_twtaskhandle=\"AcNG27LpeI1f5i1dyplagblEKskPjteFjux5GPQ_fsRJiMpvGe4vql717FQ-4ryh4K09j9WsW7kQDTcTOR5KSEf3WsVbegw0CpCoUC2gSQ\"; e_proxy=\"AcNhiI7-ri1MGFbBkjPNhx9b7a30Eg60knSRbiJPMWKIKIECT6DgTyA33J31-QNN7FEy_onkQpw8QEyOET55\", http_request_error; e_fb_vipaddr=\"AcN-JopHTVTEIuQ-1ECZ6p9NsQakfd0Xt8WxdYbbi4k9CHBGqrIbmUfN-VyWqLAO3mgxUys8NA\"; e_clientaddr=\"AcONKitgW-tOStmBuDVOlg1nyIJ1OiaCYQh6FHq6_j8afL_wBacrc5eOp0UBi2Kj1rSTsAsQys4Jh8yE\"; e_upip=\"AcMC-KUa6IpYyl_VG-9wyoPMQXnkdfCG8EeucPEuZW70m3O5HokfgoC7gydiVpHzO1KCsME-MYwEouR4uV0OTYc7t0jJG0gIUzleomUT\"; e_fb_zone=\"AcOJJi4gLXmws3Sej6NHsDo9SqjlbuTLhRr48IFz3lKkdJ9mRN9yPtnf442hxQ\"; e_fb_twtaskhandle=\"AcOkEcv0j5cLMlt8M1L9chYawCF2AuRj6SiXZRSFr072hed-3UjemSb1v0DjhhXp9RsR-Oc9Z8Bbe4RwZgw4sNGDq3dABpwmEWF_\"; e_proxy=\"AcNYtNLegfWkifCbMuRgaM_idhxNmpLlH-c8seW6ilWny4wXID2viVZcrndbV4iedT3X6t-DUfhH1XJ6\"",
+        "Alt-Svc": "h3=\":443\"; ma=86400",
+        "X-FB-Connection-Quality": "EXCELLENT; q=0.9, rtt=2, rtx=0, c=41, mss=1380, tbw=31954, tp=-1, tpl=-1, uplat=259, ullat=0",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive"
+      },
+      "content_length": 1543,
+      "timestamp": "2025-06-06T19:25:03.145614",
+      "content_preview": "<?xml version=\"1.0\"?>\n<!DOCTYPE html>\n<html lang=\"en\" id=\"facebook\">\n  <head>\n    <title>Error</title>\n    <meta charset=\"utf-8\"/>\n    <meta http-equiv=\"Cache-Control\" content=\"no-cache\"/>\n    <meta name=\"robots\" content=\"noindex,nofollow\"/>\n    <style>\n      html, body { color: #333; font-family: 'Lucida Grande', 'Tahoma', 'Verdana', 'Arial', sans-serif; margin: 0; padding: 0; text-align: center;}\n      #header { height: 30px; padding-bottom: 10px; padding-top: 10px; text-align: center;}\n      #icon { width: 30px;}\n      .core { margin: auto; padding: 1em 0; text-align: left; width: 904px;}\n      h1 { font-size: 18px;}\n      p { font-size: 13px;}\n      .footer { border-top: 1px solid #ddd; color: #777; float: left; font-size: 11px; padding: 5px 8px 6px 0; width: 904px;}\n    </style>\n  </head>\n  <body>\n    <div id=\"header\">\n      <a href=\"//www.facebook.com/\">\n        <img id=\"icon\" src=\"//static.facebook.com/images/logos/facebook_2x.png\"/>\n      </a>\n    </div>\n    <div class=\"core\">\n"
+    }
+  ],
+  "graphql_data": [
+    {
+      "query_hash": "7c7c2d7e8e0d0b0c5f5f5f5f5f5f5f5f",
+      "status_code": 401,
+      "timestamp": "2025-06-06T19:25:05.949986"
+    },
+    {
+      "query_hash": "2c4d4e7e8e0d0b0c5f5f5f5f5f5f5f5f",
+      "status_code": 401,
+      "timestamp": "2025-06-06T19:25:09.331027"
+    },
+    {
+      "query_hash": "3e5f6e7e8e0d0b0c5f5f5f5f5f5f5f5f",
+      "status_code": 401,
+      "timestamp": "2025-06-06T19:25:12.722652"
+    }
+  ],
+  "all_extracted_dms": [],
+  "summary": {
+    "total_endpoints_tested": 6,
+    "total_dms_found": 0,
+    "successful_extractions": 0,
+    "completion_time": "2025-06-06T19:25:15.725871"
+  }
+}
