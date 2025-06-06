@@ -493,6 +493,222 @@ class ALXTradingDMExtractor:
         return True
 
 
+def filter_recent_dms(dm_json: dict, days: int) -> dict:
+    """
+    Filter DM JSON data to include only recent threads and messages
+    
+    Args:
+        dm_json: DM data in the format returned by ALXTradingDMExtractor
+        days: Number of days to look back from current time
+        
+    Returns:
+        dict: Filtered DM data containing only recent threads/messages
+    """
+    if not isinstance(dm_json, dict) or 'threads' not in dm_json:
+        raise ValueError("Invalid DM JSON format - missing 'threads' key")
+    
+    # Calculate cutoff timestamp (current time - specified days)
+    cutoff_time = datetime.now() - timedelta(days=days)
+    cutoff_timestamp = int(cutoff_time.timestamp() * 1000000)  # Instagram uses microseconds
+    
+    print(f"🔍 Filtering DMs for last {days} days")
+    print(f"📅 Cutoff time: {cutoff_time.strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"📅 Cutoff timestamp: {cutoff_timestamp}")
+    
+    filtered_data = {
+        "extraction_info": dm_json.get("extraction_info", {}).copy(),
+        "threads": []
+    }
+    
+    # Add filtering info to extraction_info
+    filtered_data["extraction_info"]["filtered"] = True
+    filtered_data["extraction_info"]["filter_days"] = days
+    filtered_data["extraction_info"]["filter_applied_at"] = datetime.now().isoformat()
+    filtered_data["extraction_info"]["cutoff_timestamp"] = cutoff_timestamp
+    
+    total_original_threads = len(dm_json.get("threads", []))
+    total_original_messages = 0
+    total_filtered_threads = 0
+    total_filtered_messages = 0
+    
+    for thread in dm_json.get("threads", []):
+        # Check if thread has recent activity
+        last_activity = thread.get('last_activity_at', 0)
+        
+        # Convert string timestamp to int if needed
+        if isinstance(last_activity, str):
+            try:
+                last_activity = int(last_activity)
+            except (ValueError, TypeError):
+                last_activity = 0
+        
+        # Filter messages within the thread
+        filtered_messages = []
+        thread_messages = thread.get('messages', [])
+        total_original_messages += len(thread_messages)
+        
+        for message in thread_messages:
+            message_timestamp = message.get('timestamp', 0)
+            
+            # Convert string timestamp to int if needed
+            if isinstance(message_timestamp, str):
+                try:
+                    message_timestamp = int(message_timestamp)
+                except (ValueError, TypeError):
+                    message_timestamp = 0
+            
+            # Include message if it's recent enough
+            if message_timestamp >= cutoff_timestamp:
+                filtered_messages.append(message)
+        
+        # Include thread if it has recent messages OR recent activity
+        if filtered_messages or last_activity >= cutoff_timestamp:
+            filtered_thread = thread.copy()
+            filtered_thread['messages'] = filtered_messages
+            filtered_thread['message_count'] = len(filtered_messages)
+            
+            # Add filtering metadata to thread
+            filtered_thread['filter_info'] = {
+                'original_message_count': len(thread_messages),
+                'filtered_message_count': len(filtered_messages),
+                'messages_removed': len(thread_messages) - len(filtered_messages)
+            }
+            
+            filtered_data["threads"].append(filtered_thread)
+            total_filtered_threads += 1
+            total_filtered_messages += len(filtered_messages)
+            
+            print(f"✅ Thread '{thread.get('thread_title', 'Untitled')}': {len(filtered_messages)}/{len(thread_messages)} messages kept")
+        else:
+            print(f"❌ Thread '{thread.get('thread_title', 'Untitled')}': No recent activity, excluded")
+    
+    # Update summary statistics
+    filtered_data["extraction_info"]["total_threads"] = total_filtered_threads
+    filtered_data["extraction_info"]["total_messages"] = total_filtered_messages
+    filtered_data["extraction_info"]["original_total_threads"] = total_original_threads
+    filtered_data["extraction_info"]["original_total_messages"] = total_original_messages
+    filtered_data["extraction_info"]["threads_removed"] = total_original_threads - total_filtered_threads
+    filtered_data["extraction_info"]["messages_removed"] = total_original_messages - total_filtered_messages
+    
+    print(f"\n📊 Filtering Summary:")
+    print(f"   📋 Threads: {total_filtered_threads}/{total_original_threads} kept")
+    print(f"   💬 Messages: {total_filtered_messages}/{total_original_messages} kept")
+    print(f"   🗑️  Removed: {total_original_threads - total_filtered_threads} threads, {total_original_messages - total_filtered_messages} messages")
+    
+    return filtered_data
+
+
+def convert_timestamp_to_datetime(timestamp: Any) -> Optional[datetime]:
+    """
+    Convert various timestamp formats to datetime object
+    
+    Args:
+        timestamp: Timestamp in various formats (int, str, etc.)
+        
+    Returns:
+        datetime object or None if conversion fails
+    """
+    if not timestamp:
+        return None
+    
+    try:
+        # Convert to int if string
+        if isinstance(timestamp, str):
+            timestamp = int(timestamp)
+        
+        # Instagram typically uses microseconds since epoch
+        # If the number is too large, it's likely microseconds
+        if timestamp > 1e12:  # If larger than normal Unix timestamp
+            timestamp = timestamp / 1000000  # Convert microseconds to seconds
+        
+        return datetime.fromtimestamp(timestamp)
+    except (ValueError, TypeError, OSError):
+        return None
+
+
+def filter_dms_by_user(dm_json: dict, target_users: List[str]) -> dict:
+    """
+    Filter DM data to include only messages from specific users
+    
+    Args:
+        dm_json: DM data in the format returned by ALXTradingDMExtractor
+        target_users: List of usernames to filter for
+        
+    Returns:
+        dict: Filtered DM data containing only messages from target users
+    """
+    if not isinstance(dm_json, dict) or 'threads' not in dm_json:
+        raise ValueError("Invalid DM JSON format - missing 'threads' key")
+    
+    print(f"🔍 Filtering DMs for users: {', '.join(target_users)}")
+    
+    filtered_data = {
+        "extraction_info": dm_json.get("extraction_info", {}).copy(),
+        "threads": []
+    }
+    
+    # Add filtering info
+    filtered_data["extraction_info"]["user_filtered"] = True
+    filtered_data["extraction_info"]["target_users"] = target_users
+    filtered_data["extraction_info"]["user_filter_applied_at"] = datetime.now().isoformat()
+    
+    total_filtered_messages = 0
+    
+    for thread in dm_json.get("threads", []):
+        # Check if thread contains any of the target users
+        thread_users = []
+        if 'users' in thread:
+            thread_users = [user.get('username', '').lower() for user in thread['users']]
+        
+        # Include thread if it contains any target user
+        target_users_lower = [user.lower() for user in target_users]
+        if any(user in thread_users for user in target_users_lower):
+            filtered_thread = thread.copy()
+            filtered_data["threads"].append(filtered_thread)
+            total_filtered_messages += len(thread.get('messages', []))
+            
+            print(f"✅ Thread '{thread.get('thread_title', 'Untitled')}': Contains target users")
+        else:
+            print(f"❌ Thread '{thread.get('thread_title', 'Untitled')}': No target users found")
+    
+    # Update summary statistics
+    filtered_data["extraction_info"]["total_threads"] = len(filtered_data["threads"])
+    filtered_data["extraction_info"]["total_messages"] = total_filtered_messages
+    
+    print(f"\n📊 User Filtering Summary:")
+    print(f"   📋 Threads: {len(filtered_data['threads'])}/{len(dm_json.get('threads', []))} kept")
+    print(f"   💬 Messages: {total_filtered_messages} total")
+    
+    return filtered_data
+
+
+def save_filtered_dms(filtered_data: dict, output_path: str) -> bool:
+    """
+    Save filtered DM data to JSON file
+    
+    Args:
+        filtered_data: Filtered DM data
+        output_path: Output file path
+        
+    Returns:
+        bool: True if save successful
+    """
+    try:
+        # Create output directory if needed
+        os.makedirs(os.path.dirname(output_path), exist_ok=True)
+        
+        # Save to file
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(filtered_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"💾 Filtered DMs saved to: {output_path}")
+        return True
+        
+    except Exception as e:
+        print(f"❌ Error saving filtered DMs: {e}")
+        return False
+
+
 def main():
     """Main function"""
     extractor = ALXTradingDMExtractor()
