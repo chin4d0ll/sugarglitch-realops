@@ -33,10 +33,17 @@ class CuteRateLimitBypass:
     เทคนิค hacking เพื่อการศึกษา - หลบ Instagram rate limit แบบน่ารักๆ
     """
     
-    def __init__(self, session_file: str):
+    def __init__(self, session_file: str = "session-alx.trading"):
+        """Initialize CuteRateLimitBypass with default session file"""
         self.session_file = Path(session_file)
         self.logger = self._setup_logger()  # Initialize logger first
-        self.session_data = self._load_session()
+        
+        # Check if session file exists
+        if not self.session_file.exists():
+            self.logger.warning(f"⚠️ Session file {session_file} not found, using fallback mode")
+            self.session_data = {}
+        else:
+            self.session_data = self._load_session()
         
         # 🎯 Strategies สำหรับหลบ rate limit
         self.strategies = self._init_strategies()
