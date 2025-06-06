@@ -1,5 +1,5 @@
-# Use Python 3.12-slim as base image (matching the project's Python version)
-FROM python:3.12-slim
+# Use Python 3.9-slim as base image for compatibility
+FROM python:3.9-slim
 
 # Set environment variables
 ENV PYTHONUNBUFFERED=1
@@ -59,6 +59,5 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
 # Expose port if needed (uncomment if your application uses a web server)
 # EXPOSE 8000
 
-# Set the default entrypoint - can be overridden at runtime
-ENTRYPOINT ["python3"]
-CMD ["tools/system_health_monitor_2025.py"]
+# Set the default entrypoint for DM extractor
+ENTRYPOINT ["python3", "src/ultra_dm_conversation_extractor_2025.py"]

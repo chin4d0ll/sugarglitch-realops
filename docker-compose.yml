@@ -1,73 +1,38 @@
+
 services:
-  # PostgreSQL Database Service
   db:
     image: postgres:14
     container_name: sugarglitch_db
     restart: unless-stopped
     environment:
-      POSTGRES_USER: ${POSTGRES_USER:-sguser}
-      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-sgpass}
-      POSTGRES_DB: ${POSTGRES_DB:-sgdb}
-      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+      POSTGRES_USER: iguser
+      POSTGRES_PASSWORD: igpassword
+      POSTGRES_DB: igdm
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-      - ./databases/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+      - pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
     networks:
-      - sg_network
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U sguser -d sgdb"]
-      interval: 30s
-      timeout: 10s
-      retries: 5
-      start_period: 30s
+      - ignet
 
-  # Main Application Service
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: sugarglitch_app
-    restart: unless-stopped
+  dm_extractor:
+    build: .
     depends_on:
-      db:
-        condition: service_healthy
+      - db
     environment:
-      DATABASE_URL: ${DATABASE_URL:-postgresql://sguser:sgpass@db:5432/sgdb}
-      PYTHONUNBUFFERED: ${PYTHONUNBUFFERED:-1}
-      PLAYWRIGHT_BROWSERS_PATH: ${PLAYWRIGHT_BROWSERS_PATH:-/ms-playwright}
+      DATABASE_URI: "postgresql://iguser:igpassword@db:5432/igdm"
+      SESSION_FILE: "/app/session_alx_trading.json"
     volumes:
-      - ./data:/app/data
-      - ./logs:/app/logs
-      - ./results:/app/results
-      - ./config:/app/config:ro
-      - ./databases:/app/databases
-      - ./extractions:/app/extractions
+      - ./outputs:/app/outputs
+      - ./tools/session_alx_trading.json:/app/session_alx_trading.json:ro
     networks:
-      - sg_network
-    healthcheck:
-      test: ["CMD", "python3", "-c", "import sys; print('App healthy'); exit(0)"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 60s
-    deploy:
-      resources:
-        limits:
-          memory: 1G
-          cpus: '0.5'
-        reservations:
-          memory: 512M
-          cpus: '0.25'
+      - ignet
+    entrypoint: ["python3", "src/ultra_dm_conversation_extractor_2025.py"]
 
 # Named volumes for data persistence
 volumes:
-  postgres_data:
-    driver: local
+  pgdata:
 
-# Shared network
 networks:
-  sg_network:
+  ignet:
     driver: bridge
-    name: sg_network
