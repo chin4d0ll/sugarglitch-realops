@@ -3,6 +3,7 @@
 """
 🌸 Instagram HTTP 500 Error Fixer
 แก้ปัญหา server error แบบ girly hacker สำหรับ chin4d0ll
+💖 Advanced Error Recovery & Intelligent Retry System
 """
 
 import asyncio
@@ -359,8 +360,7 @@ class InstagramServerErrorFixer:
             use_dns_cache=True,
             keepalive_timeout=120,  # เก็บ connection นานๆ
             enable_cleanup_closed=True,
-            force_close=False,  # ไม่ปิด connection บ่อย
-            connector_owner=False
+            force_close=False  # ไม่ปิด connection บ่อย
         )
         
         # Extended timeout for problematic servers

@@ -1,0 +1,35 @@
+🎯 Working Instagram Endpoints
+========================================
+
+homepage: https://www.instagram.com/
+  Final URL: https://www.instagram.com/
+  Redirects: 1
+
+homepage_no_slash: https://www.instagram.com
+  Final URL: https://www.instagram.com/
+  Redirects: 1
+
+explore: https://www.instagram.com/explore/
+  Final URL: https://www.instagram.com/
+  Redirects: 1
+
+accounts: https://www.instagram.com/accounts/
+  Final URL: https://www.instagram.com/
+  Redirects: 1
+
+accounts_login: https://www.instagram.com/accounts/login/
+  Final URL: https://www.instagram.com/
+  Redirects: 1
+
+direct_inbox: https://www.instagram.com/direct/inbox/
+  Final URL: https://www.instagram.com/
+  Redirects: 1
+
+direct: https://www.instagram.com/direct/
+  Final URL: https://www.instagram.com/
+  Redirects: 1
+
+mobile: https://m.instagram.com/
+  Final URL: https://www.instagram.com/
+  Redirects: 1
+
