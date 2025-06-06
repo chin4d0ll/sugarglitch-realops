@@ -228,7 +228,14 @@ class RealInstagramExtractorWithBypass:
         
         for i, proxy in enumerate(self.proxies[:5]):  # Test first 5 proxies
             try:
-                proxy_url = f"http://{proxy['ip']}:{proxy['port']}"
+                # Handle both string URLs and dict objects
+                if isinstance(proxy, str):
+                    proxy_url = proxy
+                    proxy_display = proxy
+                else:
+                    proxy_url = f"http://{proxy['ip']}:{proxy['port']}"
+                    proxy_display = f"{proxy['ip']}:{proxy['port']}"
+                    
                 proxies = {'http': proxy_url, 'https': proxy_url}
                 headers = self.get_stealth_headers()
                 
@@ -245,24 +252,25 @@ class RealInstagramExtractorWithBypass:
                     proxy_ip = response.json().get('origin', 'Unknown')
                     test_results['working_proxies'] += 1
                     test_results['proxy_details'].append({
-                        'proxy': f"{proxy['ip']}:{proxy['port']}",
+                        'proxy': proxy_display,
                         'status': 'working',
                         'response_time': response_time,
                         'detected_ip': proxy_ip
                     })
-                    self.logger.info(f"✅ Proxy {i+1} working: {proxy['ip']}:{proxy['port']}")
+                    self.logger.info(f"✅ Proxy {i+1} working: {proxy_display}")
                 else:
                     test_results['failed_proxies'] += 1
                     test_results['proxy_details'].append({
-                        'proxy': f"{proxy['ip']}:{proxy['port']}",
+                        'proxy': proxy_display,
                         'status': 'failed',
                         'error': f"HTTP {response.status_code}"
                     })
                     
             except Exception as e:
                 test_results['failed_proxies'] += 1
+                proxy_display = proxy if isinstance(proxy, str) else f"{proxy['ip']}:{proxy['port']}"
                 test_results['proxy_details'].append({
-                    'proxy': f"{proxy['ip']}:{proxy['port']}",
+                    'proxy': proxy_display,
                     'status': 'error',
                     'error': str(e)
                 })
