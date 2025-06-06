@@ -35,8 +35,8 @@ class CuteRateLimitBypass:
     
     def __init__(self, session_file: str):
         self.session_file = Path(session_file)
+        self.logger = self._setup_logger()  # Initialize logger first
         self.session_data = self._load_session()
-        self.logger = self._setup_logger()
         
         # 🎯 Strategies สำหรับหลบ rate limit
         self.strategies = self._init_strategies()
@@ -328,7 +328,7 @@ async def main():
     print("=" * 60)
     
     # Initialize bypass
-    bypass = CuteRateLimitBypass("session-alx.trading")
+    bypass = CuteRateLimitBypass("sessions/session-alx.trading")
     
     # Test URLs
     test_urls = [
