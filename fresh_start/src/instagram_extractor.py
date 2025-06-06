@@ -71,34 +71,35 @@ class InstagramDMExtractor:
             if name != 'sessionid' and value and value != 'missing':
                 self.session.cookies.set(name, value, domain='.instagram.com')
         
-        # Test authentication with basic page first
+        # Test authentication with basic page first using cute_request 💖
         try:
-            response = self.session.get('https://www.instagram.com/')
-            if 'login' in response.url:
+            response = self.cute_request('https://www.instagram.com/')
+            if not response or 'login' in response.url:
                 self.logger.error("Redirected to login page - session invalid")
                 return False
             
             self.logger.info("Basic authentication successful")
             
-            # Try to get user info with retry logic
+            # Try to get user info with cute retry logic 💖
             for attempt in range(3):
                 try:
                     time.sleep(2 ** attempt)  # Exponential backoff
-                    response = self.session.get('https://www.instagram.com/api/v1/accounts/edit/web_form_data/')
+                    response = self.cute_request('https://www.instagram.com/api/v1/accounts/edit/web_form_data/')
                     
-                    if response.status_code == 200:
+                    if response and response.status_code == 200:
                         data = response.json()
                         if 'form_data' in data:
                             self.user_id = data['form_data'].get('user_id')
                             username = data['form_data'].get('username')
                             self.logger.info(f"Full authentication successful. User: {username}, ID: {self.user_id}")
                             return True
-                    elif response.status_code == 429:
+                    elif response and response.status_code == 429:
                         self.logger.warning(f"Rate limited on attempt {attempt + 1}, waiting...")
                         time.sleep(5 * (attempt + 1))
                         continue
                     else:
-                        self.logger.warning(f"API returned status {response.status_code} on attempt {attempt + 1}")
+                        status = response.status_code if response else "No response"
+                        self.logger.warning(f"API returned status {status} on attempt {attempt + 1}")
                         
                 except Exception as e:
                     self.logger.warning(f"Authentication attempt {attempt + 1} failed: {e}")
@@ -137,11 +138,15 @@ class InstagramDMExtractor:
                             'folder': '',
                             'limit': '20'
                         }
-                        response = self.session.get(endpoint, params=params)
+                        response = self.cute_request(endpoint, params)
                     else:
                         # Try web interface
-                        response = self.session.get(endpoint)
+                        response = self.cute_request(endpoint)
                     
+                    if not response:
+                        self.logger.warning(f"No response from {endpoint}")
+                        continue
+                        
                     self.logger.info(f"Response status: {response.status_code}")
                     
                     if response.status_code == 200:
@@ -193,9 +198,9 @@ class InstagramDMExtractor:
             if max_id:
                 params['max_id'] = max_id
             
-            response = self.session.get(url, params=params)
+            response = self.cute_request(url, params)
             
-            if response.status_code == 200:
+            if response and response.status_code == 200:
                 data = response.json()
                 messages = data.get('thread', {}).get('items', [])
                 self.logger.info(f"Fetched {len(messages)} messages from thread {thread_id}")

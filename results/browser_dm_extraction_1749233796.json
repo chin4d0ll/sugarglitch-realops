@@ -1,0 +1,11 @@
+{
+  "extraction_method": "browser_automation",
+  "timestamp": 1749233796,
+  "total_messages": 0,
+  "messages": [],
+  "extraction_summary": {
+    "success": false,
+    "message_count": 0,
+    "extraction_time": "2025-06-06T18:16:36.489765"
+  }
+}
