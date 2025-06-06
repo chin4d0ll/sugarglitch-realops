@@ -1,0 +1,24 @@
+{
+  "hardcore_extraction_report": {
+    "timestamp": "2025-06-06T08:34:59.599004",
+    "total_extractions": 1,
+    "successful_extractions": 1,
+    "success_rate": "100.0%",
+    "total_messages_extracted": 247,
+    "total_data_size_bytes": 125000,
+    "extraction_time_seconds": 45.7
+  },
+  "performance_metrics": {
+    "messages_per_second": 5.4,
+    "threads_processed": 15,
+    "proxy_switches": 3,
+    "session_rotations": 1,
+    "stealth_bypasses": 7
+  },
+  "system_usage": {
+    "peak_cpu_usage": "23%",
+    "peak_memory_usage": "156 MB",
+    "network_traffic": "45 MB",
+    "proxy_overhead": "12%"
+  }
+}

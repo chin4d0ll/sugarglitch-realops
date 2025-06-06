@@ -297,7 +297,7 @@ class HardcoreValidator:
             error = result.get("error", "")
             ip = result.get("ip_address", "")
             
-            print(f"{status} | {proxy:35} | {response_time:.2f}s | {ip:15} | {error}")
+            print(f"{status} | {proxy:35} | {response_time:.2f}s | {ip or '':15} | {error}")
             
             if result["working"]:
                 working_count += 1

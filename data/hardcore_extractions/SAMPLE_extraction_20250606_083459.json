@@ -1,0 +1,60 @@
+{
+  "extraction_info": {
+    "target": "alx.trading",
+    "method": "hardcore_playwright",
+    "timestamp": "2025-06-06T08:34:59.598451",
+    "duration": 45.7,
+    "status": "completed"
+  },
+  "statistics": {
+    "total_threads": 15,
+    "total_messages": 247,
+    "media_files": 23,
+    "success_rate": "98.4%"
+  },
+  "sample_messages": [
+    {
+      "id": "msg_001",
+      "thread": "Direct conversation",
+      "sender": "user_12345",
+      "text": "Hey, check out this trading strategy!",
+      "timestamp": "2025-06-06T08:15:30Z",
+      "type": "text"
+    },
+    {
+      "id": "msg_002",
+      "thread": "Direct conversation",
+      "sender": "alx.trading",
+      "text": "That looks promising! Let me analyze it.",
+      "timestamp": "2025-06-06T08:16:15Z",
+      "type": "text"
+    },
+    {
+      "id": "msg_003",
+      "thread": "Direct conversation",
+      "sender": "user_12345",
+      "media_url": "https://instagram.com/media/abc123.jpg",
+      "timestamp": "2025-06-06T08:17:00Z",
+      "type": "image"
+    }
+  ],
+  "threads": [
+    {
+      "id": "thread_001",
+      "name": "Direct conversation",
+      "participants": [
+        "alx.trading",
+        "user_12345"
+      ],
+      "message_count": 247,
+      "last_activity": "2025-06-06T08:17:00Z"
+    }
+  ],
+  "extraction_metadata": {
+    "proxy_used": "brd-customer-hl_12345678-zone-zone1.brd.superproxy.io:22225",
+    "session_id": "4976283726***",
+    "extraction_engine": "hardcore_dm_extractor_v2025",
+    "stealth_mode": true,
+    "success_rate": 0.984
+  }
+}
