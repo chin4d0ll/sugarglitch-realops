@@ -9,13 +9,17 @@ import os
 import time
 import sqlite3
 import random
-from datetime import datetime
+from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import undetected_chromedriver as uc
+try:
+    import undetected_chromedriver as uc
+except ImportError:
+    print("⚠️ undetected_chromedriver not available, using regular webdriver")
+    uc = None
 import requests
 from bs4 import BeautifulSoup
 
@@ -145,29 +149,48 @@ class EnhancedAlxExtractor:
         print("✅ Database setup completed")
     
     def method_1_selenium_automation(self):
-        """Method 1: Selenium browser automation"""
+        """Method 1: Selenium browser automation with rate limit protection"""
         print("\n🤖 METHOD 1: Selenium Browser Automation")
         print("=" * 50)
         
         try:
-            # Setup Chrome options
-            chrome_options = uc.ChromeOptions()
+            # Setup Chrome options for stealth
+            if uc:
+                chrome_options = uc.ChromeOptions()
+            else:
+                chrome_options = Options()
+                
             chrome_options.add_argument('--headless')
             chrome_options.add_argument('--no-sandbox')
             chrome_options.add_argument('--disable-dev-shm-usage')
             chrome_options.add_argument('--disable-blink-features=AutomationControlled')
             chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
             chrome_options.add_experimental_option('useAutomationExtension', False)
+            chrome_options.add_argument('--user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1')
             
-            # Create driver
-            driver = uc.Chrome(options=chrome_options)
+            # Create driver with error handling
+            try:
+                if uc:
+                    driver = uc.Chrome(options=chrome_options)
+                else:
+                    driver = webdriver.Chrome(options=chrome_options)
+            except Exception as e:
+                print(f"❌ Chrome driver failed: {e}")
+                print("🔄 Trying Firefox...")
+                driver = webdriver.Firefox()
+            
             driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
             
             print("✅ Browser initialized")
             
+            # 🌸 Rate limit protection - slow start
+            print("😴 Initial rate limit protection delay...")
+            time.sleep(random.uniform(3, 6))
+            
             # Go to Instagram
             driver.get("https://www.instagram.com/")
-            time.sleep(3)
+            print("📱 Instagram homepage loaded")
+            time.sleep(random.uniform(4, 7))  # Human-like delay
             
             # Inject session cookies
             if self.session_data and 'cookies' in self.session_data:
