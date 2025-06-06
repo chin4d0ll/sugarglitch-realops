@@ -75,59 +75,81 @@ class CuteRateDMExtractor:
         return FallbackRateLimiter()
 
     def init_session(self):
-        """Initialize session with cookies and headers"""
+        """Initialize session with anti-redirect headers and authentication"""
+        print("🚀 Initializing session with redirect fixes...")
+        
+        # Load session data
         try:
             with open(self.session_file, 'r') as f:
-                session_data = json.load(f)
-            
-            self.session = requests.Session()
-            
-            # Set cookies
-            cookies = session_data.get('cookies', {})
-            for name, value in cookies.items():
-                # URL decode the cookie value if needed
-                if '%' in value:
-                    from urllib.parse import unquote
-                    value = unquote(value)
-                self.session.cookies.set(name, value)
-            
-            # Set realistic headers
-            self.session.headers.update({
-                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-                'Accept': '*/*',
-                'Accept-Language': 'en-US,en;q=0.9',
-                'Accept-Encoding': 'gzip, deflate, br',
-                'Connection': 'keep-alive',
-                'Sec-Fetch-Dest': 'empty',
-                'Sec-Fetch-Mode': 'cors',
-                'Sec-Fetch-Site': 'same-origin',
-                'X-Requested-With': 'XMLHttpRequest',
-                'X-CSRFToken': '',
-                'X-IG-App-ID': '936619743392459',
-                'X-IG-WWW-Claim': '0',
-                'X-Instagram-AJAX': '1',
-                'Referer': 'https://www.instagram.com/',
-                'Origin': 'https://www.instagram.com'
-            })
-            
-            # Get user info and CSRF token
-            self.get_user_info()
-            
+                content = f.read().strip()
+                if content.startswith('{'):
+                    session_data = json.loads(content)
+                else:
+                    # Handle raw sessionid format
+                    session_data = {"cookies": {"sessionid": content}}
+            print("✅ Session file loaded successfully")
         except Exception as e:
-            print(f"❌ Session initialization failed: {e}")
+            print(f"❌ Failed to load session file: {e}")
             raise
+        
+        self.session = requests.Session()
+        
+        # Anti-redirect mobile headers for better compatibility
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.9',
+            'Accept-Encoding': 'identity',  # Avoid compression issues
+            'Connection': 'close',  # Close connection after use
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0',
+            'DNT': '1',
+            'Upgrade-Insecure-Requests': '1',
+            'Referer': 'https://www.instagram.com/',
+            'X-Requested-With': 'XMLHttpRequest',
+            'Origin': 'https://www.instagram.com',
+            'X-CSRFToken': '',
+            'X-IG-App-ID': '936619743392459',
+            'X-IG-WWW-Claim': '0',
+            'X-Instagram-AJAX': '1'
+        }
+        
+        self.session.headers.update(headers)
+        self.session.max_redirects = 3  # Limit redirects to prevent loops
+        
+        # Set cookies from session data with URL decoding
+        cookies = session_data.get('cookies', {})
+        for name, value in cookies.items():
+            # Handle URL-encoded cookies
+            if '%' in str(value):
+                from urllib.parse import unquote
+                value = unquote(str(value))
+            self.session.cookies.set(name, value, domain='.instagram.com')
+        print("🍪 Session cookies set successfully with redirect fixes")
+        
+        # Get user info and CSRF token
+        self.get_user_info()
     
     def get_user_info(self):
-        """Get user information and CSRF token"""
+        """Get user information and CSRF token with redirect handling"""
         try:
-            print("🔍 Getting user info and CSRF token...")
+            print("🔍 Getting user info and CSRF token with redirect fixes...")
             
             # Apply cute rate limit before request
             self.cute_bypass.apply_cute_rate_limit()
             
-            response = self.session.get('https://www.instagram.com/')
+            # Use safe request with timeout and redirect limits
+            response = self.session.get(
+                'https://www.instagram.com/',
+                timeout=30,
+                allow_redirects=True,
+                verify=False
+            )
             
             if response.status_code == 200:
+                print("✅ Instagram main page accessed successfully")
+                
                 # Extract CSRF token
                 content = response.text
                 if 'csrf_token' in content:
@@ -149,8 +171,30 @@ class CuteRateDMExtractor:
                     self.user_id = user_id_match.group(1)
                     print(f"✅ User ID: {self.user_id}")
                     
+            elif response.status_code == 500:
+                print("⚠️ Instagram returned HTTP 500 - retrying with different approach")
+                # Fallback: try direct profile access
+                self.cute_bypass.apply_cute_rate_limit()
+                profile_response = self.session.get(
+                    'https://www.instagram.com/alx.trading/',
+                    timeout=25,
+                    allow_redirects=True,
+                    verify=False
+                )
+                if profile_response.status_code == 200:
+                    print("✅ ALX Trading profile accessible as fallback")
+                    
+            else:
+                print(f"⚠️ Unexpected status code: {response.status_code}")
+                print(f"Response URL: {response.url}")
+                
+        except requests.exceptions.TooManyRedirects:
+            print("⚠️ Too many redirects - using minimal session info")
+            # Continue with minimal session setup
+            
         except Exception as e:
             print(f"❌ Failed to get user info: {e}")
+            # Continue with session anyway - some methods may still work
     
     def setup_database(self):
         """Setup SQLite database for storing DMs"""

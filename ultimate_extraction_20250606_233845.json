@@ -1,0 +1,8 @@
+{
+  "timestamp": "2025-06-06T23:38:44.852997",
+  "target": "alxtrading",
+  "sessionid_used": "gt7VH5HifFbnK2Wqc22U...",
+  "extraction_type": "automated_with_session",
+  "extraction_status": "failed",
+  "error": "HTTP 401"
+}
