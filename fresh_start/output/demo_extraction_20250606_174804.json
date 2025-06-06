@@ -1,0 +1,29 @@
+{
+  "extraction_time": "2025-06-06T17:48:04.312218",
+  "target_username": "alx.trading",
+  "total_conversations": 5,
+  "total_messages": 440,
+  "conversations": [
+    {
+      "name": "John Doe",
+      "messages": 45
+    },
+    {
+      "name": "Trading Group",
+      "messages": 127
+    },
+    {
+      "name": "Sarah Wilson",
+      "messages": 23
+    },
+    {
+      "name": "Business Partners",
+      "messages": 89
+    },
+    {
+      "name": "Investment Club",
+      "messages": 156
+    }
+  ],
+  "status": "demo_mode"
+}
