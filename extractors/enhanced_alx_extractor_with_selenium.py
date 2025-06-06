@@ -9,12 +9,18 @@ import os
 import time
 import sqlite3
 import random
+import sys
+import logging
 from datetime import datetime, timedelta
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.common.exceptions import TimeoutException, NoSuchElementException, WebDriverException
 try:
     import undetected_chromedriver as uc
 except ImportError:
@@ -22,6 +28,9 @@ except ImportError:
     uc = None
 import requests
 from bs4 import BeautifulSoup
+import base64
+import hashlib
+from urllib.parse import urljoin, urlparse
 
 class EnhancedAlxExtractor:
     """
