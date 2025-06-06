@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-🌸 GitHub Codespace Troubleshooter
-แก้ปัญหาการรันใน Codespace สำหรับ chin4d0ll
+🌸 GitHub Codespace Instagram Troubleshooter
+แก้ปัญหาการรันใน Codespace + Instagram connection สำหรับ chin4d0ll
 """
 
 import os
@@ -11,10 +11,13 @@ import subprocess
 import json
 import asyncio
 import aiohttp
+import requests
+import socket
 from pathlib import Path
 from typing import Dict, List, Any, Optional
 import logging
 import time
+import random
 
 class CodespaceTroubleshooter:
     """
