@@ -49,5 +49,6 @@
   "terminal.integrated.scrollback": 1000,
   "git.autorefresh": false,
   "git.decorations.enabled": false,
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
+  "terminal.integrated.sendKeybindingsToShell": true
 }

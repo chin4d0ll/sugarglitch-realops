@@ -39,6 +39,7 @@ COPY bootstrap.py /app/
 COPY README.md /app/
 COPY PROJECT_STRUCTURE.md /app/
 COPY SETUP.md /app/
+COPY src/ultra_dm_conversation_extractor_2025.py /app/src/ultra_dm_conversation_extractor_2025.py
 
 # Create necessary directories for runtime
 RUN mkdir -p /app/logs /app/temp /app/results /app/databases /app/extractions

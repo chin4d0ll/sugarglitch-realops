@@ -1,4 +1,3 @@
-
 services:
   db:
     image: postgres:14
@@ -16,7 +15,7 @@ services:
       - ignet
 
   dm_extractor:
-    build: .
+    image: python:3.9-slim
     depends_on:
       - db
     environment:
@@ -25,9 +24,12 @@ services:
     volumes:
       - ./outputs:/app/outputs
       - ./tools/session_alx_trading.json:/app/session_alx_trading.json:ro
+      - ./src:/app/src:ro
+      - ./requirements.txt:/app/requirements.txt:ro
     networks:
       - ignet
-    entrypoint: ["python3", "src/ultra_dm_conversation_extractor_2025.py"]
+    working_dir: /app
+    entrypoint: ["/bin/bash", "-c", "pip install -r /app/requirements.txt && python3 src/ultra_dm_conversation_extractor_2025.py"]
 
 # Named volumes for data persistence
 volumes:
