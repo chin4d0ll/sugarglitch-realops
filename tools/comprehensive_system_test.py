@@ -62,14 +62,14 @@ def test_advanced_extractor():
         
         try:
             stdout, stderr = process.communicate(input=test_input, timeout=60)
-        
-        if "ADVANCED EXTRACTION COMPLETE" in stdout:
-            print("✅ Advanced extractor working correctly")
-            return True
-        else:
-            print("⚠️ Advanced extractor completed but may have issues")
-            print(f"Return code: {process.returncode}")
-            return False
+            
+            if "ADVANCED EXTRACTION COMPLETE" in stdout:
+                print("✅ Advanced extractor working correctly")
+                return True
+            else:
+                print("⚠️ Advanced extractor completed but may have issues")
+                print(f"Return code: {process.returncode}")
+                return False
             
     except subprocess.TimeoutExpired:
         print("⚠️ Advanced extractor test timed out (expected for full extraction)")
