@@ -1,0 +1,96 @@
+{
+  "timestamp": "2025-06-06 21:01:35",
+  "tests": [
+    {
+      "config": "Mobile iPhone (Recommended)",
+      "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
+      "uses_cookies": true,
+      "url_tests": [
+        {
+          "name": "Homepage",
+          "url": "https://www.instagram.com/",
+          "status": 200,
+          "success": true,
+          "content_length": 439349
+        },
+        {
+          "name": "Explore",
+          "url": "https://www.instagram.com/explore/",
+          "status": 200,
+          "success": true,
+          "content_length": 439786
+        },
+        {
+          "name": "Profile Check",
+          "url": "https://www.instagram.com/chin4d0ll/",
+          "status": 200,
+          "success": true,
+          "content_length": 439902
+        }
+      ]
+    },
+    {
+      "config": "Desktop Chrome",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "uses_cookies": true,
+      "url_tests": [
+        {
+          "name": "Homepage",
+          "url": "https://www.instagram.com/",
+          "status": 200,
+          "success": true,
+          "content_length": 428618
+        },
+        {
+          "name": "Explore",
+          "url": "https://www.instagram.com/explore/",
+          "status": 200,
+          "success": true,
+          "content_length": 428599
+        },
+        {
+          "name": "Profile Check",
+          "url": "https://www.instagram.com/chin4d0ll/",
+          "status": 200,
+          "success": true,
+          "content_length": 428741
+        }
+      ]
+    },
+    {
+      "config": "Clean Mobile (No Cookies)",
+      "user_agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1",
+      "uses_cookies": false,
+      "url_tests": [
+        {
+          "name": "Homepage",
+          "url": "https://www.instagram.com/",
+          "status": 200,
+          "success": true,
+          "content_length": 439491
+        },
+        {
+          "name": "Explore",
+          "url": "https://www.instagram.com/explore/",
+          "status": 200,
+          "success": true,
+          "content_length": 3255512
+        },
+        {
+          "name": "Profile Check",
+          "url": "https://www.instagram.com/chin4d0ll/",
+          "status": 429,
+          "success": false,
+          "content_length": 0
+        }
+      ]
+    }
+  ],
+  "working_strategies": [
+    "Mobile iPhone (Recommended)",
+    "Desktop Chrome"
+  ],
+  "failing_strategies": [
+    "Clean Mobile (No Cookies)"
+  ]
+}
