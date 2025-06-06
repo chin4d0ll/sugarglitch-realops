@@ -1,25 +1,42 @@
 #!/usr/bin/env python3
 """
-🎯 ALX TRADING DM EXTRACTOR 2025
-เครื่องมือเฉพาะสำหรับดึง DM จาก @alx.trading
+ALX Trading DM Extractor
+Extracts all Direct Messages from alx.trading using Instagram Private API
 """
 
-import os
 import json
-import time
 import requests
+import os
+import time
 from datetime import datetime
-import sqlite3
+from typing import Dict, List, Any, Optional
+from urllib.parse import urljoin
 
-class AlxTradingDMExtractor:
-    def __init__(self):
-        self.target_account = "alx.trading"
-        self.session_file = "/workspaces/sugarglitch-realops/sessions/session-alx.trading"
-        self.output_dir = "/workspaces/sugarglitch-realops/data/alx_trading"
-        self.db_path = "/workspaces/sugarglitch-realops/data/alx_trading_dms.db"
-        self.session = None
-        self.setup_directories()
-        self.load_session()
+
+class ALXTradingDMExtractor:
+    """Instagram DM Extractor for ALX Trading"""
+    
+    def __init__(self, session_path: str = "tools/session_alx_trading.json"):
+        """
+        Initialize the extractor
+        
+        Args:
+            session_path: Path to session JSON file
+        """
+        self.session_path = session_path
+        self.session_data = None
+        self.headers = {}
+        self.cookies = {}
+        self.base_url = "https://i.instagram.com/api/v1"
+        self.extracted_data = {
+            "extraction_info": {
+                "timestamp": datetime.now().isoformat(),
+                "target": "alx.trading",
+                "total_threads": 0,
+                "total_messages": 0
+            },
+            "threads": []
+        }
         
     def setup_directories(self):
         """สร้างโฟลเดอร์ที่จำเป็น"""
