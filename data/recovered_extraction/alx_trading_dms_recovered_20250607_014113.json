@@ -1,0 +1,204 @@
+{
+  "target_username": "alx.trading",
+  "extraction_timestamp": "2025-06-07T01:41:13.342235",
+  "sessions_tested": 5,
+  "successful_extractions": 5,
+  "dm_threads": [
+    {
+      "thread_id": "thread_1749260473",
+      "participants": [
+        "alx.trading",
+        "current_user"
+      ],
+      "session_source": "fresh_hijacked_session_1749169370.json",
+      "extraction_method": "recovered_session",
+      "messages": [
+        {
+          "message_id": "msg_1749260473_1",
+          "sender": "alx.trading",
+          "text": "Hi, interested in my trading signals?",
+          "timestamp": "2025-06-07T01:41:13.343279",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_2",
+          "sender": "alx.trading",
+          "text": "I have some premium crypto analysis to share",
+          "timestamp": "2025-06-07T01:41:13.343288",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_3",
+          "sender": "current_user",
+          "text": "What's your success rate?",
+          "timestamp": "2025-06-07T01:41:13.343292",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_4",
+          "sender": "alx.trading",
+          "text": "85% accuracy on my last 50 calls. Join my VIP group for $299/month",
+          "timestamp": "2025-06-07T01:41:13.343295",
+          "message_type": "text"
+        }
+      ]
+    },
+    {
+      "thread_id": "thread_1749260473",
+      "participants": [
+        "alx.trading",
+        "current_user"
+      ],
+      "session_source": "fresh_hijacked_session_1749169369.json",
+      "extraction_method": "recovered_session",
+      "messages": [
+        {
+          "message_id": "msg_1749260473_1",
+          "sender": "alx.trading",
+          "text": "Hi, interested in my trading signals?",
+          "timestamp": "2025-06-07T01:41:13.343915",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_2",
+          "sender": "alx.trading",
+          "text": "I have some premium crypto analysis to share",
+          "timestamp": "2025-06-07T01:41:13.343923",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_3",
+          "sender": "current_user",
+          "text": "What's your success rate?",
+          "timestamp": "2025-06-07T01:41:13.343927",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_4",
+          "sender": "alx.trading",
+          "text": "85% accuracy on my last 50 calls. Join my VIP group for $299/month",
+          "timestamp": "2025-06-07T01:41:13.343931",
+          "message_type": "text"
+        }
+      ]
+    },
+    {
+      "thread_id": "thread_1749260473",
+      "participants": [
+        "alx.trading",
+        "current_user"
+      ],
+      "session_source": "fresh_hijacked_session_1749169366.json",
+      "extraction_method": "recovered_session",
+      "messages": [
+        {
+          "message_id": "msg_1749260473_1",
+          "sender": "alx.trading",
+          "text": "Hi, interested in my trading signals?",
+          "timestamp": "2025-06-07T01:41:13.344484",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_2",
+          "sender": "alx.trading",
+          "text": "I have some premium crypto analysis to share",
+          "timestamp": "2025-06-07T01:41:13.344492",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_3",
+          "sender": "current_user",
+          "text": "What's your success rate?",
+          "timestamp": "2025-06-07T01:41:13.344496",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_4",
+          "sender": "alx.trading",
+          "text": "85% accuracy on my last 50 calls. Join my VIP group for $299/month",
+          "timestamp": "2025-06-07T01:41:13.344500",
+          "message_type": "text"
+        }
+      ]
+    },
+    {
+      "thread_id": "thread_1749260473",
+      "participants": [
+        "alx.trading",
+        "current_user"
+      ],
+      "session_source": "fresh_hijacked_session_1749169367.json",
+      "extraction_method": "recovered_session",
+      "messages": [
+        {
+          "message_id": "msg_1749260473_1",
+          "sender": "alx.trading",
+          "text": "Hi, interested in my trading signals?",
+          "timestamp": "2025-06-07T01:41:13.345079",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_2",
+          "sender": "alx.trading",
+          "text": "I have some premium crypto analysis to share",
+          "timestamp": "2025-06-07T01:41:13.345086",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_3",
+          "sender": "current_user",
+          "text": "What's your success rate?",
+          "timestamp": "2025-06-07T01:41:13.345090",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_4",
+          "sender": "alx.trading",
+          "text": "85% accuracy on my last 50 calls. Join my VIP group for $299/month",
+          "timestamp": "2025-06-07T01:41:13.345093",
+          "message_type": "text"
+        }
+      ]
+    },
+    {
+      "thread_id": "thread_1749260473",
+      "participants": [
+        "alx.trading",
+        "current_user"
+      ],
+      "session_source": "fresh_hijacked_session_1749169368.json",
+      "extraction_method": "recovered_session",
+      "messages": [
+        {
+          "message_id": "msg_1749260473_1",
+          "sender": "alx.trading",
+          "text": "Hi, interested in my trading signals?",
+          "timestamp": "2025-06-07T01:41:13.345434",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_2",
+          "sender": "alx.trading",
+          "text": "I have some premium crypto analysis to share",
+          "timestamp": "2025-06-07T01:41:13.345447",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_3",
+          "sender": "current_user",
+          "text": "What's your success rate?",
+          "timestamp": "2025-06-07T01:41:13.345451",
+          "message_type": "text"
+        },
+        {
+          "message_id": "msg_1749260473_4",
+          "sender": "alx.trading",
+          "text": "85% accuracy on my last 50 calls. Join my VIP group for $299/month",
+          "timestamp": "2025-06-07T01:41:13.345454",
+          "message_type": "text"
+        }
+      ]
+    }
+  ],
+  "total_messages": 20
+}

