@@ -240,4 +240,10 @@ def analyze_existing_html(html_content, source_file):
     return found_data
 
 if __name__ == "__main__":
-    extract_dm_data_from_html()
+    print("🚀 Starting HTML DM Parser...")
+    result = extract_dm_data_from_html()
+    if result:
+        print("✅ Extraction completed successfully!")
+    else:
+        print("❌ Extraction failed or no data found")
+    print("🏁 Parser finished.")
