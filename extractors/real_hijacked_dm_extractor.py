@@ -14,7 +14,8 @@ import os
 class RealAlxHijackedExtractor:
     def __init__(self):
         self.target = "alx.trading"
-        self.output_dir = "/workspaces/sugarglitch-realops/data/real_hijacked_extraction"
+        # Change output directory to a relative path for better permission handling
+        self.output_dir = "./data/real_hijacked_extraction"
         self.db_path = f"{self.output_dir}/real_hijacked_dms.db"
         
         # Valid session tokens from bypass assessment
