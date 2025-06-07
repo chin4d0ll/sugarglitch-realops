@@ -46,13 +46,16 @@ def extract_dm_data_from_html():
     
     print("🌐 Getting Instagram DM page...")
     
-    # ก่อนอื่น ลองอ่าน HTML ที่มีอยู่แล้วในโฟลเดอร์ results
-    html_files = [
-        'results/dm_page_20250606_235950.html',
-        'results/dm_page_20250606_235436.html',
-        'results/dm_page_20250606_234356.html',
-        'results/dm_page_20250606_233752.html'
-    ]
+    # ค้นหาไฟล์ HTML ทั้งหมดในโฟลเดอร์ results
+    import glob
+    html_files = glob.glob('results/dm_page_*.html')
+    
+    if not html_files:
+        print("❌ No HTML files found in results directory")
+        return False
+    
+    print(f"📁 Found {len(html_files)} HTML files to analyze")
+    results_found = False
     
     for html_file in html_files:
         if os.path.exists(html_file):
@@ -64,11 +67,14 @@ def extract_dm_data_from_html():
                 
                 # วิเคราะห์ HTML ที่มีอยู่
                 if analyze_existing_html(html, html_file):
-                    return True
+                    results_found = True
                     
             except Exception as e:
                 print(f"❌ Error reading {html_file}: {e}")
                 continue
+    
+    if results_found:
+        return True
     
     try:
         response = requests.get('https://www.instagram.com/direct/inbox/', headers=headers, timeout=15)
@@ -231,7 +237,7 @@ def analyze_existing_html(html_content, source_file):
         'data_found': found_data
     }
     
-    summary_file = f'results/analysis_summary_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
+    summary_file = f'results/analysis_summary_{os.path.basename(source_file).replace(".html", "")}_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
     with open(summary_file, 'w') as f:
         json.dump(analysis_summary, f, indent=2)
     
@@ -239,11 +245,60 @@ def analyze_existing_html(html_content, source_file):
     
     return found_data
 
+def create_comprehensive_summary():
+    """สร้างรายงานสรุปรวมจากไฟล์วิเคราะห์ทั้งหมด"""
+    import glob
+    
+    analysis_files = glob.glob('results/analysis_summary_dm_page_*.json')
+    if not analysis_files:
+        print("❌ No analysis files found")
+        return
+    
+    comprehensive_data = {
+        'analysis_date': datetime.now().isoformat(),
+        'total_files_analyzed': len(analysis_files),
+        'files_with_data': 0,
+        'files_with_direct_v2': 0,
+        'files_with_shared_data': 0,
+        'total_html_size': 0,
+        'file_details': []
+    }
+    
+    for analysis_file in analysis_files:
+        try:
+            with open(analysis_file, 'r') as f:
+                data = json.load(f)
+            
+            comprehensive_data['file_details'].append(data)
+            comprehensive_data['total_html_size'] += data.get('html_size', 0)
+            
+            if data.get('data_found'):
+                comprehensive_data['files_with_data'] += 1
+            if data.get('has_direct_v2'):
+                comprehensive_data['files_with_direct_v2'] += 1
+            if data.get('has_shared_data'):
+                comprehensive_data['files_with_shared_data'] += 1
+                
+        except Exception as e:
+            print(f"❌ Error reading {analysis_file}: {e}")
+    
+    # บันทึกรายงานสรุป
+    summary_file = f'results/COMPREHENSIVE_HTML_ANALYSIS_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
+    with open(summary_file, 'w') as f:
+        json.dump(comprehensive_data, f, indent=2)
+    
+    print(f"📋 Comprehensive analysis saved to: {summary_file}")
+    print(f"📊 Summary: {comprehensive_data['files_with_data']}/{comprehensive_data['total_files_analyzed']} files contain DM data")
+    
+    return summary_file
+
 if __name__ == "__main__":
     print("🚀 Starting HTML DM Parser...")
     result = extract_dm_data_from_html()
     if result:
         print("✅ Extraction completed successfully!")
+        print("\n📋 Creating comprehensive summary...")
+        create_comprehensive_summary()
     else:
         print("❌ Extraction failed or no data found")
     print("🏁 Parser finished.")

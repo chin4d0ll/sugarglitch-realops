@@ -1,0 +1,87 @@
+{
+  "analysis_date": "2025-06-07T00:16:02.188699",
+  "total_files_analyzed": 7,
+  "files_with_data": 7,
+  "files_with_direct_v2": 7,
+  "files_with_shared_data": 0,
+  "total_html_size": 2996263,
+  "file_details": [
+    {
+      "source_file": "results/dm_page_20250606_235950.html",
+      "analysis_time": "2025-06-07T00:16:02.184704",
+      "html_size": 429056,
+      "has_shared_data": false,
+      "additional_data_chunks": 0,
+      "has_direct_v2": true,
+      "has_inbox": false,
+      "has_thread": false,
+      "data_found": true
+    },
+    {
+      "source_file": "results/dm_page_20250606_234356.html",
+      "analysis_time": "2025-06-07T00:16:02.175734",
+      "html_size": 429169,
+      "has_shared_data": false,
+      "additional_data_chunks": 0,
+      "has_direct_v2": true,
+      "has_inbox": false,
+      "has_thread": false,
+      "data_found": true
+    },
+    {
+      "source_file": "results/dm_page_20250606_235436.html",
+      "analysis_time": "2025-06-07T00:16:02.169225",
+      "html_size": 429041,
+      "has_shared_data": false,
+      "additional_data_chunks": 0,
+      "has_direct_v2": true,
+      "has_inbox": false,
+      "has_thread": false,
+      "data_found": true
+    },
+    {
+      "source_file": "results/dm_page_20250606_233752.html",
+      "analysis_time": "2025-06-07T00:16:02.187440",
+      "html_size": 429048,
+      "has_shared_data": false,
+      "additional_data_chunks": 0,
+      "has_direct_v2": true,
+      "has_inbox": false,
+      "has_thread": false,
+      "data_found": true
+    },
+    {
+      "source_file": "results/dm_page_20250606_093001.html",
+      "analysis_time": "2025-06-07T00:16:02.172322",
+      "html_size": 421736,
+      "has_shared_data": false,
+      "additional_data_chunks": 0,
+      "has_direct_v2": true,
+      "has_inbox": false,
+      "has_thread": false,
+      "data_found": true
+    },
+    {
+      "source_file": "results/dm_page_20250606_234932.html",
+      "analysis_time": "2025-06-07T00:16:02.181903",
+      "html_size": 429168,
+      "has_shared_data": false,
+      "additional_data_chunks": 0,
+      "has_direct_v2": true,
+      "has_inbox": false,
+      "has_thread": false,
+      "data_found": true
+    },
+    {
+      "source_file": "results/dm_page_20250606_235043.html",
+      "analysis_time": "2025-06-07T00:16:02.178525",
+      "html_size": 429045,
+      "has_shared_data": false,
+      "additional_data_chunks": 0,
+      "has_direct_v2": true,
+      "has_inbox": false,
+      "has_thread": false,
+      "data_found": true
+    }
+  ]
+}
