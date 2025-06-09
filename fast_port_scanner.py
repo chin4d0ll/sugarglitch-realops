@@ -358,7 +358,10 @@ Examples:
                 scanner.total_ports = len(ports_to_scan)
                 scanner.scanned_ports = 0
                 
-                with ThreadPoolExecutor(max_workers=scanner.threads) as executor:
+                from concurrent.futures import ThreadPoolExecutor, as_completed
+                with ThreadPoolExecutor(
+                    max_workers=scanner.threads
+                ) as executor:
                     future_to_port = {
                         executor.submit(scanner.scan_port, port): port
                         for port in ports_to_scan
@@ -399,6 +402,7 @@ Examples:
     except Exception as e:
         print(f"[ERROR] {e}")
         sys.exit(1)
+
 
 if __name__ == "__main__":
     main()
