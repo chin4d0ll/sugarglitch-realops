@@ -16,7 +16,7 @@
     {
       "id": "msg_002",
       "sender": "user2",
-      "text": "I'm good! Just working on some projects \ud83d\udcbb",
+      "text": "I'm good! Just working on some projects 💻",
       "timestamp": "2025-06-06T09:05:00Z",
       "read": true
     },
@@ -41,5 +41,11 @@
     "proxy_used": true,
     "stealth_mode": true,
     "extraction_time": "2025-06-06T17:18:44.192969"
+  },
+  "cleaning_info": {
+    "cleaned_at": "2025-01-17",
+    "original_message_count": 3,
+    "cleaned_message_count": 3,
+    "sample_messages_removed": 0
   }
 }

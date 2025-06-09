@@ -7,5 +7,11 @@
   "metadata": {
     "browser_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
     "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fdirect%2Finbox%2F%3F__coig_login%3D1"
+  },
+  "cleaning_info": {
+    "cleaned_at": "2025-01-17",
+    "original_message_count": 0,
+    "cleaned_message_count": 0,
+    "sample_messages_removed": 0
   }
 }

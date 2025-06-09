@@ -7,5 +7,11 @@
     "success": false,
     "message_count": 0,
     "extraction_time": "2025-06-06T18:24:30.860879"
+  },
+  "cleaning_info": {
+    "cleaned_at": "2025-01-17",
+    "original_message_count": 0,
+    "cleaned_message_count": 0,
+    "sample_messages_removed": 0
   }
 }
