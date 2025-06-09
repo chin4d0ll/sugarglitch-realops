@@ -104,6 +104,41 @@ def load_sessionid():
     print("❌ No valid session found! Create one first.")
     return None
 
+# 🎯 Create a working session generator
+def create_demo_session():
+    """Create a demo session for testing"""
+    demo_session = {
+        "sessionid": "demo_session_for_testing_only",
+        "created": datetime.now().isoformat(),
+        "note": "Replace with real sessionid from browser dev tools"
+    }
+    
+    SESSION_PATH.parent.mkdir(exist_ok=True)
+    
+    with open(SESSION_PATH, 'w') as f:
+        json.dump(demo_session, f, indent=2)
+    
+    print(f"✅ Demo session created at {SESSION_PATH}")
+    print("🔧 To get real sessionid:")
+    print("   1. Open Instagram in browser")
+    print("   2. Login normally")
+    print("   3. Press F12 -> Application -> Cookies -> instagram.com")
+    print("   4. Copy 'sessionid' value")
+    print("   5. Replace in sensitive_data/session.json")
+    return demo_session["sessionid"]
+
+# 🔧 Session validator
+def validate_session(sessionid):
+    """Quick session validation"""
+    if not sessionid or sessionid == "demo_session_for_testing_only":
+        return False
+    
+    # Basic format check
+    if len(sessionid) < 20:
+        return False
+        
+    return True
+
 # 🔥 Advanced DM Fetcher with bypass techniques
 def fetch_dm_advanced(sessionid):
     """Advanced DM fetching with CTF bypass techniques"""
@@ -148,6 +183,88 @@ def fetch_dm_advanced(sessionid):
     
     print("💀 All endpoints failed!")
     return None
+
+# 🎯 Alternative extraction methods
+def try_alternative_methods(sessionid):
+    """Try alternative extraction methods when main API fails"""
+    print("\n🔄 Trying alternative methods...")
+    
+    methods = [
+        ("GraphQL Endpoint", "https://www.instagram.com/api/graphql/"),
+        ("Mobile API", "https://i.instagram.com/api/v1/direct_v2/"),
+        ("Web Endpoint", "https://www.instagram.com/api/v1/direct_v2/")
+    ]
+    
+    for method_name, base_url in methods:
+        print(f"🔍 Trying {method_name}...")
+        
+        s = requests.Session()
+        headers = get_enhanced_headers()
+        s.headers.update(headers)
+        
+        # Set comprehensive cookies
+        cookies = {
+            "sessionid": sessionid,
+            "ds_user_id": str(random.randint(1000000000, 9999999999)),
+            "mid": f"Y{random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')}{random.randint(100000, 999999)}",
+            "ig_did": f"{random.randint(10000000, 99999999)}-{random.randint(1000, 9999)}-{random.randint(1000, 9999)}-{random.randint(1000, 9999)}-{random.randint(100000000000, 999999999999)}",
+            "csrftoken": ''.join(random.choices('abcdefghijklmnopqrstuvwxyz0123456789', k=32)),
+            "rur": "CLN"
+        }
+        
+        for name, value in cookies.items():
+            s.cookies.set(name, value, domain=".instagram.com")
+            
+        try:
+            # Try different paths
+            paths = ["inbox/", "threads/", ""]
+            for path in paths:
+                url = base_url + path
+                resp = s.get(url, timeout=10)
+                
+                print(f"   📊 {url} -> {resp.status_code}")
+                
+                if resp.status_code == 200:
+                    try:
+                        data = resp.json()
+                        if data:
+                            print(f"   ✅ Success with {method_name}!")
+                            return data
+                    except:
+                        pass
+                
+        except Exception as e:
+            print(f"   ❌ Error: {e}")
+            continue
+    
+    return None
+
+# 🔍 Debug mode for detailed analysis
+def debug_response(response):
+    """Debug response for troubleshooting"""
+    print("\n🐛 DEBUG MODE")
+    print("=" * 30)
+    print(f"Status Code: {response.status_code}")
+    print(f"Headers: {dict(response.headers)}")
+    print(f"Cookies: {dict(response.cookies)}")
+    
+    if response.text:
+        print(f"Response preview: {response.text[:500]}...")
+        
+        # Check for common error patterns
+        error_patterns = [
+            "challenge_required",
+            "login_required", 
+            "checkpoint_required",
+            "rate_limit_error",
+            "feedback_required"
+        ]
+        
+        for pattern in error_patterns:
+            if pattern in response.text.lower():
+                print(f"🚨 Detected: {pattern}")
+    
+    return response
 
 # 🎭 CTF-style response analyzer
 def analyze_response(response_data):
