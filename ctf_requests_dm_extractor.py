@@ -74,6 +74,19 @@ def load_sessionid():
     """Load session from multiple sources like a hacker"""
     print("🔍 Scanning for session data...")
     
+    # Try hijacked sessions first (priority)
+    hijacked_dir = Path("hijacked_sessions")
+    if hijacked_dir.exists():
+        for hijacked_file in hijacked_dir.glob("*.json"):
+            try:
+                with open(hijacked_file) as f:
+                    data = json.load(f)
+                if "cookies" in data and "sessionid" in data["cookies"]:
+                    print(f"🥷 Found hijacked session: {hijacked_file.name}")
+                    return data["cookies"]["sessionid"]
+            except:
+                continue
+    
     # Try main session file
     try:
         with open(SESSION_PATH) as f:
@@ -88,7 +101,8 @@ def load_sessionid():
         "session.json",
         "fresh_sessions/working_session_1749202526.json",
         "fresh_sessions/working_session_1749202527.json",
-        "alx_trading_session_fleming654.json"
+        "alx_trading_session_fleming654.json",
+        "sessions/session-alx.trading"
     ]
     
     for file_path in session_files:
@@ -98,6 +112,9 @@ def load_sessionid():
             if "sessionid" in data:
                 print(f"✅ Found session in {file_path}")
                 return data["sessionid"]
+            elif "cookies" in data and "sessionid" in data["cookies"]:
+                print(f"✅ Found session cookies in {file_path}")
+                return data["cookies"]["sessionid"]
         except:
             continue
     
