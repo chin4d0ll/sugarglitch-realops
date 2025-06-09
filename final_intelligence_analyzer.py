@@ -34,7 +34,7 @@ class FinalDataAnalyzer:
             f"{self.project_root}/**/*.json", recursive=True
         )
         relevant_files = [
-            f for f in json_files 
+            f for f in json_files
             if any(keyword in f.lower() for keyword in [
                 'dm', 'extraction', 'hack', 'real_data', 'ultimate'
             ])
