@@ -5,32 +5,32 @@ Provides compatibility for missing or renamed modules
 
 # Python 2/3 compatibility
 try:
-    import urllib2
+    import urllib.request as urllib2
 except ImportError:
     import urllib.request as urllib2
 
 try:
-    from urlparse import urlparse, parse_qs
+    from urllib.parse import urllib.parse as urlparse, parse_qs
 except ImportError:
-    from urllib.parse import urlparse, parse_qs
+    from urllib.parse import urllib.parse as urlparse, parse_qs
 
 try:
-    from Queue import Queue
+    from queue import Queue
 except ImportError:
     from queue import Queue
 
 try:
-    from StringIO import StringIO
+    from io import StringIO
 except ImportError:
     from io import StringIO
 
 try:
-    import ConfigParser as configparser
+    import configparser as configparser
 except ImportError:
     import configparser
 
 try:
-    from HTMLParser import HTMLParser
+    from html.parser import HTMLParser
 except ImportError:
     from html.parser import HTMLParser
 

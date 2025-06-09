@@ -16,8 +16,15 @@ import random
 from pathlib import Path
 from datetime import datetime
 import urllib.parse
-from Crypto.Cipher import AES
-from Crypto.Util.Padding import pad, unpad
+
+# Optional crypto imports - install with: pip install pycryptodome
+try:
+    from Crypto.Cipher import AES
+    from Crypto.Util.Padding import pad, unpad
+    CRYPTO_AVAILABLE = True
+except ImportError:
+    print("⚠️  Crypto module not found. Install with: pip install pycryptodome")
+    CRYPTO_AVAILABLE = False
 
 SESSION_PATH = Path("sensitive_data/sessi on.json")
 
