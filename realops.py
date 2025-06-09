@@ -7,9 +7,9 @@ Focus: Real data, real results, real work only.
 import sqlite3
 import json
 import os
-import requests
 from datetime import datetime
 import subprocess
+import socket
 
 class RealOps:
     def __init__(self):
@@ -100,7 +100,6 @@ class RealOps:
         
         for port in common_ports:
             try:
-                import socket
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 sock.settimeout(1)
                 result = sock.connect_ex((target, port))
