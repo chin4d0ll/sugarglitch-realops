@@ -30,6 +30,7 @@ class SessionValidator:
         
     def load_session(self, file_path):
         """โหลดข้อมูล session จากไฟล์"""
+        print("DEBUG: Entering load_session method")
         try:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
