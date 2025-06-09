@@ -442,35 +442,33 @@ def analyze_pyc_file(pyc_path):
         print(f"  Constants: {code_obj.co_consts}")
         print(f"  Names: {code_obj.co_names}")
         print(f"  Variables: {code_obj.co_varnames}")
-
-def decompile_simple_python(bytecode):
-    """Decompile simple Python functions"""
-    # นี่คือตัวอย่างง่ายๆ สำหรับ educational
-    print("Attempting to reconstruct source:")
-
-    # วิเคราะห์ patterns ใน bytecode
-    if 'LOAD_CONST' in str(bytecode) and 'RETURN_VALUE' in str(bytecode):
-        print("  Likely returns a constant")
-
-    if 'LOAD_FAST' in str(bytecode) and 'BINARY_ADD' in str(bytecode):
-        print("  Likely performs addition")
-
-    if 'CALL_FUNCTION' in str(bytecode):
-        print("  Contains function calls")
-
-# สร้าง sample pyc สำหรับทดสอบ
-sample_code = '''
-def secret_function(x, y):
-    return x + y + 42
-'''
-
-with open('sample.py', 'w') as f:
-    f.write(sample_code)
-
-py_compile.compile('sample.py', 'sample.pyc')
-analyze_pyc_file('sample.pyc')
-'''
-        print(python_re_code)
+        
+        # Example decompilation
+        def decompile_simple_python(bytecode):
+            """Decompile simple Python functions"""
+            print("Attempting to reconstruct source:")
+            
+            # วิเคราะห์ patterns ใน bytecode
+            if 'LOAD_CONST' in str(bytecode) and 'RETURN_VALUE' in str(bytecode):
+                print("  Likely returns a constant")
+            
+            if 'LOAD_FAST' in str(bytecode) and 'BINARY_ADD' in str(bytecode):
+                print("  Likely performs addition")
+            
+            if 'CALL_FUNCTION' in str(bytecode):
+                print("  Contains function calls")
+        
+        # สร้าง sample pyc สำหรับทดสอบ
+        sample_code = "def secret_function(x, y):\n    return x + y + 42"
+        
+        try:
+            with open('sample.py', 'w') as f:
+                f.write(sample_code)
+            
+            py_compile.compile('sample.py', 'sample.pyc')
+            analyze_pyc_file('sample.pyc')
+        except Exception as e:
+            print(f"Error creating sample: {e}")
 
     def pwn_exploitation_techniques(self):
         """💥 เทคนิค PWN/Binary Exploitation"""
