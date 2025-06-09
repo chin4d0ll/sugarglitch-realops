@@ -9,6 +9,7 @@
 ## ✨ Key Features
 
 ### 🎯 **Core Capabilities**
+
 - **📱 Instagram DM Extraction** - Extract direct messages from Instagram accounts
 - **🔓 Session Management** - Advanced session handling and authentication
 - **🕸️ Hijacked Session Support** - Utilize captured sessions for enhanced access
@@ -16,6 +17,7 @@
 - **🛡️ Anti-Detection** - IP rotation, rate limiting, and bypass mechanisms
 
 ### 🚀 **Advanced Operations**
+
 - **🎭 Multi-Account Support** - Handle multiple Instagram targets
 - **⚡ Real-time Extraction** - Live DM monitoring and capture
 - **🔄 Session Recovery** - Automatic session repair and regeneration
@@ -44,11 +46,13 @@
 ## 🚀 Quick Start
 
 ### 1. **Main Launcher** (Recommended)
+
 ```bash
 python3 launchers/quick_launcher.py
 ```
 
 ### 2. **Direct DM Extraction**
+
 ```bash
 # Stable extractor (most reliable)
 python3 extractors/advanced_stable_dm_extractor.py
@@ -61,6 +65,7 @@ python3 extractors/hijacked_session_dm_extractor.py
 ```
 
 ### 3. **System Tools**
+
 ```bash
 # Check system health
 python3 tools/system_health_monitor_2025.py
@@ -85,10 +90,12 @@ python3 tools/alx_operations_control_center.py
 ## 🎯 Target Accounts
 
 ### Primary Targets
+
 - **alx.trading** - Main target account for DM extraction
 - Support for multiple targets through configuration
 
 ### Extraction Methods
+
 1. **Direct Login** - Using account credentials
 2. **Hijacked Sessions** - Using captured authentication tokens
 3. **Session Injection** - Advanced session manipulation
@@ -108,11 +115,13 @@ python3 tools/alx_operations_control_center.py
 ## ⚠️ Important Notes
 
 ### Security & Ethics
+
 - This tool is for educational and authorized security testing only
 - Always ensure you have proper authorization before use
 - Respect Instagram's Terms of Service and applicable laws
 
 ### Technical Requirements
+
 - Python 3.8+
 - Required packages: `requests`, `sqlite3`, `json`, `datetime`
 - Additional dependencies in `/config/requirements*.txt`
@@ -128,6 +137,47 @@ python3 tools/alx_operations_control_center.py
 | [📊 Extractors](extractors/) | DM extraction tools |
 | [🔧 Tools](tools/) | Utility and helper scripts |
 | [📚 Docs](documentation/) | Complete documentation |
+
+---
+
+## Getting Started
+
+### Open in Codespace
+
+1. Click the "Code" button in the repository.
+2. Select "Open in Codespaces".
+3. Wait for the environment to build and start.
+
+### Run Locally
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/chin4d0ll/sugarglitch-realops.git
+   cd sugarglitch-realops
+   ```
+
+2. Build and start the environment:
+
+   ```bash
+   make build
+   make up
+   ```
+
+3. Access the app at `http://localhost:8080`.
+
+## Environment Variables
+
+Create a `.env` file with the following variables:
+
+```env
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_DB=sugarglitch
+REDIS_HOST=redis
+INSTAGRAM_USERNAME=your_username
+INSTAGRAM_PASSWORD=your_password
+DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...```
 
 ---
 

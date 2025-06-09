@@ -1,0 +1,27 @@
+{
+  "name": "Sugarglitch RealOps Dev Container",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [
+    8080,
+    3000
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode-remote.remote-containers",
+        "eamodio.gitlens",
+        "humao.rest-client",
+        "ms-vscode-remote.remote-ssh"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "files.autoSave": "afterDelay",
+        "http.proxy": "http://127.0.0.1:8080",
+        "security.workspace.trust.enabled": false
+      }
+    }
+  }
+}

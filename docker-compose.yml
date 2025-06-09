@@ -29,11 +29,31 @@ services:
     networks:
       - ignet
     working_dir: /app
-    entrypoint: ["/bin/bash", "-c", "pip install -r /app/requirements.txt && python3 src/ultra_dm_conversation_extractor_2025.py"]
+    entrypoint: [ "/bin/bash", "-c", "pip install -r /app/requirements.txt && python3 src/ultra_dm_conversation_extractor_2025.py" ]
+
+  app:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+    ports:
+      - "8080:8080"
+      - "3000:3000"
+    environment:
+      - POSTGRES_HOST=db
+      - REDIS_HOST=redis
+    depends_on:
+      - db
+      - redis
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
 
 # Named volumes for data persistence
 volumes:
   pgdata:
+
 
 networks:
   ignet:

@@ -46,7 +46,7 @@
   },
   "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
-  "terminal.integrated.scrollback": 1000,
+  "terminal.integrated.scrollback": 10000,
   "git.autorefresh": false,
   "git.decorations.enabled": false,
   "telemetry.telemetryLevel": "off",
@@ -59,5 +59,9 @@
     "*test.py"
   ],
   "python.testing.pytestEnabled": false,
-  "python.testing.unittestEnabled": true
+  "python.testing.unittestEnabled": true,
+  "editor.formatOnSave": true,
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.formatting.provider": "black"
 }
