@@ -28,17 +28,16 @@ def show_target_profiles():
         print("\033[1;34m📊 AVAILABLE TARGET PROFILES:\033[0m")
         print("-" * 40)
         
-        cursor.execute("SELECT target_name, emails, phones FROM deep_profiles")
+        cursor.execute("SELECT full_name, bio, location FROM deep_profiles")
         profiles = cursor.fetchall()
         
-        for i, (name, emails, phones) in enumerate(profiles, 1):
+        for i, (name, bio, location) in enumerate(profiles, 1):
             print(f"\033[1;32m{i}. Target: {name}\033[0m")
-            if emails:
-                email_list = emails.split(',')[:2]  # Show first 2 emails
-                print(f"   📧 Emails: {', '.join(email_list)}")
-            if phones:
-                phone_list = phones.split(',')[:2]  # Show first 2 phones
-                print(f"   📱 Phones: {', '.join(phone_list)}")
+            if bio:
+                bio_preview = bio[:50] + "..." if len(bio) > 50 else bio
+                print(f"   � Bio: {bio_preview}")
+            if location:
+                print(f"   � Location: {location}")
             print()
         
         conn.close()
