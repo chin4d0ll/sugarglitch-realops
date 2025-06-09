@@ -8,6 +8,7 @@ import json
 import os
 import glob
 
+
 def show_data_summary():
     print("🎯 SIMPLE DATA SUMMARY")
     print("=" * 50)
