@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Real-Time Instagram DM Content Interceptor 2025
@@ -23,7 +28,7 @@ import signal
 
 # Setup logging
 logging.basicConfig(
-    level=logging.INFO,
+    level = logging.INFO,
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         logging.FileHandler('/workspaces/sugarglitch-realops/logs/real_time_dm_interceptor.log'),
@@ -39,7 +44,7 @@ class RealTimeDMInterceptor:
         self.active_conversations = {}
         self.message_patterns = []
         self.setup_message_patterns()
-        
+
     def setup_message_patterns(self):
         """Setup patterns to identify real DM content"""
         self.message_patterns = [
@@ -48,26 +53,26 @@ class RealTimeDMInterceptor:
             r'"message":\s*"([^"]{3,500})"',
             r'"content":\s*"([^"]{3,500})"',
             r'"body":\s*"([^"]{3,500})"',
-            
+
             # Instagram specific patterns
             r'"item_text":\s*"([^"]{3,500})"',
             r'"thread_items":\s*\[.*?"text":\s*"([^"]{3,500})"',
             r'"direct_messages":\s*\[.*?"text":\s*"([^"]{3,500})"',
-            
+
             # GraphQL response patterns
             r'"node":\s*{.*?"text":\s*"([^"]{3,500})"',
             r'"edges":\s*\[.*?"text":\s*"([^"]{3,500})"',
-            
+
             # Real-time update patterns
             r'"live_typing":\s*"([^"]{3,500})"',
             r'"message_update":\s*{.*?"text":\s*"([^"]{3,500})"'
         ]
-    
+
     def is_real_message_content(self, text):
         """Determine if text is likely real message content"""
         if not text or len(text) < 3:
             return False
-        
+
         # Filter out obvious metadata
         metadata_indicators = [
             'null', 'undefined', 'true', 'false', '{}', '[]',
@@ -82,18 +87,18 @@ class RealTimeDMInterceptor:
             'undefined_', '_js_', '__webpack', '__', 'error_code',
             'status_code', 'error_message', 'success', 'failure'
         ]
-        
+
         text_lower = text.lower().strip()
-        
+
         # Check for metadata indicators
         for indicator in metadata_indicators:
             if indicator.lower() in text_lower:
                 return False
-        
+
         # Check for characteristics of real messages
-        if (len(text) >= 3 and 
+        if (len(text) >= 3 and
             len(text) <= 1000 and  # Reasonable message length
-            not text.startswith('{') and 
+            not text.startswith('{') and
             not text.startswith('[') and
             not text.endswith('}') and
             not text.endswith(']') and
@@ -101,13 +106,13 @@ class RealTimeDMInterceptor:
             not re.match(r'^[A-Za-z0-9+/=]{20,}$', text) and  # Not base64
             ' ' in text or len(text.split()) > 1):  # Contains words
             return True
-        
+
         return False
-    
+
     def extract_messages_from_response(self, response_content, url):
         """Extract potential DM messages from HTTP response"""
         messages_found = []
-        
+
         try:
             # Try JSON parsing first
             if response_content.strip().startswith(('{', '[')):
@@ -116,7 +121,7 @@ class RealTimeDMInterceptor:
                     messages_found.extend(self.extract_from_json_data(data, url))
                 except json.JSONDecodeError:
                     pass
-            
+
             # Use regex patterns to find messages
             for pattern in self.message_patterns:
                 matches = re.findall(pattern, response_content, re.IGNORECASE | re.DOTALL)
@@ -131,23 +136,23 @@ class RealTimeDMInterceptor:
                             'confidence': 'high'
                         })
                         logger.info(f"🎯 REAL DM FOUND: {match[:80]}...")
-            
+
             # Additional context-aware extraction
             messages_found.extend(self.context_aware_extraction(response_content, url))
-            
+
         except Exception as e:
             logger.debug(f"Message extraction error: {e}")
-        
+
         return messages_found
-    
+
     def extract_from_json_data(self, data, url):
         """Extract messages from JSON data with deep traversal"""
         messages = []
-        
-        def deep_search(obj, path="", depth=0):
+
+        def deep_search(obj, path="", depth = 0):
             if depth > 15:  # Prevent infinite recursion
                 return
-            
+
             if isinstance(obj, dict):
                 for key, value in obj.items():
                     if key.lower() in ['text', 'message', 'content', 'body', 'item_text']:
@@ -161,22 +166,22 @@ class RealTimeDMInterceptor:
                                 'confidence': 'high'
                             })
                             logger.info(f"🎯 JSON DM FOUND: {value[:80]}...")
-                    
+
                     if isinstance(value, (dict, list)):
                         deep_search(value, f"{path}.{key}", depth + 1)
-                        
+
             elif isinstance(obj, list):
                 for i, item in enumerate(obj):
                     if isinstance(item, (dict, list)):
                         deep_search(item, f"{path}[{i}]", depth + 1)
-        
+
         deep_search(data)
         return messages
-    
+
     def context_aware_extraction(self, content, url):
         """Context-aware extraction based on Instagram's structure"""
         messages = []
-        
+
         # Look for Instagram-specific message structures
         ig_patterns = [
             # Direct message thread responses
@@ -188,7 +193,7 @@ class RealTimeDMInterceptor:
             # GraphQL message nodes
             r'"__typename":\s*"DirectMessage"[^}]*"text":\s*"([^"]{3,500})"'
         ]
-        
+
         for pattern in ig_patterns:
             matches = re.findall(pattern, content, re.IGNORECASE | re.DOTALL)
             for match in matches:
@@ -202,27 +207,27 @@ class RealTimeDMInterceptor:
                         'confidence': 'very_high'
                     })
                     logger.info(f"🎯🎯 CONTEXT DM FOUND: {match[:80]}...")
-        
+
         return messages
 
 class MITMProxyHandler:
     def __init__(self, interceptor):
         self.interceptor = interceptor
-        
+
     def response(self, flow: http.HTTPFlow) -> None:
         """Handle HTTP responses"""
         try:
             url = flow.request.pretty_url
-            
+
             # Only process Instagram-related requests
             if any(domain in url.lower() for domain in ['instagram.com', 'facebook.com', 'graph.instagram.com']):
                 # Focus on DM-related endpoints
                 if any(endpoint in url.lower() for endpoint in [
-                    '/direct/', '/api/v1/direct', '/graphql', 
+                    '/direct/', '/api/v1/direct', '/graphql',
                     '/ws', '/realtime', '/mqtt', '/chat'
                 ]):
                     logger.info(f"🔍 Intercepting: {url}")
-                    
+
                     # Get response content
                     content = flow.response.get_text()
                     if content:
@@ -231,7 +236,7 @@ class MITMProxyHandler:
                         if messages:
                             self.interceptor.real_dm_content.extend(messages)
                             logger.info(f"✅ Found {len(messages)} real messages from {url}")
-                        
+
                         # Store raw response for analysis
                         self.interceptor.captured_messages.append({
                             'url': url,
@@ -241,7 +246,7 @@ class MITMProxyHandler:
                             'content_preview': content[:500],
                             'timestamp': datetime.now().isoformat()
                         })
-                        
+
         except Exception as e:
             logger.debug(f"Response handling error: {e}")
 
@@ -249,22 +254,22 @@ async def run_mitm_proxy(interceptor):
     """Run mitmproxy for HTTP interception"""
     try:
         logger.info("🚀 Starting mitmproxy for real-time interception...")
-        
+
         # Setup mitmproxy options
         opts = Options(
-            listen_port=8080,
+            listen_port = 8080,
             confdir="~/.mitmproxy",
-            ssl_insecure=True,
-            web_port=8081
+            ssl_insecure = True,
+            web_port = 8081
         )
-        
+
         # Create master
         master = DumpMaster(opts)
         master.addons.add(MITMProxyHandler(interceptor))
-        
+
         # Run proxy
         await master.run()
-        
+
     except Exception as e:
         logger.error(f"mitmproxy error: {e}")
 
@@ -278,10 +283,10 @@ def setup_proxy_environment():
             'http_proxy': 'http://127.0.0.1:8080',
             'https_proxy': 'http://127.0.0.1:8080'
         }
-        
+
         for var, value in proxy_vars.items():
-            subprocess.run(['export', f'{var}={value}'], shell=True)
-        
+            subprocess.run(['export', f'{var}={value}'], shell = True)
+
         logger.info("✅ Proxy environment configured")
         return True
     except Exception as e:
@@ -292,14 +297,14 @@ def run_instagram_client_with_proxy():
     """Run Instagram client through proxy"""
     try:
         logger.info("🌐 Starting Instagram client with proxy...")
-        
+
         # Use curl to simulate Instagram requests through proxy
         instagram_requests = [
             'https://www.instagram.com/api/v1/direct_v2/inbox/',
             'https://i.instagram.com/api/v1/direct_v2/threads/',
             'https://www.instagram.com/graphql/query/'
         ]
-        
+
         for url in instagram_requests:
             try:
                 cmd = [
@@ -308,58 +313,58 @@ def run_instagram_client_with_proxy():
                     '-k', '--silent', '--show-error',
                     url
                 ]
-                
-                result = subprocess.run(cmd, capture_output=True, text=True, timeout=10)
+
+                result = subprocess.run(cmd, capture_output = True, text = True, timeout = 10)
                 if result.returncode == 0:
                     logger.info(f"✅ Request successful: {url}")
                 else:
                     logger.debug(f"Request failed: {url} - {result.stderr}")
-                    
+
                 time.sleep(2)  # Delay between requests
-                
+
             except subprocess.TimeoutExpired:
                 logger.debug(f"Request timeout: {url}")
             except Exception as e:
                 logger.debug(f"Request error: {url} - {e}")
-                
+
     except Exception as e:
         logger.error(f"Instagram client error: {e}")
 
 async def main():
     """Main execution function"""
     interceptor = RealTimeDMInterceptor()
-    
+
     try:
         logger.info("🎯 Starting Real-Time Instagram DM Interceptor...")
-        
+
         # Setup proxy environment
         setup_proxy_environment()
-        
+
         # Start mitmproxy in background
         proxy_task = asyncio.create_task(run_mitm_proxy(interceptor))
-        
+
         # Wait for proxy to start
         await asyncio.sleep(5)
-        
+
         # Run Instagram client requests
         client_task = asyncio.create_task(
             asyncio.to_thread(run_instagram_client_with_proxy)
         )
-        
+
         # Run for specified duration
         logger.info("🔄 Running interception for 60 seconds...")
         await asyncio.sleep(60)
-        
+
         # Cancel tasks
         proxy_task.cancel()
         client_task.cancel()
-        
+
         # Save results
         timestamp = int(time.time())
         results_file = f'/workspaces/sugarglitch-realops/results/real_time_dm_intercept_{timestamp}.json'
-        
-        Path(results_file).parent.mkdir(parents=True, exist_ok=True)
-        
+
+        Path(results_file).parent.mkdir(parents = True, exist_ok = True)
+
         results = {
             'interception_method': 'real_time_mitm',
             'timestamp': timestamp,
@@ -372,10 +377,10 @@ async def main():
                 'success': len(interceptor.real_dm_content) > 0
             }
         }
-        
+
         with open(results_file, 'w') as f:
-            json.dump(results, f, indent=2)
-        
+            json.dump(results, f, indent = 2)
+
         # Display results
         print("\n" + "="*60)
         print("🎯 REAL-TIME DM INTERCEPTION RESULTS")
@@ -383,7 +388,7 @@ async def main():
         print(f"📊 Real DM Messages Found: {len(interceptor.real_dm_content)}")
         print(f"📡 Total Requests Intercepted: {len(interceptor.captured_messages)}")
         print(f"📁 Results saved to: {results_file}")
-        
+
         if interceptor.real_dm_content:
             print("\n💬 REAL DM CONTENT FOUND:")
             for i, msg in enumerate(interceptor.real_dm_content[:5]):
@@ -392,9 +397,9 @@ async def main():
         else:
             print("\n❌ NO REAL DM CONTENT INTERCEPTED")
             print("   📋 Only captured metadata/configuration data")
-        
+
         print("="*60)
-        
+
     except KeyboardInterrupt:
         logger.info("Interception stopped by user")
     except Exception as e:

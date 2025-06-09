@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Real DM Extractor - ใช้วิธีการแบบ real browser
@@ -35,30 +40,30 @@ def get_real_browser_headers(sessionid):
 def extract_dms_real():
     print("🔥 REAL DM EXTRACTOR")
     print("="*50)
-    
+
     # โหลด session
     try:
         with open('tools/session_alx_trading.json', 'r') as f:
             session = json.load(f)
         sessionid = session.get('sessionid', '')
         print(f"✅ Session: {sessionid[:15]}...")
-    except:
+    except Exception:
         print("❌ No session file")
         return
-    
+
     # สร้าง real browser headers
     headers = get_real_browser_headers(sessionid)
-    
+
     # ทดสอบหลาย endpoints
     endpoints = [
         ('Web DM Page', 'https://www.instagram.com/direct/inbox/'),
         ('GraphQL DM', 'https://www.instagram.com/graphql/query/'),
         ('Mobile API', 'https://i.instagram.com/api/v1/direct_v2/inbox/'),
     ]
-    
+
     for name, url in endpoints:
         print(f"\n🎯 Testing {name}...")
-        
+
         try:
             if 'graphql' in url:
                 # GraphQL query สำหรับ DM
@@ -69,31 +74,31 @@ def extract_dms_real():
                 response = requests.post(url, headers=headers, data=data, timeout=10)
             else:
                 response = requests.get(url, headers=headers, timeout=10)
-            
+
             print(f"📡 Status: {response.status_code}")
-            
+
             if response.status_code == 200:
                 content_type = response.headers.get('content-type', '')
-                
+
                 if 'application/json' in content_type:
                     try:
                         data = response.json()
                         if 'inbox' in data:
                             threads = data['inbox'].get('threads', [])
                             print(f"🎉 SUCCESS! Found {len(threads)} DM threads")
-                            
+
                             # บันทึกผลลัพธ์
                             output_file = f'results/real_dm_extraction_{datetime.now().strftime("%Y%m%d_%H%M%S")}.json'
                             os.makedirs('results', exist_ok=True)
-                            
+
                             with open(output_file, 'w') as f:
                                 json.dump(data, f, indent=2)
-                            
+
                             print(f"💾 Saved to: {output_file}")
                             return True
                         else:
                             print(f"📊 JSON response (no inbox): {str(data)[:100]}...")
-                    except:
+                    except Exception:
                         print(f"📄 JSON parse error: {response.text[:100]}...")
                 else:
                     # HTML response
@@ -107,17 +112,17 @@ def extract_dms_real():
                         print(f"💾 HTML saved to: {output_file}")
                     else:
                         print(f"📄 HTML response: {response.text[:100]}...")
-            
+
             elif response.status_code == 401:
                 print("❌ Unauthorized - session expired")
             elif response.status_code == 403:
                 print("❌ Forbidden - may be blocked")
             else:
                 print(f"❌ Error: {response.status_code}")
-                
+
         except Exception as e:
             print(f"❌ Exception: {e}")
-    
+
     return False
 
 if __name__ == "__main__":

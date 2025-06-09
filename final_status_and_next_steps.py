@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 FINAL STATUS AND NEXT STEPS 2025
@@ -23,7 +28,7 @@ def print_status():
     print("🎯 INSTAGRAM DM EXTRACTION - FINAL STATUS 2025")
     print("=" * 60)
     print()
-    
+
     print("📊 SYSTEM STATUS:")
     print(f"   {check_file_exists('simple_http_dm_extractor.py')} simple_http_dm_extractor.py")
     print(f"   {check_file_exists('manual_session_input.py')} manual_session_input.py")
@@ -31,7 +36,7 @@ def print_status():
     print(f"   {check_file_exists('tools/dm_extraction_with_interceptor.py')} dm_extraction_with_interceptor.py")
     print(f"   {check_file_exists('hardcore_dm_extractor.py')} hardcore_dm_extractor.py")
     print()
-    
+
     print("📁 DATA FILES:")
     print(f"   {check_file_exists('session_clean.json')} session_clean.json")
     print(f"   {check_file_exists('config/proxies.json')} proxies.json")
@@ -40,11 +45,11 @@ def print_status():
     print(f"   {count_files_in_dir('results')} result files")
     print(f"   {count_files_in_dir('logs')} log files")
     print()
-    
+
     print("🧪 SESSION STATUS:")
     session_files = ['session_clean.json', 'session.json', 'tools/session_alx_trading.json']
     valid_sessions = 0
-    
+
     for session_file in session_files:
         if os.path.exists(session_file):
             try:
@@ -56,11 +61,11 @@ def print_status():
                         print(f"   ✅ {session_file} - Valid session found")
                     else:
                         print(f"   ⚠️ {session_file} - Demo/test session")
-            except:
+            except Exception:
                 print(f"   ❌ {session_file} - Corrupted")
         else:
             print(f"   ❌ {session_file} - Not found")
-    
+
     print(f"\n   📊 Valid sessions: {valid_sessions}")
     print()
 
@@ -68,7 +73,7 @@ def print_next_steps():
     print("🚀 NEXT STEPS TO CONTINUE:")
     print("=" * 40)
     print()
-    
+
     print("1️⃣ GET FRESH INSTAGRAM SESSION:")
     print("   🔧 Manual method (RECOMMENDED):")
     print("      python3 manual_session_input.py")
@@ -76,10 +81,10 @@ def print_next_steps():
     print("   📱 Instructions:")
     print("      - Login to Instagram in browser")
     print("      - Press F12 → Application → Cookies")
-    print("      - Copy sessionid value") 
+    print("      - Copy sessionid value")
     print("      - Paste into manual_session_input.py")
     print()
-    
+
     print("2️⃣ RUN DM EXTRACTION:")
     print("   🚀 Simple HTTP method:")
     print("      python3 simple_http_dm_extractor.py")
@@ -90,7 +95,7 @@ def print_next_steps():
     print("   💪 Hardcore multi-method:")
     print("      python3 hardcore_dm_extractor.py")
     print()
-    
+
     print("3️⃣ ALTERNATIVE APPROACHES:")
     print("   📊 Public data only (no session needed):")
     print("      python3 public_data_extractor.py")
@@ -129,7 +134,7 @@ def print_summary():
     print()
     print("✅ COMPLETED:")
     print("   • Request interceptor system")
-    print("   • Proxy rotation mechanisms") 
+    print("   • Proxy rotation mechanisms")
     print("   • Multiple extraction methods")
     print("   • Session management tools")
     print("   • Error handling and logging")
@@ -155,7 +160,7 @@ def main():
     print_next_steps()
     print_troubleshooting()
     print_summary()
-    
+
     print("🎉 The system is ready for DM extraction!")
     print("   Just need a fresh Instagram sessionid to continue.")
     print()

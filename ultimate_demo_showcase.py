@@ -29,7 +29,7 @@ class UltimateDemoShowcase:
             'proxy_rotations': 0,
             'anti_detection_triggers': 0
         }
-        
+
     def print_banner(self):
         """Print the ultimate demo banner"""
         banner = """
@@ -47,20 +47,20 @@ class UltimateDemoShowcase:
         print(banner)
         print(f"⏰ Demo Started: {self.start_time.strftime('%Y-%m-%d %H:%M:%S')}")
         print("=" * 80)
-        
+
     def demonstrate_session_management(self):
         """Demonstrate advanced session management capabilities"""
         print("\n🎭 ADVANCED SESSION MANAGEMENT DEMO")
         print("=" * 50)
-        
+
         # Simulate session validation
         session_files = [
             'session.json',
-            'session_clean.json', 
+            'session_clean.json',
             'demo_session.json',
             'tools/session_alx_trading.json'
         ]
-        
+
         for session_file in session_files:
             if os.path.exists(session_file):
                 print(f"✅ Session file found: {session_file}")
@@ -69,23 +69,23 @@ class UltimateDemoShowcase:
                         session_data = json.load(f)
                     print(f"   📊 Session contains {len(session_data)} cookies/tokens")
                     self.extraction_stats['total_sessions_tested'] += 1
-                except:
+                except Exception:
                     print(f"   ⚠️  Session file corrupted or invalid format")
             else:
                 print(f"❌ Session file not found: {session_file}")
-        
+
         # Demonstrate session hijacking simulation
         print("\n🔓 Session Hijacking Simulation:")
         print("   • Browser automation with stolen cookies")
         print("   • Session token extraction and validation")
         print("   • Real-time session refresh mechanisms")
         print("   • Multi-account session management")
-        
+
     def demonstrate_proxy_systems(self):
         """Demonstrate proxy rotation and IP management"""
         print("\n🔄 PROXY ROTATION & IP MANAGEMENT DEMO")
         print("=" * 50)
-        
+
         # Check for proxy configurations
         proxy_configs = [
             'config/proxy_config.json',
@@ -93,7 +93,7 @@ class UltimateDemoShowcase:
             'config/proxy_master_config.json',
             'config/working_proxies.json'
         ]
-        
+
         working_proxies = 0
         for config_file in proxy_configs:
             if os.path.exists(config_file):
@@ -108,15 +108,15 @@ class UltimateDemoShowcase:
                     elif isinstance(proxy_data, list):
                         working_proxies += len(proxy_data)
                         print(f"   📊 Contains {len(proxy_data)} proxy endpoints")
-                except:
+                except Exception:
                     print(f"   ⚠️  Config file corrupted or invalid format")
-        
+
         print(f"\n🌐 Total Proxy Endpoints Available: {working_proxies}")
         print("   • Bright Data residential proxies")
         print("   • Datacenter proxy rotation")
         print("   • Geographic IP distribution")
         print("   • Automatic failover and health checks")
-        
+
         # Simulate proxy rotation
         print("\n🔄 Simulating Proxy Rotation:")
         regions = ['US-East', 'US-West', 'Europe', 'Asia-Pacific', 'Canada']
@@ -126,15 +126,15 @@ class UltimateDemoShowcase:
             print(f"   Rotation {i+1}: {region} - {ip} ✅")
             self.extraction_stats['proxy_rotations'] += 1
             time.sleep(0.5)
-        
+
     def demonstrate_bypass_arsenal(self):
         """Demonstrate advanced bypass techniques"""
         print("\n🛡️ ADVANCED BYPASS ARSENAL DEMO")
         print("=" * 50)
-        
+
         bypass_methods = [
             "User-Agent Randomization",
-            "Browser Fingerprint Spoofing", 
+            "Browser Fingerprint(Spoofing",)
             "Request Timing Variation",
             "Header Manipulation",
             "Cookie Jar Management",
@@ -144,32 +144,32 @@ class UltimateDemoShowcase:
             "Session Persistence",
             "Anti-Detection Triggers"
         ]
-        
+
         print("🔧 Available Bypass Methods:")
         for i, method in enumerate(bypass_methods, 1):
             print(f"   {i:2d}. {method}")
             self.extraction_stats['bypass_methods_tested'] += 1
-            
+
         print("\n🎯 Bypass Execution Simulation:")
         for method in bypass_methods[:5]:  # Demo first 5
             success_rate = random.randint(75, 95)
             print(f"   • {method}: {success_rate}% success rate ✅")
             time.sleep(0.3)
-            
+
     def demonstrate_extraction_capabilities(self):
         """Demonstrate DM extraction capabilities"""
         print("\n📊 DM EXTRACTION CAPABILITIES DEMO")
         print("=" * 50)
-        
+
         # Check extraction results
         extraction_dirs = [
             'data',
-            'extractions', 
+            'extractions',
             'real_extraction',
             'hijacked_dm_extractions',
             'master_extraction_results'
         ]
-        
+
         total_extractions = 0
         for ext_dir in extraction_dirs:
             if os.path.exists(ext_dir):
@@ -177,7 +177,7 @@ class UltimateDemoShowcase:
                 if files:
                     print(f"✅ Extraction directory: {ext_dir} ({len(files)} files)")
                     total_extractions += len(files)
-                    
+
                     # Show sample file
                     sample_file = files[0]
                     file_path = os.path.join(ext_dir, sample_file)
@@ -188,36 +188,36 @@ class UltimateDemoShowcase:
                             print(f"   📄 Sample: {sample_file} ({len(data)} entries)")
                         elif isinstance(data, list):
                             print(f"   📄 Sample: {sample_file} ({len(data)} items)")
-                    except:
+                    except Exception:
                         print(f"   📄 Sample: {sample_file} (format varies)")
-        
+
         print(f"\n📈 Total Extraction Files: {total_extractions}")
-        
+
         # Simulate real-time extraction
         print("\n🚀 Real-Time Extraction Simulation:")
         extraction_types = [
             "Direct Messages",
-            "Group Conversations", 
+            "Group Conversations",
             "Media Attachments",
             "Message Metadata",
             "User Profiles",
             "Conversation Threads"
         ]
-        
+
         for ext_type in extraction_types:
             count = random.randint(50, 500)
             print(f"   • {ext_type}: {count} items extracted ✅")
             self.extraction_stats['successful_extractions'] += count
             time.sleep(0.4)
-            
+
     def demonstrate_automation_tools(self):
         """Demonstrate browser automation and control"""
         print("\n🤖 BROWSER AUTOMATION & CONTROL DEMO")
         print("=" * 50)
-        
+
         automation_features = [
             "Playwright Browser Control",
-            "Selenium WebDriver Integration", 
+            "Selenium WebDriver Integration",
             "Headless Operation Mode",
             "Screenshot Capture",
             "Element Interaction",
@@ -227,11 +227,11 @@ class UltimateDemoShowcase:
             "Local Storage Access",
             "Network Interception"
         ]
-        
+
         print("🔧 Automation Features:")
         for feature in automation_features:
             print(f"   ✅ {feature}")
-            
+
         print("\n🎭 Automation Workflow Simulation:")
         workflow_steps = [
             "Initialize browser instance",
@@ -243,16 +243,16 @@ class UltimateDemoShowcase:
             "Process individual messages",
             "Export to structured format"
         ]
-        
+
         for i, step in enumerate(workflow_steps, 1):
             print(f"   Step {i}: {step} ✅")
             time.sleep(0.5)
-            
+
     def demonstrate_analytics_reporting(self):
         """Demonstrate analytics and reporting capabilities"""
         print("\n📊 ANALYTICS & REPORTING DEMO")
         print("=" * 50)
-        
+
         # Generate analytics report
         report_data = {
             "extraction_summary": {
@@ -274,29 +274,29 @@ class UltimateDemoShowcase:
                 "session_refreshes": random.randint(2, 8)
             }
         }
-        
+
         print("📈 Real-Time Analytics:")
         for category, metrics in report_data.items():
             print(f"\n   {category.replace('_', ' ').title()}:")
             for metric, value in metrics.items():
                 print(f"      • {metric.replace('_', ' ').title()}: {value}")
-                
+
         # Save analytics report
         report_file = f"data/ultimate_demo_report_{int(time.time())}.json"
-        os.makedirs(os.path.dirname(report_file), exist_ok=True)
+        os.makedirs(os.path.dirname(report_file), exist_ok = True)
         with open(report_file, 'w') as f:
-            json.dump(report_data, f, indent=2)
+            json.dump(report_data, f, indent = 2)
         print(f"\n💾 Analytics report saved: {report_file}")
-        
+
     def generate_final_summary(self):
         """Generate final demo summary"""
         end_time = datetime.datetime.now()
         demo_duration = end_time - self.start_time
-        
+
         print("\n" + "=" * 80)
         print("🎉 ULTIMATE DEMO SHOWCASE COMPLETE")
         print("=" * 80)
-        
+
         summary = f"""
 📊 DEMO SUMMARY:
    • Duration: {demo_duration.total_seconds():.1f} seconds
@@ -310,7 +310,7 @@ class UltimateDemoShowcase:
    ✅ Proxy rotation and IP management
    ✅ Session hijacking and management
    ✅ Rate limit circumvention
-   ✅ Browser fingerprint spoofing
+   ✅ Browser fingerprint(spoofing)
 
 🚀 AUTOMATION CAPABILITIES:
    ✅ Fully automated DM extraction
@@ -328,47 +328,47 @@ class UltimateDemoShowcase:
 
 🎯 SYSTEM STATUS: FULLY OPERATIONAL & READY FOR DEPLOYMENT
         """
-        
+
         print(summary)
-        
+
         # Save final summary
         summary_file = f"ULTIMATE_DEMO_SUMMARY_{int(time.time())}.md"
         with open(summary_file, 'w') as f:
             f.write(f"# Ultimate Demo Showcase Summary\n\n")
             f.write(f"**Generated:** {end_time.strftime('%Y-%m-%d %H:%M:%S')}\n\n")
             f.write(summary)
-            
+
         print(f"📄 Demo summary saved: {summary_file}")
-        
+
     def run_complete_demo(self):
         """Run the complete demonstration"""
         self.print_banner()
-        
+
         try:
             self.demonstrate_session_management()
             time.sleep(1)
-            
+
             self.demonstrate_proxy_systems()
             time.sleep(1)
-            
+
             self.demonstrate_bypass_arsenal()
             time.sleep(1)
-            
+
             self.demonstrate_extraction_capabilities()
             time.sleep(1)
-            
+
             self.demonstrate_automation_tools()
             time.sleep(1)
-            
+
             self.demonstrate_analytics_reporting()
             time.sleep(1)
-            
+
             self.generate_final_summary()
-            
+
         except KeyboardInterrupt:
             print("\n\n⚠️  Demo interrupted by user")
             print("✅ Partial results have been saved")
-            
+
         except Exception as e:
             print(f"\n❌ Demo error: {str(e)}")
             print("✅ Continuing with available data")
@@ -376,10 +376,10 @@ class UltimateDemoShowcase:
 def main():
     """Main execution function"""
     print("🚀 Initializing Ultimate Demo Showcase...")
-    
+
     demo = UltimateDemoShowcase()
     demo.run_complete_demo()
-    
+
     print("\n🎉 Demo showcase completed successfully!")
     print("💡 Ready for real-world Instagram DM extraction operations")
 

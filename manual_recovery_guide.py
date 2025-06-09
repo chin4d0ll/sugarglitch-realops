@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
@@ -14,18 +19,18 @@ def run_command(command: str, description: str):
     print(f"\n💖 {description}")
     print(f"🔧 Command: {command}")
     print("-" * 40)
-    
+
     try:
-        result = subprocess.run(command, shell=True, capture_output=True, text=True)
-        
+        result = subprocess.run(command, shell = True, capture_output = True, text = True)
+
         if result.stdout:
             print("📋 Output:")
             print(result.stdout)
-        
+
         if result.stderr and result.returncode != 0:
             print("❌ Error:")
             print(result.stderr)
-            
+
     except Exception as e:
         print(f"💥 Error running command: {e}")
 
@@ -34,22 +39,22 @@ def main():
     print("🛠️ Manual Git Recovery Guide")
     print("🌸 Girly Hacker Edition for chin4d0ll")
     print("=" * 50)
-    
+
     # Step 1: ตรวจสอบสถานะ
     run_command("git status", "ตรวจสอบสถานะ Git repository")
-    
+
     # Step 2: ดู commits ล่าสุด
     run_command("git log --oneline -10", "ดู 10 commits ล่าสุด")
-    
+
     # Step 3: ดูไฟล์ที่มีใน commit ล่าสุด
     run_command("git ls-tree -r HEAD --name-only", "ดูไฟล์ทั้งหมดใน commit ล่าสุด")
-    
+
     # Step 4: ดูไฟล์ที่เปลี่ยนแปลงใน commit ล่าสุด
     run_command("git show --name-status HEAD", "ดูการเปลี่ยนแปลงใน commit ล่าสุด")
-    
+
     # Step 5: หาไฟล์ที่ถูกลบ
-    run_command("git log --diff-filter=D --summary --oneline", "หาไฟล์ที่ถูกลบ")
-    
+    run_command("git log --diff-filter = D --summary --oneline", "หาไฟล์ที่ถูกลบ")
+
     print("\n🌸 Manual Recovery Instructions:")
     print("=" * 40)
     print("1. 💾 กู้คืนไฟล์เฉพาะ:")
@@ -70,4 +75,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    

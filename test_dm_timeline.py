@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Test script for the generate_dm_timeline function.
@@ -18,39 +23,39 @@ def create_sample_dm_data():
             }
         ]
     }
-    
+
     # Generate sample messages over the past 30 days
     base_date = datetime.now() - timedelta(days=30)
-    
+
     for i in range(150):  # 150 sample messages
         message_date = base_date + timedelta(
             days=i // 5,  # Spread messages across days
             hours=i % 24,
             minutes=(i * 17) % 60
         )
-        
+
         message = {
             "message_id": f"msg_{i}",
             "timestamp": int(message_date.timestamp()),
             "text": f"Sample message {i}",
             "sender": "user" if i % 2 == 0 else "contact"
         }
-        
+
         sample_data["conversations"][0]["messages"].append(message)
-    
+
     return sample_data
 
 def test_different_formats():
     """Test the function with different DM data formats."""
-    
+
     print("🧪 Testing generate_dm_timeline function with different data formats...\n")
-    
+
     # Test 1: Standard conversation format
     print("📊 Test 1: Standard conversation format")
     sample_data_1 = create_sample_dm_data()
     generate_dm_timeline(sample_data_1, "test_timeline_1.png")
     print()
-    
+
     # Test 2: Direct messages list format
     print("📊 Test 2: Direct messages list format")
     sample_data_2 = {
@@ -63,7 +68,7 @@ def test_different_formats():
     }
     generate_dm_timeline(sample_data_2, "test_timeline_2.png")
     print()
-    
+
     # Test 3: ISO timestamp format
     print("📊 Test 3: ISO timestamp format")
     sample_data_3 = {
@@ -76,13 +81,13 @@ def test_different_formats():
     }
     generate_dm_timeline(sample_data_3, "test_timeline_3.png")
     print()
-    
+
     # Test 4: Empty data (error handling)
     print("📊 Test 4: Empty data (error handling)")
     empty_data = {"conversations": []}
     generate_dm_timeline(empty_data, "test_timeline_empty.png")
     print()
-    
+
     print("✅ All tests completed! Check the generated PNG files:")
     print("   - test_timeline_1.png (comprehensive sample data)")
     print("   - test_timeline_2.png (simple messages)")

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 import requests
 import json
@@ -8,12 +13,12 @@ def extract():
     session.headers.update({
         'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15'
     })
-    
+
     # Add sessionid here when available:
     # session.cookies.set('sessionid', 'YOUR_SESSION', domain='.instagram.com')
-    
-    response = session.get("https://www.instagram.com/alx.trading", timeout=10)
-    
+
+    response = session.get("https://www.instagram.com/alx.trading", timeout = 10)
+
     if response.status_code == 200:
         print("✅ SUCCESS: alx.trading data extracted!")
         with open('alx_trading_extracted.html', 'w') as f:

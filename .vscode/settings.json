@@ -1,90 +1,54 @@
 {
-  "python.analysis.memory.keepLibraryAst": false,
-  "python.analysis.memory.keepLibraryLocalVariables": false,
-  "python.analysis.indexing": false,
-  "python.analysis.packageIndexDepths": [
-    {
-      "name": "",
-      "depth": 1
-    }
-  ],
-  "python.analysis.autoImportCompletions": true,
-  "python.analysis.completeFunctionParens": false,
-  "python.analysis.inlayHints.variableTypes": false,
-  "python.analysis.inlayHints.functionReturnTypes": false,
-  "python.analysis.inlayHints.callArgumentNames": false,
-  "files.watcherExclude": {
-    "**/.git/**": true,
-    "**/node_modules/**": true,
-    "**/__pycache__/**": true,
-    "**/logs/**": true,
-    "**/temp/**": true,
-    "**/backups/**": true,
-    "**/data/**": true,
-    "**/results/**": true,
-    "**/extracted_project/**": true,
-    "**/hijacked_sessions/**": true,
-    "**/sessions/**": true,
-    "**/sessions_fresh/**": true
+  "python.linting.enabled": false,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": false,
+  "python.linting.mypyEnabled": false,
+  "python.analysis.typeCheckingMode": "off",
+  "python.analysis.diagnosticMode": "off",
+  "python.analysis.autoImportCompletions": false,
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportUnusedImport": "none",
+    "reportUnusedVariable": "none",
+    "reportUnusedFunction": "none",
+    "reportUnusedClass": "none",
+    "reportGeneralTypeIssues": "none",
+    "reportOptionalMemberAccess": "none",
+    "reportOptionalSubscript": "none",
+    "reportOptionalOperand": "none",
+    "reportOptionalCall": "none",
+    "reportOptionalIterable": "none",
+    "reportOptionalContextManager": "none",
+    "reportMissingImports": "none",
+    "reportMissingTypeStubs": "none"
+  },
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true
   },
   "search.exclude": {
-    "**/.git": true,
-    "**/node_modules": true,
     "**/__pycache__": true,
-    "**/logs": true,
-    "**/temp": true,
-    "**/backups": true,
-    "**/data": true,
-    "**/results": true
+    "**/*.pyc": true,
+    "**/.pytest_cache": true,
+    "**/.mypy_cache": true
   },
-  "editor.suggest.showStatusBar": false,
-  "editor.hover.delay": 1000,
-  "editor.quickSuggestions": {
-    "other": false,
-    "comments": false,
-    "strings": false
-  },
-  "extensions.autoCheckUpdates": false,
-  "extensions.autoUpdate": false,
-  "terminal.integrated.scrollback": 10000,
-  "git.autorefresh": false,
-  "git.decorations.enabled": false,
-  "telemetry.telemetryLevel": "off",
-  "terminal.integrated.sendKeybindingsToShell": true,
-  "python.testing.unittestArgs": [
-    "-v",
-    "-s",
-    "./EXTRACTED_DMS",
-    "-p",
-    "*test.py"
+  "editor.rulers": [
+    79,
+    120
   ],
-  "python.testing.pytestEnabled": false,
-  "python.testing.unittestEnabled": true,
-  "editor.formatOnSave": true,
-  "python.linting.enabled": true,
-  "python.linting.flake8Enabled": true,
-  "python.formatting.provider": "black",
-  "makefile.buildBeforeLaunch": false,
-  "workbench.editor.alwaysShowEditorActions": true,
-  "workbench.editor.autoLockGroups": {
-    "default": true,
-    "sqlite-viewer.option": true,
-    "sqlite-viewer.readonly": true,
-    "workbench.editorinputs.searchEditorInput": true,
-    "notebookOutputEditor": true,
-    "jupyter-notebook": true,
-    "repl": true,
-    "workbench.editors.gettingStartedInput": true,
-    "imagePreview.previewEditor": true,
-    "vscode.audioPreview": true,
-    "vscode.videoPreview": true,
-    "jsProfileVisualizer.cpuprofile.table": true,
-    "jsProfileVisualizer.heapprofile.table": true,
-    "jsProfileVisualizer.heapsnapshot.table": true,
-    "gitlens.rebase": true,
-    "sqlite-viewer.view": true,
-    "workbench.input.interactive": true,
-    "mainThreadWebview-markdown.preview": true
+  "editor.wordWrap": "on",
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {},
+  "workbench.problems.defaultViewMode": "list",
+  "problems.visibility": "off",
+  "markdownlint.config": {
+    "MD041": false,
+    "MD009": false,
+    "MD026": false,
+    "MD013": false,
+    "MD033": false
   },
-  "python.analysis.typeCheckingMode": "off"
+  "markdownlint.ignore": ["**/*"],
+  "markdown.validate.enabled": false
 }

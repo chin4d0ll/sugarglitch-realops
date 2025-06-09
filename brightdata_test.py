@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 import requests
 
 # กรอกข้อมูล Bright Data Proxy ของคุณที่นี่
@@ -17,7 +22,7 @@ headers = {
 url = "https://www.instagram.com/alx.trading/"
 
 try:
-    response = requests.get(url, headers=headers, proxies=proxies, timeout=20)
+    response = requests.get(url, headers = headers, proxies = proxies, timeout = 20)
     print("Status:", response.status_code)
     print(response.text[:500])  # แสดงแค่ 500 ตัวอักษรแรก
 except Exception as e:

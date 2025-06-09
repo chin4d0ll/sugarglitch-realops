@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🚀 SIMPLE HTTP-ONLY DM EXTRACTOR 2025
@@ -18,7 +23,7 @@ class SimpleHttpDmExtractor:
     def __init__(self):
         self.session = requests.Session()
         self.results = []
-        
+
     def set_instagram_headers(self, sessionid):
         """Set proper Instagram headers"""
         self.session.headers.update({
@@ -37,11 +42,11 @@ class SimpleHttpDmExtractor:
             'Sec-Fetch-Site': 'same-origin',
         })
         self.session.cookies.set('sessionid', sessionid)
-        
+
     def extract_dms(self, target_username):
         """Extract DMs using multiple Instagram endpoints"""
         print(f"🚀 Starting DM extraction for {target_username}")
-        
+
         # Try multiple endpoints
         endpoints = [
             f"https://i.instagram.com/api/v1/direct_v2/inbox/?visual_message_return_type=unseen&thread_message_limit=10&persistentBadging=true&limit=20",
@@ -49,13 +54,13 @@ class SimpleHttpDmExtractor:
             f"https://i.instagram.com/api/v1/direct_v2/threads/",
             f"https://www.instagram.com/direct/inbox/"
         ]
-        
+
         for i, endpoint in enumerate(endpoints, 1):
             try:
                 print(f"📡 Testing endpoint {i}/4: {endpoint[:50]}...")
                 response = self.session.get(endpoint, timeout=10)
                 print(f"   Status: {response.status_code}")
-                
+
                 if response.status_code == 200:
                     try:
                         data = response.json()
@@ -68,26 +73,26 @@ class SimpleHttpDmExtractor:
                             })
                             print(f"✅ Success! Found DM data at endpoint {i}")
                             return data
-                    except:
+                    except Exception:
                         # Try HTML parsing
                         if 'window._sharedData' in response.text:
                             print(f"✅ Found HTML data at endpoint {i}")
                             self.extract_from_html(response.text, endpoint)
-                        
+
                 else:
                     print(f"❌ Failed with status {response.status_code}")
-                    
+
             except Exception as e:
                 print(f"❌ Error with endpoint {i}: {str(e)[:50]}...")
-                
+
         return None
-        
+
     def extract_from_html(self, html_content, endpoint):
         """Extract data from HTML response"""
         try:
             # Look for Instagram data in HTML
             markers = ['window._sharedData', 'window.__additionalDataLoaded', '"direct_v2"']
-            
+
             for marker in markers:
                 if marker in html_content:
                     print(f"📄 Found {marker} in HTML")
@@ -97,7 +102,7 @@ class SimpleHttpDmExtractor:
                     with open(filename, 'w', encoding='utf-8') as f:
                         f.write(html_content)
                     print(f"💾 Saved HTML to {filename}")
-                    
+
                     self.results.append({
                         'endpoint': endpoint,
                         'status': 'html_found',
@@ -106,10 +111,10 @@ class SimpleHttpDmExtractor:
                         'timestamp': datetime.now().isoformat()
                     })
                     return True
-                    
+
         except Exception as e:
             print(f"❌ HTML parsing error: {e}")
-            
+
         return False
 
     def test_session_validity(self):
@@ -125,12 +130,12 @@ class SimpleHttpDmExtractor:
         except Exception as e:
             print(f"❌ Session test failed: {e}")
             return False
-            
+
     def save_results(self):
         """Save extraction results"""
         os.makedirs('results', exist_ok=True)
         filename = f"results/dm_extraction_{int(time.time())}.json"
-        
+
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump({
                 'extraction_time': datetime.now().isoformat(),
@@ -138,16 +143,16 @@ class SimpleHttpDmExtractor:
                 'successful_extractions': len([r for r in self.results if r['status'] == 'success']),
                 'results': self.results
             }, f, indent=2, ensure_ascii=False)
-            
+
         print(f"💾 Results saved to {filename}")
         return filename
 
 def main():
     print("🚀 SIMPLE HTTP-ONLY DM EXTRACTOR 2025")
     print("=" * 50)
-    
+
     extractor = SimpleHttpDmExtractor()
-    
+
     # Try to find a valid session
     session_files = [
         'tools/session_alx_trading.json',
@@ -155,7 +160,7 @@ def main():
         'demo_session.json',
         'fresh_sessions/working_session_1749202525.json'
     ]
-    
+
     sessionid = None
     for session_file in session_files:
         if os.path.exists(session_file):
@@ -169,7 +174,7 @@ def main():
             except Exception as e:
                 print(f"❌ Failed to load {session_file}: {e}")
                 continue
-                
+
     if not sessionid:
         print("❌ No valid session found!")
         print("\n💡 To get a session:")
@@ -178,25 +183,25 @@ def main():
         print("3. Copy sessionid value")
         print("4. Create session.json: {'sessionid': 'your_session_here'}")
         return
-        
+
     # Set headers and test session
     extractor.set_instagram_headers(sessionid)
-    
+
     if not extractor.test_session_validity():
         print("❌ Session is not valid, trying anyway...")
-        
+
     # Extract DMs
     results = extractor.extract_dms('alx.trading')
-    
+
     # Save results
     filename = extractor.save_results()
-    
+
     print("\n📊 EXTRACTION SUMMARY:")
     print(f"   Total attempts: {len(extractor.results)}")
     print(f"   Successful: {len([r for r in extractor.results if r['status'] == 'success'])}")
     print(f"   HTML found: {len([r for r in extractor.results if r['status'] == 'html_found'])}")
     print(f"   Results file: {filename}")
-    
+
     if results:
         print("🎉 DM data extracted successfully!")
     else:

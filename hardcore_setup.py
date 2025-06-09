@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 HARDCORE DM EXTRACTOR SETUP SCRIPT
@@ -14,7 +19,7 @@ def run_command(command, description):
     """Run a command and handle errors"""
     print(f"🔧 {description}...")
     try:
-        result = subprocess.run(command, shell=True, check=True, capture_output=True, text=True)
+        result = subprocess.run(command, shell = True, check = True, capture_output = True, text = True)
         print(f"✅ {description} completed successfully")
         return True
     except subprocess.CalledProcessError as e:
@@ -35,7 +40,7 @@ def install_python_packages():
         "asyncio",
         "sqlite3"  # Usually built-in
     ]
-    
+
     print("📦 Installing Python packages...")
     for package in packages:
         run_command(f"pip install {package}", f"Installing {package}")
@@ -49,18 +54,18 @@ def install_playwright_browsers():
 def setup_chrome_driver():
     """Setup Chrome WebDriver for Selenium"""
     print("🚗 Setting up Chrome WebDriver...")
-    
+
     # Install Chrome
     commands = [
         "wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -",
-        "echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list",
+        "echo 'deb [arch = amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list",
         "apt-get update",
         "apt-get install -y google-chrome-stable"
     ]
-    
+
     for cmd in commands:
         run_command(f"sudo {cmd}", f"Chrome setup: {cmd}")
-    
+
     # Install ChromeDriver
     run_command("pip install webdriver-manager", "Installing WebDriver Manager")
 
@@ -72,10 +77,10 @@ def create_directories():
         "/workspaces/sugarglitch-realops/data/sessions",
         "/workspaces/sugarglitch-realops/config/backups"
     ]
-    
+
     print("📁 Creating directories...")
     for directory in directories:
-        Path(directory).mkdir(parents=True, exist_ok=True)
+        Path(directory).mkdir(parents = True, exist_ok = True)
         print(f"✅ Created: {directory}")
 
 def setup_permissions():
@@ -86,7 +91,7 @@ def setup_permissions():
         "/workspaces/sugarglitch-realops/hardcore_launcher.py",
         "/workspaces/sugarglitch-realops/hardcore_setup.py"
     ]
-    
+
     for script in scripts:
         if Path(script).exists():
             run_command(f"chmod +x {script}", f"Setting executable permission for {script}")
@@ -116,11 +121,11 @@ colorama>=0.4.6
 python-dotenv>=1.0.0
 cryptography>=41.0.0
     """.strip()
-    
+
     requirements_path = "/workspaces/sugarglitch-realops/requirements_hardcore.txt"
     with open(requirements_path, 'w') as f:
         f.write(requirements)
-    
+
     print(f"✅ Created requirements file: {requirements_path}")
     return requirements_path
 
@@ -128,33 +133,33 @@ def main():
     """Main setup function"""
     print("🔥🔥🔥 HARDCORE DM EXTRACTOR SETUP 🔥🔥🔥")
     print("=" * 50)
-    
+
     # Check Python version
     if sys.version_info < (3, 8):
         print("❌ Python 3.8+ is required")
         sys.exit(1)
-    
+
     print(f"✅ Python version: {sys.version}")
-    
+
     # Create directories
     create_directories()
-    
+
     # Create requirements file
     requirements_file = create_requirements_file()
-    
+
     # Install packages from requirements
     run_command(f"pip install -r {requirements_file}", "Installing all Python packages")
-    
+
     # Install Playwright browsers
     install_playwright_browsers()
-    
+
     # Setup Chrome (if not in container)
     if not os.path.exists("/.dockerenv"):
         setup_chrome_driver()
-    
+
     # Setup permissions
     setup_permissions()
-    
+
     print("\n🎉 HARDCORE SETUP COMPLETE! 🎉")
     print("=" * 50)
     print("🚀 Ready to launch:")

@@ -1,88 +1,42 @@
-# SugarGlitch RealOps - Git Ignore
-
-# Environment & Secrets
-.env
-.env.local
-.env.production
-*.key
-*.pem
-secrets/
-
-# Session & Authentication
-*session*
-*cookie*
-*auth*
-*login*
-*token*
-
-# Databases
-*.db
-*.sqlite
-*.sqlite3
-databases/*.db
-
-# Logs
-logs/
-*.log
-*.log.*
-
-# Cache & Temp
+# Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
+env/
+venv/
+ENV/
 *.egg-info/
-.installed.cfg
-*.egg
-temp/
-tmp/
-.cache/
 .pytest_cache/
 
 # IDE
-.vscode/settings.json
+.vscode/settings.json.bak
 .idea/
 *.swp
 *.swo
 *~
 
+# Logs
+*.log
+logs/
+
 # OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
 
-# Media files (large)
-*.mp4
-*.avi
-*.mov
-*.mkv
-*.wav
-*.mp3
+# Hacking/Pentesting specific
+hijacked_sessions/*.json
+*.sqlite
+*.db
+session_*.json
+bypass_report_*.json
+pentest_report_*.json
+recon_results_*/
+*_comprehensive_analysis_*.txt
 
-# Backup files
+# Temporary files
+temp/
+tmp/
+*.tmp
 *.bak
-*.backup
-*.old
-
-# Sensitive data
-extractions/
-intelligence/
-private_*/
-sensitive_*/

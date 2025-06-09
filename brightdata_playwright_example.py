@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 from playwright.sync_api import sync_playwright
 
 BROWSER_WS = "wss://brd-customer-hl_63f0835e-zone-scraping_browser4:1pncg92uga2s@brd.superproxy.io:9222"

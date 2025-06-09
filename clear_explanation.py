@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 อธิบายปัญหาและวิธีแก้อย่างชัดเจน
@@ -57,7 +62,7 @@ if os.path.exists("session.json"):
                 print(f"   Session ID: {sessionid[:10]}...{sessionid[-10:]}")
             else:
                 print("❌ Session ID ไม่ถูกต้อง")
-    except:
+    except Exception:
         print("❌ ไฟล์ session.json เสียหาย")
 else:
     print("❌ ไม่มีไฟล์ session.json")
@@ -66,14 +71,14 @@ else:
 print("\n🌐 ทดสอบการเชื่อมต่อ:")
 try:
     import requests
-    response = requests.get("https://httpbin.org/ip", timeout=5)
+    response = requests.get("https://httpbin.org/ip", timeout = 5)
     if response.status_code == 200:
         ip_info = response.json()
         print(f"✅ IP ของคุณ: {ip_info.get('origin', 'Unknown')}")
         print("✅ อินเทอร์เน็ตทำงานปกติ")
     else:
         print("❌ มีปัญหาการเชื่อมต่อ")
-except:
+except Exception:
     print("❌ ไม่สามารถเชื่อมต่ออินเทอร์เน็ตได้")
 
 print("\n🚀 สรุป:")

@@ -26,7 +26,7 @@ class CTFMasterclass:
         self.alphabet = string.ascii_lowercase
         self.techniques = []
         self.arsenal = {}
-        
+
     def load_ctf_arsenal(self):
         """🎯 Load CTF techniques arsenal"""
         self.arsenal = {
@@ -38,7 +38,7 @@ class CTFMasterclass:
             'osint': self.get_osint_techniques()
         }
         return len(self.arsenal)
-    
+
     def get_crypto_techniques(self):
         """🔐 Cryptography techniques"""
         return {
@@ -47,7 +47,7 @@ class CTFMasterclass:
             'hash_analysis': self.hash_analysis,
             'xor_cipher': self.xor_operations
         }
-    
+
     def get_web_techniques(self):
         """🌐 Web exploitation techniques"""
         return {
@@ -56,7 +56,7 @@ class CTFMasterclass:
             'directory_traversal': self.directory_traversal,
             'command_injection': self.command_injection
         }
-    
+
     def get_reverse_techniques(self):
         """🔍 Reverse engineering techniques"""
         return {
@@ -64,7 +64,7 @@ class CTFMasterclass:
             'hex_analysis': self.hex_analysis,
             'binary_analysis': self.binary_analysis
         }
-    
+
     def get_pwn_techniques(self):
         """💥 PWN exploitation techniques"""
         return {
@@ -72,7 +72,7 @@ class CTFMasterclass:
             'shellcode_analysis': self.shellcode_analysis,
             'rop_chain': self.rop_analysis
         }
-    
+
     def get_forensic_techniques(self):
         """🔬 Digital forensics techniques"""
         return {
@@ -80,7 +80,7 @@ class CTFMasterclass:
             'metadata_extraction': self.metadata_extraction,
             'steganography': self.steganography_detection
         }
-    
+
     def get_osint_techniques(self):
         """🕵️ OSINT techniques"""
         return {
@@ -88,7 +88,7 @@ class CTFMasterclass:
             'domain_analysis': self.domain_analysis,
             'email_analysis': self.email_analysis
         }
-    
+
     def caesar_cipher(self, text, shift=None):
         """Caesar cipher with brute force if shift not provided"""
         if shift is not None:
@@ -111,22 +111,22 @@ class CTFMasterclass:
                         decoded += char
                 results.append(f"Shift {s:2d}: {decoded}")
             return results
-    
+
     def base64_operations(self, data):
         """Base64 encoding/decoding operations"""
         try:
             # Try to decode
             decoded = base64.b64decode(data).decode('utf-8')
             return {'decoded': decoded, 'status': 'success'}
-        except:
+        except Exception:
             # Try to encode
             encoded = base64.b64encode(data.encode()).decode()
             return {'encoded': encoded, 'status': 'success'}
-    
+
     def hash_analysis(self, hash_value):
         """Analyze hash format and properties"""
         analyses = []
-        
+
         # Detect hash type by length
         hash_len = len(hash_value)
         if hash_len == 32:
@@ -137,13 +137,13 @@ class CTFMasterclass:
             analyses.append("Likely SHA256 hash")
         elif hash_len == 128:
             analyses.append("Likely SHA512 hash")
-        
+
         # Check for common patterns
         if re.match(r'^[a-f0-9]+$', hash_value.lower()):
             analyses.append("Valid hexadecimal format")
-        
+
         return analyses
-    
+
     def xor_operations(self, data, key=None):
         """XOR operations with key or brute force"""
         if key:
@@ -161,7 +161,7 @@ class CTFMasterclass:
                 if decoded.isprintable():
                     results.append(f"Key {k:3d}: {decoded}")
             return results[:10]  # Return top 10 results
-    
+
     def sql_injection_tests(self, target_url=None):
         """SQL injection test payloads"""
         payloads = [
@@ -172,7 +172,7 @@ class CTFMasterclass:
             "admin'--"
         ]
         return payloads
-    
+
     def xss_techniques(self):
         """XSS test payloads"""
         payloads = [
@@ -183,7 +183,7 @@ class CTFMasterclass:
             "<iframe src=javascript:alert('XSS')>"
         ]
         return payloads
-    
+
     def directory_traversal(self):
         """Directory traversal payloads"""
         payloads = [
@@ -193,7 +193,7 @@ class CTFMasterclass:
             "%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd"
         ]
         return payloads
-    
+
     def command_injection(self):
         """Command injection payloads"""
         payloads = [
@@ -204,17 +204,17 @@ class CTFMasterclass:
             "$(whoami)"
         ]
         return payloads
-    
+
     def string_analysis(self, binary_data):
         """Extract readable strings from binary"""
         strings = re.findall(b'[A-Za-z0-9/\-:.,_$%\'()\[\]<> ]{4,}', binary_data)
         return [s.decode('utf-8', errors='ignore') for s in strings]
-    
+
     def hex_analysis(self, hex_string):
         """Analyze hexadecimal data"""
         try:
             binary_data = bytes.fromhex(hex_string)
-            
+
             # Check for common file signatures
             signatures = {
                 b'\x89PNG': 'PNG image',
@@ -224,21 +224,21 @@ class CTFMasterclass:
                 b'\x50\x4b': 'ZIP/Office document',
                 b'%PDF': 'PDF document'
             }
-            
+
             for sig, desc in signatures.items():
                 if binary_data.startswith(sig):
                     return f"File type detected: {desc}"
-            
+
             return "Unknown binary format"
         except ValueError:
             return "Invalid hexadecimal format"
-    
+
     def binary_analysis(self, file_path):
         """Basic binary file analysis"""
         try:
             with open(file_path, 'rb') as f:
                 data = f.read(1024)  # Read first 1KB
-            
+
             analysis = {
                 'size': len(data),
                 'entropy': self.calculate_entropy(data),
@@ -246,21 +246,21 @@ class CTFMasterclass:
                 'hex_dump': data[:100].hex()  # First 100 bytes in hex
             }
             return analysis
-        except:
+        except Exception:
             return {"error": "Cannot analyze file"}
-    
+
     def calculate_entropy(self, data):
         """Calculate Shannon entropy"""
         if not data:
             return 0
-        
+
         entropy = 0
         for x in range(256):
             p_x = float(data.count(x)) / len(data)
             if p_x > 0:
                 entropy += - p_x * math.log(p_x, 2)
         return entropy
-    
+
     def buffer_overflow_detection(self, input_string):
         """Detect potential buffer overflow patterns"""
         patterns = [
@@ -269,19 +269,19 @@ class CTFMasterclass:
             r'\x41{100,}',  # Hex representation of A's
             r'[a-zA-Z0-9]{1000,}'  # Very long strings
         ]
-        
+
         detections = []
         for pattern in patterns:
             if re.search(pattern, input_string):
                 detections.append(f"Potential overflow pattern: {pattern}")
-        
+
         return detections
-    
+
     def shellcode_analysis(self, hex_data):
         """Basic shellcode analysis"""
         try:
             data = bytes.fromhex(hex_data)
-            
+
             # Look for common shellcode patterns
             patterns = {
                 b'\x90\x90\x90': 'NOP sled detected',
@@ -290,20 +290,20 @@ class CTFMasterclass:
                 b'\x48\x31\xff': 'XOR RDI, RDI (x64 shellcode)',
                 b'/bin/sh': 'Shell execution string'
             }
-            
+
             analysis = []
             for pattern, desc in patterns.items():
                 if pattern in data:
                     analysis.append(desc)
-            
+
             return analysis
-        except:
+        except Exception:
             return ["Invalid hex data"]
-    
+
     def rop_analysis(self, addresses):
         """Basic ROP chain analysis"""
         analysis = []
-        
+
         for addr in addresses:
             # Check for common ROP gadget patterns
             if addr.endswith('c3'):  # RET instruction
@@ -312,17 +312,17 @@ class CTFMasterclass:
                 analysis.append(f"{addr}: Potential POP RAX; RET gadget")
             elif addr.endswith('5fc3'):  # POP RDI; RET
                 analysis.append(f"{addr}: Potential POP RDI; RET gadget")
-        
+
         return analysis
-    
+
     def file_analysis(self, file_path):
         """File forensics analysis"""
         try:
             import os
             import stat
-            
+
             st = os.stat(file_path)
-            
+
             analysis = {
                 'size': st.st_size,
                 'mode': oct(stat.S_IMODE(st.st_mode)),
@@ -330,56 +330,56 @@ class CTFMasterclass:
                 'modified': time.ctime(st.st_mtime),
                 'accessed': time.ctime(st.st_atime)
             }
-            
+
             return analysis
-        except:
+        except Exception:
             return {"error": "Cannot analyze file"}
-    
+
     def metadata_extraction(self, file_path):
         """Extract metadata from files"""
         metadata = {}
-        
+
         try:
             # Try to extract EXIF data if it's an image
             with open(file_path, 'rb') as f:
                 data = f.read()
-            
+
             # Look for common metadata patterns
             if b'EXIF' in data:
                 metadata['has_exif'] = True
-            
+
             if b'GPS' in data:
                 metadata['has_gps'] = True
-            
+
             # Look for embedded strings
             strings = self.string_analysis(data)
             metadata['embedded_strings'] = strings[:5]  # First 5 strings
-            
+
             return metadata
-        except:
+        except Exception:
             return {"error": "Cannot extract metadata"}
-    
+
     def steganography_detection(self, file_path):
         """Basic steganography detection"""
         try:
             with open(file_path, 'rb') as f:
                 data = f.read()
-            
+
             detection = {
                 'entropy': self.calculate_entropy(data),
                 'size_anomaly': len(data) > 1000000,  # Suspiciously large
                 'has_hidden_data': False
             }
-            
+
             # Look for hidden data patterns
             if detection['entropy'] > 7.5:
                 detection['has_hidden_data'] = True
                 detection['reason'] = 'High entropy suggests encrypted/compressed data'
-            
+
             return detection
-        except:
+        except Exception:
             return {"error": "Cannot analyze file"}
-    
+
     def social_media_recon(self, username):
         """Social media reconnaissance"""
         platforms = [
@@ -389,9 +389,9 @@ class CTFMasterclass:
             f"https://linkedin.com/in/{username}",
             f"https://github.com/{username}"
         ]
-        
+
         return platforms
-    
+
     def domain_analysis(self, domain):
         """Domain analysis techniques"""
         analysis = {
@@ -411,9 +411,9 @@ class CTFMasterclass:
                 '/login'
             ]
         }
-        
+
         return analysis
-    
+
     def email_analysis(self, email):
         """Email analysis and verification"""
         analysis = {
@@ -422,9 +422,9 @@ class CTFMasterclass:
             'is_valid_format': bool(re.match(r'^[^@]+@[^@]+\.[^@]+$', email)),
             'common_providers': email.split('@')[1] in ['gmail.com', 'yahoo.com', 'outlook.com', 'hotmail.com'] if '@' in email else False
         }
-        
+
         return analysis
-    
+
     def run_ctf_assessment(self, target_data):
         """Run comprehensive CTF-style assessment"""
         results = {
@@ -434,11 +434,11 @@ class CTFMasterclass:
             'findings': [],
             'recommendations': []
         }
-        
+
         # Apply various CTF techniques
         for category, techniques in self.arsenal.items():
             category_results = []
-            
+
             for technique_name, technique_func in techniques.items():
                 try:
                     if hasattr(technique_func, '__call__'):
@@ -455,44 +455,44 @@ class CTFMasterclass:
                         'status': 'error',
                         'error': str(e)
                     })
-            
+
             results['findings'].append({
                 'category': category,
                 'results': category_results
             })
-        
+
         # Generate recommendations
         results['recommendations'] = [
             "Continue monitoring for new vulnerabilities",
             "Implement additional security controls",
             "Regular security assessments recommended"
         ]
-        
+
         return results
 
 def main():
     """Main CTF masterclass demonstration"""
     print("🎓 CTF & HACKING MASTERCLASS 2025")
     print("=" * 50)
-    
+
     ctf = CTFMasterclass()
     ctf.load_ctf_arsenal()
-    
+
     print(f"✅ Loaded {len(ctf.arsenal)} CTF technique categories")
-    
+
     # Demo some techniques
     print("\n🔐 Caesar Cipher Demo:")
     result = ctf.caesar_cipher("HELLO", 3)
     print(f"   Encoded: {result}")
-    
+
     print("\n🌐 Base64 Demo:")
     result = ctf.base64_operations("Hello World")
     print(f"   Result: {result}")
-    
+
     print("\n🔍 Hash Analysis Demo:")
     result = ctf.hash_analysis("5d41402abc4b2a76b9719d911017c592")
     print(f"   Analysis: {result}")
-    
+
     print("\n✅ CTF Masterclass ready for use!")
 
 if __name__ == "__main__":
