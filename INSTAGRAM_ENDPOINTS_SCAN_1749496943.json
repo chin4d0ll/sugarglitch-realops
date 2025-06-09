@@ -1,0 +1,19 @@
+{
+  "scan_time": "2025-06-09T19:22:23.235194",
+  "total_tested": 11,
+  "active_endpoints": 2,
+  "endpoints": [
+    {
+      "url": "https://www.instagram.com/direct/inbox/",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "size": 432948
+    },
+    {
+      "url": "https://www.instagram.com/api/graphql/",
+      "status": 200,
+      "content_type": "text/html; charset=\"utf-8\"",
+      "size": 433218
+    }
+  ]
+}
