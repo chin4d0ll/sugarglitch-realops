@@ -64,5 +64,26 @@
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
   "python.formatting.provider": "black",
-  "makefile.buildBeforeLaunch": false
+  "makefile.buildBeforeLaunch": false,
+  "workbench.editor.alwaysShowEditorActions": true,
+  "workbench.editor.autoLockGroups": {
+    "default": true,
+    "sqlite-viewer.option": true,
+    "sqlite-viewer.readonly": true,
+    "workbench.editorinputs.searchEditorInput": true,
+    "notebookOutputEditor": true,
+    "jupyter-notebook": true,
+    "repl": true,
+    "workbench.editors.gettingStartedInput": true,
+    "imagePreview.previewEditor": true,
+    "vscode.audioPreview": true,
+    "vscode.videoPreview": true,
+    "jsProfileVisualizer.cpuprofile.table": true,
+    "jsProfileVisualizer.heapprofile.table": true,
+    "jsProfileVisualizer.heapsnapshot.table": true,
+    "gitlens.rebase": true,
+    "sqlite-viewer.view": true,
+    "workbench.input.interactive": true,
+    "mainThreadWebview-markdown.preview": true
+  }
 }
