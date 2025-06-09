@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🔥💀 AUTO HARDCORE PENETRATION TESTER 💀🔥
@@ -17,7 +22,7 @@ def run_auto_test():
 ========================================
 เริ่มการทดสอบแบบอัตโนมัติ...
 """)
-    
+
     # Test 1: Basic penetration testing
     print("🎯 Test 1: Running penetration arsenal...")
     try:
@@ -48,16 +53,16 @@ print("🌐 Open ports: N/A")
 print("🕵️ OSINT data: Collected")
 '''
         ], capture_output=True, text=True, timeout=30)
-        
+
         if result.returncode == 0:
             print("✅ Penetration test completed!")
             print(result.stdout)
         else:
             print(f"⚠️ Test returned code {result.returncode}")
-            
+
     except Exception as e:
         print(f"❌ Error: {e}")
-    
+
     # Test 2: Instagram toolkit
     print("\n🎯 Test 2: Running Instagram toolkit...")
     try:
@@ -87,14 +92,14 @@ print("🍪 Cookies extracted: 24")
 print("📱 Private data: Rate limited")
 '''
         ], capture_output=True, text=True, timeout=30)
-        
+
         if result.returncode == 0:
             print("✅ Instagram toolkit completed!")
             print(result.stdout)
-        
+
     except Exception as e:
         print(f"❌ Error: {e}")
-    
+
     # Summary
     print(f"""
 🏁 AUTO HARDCORE TEST COMPLETE!

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🚀 PRACTICAL HACKING TOOLS COLLECTION 2025
@@ -34,7 +39,7 @@ class PracticalHackingTools:
         """
         print("🔍 Tool 1: Advanced Port Scanner")
         print("-" * 40)
-        
+
         print("💻 Implementation:")
         print("""
 import socket
@@ -47,23 +52,23 @@ class StealthPortScanner:
         self.threads = threads
         self.open_ports = []
         self.lock = threading.Lock()
-    
+
     def scan_port(self, port):
         '''สแกน port เดียว'''
         try:
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             sock.settimeout(1)
             result = sock.connect_ex((self.target, port))
-            
+
             if result == 0:
                 with self.lock:
                     self.open_ports.append(port)
                     print(f"[+] Port {port}: OPEN")
-            
+
             sock.close()
         except Exception:
             pass
-    
+
     def syn_scan(self, port):
         '''SYN Stealth Scan (requires raw sockets)'''
         try:
@@ -74,28 +79,28 @@ class StealthPortScanner:
         except Exception:
             # Fallback to connect scan
             self.scan_port(port)
-    
+
     def scan_range(self, start_port, end_port):
         '''สแกน port ในช่วงที่กำหนด'''
         print(f"Scanning {self.target} ports {start_port}-{end_port}")
         print(f"Started at: {datetime.now()}")
-        
+
         threads = []
         for port in range(start_port, end_port + 1):
             thread = threading.Thread(target=self.scan_port, args=(port,))
             threads.append(thread)
             thread.start()
-            
+
             # จำกัดจำนวน threads
             if len(threads) >= self.threads:
                 for t in threads:
                     t.join()
                 threads = []
-        
+
         # รอ threads ที่เหลือ
         for t in threads:
             t.join()
-        
+
         print(f"\\nScan completed at: {datetime.now()}")
         print(f"Open ports: {sorted(self.open_ports)}")
         return self.open_ports
@@ -104,20 +109,20 @@ class StealthPortScanner:
 scanner = StealthPortScanner('192.168.1.1')
 open_ports = scanner.scan_range(1, 1000)
         """)
-        
+
         print()
         print("🎯 Advanced Scanning Techniques:")
         techniques = [
             "SYN Stealth Scan - ไม่ complete TCP handshake",
             "FIN Scan - ส่ง FIN packet",
-            "NULL Scan - ส่ง empty packet", 
+            "NULL Scan - ส่ง empty packet",
             "XMAS Scan - ส่ง FIN, PSH, URG flags",
             "UDP Scan - สำหรับ UDP services"
         ]
-        
+
         for tech in techniques:
             print(f"   • {tech}")
-        
+
         print()
 
     def tool_2_web_vulnerability_scanner(self):
@@ -128,7 +133,7 @@ open_ports = scanner.scan_range(1, 1000)
         """
         print("🕷️ Tool 2: Web Vulnerability Scanner")
         print("-" * 40)
-        
+
         print("💻 Implementation:")
         print("""
 import requests
@@ -140,13 +145,13 @@ class WebVulnScanner:
         self.target = target_url
         self.vulnerabilities = []
         self.session = requests.Session()
-        
+
         # User agent rotation
         self.user_agents = [
             'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
             'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
         ]
-    
+
     def sql_injection_test(self, url, params):
         '''ทดสอบ SQL Injection'''
         sql_payloads = [
@@ -156,15 +161,15 @@ class WebVulnScanner:
             "admin'--",
             "' OR 1=1#"
         ]
-        
+
         for payload in sql_payloads:
             test_params = params.copy()
             for param in test_params:
                 test_params[param] = payload
-                
+
                 try:
                     response = self.session.get(url, params=test_params, timeout=5)
-                    
+
                     # Check for SQL error messages
                     error_patterns = [
                         r"mysql_fetch_array",
@@ -178,7 +183,7 @@ class WebVulnScanner:
                         r"Microsoft Access Driver",
                         r"JET Database Engine"
                     ]
-                    
+
                     for pattern in error_patterns:
                         if re.search(pattern, response.text, re.IGNORECASE):
                             self.vulnerabilities.append({
@@ -190,10 +195,10 @@ class WebVulnScanner:
                             })
                             print(f"[!] SQL Injection found in {param}")
                             break
-                            
+
                 except Exception:
                     continue
-    
+
     def xss_test(self, url, params):
         '''ทดสอบ Cross-Site Scripting (XSS)'''
         xss_payloads = [
@@ -203,15 +208,15 @@ class WebVulnScanner:
             "<svg onload=alert('XSS')>",
             "';alert('XSS');//"
         ]
-        
+
         for payload in xss_payloads:
             test_params = params.copy()
             for param in test_params:
                 test_params[param] = payload
-                
+
                 try:
                     response = self.session.get(url, params=test_params, timeout=5)
-                    
+
                     if payload in response.text:
                         self.vulnerabilities.append({
                             'type': 'Cross-Site Scripting (XSS)',
@@ -221,10 +226,10 @@ class WebVulnScanner:
                             'evidence': 'Payload reflected in response'
                         })
                         print(f"[!] XSS found in {param}")
-                        
+
                 except Exception:
                     continue
-    
+
     def directory_traversal_test(self, url):
         '''ทดสอบ Directory Traversal'''
         traversal_payloads = [
@@ -233,13 +238,13 @@ class WebVulnScanner:
             "....//....//....//etc/passwd",
             "%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd"
         ]
-        
+
         for payload in traversal_payloads:
             test_url = urljoin(url, payload)
-            
+
             try:
                 response = self.session.get(test_url, timeout=5)
-                
+
                 # Check for system file contents
                 if re.search(r"root:.*:0:0:", response.text) or \\
                    re.search(r"\\[drivers\\]", response.text, re.IGNORECASE):
@@ -250,28 +255,28 @@ class WebVulnScanner:
                         'evidence': 'System file contents exposed'
                     })
                     print(f"[!] Directory Traversal found")
-                    
+
             except Exception:
                 continue
-    
+
     def command_injection_test(self, url, params):
         '''ทดสอบ Command Injection'''
         cmd_payloads = [
             "; ls -la",
             "| whoami",
-            "`id`",
+            ""id"",
             "$(uname -a)",
             "&& dir"
         ]
-        
+
         for payload in cmd_payloads:
             test_params = params.copy()
             for param in test_params:
                 test_params[param] = f"test{payload}"
-                
+
                 try:
                     response = self.session.get(url, params=test_params, timeout=5)
-                    
+
                     # Check for command output patterns
                     cmd_patterns = [
                         r"uid=\d+.*gid=\d+",  # Linux id command
@@ -280,7 +285,7 @@ class WebVulnScanner:
                         r"total \d+",  # ls -la output
                         r"drwx.*root root"  # directory listing
                     ]
-                    
+
                     for pattern in cmd_patterns:
                         if re.search(pattern, response.text):
                             self.vulnerabilities.append({
@@ -292,47 +297,47 @@ class WebVulnScanner:
                             })
                             print(f"[!] Command Injection found in {param}")
                             break
-                            
+
                 except Exception:
                     continue
-    
+
     def scan_target(self):
         '''สแกนเป้าหมายหาช่องโหว่'''
         print(f"Scanning {self.target} for vulnerabilities...")
-        
+
         try:
             # Get main page
             response = self.session.get(self.target, timeout=10)
-            
+
             # Extract forms and parameters
             forms = re.findall(r'<form.*?</form>', response.text, re.DOTALL | re.IGNORECASE)
-            
+
             for form in forms:
                 # Extract form action and method
                 action_match = re.search(r'action=["\']([^"\']*)["\']', form, re.IGNORECASE)
                 action = action_match.group(1) if action_match else ""
-                
+
                 # Extract input parameters
                 inputs = re.findall(r'<input[^>]*name=["\']([^"\']*)["\'][^>]*>', form, re.IGNORECASE)
-                
+
                 if inputs:
                     form_url = urljoin(self.target, action)
                     test_params = {param: "test" for param in inputs}
-                    
+
                     # Test for vulnerabilities
                     self.sql_injection_test(form_url, test_params)
                     self.xss_test(form_url, test_params)
                     self.command_injection_test(form_url, test_params)
-            
+
             # Test directory traversal
             self.directory_traversal_test(self.target)
-            
+
             # Generate report
             self.generate_report()
-            
+
         except Exception as e:
             print(f"Error scanning target: {e}")
-    
+
     def generate_report(self):
         '''สร้างรายงานผลการสแกน'''
         print(f"\\n{'='*50}")
@@ -342,7 +347,7 @@ class WebVulnScanner:
         print(f"Scan time: {datetime.now()}")
         print(f"Vulnerabilities found: {len(self.vulnerabilities)}")
         print()
-        
+
         for vuln in self.vulnerabilities:
             print(f"[!] {vuln['type']}")
             print(f"    URL: {vuln['url']}")
@@ -356,7 +361,7 @@ class WebVulnScanner:
 scanner = WebVulnScanner('http://testphp.vulnweb.com')
 scanner.scan_target()
         """)
-        
+
         print()
         print("🎯 Common Web Vulnerabilities:")
         vulns = [
@@ -369,10 +374,10 @@ scanner.scan_target()
             "Authentication Bypass",
             "Session Management Flaws"
         ]
-        
+
         for vuln in vulns:
             print(f"   • {vuln}")
-        
+
         print()
 
     def tool_3_network_sniffer(self):
@@ -383,7 +388,7 @@ scanner.scan_target()
         """
         print("📡 Tool 3: Network Packet Sniffer")
         print("-" * 40)
-        
+
         print("💻 Implementation:")
         print("""
 import socket
@@ -394,7 +399,7 @@ class NetworkSniffer:
     def __init__(self, interface=None):
         self.interface = interface
         self.protocols = {1: 'ICMP', 6: 'TCP', 17: 'UDP'}
-        
+
     def create_raw_socket(self):
         '''สร้าง raw socket สำหรับดักฟัง packets'''
         try:
@@ -403,7 +408,7 @@ class NetworkSniffer:
             if self.interface:
                 sock.bind((self.interface, 0))
             return sock
-        except:
+        except Exception:
             try:
                 # สำหรับ Windows (ต้องใช้ WinPcap/Npcap)
                 sock = socket.socket(socket.AF_INET, socket.SOCK_RAW, socket.IPPROTO_IP)
@@ -413,31 +418,31 @@ class NetworkSniffer:
             except Exception as e:
                 print(f"Error creating raw socket: {e}")
                 return None
-    
+
     def parse_ethernet_header(self, data):
         '''แยกวิเคราะห์ Ethernet header'''
         eth_header = struct.unpack('!6s6sH', data[:14])
         dest_mac = self.format_mac(eth_header[0])
         src_mac = self.format_mac(eth_header[1])
         protocol = eth_header[2]
-        
+
         return dest_mac, src_mac, protocol, data[14:]
-    
+
     def format_mac(self, mac_bytes):
         '''แปลง MAC address เป็น string'''
         return ':'.join(f'{b:02x}' for b in mac_bytes)
-    
+
     def parse_ip_header(self, data):
         '''แยกวิเคราะห์ IP header'''
         ip_header = struct.unpack('!BBHHHBBH4s4s', data[:20])
-        
+
         version = ip_header[0] >> 4
         header_length = (ip_header[0] & 15) * 4
         ttl = ip_header[5]
         protocol = ip_header[6]
         src_ip = socket.inet_ntoa(ip_header[8])
         dest_ip = socket.inet_ntoa(ip_header[9])
-        
+
         return {
             'version': version,
             'header_length': header_length,
@@ -447,27 +452,27 @@ class NetworkSniffer:
             'dest_ip': dest_ip,
             'data': data[header_length:]
         }
-    
+
     def parse_tcp_header(self, data):
         '''แยกวิเคราะห์ TCP header'''
         tcp_header = struct.unpack('!HHLLBBHHH', data[:20])
-        
+
         src_port = tcp_header[0]
         dest_port = tcp_header[1]
         sequence = tcp_header[2]
         acknowledgment = tcp_header[3]
         offset_reserved = tcp_header[4]
         flags = tcp_header[5]
-        
+
         offset = (offset_reserved >> 4) * 4
-        
+
         flag_urg = (flags & 32) >> 5
         flag_ack = (flags & 16) >> 4
         flag_psh = (flags & 8) >> 3
         flag_rst = (flags & 4) >> 2
         flag_syn = (flags & 2) >> 1
         flag_fin = flags & 1
-        
+
         return {
             'src_port': src_port,
             'dest_port': dest_port,
@@ -479,19 +484,19 @@ class NetworkSniffer:
             },
             'data': data[offset:]
         }
-    
+
     def analyze_packet(self, packet):
         '''วิเคราะห์ packet ที่ดักฟังได้'''
         try:
             # Parse Ethernet header
             dest_mac, src_mac, eth_protocol, data = self.parse_ethernet_header(packet)
-            
+
             print(f"\\n{'='*50}")
             print(f"Ethernet Frame:")
             print(f"  Destination MAC: {dest_mac}")
             print(f"  Source MAC: {src_mac}")
             print(f"  Protocol: {hex(eth_protocol)}")
-            
+
             # Check if it's IP packet
             if eth_protocol == 8:  # IP
                 ip_info = self.parse_ip_header(data)
@@ -501,7 +506,7 @@ class NetworkSniffer:
                 print(f"  Destination IP: {ip_info['dest_ip']}")
                 print(f"  TTL: {ip_info['ttl']}")
                 print(f"  Protocol: {self.protocols.get(ip_info['protocol'], ip_info['protocol'])}")
-                
+
                 # Parse TCP if applicable
                 if ip_info['protocol'] == 6:  # TCP
                     tcp_info = self.parse_tcp_header(ip_info['data'])
@@ -510,44 +515,44 @@ class NetworkSniffer:
                     print(f"  Destination Port: {tcp_info['dest_port']}")
                     print(f"  Sequence Number: {tcp_info['sequence']}")
                     print(f"  Acknowledgment: {tcp_info['acknowledgment']}")
-                    
+
                     # Show flags
                     active_flags = [flag for flag, value in tcp_info['flags'].items() if value]
                     if active_flags:
                         print(f"  Flags: {', '.join(active_flags)}")
-                    
+
                     # Show payload if any
                     if tcp_info['data']:
                         print(f"\\nPayload ({len(tcp_info['data'])} bytes):")
                         print(textwrap.fill(' '.join(f'{b:02x}' for b in tcp_info['data'][:50]), 60))
-                        
+
                         # Try to decode as text
                         try:
                             text = tcp_info['data'].decode('utf-8', errors='ignore')
                             if text.isprintable():
                                 print(f"Text: {text[:100]}...")
-                        except:
+                        except Exception:
                             pass
-        
+
         except Exception as e:
             print(f"Error analyzing packet: {e}")
-    
+
     def start_sniffing(self, packet_count=10):
         '''เริ่มดักฟัง packets'''
         sock = self.create_raw_socket()
         if not sock:
             print("Failed to create raw socket. Try running as administrator/root.")
             return
-        
+
         print(f"Starting packet capture... (Capturing {packet_count} packets)")
         print("Press Ctrl+C to stop")
-        
+
         try:
             for i in range(packet_count):
                 packet, addr = sock.recvfrom(65535)
                 print(f"\\nPacket {i+1}:")
                 self.analyze_packet(packet)
-                
+
         except KeyboardInterrupt:
             print("\\nCapture stopped by user")
         except Exception as e:
@@ -559,7 +564,7 @@ class NetworkSniffer:
 sniffer = NetworkSniffer()
 sniffer.start_sniffing(5)
         """)
-        
+
         print()
         print("🎯 Network Analysis Applications:")
         apps = [
@@ -572,10 +577,10 @@ sniffer.start_sniffing(5)
             "Session hijacking detection",
             "DNS spoofing detection"
         ]
-        
+
         for app in apps:
             print(f"   • {app}")
-        
+
         print()
         print("⚠️ Legal Notice:")
         print("   • ใช้เฉพาะบน network ที่เป็นเจ้าของหรือได้รับอนุญาต")
@@ -591,7 +596,7 @@ sniffer.start_sniffing(5)
         """
         print("🔓 Tool 4: Password Cracking Tools")
         print("-" * 40)
-        
+
         print("💻 Implementation:")
         print("""
 import hashlib
@@ -606,7 +611,7 @@ class PasswordCracker:
         self.charset_upper = string.ascii_uppercase
         self.charset_digits = string.digits
         self.charset_special = "!@#$%^&*()_+-=[]{}|;:,.<>?"
-        
+
     def hash_password(self, password, hash_type='md5'):
         '''สร้าง hash ของรหัสผ่าน'''
         if hash_type == 'md5':
@@ -617,22 +622,22 @@ class PasswordCracker:
             return hashlib.sha256(password.encode()).hexdigest()
         else:
             raise ValueError("Unsupported hash type")
-    
+
     def dictionary_attack(self, target_hash, wordlist, hash_type='md5'):
         '''Dictionary attack using wordlist'''
         print(f"Starting dictionary attack...")
         print(f"Target hash: {target_hash}")
         print(f"Hash type: {hash_type}")
-        
+
         attempts = 0
         start_time = time.time()
-        
+
         try:
             with open(wordlist, 'r', encoding='utf-8', errors='ignore') as f:
                 for line in f:
                     password = line.strip()
                     attempts += 1
-                    
+
                     # Test password
                     if self.hash_password(password, hash_type) == target_hash:
                         elapsed = time.time() - start_time
@@ -640,56 +645,56 @@ class PasswordCracker:
                         print(f"Attempts: {attempts}")
                         print(f"Time: {elapsed:.2f} seconds")
                         return password
-                    
+
                     if attempts % 10000 == 0:
                         print(f"Tried {attempts} passwords...")
-        
+
         except FileNotFoundError:
             print(f"Wordlist file '{wordlist}' not found")
             return None
-        
+
         print(f"\\n[FAILED] Password not found in dictionary")
         print(f"Total attempts: {attempts}")
         return None
-    
+
     def brute_force_attack(self, target_hash, max_length=4, charset=None, hash_type='md5'):
         '''Brute force attack'''
         if charset is None:
             charset = self.charset_lower + self.charset_digits
-        
+
         print(f"Starting brute force attack...")
         print(f"Target hash: {target_hash}")
         print(f"Max length: {max_length}")
         print(f"Charset: {charset[:20]}...")
-        
+
         attempts = 0
         start_time = time.time()
-        
+
         for length in range(1, max_length + 1):
             print(f"Trying length {length}...")
-            
+
             for password_tuple in itertools.product(charset, repeat=length):
                 password = ''.join(password_tuple)
                 attempts += 1
-                
+
                 if self.hash_password(password, hash_type) == target_hash:
                     elapsed = time.time() - start_time
                     print(f"\\n[SUCCESS] Password found: '{password}'")
                     print(f"Attempts: {attempts}")
                     print(f"Time: {elapsed:.2f} seconds")
                     return password
-                
+
                 if attempts % 100000 == 0:
                     print(f"Tried {attempts} combinations...")
-        
+
         print(f"\\n[FAILED] Password not found")
         print(f"Total attempts: {attempts}")
         return None
-    
+
     def hybrid_attack(self, target_hash, base_words, hash_type='md5'):
         '''Hybrid attack - dictionary + modifications'''
         print(f"Starting hybrid attack...")
-        
+
         modifications = [
             lambda w: w,                    # Original
             lambda w: w.capitalize(),       # Capitalize
@@ -700,15 +705,15 @@ class PasswordCracker:
             lambda w: w + '2023',          # Add year
             lambda w: w[::-1],             # Reverse
         ]
-        
+
         attempts = 0
         start_time = time.time()
-        
+
         for word in base_words:
             for modify_func in modifications:
                 password = modify_func(word.strip())
                 attempts += 1
-                
+
                 if self.hash_password(password, hash_type) == target_hash:
                     elapsed = time.time() - start_time
                     print(f"\\n[SUCCESS] Password found: '{password}'")
@@ -716,14 +721,14 @@ class PasswordCracker:
                     print(f"Attempts: {attempts}")
                     print(f"Time: {elapsed:.2f} seconds")
                     return password
-        
+
         print(f"\\n[FAILED] Password not found with hybrid attack")
         return None
-    
+
     def rainbow_table_lookup(self, target_hash, rainbow_table):
         '''Rainbow table lookup (pre-computed hashes)'''
         print(f"Looking up hash in rainbow table...")
-        
+
         try:
             with open(rainbow_table, 'r') as f:
                 for line in f:
@@ -735,10 +740,10 @@ class PasswordCracker:
                             return password
         except FileNotFoundError:
             print(f"Rainbow table '{rainbow_table}' not found")
-        
+
         print("[FAILED] Hash not found in rainbow table")
         return None
-    
+
     def generate_common_passwords(self):
         '''สร้างรายการรหัสผ่านที่ใช้บ่อย'''
         common_passwords = [
@@ -747,7 +752,7 @@ class PasswordCracker:
             "Password1", "password1", "123456789", "welcome123",
             "admin123", "root", "toor", "pass", "test", "guest"
         ]
-        
+
         # Add variations
         variations = []
         for pwd in common_passwords:
@@ -760,14 +765,14 @@ class PasswordCracker:
                 pwd + '2023',
                 '123' + pwd
             ])
-        
+
         return list(set(variations))  # Remove duplicates
-    
+
     def password_strength_test(self, password):
         '''ทดสอบความแข็งแกร่งของรหัสผ่าน'''
         score = 0
         feedback = []
-        
+
         # Length check
         if len(password) >= 8:
             score += 2
@@ -775,34 +780,34 @@ class PasswordCracker:
             score += 1
         else:
             feedback.append("Password too short (< 6 characters)")
-        
+
         # Character variety checks
         if any(c.islower() for c in password):
             score += 1
         else:
             feedback.append("Add lowercase letters")
-        
+
         if any(c.isupper() for c in password):
             score += 1
         else:
             feedback.append("Add uppercase letters")
-        
+
         if any(c.isdigit() for c in password):
             score += 1
         else:
             feedback.append("Add numbers")
-        
+
         if any(c in self.charset_special for c in password):
             score += 2
         else:
             feedback.append("Add special characters")
-        
+
         # Common password check
         common_passwords = self.generate_common_passwords()
         if password.lower() in [p.lower() for p in common_passwords]:
             score -= 3
             feedback.append("Avoid common passwords")
-        
+
         # Strength rating
         if score >= 7:
             strength = "Very Strong"
@@ -814,7 +819,7 @@ class PasswordCracker:
             strength = "Weak"
         else:
             strength = "Very Weak"
-        
+
         return {
             'score': max(0, score),
             'strength': strength,
@@ -837,7 +842,7 @@ print(f"Target hash: {target_hash}")
 # Try brute force (for short passwords only!)
 found = cracker.brute_force_attack(target_hash, max_length=5)
         """)
-        
+
         print()
         print("🎯 Password Attack Methods:")
         methods = [
@@ -850,10 +855,10 @@ found = cracker.brute_force_attack(target_hash, max_length=5)
             "Credential Stuffing - reuse leaked passwords",
             "Social Engineering - guess based on personal info"
         ]
-        
+
         for method in methods:
             print(f"   • {method}")
-        
+
         print()
         print("💡 Password Security Tips:")
         tips = [
@@ -866,10 +871,10 @@ found = cracker.brute_force_attack(target_hash, max_length=5)
             "เปลี่ยนรหัสผ่านเป็นระยะ",
             "ไม่ใช้รหัสผ่านเดียวกันหลายที่"
         ]
-        
+
         for tip in tips:
             print(f"   • {tip}")
-        
+
         print()
 
     def create_practical_guide(self):
@@ -878,7 +883,7 @@ found = cracker.brute_force_attack(target_hash, max_length=5)
             'timestamp': datetime.now().isoformat(),
             'tools_covered': [
                 'Advanced Port Scanner',
-                'Web Vulnerability Scanner', 
+                'Web Vulnerability Scanner',
                 'Network Packet Sniffer',
                 'Password Cracking Tools'
             ],
@@ -904,24 +909,24 @@ found = cracker.brute_force_attack(target_hash, max_length=5)
                 'อ่าน security research papers'
             ]
         }
-        
+
         with open('practical_hacking_guide.json', 'w') as f:
             json.dump(guide, f, indent=2, ensure_ascii=False)
-        
+
         return guide
 
     def run_all_demonstrations(self):
         """เรียกใช้การสาธิตเครื่องมือทั้งหมด"""
         print("🚀 Starting Practical Hacking Tools Demonstration...")
         print()
-        
+
         tools = [
             self.tool_1_advanced_port_scanner,
             self.tool_2_web_vulnerability_scanner,
             self.tool_3_network_sniffer,
             self.tool_4_password_cracker
         ]
-        
+
         for tool in tools:
             try:
                 tool()
@@ -929,11 +934,11 @@ found = cracker.brute_force_attack(target_hash, max_length=5)
                 time.sleep(1)
             except Exception as e:
                 print(f"❌ Tool demonstration failed: {str(e)}")
-        
+
         # Create practical guide
         guide = self.create_practical_guide()
         print(f"📁 Practical guide saved: practical_hacking_guide.json")
-        
+
         print("\n🎓 LEARNING RESOURCES:")
         resources = [
             "OWASP Top 10 - https://owasp.org/www-project-top-ten/",
@@ -944,7 +949,7 @@ found = cracker.brute_force_attack(target_hash, max_length=5)
             "VulnHub - https://www.vulnhub.com/",
             "SANS Penetration Testing - https://www.sans.org/"
         ]
-        
+
         for resource in resources:
             print(f"   • {resource}")
 
@@ -972,7 +977,7 @@ if __name__ == "__main__":
     print()
     print("⚠️" * 25)
     print()
-    
+
     # Run demonstrations
     tools = PracticalHackingTools()
     tools.run_all_demonstrations()

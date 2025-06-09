@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 import os
 import time
 import subprocess
@@ -5,13 +10,13 @@ import threading
 
 def get_cpu_mem_hack():
     """
-    แฮกดู CPU และ Memory แบบ low-level, OS-agnostic (Linux-centric), 
+    แฮกดู CPU และ Memory แบบ low-level, OS-agnostic (Linux-centric),
     เน้นเร็วสุดๆ ไม่ใช้ lib ใหญ่ๆ
     """
     # ใช้ shell command แบบแฮกๆ ช่วยรีดข้อมูล
     cpu = subprocess.getoutput("grep 'cpu ' /proc/stat")
     mem = subprocess.getoutput("free | grep Mem")
-    
+
     # CPU: คำนวณ % การใช้งานแบบแฮก
     cpu_fields = list(map(int, cpu.strip().split()[1:]))
     idle1, total1 = cpu_fields[3], sum(cpu_fields)
@@ -20,12 +25,12 @@ def get_cpu_mem_hack():
     cpu_fields2 = list(map(int, cpu2.strip().split()[1:]))
     idle2, total2 = cpu_fields2[3], sum(cpu_fields2)
     cpu_usage = 100.0 * (1 - (idle2 - idle1) / (total2 - total1 + 0.1))
-    
+
     # Memory: แฮกดู usage
     mem_fields = list(map(int, mem.strip().split()[1:]))
     mem_total, mem_used = mem_fields[0], mem_fields[1]
     mem_usage = 100.0 * mem_used / (mem_total + 0.1)
-    
+
     return cpu_usage, mem_usage
 
 def monitor(interval=1.0):

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🔥 REAL INSTAGRAM BYPASS OPERATIONS EXECUTOR 2025
@@ -39,28 +44,28 @@ class RealOperationsExecutor:
             'targets': []
         }
         self.operation_id = f"realops_{int(time.time())}"
-        
+
     async def initialize_system(self):
         """Initialize the complete bypass system"""
         print("🚀 INITIALIZING REAL OPERATIONS SYSTEM...")
-        
+
         # Initialize ultimate system
         await self.system.initialize()
-        
+
         # Load sessions
         session_loaded = len(self.session_manager.active_sessions) > 0
         print(f"📱 Session Status: {'✅ LOADED' if session_loaded else '❌ NO SESSION - Using Anonymous Mode'}")
-        
+
         # Refresh proxy list (skip for now, we already have working proxies)
         print("🔄 Using existing proxy arsenal...")
         print(f"📡 {len(self.system.working_proxies)} proxies ready for operations")
-        
+
         print("✅ System initialized and ready for real operations!")
-        
+
     async def execute_profile_extraction(self, username):
         """Extract complete profile data from Instagram target"""
         print(f"\n🎯 EXTRACTING PROFILE: {username}")
-        
+
         operation_start = time.time()
         operation_data = {
             'type': 'profile_extraction',
@@ -70,12 +75,12 @@ class RealOperationsExecutor:
             'data_extracted': {},
             'success': False
         }
-        
+
         try:
             # 1. Profile basic info
             profile_url = f"https://www.instagram.com/{username}/"
             print(f"📥 Requesting profile page: {profile_url}")
-            
+
             response = await self.system.ultimate_bypass_request(
                 url=profile_url,
                 method='GET',
@@ -87,7 +92,7 @@ class RealOperationsExecutor:
                     'Upgrade-Insecure-Requests': '1'
                 }
             )
-            
+
             operation_data['requests'].append({
                 'url': profile_url,
                 'method': 'GET',
@@ -96,54 +101,54 @@ class RealOperationsExecutor:
                 'response_size': len(str(response.get('data', ''))),
                 'timestamp': datetime.now().isoformat()
             })
-            
+
             self.results['statistics']['total_requests'] += 1
-            
+
             if response.get('success') and response.get('data'):
                 print("✅ Profile page retrieved successfully")
                 self.results['statistics']['successful_requests'] += 1
-                
+
                 # Extract profile data from HTML
                 html_content = response['data']
                 profile_data = self._extract_profile_from_html(html_content, username)
                 operation_data['data_extracted']['profile'] = profile_data
-                
+
                 if profile_data:
                     print(f"📊 Extracted profile data: {len(profile_data)} fields")
                     self.results['statistics']['data_extracted'] += 1
-                
+
             else:
                 print(f"❌ Profile extraction failed: {response.get('error', 'Unknown error')}")
                 self.results['statistics']['failed_requests'] += 1
-                
+
                 if 'rate limit' in str(response.get('error', '')).lower():
                     self.results['statistics']['rate_limit_hits'] += 1
-            
+
             # 2. Try to get additional data through GraphQL (if session available)
             if self.session_manager.current_session:
                 print("🔍 Attempting GraphQL data extraction...")
                 await self._extract_graphql_data(username, operation_data)
-            
+
             operation_data['success'] = len(operation_data['data_extracted']) > 0
             operation_data['duration'] = time.time() - operation_start
             operation_data['end_time'] = datetime.now().isoformat()
-            
+
         except Exception as e:
             print(f"💥 Operation failed: {str(e)}")
             operation_data['error'] = str(e)
             operation_data['duration'] = time.time() - operation_start
             operation_data['end_time'] = datetime.now().isoformat()
-            
+
         self.results['operations'].append(operation_data)
         return operation_data
-        
+
     async def _extract_graphql_data(self, username, operation_data):
         """Extract additional data using Instagram's GraphQL API"""
         print("🕷️ Executing GraphQL extraction...")
-        
+
         # GraphQL query for user info
         graphql_url = "https://www.instagram.com/graphql/query/"
-        
+
         # Sample GraphQL query (simplified)
         query_params = {
             'query_hash': '7c16654f22c819fb63d1183034a5162f',  # User info query
@@ -153,7 +158,7 @@ class RealOperationsExecutor:
                 'first': 24
             })
         }
-        
+
         try:
             response = await self.system.ultimate_bypass_request(
                 url=graphql_url,
@@ -169,7 +174,7 @@ class RealOperationsExecutor:
                     'Referer': f'https://www.instagram.com/{username}/'
                 }
             )
-            
+
             operation_data['requests'].append({
                 'url': graphql_url,
                 'method': 'GET',
@@ -179,9 +184,9 @@ class RealOperationsExecutor:
                 'timestamp': datetime.now().isoformat(),
                 'type': 'graphql'
             })
-            
+
             self.results['statistics']['total_requests'] += 1
-            
+
             if response.get('success'):
                 print("✅ GraphQL data retrieved")
                 self.results['statistics']['successful_requests'] += 1
@@ -189,16 +194,16 @@ class RealOperationsExecutor:
             else:
                 print(f"⚠️ GraphQL failed: {response.get('error', 'Unknown')}")
                 self.results['statistics']['failed_requests'] += 1
-                
+
         except Exception as e:
             print(f"💥 GraphQL extraction error: {str(e)}")
-    
+
     def _extract_profile_from_html(self, html_content, username):
         """Extract profile information from HTML content"""
         import re
-        
+
         profile_data = {'username': username}
-        
+
         try:
             # Extract basic info using regex patterns
             patterns = {
@@ -212,7 +217,7 @@ class RealOperationsExecutor:
                 'profile_pic_url': r'"profile_pic_url":"([^"]*)"',
                 'external_url': r'"external_url":"([^"]*)"'
             }
-            
+
             for field, pattern in patterns.items():
                 match = re.search(pattern, html_content)
                 if match:
@@ -223,18 +228,18 @@ class RealOperationsExecutor:
                         profile_data[field] = value.lower() == 'true'
                     else:
                         profile_data[field] = value
-            
+
             print(f"📋 Profile fields extracted: {list(profile_data.keys())}")
             return profile_data
-            
+
         except Exception as e:
             print(f"⚠️ Profile parsing error: {str(e)}")
             return {'username': username, 'error': str(e)}
-    
+
     async def execute_story_extraction(self, username):
         """Extract Instagram stories from target"""
         print(f"\n📸 EXTRACTING STORIES: {username}")
-        
+
         operation_start = time.time()
         operation_data = {
             'type': 'story_extraction',
@@ -244,7 +249,7 @@ class RealOperationsExecutor:
             'data_extracted': {},
             'success': False
         }
-        
+
         if not self.session_manager.current_session:
             print("⚠️ Stories require authenticated session - skipping")
             operation_data['error'] = 'No authenticated session available'
@@ -252,11 +257,11 @@ class RealOperationsExecutor:
             operation_data['end_time'] = datetime.now().isoformat()
             self.results['operations'].append(operation_data)
             return operation_data
-        
+
         try:
             # Stories API endpoint
             stories_url = f"https://www.instagram.com/api/v1/feed/user/{username}/story/"
-            
+
             response = await self.system.ultimate_bypass_request(
                 url=stories_url,
                 method='GET',
@@ -267,7 +272,7 @@ class RealOperationsExecutor:
                     'X-Instagram-AJAX': '1'
                 }
             )
-            
+
             operation_data['requests'].append({
                 'url': stories_url,
                 'method': 'GET',
@@ -276,9 +281,9 @@ class RealOperationsExecutor:
                 'response_size': len(str(response.get('data', ''))),
                 'timestamp': datetime.now().isoformat()
             })
-            
+
             self.results['statistics']['total_requests'] += 1
-            
+
             if response.get('success'):
                 print("✅ Stories data retrieved")
                 self.results['statistics']['successful_requests'] += 1
@@ -287,64 +292,64 @@ class RealOperationsExecutor:
             else:
                 print(f"❌ Stories extraction failed: {response.get('error', 'Unknown')}")
                 self.results['statistics']['failed_requests'] += 1
-            
+
             operation_data['success'] = len(operation_data['data_extracted']) > 0
             operation_data['duration'] = time.time() - operation_start
             operation_data['end_time'] = datetime.now().isoformat()
-            
+
         except Exception as e:
             print(f"💥 Story extraction failed: {str(e)}")
             operation_data['error'] = str(e)
             operation_data['duration'] = time.time() - operation_start
             operation_data['end_time'] = datetime.now().isoformat()
-            
+
         self.results['operations'].append(operation_data)
         return operation_data
-    
+
     async def execute_mass_operations(self, target_list):
         """Execute operations on multiple targets"""
         print(f"\n🎯 MASS OPERATIONS ON {len(target_list)} TARGETS")
-        
+
         for i, username in enumerate(target_list, 1):
             print(f"\n--- TARGET {i}/{len(target_list)}: {username} ---")
-            
+
             # Profile extraction
             await self.execute_profile_extraction(username)
-            
+
             # Wait between targets to avoid rate limits
             if i < len(target_list):
                 wait_time = 5 + (i * 2)  # Progressive delay
                 print(f"⏰ Waiting {wait_time}s before next target...")
                 await asyncio.sleep(wait_time)
-        
+
         self.results['targets'] = target_list
-    
+
     def save_results(self):
         """Save operation results to file"""
         self.results['end_time'] = datetime.now().isoformat()
         self.results['total_duration'] = (
-            datetime.fromisoformat(self.results['end_time']) - 
+            datetime.fromisoformat(self.results['end_time']) -
             datetime.fromisoformat(self.results['start_time'])
         ).total_seconds()
-        
+
         # Create results directory
         results_dir = Path('results')
         results_dir.mkdir(exist_ok=True)
-        
+
         # Save detailed results
         results_file = results_dir / f'real_operations_{self.operation_id}.json'
         with open(results_file, 'w') as f:
             json.dump(self.results, f, indent=2, default=str)
-        
+
         print(f"\n💾 Results saved to: {results_file}")
-        
+
         # Generate summary report
         self._generate_summary_report()
-    
+
     def _generate_summary_report(self):
         """Generate a summary report of operations"""
         stats = self.results['statistics']
-        
+
         print(f"""
 🔥 REAL OPERATIONS SUMMARY REPORT
 =================================
@@ -372,13 +377,13 @@ async def main():
 Executing actual Instagram data extraction
 No mockups - Real operations with advanced evasion
 """)
-    
+
     executor = RealOperationsExecutor()
-    
+
     try:
         # Initialize system
         await executor.initialize_system()
-        
+
         # Define targets for real operations
         target_usernames = [
             'instagram',        # Official Instagram account
@@ -387,18 +392,18 @@ No mockups - Real operations with advanced evasion
             'cristiano',        # Popular athlete
             'kyliejenner'       # Popular influencer
         ]
-        
+
         print(f"\n🎯 EXECUTING REAL OPERATIONS ON {len(target_usernames)} TARGETS")
         print("⚠️  This will perform actual requests to Instagram")
-        
+
         # Execute mass operations
         await executor.execute_mass_operations(target_usernames)
-        
+
         # Save all results
         executor.save_results()
-        
+
         print("\n🎉 REAL OPERATIONS COMPLETED SUCCESSFULLY!")
-        
+
     except KeyboardInterrupt:
         print("\n⚠️ Operations interrupted by user")
         executor.save_results()

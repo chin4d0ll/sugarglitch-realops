@@ -1,0 +1,104 @@
+{
+  "analysis_timestamp": "2025-06-05T20:10:58.262874",
+  "session_file": null,
+  "cookie_count": 1,
+  "analysis_results": {
+    "session_strength": {
+      "overall_score": 50.0,
+      "cookie_analysis": {
+        "sessionid": {
+          "name": "sessionid",
+          "value_length": 40,
+          "security_features": [
+            "Strong length (32+ chars)",
+            "No predictable patterns"
+          ],
+          "vulnerabilities": [
+            "Low entropy detected"
+          ],
+          "strength_score": 5,
+          "type": "primary_session"
+        }
+      }
+    },
+    "security_features": {
+      "session_validity": {
+        "score": 33.33333333333333,
+        "tests": [
+          {
+            "test": "homepage_access",
+            "status_code": 200,
+            "success": true,
+            "logged_in": false,
+            "content_length": 446529
+          },
+          {
+            "test": "direct_messages",
+            "status_code": 429,
+            "success": false,
+            "has_dm_content": false,
+            "redirect_to_login": true
+          },
+          {
+            "test": "api_access",
+            "status_code": 401,
+            "success": false,
+            "has_json_response": true,
+            "response_data": "Valid JSON response"
+          }
+        ]
+      },
+      "csrf_protection": false,
+      "secure_cookies": false,
+      "httponly_cookies": false,
+      "samesite_protection": false,
+      "session_rotation": true,
+      "hijacking_resistance": {
+        "score": 0.0,
+        "tests": [
+          {
+            "test": "user_agent_change",
+            "different_ua_accepted": true,
+            "vulnerable": true,
+            "status_code": 200
+          },
+          {
+            "test": "ip_change_simulation",
+            "different_ip_accepted": true,
+            "vulnerable": true,
+            "status_code": 200
+          },
+          {
+            "test": "missing_referrer",
+            "malicious_referrer_accepted": true,
+            "vulnerable": true,
+            "status_code": 200
+          }
+        ]
+      }
+    },
+    "vulnerabilities": [
+      {
+        "type": "missing_csrf",
+        "severity": "HIGH",
+        "description": "No CSRF token found in session"
+      },
+      {
+        "type": "weak_ua_validation",
+        "severity": "MEDIUM",
+        "description": "Session accepts requests from suspicious User-Agents"
+      }
+    ],
+    "recommendations": [
+      "🔒 Implement CSRF token validation",
+      "🕵️ Strengthen User-Agent validation",
+      "🔄 Implement regular session rotation",
+      "🌐 Use secure cookie flags (Secure, HttpOnly, SameSite)",
+      "📍 Consider IP binding for sensitive operations",
+      "⏰ Implement proper session timeout",
+      "📊 Monitor for suspicious session activity",
+      "🔐 Use strong session ID generation",
+      "🚫 Implement concurrent session limits"
+    ]
+  }
+}

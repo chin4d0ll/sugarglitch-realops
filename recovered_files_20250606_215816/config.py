@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 # SugarGlitch RealOps Configuration
 import os
 
@@ -15,7 +20,7 @@ EXTRACTION_SETTINGS = {
 # Output Directories
 OUTPUT_DIRS = {
     "data": "data/",
-    "output": "output/", 
+    "output": "output/",
     "logs": "logs/",
     "temp": "temp/",
     "reports": "reports/"

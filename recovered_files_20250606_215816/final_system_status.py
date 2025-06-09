@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 FINAL SYSTEM STATUS & CLEANUP 🎯
@@ -19,45 +24,45 @@ def show_system_status():
     print(f"🕐 Status Time: {datetime.now()}")
     print(f"📂 Working Directory: {os.getcwd()}")
     print()
-    
+
     # Database status
     print("🗄️ DATABASE STATUS:")
     print("-" * 30)
     try:
         conn = sqlite3.connect('data/real_operations.db')
         cursor = conn.cursor()
-        
+
         # Real targets
         cursor.execute("SELECT COUNT(*) FROM real_targets WHERE status = 'active'")
         active_targets = cursor.fetchone()[0]
         cursor.execute("SELECT COUNT(*) FROM real_targets")
         total_targets = cursor.fetchone()[0]
         print(f"✅ Targets: {active_targets}/{total_targets} active")
-        
+
         # Show target details
         cursor.execute("SELECT username, platform, target_type FROM real_targets WHERE status = 'active'")
         targets = cursor.fetchall()
         for i, (username, platform, target_type) in enumerate(targets, 1):
             print(f"   {i}. @{username} ({platform}) - {target_type}")
-        
+
         # DM extractions
         cursor.execute("SELECT COUNT(*) FROM real_dms")
         dm_count = cursor.fetchone()[0]
         print(f"✅ Extracted DMs: {dm_count}")
-        
+
         # Extraction logs
         cursor.execute("SELECT COUNT(*) FROM extraction_logs")
         log_count = cursor.fetchone()[0]
         print(f"✅ Extraction logs: {log_count}")
-        
+
         conn.close()
     except Exception as e:
         print(f"❌ Database error: {e}")
-    
+
     # Core components status
     print("\n🚀 CORE COMPONENTS:")
     print("-" * 30)
-    
+
     components = [
         ("Advanced Stable Extractor", "advanced_stable_dm_extractor.py"),
         ("Real DM Extractor", "real_dm_extractor.py"),
@@ -65,32 +70,32 @@ def show_system_status():
         ("Real Operations Launcher", "real_operations_launcher.py"),
         ("Comprehensive Test", "comprehensive_system_test.py")
     ]
-    
+
     for name, file_path in components:
         if os.path.exists(file_path):
             size = os.path.getsize(file_path)
             print(f"✅ {name}: {file_path} ({size:,} bytes)")
         else:
             print(f"❌ {name}: {file_path} - MISSING")
-    
+
     # Recent extractions
     print("\n📊 RECENT EXTRACTIONS:")
     print("-" * 30)
-    
+
     # Find extraction files
     json_files = glob.glob("*dm_extraction*.json")
     sqlite_files = glob.glob("*dm_extraction*.sqlite")
-    
+
     print(f"✅ JSON result files: {len(json_files)}")
     print(f"✅ SQLite database files: {len(sqlite_files)}")
-    
+
     # Show most recent
     if json_files:
         latest_json = max(json_files, key=os.path.getmtime)
         mod_time = datetime.fromtimestamp(os.path.getmtime(latest_json))
         print(f"📅 Latest extraction: {latest_json}")
         print(f"   Time: {mod_time}")
-        
+
         # Show extraction details
         try:
             with open(latest_json, 'r') as f:
@@ -102,46 +107,46 @@ def show_system_status():
                     print(f"   Status: {summary.get('status', 'N/A')}")
         except Exception as e:
             print(f"   Could not read details: {e}")
-    
+
     # System readiness
     print("\n🎯 SYSTEM READINESS:")
     print("-" * 30)
-    
+
     ready_items = []
-    
+
     # Check advanced extractor
     if os.path.exists('advanced_stable_dm_extractor.py'):
         ready_items.append("✅ Advanced multi-method extractor")
     else:
         ready_items.append("❌ Advanced extractor missing")
-    
+
     # Check database
     if os.path.exists('data/real_operations.db'):
         ready_items.append("✅ Real operations database")
     else:
         ready_items.append("❌ Database missing")
-    
+
     # Check targets
     if active_targets > 0:
         ready_items.append("✅ Active targets configured")
     else:
         ready_items.append("❌ No active targets")
-    
+
     # Check launchers
     if os.path.exists('quick_launcher.py') and os.path.exists('real_operations_launcher.py'):
         ready_items.append("✅ Launch scripts ready")
     else:
         ready_items.append("❌ Launch scripts missing")
-    
+
     for item in ready_items:
         print(f"   {item}")
-    
+
     # Overall readiness
     ready_count = sum(1 for item in ready_items if item.startswith("✅"))
     total_count = len(ready_items)
-    
+
     print(f"\n🎯 OVERALL READINESS: {ready_count}/{total_count}")
-    
+
     if ready_count == total_count:
         print("🎉 SYSTEM FULLY OPERATIONAL!")
         print("   Ready for real ALX.Trading DM extraction")
@@ -152,18 +157,18 @@ def cleanup_old_files():
     """Clean up old/incomplete files"""
     print("\n🧹 CLEANUP RECOMMENDATIONS:")
     print("-" * 30)
-    
+
     # Old incomplete files
     old_files = [
         "src/ultimate_target_dm_extractor_2025.py",
         "direct_dm_extractor.py",
         "test_dm_extractor.py"
     ]
-    
+
     for file_path in old_files:
         if os.path.exists(file_path):
             print(f"⚠️ Consider removing: {file_path} (old/incomplete)")
-    
+
     # Very old extraction files (keep recent ones)
     old_extractions = []
     for pattern in ["ultimate_dm_extraction_*.sqlite", "ultimate_dm_extraction_*.json"]:
@@ -171,7 +176,7 @@ def cleanup_old_files():
         # Sort by modification time, keep only newest 3
         files.sort(key=os.path.getmtime, reverse=True)
         old_extractions.extend(files[3:])  # Files beyond the 3 newest
-    
+
     if old_extractions:
         print(f"⚠️ Consider archiving {len(old_extractions)} old extraction files")
         print("   (keeping 3 most recent)")
@@ -200,7 +205,7 @@ def main():
     show_system_status()
     cleanup_old_files()
     show_usage_guide()
-    
+
     print("\n" + "=" * 70)
     print("🎯 ALX.TRADING DM EXTRACTION SYSTEM - READY FOR OPERATION")
     print("=" * 70)

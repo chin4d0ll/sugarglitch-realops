@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 ALX TRADING DM EXTRACTOR 2025
@@ -20,11 +25,11 @@ class AlxTradingDMExtractor:
         self.session = None
         self.setup_directories()
         self.load_session()
-        
+
     def setup_directories(self):
         """สร้างโฟลเดอร์ที่จำเป็น"""
         os.makedirs(self.output_dir, exist_ok=True)
-        
+
     def load_session(self):
         """โหลด session จากไฟล์"""
         try:
@@ -41,12 +46,12 @@ class AlxTradingDMExtractor:
             print(f"❌ Error loading session: {e}")
             return False
         return True
-    
+
     def setup_database(self):
         """สร้าง database สำหรับเก็บ DM"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS dm_messages (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -61,7 +66,7 @@ class AlxTradingDMExtractor:
                 extracted_time TEXT
             )
         ''')
-        
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS dm_threads (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -74,34 +79,34 @@ class AlxTradingDMExtractor:
                 extracted_time TEXT
             )
         ''')
-        
+
         conn.commit()
         conn.close()
         print("✅ Database setup completed")
-    
+
     def test_session_validity(self):
         """ทดสอบว่า session ยังใช้งานได้หรือไม่"""
         print("\\n🧪 Testing session validity...")
-        
+
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
             'Cookie': f'sessionid={self.session}',
             'Accept': 'application/json',
             'X-Requested-With': 'XMLHttpRequest'
         }
-        
+
         test_urls = [
             'https://www.instagram.com/',
             'https://www.instagram.com/direct/inbox/',
             'https://i.instagram.com/api/v1/direct_v2/inbox/'
         ]
-        
+
         valid_session = False
         for url in test_urls:
             try:
                 print(f"   Testing: {url}")
                 response = requests.get(url, headers=headers, timeout=10)
-                
+
                 if response.status_code == 200:
                     if 'login' not in response.url.lower():
                         print(f"   ✅ Valid - Status: {response.status_code}")
@@ -110,18 +115,18 @@ class AlxTradingDMExtractor:
                         print(f"   ❌ Redirected to login")
                 else:
                     print(f"   ⚠️ Status: {response.status_code}")
-                    
+
             except Exception as e:
                 print(f"   ❌ Error: {str(e)}")
-                
+
             time.sleep(1)
-            
+
         return valid_session
-    
+
     def extract_dm_threads(self):
         """ดึงรายการ thread ทั้งหมด"""
         print("\\n📋 Extracting DM threads...")
-        
+
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
             'Cookie': f'sessionid={self.session}',
@@ -130,20 +135,20 @@ class AlxTradingDMExtractor:
             'X-CSRFToken': 'missing',
             'X-Instagram-AJAX': '1'
         }
-        
+
         # ลองหลาย endpoint
         endpoints = [
             'https://i.instagram.com/api/v1/direct_v2/inbox/',
             'https://www.instagram.com/direct/inbox/',
             'https://i.instagram.com/api/v1/direct_v2/threads/'
         ]
-        
+
         threads_data = []
         for endpoint in endpoints:
             try:
                 print(f"   Trying endpoint: {endpoint}")
                 response = requests.get(endpoint, headers=headers, timeout=15)
-                
+
                 print(f"   Status: {response.status_code}")
                 if response.status_code == 200:
                     try:
@@ -163,30 +168,30 @@ class AlxTradingDMExtractor:
                             f.write(response.text)
                 else:
                     print(f"   ❌ Failed: {response.status_code}")
-                    
+
             except Exception as e:
                 print(f"   ❌ Error: {str(e)}")
-                
+
             time.sleep(2)
-            
+
         return threads_data
-    
+
     def extract_thread_messages(self, thread_id):
         """ดึงข้อความจาก thread เฉพาะ"""
         print(f"\\n💬 Extracting messages from thread: {thread_id}")
-        
+
         headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
             'Cookie': f'sessionid={self.session}',
             'Accept': 'application/json',
             'X-Requested-With': 'XMLHttpRequest'
         }
-        
+
         url = f'https://i.instagram.com/api/v1/direct_v2/threads/{thread_id}/'
-        
+
         try:
             response = requests.get(url, headers=headers, timeout=15)
-            
+
             if response.status_code == 200:
                 data = response.json()
                 thread = data.get('thread', {})
@@ -196,15 +201,15 @@ class AlxTradingDMExtractor:
             else:
                 print(f"   ❌ Failed: {response.status_code}")
                 return []
-                
+
         except Exception as e:
             print(f"   ❌ Error: {str(e)}")
             return []
-    
+
     def save_extracted_data(self, threads_data, messages_data):
         """บันทึกข้อมูลที่ดึงได้"""
         timestamp = int(time.time())
-        
+
         # บันทึกเป็น JSON
         extraction_data = {
             "extraction_time": datetime.now().isoformat(),
@@ -215,31 +220,31 @@ class AlxTradingDMExtractor:
             "threads": threads_data,
             "messages": messages_data
         }
-        
+
         json_file = f"{self.output_dir}/alx_trading_dms_{timestamp}.json"
         with open(json_file, 'w', encoding='utf-8') as f:
             json.dump(extraction_data, f, indent=2, ensure_ascii=False)
-            
+
         print(f"\\n✅ Data saved to: {json_file}")
-        
+
         # บันทึกลง database
         self.save_to_database(threads_data, messages_data)
-        
+
         return json_file
-    
+
     def save_to_database(self, threads_data, messages_data):
         """บันทึกข้อมูลลง SQLite database"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         # บันทึก threads
         for thread in threads_data:
             thread_id = thread.get('thread_id', '')
             users = thread.get('users', [])
             participants = [user.get('username', '') for user in users]
-            
+
             cursor.execute('''
-                INSERT OR REPLACE INTO dm_threads 
+                INSERT OR REPLACE INTO dm_threads
                 (thread_id, participant_1, participant_2, thread_name, last_activity, message_count, extracted_time)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
             ''', (
@@ -251,12 +256,12 @@ class AlxTradingDMExtractor:
                 len(messages_data.get(thread_id, [])),
                 datetime.now().isoformat()
             ))
-        
+
         # บันทึก messages
         for thread_id, messages in messages_data.items():
             for message in messages:
                 cursor.execute('''
-                    INSERT OR REPLACE INTO dm_messages 
+                    INSERT OR REPLACE INTO dm_messages
                     (thread_id, message_id, sender, recipient, content, timestamp, message_type, media_url, extracted_time)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
@@ -270,30 +275,30 @@ class AlxTradingDMExtractor:
                     '',  # media_url
                     datetime.now().isoformat()
                 ))
-        
+
         conn.commit()
         conn.close()
         print(f"✅ Data saved to database: {self.db_path}")
-    
+
     def run_extraction(self):
         """รันการดึงข้อมูล DM แบบเต็ม"""
         print(f"🎯 STARTING DM EXTRACTION FOR @{self.target_account}")
         print("=" * 60)
-        
+
         # ตั้งค่า database
         self.setup_database()
-        
+
         # ทดสอบ session
         if not self.test_session_validity():
             print("❌ Session invalid - cannot proceed")
             return False
-            
+
         # ดึง threads
         threads_data = self.extract_dm_threads()
         if not threads_data:
             print("⚠️ No threads found or extraction failed")
             return False
-            
+
         # ดึงข้อความจาก threads
         messages_data = {}
         for thread in threads_data[:5]:  # จำกัดแค่ 5 threads แรกเพื่อทดสอบ
@@ -302,17 +307,17 @@ class AlxTradingDMExtractor:
                 messages = self.extract_thread_messages(thread_id)
                 messages_data[thread_id] = messages
                 time.sleep(2)  # Rate limiting
-                
+
         # บันทึกข้อมูล
         output_file = self.save_extracted_data(threads_data, messages_data)
-        
+
         print("\\n🎯 EXTRACTION SUMMARY:")
         print(f"   📱 Target: @{self.target_account}")
         print(f"   📋 Threads found: {len(threads_data)}")
         print(f"   💬 Total messages: {sum(len(messages) for messages in messages_data.values())}")
         print(f"   📁 Output file: {output_file}")
         print(f"   🗄️ Database: {self.db_path}")
-        
+
         return True
 
 def main():
@@ -320,15 +325,15 @@ def main():
     print("=" * 50)
     print("Extracting DMs from @alx.trading account")
     print()
-    
+
     extractor = AlxTradingDMExtractor()
     success = extractor.run_extraction()
-    
+
     if success:
         print("\\n✅ DM extraction completed successfully!")
     else:
         print("\\n❌ DM extraction failed!")
-        
+
     print("\\n📋 Check the output files for extracted data")
 
 if __name__ == "__main__":

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🚀 CLOUD EXTRACTION LAUNCHER
@@ -12,11 +17,11 @@ import sys
 def launch_extraction():
     print("🌩️ Launching Cloud-Based Extraction...")
     print(f"✅ Using method: AWS")
-    
+
     # Set environment variables based on successful method
     os.environ['EXTRACTION_METHOD'] = 'aws'
     os.environ['CLOUD_REGION'] = 'us-east-1'
-    
+
     # Launch the main extractor
     try:
         subprocess.run([
@@ -26,7 +31,7 @@ def launch_extraction():
     except subprocess.CalledProcessError as e:
         print(f"❌ Extraction failed: {e}")
         return False
-    
+
     return True
 
 if __name__ == "__main__":

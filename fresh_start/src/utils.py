@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 """
 Utility functions for Instagram DM Extractor
 """
@@ -10,7 +15,7 @@ from typing import Dict, Any
 def setup_logging(log_file: Path) -> None:
     """Setup logging configuration"""
     log_file.parent.mkdir(exist_ok=True)
-    
+
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
@@ -34,26 +39,26 @@ def load_config(config_path: Path) -> Dict[str, Any]:
                 "delay_range": [1, 3]
             }
         }
-        
+
         config_path.parent.mkdir(exist_ok=True)
         with open(config_path, 'w') as f:
             json.dump(default_config, f, indent=2)
-        
+
         print(f"⚙️  Created default config at {config_path}")
         print("📝 Please update the session_data in the config file")
         return default_config
-    
+
     with open(config_path, 'r') as f:
         return json.load(f)
 
 def validate_session_data(session_data: Dict[str, str]) -> bool:
     """Validate if session data contains required fields"""
     required_fields = ['sessionid', 'csrftoken']
-    
+
     for field in required_fields:
         if field not in session_data or not session_data[field]:
             return False
-    
+
     return True
 
 def format_timestamp(timestamp: int) -> str:

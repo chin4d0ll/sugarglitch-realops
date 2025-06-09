@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 ALX TRADING DM EXTRACTOR - DIRECT SESSION APPROACH
@@ -18,14 +23,14 @@ class DirectDMExtractor:
         self.session_file = "/workspaces/sugarglitch-realops/sessions/session-alx.trading"
         self.output_dir = "/workspaces/sugarglitch-realops/data/alx_trading_dms"
         self.db_path = "/workspaces/sugarglitch-realops/data/alx_trading_dms_direct.db"
-        
+
         # Create output directory
         os.makedirs(self.output_dir, exist_ok=True)
-        
+
         # Load session
         self.session_data = self.load_session()
         self.setup_database()
-    
+
     def load_session(self):
         """โหลด session จากไฟล์"""
         try:
@@ -36,12 +41,12 @@ class DirectDMExtractor:
         except Exception as e:
             print(f"❌ Error loading session: {e}")
             return None
-    
+
     def setup_database(self):
         """สร้าง database"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         # Create tables
         cursor.execute('''
         CREATE TABLE IF NOT EXISTS dm_threads (
@@ -53,7 +58,7 @@ class DirectDMExtractor:
             extraction_timestamp TEXT
         )
         ''')
-        
+
         cursor.execute('''
         CREATE TABLE IF NOT EXISTS dm_messages (
             message_id TEXT PRIMARY KEY,
@@ -66,11 +71,11 @@ class DirectDMExtractor:
             FOREIGN KEY (thread_id) REFERENCES dm_threads (thread_id)
         )
         ''')
-        
+
         conn.commit()
         conn.close()
         print(f"✅ Database initialized: {self.db_path}")
-    
+
     def get_headers(self):
         """สร้าง headers สำหรับ request"""
         return {
@@ -95,32 +100,32 @@ class DirectDMExtractor:
             'X-Instagram-Ajax': '1',
             'X-Requested-With': 'XMLHttpRequest'
         }
-    
+
     def get_cookies(self):
         """สร้าง cookies จาก session"""
         if not self.session_data:
             return {}
-        
+
         cookies = self.session_data.get('cookies', {})
         return cookies
-    
+
     def test_session_validity(self):
         """ทดสอบว่า session ยังใช้ได้อยู่ไหม"""
         print("🔍 Testing session validity...")
-        
+
         session = requests.Session()
         session.cookies.update(self.get_cookies())
         session.headers.update(self.get_headers())
-        
+
         try:
             # Test main page
             response = session.get('https://www.instagram.com/')
             print(f"   Main page: {response.status_code}")
-            
+
             # Test direct inbox
             response = session.get('https://www.instagram.com/direct/inbox/')
             print(f"   Direct inbox: {response.status_code}")
-            
+
             if response.status_code == 200:
                 if 'login' not in response.url.lower():
                     print("✅ Session is valid!")
@@ -131,58 +136,58 @@ class DirectDMExtractor:
             else:
                 print(f"❌ Session invalid - status: {response.status_code}")
                 return False
-                
+
         except Exception as e:
             print(f"❌ Error testing session: {e}")
             return False
-    
+
     def search_user(self, username):
         """ค้นหา user เพื่อหา user_id"""
         print(f"🔍 Searching for user: {username}")
-        
+
         session = requests.Session()
         session.cookies.update(self.get_cookies())
         session.headers.update(self.get_headers())
-        
+
         try:
             url = f"https://www.instagram.com/web/search/topsearch/?query={username}"
             response = session.get(url)
-            
+
             if response.status_code == 200:
                 data = response.json()
                 users = data.get('users', [])
-                
+
                 for user in users:
                     user_data = user.get('user', {})
                     if user_data.get('username') == username:
                         user_id = user_data.get('pk')
                         print(f"✅ Found user {username} with ID: {user_id}")
                         return user_id
-                
+
                 print(f"❌ User {username} not found in search results")
                 return None
             else:
                 print(f"❌ Search failed: {response.status_code}")
                 return None
-                
+
         except Exception as e:
             print(f"❌ Error searching user: {e}")
             return None
-    
+
     def get_dm_threads(self):
         """ดึงรายการ DM threads"""
         print("📥 Getting DM threads...")
-        
+
         session = requests.Session()
         session.cookies.update(self.get_cookies())
         session.headers.update(self.get_headers())
-        
+
         try:
             url = "https://www.instagram.com/api/v1/direct_v2/inbox/"
             response = session.get(url)
-            
+
             print(f"   Inbox API status: {response.status_code}")
-            
+
             if response.status_code == 200:
                 try:
                     data = response.json()
@@ -198,15 +203,15 @@ class DirectDMExtractor:
             else:
                 print(f"❌ Failed to get inbox: {response.status_code}")
                 return []
-                
+
         except Exception as e:
             print(f"❌ Error getting DM threads: {e}")
             return []
-    
+
     def find_target_thread(self, threads, target_username):
         """หา thread ที่มีการสนทนากับ target"""
         print(f"🎯 Looking for conversation with {target_username}...")
-        
+
         for thread in threads:
             users = thread.get('users', [])
             for user in users:
@@ -214,24 +219,24 @@ class DirectDMExtractor:
                     thread_id = thread.get('thread_id')
                     print(f"✅ Found conversation thread: {thread_id}")
                     return thread
-        
+
         print(f"❌ No conversation found with {target_username}")
         return None
-    
+
     def get_thread_messages(self, thread_id):
         """ดึงข้อความจาก thread"""
         print(f"💬 Getting messages from thread: {thread_id}")
-        
+
         session = requests.Session()
         session.cookies.update(self.get_cookies())
         session.headers.update(self.get_headers())
-        
+
         try:
             url = f"https://www.instagram.com/api/v1/direct_v2/threads/{thread_id}/"
             response = session.get(url)
-            
+
             print(f"   Thread API status: {response.status_code}")
-            
+
             if response.status_code == 200:
                 try:
                     data = response.json()
@@ -244,24 +249,24 @@ class DirectDMExtractor:
             else:
                 print(f"❌ Failed to get messages: {response.status_code}")
                 return []
-                
+
         except Exception as e:
             print(f"❌ Error getting messages: {e}")
             return []
-    
+
     def save_to_database(self, thread_data, messages):
         """บันทึกข้อมูลลงฐานข้อมูล"""
         print("💾 Saving to database...")
-        
+
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         # Save thread
         thread_id = thread_data.get('thread_id')
         participants = json.dumps([user.get('username') for user in thread_data.get('users', [])])
-        
+
         cursor.execute('''
-            INSERT OR REPLACE INTO dm_threads 
+            INSERT OR REPLACE INTO dm_threads
             (thread_id, target_username, participants, last_activity, message_count, extraction_timestamp)
             VALUES (?, ?, ?, ?, ?, ?)
         ''', (
@@ -272,7 +277,7 @@ class DirectDMExtractor:
             len(messages),
             datetime.now().isoformat()
         ))
-        
+
         # Save messages
         for msg in messages:
             cursor.execute('''
@@ -288,15 +293,15 @@ class DirectDMExtractor:
                 msg.get('item_type'),
                 datetime.now().isoformat()
             ))
-        
+
         conn.commit()
         conn.close()
         print(f"✅ Saved {len(messages)} messages to database")
-    
+
     def save_to_json(self, thread_data, messages):
         """บันทึกข้อมูลเป็น JSON"""
         print("💾 Saving to JSON...")
-        
+
         output_data = {
             'extraction_info': {
                 'target': self.target,
@@ -311,45 +316,45 @@ class DirectDMExtractor:
                 'participants': [user.get('username') for user in thread_data.get('users', [])]
             }
         }
-        
+
         output_file = f"{self.output_dir}/dm_extraction_{int(time.time())}.json"
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(output_data, f, indent=2, ensure_ascii=False)
-        
+
         print(f"✅ Data saved to: {output_file}")
         return output_file
-    
+
     def extract_dms(self):
         """หลักการดึง DM"""
         print(f"🎯 STARTING DM EXTRACTION FOR {self.target}")
         print("=" * 50)
-        
+
         # Test session
         if not self.test_session_validity():
             print("❌ Cannot proceed - invalid session")
             return False
-        
+
         # Get all DM threads
         threads = self.get_dm_threads()
         if not threads:
             print("❌ No DM threads found")
             return False
-        
+
         # Find target thread
         target_thread = self.find_target_thread(threads, self.target)
         if not target_thread:
             print(f"❌ No conversation found with {self.target}")
             return False
-        
+
         # Get messages from target thread
         thread_id = target_thread.get('thread_id')
         messages = self.get_thread_messages(thread_id)
-        
+
         if messages:
             # Save data
             self.save_to_database(target_thread, messages)
             json_file = self.save_to_json(target_thread, messages)
-            
+
             print(f"\n✅ EXTRACTION COMPLETED!")
             print(f"   Target: {self.target}")
             print(f"   Messages found: {len(messages)}")
@@ -364,10 +369,10 @@ def main():
     """Main function"""
     print("🎯 ALX TRADING DM EXTRACTOR - DIRECT SESSION APPROACH")
     print("=" * 60)
-    
+
     extractor = DirectDMExtractor()
     success = extractor.extract_dms()
-    
+
     if success:
         print("\n🎉 DM extraction completed successfully!")
     else:

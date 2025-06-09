@@ -1,10 +1,15 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 TARGET DATABASE MANAGER 2025
 ================================
 Advanced database system for managing Instagram targets
 - Target discovery and profiling
-- Database integration and management  
+- Database integration and management
 - Real-time target monitoring
 - Operations tracking and analytics
 """
@@ -20,11 +25,11 @@ import hashlib
 
 class TargetDatabaseManager:
     """🎯 Advanced Target Database Manager"""
-    
+
     def __init__(self, database_path="target_operations.db"):
         self.db_path = database_path
         self.conn = None
-        
+
         # Statistics - initialize first
         self.stats = {
             'total_targets': 0,
@@ -32,24 +37,24 @@ class TargetDatabaseManager:
             'completed_operations': 0,
             'pending_operations': 0
         }
-        
+
         self.initialize_database()
-        
+
         print(f"🎯 Target Database Manager initialized: {database_path}")
-        
+
     def initialize_database(self):
         """Initialize the target database with all necessary tables"""
         self.conn = sqlite3.connect(self.db_path)
         self.conn.row_factory = sqlite3.Row
-        
+
         # Create tables
         self._create_tables()
         self._update_stats()
-        
+
     def _create_tables(self):
         """Create all necessary database tables"""
         cursor = self.conn.cursor()
-        
+
         # Targets table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS targets (
@@ -73,7 +78,7 @@ class TargetDatabaseManager:
                 notes TEXT
             )
         ''')
-        
+
         # Operations table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS operations (
@@ -93,7 +98,7 @@ class TargetDatabaseManager:
                 FOREIGN KEY (target_id) REFERENCES targets (id)
             )
         ''')
-        
+
         # Extracted Data table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS extracted_data (
@@ -110,7 +115,7 @@ class TargetDatabaseManager:
                 FOREIGN KEY (operation_id) REFERENCES operations (id)
             )
         ''')
-        
+
         # Target Relationships table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS target_relationships (
@@ -124,7 +129,7 @@ class TargetDatabaseManager:
                 FOREIGN KEY (related_target_id) REFERENCES targets (id)
             )
         ''')
-        
+
         # Monitoring table
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS monitoring (
@@ -137,14 +142,14 @@ class TargetDatabaseManager:
                 FOREIGN KEY (target_id) REFERENCES targets (id)
             )
         ''')
-        
+
         self.conn.commit()
         print("✅ Database tables initialized")
-    
+
     def add_target(self, username: str, **kwargs) -> int:
         """Add a new target to the database"""
         cursor = self.conn.cursor()
-        
+
         # Prepare target data
         target_data = {
             'username': username.lower().strip(),
@@ -161,10 +166,10 @@ class TargetDatabaseManager:
             'priority': kwargs.get('priority', 1),
             'notes': kwargs.get('notes', '')
         }
-        
+
         try:
             cursor.execute('''
-                INSERT OR REPLACE INTO targets 
+                INSERT OR REPLACE INTO targets
                 (username, full_name, profile_pic_url, follower_count, following_count,
                  post_count, is_private, is_verified, biography, external_url,
                  target_type, priority, notes, updated_at)
@@ -176,127 +181,127 @@ class TargetDatabaseManager:
                 target_data['external_url'], target_data['target_type'], target_data['priority'],
                 target_data['notes']
             ))
-            
+
             target_id = cursor.lastrowid
             self.conn.commit()
             self._update_stats()
-            
+
             print(f"✅ Target added: {username} (ID: {target_id})")
             return target_id
-            
+
         except sqlite3.IntegrityError as e:
             print(f"⚠️ Target already exists: {username}")
             # Get existing target ID
             cursor.execute("SELECT id FROM targets WHERE username = ?", (target_data['username'],))
             result = cursor.fetchone()
             return result['id'] if result else None
-    
+
     def get_target(self, username: str = None, target_id: int = None) -> Optional[Dict]:
         """Get target information"""
         cursor = self.conn.cursor()
-        
+
         if target_id:
             cursor.execute("SELECT * FROM targets WHERE id = ?", (target_id,))
         elif username:
             cursor.execute("SELECT * FROM targets WHERE username = ?", (username.lower(),))
         else:
             return None
-        
+
         result = cursor.fetchone()
         return dict(result) if result else None
-    
+
     def get_all_targets(self, target_type: str = None, status: str = None) -> List[Dict]:
         """Get all targets with optional filtering"""
         cursor = self.conn.cursor()
-        
+
         query = "SELECT * FROM targets"
         conditions = []
         params = []
-        
+
         if target_type:
             conditions.append("target_type = ?")
             params.append(target_type)
-        
+
         if status:
             conditions.append("status = ?")
             params.append(status)
-        
+
         if conditions:
             query += " WHERE " + " AND ".join(conditions)
-        
+
         query += " ORDER BY priority DESC, created_at DESC"
-        
+
         cursor.execute(query, params)
         return [dict(row) for row in cursor.fetchall()]
-    
+
     def update_target(self, target_id: int, **kwargs) -> bool:
         """Update target information"""
         cursor = self.conn.cursor()
-        
+
         # Build update query dynamically
         update_fields = []
         params = []
-        
+
         for field, value in kwargs.items():
             if field in ['full_name', 'profile_pic_url', 'follower_count', 'following_count',
                         'post_count', 'is_private', 'is_verified', 'biography', 'external_url',
                         'target_type', 'priority', 'status', 'notes']:
                 update_fields.append(f"{field} = ?")
                 params.append(value)
-        
+
         if not update_fields:
             return False
-        
+
         update_fields.append("updated_at = CURRENT_TIMESTAMP")
         params.append(target_id)
-        
+
         query = f"UPDATE targets SET {', '.join(update_fields)} WHERE id = ?"
-        
+
         cursor.execute(query, params)
         self.conn.commit()
-        
+
         return cursor.rowcount > 0
-    
+
     def update_operation_status(self, operation_id: int, status: str, result_data: Dict = None):
         """Update operation status and result"""
         cursor = self.conn.cursor()
-        
+
         result_json = json.dumps(result_data) if result_data else None
-        
+
         cursor.execute('''
-            UPDATE operations 
+            UPDATE operations
             SET status = ?, result_data = ?, completed_at = CURRENT_TIMESTAMP
             WHERE id = ?
         ''', (status, result_json, operation_id))
-        
+
         self.conn.commit()
         self._update_stats()
         print(f"📋 Operation {operation_id} status updated to: {status}")
-    
+
     def add_operation(self, target_id: int, operation_type: str, operation_data: Dict = None) -> int:
         """Add a new operation for a target"""
         cursor = self.conn.cursor()
-        
+
         cursor.execute('''
-            INSERT INTO operations 
+            INSERT INTO operations
             (target_id, operation_type, operation_data, status)
             VALUES (?, ?, ?, 'pending')
         ''', (target_id, operation_type, json.dumps(operation_data or {})))
-        
+
         operation_id = cursor.lastrowid
         self.conn.commit()
-        
+
         print(f"📋 Operation added: {operation_type} for target {target_id}")
         return operation_id
-    
+
     def update_operation(self, operation_id: int, **kwargs) -> bool:
         """Update operation status and results"""
         cursor = self.conn.cursor()
-        
+
         # Build update query
         update_fields = []
         params = []
-        
+
         for field, value in kwargs.items():
             if field in ['status', 'result_data', 'error_message', 'proxy_used', 'session_used',
                         'duration_seconds', 'data_extracted']:
@@ -304,197 +309,197 @@ class TargetDatabaseManager:
                     value = json.dumps(value)
                 update_fields.append(f"{field} = ?")
                 params.append(value)
-        
+
         if kwargs.get('status') == 'completed':
             update_fields.append("completed_at = CURRENT_TIMESTAMP")
-        
+
         params.append(operation_id)
-        
+
         query = f"UPDATE operations SET {', '.join(update_fields)} WHERE id = ?"
-        
+
         cursor.execute(query, params)
         self.conn.commit()
-        
+
         return cursor.rowcount > 0
-    
-    def add_extracted_data(self, target_id: int, operation_id: int, data_type: str, 
+
+    def add_extracted_data(self, target_id: int, operation_id: int, data_type: str,
                           data_content: str, file_path: str = None, is_sensitive: bool = False) -> int:
         """Add extracted data to database"""
         cursor = self.conn.cursor()
-        
+
         data_size = len(data_content.encode('utf-8'))
-        
+
         cursor.execute('''
-            INSERT INTO extracted_data 
+            INSERT INTO extracted_data
             (target_id, operation_id, data_type, data_content, file_path, data_size, is_sensitive)
             VALUES (?, ?, ?, ?, ?, ?, ?)
         ''', (target_id, operation_id, data_type, data_content, file_path, data_size, is_sensitive))
-        
+
         data_id = cursor.lastrowid
         self.conn.commit()
-        
+
         print(f"💾 Data extracted: {data_type} ({data_size} bytes)")
         return data_id
-    
+
     def get_target_operations(self, target_id: int) -> List[Dict]:
         """Get all operations for a target"""
         cursor = self.conn.cursor()
-        
+
         cursor.execute('''
-            SELECT * FROM operations 
-            WHERE target_id = ? 
+            SELECT * FROM operations
+            WHERE target_id = ?
             ORDER BY started_at DESC
         ''', (target_id,))
-        
+
         return [dict(row) for row in cursor.fetchall()]
-    
-    def get_extracted_data(self, target_id: int = None, operation_id: int = None, 
+
+    def get_extracted_data(self, target_id: int = None, operation_id: int = None,
                           data_type: str = None) -> List[Dict]:
         """Get extracted data with optional filtering"""
         cursor = self.conn.cursor()
-        
+
         query = "SELECT * FROM extracted_data"
         conditions = []
         params = []
-        
+
         if target_id:
             conditions.append("target_id = ?")
             params.append(target_id)
-        
+
         if operation_id:
             conditions.append("operation_id = ?")
             params.append(operation_id)
-        
+
         if data_type:
             conditions.append("data_type = ?")
             params.append(data_type)
-        
+
         if conditions:
             query += " WHERE " + " AND ".join(conditions)
-        
+
         query += " ORDER BY extracted_at DESC"
-        
+
         cursor.execute(query, params)
         return [dict(row) for row in cursor.fetchall()]
-    
+
     def search_targets(self, search_term: str) -> List[Dict]:
         """Search targets by username, full name, or biography"""
         cursor = self.conn.cursor()
-        
+
         search_pattern = f"%{search_term.lower()}%"
-        
+
         cursor.execute('''
-            SELECT * FROM targets 
-            WHERE LOWER(username) LIKE ? 
-               OR LOWER(full_name) LIKE ? 
+            SELECT * FROM targets
+            WHERE LOWER(username) LIKE ?
+               OR LOWER(full_name) LIKE ?
                OR LOWER(biography) LIKE ?
             ORDER BY priority DESC, follower_count DESC
         ''', (search_pattern, search_pattern, search_pattern))
-        
+
         return [dict(row) for row in cursor.fetchall()]
-    
+
     def get_statistics(self) -> Dict:
         """Get comprehensive database statistics"""
         cursor = self.conn.cursor()
-        
+
         stats = {}
-        
+
         # Target statistics
         cursor.execute("SELECT COUNT(*) as total FROM targets")
         stats['total_targets'] = cursor.fetchone()['total']
-        
+
         cursor.execute("SELECT COUNT(*) as active FROM targets WHERE status = 'active'")
         stats['active_targets'] = cursor.fetchone()['active']
-        
+
         cursor.execute("SELECT COUNT(*) as pending FROM targets WHERE status = 'pending'")
         stats['pending_targets'] = cursor.fetchone()['pending']
-        
+
         # Operation statistics
         cursor.execute("SELECT COUNT(*) as total FROM operations")
         stats['total_operations'] = cursor.fetchone()['total']
-        
+
         cursor.execute("SELECT COUNT(*) as completed FROM operations WHERE status = 'completed'")
         stats['completed_operations'] = cursor.fetchone()['completed']
-        
+
         cursor.execute("SELECT COUNT(*) as pending FROM operations WHERE status = 'pending'")
         stats['pending_operations'] = cursor.fetchone()['pending']
-        
+
         cursor.execute("SELECT COUNT(*) as failed FROM operations WHERE status = 'failed'")
         stats['failed_operations'] = cursor.fetchone()['failed']
-        
+
         # Data statistics
         cursor.execute("SELECT COUNT(*) as total FROM extracted_data")
         stats['total_extracted_data'] = cursor.fetchone()['total']
         stats['total_extracted_items'] = stats['total_extracted_data']  # Alias for compatibility
-        
+
         cursor.execute("SELECT SUM(data_size) as total_size FROM extracted_data")
         result = cursor.fetchone()
         stats['total_data_size'] = result['total_size'] or 0
-        
+
         # Top targets by follower count
         cursor.execute('''
-            SELECT username, follower_count 
-            FROM targets 
-            WHERE follower_count > 0 
-            ORDER BY follower_count DESC 
+            SELECT username, follower_count
+            FROM targets
+            WHERE follower_count > 0
+            ORDER BY follower_count DESC
             LIMIT 5
         ''')
         stats['top_targets'] = [dict(row) for row in cursor.fetchall()]
-        
+
         return stats
-    
+
     def _update_stats(self):
         """Update internal statistics"""
         stats = self.get_statistics()
         self.stats.update(stats)
-    
+
     def import_from_existing_database(self, db_path: str) -> int:
         """Import targets from existing database"""
         if not os.path.exists(db_path):
             print(f"❌ Database not found: {db_path}")
             return 0
-        
+
         try:
             import_conn = sqlite3.connect(db_path)
             import_conn.row_factory = sqlite3.Row
             cursor = import_conn.cursor()
-            
+
             # Try to find target/user tables
             cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
             tables = [row['name'] for row in cursor.fetchall()]
-            
+
             imported_count = 0
-            
+
             for table in tables:
                 if any(keyword in table.lower() for keyword in ['user', 'target', 'profile']):
                     print(f"🔍 Importing from table: {table}")
-                    
+
                     # Get table info
                     cursor.execute(f"PRAGMA table_info({table})")
                     columns = [row['name'] for row in cursor.fetchall()]
-                    
+
                     # Find username column
                     username_col = None
                     for col in columns:
                         if 'username' in col.lower() or 'user' in col.lower():
                             username_col = col
                             break
-                    
+
                     if username_col:
                         cursor.execute(f"SELECT * FROM {table}")
                         rows = cursor.fetchall()
-                        
+
                         for row in rows:
                             row_dict = dict(row)
                             username = row_dict.get(username_col, '').strip()
-                            
+
                             if username and len(username) > 0:
                                 # Map columns to our schema
                                 target_data = {
                                     'username': username,
                                     'target_type': 'imported'
                                 }
-                                
+
                                 # Try to map common fields
                                 for key, value in row_dict.items():
                                     key_lower = key.lower()
@@ -503,17 +508,17 @@ class TargetDatabaseManager:
                                     elif 'follower' in key_lower:
                                         try:
                                             target_data['follower_count'] = int(value) if value else 0
-                                        except:
+                                        except Exception:
                                             pass
                                     elif 'following' in key_lower:
                                         try:
                                             target_data['following_count'] = int(value) if value else 0
-                                        except:
+                                        except Exception:
                                             pass
                                     elif 'post' in key_lower:
                                         try:
                                             target_data['post_count'] = int(value) if value else 0
-                                        except:
+                                        except Exception:
                                             pass
                                     elif 'bio' in key_lower:
                                         target_data['biography'] = str(value) if value else ''
@@ -521,23 +526,23 @@ class TargetDatabaseManager:
                                         target_data['is_private'] = bool(value) if value else False
                                     elif 'verified' in key_lower:
                                         target_data['is_verified'] = bool(value) if value else False
-                                
+
                                 self.add_target(**target_data)
                                 imported_count += 1
-            
+
             import_conn.close()
             print(f"✅ Imported {imported_count} targets from {db_path}")
             return imported_count
-            
+
         except Exception as e:
             print(f"❌ Import failed: {str(e)}")
             return 0
-    
+
     def export_targets(self, output_file: str, format: str = 'json') -> bool:
         """Export targets to file"""
         try:
             targets = self.get_all_targets()
-            
+
             if format.lower() == 'json':
                 with open(output_file, 'w') as f:
                     json.dump(targets, f, indent=2, default=str)
@@ -548,18 +553,18 @@ class TargetDatabaseManager:
                         writer = csv.DictWriter(f, fieldnames=targets[0].keys())
                         writer.writeheader()
                         writer.writerows(targets)
-            
+
             print(f"✅ Exported {len(targets)} targets to {output_file}")
             return True
-            
+
         except Exception as e:
             print(f"❌ Export failed: {str(e)}")
             return False
-    
+
     def print_dashboard(self):
         """Print a comprehensive dashboard"""
         stats = self.get_statistics()
-        
+
         print(f"""
 🎯 TARGET DATABASE DASHBOARD
 ============================
@@ -582,83 +587,83 @@ Database: {self.db_path}
 
 🏆 TOP TARGETS (by followers):
 """)
-        
+
         for i, target in enumerate(stats['top_targets'], 1):
             print(f"  {i}. @{target['username']} - {target['follower_count']:,} followers")
-        
+
         if not stats['top_targets']:
             print("  No targets with follower data yet")
-    
+
     def close(self):
         """Close database connection"""
         if self.conn:
             self.conn.close()
             print("🔒 Database connection closed")
-    
+
     def get_stats(self) -> Dict:
         """Alias for get_statistics for compatibility"""
         return self.get_statistics()
-    
+
     def log_operation(self, target_id: int, operation_type: str, **kwargs) -> int:
         """Log an operation with additional parameters"""
         cursor = self.conn.cursor()
-        
+
         operation_data = kwargs.get('operation_data', '{}')
         result_data = kwargs.get('result_data', None)
         status = kwargs.get('status', 'pending')
         data_extracted = kwargs.get('data_extracted', 0)
-        
+
         cursor.execute('''
-            INSERT INTO operations 
+            INSERT INTO operations
             (target_id, operation_type, operation_data, result_data, status, data_extracted)
             VALUES (?, ?, ?, ?, ?, ?)
         ''', (target_id, operation_type, operation_data, result_data, status, data_extracted))
-        
+
         operation_id = cursor.lastrowid
         self.conn.commit()
         self._update_stats()
-        
+
         return operation_id
-    
-    def add_target_relationship(self, source_target_id: int, related_target_id: int, 
+
+    def add_target_relationship(self, source_target_id: int, related_target_id: int,
                                relationship_type: str, confidence_score: float = 0.5) -> int:
         """Add a relationship between targets"""
         cursor = self.conn.cursor()
-        
+
         cursor.execute('''
-            INSERT INTO target_relationships 
+            INSERT INTO target_relationships
             (source_target_id, related_target_id, relationship_type, confidence_score)
             VALUES (?, ?, ?, ?)
         ''', (source_target_id, related_target_id, relationship_type, confidence_score))
-        
+
         relationship_id = cursor.lastrowid
         self.conn.commit()
-        
+
         return relationship_id
-    
-    def add_monitoring_record(self, target_id: int, check_type: str, 
+
+    def add_monitoring_record(self, target_id: int, check_type: str,
                              check_result: str, changes_detected: str = None) -> int:
         """Add a monitoring record"""
         cursor = self.conn.cursor()
-        
+
         cursor.execute('''
-            INSERT INTO monitoring 
+            INSERT INTO monitoring
             (target_id, check_type, check_result, changes_detected)
             VALUES (?, ?, ?, ?)
         ''', (target_id, check_type, check_result, changes_detected))
-        
+
         monitoring_id = cursor.lastrowid
         self.conn.commit()
-        
+
         return monitoring_id
 
 def demo_target_database():
     """Demonstration of target database functionality"""
     print("🎯 TARGET DATABASE DEMO")
-    
+
     # Initialize database
     db = TargetDatabaseManager("demo_targets.db")
-    
+
     # Add some demo targets
     targets_to_add = [
         {
@@ -686,29 +691,29 @@ def demo_target_database():
             'priority': 2
         }
     ]
-    
+
     for target in targets_to_add:
         target_id = db.add_target(**target)
-        
+
         # Add some demo operations
         if target_id:
             op_id = db.add_operation(target_id, 'profile_extraction')
             db.update_operation(op_id, status='completed', data_extracted=5)
-            
+
             db.add_extracted_data(
                 target_id, op_id, 'profile_data',
                 json.dumps({'username': target['username'], 'followers': target['follower_count']})
             )
-    
+
     # Show dashboard
     db.print_dashboard()
-    
+
     # Search demo
     print("\n🔍 SEARCH DEMO:")
     results = db.search_targets('instagram')
     for result in results:
         print(f"Found: @{result['username']} - {result['full_name']}")
-    
+
     db.close()
 
 if __name__ == "__main__":

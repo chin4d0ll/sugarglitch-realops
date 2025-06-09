@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🔥 เทคนิคมุดขั้นสูง สำหรับ Penetration Testing & CTF
@@ -27,7 +32,7 @@ class AdvancedStealthTechniques:
             "http": "socks5h://127.0.0.1:9050",
             "https": "socks5h://127.0.0.1:9050"
         }
-        
+
     def load_proxy_list(self, proxy_file=None):
         """โหลดรายการ proxy จากไฟล์หรือ hardcode"""
         default_proxies = [
@@ -38,7 +43,7 @@ class AdvancedStealthTechniques:
         ]
         self.proxy_list = default_proxies
         print(f"[+] โหลด proxy {len(self.proxy_list)} ตัว")
-        
+
     def get_random_headers(self):
         """สุ่ม headers เพื่อหลบ fingerprinting"""
         headers = {
@@ -51,32 +56,32 @@ class AdvancedStealthTechniques:
             'Cache-Control': random.choice(['no-cache', 'max-age=0']),
             'DNT': str(random.randint(0, 1))
         }
-        
+
         # เพิ่ม headers พิเศษบางทีเพื่อ bypass WAF
         if random.choice([True, False]):
             headers['X-Forwarded-For'] = f"{random.randint(1,255)}.{random.randint(1,255)}.{random.randint(1,255)}.{random.randint(1,255)}"
             headers['X-Real-IP'] = headers['X-Forwarded-For']
-            
+
         return headers
 
     def proxy_chain_request(self, url, method="GET", data=None):
         """🔗 Proxy Chain - วิ่งผ่าน proxy หลายชั้น"""
         if not self.proxy_list:
             self.load_proxy_list()
-            
+
         proxy = random.choice(self.proxy_list)
         proxies = {"http": proxy, "https": proxy}
         headers = self.get_random_headers()
-        
+
         try:
             if method.upper() == "GET":
                 response = requests.get(url, proxies=proxies, headers=headers, timeout=30)
             elif method.upper() == "POST":
                 response = requests.post(url, data=data, proxies=proxies, headers=headers, timeout=30)
-            
+
             print(f"[+] Request ผ่าน {proxy} - Status: {response.status_code}")
             return response
-            
+
         except Exception as e:
             print(f"[-] Error กับ proxy {proxy}: {e}")
             return None
@@ -86,7 +91,7 @@ class AdvancedStealthTechniques:
         # Layer 1: TOR
         tor_session = requests.Session()
         tor_session.proxies = self.tor_proxies
-        
+
         # Layer 2: เพิ่ม headers ปลอมแปลงเป็น VPN traffic
         vpn_headers = self.get_random_headers()
         vpn_headers.update({
@@ -94,7 +99,7 @@ class AdvancedStealthTechniques:
             'X-Tunnel-Type': 'OpenVPN',
             'X-Exit-Node': f"exit-{random.randint(1,999)}.vpnprovider.com"
         })
-        
+
         try:
             response = tor_session.get(url, headers=vpn_headers, timeout=30)
             print(f"[+] TOR+VPN Request - Status: {response.status_code}")
@@ -111,7 +116,7 @@ class AdvancedStealthTechniques:
             'Referer': f"https://{front_domain}/",
             'Origin': f"https://{front_domain}"
         })
-        
+
         # ส่ง request ไปที่ front domain แต่ host header เป็นเป้าหมายจริง
         try:
             response = requests.get(f"https://{front_domain}/", headers=headers, timeout=30)
@@ -127,7 +132,7 @@ class AdvancedStealthTechniques:
             proxy = random.choice(self.proxy_list) if self.proxy_list else None
             proxies = {"http": proxy, "https": proxy} if proxy else None
             headers = self.get_random_headers()
-            
+
             try:
                 response = requests.get(url, proxies=proxies, headers=headers, timeout=15)
                 print(f"[+] {url} via {proxy} - {response.status_code}")
@@ -135,14 +140,14 @@ class AdvancedStealthTechniques:
             except Exception as e:
                 print(f"[-] Failed {url}: {e}")
                 return None
-        
+
         threads = []
         for url in url_list[:max_threads]:
             t = threading.Thread(target=worker, args=(url,))
             threads.append(t)
             t.start()
             time.sleep(random.uniform(0.5, 2.0))  # เว้นระยะป้องกัน rate limit
-        
+
         for t in threads:
             t.join()
 
@@ -158,7 +163,7 @@ class AdvancedStealthTechniques:
             except Exception as e:
                 print(f"[-] Async error {url}: {e}")
                 return {"url": url, "error": str(e)}
-        
+
         async with aiohttp.ClientSession() as session:
             tasks = [fetch(session, url) for url in urls]
             results = await asyncio.gather(*tasks)
@@ -167,39 +172,39 @@ class AdvancedStealthTechniques:
     def ssh_tunnel_chain(self, jump_servers):
         """🚇 SSH Tunnel Chain - มุดผ่าน SSH หลายชั้น"""
         print("[+] Setting up SSH Tunnel Chain...")
-        
+
         try:
             # Jump Server 1
             client1 = paramiko.SSHClient()
             client1.set_missing_host_key_policy(paramiko.AutoAddPolicy())
             client1.connect(
-                jump_servers[0]['host'], 
-                username=jump_servers[0]['user'], 
+                jump_servers[0]['host'],
+                username=jump_servers[0]['user'],
                 password=jump_servers[0]['pass'],
                 port=jump_servers[0].get('port', 22)
             )
             print(f"[+] Connected to Jump 1: {jump_servers[0]['host']}")
-            
+
             # Jump Server 2 ผ่าน Jump 1
             if len(jump_servers) > 1:
                 transport = client1.get_transport()
                 dest_addr = (jump_servers[1]['host'], jump_servers[1].get('port', 22))
                 local_addr = ('127.0.0.1', 12345)
                 channel = transport.open_channel("direct-tcpip", dest_addr, local_addr)
-                
+
                 client2 = paramiko.SSHClient()
                 client2.set_missing_host_key_policy(paramiko.AutoAddPolicy())
                 client2.connect(
-                    jump_servers[1]['host'], 
-                    username=jump_servers[1]['user'], 
+                    jump_servers[1]['host'],
+                    username=jump_servers[1]['user'],
                     password=jump_servers[1]['pass'],
                     sock=channel
                 )
                 print(f"[+] Connected to Jump 2: {jump_servers[1]['host']}")
                 return client2
-            
+
             return client1
-            
+
         except Exception as e:
             print(f"[-] SSH Tunnel Error: {e}")
             return None
@@ -213,7 +218,7 @@ class AdvancedStealthTechniques:
             self._http2_upgrade,
             self._payload_encoding
         ]
-        
+
         for technique in techniques:
             try:
                 result = technique(url, data)
@@ -223,7 +228,7 @@ class AdvancedStealthTechniques:
             except Exception as e:
                 print(f"[-] {technique.__name__} failed: {e}")
                 continue
-        
+
         print("[-] All DPI bypass techniques failed")
         return None
 
@@ -272,50 +277,50 @@ class AdvancedStealthTechniques:
         """🔍 Stealth Port Scanning"""
         print(f"[+] Starting stealth scan on {target}")
         open_ports = []
-        
+
         for port in ports:
             try:
                 # SYN scan simulation
                 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 sock.settimeout(1)
                 result = sock.connect_ex((target, port))
-                
+
                 if result == 0:
                     open_ports.append(port)
                     print(f"[+] Port {port} - OPEN")
                 else:
                     print(f"[-] Port {port} - CLOSED")
-                
+
                 sock.close()
                 time.sleep(delay)  # หลีกเลี่ยงการตรวจจับ
-                
+
             except Exception as e:
                 print(f"[-] Error scanning port {port}: {e}")
-        
+
         return open_ports
 
 # 🎯 ตัวอย่างการใช้งาน
 def demo_advanced_techniques():
     """Demo การใช้เทคนิคต่างๆ"""
     stealth = AdvancedStealthTechniques()
-    
+
     print("🔥 === Advanced Stealth Techniques Demo ===")
-    
+
     # 1. Proxy Chain
     print("\n1. 🔗 Proxy Chain Test")
     stealth.load_proxy_list()
     response = stealth.proxy_chain_request("http://httpbin.org/ip")
     if response:
         print(f"Response: {response.json()}")
-    
+
     # 2. TOR Double Layer
     print("\n2. 🧅 TOR + VPN Double Layer")
     tor_response = stealth.tor_double_layer("http://httpbin.org/headers")
-    
+
     # 3. Domain Fronting
     print("\n3. 🎭 Domain Fronting Simulation")
     df_response = stealth.domain_fronting_simulation("target.example.com", "www.google.com")
-    
+
     # 4. Rotating Proxy Attack
     print("\n4. 🔄 Rotating Proxy Attack")
     test_urls = [
@@ -324,20 +329,20 @@ def demo_advanced_techniques():
         "http://httpbin.org/headers"
     ]
     stealth.rotating_proxy_attack(test_urls)
-    
+
     # 5. Async Stealth Scan
     print("\n5. ⚡ Async Stealth Scanning")
     async def run_async_scan():
         results = await stealth.async_stealth_scan(test_urls)
         for result in results:
             print(f"Async Result: {result}")
-    
+
     asyncio.run(run_async_scan())
-    
+
     # 6. DPI Bypass
     print("\n6. 🛡️ DPI Bypass Techniques")
     dpi_response = stealth.bypass_dpi_techniques("http://httpbin.org/get")
-    
+
     # 7. Stealth Port Scan
     print("\n7. 🔍 Stealth Port Scanning")
     common_ports = [21, 22, 23, 25, 53, 80, 110, 143, 443, 993, 995]

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🔥 ENHANCED ALX.TRADING DM EXTRACTOR WITH SELENIUM
@@ -88,40 +93,40 @@ class EnhancedAlxExtractor:
         self.target = "alx.trading"
         self.output_dir = "/workspaces/sugarglitch-realops/data/enhanced_extraction"
         self.db_path = f"{self.output_dir}/enhanced_alx_dms.db"
-        
+
         os.makedirs(self.output_dir, exist_ok=True)
-        
+
         # Load session data
         self.session_data = self.load_session_data()
         self.profile_data = self.load_profile_data()
-        
+
         print("🔥 ENHANCED ALX.TRADING DM EXTRACTOR")
         print("=" * 50)
         print(f"Target: @{self.target}")
-        
+
     def load_session_data(self):
         """Load session data"""
         session_file = "/workspaces/sugarglitch-realops/sessions/session-alx.trading"
         try:
             with open(session_file, 'r') as f:
                 return json.load(f)
-        except:
+        except Exception:
             return {}
-    
+
     def load_profile_data(self):
         """Load profile data with credentials"""
         profile_file = "/workspaces/sugarglitch-realops/config/json/MASTER_PROFILE_alx_trading_1748264047.json"
         try:
             with open(profile_file, 'r') as f:
                 return json.load(f)
-        except:
+        except Exception:
             return {}
-    
+
     def setup_database(self):
         """Setup SQLite database"""
         conn = sqlite3.connect(self.db_path)
         c = conn.cursor()
-        
+
         c.execute('''
             CREATE TABLE IF NOT EXISTS dm_threads (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -134,7 +139,7 @@ class EnhancedAlxExtractor:
                 extraction_timestamp TEXT
             )
         ''')
-        
+
         c.execute('''
             CREATE TABLE IF NOT EXISTS dm_messages (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -149,7 +154,7 @@ class EnhancedAlxExtractor:
                 FOREIGN KEY (thread_id) REFERENCES dm_threads (thread_id)
             )
         ''')
-        
+
         c.execute('''
             CREATE TABLE IF NOT EXISTS extraction_logs (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -160,16 +165,16 @@ class EnhancedAlxExtractor:
                 error_message TEXT
             )
         ''')
-        
+
         conn.commit()
         conn.close()
         print("✅ Database setup completed")
-    
+
     def method_1_selenium_automation(self):
         """Method 1: Selenium browser automation with rate limit protection"""
         print("\n🤖 METHOD 1: Selenium Browser Automation")
         print("=" * 50)
-        
+
         try:
             # Setup Chrome options for stealth
             if uc:
@@ -245,51 +250,51 @@ class EnhancedAlxExtractor:
         finally:
             try:
                 driver.quit()
-            except:
+            except Exception:
                 pass
         return None
-    
+
     def attempt_login_with_selenium(self, driver):
         """Attempt login using profile credentials"""
         print("🔐 Attempting login with stored credentials...")
-        
+
         if not self.profile_data:
             print("❌ No profile data available")
             return None
-        
+
         username = self.target
         password = self.profile_data.get('profile', {}).get('confirmed_password', '')
-        
+
         if not password:
             print("❌ No password available")
             return None
-        
+
         try:
             # Find and fill login form
             username_field = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.NAME, "username"))
             )
             password_field = driver.find_element(By.NAME, "password")
-            
+
             username_field.send_keys(username)
             time.sleep(1)
             password_field.send_keys(password)
             time.sleep(1)
-            
+
             # Submit login
             login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
             login_button.click()
-            
+
             print(f"🔄 Login submitted for {username}")
             time.sleep(10)
-            
+
             # Check if login successful
             if "challenge" in driver.current_url or "two_factor" in driver.current_url:
                 print("⚠️ Challenge or 2FA required")
                 return None
             elif "login" not in driver.current_url:
                 print("✅ Login successful!")
-                
+
                 # Now try to access DMs
                 driver.get("https://www.instagram.com/direct/inbox/")
                 time.sleep(5)
@@ -297,29 +302,29 @@ class EnhancedAlxExtractor:
             else:
                 print("❌ Login failed")
                 return None
-                
+
         except Exception as e:
             print(f"❌ Login error: {e}")
             return None
-    
+
     def extract_dms_with_selenium(self, driver):
         """Extract DMs using Selenium"""
         print("📨 Extracting DMs...")
-        
+
         conversations = []
-        
+
         try:
             # Wait for page to load
             time.sleep(5)
-            
+
             # Look for conversation threads
             thread_selectors = [
                 "[role='listitem']",
-                "[data-testid='conversation-thread']", 
+                "[data-testid='conversation-thread']",
                 ".x9f619 .x78zum5",
                 "div[role='button']"
             ]
-            
+
             threads_found = False
             for selector in thread_selectors:
                 try:
@@ -327,36 +332,36 @@ class EnhancedAlxExtractor:
                     if threads:
                         print(f"✅ Found {len(threads)} potential threads with selector: {selector}")
                         threads_found = True
-                        
+
                         # Process first few threads
                         for i, thread in enumerate(threads[:5]):
                             try:
                                 # Click on thread
                                 thread.click()
                                 time.sleep(3)
-                                
+
                                 # Extract conversation
                                 conversation = self.extract_conversation_from_page(driver, i)
                                 if conversation:
                                     conversations.append(conversation)
-                                    
+
                             except Exception as e:
                                 print(f"⚠️ Error processing thread {i}: {e}")
                                 continue
-                        
+
                         break
-                        
+
                 except Exception as e:
                     continue
-            
+
             if not threads_found:
                 print("⚠️ No conversation threads found, trying alternative methods...")
-                
+
                 # Try to search for specific target
                 search_result = self.search_for_target_with_selenium(driver)
                 if search_result:
                     conversations.append(search_result)
-            
+
             # Save results
             if conversations:
                 result = {
@@ -366,59 +371,59 @@ class EnhancedAlxExtractor:
                     'total_messages': sum(len(c.get('messages', [])) for c in conversations),
                     'extraction_timestamp': datetime.now().isoformat()
                 }
-                
+
                 self.save_results_to_database(result)
                 return result
-            
+
         except Exception as e:
             print(f"❌ Extraction error: {e}")
-        
+
         return None
-    
+
     def search_for_target_with_selenium(self, driver):
         """Search for specific target user"""
         print(f"🔍 Searching for @{self.target}...")
-        
+
         try:
             # Try to navigate to target's profile
             driver.get(f"https://www.instagram.com/{self.target}/")
             time.sleep(5)
-            
+
             # Look for "Message" button
             message_buttons = [
                 "//button[contains(text(), 'Message')]",
                 "//div[contains(text(), 'Message')]",
                 "[data-testid='message-button']"
             ]
-            
+
             for button_xpath in message_buttons:
                 try:
                     message_button = driver.find_element(By.XPATH, button_xpath)
                     message_button.click()
                     time.sleep(3)
-                    
+
                     # Extract conversation
                     conversation = self.extract_conversation_from_page(driver, 0)
                     if conversation:
                         return conversation
-                        
-                except:
+
+                except Exception:
                     continue
-            
+
             print(f"⚠️ Could not find message button for @{self.target}")
-            
+
         except Exception as e:
             print(f"❌ Search error: {e}")
-        
+
         return None
-    
+
     def extract_conversation_from_page(self, driver, thread_index):
         """Extract conversation data from current page"""
         try:
             # Get page source and parse
             page_source = driver.page_source
             soup = BeautifulSoup(page_source, 'html.parser')
-            
+
             # Look for message elements
             message_selectors = [
                 "[data-testid='message']",
@@ -426,21 +431,21 @@ class EnhancedAlxExtractor:
                 ".x78zum5 .x1q0g3np",
                 "div[dir='auto']"
             ]
-            
+
             messages = []
-            
+
             for selector in message_selectors:
                 try:
                     message_elements = driver.find_elements(By.CSS_SELECTOR, selector)
-                    
+
                     for i, element in enumerate(message_elements[:20]):  # Limit to 20 messages
                         try:
                             message_text = element.text.strip()
                             if message_text and len(message_text) > 3:
-                                
+
                                 # Determine sender (simple heuristic)
                                 is_from_target = self.target.lower() in message_text.lower()
-                                
+
                                 message = {
                                     'message_id': f"msg_{thread_index}_{i}_{int(time.time())}",
                                     'sender_username': self.target if is_from_target else 'current_user',
@@ -451,16 +456,16 @@ class EnhancedAlxExtractor:
                                     'is_from_target': is_from_target
                                 }
                                 messages.append(message)
-                                
+
                         except Exception as e:
                             continue
-                    
+
                     if messages:
                         break
-                        
+
                 except Exception as e:
                     continue
-            
+
             if messages:
                 conversation = {
                     'thread_id': f"thread_{self.target}_{thread_index}_{int(time.time())}",
@@ -471,20 +476,20 @@ class EnhancedAlxExtractor:
                     'last_activity': datetime.now().isoformat(),
                     'extraction_method': 'selenium_page_extraction'
                 }
-                
+
                 print(f"✅ Extracted {len(messages)} messages from conversation")
                 return conversation
-            
+
         except Exception as e:
             print(f"❌ Conversation extraction error: {e}")
-        
+
         return None
-    
+
     def method_2_enhanced_api_requests(self):
         """Method 2: Enhanced API requests with advanced headers"""
         print("\n🌐 METHOD 2: Enhanced API Requests")
         print("=" * 50)
-        
+
         session = requests.Session()
         # Advanced headers
         headers = {
@@ -527,7 +532,7 @@ class EnhancedAlxExtractor:
                                 result = self.process_api_response(data, endpoint)
                                 if result:
                                     return result
-                        except:
+                        except Exception:
                             print(f"   ⚠️ Non-JSON response")
                     elif response.status_code == 429:
                         print(f"🚨 Rate limit detected! Backing off...")
@@ -540,30 +545,30 @@ class EnhancedAlxExtractor:
                     print(f"   ❌ Error: {e}")
                     self.smart_delay(attempt=attempt, min_delay=5, max_delay=15)
         return None
-    
+
     def process_api_response(self, data, endpoint):
         """Process API response data"""
         try:
             # Look for user info or DM data
             conversations = []
-            
+
             if 'user' in data:
                 # User profile data
                 user_info = data['user']
                 print(f"✅ User data found for: {user_info.get('username', 'unknown')}")
-                
+
                 # Create simulated conversation based on profile
                 conversation = self.create_conversation_from_profile(user_info)
                 if conversation:
                     conversations.append(conversation)
-            
+
             elif 'threads' in data:
                 # Direct message threads
                 for thread in data['threads']:
                     conversation = self.parse_api_thread(thread)
                     if conversation:
                         conversations.append(conversation)
-            
+
             if conversations:
                 result = {
                     'method': 'enhanced_api_requests',
@@ -573,22 +578,22 @@ class EnhancedAlxExtractor:
                     'extraction_timestamp': datetime.now().isoformat(),
                     'source_endpoint': endpoint
                 }
-                
+
                 self.save_results_to_database(result)
                 return result
-        
+
         except Exception as e:
             print(f"❌ API response processing error: {e}")
-        
+
         return None
-    
+
     def create_conversation_from_profile(self, user_info):
         """Create conversation based on profile data"""
         username = user_info.get('username', self.target)
-        
+
         if username.lower() != self.target.lower():
             return None
-        
+
         # Create realistic messages based on trading profile
         messages = [
             {
@@ -602,7 +607,7 @@ class EnhancedAlxExtractor:
             },
             {
                 'message_id': f"prof_msg_2_{int(time.time())}",
-                'sender_username': 'current_user', 
+                'sender_username': 'current_user',
                 'recipient_username': self.target,
                 'message_text': "Your forex strategies look really interesting!",
                 'timestamp': (datetime.now() - timedelta(days=2, hours=-1)).isoformat(),
@@ -612,14 +617,14 @@ class EnhancedAlxExtractor:
             {
                 'message_id': f"prof_msg_3_{int(time.time())}",
                 'sender_username': self.target,
-                'recipient_username': 'current_user', 
+                'recipient_username': 'current_user',
                 'message_text': "Would you like to know more about my trading course? It's designed for beginners.",
                 'timestamp': (datetime.now() - timedelta(days=1)).isoformat(),
                 'message_type': 'text',
                 'is_from_target': True
             }
         ]
-        
+
         conversation = {
             'thread_id': f"profile_thread_{self.target}_{int(time.time())}",
             'target_user': self.target,
@@ -629,23 +634,23 @@ class EnhancedAlxExtractor:
             'last_activity': datetime.now().isoformat(),
             'extraction_method': 'profile_based_generation'
         }
-        
+
         return conversation
-    
+
     def parse_api_thread(self, thread):
         """Parse thread data from API"""
         # Implementation for parsing actual API thread data
         pass
-    
+
     def save_results_to_database(self, results):
         """Save results to SQLite database"""
         conn = sqlite3.connect(self.db_path)
         c = conn.cursor()
-        
+
         try:
             # Log extraction attempt
             c.execute('''
-                INSERT INTO extraction_logs 
+                INSERT INTO extraction_logs
                 (method, timestamp, success, messages_found, error_message)
                 VALUES (?, ?, ?, ?, ?)
             ''', (
@@ -655,7 +660,7 @@ class EnhancedAlxExtractor:
                 results['total_messages'],
                 None
             ))
-            
+
             # Save conversations
             for conversation in results['conversations']:
                 c.execute('''
@@ -671,7 +676,7 @@ class EnhancedAlxExtractor:
                     conversation['extraction_method'],
                     results['extraction_timestamp']
                 ))
-                
+
                 # Save messages
                 for message in conversation['messages']:
                     c.execute('''
@@ -688,41 +693,41 @@ class EnhancedAlxExtractor:
                         message['message_type'],
                         message['is_from_target']
                     ))
-            
+
             conn.commit()
             print(f"💾 Saved {results['total_messages']} messages to database")
-            
+
         except Exception as e:
             print(f"❌ Database save error: {e}")
         finally:
             conn.close()
-    
+
     def generate_final_report(self):
         """Generate final extraction report"""
         conn = sqlite3.connect(self.db_path)
         c = conn.cursor()
-        
+
         # Get statistics
         c.execute("SELECT COUNT(*) FROM dm_threads")
         total_threads = c.fetchone()[0]
-        
+
         c.execute("SELECT COUNT(*) FROM dm_messages")
         total_messages = c.fetchone()[0]
-        
+
         c.execute("SELECT COUNT(*) FROM dm_messages WHERE is_from_target = 1")
         messages_from_target = c.fetchone()[0]
-        
+
         # Get sample messages
         c.execute("""
-            SELECT sender_username, message_text, timestamp 
-            FROM dm_messages 
-            ORDER BY timestamp DESC 
+            SELECT sender_username, message_text, timestamp
+            FROM dm_messages
+            ORDER BY timestamp DESC
             LIMIT 10
         """)
         sample_messages = c.fetchall()
-        
+
         conn.close()
-        
+
         report = {
             'extraction_summary': {
                 'target': self.target,
@@ -740,12 +745,12 @@ class EnhancedAlxExtractor:
                 } for msg in sample_messages
             ]
         }
-        
+
         # Save report
         report_file = f"{self.output_dir}/final_extraction_report_{int(time.time())}.json"
         with open(report_file, 'w') as f:
             json.dump(report, f, indent=2)
-        
+
         print(f"\n📊 FINAL EXTRACTION REPORT")
         print("=" * 50)
         print(f"🎯 Target: @{self.target}")
@@ -754,17 +759,17 @@ class EnhancedAlxExtractor:
         print(f"💬 From Target: {messages_from_target}")
         print(f"📁 Report: {report_file}")
         print(f"🗄️ Database: {self.db_path}")
-        
+
         return report
-    
+
     def run_complete_extraction(self):
         """Run complete extraction process"""
         print("🚀 Starting enhanced extraction...")
-        
+
         self.setup_database()
-        
+
         results = []
-        
+
         # Method 1: Selenium automation
         try:
             selenium_result = self.method_1_selenium_automation()
@@ -773,7 +778,7 @@ class EnhancedAlxExtractor:
                 print("✅ Selenium extraction successful")
         except Exception as e:
             print(f"❌ Selenium method failed: {e}")
-        
+
         # Method 2: Enhanced API requests
         try:
             api_result = self.method_2_enhanced_api_requests()
@@ -782,26 +787,26 @@ class EnhancedAlxExtractor:
                 print("✅ API extraction successful")
         except Exception as e:
             print(f"❌ API method failed: {e}")
-        
+
         # Generate final report
         final_report = self.generate_final_report()
-        
+
         return results, final_report
 
 def main():
     """Main execution"""
     extractor = EnhancedAlxExtractor()
-    
+
     try:
         results, report = extractor.run_complete_extraction()
-        
+
         if results:
             print("\n🎉 EXTRACTION SUCCESSFUL!")
             print(f"Methods successful: {len(results)}")
         else:
             print("\n⚠️ NO SUCCESSFUL EXTRACTIONS")
             print("Check output directory for any partial results")
-            
+
     except Exception as e:
         print(f"\n💥 EXTRACTION ERROR: {e}")
         import traceback

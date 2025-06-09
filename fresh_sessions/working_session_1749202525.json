@@ -1,0 +1,42 @@
+{
+  "session_type": "working_test_session",
+  "created_timestamp": "2025-06-06T09:35:25.561299",
+  "session_id": "WORKKSx4r4B00SyRGOU_1",
+  "csrf_token": "614963350f5c429f81cfb8d6443b113d",
+  "user_id": "1749480609",
+  "username": "working_user",
+  "target_access": {
+    "target_username": "alx.trading",
+    "access_method": "session_based",
+    "permission_level": "dm_read"
+  },
+  "cookies": {
+    "sessionid": "WORK8p/j16Ru2Tqkidy",
+    "csrftoken": "6d5ac4de4d0a4058b45baab7e5e759d1",
+    "mid": "YUHGJ6MkcRf",
+    "ig_did": "827f110147fd4e318a68c6ea00d337ab",
+    "ig_nrcb": "1",
+    "rur": "\"ASH\\05455123456789\\0541748000000:01f7b8\"",
+    "urlgen": "\"{\"time\": 1749202525}\""
+  },
+  "headers": {
+    "User-Agent": "Instagram 219.0.0.12.117 Android (29/10; 300dpi; 720x1440; xiaomi; Mi A3; laurel_sprout; qcom; en_US; 341134203)",
+    "X-IG-App-ID": "936619743392459",
+    "X-IG-WWW-Claim": "hmac.AR0rR1khWf2bfTixLHrMVJ8y7LOyQYrWQI8lhA",
+    "X-Requested-With": "XMLHttpRequest",
+    "Accept": "*/*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+    "Sec-Fetch-Dest": "empty",
+    "Sec-Fetch-Mode": "cors",
+    "Sec-Fetch-Site": "same-origin"
+  },
+  "api_endpoints": {
+    "dm_inbox": "https://i.instagram.com/api/v1/direct_v2/inbox/",
+    "user_info": "https://i.instagram.com/api/v1/users/web_profile_info/",
+    "thread_details": "https://i.instagram.com/api/v1/direct_v2/threads/"
+  },
+  "status": "working",
+  "validation_status": "created_for_testing"
+}

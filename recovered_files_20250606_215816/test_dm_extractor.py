@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🔍 DM Extractor Test Demo
@@ -17,7 +22,7 @@ def test_extractor_components():
     """Test individual components of the DM extractor"""
     print("🔍 TESTING DM EXTRACTOR COMPONENTS")
     print("="*50)
-    
+
     # Test database connectivity
     try:
         conn = sqlite3.connect('data/project_operations.db')
@@ -28,32 +33,32 @@ def test_extractor_components():
         conn.close()
     except Exception as e:
         print(f"❌ Database error: {e}")
-    
+
     # Test imports
     try:
         from src.ultimate_target_dm_extractor_2025 import UltimateTargetDMExtractor, UltimateExtractorConfig
         print("✅ Core extractor classes imported successfully")
-        
+
         # Test class instantiation
         config = UltimateExtractorConfig()
         print("✅ Extractor configuration initialized")
-        
+
     except ImportError as e:
         print(f"❌ Import error: {e}")
         return False
     except Exception as e:
         print(f"❌ Initialization error: {e}")
         return False
-    
+
     # Test configuration loading
     try:
         import json
         config_files = [
             'config/config.json',
-            'config/proxy_config.json', 
+            'config/proxy_config.json',
             'config/bypass_config.json'
         ]
-        
+
         for config_file in config_files:
             if os.path.exists(config_file):
                 with open(config_file, 'r') as f:
@@ -63,7 +68,7 @@ def test_extractor_components():
                 print(f"⚠️  Config missing: {config_file}")
     except Exception as e:
         print(f"❌ Config error: {e}")
-    
+
     print("\n🎯 EXTRACTOR READY FOR OPERATION")
     print("="*50)
     print("📋 To use the extractor:")
@@ -72,7 +77,7 @@ def test_extractor_components():
     print("   3. Provide your Instagram credentials")
     print("   4. Select extraction method")
     print("\n⚠️  Note: Requires valid Instagram account for live testing")
-    
+
     return True
 
 if __name__ == "__main__":

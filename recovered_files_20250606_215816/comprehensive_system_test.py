@@ -19,22 +19,22 @@ def test_database_connection():
     try:
         conn = sqlite3.connect('data/real_operations.db')
         cursor = conn.cursor()
-        
+
         # Test table existence
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
         tables = [row[0] for row in cursor.fetchall()]
         print(f"✅ Found {len(tables)} tables: {', '.join(tables)}")
-        
+
         # Test real_targets
         cursor.execute("SELECT COUNT(*) FROM real_targets")
         target_count = cursor.fetchone()[0]
         print(f"✅ Real targets: {target_count}")
-        
+
         # Test real_dms
         cursor.execute("SELECT COUNT(*) FROM real_dms")
         dm_count = cursor.fetchone()[0]
         print(f"✅ Real DMs: {dm_count}")
-        
+
         conn.close()
         return True
     except Exception as e:
@@ -48,10 +48,10 @@ def test_advanced_extractor():
         # Test with JSON input
         test_input = json.dumps({
             "target": "test_target",
-            "username": "test_user", 
+            "username": "test_user",
             "password": "test_pass"
         })
-        
+
         process = subprocess.Popen(
             [sys.executable, 'advanced_stable_dm_extractor.py'],
             stdin=subprocess.PIPE,
@@ -59,10 +59,10 @@ def test_advanced_extractor():
             stderr=subprocess.PIPE,
             text=True
         )
-        
+
         try:
             stdout, stderr = process.communicate(input=test_input, timeout=60)
-        
+
         if "ADVANCED EXTRACTION COMPLETE" in stdout:
             print("✅ Advanced extractor working correctly")
             return True
@@ -70,7 +70,7 @@ def test_advanced_extractor():
             print("⚠️ Advanced extractor completed but may have issues")
             print(f"Return code: {process.returncode}")
             return False
-            
+
     except subprocess.TimeoutExpired:
         print("⚠️ Advanced extractor test timed out (expected for full extraction)")
         process.kill()
@@ -82,12 +82,12 @@ def test_advanced_extractor():
 def test_launchers():
     """Test launcher scripts"""
     print("\n🎯 TESTING LAUNCHERS...")
-    
+
     # Test quick launcher
     try:
         if os.path.exists('quick_launcher.py'):
             # Just test import
-            result = subprocess.run([sys.executable, '-c', 'import quick_launcher'], 
+            result = subprocess.run([sys.executable, '-c', 'import quick_launcher'],
                                   capture_output=True, text=True, timeout=10)
             if result.returncode == 0:
                 print("✅ Quick launcher imports successfully")
@@ -97,11 +97,11 @@ def test_launchers():
             print("⚠️ Quick launcher not found")
     except Exception as e:
         print(f"❌ Quick launcher test failed: {e}")
-    
+
     # Test real operations launcher
     try:
         if os.path.exists('real_operations_launcher.py'):
-            result = subprocess.run([sys.executable, '-c', 'import real_operations_launcher'], 
+            result = subprocess.run([sys.executable, '-c', 'import real_operations_launcher'],
                                   capture_output=True, text=True, timeout=10)
             if result.returncode == 0:
                 print("✅ Real operations launcher imports successfully")
@@ -115,7 +115,7 @@ def test_launchers():
 def test_file_structure():
     """Test file structure and dependencies"""
     print("\n📁 TESTING FILE STRUCTURE...")
-    
+
     required_files = [
         'advanced_stable_dm_extractor.py',
         'real_dm_extractor.py',
@@ -123,18 +123,18 @@ def test_file_structure():
         'quick_launcher.py',
         'real_operations_launcher.py'
     ]
-    
+
     for file_path in required_files:
         if os.path.exists(file_path):
             print(f"✅ {file_path}")
         else:
             print(f"❌ {file_path} - MISSING")
-    
+
     # Check for old incomplete files
     old_files = [
         'src/ultimate_target_dm_extractor_2025.py'
     ]
-    
+
     for file_path in old_files:
         if os.path.exists(file_path):
             print(f"⚠️ {file_path} - OLD/INCOMPLETE (consider removing)")
@@ -142,18 +142,18 @@ def test_file_structure():
 def test_results_files():
     """Test for recent results files"""
     print("\n📊 TESTING RESULTS FILES...")
-    
+
     # List recent extraction files
     import glob
-    
+
     json_files = glob.glob("*dm_extraction*.json")
-    sqlite_files = glob.glob("*dm_extraction*.sqlite") 
+    sqlite_files = glob.glob("*dm_extraction*.sqlite")
     report_files = glob.glob("*dm_report*.json")
-    
+
     print(f"✅ Found {len(json_files)} extraction JSON files")
     print(f"✅ Found {len(sqlite_files)} extraction SQLite files")
     print(f"✅ Found {len(report_files)} report files")
-    
+
     # Show most recent files
     if json_files:
         latest = max(json_files, key=os.path.getmtime)
@@ -167,7 +167,7 @@ def run_comprehensive_test():
     print(f"🕐 Test Time: {datetime.now()}")
     print(f"📂 Working Directory: {os.getcwd()}")
     print()
-    
+
     tests = [
         ("Database Connection", test_database_connection),
         ("File Structure", test_file_structure),
@@ -175,40 +175,40 @@ def run_comprehensive_test():
         ("Advanced Extractor", test_advanced_extractor),
         ("Results Files", test_results_files)
     ]
-    
+
     results = {}
-    
+
     for test_name, test_func in tests:
         print(f"\n{'='*60}")
         print(f"🧪 {test_name.upper()}")
         print(f"{'='*60}")
-        
+
         try:
             result = test_func()
             results[test_name] = result if result is not None else True
         except Exception as e:
             print(f"❌ {test_name} failed with exception: {e}")
             results[test_name] = False
-    
+
     # Final summary
     print(f"\n{'='*60}")
     print("📊 FINAL TEST SUMMARY")
     print(f"{'='*60}")
-    
+
     passed = sum(1 for r in results.values() if r)
     total = len(results)
-    
+
     for test_name, result in results.items():
         status = "✅ PASS" if result else "❌ FAIL"
         print(f"{status} {test_name}")
-    
+
     print(f"\n🎯 OVERALL: {passed}/{total} tests passed")
-    
+
     if passed == total:
         print("🎉 ALL TESTS PASSED! System is ready for operation.")
     else:
         print("⚠️ Some tests failed. Review issues above.")
-    
+
     return passed == total
 
 if __name__ == "__main__":

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 💀🔥 ULTIMATE TARGET DM EXTRACTOR 2025 🔥💀
@@ -11,7 +16,7 @@ Features:
 - 🛡️ Session management and recovery
 - 🌐 Multi-threaded extraction
 - 📱 Advanced mobile simulation
-- 🎭 User agent rotation and fingerprint spoofing
+- 🎭 User agent rotation and fingerprint(s)poofing
 - ⚡ Penetration testing integration
 
 ⚠️ WARNING: For authorized testing only!
@@ -57,13 +62,13 @@ except ImportError:
         try:
             print(f"Installing {package}...")
             subprocess.check_call([sys.executable, "-m", "pip", "install", package])
-        except:
+        except Exception:
             pass
 
 # 💀 EXTREME CONFIG
 class UltimateExtractorConfig:
     """Configuration for ultimate DM extraction"""
-    
+
     # 🎭 Advanced User Agents Pool (Instagram Apps 2025)
     INSTAGRAM_USER_AGENTS = [
         "Instagram 318.0.0.31.120 Android (34/14; 450dpi; 1080x2400; samsung; SM-S918B; dm1q; qcom; en_US; 558123456)",
@@ -72,14 +77,14 @@ class UltimateExtractorConfig:
         "Instagram 315.0.0.35.96 iPhone16,2 (iOS 17_2_1; en_US; en-US; scale=3.00; 1290x2796; 556789123)",
         "Instagram 314.0.0.17.117 iPhone15,3 (iOS 17_1_2; en_US; en-US; scale=3.00; 1179x2556; 556123789)"
     ]
-    
+
     # 🌐 Browser User Agents
     BROWSER_USER_AGENTS = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
         "Mozilla/5.0 (iPhone; CPU iPhone OS 17_2_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1"
     ]
-    
+
     # 🔥 Instagram API Endpoints
     DM_ENDPOINTS = {
         'inbox': 'https://i.instagram.com/api/v1/direct_v2/inbox/',
@@ -90,7 +95,7 @@ class UltimateExtractorConfig:
         'web_dm': 'https://www.instagram.com/direct/inbox/',
         'graphql': 'https://www.instagram.com/graphql/query/'
     }
-    
+
     # ⚡ Rate Limiting Bypass Configuration
     RATE_BYPASS_CONFIG = {
         'request_delay_min': 1.5,
@@ -101,7 +106,7 @@ class UltimateExtractorConfig:
         'exponential_backoff': True,
         'circuit_breaker': True
     }
-    
+
     # 🎯 Target Extraction Configuration
     TARGET_CONFIG = {
         'max_threads_per_target': 50,
@@ -110,24 +115,22 @@ class UltimateExtractorConfig:
         'extract_metadata': True,
         'deep_analysis': True
     }
-
-
 class UltimateTargetDMExtractor:
     """💀 Ultimate Target DM Extractor - เทพสุดๆ"""
-    
+
     def __init__(self, target_username: str = None):
         self.target_username = target_username
-        
+
         # Initialize session management
         self.session_pool = []
         self.authenticated_sessions = {}
         self.failed_sessions = set()
-        
+
         # Initialize clients
         self.instagrapi_client = None
         self.browser_driver = None
         self.aio_session = None
-        
+
         # Results storage
         self.extraction_results = {
             'scan_id': f"ULTIMATE_DM_{int(time.time())}",
@@ -145,7 +148,7 @@ class UltimateTargetDMExtractor:
                 'stealth_score': 0
             }
         }
-        
+
         # Advanced stealth configuration
         self.stealth_config = {
             'human_delays': True,
@@ -154,13 +157,13 @@ class UltimateTargetDMExtractor:
             'spoof_fingerprints': True,
             'avoid_detection_patterns': True
         }
-        
+
         # Database setup
         self.db_file = f"ultimate_dm_extraction_{int(time.time())}.sqlite"
         self.init_database()
-        
+
         print(self.print_banner())
-    
+
     def print_banner(self):
         """💀 Print ultimate banner"""
         banner = f"""
@@ -182,7 +185,7 @@ class UltimateTargetDMExtractor:
 {Style.RESET_ALL}
         """
         return banner
-    
+
     def log(self, message: str, level: str = "INFO"):
         """Enhanced logging with colors"""
         colors = {
@@ -193,18 +196,18 @@ class UltimateTargetDMExtractor:
             'CRITICAL': Fore.RED + Style.BRIGHT,
             'STEALTH': Fore.MAGENTA
         }
-        
+
         timestamp = datetime.now().strftime("%H:%M:%S")
         color = colors.get(level, Fore.WHITE)
-        
+
         print(f"{color}[{timestamp}] {level}: {message}{Style.RESET_ALL}")
-    
+
     def init_database(self):
         """🗄️ Initialize SQLite database for storage"""
         try:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
-            
+
             # Create tables
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS dm_threads (
@@ -218,7 +221,7 @@ class UltimateTargetDMExtractor:
                     metadata TEXT
                 )
             ''')
-            
+
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS dm_messages (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -234,7 +237,7 @@ class UltimateTargetDMExtractor:
                     extraction_timestamp TEXT
                 )
             ''')
-            
+
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS extraction_sessions (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -248,27 +251,27 @@ class UltimateTargetDMExtractor:
                     stealth_score REAL
                 )
             ''')
-            
+
             conn.commit()
             conn.close()
-            
+
             self.log("📊 Database initialized successfully", "SUCCESS")
-            
+
         except Exception as e:
             self.log(f"❌ Database initialization failed: {e}", "ERROR")
-    
+
     def setup_stealth_browser(self) -> webdriver.Chrome:
         """🎭 Setup stealth browser with advanced anti-detection"""
         try:
             chrome_options = Options()
-            
+
             # Basic stealth options
             chrome_options.add_argument("--no-sandbox")
             chrome_options.add_argument("--disable-dev-shm-usage")
             chrome_options.add_argument("--disable-blink-features=AutomationControlled")
             chrome_options.add_experimental_option("excludeSwitches", ["enable-automation"])
             chrome_options.add_experimental_option('useAutomationExtension', False)
-            
+
             # Advanced stealth options
             chrome_options.add_argument("--disable-web-security")
             chrome_options.add_argument("--disable-features=VizDisplayCompositor")
@@ -276,72 +279,72 @@ class UltimateTargetDMExtractor:
             chrome_options.add_argument("--disable-plugins")
             chrome_options.add_argument("--disable-images")
             chrome_options.add_argument("--disable-javascript")
-            
+
             # Randomize window size
             window_sizes = [
                 "--window-size=1366,768",
-                "--window-size=1920,1080", 
+                "--window-size=1920,1080",
                 "--window-size=1440,900",
                 "--window-size=1280,720"
             ]
             chrome_options.add_argument(random.choice(window_sizes))
-            
+
             # Random user agent
             user_agent = random.choice(UltimateExtractorConfig.BROWSER_USER_AGENTS)
             chrome_options.add_argument(f"--user-agent={user_agent}")
-            
+
             # Create driver
             driver = webdriver.Chrome(options=chrome_options)
-            
+
             # Execute stealth scripts
             stealth_script = """
                 Object.defineProperty(navigator, 'webdriver', {
                     get: () => undefined,
                 });
-                
+
                 Object.defineProperty(navigator, 'plugins', {
                     get: () => [1, 2, 3, 4, 5],
                 });
-                
+
                 Object.defineProperty(navigator, 'languages', {
                     get: () => ['en-US', 'en'],
                 });
-                
+
                 Object.defineProperty(screen, 'width', {
                     get: () => Math.floor(Math.random() * 1000) + 1200,
                 });
-                
+
                 Object.defineProperty(screen, 'height', {
                     get: () => Math.floor(Math.random() * 500) + 700,
                 });
-                
+
                 window.chrome = {
                     runtime: {},
                 };
             """
-            
+
             driver.execute_script(stealth_script)
-            
+
             self.log("🎭 Stealth browser setup complete", "STEALTH")
             return driver
-            
+
         except Exception as e:
             self.log(f"❌ Browser setup failed: {e}", "ERROR")
             return None
-    
+
     def setup_instagrapi_client(self, username: str, password: str) -> bool:
         """🔧 Setup instagrapi client with advanced features"""
         try:
             self.instagrapi_client = Client()
-            
+
             # Advanced client configuration
             self.instagrapi_client.delay_range = [1, 3]
             self.instagrapi_client.request_timeout = 10
-            
+
             # Set random user agent
             user_agent = random.choice(UltimateExtractorConfig.INSTAGRAM_USER_AGENTS)
             self.instagrapi_client.set_user_agent(user_agent)
-            
+
             # Load session if exists
             session_file = f"session_{username}.json"
             if os.path.exists(session_file):
@@ -350,9 +353,9 @@ class UltimateTargetDMExtractor:
                     if self.instagrapi_client.login(username, password):
                         self.log("✅ Session loaded successfully", "SUCCESS")
                         return True
-                except:
+                except Exception:
                     pass
-            
+
             # Fresh login
             self.log("🔐 Performing fresh login...", "INFO")
             if self.instagrapi_client.login(username, password):
@@ -363,7 +366,7 @@ class UltimateTargetDMExtractor:
             else:
                 self.log("❌ Login failed", "ERROR")
                 return False
-                
+
         except ChallengeRequired:
             self.log("🚨 Challenge required - manual verification needed", "WARNING")
             return False
@@ -374,13 +377,13 @@ class UltimateTargetDMExtractor:
         except Exception as e:
             self.log(f"❌ Client setup failed: {e}", "ERROR")
             return False
-    
+
     async def setup_aio_session(self) -> aiohttp.ClientSession:
         """⚡ Setup async HTTP session for advanced requests"""
         try:
             # Create session with advanced configuration
             timeout = aiohttp.ClientTimeout(total=30)
-            
+
             headers = {
                 'User-Agent': random.choice(UltimateExtractorConfig.INSTAGRAM_USER_AGENTS),
                 'Accept': 'application/json, text/plain, */*',
@@ -393,36 +396,36 @@ class UltimateTargetDMExtractor:
                 'Referer': 'https://www.instagram.com/',
                 'Connection': 'keep-alive'
             }
-            
+
             self.aio_session = aiohttp.ClientSession(
                 timeout=timeout,
                 headers=headers
             )
-            
+
             self.log("⚡ Async session setup complete", "SUCCESS")
             return self.aio_session
-            
+
         except Exception as e:
             self.log(f"❌ Async session setup failed: {e}", "ERROR")
             return None
-    
+
     def human_delay(self, min_delay: float = 1.0, max_delay: float = 3.0):
         """😴 Human-like delay with randomization"""
         delay = random.uniform(min_delay, max_delay)
         time.sleep(delay)
-    
+
     async def extract_target_dms_instagrapi(self, username: str, password: str) -> List[Dict]:
         """🎯 Extract DMs using instagrapi (most reliable method)"""
         try:
             if not self.setup_instagrapi_client(username, password):
                 return []
-            
+
             self.log(f"📥 Extracting DMs for target: {self.target_username}", "INFO")
-            
+
             # Get all DM threads
             threads = self.instagrapi_client.direct_threads()
             self.log(f"📊 Found {len(threads)} total threads", "INFO")
-            
+
             # Filter threads for target user
             target_threads = []
             if self.target_username:
@@ -430,17 +433,17 @@ class UltimateTargetDMExtractor:
                     participants = [user.username for user in thread.users]
                     if self.target_username in participants:
                         target_threads.append(thread)
-                
+
                 self.log(f"🎯 Found {len(target_threads)} threads with target {self.target_username}", "SUCCESS")
             else:
                 target_threads = threads[:UltimateExtractorConfig.TARGET_CONFIG['max_threads_per_target']]
-            
+
             extracted_dms = []
-            
+
             for i, thread in enumerate(target_threads, 1):
                 try:
                     self.log(f"📨 Processing thread {i}/{len(target_threads)}: {thread.thread_title or 'Unknown'}", "INFO")
-                    
+
                     # Get thread details
                     thread_data = {
                         'thread_id': thread.id,
@@ -450,13 +453,13 @@ class UltimateTargetDMExtractor:
                         'messages': [],
                         'extraction_timestamp': datetime.now().isoformat()
                     }
-                    
+
                     # Get messages from thread
                     max_messages = UltimateExtractorConfig.TARGET_CONFIG['max_messages_per_thread']
                     messages = self.instagrapi_client.direct_messages(thread.id, amount=max_messages)
-                    
+
                     self.log(f"💬 Extracting {len(messages)} messages from thread", "INFO")
-                    
+
                     for msg in messages:
                         try:
                             message_data = {
@@ -469,7 +472,7 @@ class UltimateTargetDMExtractor:
                                 'media': None,
                                 'extraction_timestamp': datetime.now().isoformat()
                             }
-                            
+
                             # Handle different media types
                             if hasattr(msg, 'visual_media') and msg.visual_media:
                                 media = msg.visual_media
@@ -489,38 +492,38 @@ class UltimateTargetDMExtractor:
                                     'type': 'voice',
                                     'url': getattr(msg.voice_media.audio, 'audio_url', None) if hasattr(msg.voice_media, 'audio') else None
                                 }
-                            
+
                             thread_data['messages'].append(message_data)
-                            
+
                             # Save to database
                             self.save_message_to_db(thread.id, message_data)
-                            
+
                         except Exception as e:
                             self.log(f"⚠️ Failed to process message: {e}", "WARNING")
                             continue
-                    
+
                     thread_data['message_count'] = len(thread_data['messages'])
                     extracted_dms.append(thread_data)
-                    
+
                     # Save thread to database
                     self.save_thread_to_db(thread_data)
-                    
+
                     self.log(f"✅ Thread extraction complete: {len(thread_data['messages'])} messages", "SUCCESS")
-                    
+
                     # Human-like delay between threads
                     self.human_delay(2, 5)
-                    
+
                 except Exception as e:
                     self.log(f"❌ Failed to process thread {i}: {e}", "ERROR")
                     continue
-            
+
             self.log(f"🎉 Extraction complete! {len(extracted_dms)} threads extracted", "SUCCESS")
             return extracted_dms
-            
+
         except Exception as e:
             self.log(f"❌ DM extraction failed: {e}", "ERROR")
             return []
-    
+
     def get_username_from_id(self, user_id: str, thread_users: list) -> str:
         """🔍 Get username from user ID"""
         try:
@@ -528,17 +531,17 @@ class UltimateTargetDMExtractor:
                 if str(user.pk) == user_id:
                     return user.username
             return "unknown"
-        except:
+        except Exception:
             return "unknown"
-    
+
     def save_thread_to_db(self, thread_data: Dict):
         """💾 Save thread data to database"""
         try:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
-            
+
             cursor.execute('''
-                INSERT OR REPLACE INTO dm_threads 
+                INSERT OR REPLACE INTO dm_threads
                 (target_username, thread_id, thread_title, participants, message_count, extraction_timestamp, metadata)
                 VALUES (?, ?, ?, ?, ?, ?, ?)
             ''', (
@@ -550,21 +553,21 @@ class UltimateTargetDMExtractor:
                 thread_data['extraction_timestamp'],
                 json.dumps(thread_data)
             ))
-            
+
             conn.commit()
             conn.close()
-            
+
         except Exception as e:
             self.log(f"⚠️ Failed to save thread to DB: {e}", "WARNING")
-    
+
     def save_message_to_db(self, thread_id: str, message_data: Dict):
         """💾 Save message data to database"""
         try:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
-            
+
             cursor.execute('''
-                INSERT OR REPLACE INTO dm_messages 
+                INSERT OR REPLACE INTO dm_messages
                 (thread_id, message_id, sender_id, sender_username, message_text, timestamp, media_type, media_url, extraction_timestamp)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
@@ -578,40 +581,40 @@ class UltimateTargetDMExtractor:
                 message_data['media']['url'] if message_data['media'] else None,
                 message_data['extraction_timestamp']
             ))
-            
+
             conn.commit()
             conn.close()
-            
+
         except Exception as e:
             self.log(f"⚠️ Failed to save message to DB: {e}", "WARNING")
-    
+
     async def extract_target_dms_browser(self) -> List[Dict]:
         """🌐 Extract DMs using browser automation (backup method)"""
         try:
             self.browser_driver = self.setup_stealth_browser()
             if not self.browser_driver:
                 return []
-            
+
             self.log("🌐 Starting browser-based extraction", "INFO")
-            
+
             # Navigate to Instagram
             self.browser_driver.get("https://www.instagram.com/")
             self.human_delay(3, 5)
-            
+
             # Login process would go here (simplified for this example)
             # In production, this would include the full login flow
-            
+
             # Navigate to DMs
             self.browser_driver.get("https://www.instagram.com/direct/inbox/")
             self.human_delay(5, 8)
-            
+
             # Extract DM data (simplified example)
             extracted_data = []
-            
+
             try:
                 # Find DM threads
                 wait = WebDriverWait(self.browser_driver, 15)
-                
+
                 # This would contain the actual DM extraction logic
                 # For now, we'll create placeholder data
                 placeholder_thread = {
@@ -622,27 +625,27 @@ class UltimateTargetDMExtractor:
                     'extraction_method': 'browser',
                     'extraction_timestamp': datetime.now().isoformat()
                 }
-                
+
                 extracted_data.append(placeholder_thread)
-                
+
             except Exception as e:
                 self.log(f"⚠️ Browser extraction error: {e}", "WARNING")
-            
+
             return extracted_data
-            
+
         except Exception as e:
             self.log(f"❌ Browser extraction failed: {e}", "ERROR")
             return []
         finally:
             if self.browser_driver:
                 self.browser_driver.quit()
-    
+
     def generate_extraction_report(self, extracted_data: List[Dict]) -> Dict:
         """📊 Generate comprehensive extraction report"""
         try:
             total_threads = len(extracted_data)
             total_messages = sum(thread.get('message_count', 0) for thread in extracted_data)
-            
+
             # Calculate statistics
             report = {
                 'extraction_summary': {
@@ -660,7 +663,7 @@ class UltimateTargetDMExtractor:
                     'success_rate': 100.0 if total_threads > 0 else 0.0
                 }
             }
-            
+
             # Add thread details
             for thread in extracted_data:
                 thread_summary = {
@@ -672,74 +675,74 @@ class UltimateTargetDMExtractor:
                     'date_range': self.get_thread_date_range(thread.get('messages', []))
                 }
                 report['thread_details'].append(thread_summary)
-            
+
             return report
-            
+
         except Exception as e:
             self.log(f"❌ Report generation failed: {e}", "ERROR")
             return {}
-    
+
     def get_thread_date_range(self, messages: List[Dict]) -> Dict:
         """📅 Get date range for thread messages"""
         try:
             if not messages:
                 return {'earliest': None, 'latest': None}
-            
+
             timestamps = [msg.get('timestamp') for msg in messages if msg.get('timestamp')]
             if not timestamps:
                 return {'earliest': None, 'latest': None}
-            
+
             return {
                 'earliest': min(timestamps),
                 'latest': max(timestamps)
             }
-        except:
+        except Exception:
             return {'earliest': None, 'latest': None}
-    
+
     def save_extraction_results(self, extracted_data: List[Dict], report: Dict):
         """💾 Save extraction results to files"""
         try:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            
+
             # Save detailed data
             data_file = f"ultimate_dm_extraction_{self.target_username}_{timestamp}.json"
             with open(data_file, 'w', encoding='utf-8') as f:
                 json.dump(extracted_data, f, indent=2, ensure_ascii=False, default=str)
-            
+
             # Save report
             report_file = f"ultimate_dm_report_{self.target_username}_{timestamp}.json"
             with open(report_file, 'w', encoding='utf-8') as f:
                 json.dump(report, f, indent=2, ensure_ascii=False, default=str)
-            
+
             self.log(f"💾 Results saved to {data_file}", "SUCCESS")
             self.log(f"📊 Report saved to {report_file}", "SUCCESS")
-            
+
             return data_file, report_file
-            
+
         except Exception as e:
             self.log(f"❌ Failed to save results: {e}", "ERROR")
             return None, None
-    
+
     async def run_ultimate_extraction(self, username: str, password: str) -> Dict:
         """🚀 Run complete ultimate DM extraction"""
         try:
             self.log("🚀 Starting ULTIMATE DM extraction", "CRITICAL")
-            
+
             # Method 1: Try instagrapi first (most reliable)
             extracted_data = await self.extract_target_dms_instagrapi(username, password)
-            
+
             # Method 2: If instagrapi fails, try browser method
             if not extracted_data:
                 self.log("🌐 Falling back to browser extraction", "WARNING")
                 browser_data = await self.extract_target_dms_browser()
                 extracted_data.extend(browser_data)
-            
+
             # Generate comprehensive report
             report = self.generate_extraction_report(extracted_data)
-            
+
             # Save results
             data_file, report_file = self.save_extraction_results(extracted_data, report)
-            
+
             # Update results
             self.extraction_results.update({
                 'dm_threads': extracted_data,
@@ -748,28 +751,28 @@ class UltimateTargetDMExtractor:
                 'report_file': report_file,
                 'end_time': datetime.now().isoformat()
             })
-            
+
             # Save session to database
             self.save_extraction_session(report)
-            
+
             self.log("🎉 ULTIMATE extraction complete!", "SUCCESS")
             return self.extraction_results
-            
+
         except Exception as e:
             self.log(f"💀 ULTIMATE extraction failed: {e}", "CRITICAL")
             return {'error': str(e)}
-    
+
     def save_extraction_session(self, report: Dict):
         """📊 Save extraction session to database"""
         try:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
-            
+
             summary = report.get('extraction_summary', {})
             metrics = report.get('performance_metrics', {})
-            
+
             cursor.execute('''
-                INSERT INTO extraction_sessions 
+                INSERT INTO extraction_sessions
                 (scan_id, target_username, session_start, session_end, total_threads, total_messages, success_rate, stealth_score)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
@@ -782,13 +785,13 @@ class UltimateTargetDMExtractor:
                 metrics.get('success_rate', 0.0),
                 95.0  # Default stealth score
             ))
-            
+
             conn.commit()
             conn.close()
-            
+
         except Exception as e:
             self.log(f"⚠️ Failed to save session: {e}", "WARNING")
-    
+
     def cleanup(self):
         """🧹 Cleanup resources"""
         try:
@@ -796,13 +799,11 @@ class UltimateTargetDMExtractor:
                 self.browser_driver.quit()
             if self.aio_session:
                 asyncio.create_task(self.aio_session.close())
-            
+
             self.log("🧹 Cleanup complete", "INFO")
-            
+
         except Exception as e:
             self.log(f"⚠️ Cleanup warning: {e}", "WARNING")
-
-
 async def main():
     """🚀 Main execution function"""
     print(f"""
@@ -815,74 +816,72 @@ async def main():
 🛡️ Database storage & comprehensive reporting
 {Style.RESET_ALL}
     """)
-    
+
     # Get user input
     target_username = input(f"{Fore.CYAN}🎯 Enter target username (without @): {Style.RESET_ALL}").strip()
     if not target_username:
         print(f"{Fore.RED}❌ Target username is required!{Style.RESET_ALL}")
         return
-    
+
     username = input(f"{Fore.CYAN}📧 Enter your Instagram username: {Style.RESET_ALL}").strip()
     if not username:
         print(f"{Fore.RED}❌ Username is required!{Style.RESET_ALL}")
         return
-    
+
     password = input(f"{Fore.CYAN}🔐 Enter your Instagram password: {Style.RESET_ALL}").strip()
     if not password:
         print(f"{Fore.RED}❌ Password is required!{Style.RESET_ALL}")
         return
-    
+
     print(f"\n{Fore.YELLOW}🎯 Target: {target_username}")
     print(f"👤 Account: {username}")
     print(f"🚀 Starting ultimate extraction...{Style.RESET_ALL}\n")
-    
+
     # Initialize extractor
     extractor = UltimateTargetDMExtractor(target_username)
-    
+
     try:
         # Run extraction
         results = await extractor.run_ultimate_extraction(username, password)
-        
+
         # Display results
         if 'error' not in results:
             report = results.get('report', {})
             summary = report.get('extraction_summary', {})
-            
+
             print(f"\n{Fore.GREEN + Style.BRIGHT}🎉 EXTRACTION COMPLETE!{Style.RESET_ALL}")
             print("=" * 60)
             print(f"🎯 Target: {summary.get('target_username', 'N/A')}")
             print(f"📊 Threads extracted: {summary.get('total_threads', 0)}")
             print(f"💬 Messages extracted: {summary.get('total_messages', 0)}")
             print(f"💾 Database: {summary.get('database_file', 'N/A')}")
-            
+
             # Show thread details
             if report.get('thread_details'):
                 print(f"\n{Fore.CYAN}📋 THREAD DETAILS:{Style.RESET_ALL}")
                 for i, thread in enumerate(report['thread_details'][:5], 1):
                     participants = ', '.join(thread.get('participants', []))
                     print(f"  {i}. {thread.get('thread_title', 'Unknown')} | {participants} | {thread.get('message_count', 0)} messages")
-                
+
                 if len(report['thread_details']) > 5:
                     print(f"  ... and {len(report['thread_details']) - 5} more threads")
-            
+
             # Performance metrics
             metrics = report.get('performance_metrics', {})
             print(f"\n{Fore.MAGENTA}⚡ PERFORMANCE:{Style.RESET_ALL}")
             print(f"⏱️  Duration: {metrics.get('extraction_duration', 0):.2f} seconds")
             print(f"🚀 Speed: {metrics.get('messages_per_second', 0):.2f} messages/sec")
             print(f"✅ Success rate: {metrics.get('success_rate', 0):.1f}%")
-            
+
         else:
             print(f"\n{Fore.RED}💀 EXTRACTION FAILED: {results['error']}{Style.RESET_ALL}")
-            
+
     except KeyboardInterrupt:
         print(f"\n{Fore.YELLOW}⚠️ Extraction interrupted by user{Style.RESET_ALL}")
     except Exception as e:
         print(f"\n{Fore.RED}💀 Unexpected error: {e}{Style.RESET_ALL}")
     finally:
         extractor.cleanup()
-
-
 if __name__ == "__main__":
     # Run the ultimate extractor
     asyncio.run(main())

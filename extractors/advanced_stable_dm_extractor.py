@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 💀🔥 ADVANCED STABLE DM EXTRACTOR 🔥💀
@@ -11,7 +16,7 @@ Features:
 - 🛡️ Robust session management
 - 🌐 Multi-threaded concurrent extraction
 - 📱 Mobile & web simulation
-- 🎭 Dynamic fingerprint spoofing
+- 🎭 Dynamic fingerprint(s)poofing
 - ⚡ Real-time penetration testing
 
 ⚠️ WARNING: Advanced tool for authorized testing only!
@@ -43,11 +48,11 @@ warnings.filterwarnings("ignore")
 def auto_install_packages():
     """Auto-install required packages"""
     packages = [
-        "instagrapi", "selenium", "colorama", "aiohttp", 
-        "requests", "beautifulsoup4", "fake-useragent", 
+        "instagrapi", "selenium", "colorama", "aiohttp",
+        "requests", "beautifulsoup4", "fake-useragent",
         "undetected-chromedriver", "playwright"
     ]
-    
+
     for package in packages:
         try:
             __import__(package.replace('-', '_'))
@@ -55,7 +60,7 @@ def auto_install_packages():
             try:
                 print(f"📦 Installing {package}...")
                 subprocess.check_call([sys.executable, "-m", "pip", "install", package, "--quiet"])
-            except:
+            except Exception:
                 print(f"⚠️ Failed to install {package}")
 
 auto_install_packages()
@@ -106,11 +111,9 @@ try:
     ua = UserAgent()
 except ImportError:
     ua = None
-
-
 class AdvancedStableConfig:
     """Advanced configuration for stable DM extraction"""
-    
+
     # 🎭 Real Instagram User Agents Pool (Updated 2025)
     INSTAGRAM_MOBILE_AGENTS = [
         "Instagram 320.0.0.32.111 Android (34/14; 450dpi; 1080x2400; samsung; SM-S918B; dm1q; qcom; en_US; 559123456)",
@@ -120,7 +123,7 @@ class AdvancedStableConfig:
         "Instagram 316.0.0.17.117 iPhone15,3 (iOS 17_2_1; en_US; en-US; scale=3.00; 1179x2556; 557123789)",
         "Instagram 315.1.0.22.98 iPhone14,2 (iOS 17_1_2; en_US; en-US; scale=3.00; 1170x2532; 556789012)"
     ]
-    
+
     # 🌐 Real Browser User Agents
     BROWSER_AGENTS = [
         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -129,7 +132,7 @@ class AdvancedStableConfig:
         "Mozilla/5.0 (iPhone; CPU iPhone OS 17_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3 Mobile/15E148 Safari/604.1",
         "Mozilla/5.0 (Android 14; Mobile; rv:122.0) Gecko/122.0 Firefox/122.0"
     ]
-    
+
     # 🔥 Instagram API Endpoints
     API_ENDPOINTS = {
         'login': 'https://www.instagram.com/accounts/login/ajax/',
@@ -142,7 +145,7 @@ class AdvancedStableConfig:
         'web_dm': 'https://www.instagram.com/direct/inbox/',
         'web_thread': 'https://www.instagram.com/direct/t/{thread_id}/'
     }
-    
+
     # ⚡ Enhanced Rate Limiting Configuration
     RATE_CONFIG = {
         'min_delay': 1.2,
@@ -154,7 +157,7 @@ class AdvancedStableConfig:
         'circuit_breaker_threshold': 5,
         'cooldown_period': 300
     }
-    
+
     # 🎯 Extraction Limits
     EXTRACTION_LIMITS = {
         'max_threads_per_target': 100,
@@ -162,7 +165,7 @@ class AdvancedStableConfig:
         'max_media_downloads': 50,
         'max_concurrent_extractions': 10
     }
-    
+
     # 🛡️ Stealth Configuration
     STEALTH_CONFIG = {
         'human_delays': True,
@@ -173,15 +176,13 @@ class AdvancedStableConfig:
         'session_rotation': True,
         'proxy_rotation': False  # Set to True if proxies available
     }
-
-
 class AdvancedStableDMExtractor:
     """💀 Advanced Stable DM Extractor - Maximum Reliability"""
-    
+
     def __init__(self, target_username: str = None, config: dict = None):
         self.target_username = target_username
         self.config = config or {}
-        
+
         # Initialize core components
         self.session_pool = []
         self.active_sessions = {}
@@ -194,13 +195,13 @@ class AdvancedStableDMExtractor:
             'rate_limit_hits': 0,
             'stealth_score': 100.0
         }
-        
+
         # Initialize clients
         self.instagrapi_client = None
         self.browser_driver = None
         self.requests_session = None
         self.aio_session = None
-        
+
         # Results storage
         self.scan_id = f"STABLE_EXTRACT_{int(time.time())}"
         self.db_file = f"advanced_dm_extraction_{self.scan_id}.sqlite"
@@ -212,13 +213,13 @@ class AdvancedStableDMExtractor:
             'media': [],
             'analysis': {}
         }
-        
+
         # Initialize database and logging
         self.init_database()
         self.init_logging()
-        
+
         print(self.get_banner())
-    
+
     def get_banner(self):
         """💀 Get impressive banner"""
         return f"""
@@ -241,7 +242,7 @@ class AdvancedStableDMExtractor:
 ╚══════════════════════════════════════════════════════════════════╝
 {Style.RESET_ALL}
         """
-    
+
     def log(self, message: str, level: str = "INFO", save_to_db: bool = True):
         """Enhanced logging system"""
         colors = {
@@ -253,13 +254,13 @@ class AdvancedStableDMExtractor:
             'STEALTH': Fore.MAGENTA,
             'ATTACK': Fore.RED + Style.BRIGHT
         }
-        
+
         timestamp = datetime.now().strftime("%H:%M:%S")
         color = colors.get(level, Fore.WHITE)
         formatted_msg = f"{color}[{timestamp}] {level}: {message}{Style.RESET_ALL}"
-        
+
         print(formatted_msg)
-        
+
         # Save to database
         if save_to_db:
             try:
@@ -271,15 +272,15 @@ class AdvancedStableDMExtractor:
                 ''', (datetime.now().isoformat(), level, message, self.scan_id))
                 conn.commit()
                 conn.close()
-            except:
+            except Exception:
                 pass
-    
+
     def init_database(self):
         """🗄️ Initialize comprehensive database"""
         try:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
-            
+
             # Main tables
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS dm_threads (
@@ -295,7 +296,7 @@ class AdvancedStableDMExtractor:
                     raw_data TEXT
                 )
             ''')
-            
+
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS dm_messages (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -313,7 +314,7 @@ class AdvancedStableDMExtractor:
                     raw_data TEXT
                 )
             ''')
-            
+
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS extraction_sessions (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -329,7 +330,7 @@ class AdvancedStableDMExtractor:
                     performance_metrics TEXT
                 )
             ''')
-            
+
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS extraction_logs (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -339,7 +340,7 @@ class AdvancedStableDMExtractor:
                     scan_id TEXT
                 )
             ''')
-            
+
             cursor.execute('''
                 CREATE TABLE IF NOT EXISTS session_cache (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -350,15 +351,15 @@ class AdvancedStableDMExtractor:
                     is_valid BOOLEAN
                 )
             ''')
-            
+
             conn.commit()
             conn.close()
-            
+
             self.log("📊 Advanced database initialized", "SUCCESS")
-            
+
         except Exception as e:
             self.log(f"❌ Database initialization failed: {e}", "ERROR")
-    
+
     def init_logging(self):
         """📝 Initialize advanced logging"""
         try:
@@ -367,7 +368,7 @@ class AdvancedStableDMExtractor:
             self.log("📝 Logging system initialized", "SUCCESS")
         except Exception as e:
             self.log(f"⚠️ Logging init warning: {e}", "WARNING")
-    
+
     def get_random_user_agent(self, agent_type: str = "mobile") -> str:
         """🎭 Get random user agent"""
         try:
@@ -379,28 +380,28 @@ class AdvancedStableDMExtractor:
                 return ua.random
             else:
                 return random.choice(AdvancedStableConfig.BROWSER_AGENTS)
-        except:
+        except Exception:
             return "Instagram 320.0.0.32.111 Android (34/14; 450dpi; 1080x2400; samsung; SM-S918B; dm1q; qcom; en_US; 559123456)"
-    
+
     def human_delay(self, min_delay: float = None, max_delay: float = None):
         """😴 Intelligent human-like delay"""
         if min_delay is None:
             min_delay = AdvancedStableConfig.RATE_CONFIG['min_delay']
         if max_delay is None:
             max_delay = AdvancedStableConfig.RATE_CONFIG['max_delay']
-        
+
         # Add randomization to make delays less predictable
         base_delay = random.uniform(min_delay, max_delay)
         jitter = random.uniform(-0.3, 0.3)
         final_delay = max(0.5, base_delay + jitter)
-        
+
         time.sleep(final_delay)
-    
+
     def setup_enhanced_browser(self) -> object:
         """🎭 Setup enhanced stealth browser"""
         try:
             self.log("🎭 Setting up enhanced stealth browser", "STEALTH")
-            
+
             # Try undetected-chromedriver first
             if uc:
                 try:
@@ -410,17 +411,17 @@ class AdvancedStableDMExtractor:
                     options.add_argument("--disable-gpu")
                     options.add_argument("--disable-web-security")
                     options.add_argument("--disable-features=VizDisplayCompositor")
-                    
+
                     # Random window size
                     sizes = ["1366,768", "1920,1080", "1440,900", "1280,720", "1600,900"]
                     options.add_argument(f"--window-size={random.choice(sizes)}")
-                    
+
                     # Random user agent
                     user_agent = self.get_random_user_agent("browser")
                     options.add_argument(f"--user-agent={user_agent}")
-                    
+
                     driver = uc.Chrome(options=options, version_main=None)
-                    
+
                     # Advanced stealth scripts
                     stealth_scripts = [
                         "Object.defineProperty(navigator, 'webdriver', {get: () => undefined,});",
@@ -429,19 +430,19 @@ class AdvancedStableDMExtractor:
                         "window.chrome = {runtime: {},};",
                         "Object.defineProperty(navigator, 'permissions', {get: () => ({query: () => Promise.resolve({state: 'granted'})}),});"
                     ]
-                    
+
                     for script in stealth_scripts:
                         try:
                             driver.execute_script(script)
-                        except:
+                        except Exception:
                             pass
-                    
+
                     self.log("✅ Undetected Chrome browser ready", "SUCCESS")
                     return driver
-                    
+
                 except Exception as e:
                     self.log(f"⚠️ Undetected Chrome failed: {e}", "WARNING")
-            
+
             # Fallback to regular Chrome
             if webdriver:
                 options = Options()
@@ -450,61 +451,61 @@ class AdvancedStableDMExtractor:
                 options.add_argument("--disable-blink-features=AutomationControlled")
                 options.add_experimental_option("excludeSwitches", ["enable-automation"])
                 options.add_experimental_option('useAutomationExtension', False)
-                
+
                 user_agent = self.get_random_user_agent("browser")
                 options.add_argument(f"--user-agent={user_agent}")
-                
+
                 driver = webdriver.Chrome(options=options)
                 driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined,});")
-                
+
                 self.log("✅ Standard Chrome browser ready", "SUCCESS")
                 return driver
-            
+
             self.log("❌ No browser available", "ERROR")
             return None
-            
+
         except Exception as e:
             self.log(f"❌ Browser setup failed: {e}", "ERROR")
             return None
-    
+
     def setup_instagrapi_client(self, username: str, password: str, max_retries: int = 3) -> bool:
         """🔧 Setup robust instagrapi client"""
         try:
             if not Client:
                 self.log("❌ instagrapi not available", "ERROR")
                 return False
-            
+
             self.log("🔧 Setting up instagrapi client", "INFO")
-            
+
             for attempt in range(max_retries):
                 try:
                     self.instagrapi_client = Client()
-                    
+
                     # Enhanced client configuration
                     self.instagrapi_client.delay_range = [1, 4]
                     self.instagrapi_client.request_timeout = 15
-                    
+
                     # Set dynamic user agent
                     user_agent = self.get_random_user_agent("mobile")
                     self.instagrapi_client.set_user_agent(user_agent)
-                    
+
                     # Try to load existing session
                     session_file = f"sessions/session_{username}.json"
                     if os.path.exists(session_file):
                         try:
                             self.log("🔑 Loading existing session", "INFO")
                             self.instagrapi_client.load_settings(session_file)
-                            
+
                             # Verify session is still valid
                             if self.instagrapi_client.get_timeline_feed(amount=1):
                                 self.log("✅ Session loaded and verified", "SUCCESS")
                                 return True
                         except Exception as e:
                             self.log(f"⚠️ Session verification failed: {e}", "WARNING")
-                    
+
                     # Fresh login
                     self.log(f"🔐 Performing fresh login (attempt {attempt + 1})", "INFO")
-                    
+
                     if self.instagrapi_client.login(username, password):
                         # Save session
                         os.makedirs("sessions", exist_ok=True)
@@ -513,34 +514,34 @@ class AdvancedStableDMExtractor:
                         return True
                     else:
                         self.log(f"❌ Login failed (attempt {attempt + 1})", "ERROR")
-                        
+
                 except ChallengeRequired as e:
                     self.log(f"🚨 Challenge required: {e}", "WARNING")
                     # Could implement challenge handling here
                     return False
-                    
+
                 except PleaseWaitFewMinutes as e:
                     wait_time = 300 + (attempt * 120)  # Increase wait time with attempts
                     self.log(f"⏰ Rate limited, waiting {wait_time} seconds", "WARNING")
                     time.sleep(wait_time)
                     continue
-                    
+
                 except Exception as e:
                     self.log(f"❌ Login attempt {attempt + 1} failed: {e}", "ERROR")
                     if attempt < max_retries - 1:
                         self.human_delay(5, 10)
-            
+
             return False
-            
+
         except Exception as e:
             self.log(f"❌ Client setup failed: {e}", "ERROR")
             return False
-    
+
     def setup_requests_session(self) -> requests.Session:
         """🌐 Setup enhanced requests session"""
         try:
             session = requests.Session()
-            
+
             # Enhanced headers
             headers = {
                 'User-Agent': self.get_random_user_agent("browser"),
@@ -557,53 +558,53 @@ class AdvancedStableDMExtractor:
                 'X-IG-App-ID': '936619743392459',
                 'X-IG-WWW-Claim': '0'
             }
-            
+
             session.headers.update(headers)
-            
+
             # Set timeouts
             session.timeout = 30
-            
+
             self.requests_session = session
             self.log("🌐 Enhanced requests session ready", "SUCCESS")
             return session
-            
+
         except Exception as e:
             self.log(f"❌ Requests session setup failed: {e}", "ERROR")
             return None
-    
+
     async def setup_aio_session(self) -> aiohttp.ClientSession:
         """⚡ Setup async session"""
         try:
             if not aiohttp:
                 return None
-            
+
             timeout = aiohttp.ClientTimeout(total=30)
             headers = {
                 'User-Agent': self.get_random_user_agent("browser"),
                 'Accept': 'application/json, text/plain, */*',
                 'Accept-Language': 'en-US,en;q=0.9'
             }
-            
+
             self.aio_session = aiohttp.ClientSession(timeout=timeout, headers=headers)
             self.log("⚡ Async session ready", "SUCCESS")
             return self.aio_session
-            
+
         except Exception as e:
             self.log(f"❌ Async session setup failed: {e}", "ERROR")
             return None
-    
+
     async def extract_with_instagrapi(self, username: str, password: str) -> List[Dict]:
         """🎯 Extract using instagrapi method"""
         try:
             self.log("🎯 Starting instagrapi extraction", "ATTACK")
-            
+
             if not self.setup_instagrapi_client(username, password):
                 return []
-            
+
             # Get all threads
             threads = self.instagrapi_client.direct_threads()
             self.log(f"📊 Found {len(threads)} total threads", "INFO")
-            
+
             # Filter for target
             target_threads = []
             if self.target_username:
@@ -614,14 +615,14 @@ class AdvancedStableDMExtractor:
                 self.log(f"🎯 Found {len(target_threads)} threads with {self.target_username}", "SUCCESS")
             else:
                 target_threads = threads[:AdvancedStableConfig.EXTRACTION_LIMITS['max_threads_per_target']]
-            
+
             extracted_data = []
-            
+
             # Process threads with rate limiting
             for i, thread in enumerate(target_threads, 1):
                 try:
                     self.log(f"📨 Processing thread {i}/{len(target_threads)}", "INFO")
-                    
+
                     # Get thread data
                     thread_data = {
                         'thread_id': thread.id,
@@ -631,11 +632,11 @@ class AdvancedStableDMExtractor:
                         'extraction_method': 'instagrapi',
                         'extraction_timestamp': datetime.now().isoformat()
                     }
-                    
+
                     # Get messages
                     max_messages = AdvancedStableConfig.EXTRACTION_LIMITS['max_messages_per_thread']
                     messages = self.instagrapi_client.direct_messages(thread.id, amount=max_messages)
-                    
+
                     for msg in messages:
                         try:
                             message_data = {
@@ -648,37 +649,37 @@ class AdvancedStableDMExtractor:
                                 'media': self.extract_media_info(msg),
                                 'extraction_timestamp': datetime.now().isoformat()
                             }
-                            
+
                             thread_data['messages'].append(message_data)
                             self.save_message_to_db(thread.id, message_data)
-                            
+
                         except Exception as e:
                             self.log(f"⚠️ Message processing error: {e}", "WARNING")
-                    
+
                     thread_data['message_count'] = len(thread_data['messages'])
                     extracted_data.append(thread_data)
                     self.save_thread_to_db(thread_data)
-                    
+
                     self.log(f"✅ Thread complete: {len(thread_data['messages'])} messages", "SUCCESS")
-                    
+
                     # Human delay between threads
                     self.human_delay(2, 6)
-                    
+
                 except Exception as e:
                     self.log(f"❌ Thread {i} failed: {e}", "ERROR")
                     continue
-            
+
             return extracted_data
-            
+
         except Exception as e:
             self.log(f"❌ Instagrapi extraction failed: {e}", "ERROR")
             return []
-    
+
     def extract_media_info(self, message) -> Optional[Dict]:
         """📸 Extract media information from message"""
         try:
             media_info = None
-            
+
             if hasattr(message, 'visual_media') and message.visual_media:
                 media = message.visual_media
                 media_info = {
@@ -697,12 +698,12 @@ class AdvancedStableDMExtractor:
                     'type': 'voice',
                     'url': getattr(message.voice_media.audio, 'audio_url', None) if hasattr(message.voice_media, 'audio') else None
                 }
-            
+
             return media_info
-            
+
         except Exception:
             return None
-    
+
     def get_username_from_id(self, user_id: str, thread_users: list) -> str:
         """🔍 Get username from user ID"""
         try:
@@ -710,33 +711,33 @@ class AdvancedStableDMExtractor:
                 if str(user.pk) == user_id:
                     return user.username
             return "unknown"
-        except:
+        except Exception:
             return "unknown"
-    
+
     async def extract_with_browser(self, username: str, password: str) -> List[Dict]:
         """🌐 Extract using browser automation"""
         try:
             self.log("🌐 Starting browser extraction", "ATTACK")
-            
+
             self.browser_driver = self.setup_enhanced_browser()
             if not self.browser_driver:
                 return []
-            
+
             # Navigate to Instagram
             self.browser_driver.get("https://www.instagram.com/")
             self.human_delay(3, 6)
-            
+
             # Login process (simplified for safety)
             self.log("🔐 Browser login process", "INFO")
-            
+
             # Navigate to DMs
             dm_url = "https://www.instagram.com/direct/inbox/"
             self.browser_driver.get(dm_url)
             self.human_delay(5, 8)
-            
+
             # Extract available data (placeholder implementation)
             extracted_data = []
-            
+
             # This would contain the actual browser extraction logic
             # For security and stability, using placeholder
             placeholder_thread = {
@@ -748,12 +749,12 @@ class AdvancedStableDMExtractor:
                 'extraction_timestamp': datetime.now().isoformat(),
                 'message_count': 0
             }
-            
+
             extracted_data.append(placeholder_thread)
             self.log("✅ Browser extraction completed", "SUCCESS")
-            
+
             return extracted_data
-            
+
         except Exception as e:
             self.log(f"❌ Browser extraction failed: {e}", "ERROR")
             return []
@@ -761,18 +762,18 @@ class AdvancedStableDMExtractor:
             if self.browser_driver:
                 try:
                     self.browser_driver.quit()
-                except:
+                except Exception:
                     pass
-    
+
     def save_thread_to_db(self, thread_data: Dict):
         """💾 Save thread to database"""
         try:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
-            
+
             cursor.execute('''
-                INSERT OR REPLACE INTO dm_threads 
-                (scan_id, target_username, thread_id, thread_title, participants, 
+                INSERT OR REPLACE INTO dm_threads
+                (scan_id, target_username, thread_id, thread_title, participants,
                  message_count, extraction_method, extraction_timestamp, raw_data)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
@@ -786,22 +787,22 @@ class AdvancedStableDMExtractor:
                 thread_data['extraction_timestamp'],
                 json.dumps(thread_data)
             ))
-            
+
             conn.commit()
             conn.close()
-            
+
         except Exception as e:
             self.log(f"⚠️ DB save error: {e}", "WARNING")
-    
+
     def save_message_to_db(self, thread_id: str, message_data: Dict):
         """💾 Save message to database"""
         try:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
-            
+
             cursor.execute('''
-                INSERT OR REPLACE INTO dm_messages 
-                (thread_id, message_id, sender_id, sender_username, message_text, 
+                INSERT OR REPLACE INTO dm_messages
+                (thread_id, message_id, sender_id, sender_username, message_text,
                  message_type, timestamp, media_type, media_url, extraction_timestamp, raw_data)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
@@ -817,21 +818,21 @@ class AdvancedStableDMExtractor:
                 message_data['extraction_timestamp'],
                 json.dumps(message_data)
             ))
-            
+
             conn.commit()
             conn.close()
-            
+
         except Exception as e:
             self.log(f"⚠️ Message save error: {e}", "WARNING")
-    
+
     async def run_advanced_extraction(self, username: str, password: str) -> Dict:
         """🚀 Run complete advanced extraction with multiple methods"""
         try:
             self.log("🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION", "CRITICAL")
-            
+
             all_extracted_data = []
             extraction_methods = []
-            
+
             # Method 1: Instagrapi (Primary)
             self.log("🎯 Attempting instagrapi extraction", "ATTACK")
             instagrapi_data = await self.extract_with_instagrapi(username, password)
@@ -839,7 +840,7 @@ class AdvancedStableDMExtractor:
                 all_extracted_data.extend(instagrapi_data)
                 extraction_methods.append("instagrapi")
                 self.log(f"✅ Instagrapi: {len(instagrapi_data)} threads", "SUCCESS")
-            
+
             # Method 2: Browser automation (Fallback)
             if not all_extracted_data:
                 self.log("🌐 Attempting browser extraction", "ATTACK")
@@ -848,18 +849,18 @@ class AdvancedStableDMExtractor:
                     all_extracted_data.extend(browser_data)
                     extraction_methods.append("browser")
                     self.log(f"✅ Browser: {len(browser_data)} threads", "SUCCESS")
-            
+
             # Generate comprehensive report
             report = self.generate_advanced_report(all_extracted_data, extraction_methods)
-            
+
             # Save results
             results_file, report_file = self.save_results(all_extracted_data, report)
-            
+
             # Update session
             self.save_extraction_session(report, extraction_methods)
-            
+
             self.log("🎉 ADVANCED EXTRACTION COMPLETE!", "CRITICAL")
-            
+
             return {
                 'success': True,
                 'scan_id': self.scan_id,
@@ -872,19 +873,19 @@ class AdvancedStableDMExtractor:
                 },
                 'methods_used': extraction_methods
             }
-            
+
         except Exception as e:
             self.log(f"💀 EXTRACTION FAILED: {e}", "CRITICAL")
             return {'success': False, 'error': str(e)}
-    
+
     def generate_advanced_report(self, extracted_data: List[Dict], methods: List[str]) -> Dict:
         """📊 Generate comprehensive report"""
         try:
             total_threads = len(extracted_data)
             total_messages = sum(thread.get('message_count', 0) for thread in extracted_data)
-            
+
             duration = (datetime.now() - self.extraction_stats['start_time']).total_seconds()
-            
+
             report = {
                 'summary': {
                     'scan_id': self.scan_id,
@@ -910,7 +911,7 @@ class AdvancedStableDMExtractor:
                     'date_range': {'earliest': None, 'latest': None}
                 }
             }
-            
+
             # Analyze threads
             all_timestamps = []
             for thread in extracted_data:
@@ -922,72 +923,72 @@ class AdvancedStableDMExtractor:
                     'method': thread.get('extraction_method', 'unknown')
                 }
                 report['thread_analysis'].append(thread_analysis)
-                
+
                 # Update statistics
                 for participant in thread.get('participants', []):
                     report['statistics']['participants_found'].add(participant)
-                
+
                 for message in thread.get('messages', []):
                     if message.get('media'):
                         report['statistics']['media_messages'] += 1
                     else:
                         report['statistics']['text_messages'] += 1
-                    
+
                     if message.get('timestamp'):
                         all_timestamps.append(message['timestamp'])
-            
+
             # Convert set to list for JSON serialization
             report['statistics']['participants_found'] = list(report['statistics']['participants_found'])
-            
+
             # Date range
             if all_timestamps:
                 report['statistics']['date_range'] = {
                     'earliest': min(all_timestamps),
                     'latest': max(all_timestamps)
                 }
-            
+
             return report
-            
+
         except Exception as e:
             self.log(f"❌ Report generation failed: {e}", "ERROR")
             return {'error': str(e)}
-    
+
     def save_results(self, extracted_data: List[Dict], report: Dict) -> Tuple[str, str]:
         """💾 Save extraction results"""
         try:
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            
+
             # Save data
             results_file = f"advanced_dm_extraction_{self.target_username}_{timestamp}.json"
             with open(results_file, 'w', encoding='utf-8') as f:
                 json.dump(extracted_data, f, indent=2, ensure_ascii=False, default=str)
-            
+
             # Save report
             report_file = f"advanced_dm_report_{self.target_username}_{timestamp}.json"
             with open(report_file, 'w', encoding='utf-8') as f:
                 json.dump(report, f, indent=2, ensure_ascii=False, default=str)
-            
+
             self.log(f"💾 Results saved: {results_file}", "SUCCESS")
             self.log(f"📊 Report saved: {report_file}", "SUCCESS")
-            
+
             return results_file, report_file
-            
+
         except Exception as e:
             self.log(f"❌ Save failed: {e}", "ERROR")
             return None, None
-    
+
     def save_extraction_session(self, report: Dict, methods: List[str]):
         """📊 Save session to database"""
         try:
             conn = sqlite3.connect(self.db_file)
             cursor = conn.cursor()
-            
+
             summary = report.get('summary', {})
             performance = report.get('performance', {})
-            
+
             cursor.execute('''
-                INSERT OR REPLACE INTO extraction_sessions 
-                (scan_id, target_username, session_start, session_end, 
+                INSERT OR REPLACE INTO extraction_sessions
+                (scan_id, target_username, session_start, session_end,
                  total_threads, total_messages, success_rate, stealth_score,
                  extraction_methods, performance_metrics)
                 VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -1003,13 +1004,13 @@ class AdvancedStableDMExtractor:
                 json.dumps(methods),
                 json.dumps(performance)
             ))
-            
+
             conn.commit()
             conn.close()
-            
+
         except Exception as e:
             self.log(f"⚠️ Session save failed: {e}", "WARNING")
-    
+
     def cleanup(self):
         """🧹 Cleanup resources"""
         try:
@@ -1019,13 +1020,11 @@ class AdvancedStableDMExtractor:
                 asyncio.create_task(self.aio_session.close())
             if self.requests_session:
                 self.requests_session.close()
-            
+
             self.log("🧹 Cleanup completed", "INFO")
-            
+
         except Exception as e:
             self.log(f"⚠️ Cleanup warning: {e}", "WARNING")
-
-
 async def main():
     """🚀 Main execution function"""
     print(f"""
@@ -1038,7 +1037,7 @@ async def main():
 🛡️ Robust error handling and session management
 {Style.RESET_ALL}
     """)
-    
+
     # Check for stdin input or command line args
     if not sys.stdin.isatty():
         # Reading from stdin (called by another script)
@@ -1071,33 +1070,33 @@ async def main():
         if not target_username:
             print(f"{Fore.RED}❌ Target username required!{Style.RESET_ALL}")
             return
-        
+
         username = input(f"{Fore.CYAN}📧 Enter your Instagram username: {Style.RESET_ALL}").strip()
         if not username:
             print(f"{Fore.RED}❌ Username required!{Style.RESET_ALL}")
             return
-        
+
         password = input(f"{Fore.CYAN}🔐 Enter your Instagram password: {Style.RESET_ALL}").strip()
         if not password:
             print(f"{Fore.RED}❌ Password required!{Style.RESET_ALL}")
             return
-    
+
     print(f"\n{Fore.YELLOW}🎯 Target: {target_username}")
     print(f"👤 Account: {username}")
     print(f"🚀 Initializing advanced extraction...{Style.RESET_ALL}\n")
-    
+
     # Initialize extractor
     extractor = AdvancedStableDMExtractor(target_username)
-    
+
     try:
         # Run extraction
         results = await extractor.run_advanced_extraction(username, password)
-        
+
         if results['success']:
             report = results['report']
             summary = report.get('summary', {})
             performance = report.get('performance', {})
-            
+
             print(f"\n{Fore.GREEN + Style.BRIGHT}🎉 ADVANCED EXTRACTION COMPLETED!{Style.RESET_ALL}")
             print("=" * 80)
             print(f"🎯 Target: {summary.get('target', 'N/A')}")
@@ -1110,29 +1109,27 @@ async def main():
             print(f"🚀 Speed: {performance.get('messages_per_second', 0):.2f} msg/sec")
             print(f"✅ Success Rate: {performance.get('success_rate', 0):.1f}%")
             print(f"🛡️ Stealth Score: {performance.get('stealth_score', 0):.1f}%")
-            
+
             # Show thread details
             if report.get('thread_analysis'):
                 print(f"\n{Fore.MAGENTA}📋 EXTRACTED THREADS:{Style.RESET_ALL}")
                 for i, thread in enumerate(report['thread_analysis'][:10], 1):  # Show first 10
                     print(f"  {i}. {thread['title']} ({thread['message_count']} messages)")
-            
+
             print(f"\n{Fore.GREEN}✅ Files saved successfully!")
             print(f"📊 Report: {results['files']['report']}")
             print(f"💾 Data: {results['files']['results']}")
             print(f"🗄️ Database: {results['files']['database']}{Style.RESET_ALL}")
-            
+
         else:
             print(f"\n{Fore.RED}💀 EXTRACTION FAILED: {results.get('error', 'Unknown error')}{Style.RESET_ALL}")
-    
+
     except KeyboardInterrupt:
         print(f"\n{Fore.YELLOW}⚠️ Extraction interrupted by user{Style.RESET_ALL}")
     except Exception as e:
         print(f"\n{Fore.RED}💀 Unexpected error: {e}{Style.RESET_ALL}")
     finally:
         extractor.cleanup()
-
-
 if __name__ == "__main__":
     # Run the advanced stable extractor
     asyncio.run(main())

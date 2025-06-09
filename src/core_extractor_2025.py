@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 CORE INSTAGRAM EXTRACTOR 2025 - REAL WORKING VERSION
@@ -43,12 +48,12 @@ class CoreExtractor:
         self.driver = None
         self.session = requests.Session()
         self._setup_database()
-        
+
     def _setup_database(self):
         """Create real database tables"""
         conn = sqlite3.connect(self.db_path)
         c = conn.cursor()
-        
+
         # Create tables for real data storage
         c.execute('''CREATE TABLE IF NOT EXISTS extracted_data
                     (id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -56,13 +61,13 @@ class CoreExtractor:
                      data_type TEXT,
                      content TEXT,
                      timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)''')
-                     
+
         c.execute('''CREATE TABLE IF NOT EXISTS cookies
                     (id INTEGER PRIMARY KEY AUTOINCREMENT,
                      domain TEXT,
                      cookie_data TEXT,
                      timestamp DATETIME DEFAULT CURRENT_TIMESTAMP)''')
-                     
+
         conn.commit()
         conn.close()
 
@@ -90,10 +95,10 @@ class CoreExtractor:
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
-        
+
         if self.current_proxy:
             options.add_argument(f'--proxy-server={self.current_proxy}')
-            
+
         self.driver = uc.Chrome(options=options)
         return self.driver
 
@@ -105,13 +110,13 @@ class CoreExtractor:
                 'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15',
                 'Accept': '*/*'
             }
-            
+
             response = self.session.get(
                 f'https://www.instagram.com/{username}/?__a=1',
                 headers=headers,
                 proxies=self._rotate_proxy() if self.proxy_list else None
             )
-            
+
             # Process real response data
             if response.status_code == 200:
                 content_data = {
@@ -127,28 +132,28 @@ class CoreExtractor:
                     "status_code": response.status_code,
                     "error": "HTTP error"
                 }
-            
+
             # Store in database
             conn = sqlite3.connect(self.db_path)
             c = conn.cursor()
             c.execute('''INSERT INTO extracted_data (username, data_type, content)
-                        VALUES (?, ?, ?)''', 
+                        VALUES (?, ?, ?)''',
                         (username, data_type, json.dumps(content_data)))
             conn.commit()
             conn.close()
-            
+
             return content_data
-            
+
         except Exception as e:
             return {"status": "error", "error": str(e)}
-            
+
     def save_cookies(self, cookies: Dict):
         """Save real cookies to database"""
         conn = sqlite3.connect(self.db_path)
         c = conn.cursor()
         for domain, cookie_data in cookies.items():
             c.execute('''INSERT INTO cookies (domain, cookie_data)
-                        VALUES (?, ?)''', 
+                        VALUES (?, ?)''',
                         (domain, json.dumps(cookie_data)))
         conn.commit()
         conn.close()

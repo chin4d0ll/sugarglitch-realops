@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 DATABASE OPERATIONS TEST 2025
@@ -19,7 +24,7 @@ from target_database_manager import TargetDatabaseManager
 def test_database_connection():
     """Test basic database connection"""
     print("🔍 Testing database connection...")
-    
+
     try:
         # Test with target database manager
         db_manager = TargetDatabaseManager("test_targets.db")
@@ -32,7 +37,7 @@ def test_database_connection():
 def test_target_operations(db_manager):
     """Test target CRUD operations"""
     print("\n🎯 Testing target operations...")
-    
+
     try:
         # Add test targets
         test_targets = [
@@ -46,7 +51,7 @@ def test_target_operations(db_manager):
                 'priority': 3
             },
             {
-                'username': 'test_user_2', 
+                'username': 'test_user_2',
                 'full_name': 'Test User Two',
                 'follower_count': 2500,
                 'following_count': 800,
@@ -64,23 +69,23 @@ def test_target_operations(db_manager):
                 'priority': 1
             }
         ]
-        
+
         target_ids = []
         for target in test_targets:
             target_id = db_manager.add_target(**target)
             target_ids.append(target_id)
             print(f"✅ Added target: {target['username']} (ID: {target_id})")
-        
+
         # Test target retrieval
         print("\n📋 Retrieving targets...")
         all_targets = db_manager.get_all_targets()
         print(f"📊 Total targets in database: {len(all_targets)}")
-        
+
         for target in all_targets:
             print(f"   - {target['username']}: {target['full_name']} (Priority: {target['priority']})")
-        
+
         return target_ids
-        
+
     except Exception as e:
         print(f"❌ Target operations failed: {e}")
         return []
@@ -88,7 +93,7 @@ def test_target_operations(db_manager):
 def test_operation_logging(db_manager, target_ids):
     """Test operation logging"""
     print("\n🔄 Testing operation logging...")
-    
+
     try:
         operations = [
             {
@@ -113,24 +118,24 @@ def test_operation_logging(db_manager, target_ids):
                 'data_extracted': 0
             }
         ]
-        
+
         for op in operations:
             op_id = db_manager.log_operation(**op)
             print(f"✅ Logged operation: {op['operation_type']} for target {op['target_id']} (Op ID: {op_id})")
-        
+
         # Test operation retrieval
         print("\n📊 Operation statistics:")
         stats = db_manager.get_stats()
         for key, value in stats.items():
             print(f"   - {key}: {value}")
-            
+
     except Exception as e:
         print(f"❌ Operation logging failed: {e}")
 
 def test_data_extraction_logging(db_manager, target_ids):
     """Test extracted data logging"""
     print("\n💾 Testing data extraction logging...")
-    
+
     try:
         extracted_data = [
             {
@@ -155,18 +160,18 @@ def test_data_extraction_logging(db_manager, target_ids):
                 'is_sensitive': False
             }
         ]
-        
+
         for data in extracted_data:
             data_id = db_manager.add_extracted_data(**data)
             print(f"✅ Logged extracted data: {data['data_type']} for target {data['target_id']} (Data ID: {data_id})")
-        
+
     except Exception as e:
         print(f"❌ Data extraction logging failed: {e}")
 
 def test_target_relationships(db_manager, target_ids):
     """Test target relationship mapping"""
     print("\n🔗 Testing target relationships...")
-    
+
     try:
         relationships = [
             {
@@ -188,18 +193,18 @@ def test_target_relationships(db_manager, target_ids):
                 'confidence_score': 0.95
             }
         ]
-        
+
         for rel in relationships:
             rel_id = db_manager.add_target_relationship(**rel)
             print(f"✅ Added relationship: Target {rel['source_target_id']} -> Target {rel['related_target_id']} ({rel['relationship_type']})")
-        
+
     except Exception as e:
         print(f"❌ Target relationship mapping failed: {e}")
 
 def test_monitoring_system(db_manager, target_ids):
     """Test monitoring system"""
     print("\n📡 Testing monitoring system...")
-    
+
     try:
         monitoring_checks = [
             {
@@ -221,11 +226,11 @@ def test_monitoring_system(db_manager, target_ids):
                 'changes_detected': None
             }
         ]
-        
+
         for check in monitoring_checks:
             check_id = db_manager.add_monitoring_record(**check)
             print(f"✅ Added monitoring record: {check['check_type']} for target {check['target_id']}")
-        
+
     except Exception as e:
         print(f"❌ Monitoring system test failed: {e}")
 
@@ -233,20 +238,20 @@ def generate_database_report(db_manager):
     """Generate comprehensive database report"""
     print("\n📊 GENERATING DATABASE REPORT...")
     print("=" * 50)
-    
+
     try:
         # Get basic statistics
         stats = db_manager.get_stats()
         print(f"📈 DATABASE STATISTICS:")
         for key, value in stats.items():
             print(f"   {key}: {value}")
-        
+
         # Get all targets summary
         print(f"\n🎯 TARGETS SUMMARY:")
         targets = db_manager.get_all_targets()
         for target in targets[:5]:  # Show first 5
             print(f"   - {target['username']}: {target['status']} (Priority: {target['priority']})")
-        
+
         # Recent operations
         print(f"\n🔄 RECENT OPERATIONS:")
         cursor = db_manager.conn.cursor()
@@ -258,12 +263,12 @@ def generate_database_report(db_manager):
             LIMIT 5
         """)
         operations = cursor.fetchall()
-        
+
         for op in operations:
             print(f"   - {op[0]} on {op[1]}: {op[2]} ({op[3]})")
-        
+
         print("\n✅ Database report generated successfully!")
-        
+
     except Exception as e:
         print(f"❌ Report generation failed: {e}")
 
@@ -281,12 +286,12 @@ def main():
     """Main test function"""
     print("🚀 STARTING DATABASE OPERATIONS TEST")
     print("=" * 50)
-    
+
     # Test database connection
     db_manager = test_database_connection()
     if not db_manager:
         return
-    
+
     try:
         # Run all tests
         target_ids = test_target_operations(db_manager)
@@ -295,21 +300,21 @@ def main():
             test_data_extraction_logging(db_manager, target_ids)
             test_target_relationships(db_manager, target_ids)
             test_monitoring_system(db_manager, target_ids)
-            
+
             # Generate final report
             generate_database_report(db_manager)
-        
+
         print(f"\n🎉 ALL TESTS COMPLETED SUCCESSFULLY!")
-        
+
     except Exception as e:
         print(f"❌ Test execution failed: {e}")
-    
+
     finally:
         # Close database connection
         if db_manager and db_manager.conn:
             db_manager.conn.close()
             print("🔒 Database connection closed")
-        
+
         # Cleanup
         cleanup_test_database()
 

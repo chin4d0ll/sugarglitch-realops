@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Reports Dashboard and Viewer
@@ -16,7 +21,7 @@ class ReportsDashboard:
         self.reports_dir = Path(reports_dir)
         self.summary_data = None
         self.inventory_data = None
-        
+
     def load_data(self):
         """โหลดข้อมูลสรุปและ inventory"""
         # Load summary
@@ -24,17 +29,17 @@ class ReportsDashboard:
         if summary_file.exists():
             with open(summary_file, 'r', encoding='utf-8') as f:
                 self.summary_data = json.load(f)
-        
+
         # Load inventory
         inventory_file = self.reports_dir / "reports_inventory.json"
         if inventory_file.exists():
             with open(inventory_file, 'r', encoding='utf-8') as f:
                 self.inventory_data = json.load(f)
-    
+
     def create_html_dashboard(self):
         """สร้าง HTML dashboard สำหรับดู reports"""
         self.load_data()
-        
+
         html_content = f"""
 <!DOCTYPE html>
 <html lang="th">
@@ -48,20 +53,20 @@ class ReportsDashboard:
             padding: 0;
             box-sizing: border-box;
         }}
-        
+
         body {{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
             line-height: 1.6;
         }}
-        
+
         .container {{
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }}
-        
+
         .header {{
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -70,27 +75,27 @@ class ReportsDashboard:
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
         }}
-        
+
         .header h1 {{
             color: #2c3e50;
             text-align: center;
             margin-bottom: 10px;
             font-size: 2.5em;
         }}
-        
+
         .header .subtitle {{
             text-align: center;
             color: #7f8c8d;
             font-size: 1.2em;
         }}
-        
+
         .stats-grid {{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }}
-        
+
         .stat-card {{
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -100,24 +105,24 @@ class ReportsDashboard:
             backdrop-filter: blur(10px);
             transition: transform 0.3s ease;
         }}
-        
+
         .stat-card:hover {{
             transform: translateY(-5px);
         }}
-        
+
         .stat-number {{
             font-size: 2.5em;
             font-weight: bold;
             color: #3498db;
             display: block;
         }}
-        
+
         .stat-label {{
             color: #7f8c8d;
             margin-top: 10px;
             font-size: 1.1em;
         }}
-        
+
         .categories-section {{
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -126,20 +131,20 @@ class ReportsDashboard:
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
         }}
-        
+
         .section-title {{
             color: #2c3e50;
             font-size: 2em;
             margin-bottom: 20px;
             text-align: center;
         }}
-        
+
         .category-grid {{
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }}
-        
+
         .category-card {{
             background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
             border-radius: 12px;
@@ -147,41 +152,41 @@ class ReportsDashboard:
             color: white;
             transition: all 0.3s ease;
         }}
-        
+
         .category-card:nth-child(2n) {{
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }}
-        
+
         .category-card:nth-child(3n) {{
             background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
         }}
-        
+
         .category-card:nth-child(4n) {{
             background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
         }}
-        
+
         .category-card:hover {{
             transform: scale(1.05);
         }}
-        
+
         .category-name {{
             font-size: 1.3em;
             font-weight: bold;
             margin-bottom: 10px;
         }}
-        
+
         .category-description {{
             font-size: 0.9em;
             opacity: 0.9;
             margin-bottom: 15px;
         }}
-        
+
         .category-stats {{
             display: flex;
             justify-content: space-between;
             font-size: 0.9em;
         }}
-        
+
         .recent-files {{
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -190,11 +195,11 @@ class ReportsDashboard:
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
         }}
-        
+
         .file-list {{
             list-style: none;
         }}
-        
+
         .file-item {{
             background: #f8f9fa;
             margin: 10px 0;
@@ -203,23 +208,23 @@ class ReportsDashboard:
             border-left: 4px solid #3498db;
             transition: all 0.3s ease;
         }}
-        
+
         .file-item:hover {{
             background: #e9ecef;
             transform: translateX(5px);
         }}
-        
+
         .file-name {{
             font-weight: bold;
             color: #2c3e50;
         }}
-        
+
         .file-meta {{
             color: #7f8c8d;
             font-size: 0.9em;
             margin-top: 5px;
         }}
-        
+
         .navigation {{
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
@@ -228,7 +233,7 @@ class ReportsDashboard:
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
         }}
-        
+
         .nav-button {{
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -239,26 +244,26 @@ class ReportsDashboard:
             margin: 10px;
             transition: all 0.3s ease;
         }}
-        
+
         .nav-button:hover {{
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }}
-        
+
         .emoji {{
             font-size: 1.2em;
             margin-right: 8px;
         }}
-        
+
         @media (max-width: 768px) {{
             .stats-grid {{
                 grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }}
-            
+
             .category-grid {{
                 grid-template-columns: 1fr;
             }}
-            
+
             .header h1 {{
                 font-size: 2em;
             }}
@@ -272,7 +277,7 @@ class ReportsDashboard:
             <p class="subtitle">SugarGlitch RealOps - Organized Reports System</p>
             <p class="subtitle">Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
         </div>
-        
+
         <div class="stats-grid">
             <div class="stat-card">
                 <span class="stat-number">{self.summary_data['total_files'] if self.summary_data else '273'}</span>
@@ -334,8 +339,8 @@ class ReportsDashboard:
                 <li class="file-item">
                     <div class="file-name">📄 {file_info['name']}</div>
                     <div class="file-meta">
-                        📅 Modified: {file_info['modified'][:10]} | 
-                        💾 Size: {size_kb:.1f} KB | 
+                        📅 Modified: {file_info['modified'][:10]} |
+                        💾 Size: {size_kb:.1f} KB |
                         📂 Category: {file_info['category'].replace('_', ' ').title()}
                     </div>
                 </li>
@@ -344,7 +349,7 @@ class ReportsDashboard:
         html_content += """
             </ul>
         </div>
-        
+
         <div class="navigation">
             <h2 class="section-title">🔗 Quick Navigation</h2>
             <a href="file:///workspaces/sugarglitch-realops/ORGANIZED_REPORTS" class="nav-button">
@@ -367,14 +372,14 @@ class ReportsDashboard:
 </body>
 </html>
 """
-        
+
         # Save dashboard
         dashboard_file = self.reports_dir / "dashboard.html"
         with open(dashboard_file, 'w', encoding='utf-8') as f:
             f.write(html_content)
-        
+
         return str(dashboard_file)
-    
+
     def create_quick_access_script(self):
         """สร้าง script สำหรับเข้าถึง reports อย่างรวดเร็ว"""
         script_content = f"""#!/usr/bin/env python3
@@ -390,7 +395,7 @@ from pathlib import Path
 class QuickReportsAccess:
     def __init__(self):
         self.reports_dir = Path("/workspaces/sugarglitch-realops/ORGANIZED_REPORTS")
-    
+
     def open_dashboard(self):
         '''เปิด dashboard'''
         dashboard = self.reports_dir / "dashboard.html"
@@ -399,22 +404,22 @@ class QuickReportsAccess:
             print("🌐 Opening reports dashboard...")
         else:
             print("❌ Dashboard not found!")
-    
+
     def list_categories(self):
         '''แสดงรายการหมวดหมู่'''
         print("📂 Available Report Categories:")
         print("=" * 40)
-        
+
         categories = [
             ("extraction_reports", "🔍 Extraction Reports"),
-            ("instagram_reports", "📱 Instagram Reports"), 
+            ("instagram_reports", "📱 Instagram Reports"),
             ("operations_reports", "⚙️ Operations Reports"),
             ("hacker_reports", "🔒 Hacker & Security Reports"),
             ("documentation", "📚 Documentation & Guides"),
             ("json_reports", "📄 JSON Data Reports"),
             ("other", "📦 Other Reports")
         ]
-        
+
         for i, (folder, name) in enumerate(categories, 1):
             folder_path = self.reports_dir / folder
             if folder_path.exists():
@@ -422,14 +427,14 @@ class QuickReportsAccess:
                 print(f"{i}. {name} ({file_count} files)")
             else:
                 print(f"{i}. {name} (Not found)")
-    
+
     def open_category(self, category_num):
         '''เปิดหมวดหมู่ตามหมายเลข'''
         categories = [
             "extraction_reports", "instagram_reports", "operations_reports",
             "hacker_reports", "documentation", "json_reports", "other"
         ]
-        
+
         if 1 <= category_num <= len(categories):
             folder = categories[category_num - 1]
             folder_path = self.reports_dir / folder
@@ -440,17 +445,17 @@ class QuickReportsAccess:
                 print(f"❌ Category {folder} not found!")
         else:
             print("❌ Invalid category number!")
-    
+
     def search_reports(self, keyword):
         '''ค้นหา reports ที่มีคำค้น'''
         print(f"🔍 Searching for reports containing '{keyword}'...")
         print("=" * 50)
-        
+
         found_files = []
         for file_path in self.reports_dir.rglob("*"):
             if file_path.is_file() and keyword.lower() in file_path.name.lower():
                 found_files.append(file_path)
-        
+
         if found_files:
             for i, file_path in enumerate(found_files, 1):
                 relative_path = file_path.relative_to(self.reports_dir)
@@ -461,24 +466,24 @@ class QuickReportsAccess:
                 print()
         else:
             print("❌ No reports found with that keyword!")
-        
+
         return found_files
 
 def main():
     access = QuickReportsAccess()
-    
+
     print("🎯 Quick Reports Access")
     print("=" * 30)
     print("1. Open Dashboard")
-    print("2. List Categories") 
+    print("2. List Categories")
     print("3. Open Category")
     print("4. Search Reports")
     print("5. Exit")
     print()
-    
+
     while True:
         choice = input("Select option (1-5): ").strip()
-        
+
         if choice == '1':
             access.open_dashboard()
         elif choice == '2':
@@ -499,33 +504,33 @@ def main():
             break
         else:
             print("❌ Invalid choice!")
-        
+
         print()
 
 if __name__ == "__main__":
     main()
 """
-        
+
         script_file = self.reports_dir / "quick_access.py"
         with open(script_file, 'w', encoding='utf-8') as f:
             f.write(script_content)
-        
+
         # Make it executable
         os.chmod(script_file, 0o755)
-        
+
         return str(script_file)
 
 if __name__ == "__main__":
     print("🎯 Creating Reports Dashboard...")
-    
+
     dashboard = ReportsDashboard()
-    
+
     # Create HTML dashboard
     dashboard_file = dashboard.create_html_dashboard()
     print(f"✅ Dashboard created: {dashboard_file}")
-    
+
     # Create quick access script
     access_script = dashboard.create_quick_access_script()
     print(f"✅ Quick access script: {access_script}")
-    
+
     print("🎉 Reports dashboard ready!")

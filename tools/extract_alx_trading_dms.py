@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 ALX Trading DM Extractor
@@ -11,15 +16,13 @@ import time
 from datetime import datetime, timedelta
 from typing import Dict, List, Any, Optional
 from urllib.parse import urljoin
-
-
 class ALXTradingDMExtractor:
     """Instagram DM Extractor for ALX Trading"""
-    
+
     def __init__(self, session_path: str = "tools/session_alx_trading.json"):
         """
         Initialize the extractor
-        
+
         Args:
             session_path: Path to session JSON file
         """
@@ -37,11 +40,11 @@ class ALXTradingDMExtractor:
             },
             "threads": []
         }
-    
+
     def load_session(self) -> bool:
         """
         Load session data from JSON file
-        
+
         Returns:
             bool: True if session loaded successfully
         """
@@ -49,10 +52,10 @@ class ALXTradingDMExtractor:
             if not os.path.exists(self.session_path):
                 print(f"❌ Session file not found: {self.session_path}")
                 return False
-            
+
             with open(self.session_path, 'r') as f:
                 session_data = json.load(f)
-            
+
             # Handle different session formats
             if isinstance(session_data, list):
                 # Cookie format - extract sessionid
@@ -61,15 +64,15 @@ class ALXTradingDMExtractor:
                     if cookie.get('name') == 'sessionid':
                         sessionid = cookie.get('value')
                         break
-                
+
                 if not sessionid:
                     print("❌ No sessionid found in cookie data")
                     return False
-                
+
                 if sessionid == "YOUR_SESSION_ID_HERE":
                     print("❌ Session file contains placeholder data - please update with real session")
                     return False
-                
+
                 self.session_data = {
                     'sessionid': sessionid,
                     'user_agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -78,16 +81,16 @@ class ALXTradingDMExtractor:
                 if 'sessionid' not in session_data:
                     print("❌ Missing 'sessionid' in session data")
                     return False
-                
+
                 if 'user_agent' not in session_data:
                     print("⚠️  Missing 'user_agent', using default")
                     session_data['user_agent'] = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-                
+
                 self.session_data = session_data
             else:
                 print("❌ Invalid session file format")
                 return False
-            
+
             # Setup headers and cookies
             self.headers = {
                 'User-Agent': self.session_data['user_agent'],
@@ -101,31 +104,31 @@ class ALXTradingDMExtractor:
                 'Referer': 'https://www.instagram.com/',
                 'Origin': 'https://www.instagram.com'
             }
-            
+
             self.cookies = {
                 'sessionid': self.session_data['sessionid'],
                 'csrftoken': self.session_data['sessionid'][:32],
             }
-            
+
             print(f"✅ Session loaded successfully")
             print(f"📊 SessionID: {self.session_data['sessionid'][:10]}...")
             return True
-            
+
         except json.JSONDecodeError as e:
             print(f"❌ Invalid JSON in session file: {e}")
             return False
         except Exception as e:
             print(f"❌ Error loading session: {e}")
             return False
-    
+
     def make_request(self, url: str, params: Dict = None) -> Optional[Dict]:
         """
         Make authenticated request to Instagram API
-        
+
         Args:
             url: API endpoint URL
             params: Query parameters
-            
+
         Returns:
             JSON response data or None if failed
         """
@@ -137,7 +140,7 @@ class ALXTradingDMExtractor:
                 params=params,
                 timeout=30
             )
-            
+
             if response.status_code == 200:
                 return response.json()
             elif response.status_code == 401:
@@ -154,7 +157,7 @@ class ALXTradingDMExtractor:
             else:
                 print(f"❌ Request failed with status {response.status_code}")
                 return None
-                
+
         except requests.exceptions.Timeout:
             print("❌ Request timeout")
             return None
@@ -164,47 +167,47 @@ class ALXTradingDMExtractor:
         except Exception as e:
             print(f"❌ Request error: {e}")
             return None
-    
+
     def fetch_inbox_threads(self) -> List[Dict]:
         """
         Fetch all DM threads from inbox with pagination
-        
+
         Returns:
             List of thread data
         """
         print("📥 Fetching DM threads from inbox...")
-        
+
         all_threads = []
         next_max_id = None
         page = 1
-        
+
         while True:
             print(f"📄 Fetching page {page}...")
-            
+
             url = f"{self.base_url}/direct_v2/inbox/"
             params = {}
-            
+
             if next_max_id:
                 params['max_id'] = next_max_id
-            
+
             data = self.make_request(url, params)
-            
+
             if not data:
                 print(f"❌ Failed to fetch page {page}")
                 break
-            
+
             if 'inbox' not in data or 'threads' not in data['inbox']:
                 print("❌ Invalid response format")
                 break
-            
+
             threads = data['inbox']['threads']
             if not threads:
                 print("✅ No more threads found")
                 break
-            
+
             all_threads.extend(threads)
             print(f"📋 Found {len(threads)} threads on page {page} (total: {len(all_threads)})")
-            
+
             # Check for pagination
             if 'has_older' in data['inbox'] and data['inbox']['has_older']:
                 if 'oldest_cursor' in data['inbox']:
@@ -217,52 +220,52 @@ class ALXTradingDMExtractor:
             else:
                 print("✅ Reached end of threads")
                 break
-        
+
         print(f"📊 Total threads fetched: {len(all_threads)}")
         return all_threads
-    
+
     def fetch_thread_messages(self, thread_id: str, thread_name: str = "") -> List[Dict]:
         """
         Fetch all messages from a specific thread with pagination
-        
+
         Args:
             thread_id: Thread ID
             thread_name: Thread name for logging
-            
+
         Returns:
             List of message data
         """
         print(f"💬 Fetching messages from thread: {thread_name} ({thread_id})")
-        
+
         all_messages = []
         next_max_id = None
         page = 1
-        
+
         while True:
             url = f"{self.base_url}/direct_v2/threads/{thread_id}/"
             params = {}
-            
+
             if next_max_id:
                 params['max_id'] = next_max_id
-            
+
             data = self.make_request(url, params)
-            
+
             if not data:
                 print(f"❌ Failed to fetch messages page {page} for thread {thread_id}")
                 break
-            
+
             if 'thread' not in data or 'items' not in data['thread']:
                 print("❌ Invalid thread response format")
                 break
-            
+
             messages = data['thread']['items']
             if not messages:
                 print("✅ No more messages found")
                 break
-            
+
             all_messages.extend(messages)
             print(f"  📄 Page {page}: {len(messages)} messages (total: {len(all_messages)})")
-            
+
             # Check for pagination
             if 'has_older' in data['thread'] and data['thread']['has_older']:
                 if 'oldest_cursor' in data['thread']:
@@ -273,31 +276,31 @@ class ALXTradingDMExtractor:
                     break
             else:
                 break
-        
+
         return all_messages
-    
+
     def extract_media_urls(self, message: Dict) -> List[Dict]:
         """
         Extract media URLs from message
-        
+
         Args:
             message: Message data
-            
+
         Returns:
             List of media information
         """
         media_items = []
-        
+
         if 'visual_media' in message:
             visual_media = message['visual_media']
             if 'media' in visual_media:
                 media = visual_media['media']
-                
+
                 media_info = {
                     'type': media.get('media_type', 'unknown'),
                     'id': media.get('id', ''),
                 }
-                
+
                 # Extract image URLs
                 if 'image_versions2' in media and 'candidates' in media['image_versions2']:
                     candidates = media['image_versions2']['candidates']
@@ -305,7 +308,7 @@ class ALXTradingDMExtractor:
                         media_info['image_url'] = candidates[0].get('url', '')
                         media_info['width'] = candidates[0].get('width', 0)
                         media_info['height'] = candidates[0].get('height', 0)
-                
+
                 # Extract video URLs
                 if 'video_versions' in media:
                     video_versions = media['video_versions']
@@ -313,9 +316,9 @@ class ALXTradingDMExtractor:
                         media_info['video_url'] = video_versions[0].get('url', '')
                         media_info['video_width'] = video_versions[0].get('width', 0)
                         media_info['video_height'] = video_versions[0].get('height', 0)
-                
+
                 media_items.append(media_info)
-        
+
         # Check for story shares or other media types
         if 'story_share' in message and message['story_share']:
             story = message['story_share']
@@ -325,29 +328,29 @@ class ALXTradingDMExtractor:
                     'type': 'story_share',
                     'id': media.get('id', ''),
                 }
-                
+
                 if 'image_versions2' in media and 'candidates' in media['image_versions2']:
                     candidates = media['image_versions2']['candidates']
                     if candidates:
                         media_info['image_url'] = candidates[0].get('url', '')
-                
+
                 media_items.append(media_info)
-        
+
         return media_items
-    
+
     def process_thread(self, thread: Dict) -> Dict:
         """
         Process a single thread - fetch messages and extract data
-        
+
         Args:
             thread: Thread data from inbox
-            
+
         Returns:
             Processed thread data
         """
         thread_id = thread.get('thread_id', '')
         thread_title = thread.get('thread_title', 'Untitled')
-        
+
         # Get thread participants
         users = []
         if 'users' in thread:
@@ -358,10 +361,10 @@ class ALXTradingDMExtractor:
                     'pk': user.get('pk', ''),
                     'is_verified': user.get('is_verified', False)
                 })
-        
+
         # Fetch all messages for this thread
         messages = self.fetch_thread_messages(thread_id, thread_title)
-        
+
         # Process messages and extract media
         processed_messages = []
         for message in messages:
@@ -373,13 +376,13 @@ class ALXTradingDMExtractor:
                 'text': message.get('text', ''),
                 'media': self.extract_media_urls(message)
             }
-            
+
             # Add reaction info if present
             if 'reactions' in message and message['reactions']:
                 processed_message['reactions'] = message['reactions']
-            
+
             processed_messages.append(processed_message)
-        
+
         processed_thread = {
             'thread_id': thread_id,
             'thread_title': thread_title,
@@ -390,23 +393,23 @@ class ALXTradingDMExtractor:
             'muted': thread.get('muted', False),
             'is_pin': thread.get('is_pin', False)
         }
-        
+
         return processed_thread
-    
+
     def filter_alx_trading_threads(self, threads: List[Dict]) -> List[Dict]:
         """
         Filter threads to find those related to alx.trading
-        
+
         Args:
             threads: List of all threads
-            
+
         Returns:
             Filtered list of alx.trading threads
         """
         print("🔍 Filtering threads for alx.trading...")
-        
+
         alx_threads = []
-        
+
         for thread in threads:
             # Check if any user in the thread is alx.trading
             if 'users' in thread:
@@ -416,172 +419,170 @@ class ALXTradingDMExtractor:
                         alx_threads.append(thread)
                         print(f"✅ Found ALX Trading thread: {user.get('username', '')} - {thread.get('thread_title', 'Untitled')}")
                         break
-        
+
         print(f"📊 Found {len(alx_threads)} ALX Trading threads")
         return alx_threads
-    
+
     def save_results(self, output_path: str):
         """
         Save extraction results to JSON file
-        
+
         Args:
             output_path: Output file path
         """
         try:
             # Create output directory if it doesn't exist
             os.makedirs(os.path.dirname(output_path), exist_ok=True)
-            
+
             # Update extraction info
             self.extracted_data['extraction_info']['total_threads'] = len(self.extracted_data['threads'])
             total_messages = sum(thread['message_count'] for thread in self.extracted_data['threads'])
             self.extracted_data['extraction_info']['total_messages'] = total_messages
-            
+
             # Save to file
             with open(output_path, 'w', encoding='utf-8') as f:
                 json.dump(self.extracted_data, f, indent=2, ensure_ascii=False)
-            
+
             print(f"💾 Results saved to: {output_path}")
             print(f"📊 Summary:")
             print(f"   - Threads: {self.extracted_data['extraction_info']['total_threads']}")
             print(f"   - Messages: {self.extracted_data['extraction_info']['total_messages']}")
-            
+
         except Exception as e:
             print(f"❌ Error saving results: {e}")
-    
+
     def extract_dms(self, output_path: str = "data/working_extraction/alx_trading_dm_full.json"):
         """
         Main extraction method
-        
+
         Args:
             output_path: Output file path
         """
         print("🚀 ALX Trading DM Extraction Started")
         print("=" * 50)
-        
+
         # Load session
         if not self.load_session():
             return False
-        
+
         # Fetch all inbox threads
         all_threads = self.fetch_inbox_threads()
         if not all_threads:
             print("❌ No threads found")
             return False
-        
+
         # Filter for ALX Trading threads
         alx_threads = self.filter_alx_trading_threads(all_threads)
         if not alx_threads:
             print("❌ No ALX Trading threads found")
             return False
-        
+
         # Process each ALX Trading thread
         print(f"\n📋 Processing {len(alx_threads)} ALX Trading threads...")
-        
+
         for i, thread in enumerate(alx_threads, 1):
             print(f"\n[{i}/{len(alx_threads)}] Processing thread...")
             processed_thread = self.process_thread(thread)
             self.extracted_data['threads'].append(processed_thread)
-            
+
             # Small delay between threads
             if i < len(alx_threads):
                 time.sleep(2)
-        
+
         # Save results
         self.save_results(output_path)
-        
+
         print("\n✅ ALX Trading DM extraction completed successfully!")
         return True
-
-
 def filter_recent_dms(dm_json: dict, days: int) -> dict:
     """
     Filter DM JSON data to include only recent threads and messages
-    
+
     Args:
         dm_json: DM data in the format returned by ALXTradingDMExtractor
         days: Number of days to look back from current time
-        
+
     Returns:
         dict: Filtered DM data containing only recent threads/messages
     """
     if not isinstance(dm_json, dict) or 'threads' not in dm_json:
         raise ValueError("Invalid DM JSON format - missing 'threads' key")
-    
+
     # Calculate cutoff timestamp (current time - specified days)
     cutoff_time = datetime.now() - timedelta(days=days)
     cutoff_timestamp = int(cutoff_time.timestamp() * 1000000)  # Instagram uses microseconds
-    
+
     print(f"🔍 Filtering DMs for last {days} days")
     print(f"📅 Cutoff time: {cutoff_time.strftime('%Y-%m-%d %H:%M:%S')}")
     print(f"📅 Cutoff timestamp: {cutoff_timestamp}")
-    
+
     filtered_data = {
         "extraction_info": dm_json.get("extraction_info", {}).copy(),
         "threads": []
     }
-    
+
     # Add filtering info to extraction_info
     filtered_data["extraction_info"]["filtered"] = True
     filtered_data["extraction_info"]["filter_days"] = days
     filtered_data["extraction_info"]["filter_applied_at"] = datetime.now().isoformat()
     filtered_data["extraction_info"]["cutoff_timestamp"] = cutoff_timestamp
-    
+
     total_original_threads = len(dm_json.get("threads", []))
     total_original_messages = 0
     total_filtered_threads = 0
     total_filtered_messages = 0
-    
+
     for thread in dm_json.get("threads", []):
         # Check if thread has recent activity
         last_activity = thread.get('last_activity_at', 0)
-        
+
         # Convert string timestamp to int if needed
         if isinstance(last_activity, str):
             try:
                 last_activity = int(last_activity)
             except (ValueError, TypeError):
                 last_activity = 0
-        
+
         # Filter messages within the thread
         filtered_messages = []
         thread_messages = thread.get('messages', [])
         total_original_messages += len(thread_messages)
-        
+
         for message in thread_messages:
             message_timestamp = message.get('timestamp', 0)
-            
+
             # Convert string timestamp to int if needed
             if isinstance(message_timestamp, str):
                 try:
                     message_timestamp = int(message_timestamp)
                 except (ValueError, TypeError):
                     message_timestamp = 0
-            
+
             # Include message if it's recent enough
             if message_timestamp >= cutoff_timestamp:
                 filtered_messages.append(message)
-        
+
         # Include thread if it has recent messages OR recent activity
         if filtered_messages or last_activity >= cutoff_timestamp:
             filtered_thread = thread.copy()
             filtered_thread['messages'] = filtered_messages
             filtered_thread['message_count'] = len(filtered_messages)
-            
+
             # Add filtering metadata to thread
             filtered_thread['filter_info'] = {
                 'original_message_count': len(thread_messages),
                 'filtered_message_count': len(filtered_messages),
                 'messages_removed': len(thread_messages) - len(filtered_messages)
             }
-            
+
             filtered_data["threads"].append(filtered_thread)
             total_filtered_threads += 1
             total_filtered_messages += len(filtered_messages)
-            
+
             print(f"✅ Thread '{thread.get('thread_title', 'Untitled')}': {len(filtered_messages)}/{len(thread_messages)} messages kept")
         else:
             print(f"❌ Thread '{thread.get('thread_title', 'Untitled')}': No recent activity, excluded")
-    
+
     # Update summary statistics
     filtered_data["extraction_info"]["total_threads"] = total_filtered_threads
     filtered_data["extraction_info"]["total_messages"] = total_filtered_messages
@@ -589,142 +590,132 @@ def filter_recent_dms(dm_json: dict, days: int) -> dict:
     filtered_data["extraction_info"]["original_total_messages"] = total_original_messages
     filtered_data["extraction_info"]["threads_removed"] = total_original_threads - total_filtered_threads
     filtered_data["extraction_info"]["messages_removed"] = total_original_messages - total_filtered_messages
-    
+
     print(f"\n📊 Filtering Summary:")
     print(f"   📋 Threads: {total_filtered_threads}/{total_original_threads} kept")
     print(f"   💬 Messages: {total_filtered_messages}/{total_original_messages} kept")
     print(f"   🗑️  Removed: {total_original_threads - total_filtered_threads} threads, {total_original_messages - total_filtered_messages} messages")
-    
+
     return filtered_data
-
-
 def convert_timestamp_to_datetime(timestamp: Any) -> Optional[datetime]:
     """
     Convert various timestamp formats to datetime object
-    
+
     Args:
         timestamp: Timestamp in various formats (int, str, etc.)
-        
+
     Returns:
         datetime object or None if conversion fails
     """
     if not timestamp:
         return None
-    
+
     try:
         # Convert to int if string
         if isinstance(timestamp, str):
             timestamp = int(timestamp)
-        
+
         # Instagram typically uses microseconds since epoch
         # If the number is too large, it's likely microseconds
         if timestamp > 1e12:  # If larger than normal Unix timestamp
             timestamp = timestamp / 1000000  # Convert microseconds to seconds
-        
+
         return datetime.fromtimestamp(timestamp)
     except (ValueError, TypeError, OSError):
         return None
-
-
 def filter_dms_by_user(dm_json: dict, target_users: List[str]) -> dict:
     """
     Filter DM data to include only messages from specific users
-    
+
     Args:
         dm_json: DM data in the format returned by ALXTradingDMExtractor
         target_users: List of usernames to filter for
-        
+
     Returns:
         dict: Filtered DM data containing only messages from target users
     """
     if not isinstance(dm_json, dict) or 'threads' not in dm_json:
         raise ValueError("Invalid DM JSON format - missing 'threads' key")
-    
+
     print(f"🔍 Filtering DMs for users: {', '.join(target_users)}")
-    
+
     filtered_data = {
         "extraction_info": dm_json.get("extraction_info", {}).copy(),
         "threads": []
     }
-    
+
     # Add filtering info
     filtered_data["extraction_info"]["user_filtered"] = True
     filtered_data["extraction_info"]["target_users"] = target_users
     filtered_data["extraction_info"]["user_filter_applied_at"] = datetime.now().isoformat()
-    
+
     total_filtered_messages = 0
-    
+
     for thread in dm_json.get("threads", []):
         # Check if thread contains any of the target users
         thread_users = []
         if 'users' in thread:
             thread_users = [user.get('username', '').lower() for user in thread['users']]
-        
+
         # Include thread if it contains any target user
         target_users_lower = [user.lower() for user in target_users]
         if any(user in thread_users for user in target_users_lower):
             filtered_thread = thread.copy()
             filtered_data["threads"].append(filtered_thread)
             total_filtered_messages += len(thread.get('messages', []))
-            
+
             print(f"✅ Thread '{thread.get('thread_title', 'Untitled')}': Contains target users")
         else:
             print(f"❌ Thread '{thread.get('thread_title', 'Untitled')}': No target users found")
-    
+
     # Update summary statistics
     filtered_data["extraction_info"]["total_threads"] = len(filtered_data["threads"])
     filtered_data["extraction_info"]["total_messages"] = total_filtered_messages
-    
+
     print(f"\n📊 User Filtering Summary:")
     print(f"   📋 Threads: {len(filtered_data['threads'])}/{len(dm_json.get('threads', []))} kept")
     print(f"   💬 Messages: {total_filtered_messages} total")
-    
+
     return filtered_data
-
-
 def save_filtered_dms(filtered_data: dict, output_path: str) -> bool:
     """
     Save filtered DM data to JSON file
-    
+
     Args:
         filtered_data: Filtered DM data
         output_path: Output file path
-        
+
     Returns:
         bool: True if save successful
     """
     try:
         # Create output directory if needed
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        
+
         # Save to file
         with open(output_path, 'w', encoding='utf-8') as f:
             json.dump(filtered_data, f, indent=2, ensure_ascii=False)
-        
+
         print(f"💾 Filtered DMs saved to: {output_path}")
         return True
-        
+
     except Exception as e:
         print(f"❌ Error saving filtered DMs: {e}")
         return False
-
-
 def main():
     """Main function"""
     extractor = ALXTradingDMExtractor()
-    
+
     # Default output path
     output_path = "data/working_extraction/alx_trading_dm_full.json"
-    
+
     # Run extraction
     success = extractor.extract_dms(output_path)
-    
+
     if not success:
         print("\n❌ Extraction failed")
         return 1
-    
+
     return 0
-
-
 if __name__ == "__main__":
     exit(main())

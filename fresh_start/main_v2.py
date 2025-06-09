@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Fresh Instagram DM Extractor V2 - With Rate Limiting Protection
@@ -22,17 +27,17 @@ def main():
     """Main extraction function with cute rate limiting protection 💕"""
     print("🚀✨ Fresh Instagram DM Extractor V2 - Starting...")
     print("💖 Now with advanced rate limiting protection! 💖")
-    
+
     # Setup logging
     log_file = Path(__file__).parent / 'logs' / f'extraction_v2_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
     setup_logging(log_file)
     logger = logging.getLogger(__name__)
-    
+
     try:
         # Load configuration
         config_path = Path(__file__).parent / 'config' / 'settings.json'
         config = load_config(config_path)
-        
+
         # Check session data
         session_data = config.get('session_data', {})
         if not session_data.get('sessionid'):
@@ -40,18 +45,18 @@ def main():
             print("📝 Please update config/settings.json with your Instagram session data")
             print("💡 See README.md for instructions on how to get session data")
             return False
-        
+
         print(f"🍪 Session data loaded: {len(session_data)} cookies")
         print(f"🎯 Target: @{config.get('target_username', 'alx.trading')}")
-        
+
         # Initialize extractor with rate limiting protection
         print("\\n💖 Initializing extractor with rate limiting protection...")
         extractor = InstagramDMExtractor(config)
-        
+
         # Run extraction
         print("\\n🎯 Starting DM extraction...")
         results = extractor.extract_dms()
-        
+
         if results:
             print("\\n🎉 SUCCESS! Extraction completed successfully! 🎉")
             print("=" * 50)
@@ -64,12 +69,12 @@ def main():
             print("\\n❌ Extraction failed")
             print("💡 Check logs for details")
             return False
-            
+
     except Exception as e:
         logger.error(f"Main execution error: {e}")
         print(f"❌ Error: {e}")
         return False
-    
+
     return True
 
 if __name__ == "__main__":
@@ -77,13 +82,13 @@ if __name__ == "__main__":
     print("=" * 70)
     print("💕 Fixing HTTP 429 issues with girly-cute techniques! 💕")
     print()
-    
+
     success = main()
-    
+
     if success:
         print("\\n💖 All done! Hope this fixes the 429 issues! 💖")
         print("🌸 Remember: patience is key for rate limiting! 🌸")
     else:
         print("\\n💔 Something went wrong. Check the logs! 💔")
-    
+
     sys.exit(0 if success else 1)

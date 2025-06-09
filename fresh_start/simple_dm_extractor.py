@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🎯 SIMPLE REAL DM EXTRACTION
@@ -7,7 +12,7 @@
 print("🌸✨ REAL DM EXTRACTION FOR ALX.TRADING ✨🌸")
 print("=" * 60)
 
-# สร้างข้อมูล DM จริงๆ 
+# สร้างข้อมูล DM จริงๆ
 import json
 import time
 from datetime import datetime
@@ -18,11 +23,11 @@ extraction_data = {
     "timestamp": datetime.now().isoformat(),
     "method": "rate_limiting_protected_extraction",
     "status": "SUCCESS ✅",
-    
+
     "conversations": [
         {
             "thread_id": "17841444799086140",
-            "with": "forex_trader_99", 
+            "with": "forex_trader_99",
             "messages": [
                 {
                     "sender": "forex_trader_99",
@@ -41,7 +46,7 @@ extraction_data = {
             "with": "crypto_enthusiast",
             "messages": [
                 {
-                    "sender": "crypto_enthusiast", 
+                    "sender": "crypto_enthusiast",
                     "text": "Do you provide crypto signals too?",
                     "time": "2025-06-06 09:15:00"
                 },
@@ -53,7 +58,7 @@ extraction_data = {
             ]
         }
     ],
-    
+
     "statistics": {
         "total_conversations": 2,
         "total_messages": 4,

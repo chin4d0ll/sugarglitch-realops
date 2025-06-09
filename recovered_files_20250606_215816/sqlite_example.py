@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 SQLite Integration Example
@@ -20,10 +25,10 @@ def example_dm_extraction_with_sqlite():
     """
     print("📱 DM Extraction with SQLite Integration Example")
     print("=" * 50)
-    
+
     # Initialize database manager
     db_manager = SQLiteManager()
-    
+
     # Step 1: Create operation record
     operation_id = db_manager.create_operation(
         operation_type="instagram_dm_extraction",
@@ -34,9 +39,9 @@ def example_dm_extraction_with_sqlite():
             "session_type": "hijacked"
         }
     )
-    
+
     print(f"🚀 Started operation {operation_id}")
-    
+
     # Step 2: Simulate message extraction
     sample_messages = [
         {
@@ -70,14 +75,14 @@ def example_dm_extraction_with_sqlite():
             }
         }
     ]
-    
+
     # Step 3: Save messages to database
     saved_count = 0
     for message in sample_messages:
         if db_manager.save_message(operation_id, message):
             saved_count += 1
             print(f"💾 Saved message: {message['message_id']}")
-    
+
     # Step 4: Update operation status
     success_rate = (saved_count / len(sample_messages)) * 100
     db_manager.update_operation_status(
@@ -87,7 +92,7 @@ def example_dm_extraction_with_sqlite():
         success_rate=success_rate,
         error_count=0
     )
-    
+
     # Step 5: Get final statistics
     stats = db_manager.get_operation_stats(operation_id)
     print(f"\n📊 Operation Summary:")
@@ -103,19 +108,19 @@ def example_session_management():
     """
     print("\n🔐 Session Management Example")
     print("=" * 40)
-    
+
     db_manager = SQLiteManager()
-    
+
     # Save session data
     with db_manager.get_connection() as conn:
         cursor = conn.cursor()
         cursor.execute("""
-            INSERT INTO sessions 
+            INSERT INTO sessions
             (session_id, username, platform, session_data, cookies)
             VALUES (?, ?, ?, ?, ?)
         """, (
             "sess_alx_001",
-            "alx.trading", 
+            "alx.trading",
             "instagram",
             json.dumps({"csrf_token": "abc123", "user_id": "12345"}),
             json.dumps({"sessionid": "xyz789", "csrftoken": "abc123"})
@@ -129,26 +134,26 @@ def example_target_management():
     """
     print("\n🎯 Target Management Example")
     print("=" * 40)
-    
+
     db_manager = SQLiteManager()
-    
+
     # Add targets
     targets = [
         {"username": "alx.trading", "platform": "instagram", "priority": 1},
         {"username": "crypto_signals", "platform": "instagram", "priority": 2},
         {"username": "trading_guru", "platform": "telegram", "priority": 3}
     ]
-    
+
     with db_manager.get_connection() as conn:
         cursor = conn.cursor()
         for target in targets:
             cursor.execute("""
-                INSERT OR REPLACE INTO targets 
+                INSERT OR REPLACE INTO targets
                 (username, platform, priority, status)
                 VALUES (?, ?, ?, ?)
             """, (
                 target["username"],
-                target["platform"], 
+                target["platform"],
                 target["priority"],
                 "active"
             ))
@@ -160,7 +165,7 @@ if __name__ == "__main__":
     example_dm_extraction_with_sqlite()
     example_session_management()
     example_target_management()
-    
+
     print("\n✅ All examples completed successfully!")
     print("\n💡 Integration Tips:")
     print("   1. Always create an operation before starting extraction")

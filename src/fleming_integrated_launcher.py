@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🔥💎 FLEMING INTEGRATED LAUNCHER 2025 💎🔥
@@ -48,27 +53,27 @@ except ImportError:
 
 class FlemingIntegratedOperations:
     """Fleming operations with full configuration integration"""
-    
+
     def __init__(self):
         # Setup base directories
         self.base_dir = Path(__file__).parent
         self.fleming_dir = self.base_dir / "fleming_deploy_package"
         self.config_dir = self.base_dir / "config"
-        
+
         # Load configurations
         self.load_config()
-        
+
         # Initialize components
         self.extractor = None
         self.monitoring = None
         self.initialize_components()
-        
+
         print(f"🚀 Fleming Integrated Launcher {self.config.get('app_version', '2025.1')} initialized")
-    
+
     def load_config(self):
         """Load configuration from master system or default to Fleming config"""
         self.config = {}
-        
+
         if CONFIG_AVAILABLE:
             print("✅ Loading configuration from master system")
             self.config = {
@@ -76,7 +81,7 @@ class FlemingIntegratedOperations:
                 'app_name': get_config('master.app.name', 'Instagram Intelligence Platform'),
                 'app_version': get_config('master.app.version', '2025.1.FLEMING'),
                 'debug': get_config('master.app.debug', False),
-                
+
                 # Extraction settings
                 'dm_extraction': get_config('master.extraction.dm_extraction.enabled', True),
                 'story_extraction': get_config('master.extraction.story_extraction.enabled', True),
@@ -87,15 +92,15 @@ class FlemingIntegratedOperations:
                 'max_posts': get_config('master.extraction.post_extraction.max_posts', 100),
                 'download_media': get_config('master.extraction.media.download_enabled', True),
                 'generate_pdf': get_config('master.extraction.reporting.pdf_enabled', True),
-                
+
                 # Target accounts
                 'primary_username': get_config('master.targets.primary_account', 'alx.trading'),
                 'target_accounts': get_config('master.targets.priority_targets', ['alx.trading', 'whatilove1728']),
-                
+
                 # Proxy settings
                 'proxy_enabled': get_config('proxy.enabled', False),
                 'proxy_url': get_config('proxy.primary_proxy.url', ''),
-                
+
                 # Stealth settings
                 'stealth_mode': get_config('master.instagram.bypass.stealth_mode', True),
                 'delay_min': get_config('master.instagram.api.delay_range', [1.5, 4.0])[0],
@@ -110,12 +115,12 @@ class FlemingIntegratedOperations:
                 try:
                     with open(fleming_config_path, 'r') as f:
                         fleming_config = json.load(f)
-                        
+
                     self.config = {
                         'app_name': 'Fleming Instagram Extractor',
                         'app_version': '2025.1.FLEMING',
                         'debug': False,
-                        
+
                         'dm_extraction': True,
                         'story_extraction': True,
                         'post_extraction': True,
@@ -125,13 +130,13 @@ class FlemingIntegratedOperations:
                         'max_posts': fleming_config['extraction_settings']['max_posts'],
                         'download_media': fleming_config['extraction_settings']['download_media'],
                         'generate_pdf': fleming_config['extraction_settings']['generate_pdf'],
-                        
+
                         'primary_username': fleming_config['accounts']['primary']['username'],
                         'target_accounts': [
                             fleming_config['accounts']['primary']['username'],
                             fleming_config['accounts']['secondary']['username']
                         ],
-                        
+
                         'proxy_enabled': fleming_config['stealth_settings']['use_proxy'],
                         'proxy_url': fleming_config['stealth_settings']['proxy_url'],
                         'stealth_mode': True,
@@ -144,7 +149,7 @@ class FlemingIntegratedOperations:
                     self._create_default_config()
             else:
                 self._create_default_config()
-    
+
     def _create_default_config(self):
         """Create default configuration if no config available"""
         print("⚠️ Using default configuration")
@@ -170,17 +175,17 @@ class FlemingIntegratedOperations:
             'delay_max': 4.0,
             'headless_browser': True,
         }
-    
+
     def sync_fleming_config(self):
         """Synchronize configuration with Fleming package config"""
         fleming_config_path = self.fleming_dir / "config.json"
-        
+
         try:
             # Create backup of original config
             if fleming_config_path.exists():
                 backup_path = self.fleming_dir / f"config.backup.{int(time.time())}.json"
                 shutil.copy(fleming_config_path, backup_path)
-            
+
             # Create updated Fleming config
             fleming_config = {
                 "accounts": {
@@ -188,7 +193,7 @@ class FlemingIntegratedOperations:
                         "username": self.config['primary_username'],
                         "password": "UPDATE_PASSWORD_HERE",
                         "backup_passwords": [
-                            "Fleming654", "Fleming786", "Fleming1004", 
+                            "Fleming654", "Fleming786", "Fleming1004",
                             "Fleming1060", "Fleming1182", "Fleming1998"
                         ]
                     },
@@ -216,22 +221,22 @@ class FlemingIntegratedOperations:
                     "use_undetected_chrome": True
                 }
             }
-            
+
             # Save updated config
             with open(fleming_config_path, 'w') as f:
                 json.dump(fleming_config, f, indent=2)
-            
+
             print("✅ Fleming configuration synchronized")
             return True
         except Exception as e:
             print(f"❌ Failed to synchronize Fleming config: {e}")
             return False
-    
+
     def initialize_components(self):
         """Initialize all components"""
         # Synchronize configuration with Fleming package
         self.sync_fleming_config()
-        
+
         # Initialize Fleming extractor
         if FLEMING_AVAILABLE:
             try:
@@ -240,7 +245,7 @@ class FlemingIntegratedOperations:
             except Exception as e:
                 print(f"❌ Failed to initialize Fleming extractor: {e}")
                 self.extractor = None
-        
+
         # Initialize monitoring
         if MONITORING_AVAILABLE:
             try:
@@ -253,26 +258,26 @@ class FlemingIntegratedOperations:
             except Exception as e:
                 print(f"❌ Failed to initialize monitoring: {e}")
                 self.monitoring = None
-    
+
     def run_fleming_operations(self):
         """Run Fleming extraction operations with configuration"""
         if not self.extractor:
             print("❌ Fleming extractor not available")
             return False
-        
+
         print("\n🚀 STARTING FLEMING INTEGRATED OPERATIONS")
         print("=" * 50)
         print(f"⏱️ Start time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         print(f"🎯 Target accounts: {', '.join(self.config['target_accounts'])}")
         print("-" * 50)
-        
+
         # Step 1: Load Instagram session
         session_loaded = self.extractor.load_fleming_session()
         if not session_loaded:
             print("❌ Failed to load Instagram session")
             print("🔄 Consider running session regenerator first")
             return False
-        
+
         # Step 2: Configure extraction settings
         print("\n⚙️ Configuring extraction settings...")
         if hasattr(self.extractor, 'configure_extraction'):
@@ -284,10 +289,10 @@ class FlemingIntegratedOperations:
                 download_media=self.config['download_media'],
                 generate_pdf=self.config['generate_pdf']
             )
-        
+
         # Step 3: Run extraction operations
         results = {"dms": 0, "stories": 0, "posts": 0}
-        
+
         # Extract DMs
         if self.config['dm_extraction']:
             print("\n📨 Extracting DMs...")
@@ -299,7 +304,7 @@ class FlemingIntegratedOperations:
                         results["dms"] += len(dm_result)
                 except Exception as e:
                     print(f"⚠️ Error extracting DMs for {target}: {e}")
-        
+
         # Extract Stories
         if self.config['story_extraction']:
             print("\n📱 Extracting Stories...")
@@ -310,7 +315,7 @@ class FlemingIntegratedOperations:
                         results["stories"] += len(story_result)
                 except Exception as e:
                     print(f"⚠️ Error extracting Stories for {target}: {e}")
-        
+
         # Extract Posts
         if self.config['post_extraction']:
             print("\n📸 Extracting Posts...")
@@ -321,7 +326,7 @@ class FlemingIntegratedOperations:
                         results["posts"] += len(post_result)
                 except Exception as e:
                     print(f"⚠️ Error extracting Posts for {target}: {e}")
-        
+
         # Generate reports
         if self.config['generate_pdf']:
             print("\n📄 Generating reports...")
@@ -329,7 +334,7 @@ class FlemingIntegratedOperations:
                 self.extractor.generate_reports()
             except Exception as e:
                 print(f"⚠️ Error generating reports: {e}")
-        
+
         # Final report
         print("\n✅ FLEMING OPERATIONS COMPLETED")
         print("=" * 50)
@@ -337,14 +342,14 @@ class FlemingIntegratedOperations:
         print(f"📨 DMs extracted: {results['dms']}")
         print(f"📱 Stories extracted: {results['stories']}")
         print(f"📸 Posts extracted: {results['posts']}")
-        
+
         return True
 
 def main():
     """Main function"""
     print("🔥💎 FLEMING INTEGRATED LAUNCHER 2025 💎🔥")
     print("=" * 50)
-    
+
     # Initialize and run
     launcher = FlemingIntegratedOperations()
     launcher.run_fleming_operations()

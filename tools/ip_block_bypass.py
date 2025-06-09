@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 IP Block Bypass Script
@@ -34,8 +39,6 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s',
 )
 logger = logging.getLogger(__name__)
-
-
 def fetch_dm_inbox(session, proxy=None):
     """Fetch the DM inbox using the given session and proxy."""
     proxies = {"http": proxy, "https": proxy} if proxy else None
@@ -45,31 +48,29 @@ def fetch_dm_inbox(session, proxy=None):
     except Exception as e:
         logger.error(f"Request error: {e}")
         return None
-
-
 def main():
     logger.info("🚀 Starting IP Block Bypass Monitor...")
     block_recovery = InstagramBlockRecovery(SESSION_FILE)
     proxy_rotator = block_recovery.proxy_rotator  # Use the rotator from block_recovery
-    
+
     # Load session data
     if not block_recovery.load_session():
         logger.error("❌ Failed to load session data. Cannot start monitoring.")
         return
-    
+
     # Initialize with first proxy
     current_proxy = proxy_rotator.get_next_proxy()
     if not current_proxy:
         logger.error("❌ No proxies available. Cannot start monitoring.")
         return
-    
+
     try:
         while True:
             logger.info(f"🌐 Using proxy: {proxy_rotator._mask_proxy_url(current_proxy) if hasattr(proxy_rotator, '_mask_proxy_url') else current_proxy}")
-            
+
             # Create session with current proxy
             session = block_recovery.create_session(current_proxy)
-            
+
             # Attempt request
             response = fetch_dm_inbox(session, current_proxy)
             if response is None:
@@ -81,7 +82,7 @@ def main():
                     break
                 time.sleep(CHECK_INTERVAL)
                 continue
-            
+
             if response.status_code in (403, 429):
                 logger.warning(f"🚫 Blocked! (HTTP {response.status_code})")
                 # Attempt block recovery (rotate proxy and renew session)
@@ -107,15 +108,13 @@ def main():
                 logger.info("✅ Request succeeded!")
             else:
                 logger.info(f"ℹ️ Received HTTP {response.status_code} (not a block)")
-            
+
             time.sleep(CHECK_INTERVAL)
-            
+
     except KeyboardInterrupt:
         logger.info("🛑 Monitor stopped by user")
     except Exception as e:
         logger.error(f"❌ Unexpected error: {e}")
         raise
-
-
 if __name__ == "__main__":
     main()

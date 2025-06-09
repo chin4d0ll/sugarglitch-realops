@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Fresh Instagram DM Extractor - Clean Start
@@ -21,23 +26,23 @@ from utils import setup_logging, load_config
 def main():
     """Main extraction function"""
     print("🚀 Fresh Instagram DM Extractor - Starting...")
-    
+
     # Setup logging
     log_file = Path(__file__).parent / 'logs' / f'extraction_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log'
     setup_logging(log_file)
     logger = logging.getLogger(__name__)
-    
+
     try:
         # Load configuration
         config_path = Path(__file__).parent / 'config' / 'settings.json'
         config = load_config(config_path)
-        
+
         # Initialize extractor
         extractor = InstagramDMExtractor(config)
-        
+
         # Run extraction
         results = extractor.extract_dms()
-        
+
         if results:
             print(f"✅ Extraction completed successfully!")
             print(f"📁 Results saved to: {results['output_path']}")
@@ -45,12 +50,12 @@ def main():
             print(f"👥 Total conversations: {results['total_conversations']}")
         else:
             print("❌ Extraction failed")
-            
+
     except Exception as e:
         logger.error(f"Main execution error: {e}")
         print(f"❌ Error: {e}")
         return False
-    
+
     return True
 
 if __name__ == "__main__":

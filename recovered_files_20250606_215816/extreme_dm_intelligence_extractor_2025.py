@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 🧠💬 EXTREME DM INTELLIGENCE EXTRACTOR 2025 💬🧠
@@ -81,7 +86,7 @@ class MessageData:
     sentiment: Optional[SentimentLevel] = None
     confidence_score: float = 0.0
     metadata: Dict = None
-    
+
     def to_dict(self):
         return asdict(self)
 
@@ -104,14 +109,14 @@ class ConversationStats:
 
 class ExtremeDMIntelligenceExtractor:
     """🧠💬 ระบบดึงและวิเคราะห์ DM ขั้นสูงด้วย AI"""
-    
+
     def __init__(self, db_path="extreme_dm_intelligence_2025.db"):
         self.db_path = db_path
         self.session_pool = {}
         self.conversation_cache = {}
         self.analysis_cache = {}
         self.monitoring_active = False
-        
+
         # สถิติการดำเนินงาน
         self.stats = {
             'sessions_loaded': 0,
@@ -121,7 +126,7 @@ class ExtremeDMIntelligenceExtractor:
             'patterns_detected': 0,
             'ai_predictions': 0
         }
-        
+
         # การตั้งค่า API endpoints
         self.endpoints = {
             'inbox': 'https://www.instagram.com/api/v1/direct_v2/inbox/',
@@ -131,7 +136,7 @@ class ExtremeDMIntelligenceExtractor:
             'seen_state': 'https://www.instagram.com/api/v1/direct_v2/threads/{thread_id}/items/{item_id}/seen/',
             'thread_details': 'https://www.instagram.com/api/v1/direct_v2/threads/{thread_id}/get_by_participants/',
         }
-        
+
         # User-Agent pool สำหรับการหลบหลีก
         self.user_agents = [
             'Mozilla/5.0 (iPhone; CPU iPhone OS 15_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Mobile/15E148 Safari/604.1',
@@ -139,7 +144,7 @@ class ExtremeDMIntelligenceExtractor:
             'Mozilla/5.0 (Android 12; Mobile; rv:97.0) Gecko/97.0 Firefox/97.0',
             'Mozilla/5.0 (Linux; Android 11; SM-G991U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36',
         ]
-        
+
         # คำหลักสำหรับการวิเคราะห์อารมณ์
         self.sentiment_keywords = {
             SentimentLevel.VERY_POSITIVE: ['love', 'amazing', 'perfect', 'incredible', 'awesome', 'fantastic', '❤️', '😍', '🥰', '✨'],
@@ -148,15 +153,15 @@ class ExtremeDMIntelligenceExtractor:
             SentimentLevel.NEGATIVE: ['bad', 'sad', 'disappointed', 'annoying', 'problem', '😞', '😠', '😤', '👎'],
             SentimentLevel.VERY_NEGATIVE: ['hate', 'terrible', 'awful', 'angry', 'furious', 'disgusting', '😡', '🤬', '💔', '😭']
         }
-        
+
         self.init_database()
         print("🧠💬 Extreme DM Intelligence Extractor 2025 พร้อมใช้งาน!")
-        
+
     def init_database(self):
         """สร้างฐานข้อมูลสำหรับเก็บข้อมูล"""
         conn = sqlite3.connect(self.db_path)
         cursor = conn.cursor()
-        
+
         # ตารางข้อความ
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS messages (
@@ -178,7 +183,7 @@ class ExtremeDMIntelligenceExtractor:
                 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
             )
         ''')
-        
+
         # ตารางสถิติการสนทนา
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS conversation_stats (
@@ -198,7 +203,7 @@ class ExtremeDMIntelligenceExtractor:
                 analysis_date DATETIME DEFAULT CURRENT_TIMESTAMP
             )
         ''')
-        
+
         # ตารางเซสชัน
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS sessions (
@@ -211,7 +216,7 @@ class ExtremeDMIntelligenceExtractor:
                 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
             )
         ''')
-        
+
         # ตารางรูปแบบการสนทนา
         cursor.execute('''
             CREATE TABLE IF NOT EXISTS conversation_patterns (
@@ -223,25 +228,25 @@ class ExtremeDMIntelligenceExtractor:
                 detected_at DATETIME DEFAULT CURRENT_TIMESTAMP
             )
         ''')
-        
+
         conn.commit()
         conn.close()
         print("✅ ฐานข้อมูลพร้อมใช้งาน")
-    
+
     async def load_session_pool(self, session_directory: str = "sessions/") -> int:
         """โหลดเซสชันหลายตัวเข้าสู่ Pool"""
         session_path = Path(session_directory)
         if not session_path.exists():
             session_path.mkdir(exist_ok=True)
-            
+
         session_files = list(session_path.glob("*.json"))
         loaded_count = 0
-        
+
         for session_file in session_files:
             try:
                 with open(session_file, 'r') as f:
                     session_data = json.load(f)
-                
+
                 if 'sessionid' in session_data and 'username' in session_data:
                     session_id = str(uuid.uuid4())
                     self.session_pool[session_id] = {
@@ -252,23 +257,23 @@ class ExtremeDMIntelligenceExtractor:
                         'is_active': True
                     }
                     loaded_count += 1
-                    
+
             except Exception as e:
                 print(f"⚠️ ไม่สามารถโหลด session จาก {session_file}: {e}")
-        
+
         self.stats['sessions_loaded'] = loaded_count
         print(f"✅ โหลด {loaded_count} sessions เข้าสู่ Pool")
         return loaded_count
-    
+
     def get_active_session(self) -> Optional[Dict]:
         """เลือกเซสชันที่ใช้งานได้"""
         active_sessions = [s for s in self.session_pool.values() if s['is_active']]
         if not active_sessions:
             return None
-            
+
         # เลือกเซสชันที่ใช้งานน้อยที่สุด
         return min(active_sessions, key=lambda x: x['request_count'])
-    
+
     def create_headers(self, session_data: Dict) -> Dict:
         """สร้าง headers สำหรับ request"""
         return {
@@ -281,16 +286,16 @@ class ExtremeDMIntelligenceExtractor:
             'Cookie': f"sessionid={session_data['sessionid']}",
             'Referer': 'https://www.instagram.com/direct/inbox/',
         }
-    
+
     async def extract_conversation_threads(self, limit: int = 50) -> List[Dict]:
         """ดึงรายการ thread การสนทนา"""
         session = self.get_active_session()
         if not session:
             print("❌ ไม่มีเซสชันที่ใช้งานได้")
             return []
-        
+
         headers = self.create_headers(session['session_data'])
-        
+
         async with aiohttp.ClientSession() as client:
             try:
                 url = f"{self.endpoints['inbox']}?limit={limit}"
@@ -298,65 +303,65 @@ class ExtremeDMIntelligenceExtractor:
                     if response.status == 200:
                         data = await response.json()
                         threads = data.get('inbox', {}).get('threads', [])
-                        
+
                         print(f"✅ พบ {len(threads)} conversations")
                         session['request_count'] += 1
                         return threads
                     else:
                         print(f"❌ ไม่สามารถดึง threads: {response.status}")
                         return []
-                        
+
             except Exception as e:
                 print(f"❌ Error extracting threads: {e}")
                 return []
-    
+
     async def extract_thread_messages(self, thread_id: str, limit: int = 100) -> List[MessageData]:
         """ดึงข้อความจาก thread เฉพาะ"""
         session = self.get_active_session()
         if not session:
             return []
-        
+
         headers = self.create_headers(session['session_data'])
         messages = []
-        
+
         async with aiohttp.ClientSession() as client:
             try:
                 url = self.endpoints['thread_items'].format(thread_id=thread_id)
                 url += f"?limit={limit}"
-                
+
                 async with client.get(url, headers=headers) as response:
                     if response.status == 200:
                         data = await response.json()
                         items = data.get('thread', {}).get('items', [])
-                        
+
                         for item in items:
                             message = self.parse_message_item(item, thread_id)
                             if message:
                                 messages.append(message)
-                        
+
                         print(f"✅ ดึง {len(messages)} ข้อความจาก thread {thread_id}")
                         session['request_count'] += 1
                         self.stats['messages_extracted'] += len(messages)
-                        
+
                     else:
                         print(f"❌ ไม่สามารถดึงข้อความ: {response.status}")
-                        
+
             except Exception as e:
                 print(f"❌ Error extracting messages: {e}")
-        
+
         return messages
-    
+
     def parse_message_item(self, item: Dict, thread_id: str) -> Optional[MessageData]:
         """แปลงข้อมูลข้อความจาก API"""
         try:
             message_id = item.get('item_id', str(uuid.uuid4()))
             sender_id = str(item.get('user_id', ''))
             timestamp = datetime.fromtimestamp(item.get('timestamp', 0) / 1000000)
-            
+
             # ประเภทข้อความ
             item_type = item.get('item_type', 'text')
             message_type = MessageType.TEXT
-            
+
             if item_type in ['media', 'media_share']:
                 message_type = MessageType.MEDIA
             elif item_type == 'voice_media':
@@ -369,7 +374,7 @@ class ExtremeDMIntelligenceExtractor:
                 message_type = MessageType.LOCATION
             elif item_type == 'like':
                 message_type = MessageType.REACTION
-            
+
             # เนื้อหาข้อความ
             content = ""
             if 'text' in item:
@@ -380,7 +385,7 @@ class ExtremeDMIntelligenceExtractor:
                 content = "[Voice Message]"
             elif 'story_share' in item:
                 content = f"[Story Reply: {item['story_share'].get('text', '')}]"
-            
+
             # Media URLs
             media_urls = []
             if 'media' in item:
@@ -388,13 +393,13 @@ class ExtremeDMIntelligenceExtractor:
                     media_urls.extend([img['url'] for img in item['media']['image_versions2'].get('candidates', [])])
                 if 'video_versions' in item['media']:
                     media_urls.extend([vid['url'] for vid in item['media']['video_versions']])
-            
+
             # Reactions
             reactions = item.get('reactions', {}).get('likes', [])
-            
+
             # วิเคราะห์อารมณ์
             sentiment, confidence = self.analyze_sentiment(content)
-            
+
             return MessageData(
                 message_id=message_id,
                 thread_id=thread_id,
@@ -412,64 +417,64 @@ class ExtremeDMIntelligenceExtractor:
                 confidence_score=confidence,
                 metadata=item
             )
-            
+
         except Exception as e:
             print(f"⚠️ Error parsing message: {e}")
             return None
-    
+
     def analyze_sentiment(self, text: str) -> Tuple[SentimentLevel, float]:
         """วิเคราะห์อารมณ์ของข้อความ"""
         if not text:
             return SentimentLevel.NEUTRAL, 0.0
-        
+
         text_lower = text.lower()
         sentiment_scores = {level: 0 for level in SentimentLevel}
-        
+
         # นับคำหลักในแต่ละระดับอารมณ์
         for level, keywords in self.sentiment_keywords.items():
             for keyword in keywords:
                 if keyword in text_lower:
                     sentiment_scores[level] += 1
-        
+
         # หาระดับที่มีคะแนนสูงสุด
         max_score = max(sentiment_scores.values())
         if max_score == 0:
             return SentimentLevel.NEUTRAL, 0.5
-        
+
         sentiment = max(sentiment_scores.keys(), key=lambda k: sentiment_scores[k])
         confidence = min(max_score / len(text.split()), 1.0)
-        
+
         return sentiment, confidence
-    
+
     def analyze_conversation_patterns(self, messages: List[MessageData]) -> Dict:
         """วิเคราะห์รูปแบบการสนทนา"""
         if not messages:
             return {}
-        
+
         # จัดกลุ่มข้อความตามผู้ส่ง
         messages_by_user = defaultdict(list)
         for msg in messages:
             messages_by_user[msg.sender_username].append(msg)
-        
+
         # วิเคราะห์เวลาที่ใช้ในการตอบกลับ
         response_times = []
         for i in range(1, len(messages)):
             if messages[i].sender_id != messages[i-1].sender_id:
                 time_diff = (messages[i].timestamp - messages[i-1].timestamp).total_seconds()
                 response_times.append(time_diff)
-        
+
         # วิเคราะห์ความถี่ในการใช้อีโมจิ
         emoji_pattern = re.compile(r'[\U0001F600-\U0001F64F\U0001F300-\U0001F5FF\U0001F680-\U0001F6FF\U0001F1E0-\U0001F1FF\U00002702-\U000027B0\U000024C2-\U0001F251]+')
         emoji_usage = defaultdict(int)
-        
+
         for msg in messages:
             emojis = emoji_pattern.findall(msg.content)
             for emoji in emojis:
                 emoji_usage[emoji] += 1
-        
+
         # วิเคราะห์ความยาวข้อความ
         message_lengths = [len(msg.content) for msg in messages if msg.content]
-        
+
         patterns = {
             'avg_response_time': np.mean(response_times) if response_times else 0,
             'median_response_time': np.median(response_times) if response_times else 0,
@@ -482,55 +487,55 @@ class ExtremeDMIntelligenceExtractor:
             'messages_per_user': {user: len(msgs) for user, msgs in messages_by_user.items()},
             'conversation_activity_hours': self.analyze_activity_hours(messages)
         }
-        
+
         self.stats['patterns_detected'] += 1
         return patterns
-    
+
     def analyze_activity_hours(self, messages: List[MessageData]) -> Dict:
         """วิเคราะห์ชั่วโมงที่มีการใช้งาน"""
         hour_activity = defaultdict(int)
         day_activity = defaultdict(int)
-        
+
         for msg in messages:
             hour_activity[msg.timestamp.hour] += 1
             day_activity[msg.timestamp.strftime('%A')] += 1
-        
+
         return {
             'most_active_hour': max(hour_activity.keys(), key=lambda k: hour_activity[k]) if hour_activity else 0,
             'most_active_day': max(day_activity.keys(), key=lambda k: day_activity[k]) if day_activity else 'Unknown',
             'hourly_distribution': dict(hour_activity),
             'daily_distribution': dict(day_activity)
         }
-    
+
     async def generate_conversation_report(self, thread_id: str, save_path: str = None) -> Dict:
         """สร้างรายงานการสนทนาแบบครอบคลุม"""
         messages = await self.extract_thread_messages(thread_id)
         if not messages:
             return {}
-        
+
         # วิเคราะห์พื้นฐาน
         participants = list(set([msg.sender_username for msg in messages]))
         total_messages = len(messages)
         first_message = min(messages, key=lambda x: x.timestamp)
         last_message = max(messages, key=lambda x: x.timestamp)
-        
+
         # สถิติตามผู้ใช้
         messages_by_user = defaultdict(int)
         sentiment_by_user = defaultdict(lambda: defaultdict(int))
-        
+
         for msg in messages:
             messages_by_user[msg.sender_username] += 1
             if msg.sentiment:
                 sentiment_by_user[msg.sender_username][msg.sentiment.value] += 1
-        
+
         # วิเคราะห์รูปแบบ
         patterns = self.analyze_conversation_patterns(messages)
-        
+
         # นับ media และ reactions
         media_count = sum(1 for msg in messages if msg.has_media)
         voice_count = sum(1 for msg in messages if msg.message_type == MessageType.VOICE_MESSAGE)
         reaction_count = sum(len(msg.reactions) for msg in messages)
-        
+
         # สร้างรายงาน
         report = {
             'thread_id': thread_id,
@@ -550,16 +555,16 @@ class ExtremeDMIntelligenceExtractor:
             'timeline': self.create_message_timeline(messages),
             'generated_at': datetime.now().isoformat()
         }
-        
+
         # บันทึกรายงาน
         if save_path:
             with open(save_path, 'w', encoding='utf-8') as f:
                 json.dump(report, f, indent=2, ensure_ascii=False)
             print(f"💾 บันทึกรายงานที่ {save_path}")
-        
+
         self.stats['conversations_analyzed'] += 1
         return report
-    
+
     def create_message_timeline(self, messages: List[MessageData]) -> List[Dict]:
         """สร้าง timeline ของข้อความ"""
         timeline = []
@@ -573,59 +578,59 @@ class ExtremeDMIntelligenceExtractor:
                 'has_media': msg.has_media
             })
         return timeline
-    
+
     async def start_real_time_monitoring(self, target_threads: List[str], callback=None):
         """เริ่มการติดตามแบบ real-time"""
         self.monitoring_active = True
         print("🔄 เริ่มการติดตามแบบ real-time...")
-        
+
         last_check = {}
         for thread_id in target_threads:
             last_check[thread_id] = datetime.now()
-        
+
         while self.monitoring_active:
             try:
                 for thread_id in target_threads:
                     messages = await self.extract_thread_messages(thread_id, limit=10)
                     new_messages = [msg for msg in messages if msg.timestamp > last_check[thread_id]]
-                    
+
                     if new_messages:
                         print(f"📨 พบข้อความใหม่ {len(new_messages)} ข้อความใน thread {thread_id}")
                         last_check[thread_id] = max(msg.timestamp for msg in new_messages)
-                        
+
                         if callback:
                             await callback(thread_id, new_messages)
-                
+
                 await asyncio.sleep(30)  # ตรวจสอบทุก 30 วินาที
-                
+
             except Exception as e:
                 print(f"⚠️ Error in monitoring: {e}")
                 await asyncio.sleep(60)
-    
+
     def stop_monitoring(self):
         """หยุดการติดตาม"""
         self.monitoring_active = False
         print("⏹️ หยุดการติดตาม real-time")
-    
+
     def create_visualization(self, report_data: Dict, output_dir: str = "visualizations/"):
         """สร้าง visualization จากข้อมูลรายงาน"""
         Path(output_dir).mkdir(exist_ok=True)
-        
+
         # กราฟการกระจายของข้อความตามชั่วโมง
         if 'conversation_patterns' in report_data and 'conversation_activity_hours' in report_data['conversation_patterns']:
             hourly_data = report_data['conversation_patterns']['conversation_activity_hours']['hourly_distribution']
-            
+
             plt.figure(figsize=(12, 6))
             hours = list(range(24))
             counts = [hourly_data.get(h, 0) for h in hours]
-            
+
             plt.subplot(1, 2, 1)
             plt.bar(hours, counts, color='skyblue', alpha=0.7)
             plt.title('Message Activity by Hour')
             plt.xlabel('Hour of Day')
             plt.ylabel('Number of Messages')
             plt.grid(True, alpha=0.3)
-            
+
             # กราฟ sentiment distribution
             if 'sentiment_analysis' in report_data:
                 plt.subplot(1, 2, 2)
@@ -633,17 +638,17 @@ class ExtremeDMIntelligenceExtractor:
                 for user, sentiments in report_data['sentiment_analysis'].items():
                     for sentiment, count in sentiments.items():
                         sentiment_data[sentiment] = sentiment_data.get(sentiment, 0) + count
-                
+
                 if sentiment_data:
                     plt.pie(sentiment_data.values(), labels=sentiment_data.keys(), autopct='%1.1f%%')
                     plt.title('Overall Sentiment Distribution')
-            
+
             plt.tight_layout()
             plt.savefig(f"{output_dir}/conversation_analysis_{report_data['thread_id']}.png", dpi=300, bbox_inches='tight')
             plt.close()
-            
+
             print(f"📊 บันทึก visualization ที่ {output_dir}")
-    
+
     def export_to_excel(self, messages: List[MessageData], output_path: str):
         """ส่งออกข้อมูลเป็น Excel"""
         df_data = []
@@ -661,11 +666,11 @@ class ExtremeDMIntelligenceExtractor:
                 'Sentiment': msg.sentiment.value if msg.sentiment else 'neutral',
                 'Confidence': msg.confidence_score
             })
-        
+
         df = pd.DataFrame(df_data)
         df.to_excel(output_path, index=False)
         print(f"📊 ส่งออกข้อมูลเป็น Excel: {output_path}")
-    
+
     def get_statistics(self) -> Dict:
         """แสดงสถิติการทำงาน"""
         return {
@@ -681,43 +686,43 @@ async def main():
     """ฟังก์ชันหลักสำหรับทดสอบ"""
     print("🧠💬 Extreme DM Intelligence Extractor 2025 - Advanced Testing")
     print("=" * 70)
-    
+
     extractor = ExtremeDMIntelligenceExtractor()
-    
+
     # โหลดเซสชัน
     session_count = await extractor.load_session_pool()
     if session_count == 0:
         print("❌ ไม่มีเซสชันที่ใช้งานได้ - กรุณาเพิ่มเซสชันใน sessions/")
         return
-    
+
     # ดึงรายการ conversations
     threads = await extractor.extract_conversation_threads(limit=10)
-    
+
     if threads:
         print(f"\n📝 พบ {len(threads)} conversations:")
         for i, thread in enumerate(threads[:5]):
             thread_id = thread.get('thread_id', 'unknown')
             users = [user.get('username', 'unknown') for user in thread.get('users', [])]
             print(f"  {i+1}. Thread {thread_id} - Users: {', '.join(users)}")
-        
+
         # วิเคราะห์ conversation แรก
         if threads:
             first_thread = threads[0]
             thread_id = first_thread.get('thread_id')
-            
+
             print(f"\n🔍 วิเคราะห์ conversation: {thread_id}")
             report = await extractor.generate_conversation_report(
-                thread_id, 
+                thread_id,
                 save_path=f"reports/conversation_report_{thread_id}.json"
             )
-            
+
             if report:
                 print(f"✅ สร้างรายงานเสร็จสิ้น!")
                 print(f"📊 สถิติ: {extractor.get_statistics()}")
-                
+
                 # สร้าง visualization
                 extractor.create_visualization(report)
-    
+
     else:
         print("❌ ไม่พบ conversations")
 

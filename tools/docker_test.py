@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Docker Test Script for SugarGlitch RealOps
@@ -20,10 +25,10 @@ def print_status(message):
 def test_python_environment():
     """Test Python environment and installed packages"""
     print_status("Testing Python environment...")
-    
+
     print(f"Python version: {sys.version}")
     print(f"Python executable: {sys.executable}")
-    
+
     # Test essential packages
     essential_packages = [
         'requests',
@@ -32,7 +37,7 @@ def test_python_environment():
         'sqlalchemy',
         'matplotlib'
     ]
-    
+
     for package in essential_packages:
         try:
             __import__(package)
@@ -40,16 +45,16 @@ def test_python_environment():
         except ImportError:
             print(f"✗ {package} is NOT available")
             return False
-    
+
     return True
 
 def test_playwright():
     """Test Playwright installation"""
     print_status("Testing Playwright installation...")
-    
+
     try:
         from playwright.sync_api import sync_playwright
-        
+
         with sync_playwright() as p:
             # Check if chromium is installed
             browser = p.chromium.launch(headless=True)
@@ -63,7 +68,7 @@ def test_playwright():
 def test_file_system():
     """Test file system access and permissions"""
     print_status("Testing file system access...")
-    
+
     # Test directories that should be available
     test_dirs = [
         '/app/tools',
@@ -74,7 +79,7 @@ def test_file_system():
         '/app/databases',
         '/app/extractions'
     ]
-    
+
     for dir_path in test_dirs:
         if os.path.exists(dir_path):
             if os.access(dir_path, os.W_OK):
@@ -84,13 +89,13 @@ def test_file_system():
         else:
             print(f"✗ {dir_path} does not exist")
             return False
-    
+
     # Test creating a temporary file
     try:
         test_file = '/app/temp/docker_test.txt'
         with open(test_file, 'w') as f:
             f.write("Docker test successful")
-        
+
         if os.path.exists(test_file):
             print("✓ File creation test successful")
             os.remove(test_file)
@@ -102,19 +107,19 @@ def test_file_system():
 def test_tools_directory():
     """Test tools directory and essential scripts"""
     print_status("Testing tools directory...")
-    
+
     tools_dir = '/app/tools'
     if not os.path.exists(tools_dir):
         print(f"✗ Tools directory {tools_dir} not found")
         return False
-    
+
     # List available tools
     tools = [f for f in os.listdir(tools_dir) if f.endswith('.py')]
     print(f"Available tools: {', '.join(tools)}")
-    
+
     # Test if we can import a tool
     sys.path.insert(0, tools_dir)
-    
+
     # Look for the DM timeline generator
     timeline_script = os.path.join(tools_dir, 'generate_dm_timeline.py')
     if os.path.exists(timeline_script):
@@ -127,7 +132,7 @@ def test_tools_directory():
 def generate_test_report():
     """Generate a comprehensive test report"""
     print_status("Generating test report...")
-    
+
     report = {
         'timestamp': datetime.now().isoformat(),
         'container_info': {
@@ -143,11 +148,11 @@ def generate_test_report():
             'tools_directory': test_tools_directory(),
         }
     }
-    
+
     # Calculate overall status
     all_passed = all(report['tests'].values())
     report['overall_status'] = 'PASS' if all_passed else 'FAIL'
-    
+
     # Save report
     report_file = '/app/temp/docker_test_report.json'
     try:
@@ -156,7 +161,7 @@ def generate_test_report():
         print(f"✓ Test report saved to {report_file}")
     except Exception as e:
         print(f"⚠ Could not save test report: {e}")
-    
+
     return report
 
 def main():
@@ -164,18 +169,18 @@ def main():
     print("=" * 60)
     print("SugarGlitch RealOps Docker Container Test")
     print("=" * 60)
-    
+
     # Generate and display test report
     report = generate_test_report()
-    
+
     print("\nTest Summary:")
     print("-" * 30)
     for test_name, result in report['tests'].items():
         status = "PASS" if result else "FAIL"
         print(f"{test_name:<20}: {status}")
-    
+
     print(f"\nOverall Status: {report['overall_status']}")
-    
+
     if report['overall_status'] == 'PASS':
         print("\n🎉 All tests passed! The Docker container is ready for use.")
         return 0

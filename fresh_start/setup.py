@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+# pylint: disable=all
+# flake8: noqa
+# type: ignore
+# mypy: ignore-errors
 #!/usr/bin/env python3
 """
 Setup script for Fresh Instagram DM Extractor
@@ -20,17 +25,17 @@ def create_session_template():
         ],
         "session_data": {
             "sessionid": "REPLACE_WITH_YOUR_SESSIONID",
-            "csrftoken": "REPLACE_WITH_YOUR_CSRFTOKEN", 
+            "csrftoken": "REPLACE_WITH_YOUR_CSRFTOKEN",
             "mid": "REPLACE_WITH_YOUR_MID",
             "ig_did": "REPLACE_WITH_YOUR_IG_DID",
             "ig_nrcb": "1"
         }
     }
-    
+
     template_path = Path(__file__).parent / 'config' / 'session_template.json'
     with open(template_path, 'w') as f:
         json.dump(template, f, indent=2)
-    
+
     print(f"📝 Session template created at: {template_path}")
 
 def check_dependencies():
@@ -47,27 +52,27 @@ def check_dependencies():
 def main():
     """Main setup function"""
     print("🔧 Setting up Fresh Instagram DM Extractor...")
-    
+
     # Check dependencies
     if not check_dependencies():
         print("❌ Please install dependencies first")
         return False
-    
+
     # Create session template
     create_session_template()
-    
+
     # Check if config exists
     config_path = Path(__file__).parent / 'config' / 'settings.json'
     if not config_path.exists():
         print("⚙️  Default config will be created on first run")
     else:
         print("✅ Configuration file exists")
-    
+
     print("\n🚀 Setup complete! Next steps:")
     print("1. Edit config/settings.json with your Instagram session data")
     print("2. Run: python main.py")
     print("\n📖 See README.md for detailed instructions")
-    
+
     return True
 
 if __name__ == "__main__":

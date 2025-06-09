@@ -1,7 +1,7 @@
 🔍 NETWORK RECONNAISSANCE SUMMARY REPORT
 ==================================================
 Target: tradeyourway.co.uk
-Scan Date: 2025-06-09 05:29:43
+Scan Date: 2025-06-09 06:57:40
 Performed by: Sugarglitch Auto Recon
 ==================================================
 
