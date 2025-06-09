@@ -88,6 +88,17 @@ def create_performance_report():
     with open("/workspaces/sugarglitch-realops/performance_optimization_report.json", "w") as f:
         json.dump(report, f, indent=2, ensure_ascii=False)
 
+def additional_optimizations():
+    """Perform additional optimizations"""
+    print("⚙️ Performing additional optimizations...")
+    
+    # Remove unused Docker images and containers
+    run_command("docker system prune -af 2>/dev/null || true", silent=True)
+    
+    # Clean up orphaned packages and dependencies
+    run_command("apt-get autoremove -y 2>/dev/null || true", silent=True)
+    run_command("apt-get clean 2>/dev/null || true", silent=True)
+
 def main():
     """Main optimization function"""
     print("🚀 เริ่มเพิ่มประสิทธิภาพระบบ...")
@@ -108,12 +119,17 @@ def main():
     # Create report
     create_performance_report()
     
+    # Additional optimizations
+    additional_optimizations()
+    
     print("\n" + "=" * 50)
     print("✅ เพิ่มประสิทธิภาพเสร็จแล้ว!")
     print("🚀 ระบบพร้อมทำงานด้วยความเร็วสูงสุด!")
     print("\n💡 เคล็ดลับ:")
     print("   - ใช้ ./clear_cache.sh เพื่อเคลียแคชเร็ว")
     print("   - ใช้ python3 performance_optimizer.py เพื่อเพิ่มประสิทธิภาพ")
+    print("   - ตรวจสอบการใช้งานดิสก์และลบไฟล์ที่ไม่จำเป็นออก")
+    print("   - ใช้ Docker อย่างมีประสิทธิภาพโดยการลบ image และ container ที่ไม่ใช้งาน")
 
 if __name__ == "__main__":
     main()
