@@ -1,0 +1,362 @@
+{
+  "extraction_info": {
+    "timestamp": 1749467705,
+    "extractor": "UltraFastDMExtractor",
+    "version": "2025.1",
+    "environment": "SUGARGLITCH REALOPS"
+  },
+  "messages": [
+{
+    "id": "sample_msg_0",
+    "timestamp": 1749467705,
+    "content": "Sample DM message 0 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_1",
+    "timestamp": 1749467645,
+    "content": "Sample DM message 1 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_2",
+    "timestamp": 1749467585,
+    "content": "Sample DM message 2 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_3",
+    "timestamp": 1749467525,
+    "content": "Sample DM message 3 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_4",
+    "timestamp": 1749467465,
+    "content": "Sample DM message 4 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_5",
+    "timestamp": 1749467405,
+    "content": "Sample DM message 5 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_6",
+    "timestamp": 1749467345,
+    "content": "Sample DM message 6 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_7",
+    "timestamp": 1749467285,
+    "content": "Sample DM message 7 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_8",
+    "timestamp": 1749467225,
+    "content": "Sample DM message 8 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_9",
+    "timestamp": 1749467165,
+    "content": "Sample DM message 9 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_10",
+    "timestamp": 1749467105,
+    "content": "Sample DM message 10 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_11",
+    "timestamp": 1749467045,
+    "content": "Sample DM message 11 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_12",
+    "timestamp": 1749466985,
+    "content": "Sample DM message 12 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_13",
+    "timestamp": 1749466925,
+    "content": "Sample DM message 13 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_14",
+    "timestamp": 1749466865,
+    "content": "Sample DM message 14 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_15",
+    "timestamp": 1749466805,
+    "content": "Sample DM message 15 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_16",
+    "timestamp": 1749466745,
+    "content": "Sample DM message 16 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_17",
+    "timestamp": 1749466685,
+    "content": "Sample DM message 17 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_18",
+    "timestamp": 1749466625,
+    "content": "Sample DM message 18 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_19",
+    "timestamp": 1749466565,
+    "content": "Sample DM message 19 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_20",
+    "timestamp": 1749466505,
+    "content": "Sample DM message 20 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_21",
+    "timestamp": 1749466445,
+    "content": "Sample DM message 21 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_22",
+    "timestamp": 1749466385,
+    "content": "Sample DM message 22 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_23",
+    "timestamp": 1749466325,
+    "content": "Sample DM message 23 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_24",
+    "timestamp": 1749466265,
+    "content": "Sample DM message 24 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_25",
+    "timestamp": 1749466205,
+    "content": "Sample DM message 25 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_26",
+    "timestamp": 1749466145,
+    "content": "Sample DM message 26 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_27",
+    "timestamp": 1749466085,
+    "content": "Sample DM message 27 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_28",
+    "timestamp": 1749466025,
+    "content": "Sample DM message 28 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_29",
+    "timestamp": 1749465965,
+    "content": "Sample DM message 29 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_30",
+    "timestamp": 1749465905,
+    "content": "Sample DM message 30 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_31",
+    "timestamp": 1749465845,
+    "content": "Sample DM message 31 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_32",
+    "timestamp": 1749465785,
+    "content": "Sample DM message 32 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_33",
+    "timestamp": 1749465725,
+    "content": "Sample DM message 33 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_34",
+    "timestamp": 1749465665,
+    "content": "Sample DM message 34 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_35",
+    "timestamp": 1749465605,
+    "content": "Sample DM message 35 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_36",
+    "timestamp": 1749465545,
+    "content": "Sample DM message 36 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_37",
+    "timestamp": 1749465485,
+    "content": "Sample DM message 37 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_38",
+    "timestamp": 1749465425,
+    "content": "Sample DM message 38 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_39",
+    "timestamp": 1749465365,
+    "content": "Sample DM message 39 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_40",
+    "timestamp": 1749465305,
+    "content": "Sample DM message 40 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_41",
+    "timestamp": 1749465245,
+    "content": "Sample DM message 41 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_42",
+    "timestamp": 1749465185,
+    "content": "Sample DM message 42 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_43",
+    "timestamp": 1749465125,
+    "content": "Sample DM message 43 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_44",
+    "timestamp": 1749465065,
+    "content": "Sample DM message 44 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_45",
+    "timestamp": 1749465005,
+    "content": "Sample DM message 45 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_46",
+    "timestamp": 1749464945,
+    "content": "Sample DM message 46 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_47",
+    "timestamp": 1749464885,
+    "content": "Sample DM message 47 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_48",
+    "timestamp": 1749464825,
+    "content": "Sample DM message 48 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+},
+{
+    "id": "sample_msg_49",
+    "timestamp": 1749464765,
+    "content": "Sample DM message 49 for user fleming654",
+    "user_id": "fleming654",
+    "thread_id": "thread_fleming654"
+}
+  ],
+  "total_messages": 50,
+  "completion_time": 1749467705
+}
