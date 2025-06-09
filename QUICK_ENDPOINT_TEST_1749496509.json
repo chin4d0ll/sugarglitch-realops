@@ -1,0 +1,35 @@
+{
+  "test_time": "2025-06-09T19:15:09.682836",
+  "results": [
+    {
+      "url": "https://www.instagram.com/api/v1/direct_v2/inbox/",
+      "status": 404,
+      "working": false,
+      "error": null
+    },
+    {
+      "url": "https://www.instagram.com/api/graphql/",
+      "status": 200,
+      "working": true,
+      "error": null
+    },
+    {
+      "url": "https://www.instagram.com/direct/inbox/",
+      "status": 200,
+      "working": true,
+      "error": null
+    },
+    {
+      "url": "https://i.instagram.com/api/v1/direct_v2/inbox/",
+      "status": 400,
+      "working": false,
+      "error": null
+    },
+    {
+      "url": "https://graph.instagram.com/me",
+      "status": 400,
+      "working": false,
+      "error": null
+    }
+  ]
+}
