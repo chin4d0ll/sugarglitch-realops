@@ -1587,21 +1587,21 @@
               1,
               "2025-06-06T00:42:33.433340",
               "SUCCESS",
-              "\ud83d\udcca Advanced database initialized",
+              "📊 Advanced database initialized",
               "STABLE_EXTRACT_1749170553"
             ],
             [
               2,
               "2025-06-06T00:42:33.437639",
               "SUCCESS",
-              "\ud83d\udcdd Logging system initialized",
+              "📝 Logging system initialized",
               "STABLE_EXTRACT_1749170553"
             ],
             [
               3,
               "2025-06-06T00:42:33.441678",
               "CRITICAL",
-              "\ud83d\ude80 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
               "STABLE_EXTRACT_1749170553"
             ]
           ]
@@ -1956,21 +1956,21 @@
               1,
               "2025-06-05T22:24:09.728878",
               "SUCCESS",
-              "\ud83d\udcca Advanced database initialized",
+              "📊 Advanced database initialized",
               "STABLE_EXTRACT_1749162249"
             ],
             [
               2,
               "2025-06-05T22:24:09.733990",
               "SUCCESS",
-              "\ud83d\udcdd Logging system initialized",
+              "📝 Logging system initialized",
               "STABLE_EXTRACT_1749162249"
             ],
             [
               3,
               "2025-06-05T22:24:09.740658",
               "CRITICAL",
-              "\ud83d\ude80 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
               "STABLE_EXTRACT_1749162249"
             ]
           ]
@@ -3198,14 +3198,14 @@
               1,
               "2025-06-05T22:39:07.416232",
               "SUCCESS",
-              "\ud83d\udcca Advanced database initialized",
+              "📊 Advanced database initialized",
               "STABLE_EXTRACT_1749163147"
             ],
             [
               2,
               "2025-06-05T22:39:07.420569",
               "SUCCESS",
-              "\ud83d\udcdd Logging system initialized",
+              "📝 Logging system initialized",
               "STABLE_EXTRACT_1749163147"
             ]
           ]
@@ -3560,21 +3560,21 @@
               1,
               "2025-06-05T22:49:16.248418",
               "SUCCESS",
-              "\ud83d\udcca Advanced database initialized",
+              "📊 Advanced database initialized",
               "STABLE_EXTRACT_1749163756"
             ],
             [
               2,
               "2025-06-05T22:49:16.254248",
               "SUCCESS",
-              "\ud83d\udcdd Logging system initialized",
+              "📝 Logging system initialized",
               "STABLE_EXTRACT_1749163756"
             ],
             [
               3,
               "2025-06-05T22:49:16.261344",
               "CRITICAL",
-              "\ud83d\ude80 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
               "STABLE_EXTRACT_1749163756"
             ]
           ]
@@ -4139,21 +4139,21 @@
               1,
               "2025-06-05T22:45:02.155405",
               "SUCCESS",
-              "\ud83d\udcca Advanced database initialized",
+              "📊 Advanced database initialized",
               "STABLE_EXTRACT_1749163502"
             ],
             [
               2,
               "2025-06-05T22:45:02.160999",
               "SUCCESS",
-              "\ud83d\udcdd Logging system initialized",
+              "📝 Logging system initialized",
               "STABLE_EXTRACT_1749163502"
             ],
             [
               3,
               "2025-06-05T22:45:02.167000",
               "CRITICAL",
-              "\ud83d\ude80 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
               "STABLE_EXTRACT_1749163502"
             ]
           ]
@@ -5138,21 +5138,21 @@
               1,
               "2025-06-06T00:37:53.231605",
               "SUCCESS",
-              "\ud83d\udcca Advanced database initialized",
+              "📊 Advanced database initialized",
               "STABLE_EXTRACT_1749170273"
             ],
             [
               2,
               "2025-06-06T00:37:53.235659",
               "SUCCESS",
-              "\ud83d\udcdd Logging system initialized",
+              "📝 Logging system initialized",
               "STABLE_EXTRACT_1749170273"
             ],
             [
               3,
               "2025-06-06T00:37:53.239566",
               "CRITICAL",
-              "\ud83d\ude80 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
               "STABLE_EXTRACT_1749170273"
             ]
           ]
@@ -6154,21 +6154,21 @@
               1,
               "2025-06-05T22:28:53.995767",
               "SUCCESS",
-              "\ud83d\udcca Advanced database initialized",
+              "📊 Advanced database initialized",
               "STABLE_EXTRACT_1749162533"
             ],
             [
               2,
               "2025-06-05T22:28:54.001600",
               "SUCCESS",
-              "\ud83d\udcdd Logging system initialized",
+              "📝 Logging system initialized",
               "STABLE_EXTRACT_1749162533"
             ],
             [
               3,
               "2025-06-05T22:28:54.006858",
               "CRITICAL",
-              "\ud83d\ude80 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
               "STABLE_EXTRACT_1749162533"
             ]
           ]

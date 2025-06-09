@@ -22,10 +22,12 @@
           "timestamp": "2025-06-06T10:25:00Z",
           "text": "Hi ALX! I've been following your trading signals and they're incredible! 📈",
           "type": "text",
-          "reactions": ["❤️"]
+          "reactions": [
+            "❤️"
+          ]
         },
         {
-          "id": "msg_002", 
+          "id": "msg_002",
           "sender": "alx.trading",
           "timestamp": "2025-06-06T10:26:00Z",
           "text": "Thank you so much! Really appreciate the feedback! 🙏",
@@ -33,7 +35,7 @@
         },
         {
           "id": "msg_003",
-          "sender": "forex_trader_99", 
+          "sender": "forex_trader_99",
           "timestamp": "2025-06-06T10:27:00Z",
           "text": "Your EURUSD signal yesterday was spot on! Made 150 pips 💰",
           "type": "text"
@@ -41,7 +43,7 @@
         {
           "id": "msg_004",
           "sender": "alx.trading",
-          "timestamp": "2025-06-06T10:28:00Z", 
+          "timestamp": "2025-06-06T10:28:00Z",
           "text": "That's amazing! Love hearing success stories from our community! 🚀",
           "type": "text"
         },
@@ -54,7 +56,7 @@
         },
         {
           "id": "msg_006",
-          "sender": "alx.trading", 
+          "sender": "alx.trading",
           "timestamp": "2025-06-06T10:30:00Z",
           "text": "Of course! Check our latest post about position sizing and stop losses! 📊",
           "type": "text"
@@ -63,7 +65,7 @@
     },
     {
       "thread_id": "17841444799086141",
-      "participant": "crypto_enthusiast", 
+      "participant": "crypto_enthusiast",
       "conversation_type": "crypto_inquiry",
       "message_count": 6,
       "last_activity": "2025-06-06T09:20:00Z",
@@ -72,7 +74,7 @@
           "id": "msg_101",
           "sender": "crypto_enthusiast",
           "timestamp": "2025-06-06T09:15:00Z",
-          "text": "Hey ALX! Do you also provide cryptocurrency signals?", 
+          "text": "Hey ALX! Do you also provide cryptocurrency signals?",
           "type": "text"
         },
         {
@@ -83,7 +85,7 @@
           "type": "text"
         },
         {
-          "id": "msg_103", 
+          "id": "msg_103",
           "sender": "crypto_enthusiast",
           "timestamp": "2025-06-06T09:17:00Z",
           "text": "Perfect! What's your view on Bitcoin's current trend?",
@@ -98,7 +100,7 @@
         },
         {
           "id": "msg_105",
-          "sender": "crypto_enthusiast", 
+          "sender": "crypto_enthusiast",
           "timestamp": "2025-06-06T09:19:00Z",
           "text": "Thanks! Following your crypto signals now! 🚀",
           "type": "text"
@@ -115,7 +117,7 @@
     {
       "thread_id": "17841444799086142",
       "participant": "trading_newbie",
-      "conversation_type": "education_request", 
+      "conversation_type": "education_request",
       "message_count": 4,
       "last_activity": "2025-06-06T08:45:00Z",
       "messages": [
@@ -128,7 +130,7 @@
         },
         {
           "id": "msg_202",
-          "sender": "alx.trading", 
+          "sender": "alx.trading",
           "timestamp": "2025-06-06T08:42:00Z",
           "text": "Start with our beginner's guide! Focus on risk management first! 📚",
           "type": "text"
@@ -136,7 +138,7 @@
         {
           "id": "msg_203",
           "sender": "trading_newbie",
-          "timestamp": "2025-06-06T08:43:00Z", 
+          "timestamp": "2025-06-06T08:43:00Z",
           "text": "Should I start with demo account?",
           "type": "text"
         },
@@ -156,7 +158,7 @@
     "total_participants": 3,
     "conversation_types": {
       "trading_inquiry": 1,
-      "crypto_inquiry": 1, 
+      "crypto_inquiry": 1,
       "education_request": 1
     },
     "message_distribution": {
@@ -176,7 +178,7 @@
     "success_rate": "100%",
     "instagram_endpoints_accessed": [
       "direct_inbox: HTTP 200 ✅",
-      "thread_messages: HTTP 200 ✅", 
+      "thread_messages: HTTP 200 ✅",
       "user_profile: HTTP 200 ✅"
     ],
     "rate_limiting_stats": {

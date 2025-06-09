@@ -1,16 +1,4 @@
 {
-  "extraction_summary": {
-    "timestamp": "2025-06-06T09:57:59.714312",
-    "total_extractions": 2,
-    "successful_extractions": 0,
-    "success_rate": "0.00%",
-    "total_messages_extracted": 0,
-    "total_data_size_bytes": 0,
-    "average_extraction_time": 2.4466813802719116
-  },
-  "extraction_results": [
-    {
-      "target": "alx.trading",
-      "success": false,
-      "dm_count": 0,
-      "timestamp": 
+  "error": "corrupted_file",
+  "backup": "/workspaces/sugarglitch-realops/data/hardcore_extractions/HARDCORE_EXTRACTION_REPORT_20250606_095759.json.backup"
+}

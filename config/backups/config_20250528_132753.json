@@ -1,1 +1,10 @@
-{"monitoring": {"extensions": {"enabled": true}}, "web": {"enabled": false}}
+{
+  "monitoring": {
+    "extensions": {
+      "enabled": true
+    }
+  },
+  "web": {
+    "enabled": false
+  }
+}

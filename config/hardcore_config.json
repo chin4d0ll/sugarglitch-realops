@@ -3,7 +3,10 @@
     "max_workers": 5,
     "extraction_timeout": 300,
     "retry_attempts": 3,
-    "rate_limit_delay": [2, 8],
+    "rate_limit_delay": [
+      2,
+      8
+    ],
     "stealth_mode": true,
     "headless": true
   },
@@ -52,7 +55,11 @@
     }
   ],
   "output_config": {
-    "formats": ["json", "sqlite", "csv"],
+    "formats": [
+      "json",
+      "sqlite",
+      "csv"
+    ],
     "compression": true,
     "backup_enabled": true,
     "retention_days": 30
@@ -64,9 +71,18 @@
       "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     ],
     "viewports": [
-      {"width": 1920, "height": 1080},
-      {"width": 1366, "height": 768},
-      {"width": 1440, "height": 900}
+      {
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "width": 1440,
+        "height": 900
+      }
     ],
     "random_delays": {
       "min": 1,

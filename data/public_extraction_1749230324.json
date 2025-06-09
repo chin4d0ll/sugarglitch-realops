@@ -4,7 +4,7 @@
     "followers": "1.2M",
     "following": "543",
     "posts": "1,234",
-    "bio": "\ud83d\udcf8 Photography enthusiast",
+    "bio": "📸 Photography enthusiast",
     "verified": false
   },
   "recent_posts": [
@@ -12,14 +12,14 @@
       "id": "post_001",
       "likes": "12.5K",
       "comments": "234",
-      "caption": "Beautiful sunset today! \ud83c\udf05",
+      "caption": "Beautiful sunset today! 🌅",
       "timestamp": "2025-06-06T10:00:00Z"
     },
     {
       "id": "post_002",
       "likes": "8.9K",
       "comments": "156",
-      "caption": "Coffee and coding \u2615\ud83d\udcbb",
+      "caption": "Coffee and coding ☕💻",
       "timestamp": "2025-06-05T14:30:00Z"
     }
   ],

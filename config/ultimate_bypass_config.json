@@ -28,7 +28,7 @@
   },
   "bypass_strategies": [
     "multi_session_attack",
-    "endpoint_rotation", 
+    "endpoint_rotation",
     "mobile_spoofing",
     "intelligent_timing",
     "proxy_flooding",

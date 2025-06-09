@@ -38,7 +38,11 @@
   "alerts": {
     "enabled": true,
     "real_time_alerts": true,
-    "alert_channels": ["console", "log", "dashboard"],
+    "alert_channels": [
+      "console",
+      "log",
+      "dashboard"
+    ],
     "alert_types": {
       "new_activity": true,
       "rate_limits": true,
@@ -52,7 +56,11 @@
     "auto_reports": true,
     "report_interval_hours": 6,
     "detailed_analytics": true,
-    "export_formats": ["json", "csv", "html"]
+    "export_formats": [
+      "json",
+      "csv",
+      "html"
+    ]
   },
   "performance": {
     "concurrent_operations": 5,

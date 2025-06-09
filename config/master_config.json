@@ -20,7 +20,10 @@
       "enabled": true,
       "timeout": 30,
       "retry_attempts": 3,
-      "delay_range": [1.5, 4.0],
+      "delay_range": [
+        1.5,
+        4.0
+      ],
       "user_agents": {
         "rotation_enabled": true,
         "mobile_preferred": true
@@ -36,7 +39,11 @@
     },
     "bypass": {
       "enabled": true,
-      "techniques": ["user_agent_rotation", "proxy_cycling", "session_distribution"],
+      "techniques": [
+        "user_agent_rotation",
+        "proxy_cycling",
+        "session_distribution"
+      ],
       "stealth_mode": true,
       "anti_detection": true
     }
@@ -143,7 +150,10 @@
   },
   "targets": {
     "auto_discovery": true,
-    "priority_targets": ["alx.trading", "whatilove1728"],
+    "priority_targets": [
+      "alx.trading",
+      "whatilove1728"
+    ],
     "max_targets": 50,
     "target_rotation": true,
     "intelligence_gathering": true

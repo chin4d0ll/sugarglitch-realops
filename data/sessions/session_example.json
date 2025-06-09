@@ -1,5 +1,5 @@
 {
-    "sessionid": "YOUR_SESSIONID_HERE",
-    "ds_user_id": "YOUR_DS_USER_ID_HERE",
-    "csrftoken": "YOUR_CSRFTOKEN_HERE"
+  "sessionid": "YOUR_SESSIONID_HERE",
+  "ds_user_id": "YOUR_DS_USER_ID_HERE",
+  "csrftoken": "YOUR_CSRFTOKEN_HERE"
 }

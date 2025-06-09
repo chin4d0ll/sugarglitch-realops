@@ -28,7 +28,11 @@
     "media": {
       "download_enabled": true,
       "max_size_mb": 100,
-      "types": ["image", "video", "audio"],
+      "types": [
+        "image",
+        "video",
+        "audio"
+      ],
       "compression_enabled": false
     },
     "reporting": {

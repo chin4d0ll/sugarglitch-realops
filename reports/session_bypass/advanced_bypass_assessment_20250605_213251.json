@@ -151,18 +151,18 @@
     "exploitability": "HIGHLY EXPLOITABLE"
   },
   "recommendations": [
-    "\ud83d\udd12 Implement strong session token generation with high entropy",
-    "\ud83d\udd04 Enable automatic session rotation after authentication",
-    "\ud83c\udf6a Use secure cookie flags (Secure, HttpOnly, SameSite=Strict)",
-    "\u23f0 Implement proper session timeout mechanisms",
-    "\ud83d\udd10 Add CSRF protection to all state-changing operations",
-    "\ud83d\udccd Consider IP binding for sensitive operations",
-    "\ud83d\udd75\ufe0f Implement session activity monitoring",
-    "\ud83d\udd25 Use multi-factor authentication for critical actions",
-    "\ud83d\udee1\ufe0f Deploy Web Application Firewall (WAF)",
-    "\ud83d\udcca Regular security assessments and penetration testing",
-    "\u26a1 Strengthen session token validation algorithms",
-    "\ud83c\udf6a Implement additional cookie security measures",
-    "\ud83d\udd04 Review session lifecycle management"
+    "🔒 Implement strong session token generation with high entropy",
+    "🔄 Enable automatic session rotation after authentication",
+    "🍪 Use secure cookie flags (Secure, HttpOnly, SameSite=Strict)",
+    "⏰ Implement proper session timeout mechanisms",
+    "🔐 Add CSRF protection to all state-changing operations",
+    "📍 Consider IP binding for sensitive operations",
+    "🕵️ Implement session activity monitoring",
+    "🔥 Use multi-factor authentication for critical actions",
+    "🛡️ Deploy Web Application Firewall (WAF)",
+    "📊 Regular security assessments and penetration testing",
+    "⚡ Strengthen session token validation algorithms",
+    "🍪 Implement additional cookie security measures",
+    "🔄 Review session lifecycle management"
   ]
 }

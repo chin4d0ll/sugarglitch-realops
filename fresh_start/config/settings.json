@@ -11,12 +11,18 @@
   "proxy": null,
   "rate_limit": {
     "requests_per_minute": 30,
-    "delay_range": [1, 3]
+    "delay_range": [
+      1,
+      3
+    ]
   },
   "extraction_options": {
     "max_messages_per_thread": 1000,
     "include_media": true,
     "include_reactions": true,
-    "export_formats": ["json", "html"]
+    "export_formats": [
+      "json",
+      "html"
+    ]
   }
 }
