@@ -336,18 +336,59 @@ Examples:
             # สแกนพอร์ตทั่วไป
             scanner.scan_common_ports()
         elif args.ports:
-            # แปลง port range
-            if '-' in args.ports:
+            # แปลง port specification
+            ports_to_scan = []
+            
+            if ',' in args.ports:
+                # หลายพอร์ต เช่น 80,443,8080
+                for port_spec in args.ports.split(','):
+                    port_spec = port_spec.strip()
+                    if '-' in port_spec:
+                        start, end = map(int, port_spec.split('-'))
+                        ports_to_scan.extend(range(start, end + 1))
+                    else:
+                        ports_to_scan.append(int(port_spec))
+                
+                # สแกนแต่ละพอร์ต
+                print(f"\n[INFO] Scanning {len(ports_to_scan)} specified ports")
+                print(f"[INFO] Target: {args.target} ({scanner.target_ip})")
+                print("-" * 60)
+                
+                start_time = time.time()
+                scanner.total_ports = len(ports_to_scan)
+                scanner.scanned_ports = 0
+                
+                with ThreadPoolExecutor(max_workers=scanner.threads) as executor:
+                    future_to_port = {
+                        executor.submit(scanner.scan_port, port): port
+                        for port in ports_to_scan
+                    }
+                    
+                    for future in as_completed(future_to_port):
+                        port = future_to_port[future]
+                        try:
+                            port_num, is_open, service = future.result()
+                            if is_open:
+                                print(f"[OPEN] Port {port_num:5d} - {service}")
+                        except Exception as e:
+                            print(f"[ERROR] Port {port}: {e}")
+                
+                end_time = time.time()
+                scanner.print_summary(end_time - start_time)
+                
+            elif '-' in args.ports:
                 start_port, end_port = map(int, args.ports.split('-'))
+                # ตรวจสอบ range
+                if start_port < 1 or end_port > 65535 or start_port > end_port:
+                    print("[ERROR] Invalid port range. Ports must be 1-65535")
+                    sys.exit(1)
+                scanner.scan_range(start_port, end_port)
             else:
-                start_port = end_port = int(args.ports)
-            
-            # ตรวจสอบ range
-            if start_port < 1 or end_port > 65535 or start_port > end_port:
-                print("[ERROR] Invalid port range. Ports must be 1-65535")
-                sys.exit(1)
-            
-            scanner.scan_range(start_port, end_port)
+                port = int(args.ports)
+                if port < 1 or port > 65535:
+                    print("[ERROR] Invalid port. Ports must be 1-65535")
+                    sys.exit(1)
+                scanner.scan_range(port, port)
         else:
             print("[ERROR] Please specify --ports or --common")
             sys.exit(1)
