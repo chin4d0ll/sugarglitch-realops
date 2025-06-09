@@ -63,37 +63,142 @@ API_ENDPOINTS = [
 ]
 
 
+# 🎯 CTF-style Session Loader with multiple sources
 def load_sessionid():
+    """Load session from multiple sources like a hacker"""
+    print("🔍 Scanning for session data...")
+    
+    # Try main session file
     try:
         with open(SESSION_PATH) as f:
             data = json.load(f)
+        print(f"✅ Loaded session from {SESSION_PATH}")
         return data["sessionid"]
     except FileNotFoundError:
-def fetch_dm(sessionid):
-    s = requests.Session()
-    s.headers.update(HEADERS)
-    s.cookies.set("sessionid", sessionid, domain=".instagram.com")
-    s.cookies.set("ds_user_id", "", domain=".instagram.com")  # Optional, for some endpoints
+        print(f"❌ {SESSION_PATH} not found")
+    
+    # Try other session files in workspace
+    session_files = [
+        "session.json",
+        "fresh_sessions/working_session_1749202526.json",
+        "fresh_sessions/working_session_1749202527.json",
+        "alx_trading_session_fleming654.json"
+    ]
+    
+    for file_path in session_files:
+        try:
+            with open(file_path) as f:
+                data = json.load(f)
+            if "sessionid" in data:
+                print(f"✅ Found session in {file_path}")
+                return data["sessionid"]
+        except:
+            continue
+    
+    print("❌ No valid session found! Create one first.")
+    return None
 
-    try:
-        resp = s.get(API_URL, timeout=10)
-        if resp.status_code == 200:
-            print("✅ DM API response received!")
-            return resp.json()
-        else:
-            print(f"❌ Failed to fetch DMs: {resp.status_code}")
-            print(resp.text)
-            return None
-    except requests.RequestException as e:
-        print(f"❌ Network error: {e}")
-        return None
-    if resp.status_code == 200:
-        print("✅ DM API response received!")
-        return resp.json()
-    else:
-        print(f"❌ Failed to fetch DMs: {resp.status_code}")
-        print(resp.text)
-        return None
+# 🔥 Advanced DM Fetcher with bypass techniques
+def fetch_dm_advanced(sessionid):
+    """Advanced DM fetching with CTF bypass techniques"""
+    print("🎯 Starting advanced DM extraction...")
+    
+    for attempt, endpoint in enumerate(API_ENDPOINTS):
+        print(f"\n🔄 Attempt {attempt + 1}: {endpoint}")
+        
+        s = requests.Session()
+        headers = get_enhanced_headers()
+        
+        # Random delay to avoid rate limiting
+        time.sleep(random.uniform(1, 3))
+        
+        # Set cookies like a real session
+        s.cookies.set("sessionid", sessionid, domain=".instagram.com")
+        s.cookies.set("ds_user_id", str(random.randint(1000000000, 9999999999)), domain=".instagram.com")
+        s.cookies.set("mid", f"Y{random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')}{random.randint(100000, 999999)}", domain=".instagram.com")
+        s.cookies.set("ig_did", f"{random.randint(10000000, 99999999)}-{random.randint(1000, 9999)}-{random.randint(1000, 9999)}-{random.randint(1000, 9999)}-{random.randint(100000000000, 999999999999)}", domain=".instagram.com")
+        
+        s.headers.update(headers)
+        
+        try:
+            resp = s.get(endpoint, timeout=15)
+            print(f"📊 Status: {resp.status_code}")
+            
+            if resp.status_code == 200:
+                print("✅ SUCCESS! DM data received")
+                return resp.json()
+            elif resp.status_code == 401:
+                print("🔒 Unauthorized - session expired")
+            elif resp.status_code == 403:
+                print("🚫 Forbidden - rate limited or blocked")
+            elif resp.status_code == 400:
+                print("❌ Bad Request - check headers/cookies")
+            else:
+                print(f"⚠️ Unexpected status: {resp.status_code}")
+                
+        except requests.RequestException as e:
+            print(f"❌ Network error: {e}")
+            continue
+    
+    print("💀 All endpoints failed!")
+    return None
+
+# 🎭 CTF-style response analyzer
+def analyze_response(response_data):
+    """Analyze response for hidden data like CTF challenges"""
+    print("\n🔍 CTF-Style Response Analysis:")
+    print("=" * 50)
+    
+    if not response_data:
+        print("❌ No data to analyze")
+        return
+    
+    # Check for common CTF patterns
+    response_str = json.dumps(response_data)
+    
+    # Base64 patterns
+    b64_patterns = re.findall(r'[A-Za-z0-9+/]{20,}={0,2}', response_str)
+    if b64_patterns:
+        print(f"🔤 Found {len(b64_patterns)} potential Base64 strings:")
+        for i, pattern in enumerate(b64_patterns[:5]):
+            try:
+                decoded = base64.b64decode(pattern).decode('utf-8', errors='ignore')
+                if decoded.isprintable():
+                    print(f"  [{i+1}] {pattern[:30]}... -> {decoded[:50]}")
+            except:
+                pass
+    
+    # Hidden flags or secrets
+    secret_patterns = [
+        r'flag\{[^}]+\}',
+        r'secret[_-]?key',
+        r'password[_-]?hash',
+        r'token[_-]?value',
+        r'api[_-]?key'
+    ]
+    
+    for pattern in secret_patterns:
+        matches = re.findall(pattern, response_str, re.IGNORECASE)
+        if matches:
+            print(f"🚩 Found potential secrets: {matches}")
+    
+    # Check for encoded data
+    if 'threads' in response_data:
+        threads = response_data['threads']
+        print(f"📨 Analyzing {len(threads)} threads for hidden data...")
+        
+        for i, thread in enumerate(threads[:3]):
+            if 'items' in thread:
+                for item in thread['items'][:5]:
+                    if 'text' in item and item['text']:
+                        text = item['text']
+                        # Check if text is encoded
+                        if re.match(r'^[A-Za-z0-9+/]+=*$', text) and len(text) > 10:
+                            try:
+                                decoded = base64.b64decode(text).decode()
+                                print(f"🔓 Thread {i+1} decoded text: {decoded}")
+                            except:
+                                pass
 
 
 def print_dm_summary(dm_json):
