@@ -1,5 +1,14 @@
 {
     "recommendations": [
+        "ms-python.python",
+        "ms-vscode-remote.remote-containers",
+        "eamodio.gitlens",
+        "humao.rest-client",
+        "ms-vscode-remote.remote-ssh",
+        "ms-python.flake8",
+        "ms-python.black-formatter",
+        "ms-toolsai.jupyter",
+        "ms-vscode.vscode-json",
         "github.copilot"
     ]
 }
