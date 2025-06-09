@@ -30,10 +30,15 @@ class FinalDataAnalyzer:
     def collect_all_json_data(self):
         """รวบรวมข้อมูลจากไฟล์ JSON ทั้งหมด"""
         print("📂 Collecting all JSON data...")
-        
-        json_files = glob.glob(f"{self.project_root}/**/*.json", recursive=True)
-        relevant_files = [f for f in json_files if any(keyword in f.lower() 
-                         for keyword in ['dm', 'extraction', 'hack', 'real_data', 'ultimate'])]
+         json_files = glob.glob(
+            f"{self.project_root}/**/*.json", recursive=True
+        )
+        relevant_files = [
+            f for f in json_files 
+            if any(keyword in f.lower() for keyword in [
+                'dm', 'extraction', 'hack', 'real_data', 'ultimate'
+            ])
+        ]
         
         print(f"   Found {len(relevant_files)} relevant files")
         
