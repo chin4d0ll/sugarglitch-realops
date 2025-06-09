@@ -6,7 +6,6 @@
 """
 
 import json
-import requests
 import subprocess
 import socket
 from datetime import datetime

@@ -7,12 +7,10 @@
 
 import requests
 import socket
-import subprocess
 import json
 import time
 from datetime import datetime
 import threading
-import queue
 
 class WeaponizedRecon:
     def __init__(self, target):
