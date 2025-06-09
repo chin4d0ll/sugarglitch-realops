@@ -13,7 +13,7 @@
   ],
   "runArgs": [
     "--privileged",
-    "--cap-add=NET_ADMIN", 
+    "--cap-add=NET_ADMIN",
     "--cap-add=SYS_PTRACE",
     "--cap-add=SYS_ADMIN"
   ],
@@ -21,7 +21,7 @@
     "vscode": {
       "extensions": [
         "ms-python.python",
-        "ms-vscode-remote.remote-containers", 
+        "ms-vscode-remote.remote-containers",
         "eamodio.gitlens",
         "humao.rest-client",
         "ms-vscode-remote.remote-ssh",

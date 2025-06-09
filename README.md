@@ -181,12 +181,204 @@ DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...```
 
 ---
 
-## � Recent Updates
+## 🚀 Hacking Environment Setup
 
-- **June 6, 2025**: Complete project reorganization
-- **June 6, 2025**: Added hijacked session DM extractor
-- **June 6, 2025**: Enhanced documentation structure
-- **June 6, 2025**: Improved file organization and quick access
+This Codespace/Docker container is configured as a **complete penetration testing environment** with all the tools you need for ethical hacking and security research.
+
+### 🎯 Quick Start Hacking Environment
+
+```bash
+# Load hacking aliases and tools
+source hacking-aliases.sh
+
+# Start interactive hacking menu
+python3 ~/hacking-menu.py
+
+# Quick Instagram DM extraction
+ig-extract
+
+# Quick network scan
+nq 192.168.1.1
+
+# Quick directory brute force
+gobuster-dir -u http://target.com
+
+# Start Tor for anonymity
+tor-start
+check-tor
+```
+
+### 🛠️ Installed Hacking Tools
+
+#### Network & Web Testing
+
+- **Nmap** - Network scanner and service detection
+- **Masscan** - High-speed port scanner  
+- **Gobuster** - Directory/file brute forcer
+- **Dirb** - Web content scanner
+- **Nikto** - Web server scanner
+- **SQLMap** - SQL injection testing
+- **Hydra** - Password brute forcer
+- **Burp Suite** - Web application security testing
+- **OWASP ZAP** - Web application scanner
+
+#### Password & Hash Cracking
+
+- **John the Ripper** - Password cracker
+- **Hashcat** - Advanced password recovery
+- **Aircrack-ng** - Wireless security testing
+- **Wordlists** - RockyYou, SecLists, custom lists
+
+#### OSINT & Reconnaissance  
+
+- **theHarvester** - Email/subdomain harvester
+- **Shodan** - Internet-connected device search
+- **Subfinder** - Subdomain discovery
+- **Amass** - Attack surface mapping
+- **Recon-ng** - Web reconnaissance framework
+- **Maltego** - Link analysis platform
+
+#### Social Media & OSINT
+
+- **Instagram DM Extractor** - Custom tool for Instagram data
+- **Advanced Bypass Arsenal** - Security bypass techniques
+- **Sherlock** - Social media username search
+- **Social Engineer Toolkit** - Social engineering attacks
+
+#### Exploitation & Post-Exploitation
+
+- **Metasploit Framework** - Penetration testing platform
+- **Impacket** - Network protocol implementations
+- **Pwntools** - CTF toolkit and exploit development
+- **Binwalk** - Firmware analysis toolkit
+- **Volatility** - Memory forensics framework
+
+#### Anonymity & Proxy
+
+- **Tor** - Anonymous communication
+- **Proxychains** - Proxy chain support
+- **Custom proxy configurations**
+
+### 🎮 Interactive Hacking Menu
+
+Run the interactive hacking menu for easy access to all tools:
+
+```bash
+python3 ~/hacking-menu.py
+```
+
+**Menu Options:**
+
+1. 🌐 Web Application Testing
+2. 🔍 Network Reconnaissance  
+3. 🗄️ Database Testing
+4. 📱 Social Media Extraction
+5. 🔐 Password Attacks
+6. 🕵️ OSINT Tools
+7. ⚡ Quick Exploits
+8. 🛠️ Custom Tools
+9. 📊 Generate Report
+
+### 🔒 Anonymity & Security
+
+```bash
+# Start Tor for anonymous browsing
+tor-start
+
+# Check your real IP
+check-ip
+
+# Check your Tor IP  
+check-tor
+
+# Use proxychains with any command
+proxychains nmap target.com
+proxychains curl http://target.com
+```
+
+### 📁 Directory Structure
+
+```
+~/hacking/
+├── wordlists/     # Custom password lists
+├── payloads/      # Exploit payloads  
+├── exploits/      # Custom exploits
+├── loot/          # Extracted data
+├── reports/       # Penetration test reports
+├── tools/         # Custom hacking tools
+└── targets/       # Target information
+    ├── web/       # Web application targets
+    ├── network/   # Network targets  
+    ├── mobile/    # Mobile app targets
+    └── wireless/  # Wireless targets
+```
+
+### ⚡ Quick Commands
+
+```bash
+# Network scanning
+nq target.com          # Quick nmap scan
+nf target.com          # Full nmap scan  
+nv target.com          # Vulnerability scan
+
+# Web testing
+gobuster-dir target.com    # Directory brute force
+sqlmap-basic target.com    # Basic SQL injection test
+nikto-basic target.com     # Web server scan
+
+# Password attacks  
+hydra-ssh target.com       # SSH brute force
+john-crack hashes.txt      # Crack password hashes
+hashcat-md5 hash.txt       # Crack MD5 hashes
+
+# OSINT
+shodan-search "apache"     # Search Shodan
+theharvester-email target.com  # Harvest emails
+subfinder-enum target.com  # Find subdomains
+
+# Instagram/Social Media
+ig-extract             # Instagram DM extractor
+dm-extract            # Advanced DM extractor  
+bypass-arsenal        # Bypass security measures
+```
+
+### 🎯 Custom Instagram Tools
+
+This environment includes powerful Instagram extraction tools:
+
+- **Ultimate Launcher** - Interactive menu for all Instagram tools
+- **Advanced DM Extractor** - Extract direct messages and conversations
+- **Bypass Arsenal** - Bypass Instagram security measures
+- **Session Generator** - Generate and manage Instagram sessions
+- **Profile Scraper** - Extract profile information and media
+
+### 🔧 Environment Variables
+
+```bash
+export HACKING_HOME=~/hacking
+export WORDLISTS=/usr/share/wordlists  
+export SECLISTS=/usr/share/seclists
+export PAYLOADS=/opt/payloads
+export METASPLOIT_HOME=/usr/share/metasploit-framework
+```
+
+### 📊 Reporting
+
+Generate professional penetration testing reports:
+
+```bash
+cd ~/hacking/reports
+gen-report
+```
+
+### ⚠️ Legal Notice
+
+**This hacking environment is for educational and authorized testing purposes only.**
+
+- Only test systems you own or have explicit permission to test
+- Follow responsible disclosure practices
+- Comply with all applicable laws and regulations
+- Use these tools ethically and professionally
 
 ---
 
