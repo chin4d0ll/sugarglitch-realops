@@ -1,0 +1,30 @@
+{
+  "target": "tradeyourway.co.uk",
+  "timestamp": "2025-06-09T05:34:48.889883",
+  "scan_type": "Full Reconnaissance",
+  "ip": "217.160.0.249",
+  "open_ports": [
+    80,
+    443
+  ],
+  "web_results": {
+    "http://tradeyourway.co.uk": {
+      "status": 200,
+      "server": "Apache"
+    },
+    "https://tradeyourway.co.uk": {
+      "status": 200,
+      "server": "Apache"
+    }
+  },
+  "whois": "[Querying whois.iana.org:43 'tradeyourway.co.uk']\n[Redirected to whois.nic.uk]\n[Querying whois.nic.uk:43 'tradeyourway.co.uk']\n[whois.nic.uk]\n\n    Domain name:\n        tradeyourway.co.uk\n\n    Data validation:\n        Nominet was able to match the registrant's name and address against a 3rd party data source on 09-Jul-2018\n\n    Registrar:\n        Ionos SE [Tag = 1AND1]\n        URL: https://ionos.com\n\n    Relevant dates:\n        Registered on: 06-Jul-2018\n        Expiry date:  06-Jul-2025\n        Last updated:  05-Jul-2024\n\n    Registration status:\n        Registered until expiry date.\n\n    Name servers:\n        ns1036.ui-dns.org\n        ns1051.ui-dns.com\n        ns1075.ui-dns.de\n        ns1087.ui-dns.biz\n\n    WHOIS lookup made at 06:35:20 09-Jun-2025\n\n-- \nThis WHOIS information is provided for free by Nominet UK the central registry\nfor .uk domain names. This information and the .uk WHOIS are:\n\n    Copyright Nominet UK 1996 - 2025.\n\nYou may not access the .uk WHOIS or use any data from it except as permitted\nby the terms of use available in full at https://www.nominet.uk/whoisterms,\nwhich includes restrictions on: (A) use of the data for advertising, or its\nrepackaging, recompilation, redistribution or reuse (B) obscuring, removing\nor hiding any or all of this notice and (C) exceeding query rate or volume\nlimits. The data is provided on an 'as-is' basis and may lag behind the\nregister. Access may be withdrawn or restricted at any time. \n",
+  "dns_details": {
+    "A": "Server:\t\t127.0.0.53\nAddress:\t127.0.0.53:53\n\nNon-authoritative answer:\nName:\ttradeyourway.co.uk\nAddress: 217.160.0.249\n\n",
+    "MX": "Server:\t\t127.0.0.53\nAddress:\t127.0.0.53:53\n\nNon-authoritative answer:\ntradeyourway.co.uk\tmail exchanger = 10 mx01.ionos.co.uk\ntradeyourway.co.uk\tmail exchanger = 10 mx00.ionos.co.uk\n\n",
+    "NS": "Server:\t\t127.0.0.53\nAddress:\t127.0.0.53:53\n\nNon-authoritative answer:\ntradeyourway.co.uk\tnameserver = ns1087.ui-dns.biz\ntradeyourway.co.uk\tnameserver = ns1036.ui-dns.org\ntradeyourway.co.uk\tnameserver = ns1051.ui-dns.com\ntradeyourway.co.uk\tnameserver = ns1075.ui-dns.de\n\n",
+    "TXT": "Server:\t\t127.0.0.53\nAddress:\t127.0.0.53:53\n\nNon-authoritative answer:\ntradeyourway.co.uk\ttext = \"v=spf1 include:_spf-eu.ionos.com ~all\"\n\n"
+  },
+  "subdomains": [
+    "www.tradeyourway.co.uk"
+  ]
+}

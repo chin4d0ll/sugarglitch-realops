@@ -8,7 +8,7 @@
       "depth": 1
     }
   ],
-  "python.analysis.autoImportCompletions": false,
+  "python.analysis.autoImportCompletions": true,
   "python.analysis.completeFunctionParens": false,
   "python.analysis.inlayHints.variableTypes": false,
   "python.analysis.inlayHints.functionReturnTypes": false,
