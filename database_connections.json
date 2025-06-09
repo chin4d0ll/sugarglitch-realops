@@ -1,0 +1,42 @@
+{
+  "sql_server_docker": {
+    "name": "SQL Server (Docker)",
+    "type": "mssql",
+    "server": "localhost",
+    "port": 1433,
+    "username": "sa",
+    "password": "YourStrongPassword123!",
+    "database": "master",
+    "connection_string": "Server=localhost,1433;User Id=sa;Password=YourStrongPassword123!;TrustServerCertificate=True;",
+    "test_command": "docker exec sqlserver-dev /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'YourStrongPassword123!' -Q 'SELECT @@VERSION'"
+  },
+  "postgresql_docker": {
+    "name": "PostgreSQL (Docker)",
+    "type": "postgresql",
+    "server": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "password",
+    "database": "devdb",
+    "connection_string": "Host=localhost;Port=5432;Database=devdb;Username=postgres;Password=password;",
+    "test_command": "docker exec postgres-dev psql -U postgres -d devdb -c 'SELECT version();'"
+  },
+  "mysql_docker": {
+    "name": "MySQL (Docker)",
+    "type": "mysql",
+    "server": "localhost",
+    "port": 3306,
+    "username": "root",
+    "password": "password",
+    "database": "devdb",
+    "connection_string": "Server=localhost;Port=3306;Database=devdb;Uid=root;Pwd=password;",
+    "test_command": "docker exec mysql-dev mysql -u root -ppassword -e 'SELECT VERSION();'"
+  },
+  "sqlite_local": {
+    "name": "SQLite (Local)",
+    "type": "sqlite",
+    "file_path": "/workspaces/sugarglitch-realops/dev_database.db",
+    "connection_string": "Data Source=/workspaces/sugarglitch-realops/dev_database.db;",
+    "test_command": "sqlite3 /workspaces/sugarglitch-realops/dev_database.db 'SELECT sqlite_version();'"
+  }
+}
