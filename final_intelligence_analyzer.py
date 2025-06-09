@@ -10,6 +10,7 @@ import sqlite3
 from datetime import datetime
 import glob
 
+
 class FinalDataAnalyzer:
     def __init__(self):
         self.project_root = "/workspaces/sugarglitch-realops"
