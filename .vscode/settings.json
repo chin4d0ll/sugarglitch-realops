@@ -63,5 +63,6 @@
   "editor.formatOnSave": true,
   "python.linting.enabled": true,
   "python.linting.flake8Enabled": true,
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "black",
+  "makefile.buildBeforeLaunch": false
 }
