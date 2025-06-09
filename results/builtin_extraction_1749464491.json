@@ -1,0 +1,13 @@
+{
+  "extraction_method": "builtin_only",
+  "timestamp": 1749464483,
+  "test_time": "2025-06-09T10:21:23.543112",
+  "session_info": {
+    "sessionid_preview": "4976283726%3AFlem654...",
+    "target": "alx.trading"
+  },
+  "tests": [],
+  "messages_extracted": [],
+  "total_messages": 0,
+  "success": false
+}
