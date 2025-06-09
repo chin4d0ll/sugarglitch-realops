@@ -85,5 +85,6 @@
     "sqlite-viewer.view": true,
     "workbench.input.interactive": true,
     "mainThreadWebview-markdown.preview": true
-  }
+  },
+  "python.analysis.typeCheckingMode": "off"
 }
