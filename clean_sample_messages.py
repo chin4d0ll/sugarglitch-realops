@@ -130,19 +130,21 @@ def main():
     print(f"Files processed: {files_processed}")
     print(f"Total original messages: {total_original}")
     print(f"Total cleaned messages: {total_cleaned}")
-    print(f"Total sample messages removed: {total_original - total_cleaned}")
+    print(f"Total fake messages removed: {total_original - total_cleaned}")
+    print(f"Removed types: sample, mock, demo, simulation")
     
     # Create a cleaned data summary file
     summary = {
-        "cleaning_date": "2025-01-17",
+        "cleaning_date": "2025-06-09",
         "files_processed": files_processed,
         "total_original_messages": total_original,
         "total_cleaned_messages": total_cleaned,
-        "sample_messages_removed": total_original - total_cleaned,
+        "fake_messages_removed": total_original - total_cleaned,
+        "removed_types": ["sample", "mock", "demo", "simulation"],
         "cleaned_files": [os.path.relpath(f, base_dir) for f in sorted(files_to_clean) if os.path.exists(f)]
     }
     
-    summary_file = os.path.join(base_dir, f"SAMPLE_CLEANUP_SUMMARY_{int(__import__('time').time())}.json")
+    summary_file = os.path.join(base_dir, f"FAKE_DATA_CLEANUP_SUMMARY_{int(__import__('time').time())}.json")
     with open(summary_file, 'w', encoding='utf-8') as f:
         json.dump(summary, f, indent=2)
     

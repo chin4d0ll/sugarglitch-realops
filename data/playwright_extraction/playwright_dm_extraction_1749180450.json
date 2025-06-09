@@ -9,9 +9,15 @@
     "final_url": "https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fdirect%2Finbox%2F%3F__coig_login%3D1"
   },
   "cleaning_info": {
-    "cleaned_at": "2025-01-17",
+    "cleaned_at": "2025-06-09",
     "original_message_count": 0,
     "cleaned_message_count": 0,
-    "sample_messages_removed": 0
+    "fake_messages_removed": 0,
+    "removed_types": [
+      "sample",
+      "mock",
+      "demo",
+      "simulation"
+    ]
   }
 }

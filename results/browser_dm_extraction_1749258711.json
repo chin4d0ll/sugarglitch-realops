@@ -9,9 +9,15 @@
     "extraction_time": "2025-06-07T01:11:51.129854"
   },
   "cleaning_info": {
-    "cleaned_at": "2025-01-17",
+    "cleaned_at": "2025-06-09",
     "original_message_count": 0,
     "cleaned_message_count": 0,
-    "sample_messages_removed": 0
+    "fake_messages_removed": 0,
+    "removed_types": [
+      "sample",
+      "mock",
+      "demo",
+      "simulation"
+    ]
   }
 }
