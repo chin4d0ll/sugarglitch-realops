@@ -39,7 +39,21 @@
   ],
   "editor.wordWrap": "on",
   "editor.formatOnSave": false,
-  "editor.codeActionsOnSave": {},
+  "editor.codeActionsOnSave": {
+  "github.copilot.enable": {
+    "*": false,
+    "python": false,
+    "javascript": false,
+    "typescript": false
+  },
+  "github.copilot.advanced": {
+    "debug.useNodeFetcher": false,
+    "debug.useElectronFetcher": false
+  },
+  "http.proxy": "",
+  "http.proxySupport": "off",
+  "http.proxyAuthorization": null
+},
   "workbench.problems.defaultViewMode": "list",
   "problems.visibility": "off",
   "markdownlint.config": {
