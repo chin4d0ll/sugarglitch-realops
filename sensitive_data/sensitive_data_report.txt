@@ -1,0 +1,16 @@
+Sensitive Data Report
+=====================
+
+1. session.json
+   - Contains sessionid for Instagram authentication.
+
+2. tools/session_alx_trading.json
+   - Contains session data for alx.trading.
+
+3. DOCKER-COMPOSE.md
+   - Contains default PostgreSQL password.
+
+4. HARDCORE_README.md
+   - Contains sessionid, csrf_token, and other sensitive session information.
+
+All files have been moved to the sensitive_data directory for secure handling.
