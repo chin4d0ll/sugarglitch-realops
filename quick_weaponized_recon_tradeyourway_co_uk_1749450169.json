@@ -1,0 +1,27 @@
+{
+  "target": "tradeyourway.co.uk",
+  "timestamp": 1749450169,
+  "scan_date": "2025-06-09T06:23:01.262603",
+  "results": {
+    "ip": "127.0.0.53:53",
+    "open_ports": [
+      80,
+      443
+    ],
+    "missing_security_headers": [
+      "Clickjacking Protection",
+      "XSS Protection",
+      "HSTS",
+      "CSP"
+    ],
+    "ssl_status": "issues",
+    "subdomains": [
+      "www.tradeyourway.co.uk"
+    ]
+  },
+  "summary": {
+    "total_open_ports": 2,
+    "total_subdomains": 1,
+    "security_score": 20
+  }
+}
