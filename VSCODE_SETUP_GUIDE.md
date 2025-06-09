@@ -1,5 +1,23 @@
 # VS Code คำแนะนำสำหรับ Sugarglitch RealOps
 
+## ⚠️ การแก้ไขปัญหา MS SQL Extension
+
+หาก VS Code แสดงข้อผิดพลาด MS SQL Server extension:
+
+### วิธีแก้ไขเร็ว:
+
+1. **Reload VS Code**: กด `Ctrl+Shift+P` → พิมพ์ "Developer: Reload Window"
+2. **ปิด MS SQL Extension**: ไป Extensions → ค้นหา "SQL Server (mssql)" → คลิก Disable
+3. **ใช้ Docker สำหรับ SQL Server** (แนะนำ)
+
+### Extensions ทางเลือกสำหรับ Database:
+
+- **cweijan.vscode-mysql-client2** - MySQL/PostgreSQL client
+- **ms-vscode.vscode-json** - JSON database support
+- **bradlc.vscode-tailwindcss** - สำหรับ styling
+
+---
+
 ## Extensions ที่แนะนำ
 
 ติดตั้ง Extensions เหล่านี้เพื่อประสบการณ์การพัฒนาที่ดีที่สุด:
@@ -14,6 +32,12 @@
 
 - **ms-vscode-remote.remote-containers** - Dev Containers
 - **ms-vscode-remote.remote-ssh** - Remote SSH
+
+### Database (ทางเลือก - ไม่ใช่ MS SQL)
+
+- **cweijan.vscode-mysql-client2** - MySQL/PostgreSQL client
+- **mtxr.sqltools** - Universal SQL tools
+- **qwtel.sqlite-viewer** - SQLite viewer
 
 ### Utilities
 
@@ -68,6 +92,53 @@ VS Code จะแนะนำ extensions ที่เหมาะสมให้
 - Python linting ด้วย flake8
 - Code formatting ด้วย Black
 - Terminal scrollback 10,000 บรรทัด
+
+## การใช้งาน Database
+
+### แนะนำ: ใช้ Docker สำหรับ SQL Server
+
+```bash
+# สร้าง SQL Server container
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=YourPassword123!" \
+  -p 1433:1433 --name sqlserver \
+  -d mcr.microsoft.com/mssql/server:2019-latest
+
+# เชื่อมต่อผ่าน VS Code extensions ทางเลือก
+```
+
+### ทางเลือกสำหรับ Database Management:
+
+1. **MySQL Workbench** - สำหรับ MySQL
+2. **pgAdmin** - สำหรับ PostgreSQL  
+3. **SQLite Browser** - สำหรับ SQLite
+4. **Azure Data Studio** - Cross-platform SQL tool
+
+## การแก้ไขปัญหาทั่วไป
+
+### MS SQL Extension Error:
+
+```text
+Error: Failed to start SqlToolsResourceProviderService
+```
+
+**วิธีแก้:**
+
+1. Reload VS Code (`Ctrl+Shift+P` → "Developer: Reload Window")
+2. Disable MS SQL extension ถ้ายังมีปัญหา
+3. ใช้ Docker + alternative database extensions
+
+### Python Environment Issues:
+
+```bash
+# ตรวจสอบ Python version
+python --version
+
+# ติดตั้ง requirements
+pip install -r requirements.txt
+
+# หาก pip ใช้งานไม่ได้
+python -m pip install --upgrade pip
+```
 
 ## การใช้งาน Dev Container
 
