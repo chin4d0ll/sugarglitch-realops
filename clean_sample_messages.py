@@ -10,20 +10,22 @@ import glob
 from pathlib import Path
 import re
 
-def contains_sample_data(obj):
-    """Check if an object contains sample data"""
+def contains_fake_data(obj):
+    """Check if an object contains fake/mock/demo/simulation data"""
+    fake_keywords = ['sample', 'mock', 'simulation', 'demo']
+    
     if isinstance(obj, dict):
         for key, value in obj.items():
-            if isinstance(value, str) and 'sample' in value.lower():
+            if isinstance(value, str) and any(keyword in value.lower() for keyword in fake_keywords):
                 return True
-            if contains_sample_data(value):
+            if contains_fake_data(value):
                 return True
     elif isinstance(obj, list):
         for item in obj:
-            if contains_sample_data(item):
+            if contains_fake_data(item):
                 return True
     elif isinstance(obj, str):
-        return 'sample' in obj.lower()
+        return any(keyword in obj.lower() for keyword in fake_keywords)
     return False
 
 def clean_messages_from_file(file_path):
@@ -39,10 +41,10 @@ def clean_messages_from_file(file_path):
             original_messages = data['messages']
             original_count = len(original_messages)
             
-            # Filter out messages with sample data
+            # Filter out messages with fake data (sample, mock, demo, simulation)
             clean_messages = []
             for msg in original_messages:
-                if not contains_sample_data(msg):
+                if not contains_fake_data(msg):
                     clean_messages.append(msg)
             
             data['messages'] = clean_messages
@@ -54,10 +56,11 @@ def clean_messages_from_file(file_path):
             
             # Add cleaning metadata
             data['cleaning_info'] = {
-                'cleaned_at': '2025-01-17',
+                'cleaned_at': '2025-06-09',
                 'original_message_count': original_count,
                 'cleaned_message_count': cleaned_count,
-                'sample_messages_removed': original_count - cleaned_count
+                'fake_messages_removed': original_count - cleaned_count,
+                'removed_types': ['sample', 'mock', 'demo', 'simulation']
             }
             
             # Write back to file
@@ -84,7 +87,13 @@ def main():
         '**/mobile_dm_extraction_*.json',
         '**/ultimate_dm_extraction_*.json',
         '**/advanced_dm_extraction_*.json',
-        '**/*dm*extraction*.json'
+        '**/mock_dm_extraction_*.json',
+        '**/demo_extraction_*.json',
+        '**/simulation_*.json',
+        '**/*dm*extraction*.json',
+        '**/*mock*.json',
+        '**/*demo*.json',
+        '**/*simulation*.json'
     ]
     
     files_to_clean = set()
