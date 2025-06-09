@@ -148,7 +148,7 @@ def print_user_instructions():
     print("              mcr.microsoft.com/mssql/server:2019-latest")
     print("")
     print("   Connection: Server=localhost,1433;User=sa;Password=YourStrongPassword123!")
-    
+
     print("\n3️⃣  INSTALL COMPATIBLE EXTENSIONS (Manual installation)")
     print("   Open Extensions panel and search for:")
     print("   • 'ms-ossdata.vscode-postgresql' (PostgreSQL)")
@@ -167,7 +167,7 @@ def print_user_instructions():
     
     print("\n📁 FILES CREATED:")
     print("   • Analysis report: MSSQL_EXTENSION_ANALYSIS_*.json")
-    print("   • Alternative setup: setup_alternative_databases.sh") 
+    print("   • Alternative setup: setup_alternative_databases.sh")
     print("   • Final summary: FINAL_MSSQL_SOLUTION_*.json")
     
     print("\n🎉 ISSUE STATUS: RESOLVED")
@@ -183,12 +183,12 @@ def print_user_instructions():
 def main():
     # Create final summary
     summary, summary_file = create_final_summary()
-    
+
     # Print user instructions
     print_user_instructions()
-    
+
     print(f"\n📋 Complete solution saved to: {summary_file}")
-    
+
     return summary_file
 
 if __name__ == "__main__":
