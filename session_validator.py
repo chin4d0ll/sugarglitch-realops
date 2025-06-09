@@ -34,6 +34,9 @@ class SessionValidator:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 
+            print(f"DEBUG: Loading session from {file_path}")
+            print(f"DEBUG: Session data loaded: {data}")
+                
             sessionid = data.get("sessionid") or data.get("cookies", {}).get("sessionid")
             if not sessionid:
                 return None, "No sessionid found"
@@ -54,6 +57,8 @@ class SessionValidator:
     def test_session(self, session_data, url):
         """ทดสอบ session กับ URL ที่กำหนด"""
         try:
+            print(f"DEBUG: Testing session {session_data['sessionid']} with URL {url}")
+            
             # สร้าง request
             req = urllib.request.Request(url)
             req.add_header("User-Agent", session_data["user_agent"])
@@ -115,6 +120,7 @@ class SessionValidator:
         
         for i, file_path in enumerate(self.session_files, 1):
             print(f"📁 Testing Session {i}: {os.path.basename(file_path)}")
+            print(f"DEBUG: Validating session file {file_path}")
             
             if not os.path.exists(file_path):
                 print(f"❌ File not found: {file_path}")
