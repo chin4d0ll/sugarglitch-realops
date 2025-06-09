@@ -1,0 +1,21 @@
+{
+  "extraction_method": "simple_test",
+  "timestamp": 1749463952,
+  "session_id": "4976283726%3AFlem654...",
+  "target_account": "alx.trading",
+  "test_status": "session_loaded",
+  "next_step": "network_test_required",
+  "extraction_summary": {
+    "session_valid": true,
+    "network_test": "pending",
+    "dm_access": "unknown",
+    "message_count": 0,
+    "extraction_time": "2025-06-09T10:12:32.938492"
+  },
+  "recommendations": [
+    "Test network connectivity to Instagram APIs",
+    "Validate session with actual Instagram endpoint",
+    "Run full extraction with rate limiting",
+    "Monitor for successful DM retrieval"
+  ]
+}
