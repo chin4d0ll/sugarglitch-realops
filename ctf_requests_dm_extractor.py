@@ -139,6 +139,76 @@ def validate_session(sessionid):
         
     return True
 
+# 🎯 Session hijacking from browser
+def extract_session_from_browser():
+    """Extract session from browser cookies (for educational purposes)"""
+    print("🕷️ Browser Session Extraction Guide:")
+    print("=" * 40)
+    print("1. Open Instagram in Chrome/Firefox")
+    print("2. Login normally")
+    print("3. Press F12 (Developer Tools)")
+    print("4. Go to Application/Storage -> Cookies -> instagram.com")
+    print("5. Find 'sessionid' and copy its value")
+    print("6. Paste below when prompted")
+    print()
+    
+    sessionid = input("📝 Paste sessionid here (or 'demo' for demo mode): ")
+    
+    if sessionid.lower() == 'demo':
+        return create_demo_session()
+    
+    if len(sessionid) > 10:
+        # Save to session file
+        session_data = {
+            "sessionid": sessionid,
+            "extracted_at": datetime.now().isoformat(),
+            "method": "manual_browser_extraction"
+        }
+        
+        SESSION_PATH.parent.mkdir(exist_ok=True)
+        with open(SESSION_PATH, 'w') as f:
+            json.dump(session_data, f, indent=2)
+        
+        print(f"✅ Session saved to {SESSION_PATH}")
+        return sessionid
+    else:
+        print("❌ Invalid sessionid format")
+        return None
+
+# 🎯 Advanced session testing
+def test_session_validity(sessionid):
+    """Test if session is valid with minimal request"""
+    print(f"🔍 Testing session: {sessionid[:8]}...")
+    
+    s = requests.Session()
+    s.headers.update(get_enhanced_headers())
+    s.cookies.set("sessionid", sessionid, domain=".instagram.com")
+    
+    # Test with simple endpoint first
+    test_url = "https://www.instagram.com/accounts/edit/"
+    
+    try:
+        resp = s.get(test_url, timeout=10)
+        print(f"📊 Test response: {resp.status_code}")
+        
+        if resp.status_code == 200:
+            if "csrftoken" in resp.text or "edit" in resp.text.lower():
+                print("✅ Session appears valid!")
+                return True
+            else:
+                print("⚠️ Session might be limited")
+                return False
+        elif resp.status_code == 302:
+            print("🔄 Redirect detected - might need login")
+            return False
+        else:
+            print(f"❌ Session test failed: {resp.status_code}")
+            return False
+            
+    except Exception as e:
+        print(f"❌ Test error: {e}")
+        return False
+
 # 🔥 Advanced DM Fetcher with bypass techniques
 def fetch_dm_advanced(sessionid):
     """Advanced DM fetching with CTF bypass techniques"""
@@ -437,4 +507,31 @@ def generate_hack_report(data, filename):
 
 
 if __name__ == "__main__":
-    main()
+    print("🔥 STARTING INSTAGRAM HACKING ENVIRONMENT 🔥")
+    print()
+    
+    # Check if we have a valid session
+    sessionid = load_sessionid()
+    
+    if not sessionid or not validate_session(sessionid):
+        print("❌ No valid session found!")
+        print("🎯 Choose extraction method:")
+        print("1. Manual browser extraction")
+        print("2. Create demo session")
+        
+        choice = input("Enter choice (1 or 2): ")
+        
+        if choice == "1":
+            sessionid = extract_session_from_browser()
+        else:
+            sessionid = create_demo_session()
+    
+    if sessionid and validate_session(sessionid):
+        # Test session first
+        if test_session_validity(sessionid):
+            print("🚀 Proceeding with DM extraction...")
+            main()
+        else:
+            print("💀 Session validation failed!")
+    else:
+        print("💀 Cannot proceed without valid session!")
