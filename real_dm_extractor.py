@@ -118,6 +118,65 @@ class RealDMExtractor:
             except Exception as e:
                 print(f"❌ Error reading messages file: {e}")
     
+    def extract_from_database(self):
+        """ดึงข้อความ DM จริงจากฐานข้อมูล"""
+        db_path = f"{self.workspace}/alx_trading_database.sqlite"
+        if not os.path.exists(db_path):
+            print(f"❌ Database not found: {db_path}")
+            return
+
+        try:
+            import sqlite3
+            conn = sqlite3.connect(db_path)
+            cursor = conn.cursor()
+
+            print("🔍 กำลังดึงข้อความ DM จากฐานข้อมูล...")
+            cursor.execute("SELECT * FROM dm_data")
+            dm_data = cursor.fetchall()
+
+            for dm in dm_data:
+                dm_content = {
+                    "id": dm[0],
+                    "sender": dm[1],
+                    "receiver": dm[2],
+                    "message": dm[3],
+                    "timestamp": dm[4],
+                    "source": "database"
+                }
+                self.real_dms.append(dm_content)
+
+            conn.close()
+        except Exception as e:
+            print(f"❌ Error accessing database: {e}")
+
+    def extract_from_json_files(self):
+        """ดึงข้อความ DM จริงจากไฟล์ JSON อื่นๆ"""
+        json_dir = f"{self.workspace}/results/dm_content_analysis"
+        if not os.path.exists(json_dir):
+            print(f"❌ JSON directory not found: {json_dir}")
+            return
+
+        print("🔍 กำลังดึงข้อความ DM จากไฟล์ JSON...")
+        for file_name in os.listdir(json_dir):
+            if file_name.endswith('.json'):
+                file_path = os.path.join(json_dir, file_name)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        data = json.load(f)
+                        for dm in data.get("dm_texts", []):
+                            dm_content = {
+                                "path": dm.get("path"),
+                                "text": dm.get("text"),
+                                "full_text": dm.get("full_text"),
+                                "length": dm.get("length"),
+                                "source": file_name
+                            }
+                            self.real_dms.append(dm_content)
+                except json.JSONDecodeError:
+                    print(f"❌ Error decoding JSON file: {file_path}")
+                except Exception as e:
+                    print(f"❌ Error reading file {file_path}: {e}")
+    
     def save_real_dms(self):
         """บันทึก DM จริงทั้งหมด"""
         if not self.real_dms:
@@ -185,6 +244,8 @@ def main():
     extractor.extract_from_comprehensive_scan()
     extractor.extract_from_recovered_files()
     extractor.extract_from_extracted_messages()
+    extractor.extract_from_database()
+    extractor.extract_from_json_files()
     
     # บันทึกและแสดงผล
     data = extractor.save_real_dms()
