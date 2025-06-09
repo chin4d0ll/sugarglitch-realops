@@ -18,7 +18,7 @@ from datetime import datetime
 import os
 import ssl
 import certifi
-from urllib.parse import urlparse
+from urllib.parse import urllib.parse as urlparse
 import requests
 
 # Setup logging

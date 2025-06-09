@@ -15,7 +15,7 @@ import json
 import time
 import random
 from pathlib import Path
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urllib.parse as urlparse, parse_qs
 from typing import Dict, List, Any, Optional
 
 class InstagramRedirectFixer:

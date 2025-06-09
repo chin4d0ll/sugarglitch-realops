@@ -150,7 +150,7 @@ class HighPerformanceConnectionPool:
     async def make_request(self, method: str, url: str, proxy: str = None,
                           headers: dict = None, **kwargs) -> Optional[aiohttp.ClientResponse]:
         """ทำ HTTP request ผ่าน connection pool"""
-        from urllib.parse import urlparse
+        from urllib.parse import urllib.parse as urlparse
 
         parsed = urlparse(url)
         host = parsed.netloc

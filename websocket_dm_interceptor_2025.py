@@ -21,7 +21,7 @@ import websockets
 import aiohttp
 import ssl
 import re
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urllib.parse as urlparse, parse_qs
 
 # Setup logging
 logging.basicConfig(

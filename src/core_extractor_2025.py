@@ -28,7 +28,7 @@ import threading
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Union
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urllib.parse as urlparse, parse_qs
 # Try import selenium components
 try:
     import undetected_chromedriver as uc

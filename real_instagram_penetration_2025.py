@@ -23,7 +23,7 @@ import subprocess
 import socket
 import hashlib
 import base64
-from urllib.parse import urlparse, urlencode
+from urllib.parse import urllib.parse as urlparse, urlencode
 import os
 import sys
 

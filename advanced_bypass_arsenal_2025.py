@@ -17,7 +17,7 @@ import random
 import json
 import subprocess
 import socket
-from urllib.parse import urlparse
+from urllib.parse import urllib.parse as urlparse
 import threading
 from datetime import datetime
 import os

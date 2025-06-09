@@ -470,7 +470,7 @@ with open('sample.py', 'w') as f:
 py_compile.compile('sample.py', 'sample.pyc')
 analyze_pyc_file('sample.pyc')
         '''
-        print(python_re_code)
+    print(python_re_code)
 
     def pwn_exploitation_techniques(self):
         """💥 เทคนิค PWN/Binary Exploitation"""

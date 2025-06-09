@@ -41,7 +41,7 @@ import ssl
 import json
 import subprocess
 import paramiko
-from urllib.parse import urlparse
+from urllib.parse import urllib.parse as urlparse
 from concurrent.futures import ThreadPoolExecutor
 import logging
 

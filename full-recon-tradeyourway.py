@@ -21,7 +21,7 @@ import dns.resolver
 import ssl
 import threading
 import time
-from urllib.parse import urlparse
+from urllib.parse import urllib.parse as urlparse
 
 class FullReconTradeyourway:
     def __init__(self):

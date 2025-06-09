@@ -37,7 +37,7 @@ import sqlite3
 import subprocess
 import threading
 from datetime import datetime
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urllib.parse as urlparse, parse_qs
 import re
 from bs4 import BeautifulSoup
 import base64

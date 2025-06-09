@@ -36,7 +36,7 @@ import sqlite3
 import threading
 import base64
 import hashlib
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urllib.parse as urlparse, parse_qs
 
 # Add paths for imports
 sys.path.append('/workspaces/sugarglitch-realops')
