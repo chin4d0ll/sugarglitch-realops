@@ -30,7 +30,7 @@ class FinalDataAnalyzer:
     def collect_all_json_data(self):
         """รวบรวมข้อมูลจากไฟล์ JSON ทั้งหมด"""
         print("📂 Collecting all JSON data...")
-         json_files = glob.glob(
+        json_files = glob.glob(
             f"{self.project_root}/**/*.json", recursive=True
         )
         relevant_files = [
