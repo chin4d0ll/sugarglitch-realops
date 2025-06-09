@@ -1,0 +1,1065 @@
+{
+  "validation_timestamp": "2025-06-09T13:13:19.469453",
+  "project_status": "Excellent",
+  "core_files": {
+    "requirements.txt": {
+      "exists": true,
+      "size": 682,
+      "modified": "2025-06-09T13:09:21.095188"
+    },
+    "README.md": {
+      "exists": true,
+      "size": 10157,
+      "modified": "2025-06-09T12:04:59.185212"
+    },
+    ".gitignore": {
+      "exists": true,
+      "size": 418,
+      "modified": "2025-06-09T12:04:59.179212"
+    },
+    "instagram_session_extractor.py": {
+      "exists": false,
+      "similar_files": [
+        "instagram_dm_extractor_2025.py",
+        "advanced_instagram_hijacker.py",
+        "codespace_instagram_extractor.py"
+      ]
+    },
+    "dm_extractor.py": {
+      "exists": false,
+      "similar_files": [
+        "quick-dm-extractor.py",
+        "playwright_dm_extractor.py",
+        "advanced_alx_dm_extractor_v2.py"
+      ]
+    },
+    "session_validator.py": {
+      "exists": true,
+      "size": 10630
+    },
+    "browser_login_extractor.py": {
+      "exists": true,
+      "size": 2127
+    }
+  },
+  "working_scripts": [
+    {
+      "file": "quick-dm-extractor.py",
+      "status": "syntax_ok",
+      "size": 14456
+    },
+    {
+      "file": "status_check.py",
+      "status": "syntax_ok",
+      "size": 1707
+    },
+    {
+      "file": "performance_optimizer.py",
+      "status": "syntax_ok",
+      "size": 4238
+    },
+    {
+      "file": "playwright_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 10449
+    },
+    {
+      "file": "advanced_alx_dm_extractor_v2.py",
+      "status": "syntax_ok",
+      "size": 23007
+    },
+    {
+      "file": "instagram_dm_extractor_2025.py",
+      "status": "syntax_ok",
+      "size": 17699
+    },
+    {
+      "file": "cute_sync_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 17944
+    },
+    {
+      "file": "clear_explanation.py",
+      "status": "syntax_ok",
+      "size": 3982
+    },
+    {
+      "file": "final_validation.py",
+      "status": "syntax_ok",
+      "size": 6565
+    },
+    {
+      "file": "browser_dm_extractor_2025.py",
+      "status": "syntax_ok",
+      "size": 17642
+    },
+    {
+      "file": "get-pip.py",
+      "status": "syntax_ok",
+      "size": 2279307
+    },
+    {
+      "file": "advanced_instagram_hijacker.py",
+      "status": "syntax_ok",
+      "size": 16617
+    },
+    {
+      "file": "penetration_launcher.py",
+      "status": "syntax_ok",
+      "size": 6195
+    },
+    {
+      "file": "recovery_mission_complete.py",
+      "status": "syntax_ok",
+      "size": 6172
+    },
+    {
+      "file": "web_scraping_alx_extractor.py",
+      "status": "syntax_ok",
+      "size": 15605
+    },
+    {
+      "file": "comprehensive_real_data_summary.py",
+      "status": "syntax_ok",
+      "size": 11303
+    },
+    {
+      "file": "codespace_instagram_extractor.py",
+      "status": "syntax_ok",
+      "size": 12757
+    },
+    {
+      "file": "master_dm_launcher.py",
+      "status": "syntax_ok",
+      "size": 10678
+    },
+    {
+      "file": "instant_500_check.py",
+      "status": "syntax_ok",
+      "size": 5657
+    },
+    {
+      "file": "optimized_alx_extractor.py",
+      "status": "syntax_ok",
+      "size": 8424
+    },
+    {
+      "file": "realtime_session_capture.py",
+      "status": "syntax_ok",
+      "size": 12919
+    },
+    {
+      "file": "session_hijack_dm_extractor_2025.py",
+      "status": "syntax_ok",
+      "size": 20021
+    },
+    {
+      "file": "simple-full-recon.py",
+      "status": "syntax_ok",
+      "size": 8687
+    },
+    {
+      "file": "hijacked_session_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 14120
+    },
+    {
+      "file": "static_html_dm_parser.py",
+      "status": "syntax_ok",
+      "size": 1
+    },
+    {
+      "file": "insta_osint_ctf.py",
+      "status": "syntax_ok",
+      "size": 16174
+    },
+    {
+      "file": "ultimate_instagram_extractor_2025.py",
+      "status": "syntax_ok",
+      "size": 31463
+    },
+    {
+      "file": "mobile_api_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 25359
+    },
+    {
+      "file": "fix_vscode_crashes.py",
+      "status": "syntax_ok",
+      "size": 12214
+    },
+    {
+      "file": "fix_workspace_problems.py",
+      "status": "syntax_ok",
+      "size": 6814
+    },
+    {
+      "file": "websocket_dm_interceptor.py",
+      "status": "syntax_ok",
+      "size": 20403
+    },
+    {
+      "file": "browser_session_monitor.py",
+      "status": "syntax_ok",
+      "size": 8646
+    },
+    {
+      "file": "super_enhanced_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 18082
+    },
+    {
+      "file": "fixed_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 8185
+    },
+    {
+      "file": "recovery_status_report.py",
+      "status": "syntax_ok",
+      "size": 6706
+    },
+    {
+      "file": "alx_trading_database_setup.py",
+      "status": "syntax_ok",
+      "size": 4510
+    },
+    {
+      "file": "fresh_token_hunter.py",
+      "status": "syntax_ok",
+      "size": 2766
+    },
+    {
+      "file": "quick_500_fix.py",
+      "status": "syntax_ok",
+      "size": 10971
+    },
+    {
+      "file": "dm_content_analyzer.py",
+      "status": "syntax_ok",
+      "size": 17407
+    },
+    {
+      "file": "ultimate_automated_extractor.py",
+      "status": "syntax_ok",
+      "size": 17629
+    },
+    {
+      "file": "proxy_bypass_instagram.py",
+      "status": "syntax_ok",
+      "size": 2012
+    },
+    {
+      "file": "ultra_fast_dm_extractor_builtin.py",
+      "status": "syntax_ok",
+      "size": 15597
+    },
+    {
+      "file": "no_dependency_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 12864
+    },
+    {
+      "file": "advanced_bypass_arsenal_2025.py",
+      "status": "syntax_ok",
+      "size": 13253
+    },
+    {
+      "file": "full_auto_extractor.py",
+      "status": "syntax_ok",
+      "size": 19404
+    },
+    {
+      "file": "rate_limit_bypass_arsenal.py",
+      "status": "syntax_ok",
+      "size": 15515
+    },
+    {
+      "file": "advanced_browser_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 23862
+    },
+    {
+      "file": "automated_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 17479
+    },
+    {
+      "file": "advanced_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 15228
+    },
+    {
+      "file": "instagram_websocket_interceptor.py",
+      "status": "syntax_ok",
+      "size": 13993
+    },
+    {
+      "file": "ready_extractor_template.py",
+      "status": "syntax_ok",
+      "size": 2693
+    },
+    {
+      "file": "direct_dm_analyzer_2025.py",
+      "status": "syntax_ok",
+      "size": 13594
+    },
+    {
+      "file": "extract_alx_trading.py",
+      "status": "syntax_ok",
+      "size": 909
+    },
+    {
+      "file": "session_status_checker.py",
+      "status": "syntax_ok",
+      "size": 2944
+    },
+    {
+      "file": "final_extraction_attempt.py",
+      "status": "syntax_ok",
+      "size": 8604
+    },
+    {
+      "file": "advanced_alx_extractor.py",
+      "status": "syntax_ok",
+      "size": 11281
+    },
+    {
+      "file": "realops.py",
+      "status": "syntax_ok",
+      "size": 5774
+    },
+    {
+      "file": "working_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 12923
+    },
+    {
+      "file": "enhanced_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 11676
+    },
+    {
+      "file": "auto_session_extractor.py",
+      "status": "syntax_ok",
+      "size": 4497
+    },
+    {
+      "file": "final_cleanup_helper.py",
+      "status": "syntax_ok",
+      "size": 11869
+    },
+    {
+      "file": "fresh_session_finder.py",
+      "status": "syntax_ok",
+      "size": 14680
+    },
+    {
+      "file": "instagram_redirect_fix.py",
+      "status": "syntax_ok",
+      "size": 8366
+    },
+    {
+      "file": "auto_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 15491
+    },
+    {
+      "file": "simple_session_guide.py",
+      "status": "syntax_ok",
+      "size": 3803
+    },
+    {
+      "file": "ultra_quick_alx_fix.py",
+      "status": "syntax_ok",
+      "size": 5464
+    },
+    {
+      "file": "simple_final_report.py",
+      "status": "syntax_ok",
+      "size": 1846
+    },
+    {
+      "file": "weaponized-recon-suite.py",
+      "status": "syntax_ok",
+      "size": 11609
+    },
+    {
+      "file": "git_file_recovery_system.py",
+      "status": "syntax_ok",
+      "size": 19455
+    },
+    {
+      "file": "simple_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 3963
+    },
+    {
+      "file": "check_databases.py",
+      "status": "syntax_ok",
+      "size": 2599
+    },
+    {
+      "file": "comprehensive_dm_analysis_2025.py",
+      "status": "syntax_ok",
+      "size": 12111
+    },
+    {
+      "file": "real_dm_extractor_alx.py",
+      "status": "syntax_ok",
+      "size": 11076
+    },
+    {
+      "file": "hardcore_validator.py",
+      "status": "syntax_ok",
+      "size": 13362
+    },
+    {
+      "file": "simple-recon.py",
+      "status": "syntax_ok",
+      "size": 1
+    },
+    {
+      "file": "instagram_redirect_loop_fixer.py",
+      "status": "syntax_ok",
+      "size": 15210
+    },
+    {
+      "file": "ultimate_real_instagram_penetration_2025.py",
+      "status": "syntax_ok",
+      "size": 33935
+    },
+    {
+      "file": "hardcore_setup.py",
+      "status": "syntax_ok",
+      "size": 5383
+    },
+    {
+      "file": "fix_vscode_linting.py",
+      "status": "syntax_ok",
+      "size": 5863
+    },
+    {
+      "file": "final_automated_extractor.py",
+      "status": "syntax_ok",
+      "size": 13822
+    },
+    {
+      "file": "session_finder.py",
+      "status": "syntax_ok",
+      "size": 4410
+    },
+    {
+      "file": "fix_dm_extraction.py",
+      "status": "syntax_ok",
+      "size": 3949
+    },
+    {
+      "file": "manual_recovery_guide.py",
+      "status": "syntax_ok",
+      "size": 3000
+    },
+    {
+      "file": "real_time_dm_interceptor_2025.py",
+      "status": "syntax_ok",
+      "size": 15396
+    },
+    {
+      "file": "ipad_simple_guide.py",
+      "status": "syntax_ok",
+      "size": 4285
+    },
+    {
+      "file": "ultimate_real_dm_hunter_2025.py",
+      "status": "syntax_ok",
+      "size": 24356
+    },
+    {
+      "file": "comprehensive_session_analyzer.py",
+      "status": "syntax_ok",
+      "size": 12639
+    },
+    {
+      "file": "direct-weaponized-recon.py",
+      "status": "syntax_ok",
+      "size": 13412
+    },
+    {
+      "file": "codespace_troubleshooter.py",
+      "status": "syntax_ok",
+      "size": 20987
+    },
+    {
+      "file": "ultimate_session_hunter.py",
+      "status": "syntax_ok",
+      "size": 12057
+    },
+    {
+      "file": "manual_session_input.py",
+      "status": "syntax_ok",
+      "size": 3310
+    },
+    {
+      "file": "create_deployment_package.py",
+      "status": "syntax_ok",
+      "size": 4158
+    },
+    {
+      "file": "insert_deep_profile.py",
+      "status": "syntax_ok",
+      "size": 11829
+    },
+    {
+      "file": "ultimate_alx_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 15801
+    },
+    {
+      "file": "setup_playwright.py",
+      "status": "syntax_ok",
+      "size": 7238
+    },
+    {
+      "file": "complete_sessionid_guide.py",
+      "status": "syntax_ok",
+      "size": 6298
+    },
+    {
+      "file": "real_data_extractor.py",
+      "status": "syntax_ok",
+      "size": 8917
+    },
+    {
+      "file": "instant_session_capture.py",
+      "status": "syntax_ok",
+      "size": 10892
+    },
+    {
+      "file": "real_extraction_with_bypass_2025.py",
+      "status": "syntax_ok",
+      "size": 32714
+    },
+    {
+      "file": "hardcore_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 43855
+    },
+    {
+      "file": "auto_session_generator.py",
+      "status": "syntax_ok",
+      "size": 11690
+    },
+    {
+      "file": "easy_alx_extractor.py",
+      "status": "syntax_ok",
+      "size": 5276
+    },
+    {
+      "file": "rate_limit_analyzer.py",
+      "status": "syntax_ok",
+      "size": 16223
+    },
+    {
+      "file": "extract_dm_texts_from_report.py",
+      "status": "syntax_ok",
+      "size": 1983
+    },
+    {
+      "file": "ultimate_cleanup.py",
+      "status": "syntax_ok",
+      "size": 5687
+    },
+    {
+      "file": "auto_login_export.py",
+      "status": "syntax_ok",
+      "size": 14592
+    },
+    {
+      "file": "enhanced_instagram_extraction_2025.py",
+      "status": "syntax_ok",
+      "size": 60239
+    },
+    {
+      "file": "simple_automated_extractor.py",
+      "status": "syntax_ok",
+      "size": 16015
+    },
+    {
+      "file": "public_data_extractor.py",
+      "status": "syntax_ok",
+      "size": 9259
+    },
+    {
+      "file": "hardcore_launcher.py",
+      "status": "syntax_ok",
+      "size": 9048
+    },
+    {
+      "file": "network-recon-thai.py",
+      "status": "syntax_ok",
+      "size": 10741
+    },
+    {
+      "file": "html_dm_parser.py",
+      "status": "syntax_ok",
+      "size": 11957
+    },
+    {
+      "file": "real_session_validator.py",
+      "status": "syntax_ok",
+      "size": 9344
+    },
+    {
+      "file": "simple_http_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 7902
+    },
+    {
+      "file": "final_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 10604
+    },
+    {
+      "file": "check_ig_username.py",
+      "status": "syntax_ok",
+      "size": 2113
+    },
+    {
+      "file": "ipad_solution.py",
+      "status": "syntax_ok",
+      "size": 12197
+    },
+    {
+      "file": "create_session.py",
+      "status": "syntax_ok",
+      "size": 968
+    },
+    {
+      "file": "manual_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 13049
+    },
+    {
+      "file": "instagram_penetration_showcase.py",
+      "status": "syntax_ok",
+      "size": 17337
+    },
+    {
+      "file": "performance_comparison.py",
+      "status": "syntax_ok",
+      "size": 11088
+    },
+    {
+      "file": "breakthrough_dm_extractor_2025.py",
+      "status": "syntax_ok",
+      "size": 18847
+    },
+    {
+      "file": "auto_session_exporter.py",
+      "status": "syntax_ok",
+      "size": 10470
+    },
+    {
+      "file": "final_real_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 14364
+    },
+    {
+      "file": "quick_project_fixer.py",
+      "status": "syntax_ok",
+      "size": 6642
+    },
+    {
+      "file": "quick_insert_profile.py",
+      "status": "syntax_ok",
+      "size": 4115
+    },
+    {
+      "file": "real_dm_extractor_fresh.py",
+      "status": "syntax_ok",
+      "size": 8815
+    },
+    {
+      "file": "alx_trading_extractor.py",
+      "status": "syntax_ok",
+      "size": 12527
+    },
+    {
+      "file": "ultimate_workspace_fixer.py",
+      "status": "syntax_ok",
+      "size": 16894
+    },
+    {
+      "file": "ultra_fast_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 13154
+    },
+    {
+      "file": "brightdata_playwright_login_dm.py",
+      "status": "syntax_ok",
+      "size": 3165
+    },
+    {
+      "file": "alx_mobile_extractor.py",
+      "status": "syntax_ok",
+      "size": 10176
+    },
+    {
+      "file": "ctf_hacking_masterclass_2025.py",
+      "status": "syntax_ok",
+      "size": 16590
+    },
+    {
+      "file": "check_real_dm_db.py",
+      "status": "syntax_ok",
+      "size": 1707
+    },
+    {
+      "file": "ctf_instagram_exploiter_2025.py",
+      "status": "syntax_ok",
+      "size": 28803
+    },
+    {
+      "file": "codespace_quick_fix.py",
+      "status": "syntax_ok",
+      "size": 12189
+    },
+    {
+      "file": "auto_ig_session_login.py",
+      "status": "syntax_ok",
+      "size": 2137
+    },
+    {
+      "file": "brutal_dir_brute.py",
+      "status": "syntax_ok",
+      "size": 5434
+    },
+    {
+      "file": "quick_start.py",
+      "status": "syntax_ok",
+      "size": 1295
+    },
+    {
+      "file": "auto-recon-tradeyourway.py",
+      "status": "syntax_ok",
+      "size": 7534
+    },
+    {
+      "file": "instagram_mobile_api_emulator.py",
+      "status": "syntax_ok",
+      "size": 14878
+    },
+    {
+      "file": "alx_trading_targeted_extractor.py",
+      "status": "syntax_ok",
+      "size": 22374
+    },
+    {
+      "file": "performance_benchmark.py",
+      "status": "syntax_ok",
+      "size": 9312
+    },
+    {
+      "file": "full-recon-tradeyourway.py",
+      "status": "syntax_ok",
+      "size": 13424
+    },
+    {
+      "file": "validate_ig_sessions_fixed.py",
+      "status": "syntax_ok",
+      "size": 7549
+    },
+    {
+      "file": "quick_weaponized_recon.py",
+      "status": "syntax_ok",
+      "size": 9615
+    },
+    {
+      "file": "cute_rate_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 18566
+    },
+    {
+      "file": "simple_runner.py",
+      "status": "syntax_ok",
+      "size": 1538
+    },
+    {
+      "file": "ultimate_dm_master_2025.py",
+      "status": "syntax_ok",
+      "size": 15489
+    },
+    {
+      "file": "simple_session_grab.py",
+      "status": "syntax_ok",
+      "size": 5167
+    },
+    {
+      "file": "quick-weaponized-recon-fixed.py",
+      "status": "syntax_ok",
+      "size": 5504
+    },
+    {
+      "file": "real_instagram_penetration_2025.py",
+      "status": "syntax_ok",
+      "size": 24823
+    },
+    {
+      "file": "importt.py",
+      "status": "syntax_ok",
+      "size": 6411
+    },
+    {
+      "file": "simple_extractor.py",
+      "status": "syntax_ok",
+      "size": 6332
+    },
+    {
+      "file": "quick_status.py",
+      "status": "syntax_ok",
+      "size": 1105
+    },
+    {
+      "file": "mission_complete.py",
+      "status": "syntax_ok",
+      "size": 6074
+    },
+    {
+      "file": "ultimate_dm_extractor_2025.py",
+      "status": "syntax_ok",
+      "size": 35567
+    },
+    {
+      "file": "real_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 12181
+    },
+    {
+      "file": "session_validator.py",
+      "status": "syntax_ok",
+      "size": 10630
+    },
+    {
+      "file": "simple_session_auto.py",
+      "status": "syntax_ok",
+      "size": 3671
+    },
+    {
+      "file": "complete_project_analysis.py",
+      "status": "syntax_ok",
+      "size": 17740
+    },
+    {
+      "file": "project_validator.py",
+      "status": "syntax_ok",
+      "size": 14863
+    },
+    {
+      "file": "brightdata_playwright_example.py",
+      "status": "syntax_ok",
+      "size": 708
+    },
+    {
+      "file": "fixed_instagram_extractor.py",
+      "status": "syntax_ok",
+      "size": 9019
+    },
+    {
+      "file": "advanced-analysis-tradeyourway.py",
+      "status": "syntax_ok",
+      "size": 10340
+    },
+    {
+      "file": "memory_efficient_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 15505
+    },
+    {
+      "file": "ultimate_dm_extraction_suite_2025.py",
+      "status": "syntax_ok",
+      "size": 13660
+    },
+    {
+      "file": "browser_login_extractor.py",
+      "status": "syntax_ok",
+      "size": 2127
+    },
+    {
+      "file": "final_status_and_next_steps.py",
+      "status": "syntax_ok",
+      "size": 6073
+    },
+    {
+      "file": "real_dm_browser_extractor.py",
+      "status": "syntax_ok",
+      "size": 13669
+    },
+    {
+      "file": "websocket_dm_interceptor_2025.py",
+      "status": "syntax_ok",
+      "size": 15922
+    },
+    {
+      "file": "instagram_500_complete_fix.py",
+      "status": "syntax_ok",
+      "size": 9165
+    },
+    {
+      "file": "comprehensive_dm_scanner.py",
+      "status": "syntax_ok",
+      "size": 5635
+    },
+    {
+      "file": "validate_ig_sessions.py",
+      "status": "syntax_ok",
+      "size": 8453
+    },
+    {
+      "file": "final_alx_solution.py",
+      "status": "syntax_ok",
+      "size": 10655
+    },
+    {
+      "file": "instagram_session_fixer.py",
+      "status": "syntax_ok",
+      "size": 14440
+    },
+    {
+      "file": "ultra_simple_extractor.py",
+      "status": "syntax_ok",
+      "size": 4018
+    },
+    {
+      "file": "recon.py",
+      "status": "syntax_ok",
+      "size": 7516
+    },
+    {
+      "file": "alx_diagnostic.py",
+      "status": "syntax_ok",
+      "size": 12087
+    },
+    {
+      "file": "thai_solution.py",
+      "status": "syntax_ok",
+      "size": 15462
+    },
+    {
+      "file": "mobile_dm_extractor_2025.py",
+      "status": "syntax_ok",
+      "size": 15885
+    },
+    {
+      "file": "improved_alx_extractor.py",
+      "status": "syntax_ok",
+      "size": 14954
+    },
+    {
+      "file": "view_deep_profile.py",
+      "status": "syntax_ok",
+      "size": 2853
+    },
+    {
+      "file": "batch_git_committer.py",
+      "status": "syntax_ok",
+      "size": 6997
+    },
+    {
+      "file": "instagram_connection_fixer.py",
+      "status": "syntax_ok",
+      "size": 8482
+    },
+    {
+      "file": "instagram_500_error_fixer.py",
+      "status": "syntax_ok",
+      "size": 24103
+    },
+    {
+      "file": "ultimate_dm_extractor.py",
+      "status": "syntax_ok",
+      "size": 18342
+    },
+    {
+      "file": "alx_trading_500_fix.py",
+      "status": "syntax_ok",
+      "size": 10705
+    },
+    {
+      "file": "bootstrap.py",
+      "status": "syntax_ok",
+      "size": 2235
+    },
+    {
+      "file": "quick-weaponized-recon.py",
+      "status": "syntax_ok",
+      "size": 13306
+    }
+  ],
+  "broken_scripts": [
+    {
+      "file": "hacking-menu.py",
+      "error": "SyntaxError: invalid character '\ud83d\ude80' (U+1F680) (hacking-menu.py, line 2)",
+      "line": 2
+    },
+    {
+      "file": "ctf_hacking_masterclass_2025_fixed.py",
+      "error": "SyntaxError: unexpected indent (ctf_hacking_masterclass_2025_fixed.py, line 473)",
+      "line": 473
+    }
+  ],
+  "data_quality": {
+    "json_files": {
+      "total": 311,
+      "valid": 311,
+      "invalid": 0,
+      "success_rate": "100.0%"
+    },
+    "databases": {
+      "total": 3,
+      "valid": 3,
+      "total_records": 149
+    }
+  },
+  "environment_health": {
+    "python_version": "3.12.10 (main, May 21 2025, 20:03:03) [GCC 14.2.0]",
+    "imports": {
+      "working": [
+        "json",
+        "sqlite3",
+        "os",
+        "sys",
+        "pathlib",
+        "datetime",
+        "re",
+        "subprocess",
+        "time"
+      ],
+      "failed": [
+        "requests"
+      ],
+      "success_rate": "90.0%"
+    },
+    "file_permissions": "ok"
+  },
+  "recommendations": [
+    {
+      "priority": "High",
+      "category": "Project Structure",
+      "issue": "Missing core files: instagram_session_extractor.py, dm_extractor.py",
+      "action": "Create missing core files to complete project structure"
+    },
+    {
+      "priority": "High",
+      "category": "Code Quality",
+      "issue": "2/192 scripts have errors",
+      "action": "Fix syntax errors and import issues in broken scripts"
+    },
+    {
+      "priority": "Medium",
+      "category": "Environment",
+      "issue": "Import success rate: 90.0%",
+      "action": "Install missing Python packages"
+    }
+  ],
+  "performance_metrics": {},
+  "project_score": 90.1
+}
