@@ -11,11 +11,13 @@ def show_menu():
     print("=== 🎯 REALOPS - Quick Menu ===")
     print("1. 👥 Show real contacts")
     print("2. 💬 Show DM summary") 
-    print("3. 🔍 Quick recon")
-    print("4. 📤 Export real data")
-    print("5. 🗄️  Direct database access")
-    print("6. 📊 Status check")
-    print("7. ❌ Exit")
+    print("3. ➕ Add new contact")
+    print("4. ➕ Add DM data")
+    print("5. 🔍 Quick recon")
+    print("6. 📤 Export real data")
+    print("7. 🗄️  Direct database access")
+    print("8. 📊 Status check")
+    print("9. ❌ Exit")
 
 def get_real_contacts():
     db_path = "/workspaces/sugarglitch-realops/alx_trading_database.sqlite"
@@ -134,6 +136,77 @@ def status_check():
     import subprocess
     subprocess.run(['python3', '/workspaces/sugarglitch-realops/status_check.py'])
 
+def add_new_contact():
+    print("➕ เพิ่มผู้ติดต่อใหม่")
+    
+    username = input("👤 Username: ").strip()
+    if not username:
+        print("❌ ต้องใส่ username")
+        return
+    
+    email = input("📧 Email (optional): ").strip() or None
+    phone = input("📱 Phone (optional): ").strip() or None
+    notes = input("📝 Notes: ").strip() or "New contact"
+    
+    db_path = "/workspaces/sugarglitch-realops/alx_trading_database.sqlite"
+    
+    try:
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            INSERT INTO trading_contacts 
+            (username, email, phone, status, notes, last_updated) 
+            VALUES (?, ?, ?, 'active', ?, ?)
+        ''', (username, email, phone, notes, datetime.now()))
+        
+        conn.commit()
+        conn.close()
+        
+        print(f"✅ เพิ่ม {username} เข้า database แล้ว!")
+        
+    except sqlite3.IntegrityError:
+        print(f"❌ {username} มีอยู่ใน database แล้ว")
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
+def add_dm_data():
+    print("➕ เพิ่มข้อมูล DM")
+    
+    username = input("👤 Username: ").strip()
+    if not username:
+        print("❌ ต้องใส่ username")
+        return
+    
+    try:
+        message_count = int(input("💬 จำนวนข้อความ: ").strip())
+    except ValueError:
+        print("❌ ใส่เป็นตัวเลข")
+        return
+    
+    last_message = input("📝 ข้อความล่าสุด (optional): ").strip() or None
+    source_file = input("📄 Source file (optional): ").strip() or None
+    
+    db_path = "/workspaces/sugarglitch-realops/alx_trading_database.sqlite"
+    
+    try:
+        conn = sqlite3.connect(db_path)
+        cursor = conn.cursor()
+        
+        cursor.execute('''
+            INSERT INTO dm_data 
+            (username, message_count, last_message, timestamp, source_file) 
+            VALUES (?, ?, ?, ?, ?)
+        ''', (username, message_count, last_message, datetime.now(), source_file))
+        
+        conn.commit()
+        conn.close()
+        
+        print(f"✅ เพิ่มข้อมูล DM ของ {username} แล้ว!")
+        
+    except Exception as e:
+        print(f"❌ Error: {e}")
+
 def main():
     while True:
         show_menu()
@@ -144,14 +217,18 @@ def main():
         elif choice == '2':
             get_dm_summary()
         elif choice == '3':
-            quick_recon()
+            add_new_contact()
         elif choice == '4':
-            export_data()
+            add_dm_data()
         elif choice == '5':
-            database_access()
+            quick_recon()
         elif choice == '6':
-            status_check()
+            export_data()
         elif choice == '7':
+            database_access()
+        elif choice == '8':
+            status_check()
+        elif choice == '9':
             print("👋 Goodbye!")
             break
         else:
