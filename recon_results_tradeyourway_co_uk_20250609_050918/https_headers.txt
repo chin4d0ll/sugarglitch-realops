@@ -1,0 +1,12 @@
+HTTP/2 200 
+content-type: text/html; charset=UTF-8
+x-ws-ratelimit-limit: 1000
+x-ws-ratelimit-remaining: 999
+date: Mon, 09 Jun 2025 05:09:33 GMT
+server: Apache
+expires: Thu, 19 Nov 1981 08:52:00 GMT
+cache-control: no-store, no-cache, must-revalidate
+pragma: no-cache
+link: <https://tradeyourway.co.uk/wp-json/>; rel="https://api.w.org/", <https://tradeyourway.co.uk/wp-json/wp/v2/pages/351>; rel="alternate"; title="JSON"; type="application/json", <https://tradeyourway.co.uk/>; rel=shortlink
+set-cookie: PHPSESSID=235d2d3daee22d11437076d346219711; path=/
+
