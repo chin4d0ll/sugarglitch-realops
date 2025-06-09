@@ -1,0 +1,81 @@
+{
+  "cleanup_timestamp": "2025-06-09T09:16:53.983671",
+  "remaining_real_data_files": [
+    {
+      "file": "/workspaces/sugarglitch-realops/config/json/MASTER_PROFILE_alx_trading_1748262733.json",
+      "size_bytes": 2199,
+      "description": "Complete contact information for Alex Fleming"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/config/json/MASTER_PROFILE_alx_trading_1748264047.json",
+      "size_bytes": 2896,
+      "description": "Duplicate profile data"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/config/json/INTIMATE_MESSAGES_alx.trading_1748264946.json",
+      "size_bytes": 322,
+      "description": "Intimate messages analysis (empty)"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/comprehensive_dm_scan_results_1749231518.json",
+      "size_bytes": 950831,
+      "description": "Real DM content samples"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/results/dm_content_analysis/extracted_messages_1749233354.json",
+      "size_bytes": 1530493,
+      "description": "Complete message compilation"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/results/dm_content_analysis/dm_content_analysis_1749233354.json",
+      "size_bytes": 1506224,
+      "description": "DM content analysis results"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/alx_trading_session_fleming654.json",
+      "size_bytes": 171,
+      "description": "Valid Instagram session data"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/config/proxy_config.json",
+      "size_bytes": 595,
+      "description": "Proxy configuration with credentials"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/alx_trading_database_setup.py",
+      "size_bytes": 4510,
+      "description": "Database management script"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/alx_trading_database.sqlite",
+      "size_bytes": 32768,
+      "description": "SQLite database with real data"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/comprehensive_real_data_summary.py",
+      "size_bytes": 11303,
+      "description": "Data analysis script"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/cleanup_fake_data.py",
+      "size_bytes": 11517,
+      "description": "This cleanup script"
+    }
+  ],
+  "total_files_preserved": 12,
+  "real_data_summary": {
+    "alex_fleming": {
+      "username": "alx.trading",
+      "real_name": "Alex Fleming",
+      "phone_thailand": "0615414210",
+      "phone_uk": "+447793127209",
+      "email": "n@alx.trading",
+      "password": "Fleming654",
+      "business": "Trade Your Way"
+    },
+    "whatilove1728": {
+      "username": "whatilove1728",
+      "description": "InstaBullsh*t Instagram account"
+    }
+  }
+}

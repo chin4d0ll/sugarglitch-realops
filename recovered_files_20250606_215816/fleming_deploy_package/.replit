@@ -1,3 +1,0 @@
-language = "python3"
-run = "python launch_fleming_ops.py"
-entrypoint = "launch_fleming_ops.py"
