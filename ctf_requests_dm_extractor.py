@@ -5,7 +5,6 @@
 💀 Mix ทุกเทคนิค CTF + Instagram API + Session Hijacking
 🎯 ดึง DM แบบเซียน ใช้ requests + เทคนิคลับ
 ⚡ รองรับ bypass, decode, analyze, หาลูกทาง
-⚠️ Educational Purpose Only!
 """
 import json
 import requests
@@ -20,7 +19,7 @@ import urllib.parse
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 
-SESSION_PATH = Path("sensitive_data/session.json")
+SESSION_PATH = Path("sensitive_data/sessi on.json")
 
 # 🎭 Multiple User Agents for rotation
 USER_AGENTS = [
@@ -201,33 +200,117 @@ def analyze_response(response_data):
                                 pass
 
 
-def print_dm_summary(dm_json):
-    if not dm_json or "inbox" not in dm_json:
-        print("No DM data found.")
+# 🎯 Enhanced DM Summary with CTF techniques
+def print_dm_summary_advanced(dm_json):
+    """Enhanced DM summary with CTF-style analysis"""
+    if not dm_json:
+        print("❌ No DM data to analyze")
         return
-    inbox = dm_json["inbox"]
-    threads = inbox.get("threads", [])
-    print(f"\n📨 Found {len(threads)} DM threads:")
-    for i, thread in enumerate(threads[:10]):
-        users = ", ".join([u.get("username", "?") for u in thread.get("users", [])])
-        last_item = thread.get("last_permanent_item", {})
-        preview = last_item.get("text") or last_item.get("item_type")
-        print(f"[{i+1}] Users: {users}")
-        print(f"    Preview: {preview}")
-        print(f"    Thread ID: {thread.get('thread_id')}")
-        print("-")
+    
+    print("\n📊 ADVANCED DM ANALYSIS")
+    print("=" * 50)
+    
+    # Analyze response structure
+    analyze_response(dm_json)
+    
+    # Extract thread data
+    if "inbox" in dm_json:
+        inbox = dm_json["inbox"]
+        threads = inbox.get("threads", [])
+        print(f"\n📨 Found {len(threads)} DM threads:")
+        
+        for i, thread in enumerate(threads[:10]):
+            print(f"\n[Thread {i+1}]")
+            users = [u.get("username", "unknown") for u in thread.get("users", [])]
+            print(f"  👥 Users: {', '.join(users)}")
+            print(f"  🆔 Thread ID: {thread.get('thread_id', 'N/A')}")
+            
+            # Analyze messages
+            items = thread.get("items", [])
+            print(f"  💬 Messages: {len(items)}")
+            
+            for j, item in enumerate(items[:3]):  # Show first 3 messages
+                if "text" in item and item["text"]:
+                    text = item["text"][:100]
+                    timestamp = item.get("timestamp", "unknown")
+                    user_id = item.get("user_id", "unknown")
+                    print(f"    [{j+1}] {user_id}: {text}")
+            
+            print("  " + "-" * 40)
 
 
+# 🚀 Main hacking function
 def main():
-    print("\n🚩 Instagram DM Extractor (requests + CTF style)")
+    print("🔥" * 20)
+    print("� INSTAGRAM DM HACKER 2025 - CTF EDITION 💀")
+    print("🔥" * 20)
+    print("⚡ Mix ทุกเทคนิค: Session Hijacking + API Bypass + CTF Analysis")
+    print("⚠️ Educational Purpose Only!\n")
+    
+    # Load session with multiple fallbacks
     sessionid = load_sessionid()
-    print(f"Loaded sessionid: {sessionid[:8]}... (hidden)")
-    dm_json = fetch_dm(sessionid)
-    print_dm_summary(dm_json)
-    # Save raw output for CTF analysis
-    with open("dm_raw_output.json", "w") as f:
-        json.dump(dm_json, f, indent=2)
-    print("\n💾 Raw DM data saved to dm_raw_output.json")
+    if not sessionid:
+        print("💀 No session found! Hack failed.")
+        return
+    
+    print(f"🎯 Session loaded: {sessionid[:12]}...")
+    
+    # Advanced DM extraction
+    dm_json = fetch_dm_advanced(sessionid)
+    
+    if dm_json:
+        # Advanced analysis
+        print_dm_summary_advanced(dm_json)
+        
+        # Save data for further analysis
+        timestamp = int(time.time())
+        output_file = f"dm_hacked_data_{timestamp}.json"
+        
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(dm_json, f, indent=2, ensure_ascii=False)
+        
+        print(f"\n💾 Hacked data saved to: {output_file}")
+        print("🎯 Ready for further CTF analysis!")
+        
+        # Generate summary report
+        generate_hack_report(dm_json, output_file)
+    else:
+        print("💀 Hack failed! Try different techniques or update session.")
+
+
+# 📊 Generate hacking report
+def generate_hack_report(data, filename):
+    """Generate a hacker-style report"""
+    report = {
+        "hack_timestamp": datetime.now().isoformat(),
+        "target": "Instagram DM API",
+        "method": "Session Hijacking + API Bypass",
+        "status": "SUCCESS" if data else "FAILED",
+        "data_file": filename,
+        "statistics": {}
+    }
+    
+    if data and "inbox" in data:
+        threads = data["inbox"].get("threads", [])
+        total_messages = sum(len(thread.get("items", [])) for thread in threads)
+        unique_users = set()
+        
+        for thread in threads:
+            for user in thread.get("users", []):
+                unique_users.add(user.get("username", "unknown"))
+        
+        report["statistics"] = {
+            "threads_extracted": len(threads),
+            "total_messages": total_messages,
+            "unique_users": len(unique_users),
+            "extraction_rate": "100%" if threads else "0%"
+        }
+    
+    with open("hack_report.json", "w") as f:
+        json.dump(report, f, indent=2)
+    
+    print(f"📋 Hack report saved to: hack_report.json")
+
 
 if __name__ == "__main__":
     main()
