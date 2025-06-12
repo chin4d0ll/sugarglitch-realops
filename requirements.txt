@@ -1,0 +1,5 @@
+networkx
+matplotlib
+pyvis
+python-dotenv
+requests
