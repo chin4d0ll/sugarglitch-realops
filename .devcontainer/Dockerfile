@@ -1,5 +1,5 @@
 # Penetration Testing & Hacking Environment
-FROM python:3.10-slim
+FROM mcr.microsoft.com/devcontainers/python:3.11
 
 # Install base system dependencies and available penetration testing tools
 RUN apt-get update && apt-get install -y \
