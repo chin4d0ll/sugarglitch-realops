@@ -1,0 +1,12 @@
+{
+  "target_usernames": ["alx.trading", "whatilove1728"],
+  "session_id": "82d00883%3A1748264421%3A6f473b1c8d0b8d51",
+  "export_format": ["pdf", "html"],
+  "identity_file": "data/unified_identity_alx_whatilove.json",
+  "discord_webhook": true,
+  "identity_traits": {
+    "emails": ["n@alx.trading"],
+    "usernames": ["alx.trading", "whatilove1728"],
+    "phones": ["0615414210", "+447793127209"]
+  }
+}
