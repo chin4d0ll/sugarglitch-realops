@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "markdownlint",
+			"problemMatcher": [
+				"$markdownlint"
+			],
+			"label": "markdownlint: Lint all Markdown files in the workspace with markdownlint"
+		}
+	]
+// This file defines tasks for Visual Studio Code in the current workspace.
+// It is used to configure and automate common development workflows such as building, testing, and running scripts.
+// The configuration is written in JSON format and should be placed in the .vscode directory of the project.
+// For more information, see: https://code.visualstudio.com/docs/editor/tasks
+}

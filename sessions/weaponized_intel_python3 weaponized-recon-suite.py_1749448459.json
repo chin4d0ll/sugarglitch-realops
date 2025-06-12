@@ -1,0 +1,84 @@
+{
+  "target": "python3 weaponized-recon-suite.py",
+  "timestamp": "2025-06-09T05:54:12.160796",
+  "intelligence": {},
+  "attack_vectors": [
+    {
+      "type": "Domain Hijacking",
+      "severity": "CRITICAL",
+      "description": "Domain expires in 27 days - perfect hijacking opportunity",
+      "timeline": "27 days",
+      "success_rate": "High if not renewed"
+    },
+    {
+      "type": "Web Application Attack",
+      "severity": "HIGH",
+      "description": "Apache server with potential vulnerabilities",
+      "timeline": "Immediate",
+      "success_rate": "Medium"
+    },
+    {
+      "type": "Email-based Phishing",
+      "severity": "HIGH",
+      "description": "Professional finance site - high-value targets",
+      "timeline": "Immediate",
+      "success_rate": "High"
+    },
+    {
+      "type": "Subdomain Takeover",
+      "severity": "MEDIUM",
+      "description": "Limited subdomains but potential for takeover",
+      "timeline": "1-7 days",
+      "success_rate": "Medium"
+    }
+  ],
+  "weaponized_data": {
+    "subdomains": [],
+    "web_tech": {
+      "http": {
+        "error": "HTTPConnectionPool(host='python3%20weaponized-recon-suite.py', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x708a2c1c5a60>: Failed to resolve 'python3%20weaponized-recon-suite.py' ([Errno -2] Name does not resolve)\"))"
+      },
+      "https": {
+        "error": "HTTPSConnectionPool(host='python3%20weaponized-recon-suite.py', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x708a2c1c5fa0>: Failed to resolve 'python3%20weaponized-recon-suite.py' ([Errno -2] Name does not resolve)\"))"
+      }
+    },
+    "emails": [
+      "admin@python3 weaponized-recon-suite.py",
+      "administrator@python3 weaponized-recon-suite.py",
+      "info@python3 weaponized-recon-suite.py",
+      "contact@python3 weaponized-recon-suite.py",
+      "support@python3 weaponized-recon-suite.py",
+      "help@python3 weaponized-recon-suite.py",
+      "sales@python3 weaponized-recon-suite.py",
+      "marketing@python3 weaponized-recon-suite.py",
+      "hr@python3 weaponized-recon-suite.py",
+      "jobs@python3 weaponized-recon-suite.py",
+      "careers@python3 weaponized-recon-suite.py",
+      "office@python3 weaponized-recon-suite.py",
+      "mail@python3 weaponized-recon-suite.py",
+      "webmaster@python3 weaponized-recon-suite.py",
+      "postmaster@python3 weaponized-recon-suite.py",
+      "root@python3 weaponized-recon-suite.py",
+      "no-reply@python3 weaponized-recon-suite.py",
+      "noreply@python3 weaponized-recon-suite.py"
+    ],
+    "social_engineering": {
+      "domain_age": "Nearly 7 years (trusted)",
+      "business_type": "Trading/Finance",
+      "hosting_provider": "Ionos SE (European)",
+      "professional_grade": "High",
+      "target_value": "High (Financial services)",
+      "attack_difficulty": "Medium (Professional setup)",
+      "phishing_potential": "High (Finance attracts targets)",
+      "social_proof": "Domain age provides credibility"
+    }
+  },
+  "summary": {
+    "total_subdomains": 0,
+    "open_ports": 0,
+    "potential_emails": 18,
+    "attack_vectors": 4,
+    "threat_level": "HIGH",
+    "recommended_action": "Domain monitoring and web app testing"
+  }
+}

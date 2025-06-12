@@ -1,0 +1,24 @@
+{
+  "timestamp": "2025-06-09T09:54:27.457256",
+  "contacts": [
+    {
+      "id": 1,
+      "username": "alx.trading",
+      "email": null,
+      "phone": null,
+      "status": "active",
+      "notes": "Real trading account",
+      "last_updated": "2025-06-09 09:54:14.972209"
+    },
+    {
+      "id": 2,
+      "username": "whatilove1728",
+      "email": null,
+      "phone": null,
+      "status": "active",
+      "notes": "Real contact",
+      "last_updated": "2025-06-09 09:54:14.972221"
+    }
+  ],
+  "dm_summary": []
+}

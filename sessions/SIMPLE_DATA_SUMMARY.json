@@ -1,0 +1,177 @@
+{
+  "personal_info": {
+    "id": 2,
+    "full_name": "Alexander Fleming",
+    "nicknames": "Alex, Alx, DaddyAlx, alexfleming",
+    "bio": "Trader Your Way by Alex Fleming",
+    "interests": "Trads, Cars, Clubs, Party",
+    "location": "Bangkok",
+    "created_at": "2025-06-09 10:06:54.542167"
+  },
+  "contact_info": [
+    {
+      "id": 1,
+      "name": "Alexander Fleming",
+      "email": "alex.fleming.trading@gmail.com",
+      "phone": "+1-555-0199",
+      "instagram": "alx_trading",
+      "notes": null,
+      "verified": 1,
+      "created_at": "2025-06-09 10:24:06"
+    },
+    {
+      "id": 2,
+      "name": "Trading Contact 1",
+      "email": "trading.contact@example.com",
+      "phone": "+1-555-0123",
+      "instagram": "trader_user",
+      "notes": null,
+      "verified": 1,
+      "created_at": "2025-06-09 10:24:06"
+    },
+    {
+      "id": 3,
+      "name": "Alexander Fleming",
+      "email": "alex.fleming.trading@gmail.com",
+      "phone": "+1-555-0199",
+      "instagram": "alx_trading",
+      "notes": null,
+      "verified": 1,
+      "created_at": "2025-06-09 10:24:48"
+    },
+    {
+      "type": "email",
+      "value": "alexanderfleming@gmail.com",
+      "purpose": "Personal"
+    },
+    {
+      "type": "email",
+      "value": "alx.trading@gmail.com",
+      "purpose": "Trading"
+    },
+    {
+      "type": "email",
+      "value": "alx.trading@protonmail.com",
+      "purpose": "Secure"
+    },
+    {
+      "type": "email",
+      "value": "whatilove1728@protonmail.com",
+      "purpose": "Secret"
+    },
+    {
+      "type": "email",
+      "value": "alexanderfleming@gmail.com",
+      "purpose": "Personal"
+    },
+    {
+      "type": "email",
+      "value": "alx.trading@gmail.com",
+      "purpose": "Trading"
+    },
+    {
+      "type": "email",
+      "value": "alx.trading@protonmail.com",
+      "purpose": "Secure"
+    },
+    {
+      "type": "email",
+      "value": "whatilove1728@protonmail.com",
+      "purpose": "Secret"
+    },
+    {
+      "type": "phone",
+      "value": "0615414210",
+      "country": "Thailand"
+    },
+    {
+      "type": "phone",
+      "value": "+447793127209",
+      "country": "UK"
+    },
+    {
+      "type": "phone",
+      "value": "0615414210",
+      "country": "Thailand"
+    },
+    {
+      "type": "phone",
+      "value": "+447793127209",
+      "country": "UK"
+    }
+  ],
+  "dm_messages": [],
+  "social_accounts": [
+    {
+      "id": 1,
+      "profile_id": 1,
+      "platform": "Instagram",
+      "username": "alx.trading",
+      "url": ""
+    },
+    {
+      "id": 2,
+      "profile_id": 1,
+      "platform": "Instagram",
+      "username": "whatilove1728",
+      "url": ""
+    },
+    {
+      "id": 3,
+      "profile_id": 1,
+      "platform": "Facebook",
+      "username": "AlxFleming",
+      "url": "https://m.facebook.com/AlxFleming"
+    },
+    {
+      "id": 4,
+      "profile_id": 1,
+      "platform": "Telegram",
+      "username": "Alx_TYW",
+      "url": ""
+    },
+    {
+      "id": 5,
+      "profile_id": 1,
+      "platform": "Website",
+      "username": "tradeyourway.co.uk",
+      "url": "https://tradeyourway.co.uk/"
+    },
+    {
+      "id": 6,
+      "profile_id": 2,
+      "platform": "Instagram",
+      "username": "alx.trading",
+      "url": ""
+    },
+    {
+      "id": 7,
+      "profile_id": 2,
+      "platform": "Instagram",
+      "username": "whatilove1728",
+      "url": ""
+    },
+    {
+      "id": 8,
+      "profile_id": 2,
+      "platform": "Facebook",
+      "username": "AlxFleming",
+      "url": "https://m.facebook.com/AlxFleming"
+    },
+    {
+      "id": 9,
+      "profile_id": 2,
+      "platform": "Telegram",
+      "username": "Alx_TYW",
+      "url": ""
+    },
+    {
+      "id": 10,
+      "profile_id": 2,
+      "platform": "Website",
+      "username": "tradeyourway.co.uk",
+      "url": "https://tradeyourway.co.uk/"
+    }
+  ],
+  "total_files_processed": 3
+}

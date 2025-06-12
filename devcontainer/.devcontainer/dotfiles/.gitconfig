@@ -1,0 +1,117 @@
+[user]
+    name = chin4d0ll
+    email = beamr.1232@gmail.com
+
+[commit]
+    gpgsign = false
+
+[tag]
+    gpgsign = false
+
+[gpg]
+    # Explicitly disable GPG program to override Codespaces defaults
+    program = 
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = code --wait
+    autocrlf = input
+    filemode = false
+    pager = less -R
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
+    autoSetupRemote = true
+
+[merge]
+    tool = vscode
+
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+
+[diff]
+    tool = vscode
+
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+
+[color]
+    ui = auto
+    branch = auto
+    diff = auto
+    status = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[alias]
+    # Basic aliases
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    df = diff
+    dc = diff --cached
+    
+    # Log aliases
+    lg = log --oneline --decorate --graph
+    lga = log --oneline --decorate --graph --all
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    
+    # Stash aliases
+    sl = stash list
+    sa = stash apply
+    ss = stash save
+    
+    # Remote aliases
+    rao = remote add origin
+    rso = remote show origin
+    rpo = remote prune origin
+    
+    # Reset aliases
+    unstage = reset HEAD --
+    uncommit = reset --soft HEAD~1
+    
+    # Other useful aliases
+    amend = commit --amend
+    cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 git branch -d"
+    ignored = ls-files --others --ignored --exclude-standard
+    untracked = ls-files --others --exclude-standard
+
+[credential]
+    helper = store
+    helper = cache --timeout=3600
+
+[help]
+    autocorrect = 1
+
+[rerere]
+    enabled = true
+
+[branch]
+    autosetupmerge = always
+    autosetuprebase = always
+
+[fetch]
+    prune = true
+
+[rebase]
+    autoStash = true

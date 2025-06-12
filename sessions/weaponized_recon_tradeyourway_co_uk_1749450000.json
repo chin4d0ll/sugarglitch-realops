@@ -1,0 +1,25 @@
+{
+  "target": "tradeyourway.co.uk",
+  "timestamp": 1749450000,
+  "scan_date": "2025-06-09T06:21:13.999415",
+  "results": {
+    "subdomains": [
+      "www.tradeyourway.co.uk",
+      "*.tradeyourway.co.uk",
+      "tradeyourway.co.uk"
+    ],
+    "open_ports": [
+      80,
+      443
+    ],
+    "technology": {},
+    "vulnerabilities": [
+      "SSL Certificate Issues",
+      "Missing Security Headers: Clickjacking Protection, XSS Protection, MIME Sniffing Protection, HSTS, CSP"
+    ],
+    "attack_vectors": [
+      "Port 80: HTTP - Web application attacks",
+      "Port 443: HTTPS - Web application attacks, SSL/TLS"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "test_time": "2025-06-09T18:50:00",
+  "instagram_endpoints_analysis": {
+    "https://www.instagram.com/api/v1/direct_v2/inbox/": {
+      "status": 404,
+      "working": false,
+      "note": "Endpoint ถูกเปลี่ยนหรือปิดใช้งานแล้ว"
+    },
+    "https://www.instagram.com/api/graphql/": {
+      "status": 200,
+      "working": true,
+      "note": "GraphQL endpoint หลักของ Instagram - ใช้งานได้"
+    },
+    "https://i.instagram.com/api/v1/direct_v2/inbox/": {
+      "status": 404,
+      "working": false,
+      "note": "Subdomain i.instagram.com ไม่มี endpoint นี้"
+    }
+  },
+  "recommended_endpoints": [
+    {
+      "url": "https://www.instagram.com/api/graphql/",
+      "purpose": "GraphQL queries สำหรับ DM และข้อมูลผู้ใช้",
+      "method": "POST",
+      "requires": "query_hash และ variables"
+    },
+    {
+      "url": "https://www.instagram.com/direct/inbox/",
+      "purpose": "หน้า DM ที่ส่งคืน HTML + JavaScript",
+      "method": "GET",
+      "note": "ใช้ได้แต่ต้อง parse HTML"
+    }
+  ],
+  "current_status": {
+    "direct_v2_api": "DEPRECATED - ไม่ใช้งานได้แล้ว",
+    "graphql_api": "ACTIVE - ใช้งานได้",
+    "web_interface": "ACTIVE - ใช้งานได้"
+  },
+  "next_steps": [
+    "1. ใช้ GraphQL endpoint แทน direct_v2",
+    "2. หา query_hash ที่ถูกต้องสำหรับ DM queries",
+    "3. ปรับ headers ให้เหมือนกับ browser จริง",
+    "4. ใช้ session cookies ที่ valid"
+  ]
+}

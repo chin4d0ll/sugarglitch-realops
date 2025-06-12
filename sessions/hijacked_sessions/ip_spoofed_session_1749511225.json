@@ -1,0 +1,19 @@
+{
+  "hijacked_from": "/workspaces/sugarglitch-realops/sessions/session-alx.trading",
+  "hijack_timestamp": "2025-06-09T23:20:25.425774",
+  "technique": "ip_spoofing",
+  "spoofed_ip": "192.168.1.100",
+  "cookies": {
+    "sessionid": "82d00883%3A1748264421%3A6f473b1c8d0b8d51"
+  },
+  "successful_headers": {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "X-Forwarded-For": "192.168.1.100",
+    "X-Real-IP": "192.168.1.100",
+    "X-Originating-IP": "192.168.1.100",
+    "X-Remote-IP": "192.168.1.100",
+    "X-Client-IP": "192.168.1.100",
+    "Cookie": "sessionid=82d00883%3A1748264421%3A6f473b1c8d0b8d51",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+  }
+}

@@ -1,0 +1,14 @@
+🚀 No-Dependency Instagram DM Extractor
+============================================================
+⏰ Started at: 2025-06-09 10:39:23.386032
+✅ Session loaded: 4976283726%3AFlem654...
+🎯 Target: alx.trading
+📱 Platform: iPad
+
+🔍 Testing session validity...
+📄 Testing basic Instagram access...
+❌ Failed to load Instagram: HTTP 302: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+Found
+❌ Session is invalid or expired
+🔧 Need to get a fresh session with proper privileges

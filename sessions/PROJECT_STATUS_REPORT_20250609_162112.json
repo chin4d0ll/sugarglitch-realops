@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-06-09T16:21:12.782085",
+  "python_version": "3.12.10 (main, May 21 2025, 20:03:03) [GCC 14.2.0]",
+  "working_directory": "/workspaces/sugarglitch-realops",
+  "module_tests": {
+    "requests": {
+      "status": "MISSING",
+      "error": "No module named 'requests'",
+      "description": "HTTP requests library"
+    },
+    "aiohttp": {
+      "status": "MISSING",
+      "error": "No module named 'aiohttp'",
+      "description": "Async HTTP library"
+    },
+    "beautifulsoup4": {
+      "status": "MISSING",
+      "error": "No module named 'bs4'",
+      "description": "Web scraping (import as bs4)"
+    },
+    "pandas": {
+      "status": "MISSING",
+      "error": "No module named 'pandas'",
+      "description": "Data processing"
+    },
+    "numpy": {
+      "status": "MISSING",
+      "error": "No module named 'numpy'",
+      "description": "Numerical computing"
+    },
+    "websockets": {
+      "status": "MISSING",
+      "error": "No module named 'websockets'",
+      "description": "WebSocket support"
+    },
+    "cryptography": {
+      "status": "MISSING",
+      "error": "No module named 'cryptography'",
+      "description": "Cryptographic functions"
+    },
+    "json": {
+      "status": "SUCCESS",
+      "version": "2.0.9",
+      "description": "JSON handling (built-in)",
+      "import_name": "json"
+    },
+    "sqlite3": {
+      "status": "SUCCESS",
+      "version": "Built-in",
+      "description": "SQLite database (built-in)",
+      "import_name": "sqlite3"
+    },
+    "asyncio": {
+      "status": "SUCCESS",
+      "version": "Built-in",
+      "description": "Async programming (built-in)",
+      "import_name": "asyncio"
+    },
+    "pathlib": {
+      "status": "SUCCESS",
+      "version": "Built-in",
+      "description": "Path handling (built-in)",
+      "import_name": "pathlib"
+    },
+    "logging": {
+      "status": "SUCCESS",
+      "version": "0.5.1.2",
+      "description": "Logging (built-in)",
+      "import_name": "logging"
+    }
+  },
+  "script_tests": {
+    "comprehensive_module_checker.py": {
+      "status": "SYNTAX_OK",
+      "size": 20396
+    },
+    "comprehensive_module_tester.py": {
+      "status": "SYNTAX_OK",
+      "size": 10563
+    },
+    "fix_vscode_extensions.py": {
+      "status": "SYNTAX_OK",
+      "size": 9179
+    },
+    "browser_login_extractor.py": {
+      "status": "SYNTAX_OK",
+      "size": 2112
+    },
+    "session_validator.py": {
+      "status": "SYNTAX_OK",
+      "size": 10238
+    }
+  },
+  "environment_info": {
+    "python_executable": "/usr/bin/python3",
+    "virtual_env_active": false,
+    "python_path": [
+      "/workspaces/sugarglitch-realops",
+      "/usr/lib/python312.zip",
+      "/usr/lib/python3.12",
+      "/usr/lib/python3.12/lib-dynload",
+      "/usr/lib/python3.12/site-packages"
+    ],
+    "working_directory": "/workspaces/sugarglitch-realops",
+    "python_files_count": 213
+  },
+  "critical_issues": [
+    "Missing module: requests",
+    "Missing module: aiohttp",
+    "Missing module: beautifulsoup4",
+    "Missing module: pandas",
+    "Missing module: numpy",
+    "Missing module: websockets",
+    "Missing module: cryptography"
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Install missing modules: pip install requests aiohttp beautifulsoup4 pandas numpy websockets cryptography",
+      "modules": [
+        "requests",
+        "aiohttp",
+        "beautifulsoup4",
+        "pandas",
+        "numpy",
+        "websockets",
+        "cryptography"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Activate virtual environment for better package isolation"
+    }
+  ]
+}

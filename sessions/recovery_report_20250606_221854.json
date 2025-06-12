@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-06-06T22:18:53.808067",
+  "recovered_files": [],
+  "existing_files": [
+    "instagram_redirect_fix.py",
+    "optimized_alx_extractor.py",
+    "session_finder.py",
+    "extractors/simple_alx_extractor.py",
+    "extractors/real_alx_dm_extractor.py",
+    "src/instagram_tools/instagram_data_analyzer.py"
+  ],
+  "missing_files": [],
+  "empty_files": [],
+  "git_status": "has_changes",
+  "total_python_files": 575,
+  "all_empty_files": [
+    "src/elite_dm_penetration_suite_2025.py",
+    "src/test_db.py",
+    "src/master_improver_v2.py",
+    "src/instagrapi_extractor.py",
+    "src/targeted/alx_trading_dm_extractor.py",
+    "src/instagram_tools/html_to_pdf_converter.py",
+    "src/instagram_tools/dm_extractor.py",
+    "src/instagram_tools/json_to_html_converter.py",
+    "tools/bright_data_proxy_integration.py"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "timestamp": "2025-06-09 16:31:33",
+  "system_info": {
+    "os": "Alpine Linux",
+    "architecture": "Unknown",
+    "issue": "MS SQL Server extension compatibility with Alpine Linux"
+  },
+  "fix_attempts": [
+    "Installed glibc compatibility layer (gcompat)",
+    "Created wrapper script for SqlToolsResourceProviderService",
+    "Tested service execution with various methods"
+  ],
+  "recommendations": [
+    "Consider using alternative database extensions (PostgreSQL, MySQL, SQLite)",
+    "Use Docker containers for SQL Server development",
+    "Use Azure Data Studio as a standalone client",
+    "Switch to Ubuntu-based development container if SQL Server is critical"
+  ],
+  "log_file": "/tmp/mssql_fix.log"
+}

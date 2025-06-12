@@ -1,0 +1,7377 @@
+{
+  "analysis_timestamp": "2025-06-09T13:07:01.553976",
+  "project_root": "/workspaces/sugarglitch-realops",
+  "total_files": 0,
+  "issues_found": [
+    {
+      "type": "fake_data_detected",
+      "file": "DIRECT_TEST_RESULT_1749463996.json",
+      "key": "test_type",
+      "value": "direct_system_test"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473922.json",
+      "key": "cleanup_type",
+      "value": "comprehensive_fake_data_removal"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473922.json",
+      "key": "backup_location",
+      "value": "removed_fake_data/"
+    },
+    {
+      "type": "empty_json",
+      "file": "REAL_DMS_EXTRACTED_1749469925.json",
+      "description": "Empty JSON file"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": ".devcontainer/devcontainer.json",
+      "key": "name",
+      "value": "Sugarglitch RealOps - Penetration Testing Environment"
+    },
+    {
+      "type": "invalid_json",
+      "file": ".vscode/tasks.json",
+      "error": "Expecting ',' delimiter: line 12 column 1 (char 209)",
+      "line": 12,
+      "column": 1
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202528.json",
+      "key": "session_type",
+      "value": "working_test_session"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202528.json",
+      "key": "validation_status",
+      "value": "created_for_testing"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202529.json",
+      "key": "session_type",
+      "value": "working_test_session"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202529.json",
+      "key": "validation_status",
+      "value": "created_for_testing"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202527.json",
+      "key": "session_type",
+      "value": "working_test_session"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202527.json",
+      "key": "validation_status",
+      "value": "created_for_testing"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202525.json",
+      "key": "session_type",
+      "value": "working_test_session"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202525.json",
+      "key": "validation_status",
+      "value": "created_for_testing"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202526.json",
+      "key": "session_type",
+      "value": "working_test_session"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "fresh_sessions/working_session_1749202526.json",
+      "key": "validation_status",
+      "value": "created_for_testing"
+    },
+    {
+      "type": "empty_json",
+      "file": "data/ultimate_dm_extraction_whatilove1728_20250602_152137.json",
+      "description": "Empty JSON file"
+    },
+    {
+      "type": "invalid_json",
+      "file": "src/config.json",
+      "error": "Extra data: line 8 column 1 (char 217)",
+      "line": 8,
+      "column": 1
+    },
+    {
+      "type": "empty_json",
+      "file": "src/package.json",
+      "description": "Empty JSON file"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "results/simple_extraction_test_1749463952.json",
+      "key": "extraction_method",
+      "value": "simple_test"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "results/simple_extraction_test_1749463952.json",
+      "key": "next_step",
+      "value": "network_test_required"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/mock_dm_extraction_1749230324.json",
+      "key": "conversation_id",
+      "value": "mock_conversation_001"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749471587.json",
+      "key": "cleanup_type",
+      "value": "comprehensive_fake_data_removal"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749471587.json",
+      "key": "backup_location",
+      "value": "removed_fake_data/"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473792.json",
+      "key": "cleanup_type",
+      "value": "comprehensive_fake_data_removal"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473792.json",
+      "key": "backup_location",
+      "value": "removed_fake_data/"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/fixed_alx_method_1_20250606_001628.json",
+      "key": "extraction_method",
+      "value": "sample_structure_test"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/fixed_alx_method_1_20250607_013939.json",
+      "key": "extraction_method",
+      "value": "sample_structure_test"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/fixed_alx_method_1_20250606_001416.json",
+      "key": "extraction_method",
+      "value": "sample_structure_test"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473759.json",
+      "key": "cleanup_type",
+      "value": "comprehensive_fake_data_removal"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473759.json",
+      "key": "backup_location",
+      "value": "removed_fake_data/"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/demo_extraction_1749192591.json",
+      "key": "extraction_method",
+      "value": "demo_automatic"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/demo_extraction_1749192591.json",
+      "key": "status",
+      "value": "demo_mode"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/demo_extraction_1749192591.json",
+      "key": "note",
+      "value": "Real session could not be acquired - this is demo data"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/demo_extraction_1749192621.json",
+      "key": "extraction_method",
+      "value": "demo_automatic"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/demo_extraction_1749192621.json",
+      "key": "status",
+      "value": "demo_mode"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/demo_extraction_1749192621.json",
+      "key": "note",
+      "value": "Real session could not be acquired - this is demo data"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/demo_extraction_20250606_174804.json",
+      "key": "status",
+      "value": "demo_mode"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/mock_dm_extraction_1749203301.json",
+      "key": "conversation_id",
+      "value": "mock_conversation_001"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473809.json",
+      "key": "cleanup_type",
+      "value": "comprehensive_fake_data_removal"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473809.json",
+      "key": "backup_location",
+      "value": "removed_fake_data/"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/fixed_alx_method_1_20250606_001559.json",
+      "key": "extraction_method",
+      "value": "sample_structure_test"
+    },
+    {
+      "type": "fake_data_detected",
+      "file": "removed_fake_data/mock_dm_extraction_1749203779.json",
+      "key": "conversation_id",
+      "value": "mock_conversation_001"
+    },
+    {
+      "type": "invalid_json",
+      "file": "data/hardcore_extractions/HARDCORE_EXTRACTION_REPORT_20250606_095759.json",
+      "error": "Expecting value: line 16 column 19 (char 413)",
+      "line": 16,
+      "column": 19
+    },
+    {
+      "type": "invalid_json",
+      "file": "data/hardcore_extractions/HARDCORE_EXTRACTION_REPORT_20250606_083302.json",
+      "error": "Expecting value: line 16 column 19 (char 412)",
+      "line": 16,
+      "column": 19
+    },
+    {
+      "type": "invalid_json",
+      "file": "data/hardcore_extractions/HARDCORE_EXTRACTION_REPORT_20250606_093817.json",
+      "error": "Expecting value: line 16 column 19 (char 413)",
+      "line": 16,
+      "column": 19
+    },
+    {
+      "type": "invalid_json",
+      "file": "src/alx.trading/enhanced_extraction_1748949902.json",
+      "error": "Expecting value: line 27 column 22 (char 754)",
+      "line": 27,
+      "column": 22
+    },
+    {
+      "type": "python_syntax_error",
+      "file": "hardcore_demo.py",
+      "error": "closing parenthesis ')' does not match opening parenthesis '[' on line 166 (hardcore_demo.py, line 169)",
+      "line": 169,
+      "column": 44
+    },
+    {
+      "type": "python_syntax_error",
+      "file": "hacking-menu.py",
+      "error": "invalid character '🚀' (U+1F680) (hacking-menu.py, line 2)",
+      "line": 2,
+      "column": 1
+    },
+    {
+      "type": "security_warning",
+      "file": "dm_content_analyzer.py",
+      "description": "Potential hardcoded credentials: [\"token=',\\n            '\"]"
+    },
+    {
+      "type": "python_syntax_error",
+      "file": "ultimate_demo_showcase.py",
+      "error": "closing parenthesis ')' does not match opening parenthesis '[' on line 135 (ultimate_demo_showcase.py, line 137)",
+      "line": 137,
+      "column": 44
+    },
+    {
+      "type": "security_warning",
+      "file": "brightdata_test.py",
+      "description": "Potential hardcoded credentials: ['PASSWORD = \"<your_password>\"']"
+    },
+    {
+      "type": "security_warning",
+      "file": "session_finder.py",
+      "description": "Potential hardcoded credentials: ['token=\\' in content:\\n                return True\\n\\n        except Exception as e:\\n            pass\\n\\n        return False\\n\\n    def validate_all_sessions(self):\\n        \"']"
+    },
+    {
+      "type": "python_syntax_error",
+      "file": "advanced_penetration_demo.py",
+      "error": "closing parenthesis ')' does not match opening parenthesis '[' on line 109 (advanced_penetration_demo.py, line 113)",
+      "line": 113,
+      "column": 38
+    },
+    {
+      "type": "security_warning",
+      "file": "ultra_simple_500_test.py",
+      "description": "SSL verification disabled"
+    },
+    {
+      "type": "security_warning",
+      "file": "brightdata_playwright_login_dm.py",
+      "description": "Potential hardcoded credentials: ['PASSWORD = \"<Fleming654>\"']"
+    },
+    {
+      "type": "security_warning",
+      "file": "cute_rate_dm_extractor.py",
+      "description": "SSL verification disabled"
+    },
+    {
+      "type": "security_warning",
+      "file": "complete_project_analysis.py",
+      "description": "SSL verification disabled"
+    },
+    {
+      "type": "security_warning",
+      "file": "real_dm_browser_extractor.py",
+      "description": "Potential hardcoded credentials: ['password = \"your_password\"']"
+    },
+    {
+      "type": "python_syntax_error",
+      "file": "ctf_hacking_masterclass_2025_fixed.py",
+      "error": "unexpected indent (ctf_hacking_masterclass_2025_fixed.py, line 473)",
+      "line": 473,
+      "column": 4
+    },
+    {
+      "type": "security_warning",
+      "file": "instagram_500_complete_fix.py",
+      "description": "SSL verification disabled"
+    },
+    {
+      "type": "security_warning",
+      "file": "quick-weaponized-recon.py",
+      "description": "SSL verification disabled"
+    },
+    {
+      "type": "security_warning",
+      "file": "src/practical_hacking_tools_collection.py",
+      "description": "Potential hardcoded credentials: ['password = \"hello\"']"
+    },
+    {
+      "type": "python_syntax_error",
+      "file": "src/no_mockup_real_operations.py",
+      "error": "unmatched '}' (no_mockup_real_operations.py, line 750)",
+      "line": 750,
+      "column": 17
+    },
+    {
+      "type": "python_syntax_error",
+      "file": "src/ctf_hacking_masterclass_2025.py",
+      "error": "unexpected indent (ctf_hacking_masterclass_2025.py, line 473)",
+      "line": 473,
+      "column": 8
+    },
+    {
+      "type": "security_warning",
+      "file": "scripts/session_validator.py",
+      "description": "Potential hardcoded credentials: [\"token='):\\n                    cleaned_value = cleaned_value[10:]\\n\\n                sanitized[key] = cleaned_value\\n            else:\\n                sanitized[key] = value\\n\\n        # Add metadata\\n        sanitized['\"]"
+    },
+    {
+      "type": "security_warning",
+      "file": "tools/enhanced_session_hijacker.py",
+      "description": "Potential hardcoded credentials: ['token = \"missing\"', 'token=\\')\\n\\n            if sessionid:\\n                print(f\"']"
+    },
+    {
+      "type": "python_syntax_error",
+      "file": "tools/comprehensive_system_test.py",
+      "error": "expected 'except' or 'finally' block (comprehensive_system_test.py, line 74)",
+      "line": 74,
+      "column": 4
+    },
+    {
+      "type": "security_warning",
+      "file": "tools/manual_session_input.py",
+      "description": "Potential hardcoded credentials: ['token = \"missing\"']"
+    },
+    {
+      "type": "security_warning",
+      "file": "tools/quick_session_creator.py",
+      "description": "Potential hardcoded credentials: ['token=\\')\\n\\n        if sessionid:\\n            print(f\"']"
+    },
+    {
+      "type": "security_warning",
+      "file": "tools/ip_rotation_handler.py",
+      "description": "SSL verification disabled"
+    },
+    {
+      "type": "security_warning",
+      "file": "tools/simple_session_generator.py",
+      "description": "Potential hardcoded credentials: ['token = \"missing\"']"
+    },
+    {
+      "type": "security_warning",
+      "file": "tools/fresh_session_generator_2025.py",
+      "description": "Potential hardcoded credentials: ['password = \"Alx54321\"']"
+    },
+    {
+      "type": "security_warning",
+      "file": "src/advanced_tools/advanced_database_penetration_testing_suite_2025.py",
+      "description": "Potential hardcoded credentials: [\"password='hacked'\"]"
+    },
+    {
+      "type": "security_warning",
+      "file": "src/advanced_tools/advanced_stealth_techniques_guide.py",
+      "description": "SSL verification disabled"
+    },
+    {
+      "type": "security_warning",
+      "file": "src/advanced_tools/advanced_hacking_arsenal_2025.py",
+      "description": "SSL verification disabled"
+    },
+    {
+      "type": "security_warning",
+      "file": "src/advanced_tools/advanced_hacking_techniques_guide.py",
+      "description": "Potential hardcoded credentials: [\"password='pass1'\", \"password='pass2'\"]"
+    },
+    {
+      "type": "environment_error",
+      "description": "Python version check failed: [Errno 2] No such file or directory: '/workspaces/sugarglitch-realops/.venv/bin/python'"
+    },
+    {
+      "type": "missing_venv",
+      "description": "Virtual environment not found"
+    }
+  ],
+  "fixes_applied": [
+    {
+      "type": "fixed_empty_json",
+      "file": "REAL_DMS_EXTRACTED_1749469925.json",
+      "action": "Created empty JSON object"
+    },
+    {
+      "type": "fixed_empty_json",
+      "file": "data/ultimate_dm_extraction_whatilove1728_20250602_152137.json",
+      "action": "Created empty JSON object"
+    },
+    {
+      "type": "fixed_empty_json",
+      "file": "src/package.json",
+      "action": "Created empty JSON object"
+    }
+  ],
+  "performance_metrics": {
+    "total_files": 1228,
+    "total_size_mb": 120.11,
+    "file_types": {
+      ".py": 520,
+      ".sh": 33,
+      ".md": 108,
+      ".txt": 46,
+      ".trading": 3,
+      ".gz": 2,
+      ".json": 310,
+      ".yml": 3,
+      ".example": 1,
+      "": 125,
+      ".png": 8,
+      ".template": 1,
+      ".zip": 1,
+      ".html": 30,
+      ".code-snippets": 1,
+      ".nix": 1,
+      ".db": 3,
+      ".csv": 3,
+      ".js": 3,
+      ".sqlproj": 1,
+      ".sql": 1,
+      ".pem": 3,
+      ".cer": 1,
+      ".p12": 2,
+      ".sample": 14,
+      ".rev": 1,
+      ".pack": 1,
+      ".idx": 1,
+      ".code-workspace": 1
+    },
+    "analysis_time_seconds": 0.03
+  },
+  "environment_status": {
+    "requirements": [
+      "requests",
+      "aiohttp",
+      "pandas",
+      "sqlalchemy",
+      "playwright",
+      "scapy>=2.4.5",
+      "impacket>=0.10.0",
+      "pwntools>=4.8.0",
+      "binwalk>=2.3.3",
+      "volatility3>=2.4.1",
+      "yara-python>=4.2.3",
+      "capstone>=4.0.2",
+      "unicorn>=2.0.1",
+      "keystone-engine>=0.9.2",
+      "ropper>=1.13.8",
+      "pycryptodome>=3.17.0",
+      "cryptography>=41.0.0",
+      "paramiko>=3.1.0",
+      "fabric>=3.0.0",
+      "shodan>=1.28.0",
+      "censys>=2.1.9",
+      "python-nmap>=0.7.1",
+      "python-libnmap>=0.7.3",
+      "requests-oauthlib>=1.3.1",
+      "selenium-wire>=5.1.0",
+      "mitmproxy>=9.0.1",
+      "beautifulsoup4>=4.12.0",
+      "lxml>=4.9.2",
+      "scrapy>=2.8.0",
+      "dnspython>=2.3.0",
+      "netaddr>=0.8.0",
+      "ipwhois>=1.2.0",
+      "python-whois>=0.8.0",
+      "builtwith>=1.3.4",
+      "python-shodan>=1.28.0",
+      "censys-python>=2.1.9",
+      "waybackpy>=3.0.6",
+      "sublist3r>=1.1",
+      "sherlock-project>=0.14.3",
+      "phonenumbers>=8.13.7",
+      "googlesearch-python>=1.2.3",
+      "instagram-private-api>=1.6.0",
+      "tweepy>=4.14.0",
+      "facebook-sdk>=3.1.0",
+      "discord.py>=2.2.2",
+      "telethon>=1.28.5",
+      "pyrogram>=2.0.106"
+    ],
+    "requirements_count": 47
+  },
+  "file_analysis": {
+    "pentest_readiness_1749463891.json": {
+      "status": "valid",
+      "size": 5002,
+      "keys": [
+        "timestamp",
+        "status",
+        "score",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "pentest_report_tradeyourway_co_uk_1749450685.json": {
+      "status": "valid",
+      "size": 4005,
+      "keys": [
+        "target",
+        "timestamp",
+        "scan_date",
+        "findings",
+        "vulnerabilities",
+        "risk_score"
+      ],
+      "type": "dict"
+    },
+    "recovery_report_20250606_221854.json": {
+      "status": "valid",
+      "size": 838,
+      "keys": [
+        "timestamp",
+        "recovered_files",
+        "existing_files",
+        "missing_files",
+        "empty_files",
+        "git_status",
+        "total_python_files",
+        "all_empty_files"
+      ],
+      "type": "dict"
+    },
+    "cute_rate_limit_test_1749237813.json": {
+      "status": "valid",
+      "size": 2029,
+      "keys": [
+        "test_info",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "corrected_username.json": {
+      "status": "valid",
+      "size": 146,
+      "keys": [
+        "correct_username",
+        "original_invalid",
+        "status",
+        "url"
+      ],
+      "type": "dict"
+    },
+    "SAMPLE_CLEANUP_SUMMARY_1749470988.json": {
+      "status": "valid",
+      "size": 2997,
+      "keys": [
+        "cleaning_date",
+        "files_processed",
+        "total_original_messages",
+        "total_cleaned_messages",
+        "sample_messages_removed",
+        "cleaned_files"
+      ],
+      "type": "dict"
+    },
+    "performance_comparison_1749466153.json": {
+      "status": "valid",
+      "size": 1339,
+      "keys": [
+        "comparison_summary",
+        "detailed_results",
+        "environment_info"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_COMPREHENSIVE_SUMMARY_1749460428.json": {
+      "status": "valid",
+      "size": 1625,
+      "keys": [
+        "analysis_timestamp",
+        "real_contact_data",
+        "real_dm_content"
+      ],
+      "type": "dict"
+    },
+    "alx_trading_session_fleming654.json": {
+      "status": "valid",
+      "size": 171,
+      "keys": [
+        "sessionid",
+        "target",
+        "type",
+        "created",
+        "platform"
+      ],
+      "type": "dict"
+    },
+    "comprehensive_session_analysis.json": {
+      "status": "valid",
+      "size": 168496,
+      "keys": [
+        "analysis_timestamp",
+        "session_data",
+        "user_identifiers",
+        "csrf_tokens",
+        "api_keys",
+        "database_schemas",
+        "extracted_cookies",
+        "deferred_cookies",
+        "instagram_config",
+        "api_endpoints",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "DIRECT_TEST_RESULT_1749463996.json": {
+      "status": "valid",
+      "size": 650,
+      "keys": [
+        "test_type",
+        "timestamp",
+        "test_time",
+        "session_status",
+        "tools_status",
+        "system_readiness",
+        "next_actions"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_COMPREHENSIVE_SUMMARY_1749460406.json": {
+      "status": "valid",
+      "size": 5369,
+      "keys": [
+        "analysis_timestamp",
+        "real_contact_data",
+        "real_dm_content",
+        "session_data",
+        "proxy_credentials",
+        "extraction_files_with_real_data",
+        "business_intelligence",
+        "security_findings",
+        "file_analysis_summary"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_ONLY_1749468829.json": {
+      "status": "valid",
+      "size": 5166,
+      "keys": [
+        "extraction_time",
+        "data_type",
+        "profiles",
+        "contacts",
+        "emails",
+        "phones",
+        "passwords",
+        "social_media",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "performance_optimization_report.json": {
+      "status": "valid",
+      "size": 322,
+      "keys": [
+        "optimization_time",
+        "actions_performed",
+        "disk_usage",
+        "system_status"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_ONLY_1749468436.json": {
+      "status": "valid",
+      "size": 5166,
+      "keys": [
+        "extraction_time",
+        "data_type",
+        "profiles",
+        "contacts",
+        "emails",
+        "phones",
+        "passwords",
+        "social_media",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "weaponized_intel_python3 weaponized-recon-suite.py_1749448459.json": {
+      "status": "valid",
+      "size": 3341,
+      "keys": [
+        "target",
+        "timestamp",
+        "intelligence",
+        "attack_vectors",
+        "weaponized_data",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "cute_rate_limit_test_1749235834.json": {
+      "status": "valid",
+      "size": 2029,
+      "keys": [
+        "test_info",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "cute_rate_limit_test_1749237473.json": {
+      "status": "valid",
+      "size": 2029,
+      "keys": [
+        "test_info",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "realops_export_1749462867.json": {
+      "status": "valid",
+      "size": 519,
+      "keys": [
+        "timestamp",
+        "contacts",
+        "dm_summary"
+      ],
+      "type": "dict"
+    },
+    "recovery_report_20250606_222015.json": {
+      "status": "valid",
+      "size": 458,
+      "keys": [
+        "timestamp",
+        "recovered_files",
+        "existing_files",
+        "missing_files",
+        "empty_files",
+        "git_status",
+        "total_python_files",
+        "all_empty_files"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_ONLY_1749468420.json": {
+      "status": "valid",
+      "size": 5166,
+      "keys": [
+        "extraction_time",
+        "data_type",
+        "profiles",
+        "contacts",
+        "emails",
+        "phones",
+        "passwords",
+        "social_media",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "cute_rate_limit_test_1749237841.json": {
+      "status": "valid",
+      "size": 2029,
+      "keys": [
+        "test_info",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "FAKE_DATA_CLEANUP_SUMMARY_1749471398.json": {
+      "status": "valid",
+      "size": 3601,
+      "keys": [
+        "cleaning_date",
+        "files_processed",
+        "total_original_messages",
+        "total_cleaned_messages",
+        "fake_messages_removed",
+        "removed_types",
+        "cleaned_files"
+      ],
+      "type": "dict"
+    },
+    "performance_comparison_1749466177.json": {
+      "status": "valid",
+      "size": 1338,
+      "keys": [
+        "comparison_summary",
+        "detailed_results",
+        "environment_info"
+      ],
+      "type": "dict"
+    },
+    "COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473922.json": {
+      "status": "valid",
+      "size": 4873,
+      "keys": [
+        "cleanup_date",
+        "cleanup_type",
+        "files_completely_removed",
+        "files_with_messages_cleaned",
+        "errors",
+        "removed_files",
+        "cleaned_files",
+        "errors_encountered",
+        "backup_location"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_ONLY_1749468447.json": {
+      "status": "valid",
+      "size": 5166,
+      "keys": [
+        "extraction_time",
+        "data_type",
+        "profiles",
+        "contacts",
+        "emails",
+        "phones",
+        "passwords",
+        "social_media",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "pentest_readiness_1749463873.json": {
+      "status": "valid",
+      "size": 5002,
+      "keys": [
+        "timestamp",
+        "status",
+        "score",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "weaponized_recon_tradeyourway_co_uk_1749450000.json": {
+      "status": "valid",
+      "size": 626,
+      "keys": [
+        "target",
+        "timestamp",
+        "scan_date",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "pentest_readiness_1749464021.json": {
+      "status": "valid",
+      "size": 5002,
+      "keys": [
+        "timestamp",
+        "status",
+        "score",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "comprehensive_dm_scan_results_1749231518.json": {
+      "status": "valid",
+      "size": 950831,
+      "keys": null,
+      "type": "list"
+    },
+    "pentest_readiness_1749464046.json": {
+      "status": "valid",
+      "size": 5002,
+      "keys": [
+        "timestamp",
+        "status",
+        "score",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "session.json": {
+      "status": "valid",
+      "size": 7909,
+      "keys": [
+        "sessionid",
+        "created",
+        "target"
+      ],
+      "type": "dict"
+    },
+    ".devcontainer/devcontainer.json": {
+      "status": "valid",
+      "size": 1696,
+      "keys": [
+        "name",
+        "build",
+        "forwardPorts",
+        "runArgs",
+        "customizations",
+        "containerEnv",
+        "features"
+      ],
+      "type": "dict"
+    },
+    "fresh_start/real_data_analysis.json": {
+      "status": "valid",
+      "size": 158,
+      "keys": [
+        "analysis_time",
+        "real_session_available",
+        "user_id",
+        "real_data_files",
+        "real_data_list"
+      ],
+      "type": "dict"
+    },
+    "fresh_start/extraction_summary.json": {
+      "status": "valid",
+      "size": 131,
+      "keys": [
+        "successful_extractions",
+        "total_conversations",
+        "total_messages",
+        "timestamp"
+      ],
+      "type": "dict"
+    },
+    ".vscode/extensions.json": {
+      "status": "valid",
+      "size": 308,
+      "keys": [
+        "recommendations",
+        "unwantedRecommendations"
+      ],
+      "type": "dict"
+    },
+    ".vscode/launch.json": {
+      "status": "valid",
+      "size": 762,
+      "keys": [
+        "version",
+        "configurations"
+      ],
+      "type": "dict"
+    },
+    ".vscode/settings.json": {
+      "status": "valid",
+      "size": 1524,
+      "keys": [
+        "python.linting.enabled",
+        "python.linting.pylintEnabled",
+        "python.linting.flake8Enabled",
+        "python.linting.mypyEnabled",
+        "python.analysis.typeCheckingMode",
+        "python.analysis.diagnosticMode",
+        "python.analysis.autoImportCompletions",
+        "python.analysis.diagnosticSeverityOverrides",
+        "files.exclude",
+        "search.exclude",
+        "editor.rulers",
+        "editor.wordWrap",
+        "editor.formatOnSave",
+        "editor.codeActionsOnSave",
+        "workbench.problems.defaultViewMode",
+        "problems.visibility",
+        "markdownlint.config",
+        "markdownlint.ignore",
+        "markdown.validate.enabled"
+      ],
+      "type": "dict"
+    },
+    "fresh_sessions/working_session_1749202528.json": {
+      "status": "valid",
+      "size": 1544,
+      "keys": [
+        "session_type",
+        "created_timestamp",
+        "session_id",
+        "csrf_token",
+        "user_id",
+        "username",
+        "target_access",
+        "cookies",
+        "headers",
+        "api_endpoints",
+        "status",
+        "validation_status"
+      ],
+      "type": "dict"
+    },
+    "fresh_sessions/working_session_1749202529.json": {
+      "status": "valid",
+      "size": 1544,
+      "keys": [
+        "session_type",
+        "created_timestamp",
+        "session_id",
+        "csrf_token",
+        "user_id",
+        "username",
+        "target_access",
+        "cookies",
+        "headers",
+        "api_endpoints",
+        "status",
+        "validation_status"
+      ],
+      "type": "dict"
+    },
+    "fresh_sessions/working_session_1749202527.json": {
+      "status": "valid",
+      "size": 1544,
+      "keys": [
+        "session_type",
+        "created_timestamp",
+        "session_id",
+        "csrf_token",
+        "user_id",
+        "username",
+        "target_access",
+        "cookies",
+        "headers",
+        "api_endpoints",
+        "status",
+        "validation_status"
+      ],
+      "type": "dict"
+    },
+    "fresh_sessions/working_session_1749202525.json": {
+      "status": "valid",
+      "size": 1544,
+      "keys": [
+        "session_type",
+        "created_timestamp",
+        "session_id",
+        "csrf_token",
+        "user_id",
+        "username",
+        "target_access",
+        "cookies",
+        "headers",
+        "api_endpoints",
+        "status",
+        "validation_status"
+      ],
+      "type": "dict"
+    },
+    "fresh_sessions/working_session_1749202526.json": {
+      "status": "valid",
+      "size": 1544,
+      "keys": [
+        "session_type",
+        "created_timestamp",
+        "session_id",
+        "csrf_token",
+        "user_id",
+        "username",
+        "target_access",
+        "cookies",
+        "headers",
+        "api_endpoints",
+        "status",
+        "validation_status"
+      ],
+      "type": "dict"
+    },
+    "config/fleming_integration_config.json": {
+      "status": "valid",
+      "size": 1589,
+      "keys": [
+        "fleming_integration",
+        "extraction",
+        "fleming_paths",
+        "fleming_sessions",
+        "integration_settings"
+      ],
+      "type": "dict"
+    },
+    "config/operational_config.json": {
+      "status": "valid",
+      "size": 508,
+      "keys": [
+        "mode",
+        "target_platform",
+        "extraction_methods",
+        "stealth_level",
+        "rate_limiting",
+        "proxy_rotation",
+        "data_collection"
+      ],
+      "type": "dict"
+    },
+    "config/proxies.json": {
+      "status": "valid",
+      "size": 503,
+      "keys": null,
+      "type": "list"
+    },
+    "config/real_proxy_config.json": {
+      "status": "valid",
+      "size": 513,
+      "keys": [
+        "target_domains",
+        "intercept_patterns",
+        "capture_data"
+      ],
+      "type": "dict"
+    },
+    "config/system_config.json": {
+      "status": "valid",
+      "size": 2562,
+      "keys": [
+        "logging",
+        "security",
+        "performance",
+        "error_handling",
+        "maintenance",
+        "database",
+        "proxy",
+        "sessions",
+        "monitoring"
+      ],
+      "type": "dict"
+    },
+    "config/proxy_master_config.json": {
+      "status": "valid",
+      "size": 1595,
+      "keys": [
+        "enabled",
+        "provider",
+        "validation",
+        "rotation",
+        "primary_proxy",
+        "backup_proxies",
+        "proxy_list_sources",
+        "authentication",
+        "performance",
+        "monitoring",
+        "rate_limiting"
+      ],
+      "type": "dict"
+    },
+    "config/ultimate_bypass_config.json": {
+      "status": "valid",
+      "size": 1015,
+      "keys": [
+        "max_connections",
+        "connection_timeout",
+        "read_timeout",
+        "max_pools",
+        "max_connections_per_pool",
+        "session_dir",
+        "auto_refresh_sessions",
+        "instagram_endpoints",
+        "rate_limits",
+        "advanced_settings",
+        "bypass_strategies"
+      ],
+      "type": "dict"
+    },
+    "config/proxy_config_enhanced.json": {
+      "status": "valid",
+      "size": 577,
+      "keys": [
+        "proxy_host",
+        "proxy_port",
+        "proxy_user",
+        "proxy_pass",
+        "enabled",
+        "proxy_type",
+        "session_rotation",
+        "country_targeting",
+        "connection_timeout",
+        "retry_attempts",
+        "user_agent_rotation",
+        "request_delay",
+        "max_concurrent",
+        "enhanced_features"
+      ],
+      "type": "dict"
+    },
+    "config/hardcore_config.json": {
+      "status": "valid",
+      "size": 2766,
+      "keys": [
+        "extraction_config",
+        "proxy_config",
+        "session_config",
+        "extraction_targets",
+        "output_config",
+        "stealth_config",
+        "monitoring_config",
+        "bypass_config"
+      ],
+      "type": "dict"
+    },
+    "config/config.json": {
+      "status": "valid",
+      "size": 77,
+      "keys": [
+        "monitoring",
+        "web"
+      ],
+      "type": "dict"
+    },
+    "config/real_targets_config.json": {
+      "status": "valid",
+      "size": 1614,
+      "keys": [
+        "real_targets",
+        "operation_config"
+      ],
+      "type": "dict"
+    },
+    "config/proxy_config.json": {
+      "status": "valid",
+      "size": 595,
+      "keys": [
+        "accounts",
+        "user_agents"
+      ],
+      "type": "dict"
+    },
+    "config/project_info.json": {
+      "status": "valid",
+      "size": 502,
+      "keys": [
+        "name",
+        "version",
+        "description",
+        "author",
+        "python_version",
+        "created",
+        "last_updated",
+        "stats"
+      ],
+      "type": "dict"
+    },
+    "config/bypass_config.json": {
+      "status": "valid",
+      "size": 856,
+      "keys": [
+        "timestamp",
+        "original_ip",
+        "instagram_accessible_direct",
+        "bypass_proxy",
+        "tor_available",
+        "working_proxies",
+        "recommendations"
+      ],
+      "type": "dict"
+    },
+    "config/working_proxies.json": {
+      "status": "valid",
+      "size": 1268,
+      "keys": null,
+      "type": "list"
+    },
+    "config/monitoring_config.json": {
+      "status": "valid",
+      "size": 1654,
+      "keys": [
+        "monitoring",
+        "targets",
+        "data_collection",
+        "alerts",
+        "reporting",
+        "performance",
+        "security"
+      ],
+      "type": "dict"
+    },
+    "config/master_config.json": {
+      "status": "valid",
+      "size": 3709,
+      "keys": [
+        "app",
+        "database",
+        "instagram",
+        "proxy",
+        "session_management",
+        "monitoring",
+        "extraction",
+        "security",
+        "performance",
+        "targets"
+      ],
+      "type": "dict"
+    },
+    "direct_target_extractions/direct_target_analysis_20250606_003316.json": {
+      "status": "valid",
+      "size": 380,
+      "keys": [
+        "analysis_info",
+        "target_profiles",
+        "simulated_extractions",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "direct_target_extractions/direct_target_analysis_20250606_003113.json": {
+      "status": "valid",
+      "size": 380,
+      "keys": [
+        "analysis_info",
+        "target_profiles",
+        "simulated_extractions",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460588/alx_trading_session_fleming654.json": {
+      "status": "valid",
+      "size": 171,
+      "keys": [
+        "sessionid",
+        "target",
+        "type",
+        "created",
+        "platform"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460588/comprehensive_dm_scan_results_1749231518.json": {
+      "status": "valid",
+      "size": 950831,
+      "keys": null,
+      "type": "list"
+    },
+    "sensitive_data/session.json": {
+      "status": "valid",
+      "size": 7909,
+      "keys": [
+        "sessionid",
+        "created",
+        "target"
+      ],
+      "type": "dict"
+    },
+    "data/targets_export.json": {
+      "status": "valid",
+      "size": 2077,
+      "keys": null,
+      "type": "list"
+    },
+    "data/public_extraction_1749203779.json": {
+      "status": "valid",
+      "size": 654,
+      "keys": [
+        "profile",
+        "recent_posts",
+        "extraction_method",
+        "requires_login"
+      ],
+      "type": "dict"
+    },
+    "data/public_extraction_1749203301.json": {
+      "status": "valid",
+      "size": 654,
+      "keys": [
+        "profile",
+        "recent_posts",
+        "extraction_method",
+        "requires_login"
+      ],
+      "type": "dict"
+    },
+    "data/ultimate_results_20250606_233845.json": {
+      "status": "valid",
+      "size": 223,
+      "keys": [
+        "timestamp",
+        "target",
+        "sessionid_used",
+        "extraction_type",
+        "extraction_status",
+        "error"
+      ],
+      "type": "dict"
+    },
+    "data/public_extraction_1749230324.json": {
+      "status": "valid",
+      "size": 654,
+      "keys": [
+        "profile",
+        "recent_posts",
+        "extraction_method",
+        "requires_login"
+      ],
+      "type": "dict"
+    },
+    "data/fixed_extraction_1749242100.json": {
+      "status": "valid",
+      "size": 37,
+      "keys": [
+        "error"
+      ],
+      "type": "dict"
+    },
+    "data/real_dm_extraction_1748948002.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "data/ultimate_results_20250606_055459.json": {
+      "status": "valid",
+      "size": 223,
+      "keys": [
+        "timestamp",
+        "target",
+        "sessionid_used",
+        "extraction_type",
+        "extraction_status",
+        "error"
+      ],
+      "type": "dict"
+    },
+    "data/database_penetration_test_results_20250603_005529.json": {
+      "status": "valid",
+      "size": 63387,
+      "keys": [
+        "fingerprinting",
+        "sql_injection",
+        "privilege_escalation",
+        "data_exfiltration",
+        "security_report"
+      ],
+      "type": "dict"
+    },
+    "data/latest_fixed.json": {
+      "status": "valid",
+      "size": 37,
+      "keys": [
+        "error"
+      ],
+      "type": "dict"
+    },
+    "data/ultimate_results_20250606_055406.json": {
+      "status": "valid",
+      "size": 223,
+      "keys": [
+        "timestamp",
+        "target",
+        "sessionid_used",
+        "extraction_type",
+        "extraction_status",
+        "error"
+      ],
+      "type": "dict"
+    },
+    "data/project_database_security_report_20250603_005801.json": {
+      "status": "valid",
+      "size": 14496,
+      "keys": [
+        "report_metadata",
+        "executive_summary",
+        "database_structure",
+        "security_assessment",
+        "compliance_checklist"
+      ],
+      "type": "dict"
+    },
+    "data/emergency_extraction_plan_20250603_000134.json": {
+      "status": "valid",
+      "size": 1045,
+      "keys": [
+        "timestamp",
+        "current_ip",
+        "available_methods",
+        "extraction_plan",
+        "estimated_success_rate"
+      ],
+      "type": "dict"
+    },
+    "data/COMPLETE_DATABASE_EXTRACT_20250603_000134.json": {
+      "status": "valid",
+      "size": 478,
+      "keys": [
+        "extraction_time",
+        "database_path",
+        "targets",
+        "operations",
+        "extracted_data",
+        "relationships",
+        "monitoring",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "data/FINAL_EXTRACTION_REPORT.json": {
+      "status": "valid",
+      "size": 1834,
+      "keys": [
+        "timestamp",
+        "current_status",
+        "last_ip",
+        "issue",
+        "attempts_made",
+        "solutions_created",
+        "recommended_actions",
+        "next_steps"
+      ],
+      "type": "dict"
+    },
+    "data/quick_instagram_fix_1749243630.json": {
+      "status": "valid",
+      "size": 33916,
+      "keys": [
+        "timestamp",
+        "mobile_tests",
+        "desktop_tests",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "data/quick_instagram_fix_1749243527.json": {
+      "status": "valid",
+      "size": 33708,
+      "keys": [
+        "timestamp",
+        "mobile_tests",
+        "desktop_tests",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "data/public_extraction_1749230336.json": {
+      "status": "valid",
+      "size": 654,
+      "keys": [
+        "profile",
+        "recent_posts",
+        "extraction_method",
+        "requires_login"
+      ],
+      "type": "dict"
+    },
+    "data/database_penetration_test_results_20250603_005547.json": {
+      "status": "valid",
+      "size": 63387,
+      "keys": [
+        "fingerprinting",
+        "sql_injection",
+        "privilege_escalation",
+        "data_exfiltration",
+        "security_report"
+      ],
+      "type": "dict"
+    },
+    "data/COMPLETE_DATABASE_EXTRACT_20250603_000359.json": {
+      "status": "valid",
+      "size": 478,
+      "keys": [
+        "extraction_time",
+        "database_path",
+        "targets",
+        "operations",
+        "extracted_data",
+        "relationships",
+        "monitoring",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "data/cute_rate_limit_test_1749109586.json": {
+      "status": "valid",
+      "size": 3427,
+      "keys": [
+        "test_info",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "data/redirect_test_results_1749242898.json": {
+      "status": "valid",
+      "size": 70452,
+      "keys": [
+        "timestamp",
+        "results",
+        "analysis"
+      ],
+      "type": "dict"
+    },
+    "data/deep_content_analysis_1749138740.json": {
+      "status": "valid",
+      "size": 43884,
+      "keys": [
+        "analysis_info",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "data/database_penetration_test_results_20250603_005402.json": {
+      "status": "valid",
+      "size": 7506,
+      "keys": [
+        "fingerprinting"
+      ],
+      "type": "dict"
+    },
+    "data/ultimate_results_20250607_000246.json": {
+      "status": "valid",
+      "size": 223,
+      "keys": [
+        "timestamp",
+        "target",
+        "sessionid_used",
+        "extraction_type",
+        "extraction_status",
+        "error"
+      ],
+      "type": "dict"
+    },
+    "data/advanced_extraction_1748949071.json": {
+      "status": "valid",
+      "size": 21508,
+      "keys": [
+        "extraction_info",
+        "session_tests",
+        "profile_extractions",
+        "endpoint_tests",
+        "successful_extractions",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "data/quick_instagram_fix_1749250193.json": {
+      "status": "valid",
+      "size": 34003,
+      "keys": [
+        "timestamp",
+        "mobile_tests",
+        "desktop_tests",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "data/instant_500_check_results.json": {
+      "status": "valid",
+      "size": 2722,
+      "keys": [
+        "timestamp",
+        "tests",
+        "working_strategies",
+        "failing_strategies"
+      ],
+      "type": "dict"
+    },
+    "data/deep_content_analysis_1749138563.json": {
+      "status": "valid",
+      "size": 43409,
+      "keys": [
+        "analysis_info",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "data/COMPLETE_DATABASE_EXTRACT_20250603_000348.json": {
+      "status": "valid",
+      "size": 478,
+      "keys": [
+        "extraction_time",
+        "database_path",
+        "targets",
+        "operations",
+        "extracted_data",
+        "relationships",
+        "monitoring",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "data/ultra_simple_test_results.json": {
+      "status": "valid",
+      "size": 1959,
+      "keys": null,
+      "type": "list"
+    },
+    "reports/intelligence_report_alx.trading_1748818144.json": {
+      "status": "valid",
+      "size": 121,
+      "keys": [
+        "profiles",
+        "interactions",
+        "media_data",
+        "network_connections",
+        "personal_information"
+      ],
+      "type": "dict"
+    },
+    "reports/intelligence_report_whatilove1728_1748818144.json": {
+      "status": "valid",
+      "size": 121,
+      "keys": [
+        "profiles",
+        "interactions",
+        "media_data",
+        "network_connections",
+        "personal_information"
+      ],
+      "type": "dict"
+    },
+    "reports/MASTER_OPERATION_REPORT_MASTER_OP_1748818144.json": {
+      "status": "valid",
+      "size": 846,
+      "keys": [
+        "operation_id",
+        "timestamp",
+        "targets_processed",
+        "operation_status",
+        "extracted_data_summary",
+        "intelligence_summary",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "scripts/config.json": {
+      "status": "valid",
+      "size": 773,
+      "keys": [
+        "accounts",
+        "extraction_settings",
+        "stealth_settings"
+      ],
+      "type": "dict"
+    },
+    "sessions/quick_bypass_session.json": {
+      "status": "valid",
+      "size": 194,
+      "keys": [
+        "session_id",
+        "timestamp",
+        "status",
+        "ip_accessible",
+        "instagram_accessible",
+        "created_by"
+      ],
+      "type": "dict"
+    },
+    "sessions_fresh/extraction_log.json": {
+      "status": "valid",
+      "size": 169,
+      "keys": null,
+      "type": "list"
+    },
+    "REAL_DATA_BACKUP_1749460613/alx_trading_session_fleming654.json": {
+      "status": "valid",
+      "size": 171,
+      "keys": [
+        "sessionid",
+        "target",
+        "type",
+        "created",
+        "platform"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460613/comprehensive_dm_scan_results_1749231518.json": {
+      "status": "valid",
+      "size": 950831,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/ultimate_dm_extraction_alx.trading_20250605_211352.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/advanced_dm_report_alx.trading_20250605_222448.json": {
+      "status": "valid",
+      "size": 672,
+      "keys": [
+        "summary",
+        "performance",
+        "thread_analysis",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "extractions/advanced_dm_extraction_alx.trading_20250606_003826.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/advanced_dm_report_alx.trading_20250605_222924.json": {
+      "status": "valid",
+      "size": 672,
+      "keys": [
+        "summary",
+        "performance",
+        "thread_analysis",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "extractions/ultimate_dm_extraction_alx.trading_20250605_195247.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/advanced_dm_extraction_alx.trading_20250606_004310.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/ultimate_dm_report_alx.trading_20250605_211352.json": {
+      "status": "valid",
+      "size": 432,
+      "keys": [
+        "extraction_summary",
+        "thread_details",
+        "performance_metrics"
+      ],
+      "type": "dict"
+    },
+    "extractions/advanced_dm_extraction_alx.trading_20250605_222448.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/advanced_dm_extraction_alx.trading_20250605_224955.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/ultimate_dm_extraction_alx.trading_20250605_220819.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/advanced_dm_report_alx.trading_20250606_004310.json": {
+      "status": "valid",
+      "size": 672,
+      "keys": [
+        "summary",
+        "performance",
+        "thread_analysis",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "extractions/advanced_dm_extraction_alx.trading_20250605_224538.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "extractions/ultimate_dm_report_alx.trading_20250605_220819.json": {
+      "status": "valid",
+      "size": 432,
+      "keys": [
+        "extraction_summary",
+        "thread_details",
+        "performance_metrics"
+      ],
+      "type": "dict"
+    },
+    "extractions/advanced_dm_report_alx.trading_20250605_224538.json": {
+      "status": "valid",
+      "size": 672,
+      "keys": [
+        "summary",
+        "performance",
+        "thread_analysis",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "extractions/ultimate_dm_report_alx.trading_20250605_195247.json": {
+      "status": "valid",
+      "size": 432,
+      "keys": [
+        "extraction_summary",
+        "thread_details",
+        "performance_metrics"
+      ],
+      "type": "dict"
+    },
+    "extractions/advanced_dm_report_alx.trading_20250605_224955.json": {
+      "status": "valid",
+      "size": 672,
+      "keys": [
+        "summary",
+        "performance",
+        "thread_analysis",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "extractions/advanced_dm_report_alx.trading_20250606_003826.json": {
+      "status": "valid",
+      "size": 671,
+      "keys": [
+        "summary",
+        "performance",
+        "thread_analysis",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "extractions/advanced_dm_extraction_alx.trading_20250605_222924.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": null,
+      "type": "list"
+    },
+    "results/analysis_summary_20250607_000702.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/analysis_summary_20250607_000917.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/parsed_dm_data_20250606_235726.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": [],
+      "type": "dict"
+    },
+    "results/parsed_dm_data_20250606_235738.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": [],
+      "type": "dict"
+    },
+    "results/parsing_summary_20250606_235726.json": {
+      "status": "valid",
+      "size": 230,
+      "keys": [
+        "timestamp",
+        "source_file",
+        "html_size",
+        "has_shared_data",
+        "additional_chunks",
+        "extraction_summary"
+      ],
+      "type": "dict"
+    },
+    "results/ultimate_dm_hunt_1749237895.json": {
+      "status": "valid",
+      "size": 14635,
+      "keys": [
+        "start_time",
+        "session_data",
+        "live_traffic_data",
+        "graphql_data",
+        "all_extracted_dms",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "results/websocket_dm_interception_1749233863.json": {
+      "status": "valid",
+      "size": 323,
+      "keys": [
+        "interception_method",
+        "timestamp",
+        "total_messages",
+        "extracted_messages",
+        "raw_intercepted_messages",
+        "interception_summary"
+      ],
+      "type": "dict"
+    },
+    "results/parsing_summary_20250606_235738.json": {
+      "status": "valid",
+      "size": 230,
+      "keys": [
+        "timestamp",
+        "source_file",
+        "html_size",
+        "has_shared_data",
+        "additional_chunks",
+        "extraction_summary"
+      ],
+      "type": "dict"
+    },
+    "results/analysis_summary_20250607_000651.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/analysis_summary_20250607_000827.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/mobile_dm_extraction_1749234366.json": {
+      "status": "valid",
+      "size": 338,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "device_id",
+        "total_messages",
+        "extracted_messages",
+        "extraction_summary"
+      ],
+      "type": "dict"
+    },
+    "results/simple_extraction_test_1749463952.json": {
+      "status": "valid",
+      "size": 635,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "session_id",
+        "target_account",
+        "test_status",
+        "next_step",
+        "extraction_summary",
+        "recommendations"
+      ],
+      "type": "dict"
+    },
+    "results/mobile_dm_extraction_1749233888.json": {
+      "status": "valid",
+      "size": 338,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "device_id",
+        "total_messages",
+        "extracted_messages",
+        "extraction_summary"
+      ],
+      "type": "dict"
+    },
+    "results/parsed_dm_data_20250606_235718.json": {
+      "status": "valid",
+      "size": 2,
+      "keys": [],
+      "type": "dict"
+    },
+    "results/parsing_summary_20250606_235718.json": {
+      "status": "valid",
+      "size": 230,
+      "keys": [
+        "timestamp",
+        "source_file",
+        "html_size",
+        "has_shared_data",
+        "additional_chunks",
+        "extraction_summary"
+      ],
+      "type": "dict"
+    },
+    "results/analysis_summary_20250607_000800.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/analysis_summary_20250607_000749.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/websocket_dm_interception_1749234336.json": {
+      "status": "valid",
+      "size": 323,
+      "keys": [
+        "interception_method",
+        "timestamp",
+        "total_messages",
+        "extracted_messages",
+        "raw_intercepted_messages",
+        "interception_summary"
+      ],
+      "type": "dict"
+    },
+    "results/dm_extraction_1749204133.json": {
+      "status": "valid",
+      "size": 124,
+      "keys": [
+        "extraction_time",
+        "total_attempts",
+        "successful_extractions",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "results/analysis_summary_20250607_000858.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/analysis_summary_20250607_000131.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/ultimate_dm_hunt_1749237871.json": {
+      "status": "valid",
+      "size": 15275,
+      "keys": [
+        "start_time",
+        "session_data",
+        "live_traffic_data",
+        "graphql_data",
+        "all_extracted_dms",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "results/ultimate_dm_hunt_1749237915.json": {
+      "status": "valid",
+      "size": 14670,
+      "keys": [
+        "start_time",
+        "session_data",
+        "live_traffic_data",
+        "graphql_data",
+        "all_extracted_dms",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "results/COMPREHENSIVE_HTML_ANALYSIS_20250607_001602.json": {
+      "status": "valid",
+      "size": 2514,
+      "keys": [
+        "analysis_date",
+        "total_files_analyzed",
+        "files_with_data",
+        "files_with_direct_v2",
+        "files_with_shared_data",
+        "total_html_size",
+        "file_details"
+      ],
+      "type": "dict"
+    },
+    "results/analysis_summary_20250607_001102.json": {
+      "status": "valid",
+      "size": 282,
+      "keys": [
+        "source_file",
+        "analysis_time",
+        "html_size",
+        "has_shared_data",
+        "additional_data_chunks",
+        "has_direct_v2",
+        "has_inbox",
+        "has_thread",
+        "data_found"
+      ],
+      "type": "dict"
+    },
+    "results/mobile_dm_extraction_1749234093.json": {
+      "status": "valid",
+      "size": 338,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "device_id",
+        "total_messages",
+        "extracted_messages",
+        "extraction_summary"
+      ],
+      "type": "dict"
+    },
+    "results/builtin_extraction_1749464491.json": {
+      "status": "valid",
+      "size": 304,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "test_time",
+        "session_info",
+        "tests",
+        "messages_extracted",
+        "total_messages",
+        "success"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/CLEAN_DATA_SUMMARY_1749460588.json": {
+      "status": "valid",
+      "size": 2747,
+      "keys": [
+        "cleanup_timestamp",
+        "remaining_real_data_files",
+        "total_files_preserved",
+        "real_data_summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/penetration_demo_report_1749409442.json": {
+      "status": "valid",
+      "size": 2718,
+      "keys": [
+        "demo_timestamp",
+        "available_techniques",
+        "demonstrated_techniques",
+        "results",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/browser_dm_extraction_1749233796.json": {
+      "status": "valid",
+      "size": 491,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "total_messages",
+        "messages",
+        "extraction_summary",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/proxy_config_simple.json": {
+      "status": "valid",
+      "size": 762,
+      "keys": [
+        "enabled",
+        "proxy_type",
+        "free_proxies",
+        "rotation",
+        "settings"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/real_data_hunt_report.json": {
+      "status": "valid",
+      "size": 51484,
+      "keys": [
+        "analysis_time",
+        "environment",
+        "session_analysis",
+        "database_analysis",
+        "real_data_analysis",
+        "log_analysis",
+        "conclusion"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/dms_mock_data.json": {
+      "status": "valid",
+      "size": 261,
+      "keys": null,
+      "type": "list"
+    },
+    "removed_fake_data/mock_dm_extraction_1749230324.json": {
+      "status": "valid",
+      "size": 1210,
+      "keys": [
+        "conversation_id",
+        "participants",
+        "message_count",
+        "messages",
+        "media_files",
+        "extraction_info",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/comprehensive_report_1748944727.json": {
+      "status": "valid",
+      "size": 8432,
+      "keys": [
+        "report_id",
+        "generated_at",
+        "target_profile",
+        "project_integration",
+        "recommendations",
+        "technical_details"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749471587.json": {
+      "status": "valid",
+      "size": 4583,
+      "keys": [
+        "cleanup_date",
+        "cleanup_type",
+        "files_completely_removed",
+        "files_with_messages_cleaned",
+        "errors",
+        "removed_files",
+        "cleaned_files",
+        "errors_encountered",
+        "backup_location"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473792.json": {
+      "status": "valid",
+      "size": 4727,
+      "keys": [
+        "cleanup_date",
+        "cleanup_type",
+        "files_completely_removed",
+        "files_with_messages_cleaned",
+        "errors",
+        "removed_files",
+        "cleaned_files",
+        "errors_encountered",
+        "backup_location"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/comprehensive_report_1748944667.json": {
+      "status": "valid",
+      "size": 8432,
+      "keys": [
+        "report_id",
+        "generated_at",
+        "target_profile",
+        "project_integration",
+        "recommendations",
+        "technical_details"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/cloud_simulation_results_20250603_000117.json": {
+      "status": "valid",
+      "size": 382,
+      "keys": [
+        "aws",
+        "gcp",
+        "azure",
+        "cdn",
+        "mobile",
+        "residential"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/fixed_alx_method_1_20250606_001628.json": {
+      "status": "valid",
+      "size": 852,
+      "keys": [
+        "target",
+        "extraction_method",
+        "timestamp",
+        "threads",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/comprehensive_dm_report_20250605_221500.json": {
+      "status": "valid",
+      "size": 2811,
+      "keys": [
+        "extraction_info",
+        "target_profile",
+        "dm_conversations",
+        "intelligence_summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/dms_mock_data_analysis.json": {
+      "status": "valid",
+      "size": 564,
+      "keys": [
+        "analysis_time",
+        "total_contacts",
+        "contacts",
+        "suspicious_keywords",
+        "recommendations"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/browser_dm_extraction_1749234243.json": {
+      "status": "valid",
+      "size": 491,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "total_messages",
+        "messages",
+        "extraction_summary",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/dm_content_analysis_1749233354.json": {
+      "status": "valid",
+      "size": 1506224,
+      "keys": [
+        "analysis_timestamp",
+        "total_files_found",
+        "files_successfully_analyzed",
+        "files_with_potential_messages",
+        "total_potential_messages",
+        "file_analyses",
+        "success"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/fixed_alx_method_1_20250607_013939.json": {
+      "status": "valid",
+      "size": 852,
+      "keys": [
+        "target",
+        "extraction_method",
+        "timestamp",
+        "threads",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/playwright_dm_extraction_1749182755.json": {
+      "status": "valid",
+      "size": 713,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "total_messages",
+        "messages",
+        "metadata",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/fixed_alx_method_1_20250606_001416.json": {
+      "status": "valid",
+      "size": 852,
+      "keys": [
+        "target",
+        "extraction_method",
+        "timestamp",
+        "threads",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/comprehensive_report_1748947559.json": {
+      "status": "valid",
+      "size": 8432,
+      "keys": [
+        "report_id",
+        "generated_at",
+        "target_profile",
+        "project_integration",
+        "recommendations",
+        "technical_details"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473759.json": {
+      "status": "valid",
+      "size": 4654,
+      "keys": [
+        "cleanup_date",
+        "cleanup_type",
+        "files_completely_removed",
+        "files_with_messages_cleaned",
+        "errors",
+        "removed_files",
+        "cleaned_files",
+        "errors_encountered",
+        "backup_location"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/COMPREHENSIVE_STATUS_REPORT_20250603_000348.json": {
+      "status": "valid",
+      "size": 1123,
+      "keys": [
+        "timestamp",
+        "success_rate",
+        "working_methods",
+        "status",
+        "recommendations",
+        "next_steps"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/advanced_database_exploitation_report_20250603_010009.json": {
+      "status": "valid",
+      "size": 41976,
+      "keys": [
+        "report_metadata",
+        "test_results",
+        "risk_assessment",
+        "recommendations"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/comprehensive_dm_report_20250607_013952.json": {
+      "status": "valid",
+      "size": 2811,
+      "keys": [
+        "extraction_info",
+        "target_profile",
+        "dm_conversations",
+        "intelligence_summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/demo_extraction_1749192591.json": {
+      "status": "valid",
+      "size": 2404,
+      "keys": [
+        "timestamp",
+        "target_username",
+        "extraction_method",
+        "status",
+        "note",
+        "available_data"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/playwright_dm_extraction_1749180405.json": {
+      "status": "valid",
+      "size": 713,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "total_messages",
+        "messages",
+        "metadata",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/CLEAN_DATA_SUMMARY_1749460613.json": {
+      "status": "valid",
+      "size": 2747,
+      "keys": [
+        "cleanup_timestamp",
+        "remaining_real_data_files",
+        "total_files_preserved",
+        "real_data_summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/ultra_fast_dm_extraction_1749467705.json": {
+      "status": "valid",
+      "size": 487,
+      "keys": [
+        "extraction_info",
+        "messages",
+        "total_messages",
+        "completion_time",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/ultra_fast_dm_extraction_1749466035.json": {
+      "status": "valid",
+      "size": 487,
+      "keys": [
+        "extraction_info",
+        "messages",
+        "total_messages",
+        "completion_time",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/WORKSPACE_STRUCTURE_20250526_220739.json": {
+      "status": "valid",
+      "size": 13730,
+      "keys": [
+        "workspace_organization"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/instagram_session_analysis_1749154258.json": {
+      "status": "valid",
+      "size": 2936,
+      "keys": [
+        "analysis_timestamp",
+        "session_file",
+        "cookie_count",
+        "analysis_results"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/demo_extraction_1749192621.json": {
+      "status": "valid",
+      "size": 2404,
+      "keys": [
+        "timestamp",
+        "target_username",
+        "extraction_method",
+        "status",
+        "note",
+        "available_data"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/playwright_dm_extraction_1749182701.json": {
+      "status": "valid",
+      "size": 713,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "total_messages",
+        "messages",
+        "metadata",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/comprehensive_report_1748944217.json": {
+      "status": "valid",
+      "size": 8432,
+      "keys": [
+        "report_id",
+        "generated_at",
+        "target_profile",
+        "project_integration",
+        "recommendations",
+        "technical_details"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/package.json": {
+      "status": "valid",
+      "size": 1816,
+      "keys": [
+        "name",
+        "version",
+        "description",
+        "main",
+        "scripts",
+        "keywords",
+        "author",
+        "license",
+        "dependencies",
+        "devDependencies",
+        "engines",
+        "repository",
+        "bugs",
+        "homepage"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/ultra_fast_dm_extraction_1749466018.json": {
+      "status": "valid",
+      "size": 487,
+      "keys": [
+        "extraction_info",
+        "messages",
+        "total_messages",
+        "completion_time",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/comprehensive_report_1748947846.json": {
+      "status": "valid",
+      "size": 3815,
+      "keys": [
+        "report_id",
+        "generated_at",
+        "target_profile",
+        "project_integration",
+        "recommendations",
+        "technical_details"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/SAMPLE_report_20250606_083459.json": {
+      "status": "valid",
+      "size": 610,
+      "keys": [
+        "hardcore_extraction_report",
+        "performance_metrics",
+        "system_usage"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/playwright_dm_extraction_1749180450.json": {
+      "status": "valid",
+      "size": 713,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "total_messages",
+        "messages",
+        "metadata",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/FINAL_ALX_TRADING_EXTRACTION_REPORT.json": {
+      "status": "valid",
+      "size": 36989,
+      "keys": [
+        "report_info",
+        "extraction_summary",
+        "final_verdict",
+        "detailed_findings",
+        "conclusion"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/real_dm_extraction_alx_trading_20250606.json": {
+      "status": "valid",
+      "size": 6096,
+      "keys": [
+        "extraction_info",
+        "conversations",
+        "statistics",
+        "technical_info",
+        "export_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/package-lock.json": {
+      "status": "valid",
+      "size": 331779,
+      "keys": [
+        "name",
+        "version",
+        "lockfileVersion",
+        "requires",
+        "packages"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/demo_extraction_20250606_174804.json": {
+      "status": "valid",
+      "size": 519,
+      "keys": [
+        "extraction_time",
+        "target_username",
+        "total_conversations",
+        "total_messages",
+        "conversations",
+        "status"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/SAMPLE_extraction_20250606_083459.json": {
+      "status": "valid",
+      "size": 1529,
+      "keys": [
+        "extraction_info",
+        "statistics",
+        "sample_messages",
+        "threads",
+        "extraction_metadata"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/mock_dm_extraction_1749203301.json": {
+      "status": "valid",
+      "size": 1210,
+      "keys": [
+        "conversation_id",
+        "participants",
+        "message_count",
+        "messages",
+        "media_files",
+        "extraction_info",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/browser_dm_extraction_1749258711.json": {
+      "status": "valid",
+      "size": 491,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "total_messages",
+        "messages",
+        "extraction_summary",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/COMPREHENSIVE_FAKE_DATA_CLEANUP_1749473809.json": {
+      "status": "valid",
+      "size": 4800,
+      "keys": [
+        "cleanup_date",
+        "cleanup_type",
+        "files_completely_removed",
+        "files_with_messages_cleaned",
+        "errors",
+        "removed_files",
+        "cleaned_files",
+        "errors_encountered",
+        "backup_location"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/fixed_alx_method_1_20250606_001559.json": {
+      "status": "valid",
+      "size": 852,
+      "keys": [
+        "target",
+        "extraction_method",
+        "timestamp",
+        "threads",
+        "summary"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/mock_dm_extraction_1749203779.json": {
+      "status": "valid",
+      "size": 1210,
+      "keys": [
+        "conversation_id",
+        "participants",
+        "message_count",
+        "messages",
+        "media_files",
+        "extraction_info",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/ultimate_demo_report_1749203934.json": {
+      "status": "valid",
+      "size": 450,
+      "keys": [
+        "extraction_summary",
+        "performance_metrics",
+        "security_analysis"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/WORKSPACE_STRUCTURE_20250526_220116.json": {
+      "status": "valid",
+      "size": 5106,
+      "keys": [
+        "workspace_organization"
+      ],
+      "type": "dict"
+    },
+    "removed_fake_data/browser_dm_extraction_1749234270.json": {
+      "status": "valid",
+      "size": 491,
+      "keys": [
+        "extraction_method",
+        "timestamp",
+        "total_messages",
+        "messages",
+        "extraction_summary",
+        "cleaning_info"
+      ],
+      "type": "dict"
+    },
+    "fresh_start/config/settings.json": {
+      "status": "valid",
+      "size": 655,
+      "keys": [
+        "target_username",
+        "user_agent",
+        "session_data",
+        "proxy",
+        "rate_limit",
+        "extraction_options"
+      ],
+      "type": "dict"
+    },
+    "fresh_start/output/real_dm_extraction_1749237847.json": {
+      "status": "valid",
+      "size": 3517,
+      "keys": [
+        "extraction_info",
+        "conversations",
+        "statistics",
+        "session_performance"
+      ],
+      "type": "dict"
+    },
+    "fresh_start/output/real_dm_extraction_1749237514.json": {
+      "status": "valid",
+      "size": 1215,
+      "keys": [
+        "target",
+        "timestamp",
+        "method",
+        "status",
+        "conversations",
+        "statistics"
+      ],
+      "type": "dict"
+    },
+    "fresh_start/output/real_dm_extraction_1749259925.json": {
+      "status": "valid",
+      "size": 3517,
+      "keys": [
+        "extraction_info",
+        "conversations",
+        "statistics",
+        "session_performance"
+      ],
+      "type": "dict"
+    },
+    "config/proxies/proxy_configs.json.json": {
+      "status": "valid",
+      "size": 114,
+      "keys": [
+        "enabled",
+        "host",
+        "port",
+        "username",
+        "password",
+        "rotation_enabled"
+      ],
+      "type": "dict"
+    },
+    "config/proxies/proxy_configs.json": {
+      "status": "valid",
+      "size": 3182,
+      "keys": [
+        "tor_proxies",
+        "mobile_lte_proxies",
+        "residential_proxies",
+        "datacenter_proxies",
+        "brightdata_proxies",
+        "free_proxies"
+      ],
+      "type": "dict"
+    },
+    "config/proxies/proxy_config_new.json": {
+      "status": "valid",
+      "size": 1517,
+      "keys": [
+        "enabled",
+        "proxy_type",
+        "use_direct_fallback",
+        "free_proxies",
+        "brightdata",
+        "rotation",
+        "settings"
+      ],
+      "type": "dict"
+    },
+    "config/proxies/proxy_config.json": {
+      "status": "valid",
+      "size": 3723,
+      "keys": [
+        "enabled",
+        "proxy_type",
+        "proxy_host",
+        "proxy_port",
+        "selenium_port",
+        "proxy_user",
+        "proxy_pass",
+        "rotation_enabled",
+        "session_rotation",
+        "country_targeting",
+        "sticky_session",
+        "user_agent_rotation",
+        "connection_timeout",
+        "read_timeout",
+        "retry_attempts",
+        "session_change_interval",
+        "bright_data",
+        "rotation",
+        "advanced_settings",
+        "mobile_lte_proxies",
+        "residential_proxies",
+        "datacenter_proxies",
+        "free_proxies",
+        "note"
+      ],
+      "type": "dict"
+    },
+    "config/json/MASTER_PROFILE_alx_trading_1748262733.json": {
+      "status": "valid",
+      "size": 2199,
+      "keys": [
+        "timestamp",
+        "target",
+        "confidence_level",
+        "data_sources",
+        "profile",
+        "intelligence_summary",
+        "threat_level",
+        "recommended_actions"
+      ],
+      "type": "dict"
+    },
+    "config/json/MASTER_PROFILE_alx_trading_1748264047.json": {
+      "status": "valid",
+      "size": 2896,
+      "keys": [
+        "timestamp",
+        "target",
+        "confidence_level",
+        "data_sources",
+        "profile",
+        "intelligence_summary",
+        "threat_level",
+        "recommended_actions"
+      ],
+      "type": "dict"
+    },
+    "config/json/recovery_plan.json": {
+      "status": "valid",
+      "size": 345,
+      "keys": [
+        "timestamp",
+        "rate_limited",
+        "status",
+        "next_steps",
+        "wait_time"
+      ],
+      "type": "dict"
+    },
+    "config/json/quickstart_results_20250526_215327.json": {
+      "status": "valid",
+      "size": 81,
+      "keys": [
+        "code_enhancement",
+        "database_analysis",
+        "validation"
+      ],
+      "type": "dict"
+    },
+    "config/json/cleanup_summary.json": {
+      "status": "valid",
+      "size": 274,
+      "keys": [
+        "timestamp",
+        "cleanup_stats",
+        "total_files_deleted",
+        "total_folders_deleted",
+        "total_space_freed_mb"
+      ],
+      "type": "dict"
+    },
+    "config/json/browser_data_1_1748235079.json": {
+      "status": "valid",
+      "size": 645,
+      "keys": [
+        "description",
+        "title",
+        "images"
+      ],
+      "type": "dict"
+    },
+    "config/json/INTIMATE_MESSAGES_alx.trading_1748264946.json": {
+      "status": "valid",
+      "size": 322,
+      "keys": [
+        "target",
+        "intimate_messages",
+        "analysis",
+        "extraction_timestamp"
+      ],
+      "type": "dict"
+    },
+    "config/json/db_setup_info.json": {
+      "status": "valid",
+      "size": 217,
+      "keys": [
+        "database_path",
+        "setup_time",
+        "tables_created",
+        "status"
+      ],
+      "type": "dict"
+    },
+    "config/json/db_setup_info.json.json": {
+      "status": "valid",
+      "size": 137,
+      "keys": [
+        "created_at",
+        "description"
+      ],
+      "type": "dict"
+    },
+    "config/json/improvement_results_20250526_215324.json": {
+      "status": "valid",
+      "size": 2368,
+      "keys": [
+        "backup",
+        "enhanced_files",
+        "session_validation",
+        "config_consolidation",
+        "requirements_optimization",
+        "structure_report"
+      ],
+      "type": "dict"
+    },
+    "config/json/consolidated_configs_20250526_215324.json": {
+      "status": "valid",
+      "size": 795,
+      "keys": [
+        "proxy_config_simple.json",
+        "proxy_configs.json",
+        "proxy_config_new.json",
+        "proxy_config.json",
+        "db_setup_info.json"
+      ],
+      "type": "dict"
+    },
+    "config/backups/config_20250527_184609.json": {
+      "status": "valid",
+      "size": 77,
+      "keys": [
+        "monitoring",
+        "web"
+      ],
+      "type": "dict"
+    },
+    "config/backups/config_20250529_181205.json": {
+      "status": "valid",
+      "size": 77,
+      "keys": [
+        "monitoring",
+        "web"
+      ],
+      "type": "dict"
+    },
+    "config/backups/config_20250529_110924.json": {
+      "status": "valid",
+      "size": 77,
+      "keys": [
+        "monitoring",
+        "web"
+      ],
+      "type": "dict"
+    },
+    "config/backups/config_20250527_184953.json": {
+      "status": "valid",
+      "size": 77,
+      "keys": [
+        "monitoring",
+        "web"
+      ],
+      "type": "dict"
+    },
+    "config/backups/config_20250528_132753.json": {
+      "status": "valid",
+      "size": 77,
+      "keys": [
+        "monitoring",
+        "web"
+      ],
+      "type": "dict"
+    },
+    "config/backups/config_20250527_184137.json": {
+      "status": "valid",
+      "size": 1795,
+      "keys": [
+        "project",
+        "database",
+        "extractors",
+        "proxy",
+        "monitoring",
+        "web",
+        "settings",
+        "paths",
+        "security"
+      ],
+      "type": "dict"
+    },
+    "config/backups/config_20250529_150929.json": {
+      "status": "valid",
+      "size": 77,
+      "keys": [
+        "monitoring",
+        "web"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460588/config/proxy_config.json": {
+      "status": "valid",
+      "size": 595,
+      "keys": [
+        "accounts",
+        "user_agents"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460588/config/json/MASTER_PROFILE_alx_trading_1748262733.json": {
+      "status": "valid",
+      "size": 2199,
+      "keys": [
+        "timestamp",
+        "target",
+        "confidence_level",
+        "data_sources",
+        "profile",
+        "intelligence_summary",
+        "threat_level",
+        "recommended_actions"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460588/config/json/MASTER_PROFILE_alx_trading_1748264047.json": {
+      "status": "valid",
+      "size": 2896,
+      "keys": [
+        "timestamp",
+        "target",
+        "confidence_level",
+        "data_sources",
+        "profile",
+        "intelligence_summary",
+        "threat_level",
+        "recommended_actions"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460588/config/json/INTIMATE_MESSAGES_alx.trading_1748264946.json": {
+      "status": "valid",
+      "size": 322,
+      "keys": [
+        "target",
+        "intimate_messages",
+        "analysis",
+        "extraction_timestamp"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460588/results/dm_content_analysis/extracted_messages_1749233354.json": {
+      "status": "valid",
+      "size": 1530493,
+      "keys": null,
+      "type": "list"
+    },
+    "data/intelligence/GHOST_OPERATION_DATA_whatilove1728_1748239114.json": {
+      "status": "valid",
+      "size": 1630,
+      "keys": [
+        "operation_id",
+        "target",
+        "start_time",
+        "proxy_attempts",
+        "successful_hijacks",
+        "intelligence_gathered",
+        "ghost_score"
+      ],
+      "type": "dict"
+    },
+    "data/intelligence/EXPLOITATION_RESULTS_whatilove1728_1748235941.json": {
+      "status": "valid",
+      "size": 215,
+      "keys": [
+        "target",
+        "timestamp",
+        "session_validity",
+        "access_level",
+        "extracted_data",
+        "api_responses",
+        "exploitation_success"
+      ],
+      "type": "dict"
+    },
+    "data/intelligence/ACTIVE_TELEGRAM_PENETRATION_juulisaaf_1748290435.json": {
+      "status": "valid",
+      "size": 6432,
+      "keys": [
+        "target",
+        "phone",
+        "name",
+        "infiltration_attempts",
+        "extracted_data",
+        "success_rate",
+        "profile_data",
+        "contact_discovery",
+        "infiltration_messages",
+        "message_results",
+        "response_monitoring",
+        "potential_responses",
+        "success_metrics"
+      ],
+      "type": "dict"
+    },
+    "data/intelligence/INSTANT_EXTRACTION_whatilove1728_1748235098.json": {
+      "status": "valid",
+      "size": 494,
+      "keys": [
+        "target",
+        "timestamp",
+        "extraction_results",
+        "images_found",
+        "profile_data",
+        "success_methods"
+      ],
+      "type": "dict"
+    },
+    "data/intelligence/operation_dashboard.json": {
+      "status": "valid",
+      "size": 1422,
+      "keys": [
+        "timestamp",
+        "database_stats",
+        "active_targets",
+        "pending_targets",
+        "available_proxies",
+        "targets",
+        "proxies"
+      ],
+      "type": "dict"
+    },
+    "data/intelligence/instagram_extraction_whatilove1728_20250526_043438.json": {
+      "status": "valid",
+      "size": 777,
+      "keys": [
+        "profile_info",
+        "posts",
+        "images",
+        "followers",
+        "following",
+        "stories",
+        "timestamp"
+      ],
+      "type": "dict"
+    },
+    "data/instagram/rapid_intel_whatilove1728_1748234852.json": {
+      "status": "valid",
+      "size": 3791,
+      "keys": [
+        "target",
+        "timestamp",
+        "intelligence",
+        "social_engineering_data",
+        "bypass_results"
+      ],
+      "type": "dict"
+    },
+    "data/alx_trading/real_messages_extraction_1748948322.json": {
+      "status": "valid",
+      "size": 4493,
+      "keys": [
+        "extraction_info",
+        "conversation_data",
+        "message_analysis",
+        "extraction_summary"
+      ],
+      "type": "dict"
+    },
+    "data/sessions/session_example.json": {
+      "status": "valid",
+      "size": 124,
+      "keys": [
+        "sessionid",
+        "ds_user_id",
+        "csrftoken"
+      ],
+      "type": "dict"
+    },
+    "data/recovered_extraction/alx_trading_dms_recovered_20250607_014113.json": {
+      "status": "valid",
+      "size": 6585,
+      "keys": [
+        "target_username",
+        "extraction_timestamp",
+        "sessions_tested",
+        "successful_extractions",
+        "dm_threads",
+        "total_messages"
+      ],
+      "type": "dict"
+    },
+    "data/recovered_extraction/alx_trading_dms_recovered_20250606_002416.json": {
+      "status": "valid",
+      "size": 6585,
+      "keys": [
+        "target_username",
+        "extraction_timestamp",
+        "sessions_tested",
+        "successful_extractions",
+        "dm_threads",
+        "total_messages"
+      ],
+      "type": "dict"
+    },
+    "data/extractions/ALX_TRADING_ADVANCED_DMS_20250527_041729/log_extracted_dms.json": {
+      "status": "valid",
+      "size": 1171,
+      "keys": null,
+      "type": "list"
+    },
+    "data/extractions/ALX_TRADING_ADVANCED_DMS_20250527_041729/extraction_summary.json": {
+      "status": "valid",
+      "size": 835,
+      "keys": [
+        "extraction_summary",
+        "contact_analysis",
+        "security_notes"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749153285.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749152585.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749160096.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749157567.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749158621.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749157688.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749152751.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749153478.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749154766.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749160448.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading_advanced/advanced_real_extraction_1749159872.json": {
+      "status": "valid",
+      "size": 2458,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749160438.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749158610.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749159862.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749152575.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749154754.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749153273.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749157678.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749160086.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749152741.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749157558.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "real_extraction/alx_trading/real_dm_extraction_1749153468.json": {
+      "status": "valid",
+      "size": 270,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "reports/penetration/comprehensive_report_1749230003.json": {
+      "status": "valid",
+      "size": 29628,
+      "keys": [
+        "report_info",
+        "executive_summary",
+        "reconnaissance_results",
+        "bypass_results",
+        "session_hijacking_results",
+        "data_extraction_results",
+        "ctf_analysis_results",
+        "recommendations",
+        "technical_details"
+      ],
+      "type": "dict"
+    },
+    "reports/penetration/comprehensive_report_1749230051.json": {
+      "status": "valid",
+      "size": 29320,
+      "keys": [
+        "report_info",
+        "executive_summary",
+        "reconnaissance_results",
+        "bypass_results",
+        "session_hijacking_results",
+        "data_extraction_results",
+        "ctf_analysis_results",
+        "recommendations",
+        "technical_details"
+      ],
+      "type": "dict"
+    },
+    "reports/session_bypass/advanced_bypass_assessment_20250605_212705.json": {
+      "status": "valid",
+      "size": 5862,
+      "keys": [
+        "assessment_info",
+        "technique_results",
+        "overall_assessment",
+        "recommendations"
+      ],
+      "type": "dict"
+    },
+    "reports/session_bypass/advanced_bypass_assessment_20250605_213251.json": {
+      "status": "valid",
+      "size": 5864,
+      "keys": [
+        "assessment_info",
+        "technique_results",
+        "overall_assessment",
+        "recommendations"
+      ],
+      "type": "dict"
+    },
+    "reports/hijacking_tests/hijacking_assessment_report_20250605_205805.json": {
+      "status": "valid",
+      "size": 398,
+      "keys": [
+        "test_timestamp",
+        "target_domain",
+        "tests_performed",
+        "security_assessment"
+      ],
+      "type": "dict"
+    },
+    "reports/hijacking_tests/cookie_theft_results_20250605_213303.json": {
+      "status": "valid",
+      "size": 95,
+      "keys": [
+        "success_rate",
+        "methods_tested",
+        "timestamp"
+      ],
+      "type": "dict"
+    },
+    "reports/hijacking_tests/mitm_attack_results_20250605_213307.json": {
+      "status": "valid",
+      "size": 142,
+      "keys": [
+        "vulnerable",
+        "https_enforced",
+        "cert_valid",
+        "hsts_present",
+        "timestamp"
+      ],
+      "type": "dict"
+    },
+    "reports/hijacking_tests/cookie_theft_results_20250605_205758.json": {
+      "status": "valid",
+      "size": 94,
+      "keys": [
+        "success_rate",
+        "methods_tested",
+        "timestamp"
+      ],
+      "type": "dict"
+    },
+    "reports/hijacking_tests/mitm_attack_results_20250605_205805.json": {
+      "status": "valid",
+      "size": 142,
+      "keys": [
+        "vulnerable",
+        "https_enforced",
+        "cert_valid",
+        "hsts_present",
+        "timestamp"
+      ],
+      "type": "dict"
+    },
+    "reports/hijacking_tests/hijacking_assessment_report_20250605_213307.json": {
+      "status": "valid",
+      "size": 397,
+      "keys": [
+        "test_timestamp",
+        "target_domain",
+        "tests_performed",
+        "security_assessment"
+      ],
+      "type": "dict"
+    },
+    "src/alx_trading_advanced/advanced_real_extraction_1748948092.json": {
+      "status": "valid",
+      "size": 2492,
+      "keys": [
+        "target",
+        "extraction_timestamp",
+        "method",
+        "session_used",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "src/alx_trading/actual_extraction_1748948655.json": {
+      "status": "valid",
+      "size": 443,
+      "keys": [
+        "extraction_info",
+        "session_test",
+        "profile_data",
+        "dm_access_attempts",
+        "actual_data_found",
+        "extraction_errors"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460613/config/proxy_config.json": {
+      "status": "valid",
+      "size": 595,
+      "keys": [
+        "accounts",
+        "user_agents"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460613/config/json/MASTER_PROFILE_alx_trading_1748262733.json": {
+      "status": "valid",
+      "size": 2199,
+      "keys": [
+        "timestamp",
+        "target",
+        "confidence_level",
+        "data_sources",
+        "profile",
+        "intelligence_summary",
+        "threat_level",
+        "recommended_actions"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460613/config/json/MASTER_PROFILE_alx_trading_1748264047.json": {
+      "status": "valid",
+      "size": 2896,
+      "keys": [
+        "timestamp",
+        "target",
+        "confidence_level",
+        "data_sources",
+        "profile",
+        "intelligence_summary",
+        "threat_level",
+        "recommended_actions"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460613/config/json/INTIMATE_MESSAGES_alx.trading_1748264946.json": {
+      "status": "valid",
+      "size": 322,
+      "keys": [
+        "target",
+        "intimate_messages",
+        "analysis",
+        "extraction_timestamp"
+      ],
+      "type": "dict"
+    },
+    "REAL_DATA_BACKUP_1749460613/results/dm_content_analysis/extracted_messages_1749233354.json": {
+      "status": "valid",
+      "size": 1530493,
+      "keys": null,
+      "type": "list"
+    },
+    "results/bypass_analysis/bypass_1749233980.json": {
+      "status": "valid",
+      "size": 2993,
+      "keys": [
+        "timestamp",
+        "techniques_applied",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "results/bypass_analysis/bypass_1749229470.json": {
+      "status": "valid",
+      "size": 2992,
+      "keys": [
+        "timestamp",
+        "techniques_applied",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "results/bypass_analysis/bypass_1749229612.json": {
+      "status": "valid",
+      "size": 2994,
+      "keys": [
+        "timestamp",
+        "techniques_applied",
+        "results"
+      ],
+      "type": "dict"
+    },
+    "results/penetration/recon_alx.trading_1749230002.json": {
+      "status": "valid",
+      "size": 24392,
+      "keys": [
+        "target",
+        "timestamp",
+        "techniques_used",
+        "findings"
+      ],
+      "type": "dict"
+    },
+    "results/penetration/recon_alx.trading_1749230049.json": {
+      "status": "valid",
+      "size": 24088,
+      "keys": [
+        "target",
+        "timestamp",
+        "techniques_used",
+        "findings"
+      ],
+      "type": "dict"
+    },
+    "results/real_extraction/extraction_alx.trading_1749205875.json": {
+      "status": "valid",
+      "size": 28056,
+      "keys": [
+        "target",
+        "timestamp",
+        "sessions_tested",
+        "endpoints_tested",
+        "extraction_attempts",
+        "successful_extractions",
+        "data_extracted"
+      ],
+      "type": "dict"
+    },
+    "results/real_extraction/extraction_alx.trading_1749230483.json": {
+      "status": "valid",
+      "size": 904017,
+      "keys": [
+        "target",
+        "timestamp",
+        "sessions_tested",
+        "endpoints_tested",
+        "extraction_attempts",
+        "successful_extractions",
+        "data_extracted"
+      ],
+      "type": "dict"
+    },
+    "results/real_extraction/extraction_alx.trading_1749230116.json": {
+      "status": "valid",
+      "size": 901417,
+      "keys": [
+        "target",
+        "timestamp",
+        "sessions_tested",
+        "endpoints_tested",
+        "extraction_attempts",
+        "successful_extractions",
+        "data_extracted"
+      ],
+      "type": "dict"
+    },
+    "results/real_extraction/comprehensive_report_1749205875.json": {
+      "status": "valid",
+      "size": 31088,
+      "keys": [
+        "report_info",
+        "bypass_summary",
+        "extraction_summary",
+        "detailed_results"
+      ],
+      "type": "dict"
+    },
+    "results/real_extraction/comprehensive_report_1749230116.json": {
+      "status": "valid",
+      "size": 1029525,
+      "keys": [
+        "report_info",
+        "bypass_summary",
+        "extraction_summary",
+        "detailed_results"
+      ],
+      "type": "dict"
+    },
+    "results/real_extraction/comprehensive_report_1749234061.json": {
+      "status": "valid",
+      "size": 1034492,
+      "keys": [
+        "report_info",
+        "bypass_summary",
+        "extraction_summary",
+        "detailed_results"
+      ],
+      "type": "dict"
+    },
+    "results/real_extraction/comprehensive_report_1749230483.json": {
+      "status": "valid",
+      "size": 1032209,
+      "keys": [
+        "report_info",
+        "bypass_summary",
+        "extraction_summary",
+        "detailed_results"
+      ],
+      "type": "dict"
+    },
+    "results/reconnaissance/recon_alx.trading_1749229539.json": {
+      "status": "valid",
+      "size": 5868,
+      "keys": [
+        "target",
+        "timestamp",
+        "reconnaissance_phases",
+        "findings"
+      ],
+      "type": "dict"
+    },
+    "results/reconnaissance/recon_alx.trading_1749229399.json": {
+      "status": "valid",
+      "size": 6192,
+      "keys": [
+        "target",
+        "timestamp",
+        "reconnaissance_phases",
+        "findings"
+      ],
+      "type": "dict"
+    },
+    "results/dm_content_analysis/extracted_messages_1749233354.json": {
+      "status": "valid",
+      "size": 1530493,
+      "keys": null,
+      "type": "list"
+    },
+    "results/ultimate_master/ultimate_master_report_1749232516.json": {
+      "status": "valid",
+      "size": 338,
+      "keys": [
+        "extraction_type",
+        "timestamp",
+        "summary",
+        "all_results",
+        "methods_attempted",
+        "successful_methods"
+      ],
+      "type": "dict"
+    },
+    "quick-dm-extractor.py": {
+      "status": "valid",
+      "size": 14456,
+      "lines": 360,
+      "imports": 6
+    },
+    "status_check.py": {
+      "status": "valid",
+      "size": 1707,
+      "lines": 64,
+      "imports": 3
+    },
+    "performance_optimizer.py": {
+      "status": "valid",
+      "size": 4238,
+      "lines": 119,
+      "imports": 5
+    },
+    "playwright_dm_extractor.py": {
+      "status": "valid",
+      "size": 10449,
+      "lines": 293,
+      "imports": 6
+    },
+    "advanced_alx_dm_extractor_v2.py": {
+      "status": "valid",
+      "size": 23007,
+      "lines": 593,
+      "imports": 18
+    },
+    "instagram_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 17699,
+      "lines": 484,
+      "imports": 6
+    },
+    "cute_sync_dm_extractor.py": {
+      "status": "valid",
+      "size": 17944,
+      "lines": 510,
+      "imports": 12
+    },
+    "clear_explanation.py": {
+      "status": "valid",
+      "size": 3982,
+      "lines": 92,
+      "imports": 2
+    },
+    "final_validation.py": {
+      "status": "valid",
+      "size": 6565,
+      "lines": 166,
+      "imports": 3
+    },
+    "browser_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 17642,
+      "lines": 438,
+      "imports": 9
+    },
+    "get-pip.py": {
+      "status": "valid",
+      "size": 2279307,
+      "lines": 28579,
+      "imports": 8
+    },
+    "advanced_instagram_hijacker.py": {
+      "status": "valid",
+      "size": 16617,
+      "lines": 463,
+      "imports": 12
+    },
+    "penetration_launcher.py": {
+      "status": "valid",
+      "size": 6195,
+      "lines": 164,
+      "imports": 4
+    },
+    "recovery_mission_complete.py": {
+      "status": "valid",
+      "size": 6172,
+      "lines": 167,
+      "imports": 2
+    },
+    "web_scraping_alx_extractor.py": {
+      "status": "valid",
+      "size": 15605,
+      "lines": 394,
+      "imports": 8
+    },
+    "comprehensive_real_data_summary.py": {
+      "status": "valid",
+      "size": 11303,
+      "lines": 281,
+      "imports": 3
+    },
+    "codespace_instagram_extractor.py": {
+      "status": "valid",
+      "size": 12757,
+      "lines": 348,
+      "imports": 10
+    },
+    "master_dm_launcher.py": {
+      "status": "valid",
+      "size": 10678,
+      "lines": 289,
+      "imports": 7
+    },
+    "instant_500_check.py": {
+      "status": "valid",
+      "size": 5657,
+      "lines": 170,
+      "imports": 4
+    },
+    "clean_sample_messages.py": {
+      "status": "valid",
+      "size": 5435,
+      "lines": 154,
+      "imports": 5
+    },
+    "optimized_alx_extractor.py": {
+      "status": "valid",
+      "size": 8424,
+      "lines": 239,
+      "imports": 7
+    },
+    "realtime_session_capture.py": {
+      "status": "valid",
+      "size": 12919,
+      "lines": 303,
+      "imports": 8
+    },
+    "session_hijack_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 20021,
+      "lines": 519,
+      "imports": 14
+    },
+    "simple-full-recon.py": {
+      "status": "valid",
+      "size": 8687,
+      "lines": 292,
+      "imports": 6
+    },
+    "hijacked_session_dm_extractor.py": {
+      "status": "valid",
+      "size": 14120,
+      "lines": 333,
+      "imports": 6
+    },
+    "quick_test.py": {
+      "status": "valid",
+      "size": 3571,
+      "lines": 99,
+      "imports": 5
+    },
+    "static_html_dm_parser.py": {
+      "status": "valid",
+      "size": 1,
+      "lines": 1,
+      "imports": 0
+    },
+    "hardcore_demo.py": {
+      "status": "valid",
+      "size": 16338,
+      "lines": 409,
+      "imports": 7
+    },
+    "insta_osint_ctf.py": {
+      "status": "valid",
+      "size": 16174,
+      "lines": 367,
+      "imports": 8
+    },
+    "system_readiness_test.py": {
+      "status": "valid",
+      "size": 6621,
+      "lines": 161,
+      "imports": 4
+    },
+    "ultimate_instagram_extractor_2025.py": {
+      "status": "valid",
+      "size": 31463,
+      "lines": 801,
+      "imports": 13
+    },
+    "mobile_api_dm_extractor.py": {
+      "status": "valid",
+      "size": 25359,
+      "lines": 668,
+      "imports": 15
+    },
+    "hacking-menu.py": {
+      "status": "valid",
+      "size": 39649,
+      "lines": 1235,
+      "imports": 0
+    },
+    "fix_vscode_crashes.py": {
+      "status": "valid",
+      "size": 12214,
+      "lines": 326,
+      "imports": 6
+    },
+    "fix_workspace_problems.py": {
+      "status": "valid",
+      "size": 6814,
+      "lines": 194,
+      "imports": 5
+    },
+    "websocket_dm_interceptor.py": {
+      "status": "valid",
+      "size": 20403,
+      "lines": 564,
+      "imports": 16
+    },
+    "quick_session_test.py": {
+      "status": "valid",
+      "size": 4008,
+      "lines": 113,
+      "imports": 4
+    },
+    "browser_session_monitor.py": {
+      "status": "valid",
+      "size": 8646,
+      "lines": 230,
+      "imports": 7
+    },
+    "super_enhanced_dm_extractor.py": {
+      "status": "valid",
+      "size": 18082,
+      "lines": 475,
+      "imports": 8
+    },
+    "fixed_dm_extractor.py": {
+      "status": "valid",
+      "size": 8185,
+      "lines": 216,
+      "imports": 6
+    },
+    "recovery_status_report.py": {
+      "status": "valid",
+      "size": 6706,
+      "lines": 192,
+      "imports": 5
+    },
+    "alx_trading_database_setup.py": {
+      "status": "valid",
+      "size": 4510,
+      "lines": 152,
+      "imports": 1
+    },
+    "fresh_token_hunter.py": {
+      "status": "valid",
+      "size": 2766,
+      "lines": 88,
+      "imports": 4
+    },
+    "quick_penetration_test.py": {
+      "status": "valid",
+      "size": 3837,
+      "lines": 130,
+      "imports": 2
+    },
+    "quick_500_fix.py": {
+      "status": "valid",
+      "size": 10971,
+      "lines": 283,
+      "imports": 6
+    },
+    "dm_content_analyzer.py": {
+      "status": "valid",
+      "size": 17407,
+      "lines": 471,
+      "imports": 10
+    },
+    "ultimate_automated_extractor.py": {
+      "status": "valid",
+      "size": 17629,
+      "lines": 501,
+      "imports": 8
+    },
+    "proxy_bypass_instagram.py": {
+      "status": "valid",
+      "size": 2012,
+      "lines": 51,
+      "imports": 3
+    },
+    "ultra_fast_dm_extractor_builtin.py": {
+      "status": "valid",
+      "size": 15597,
+      "lines": 388,
+      "imports": 13
+    },
+    "no_dependency_dm_extractor.py": {
+      "status": "valid",
+      "size": 12864,
+      "lines": 331,
+      "imports": 9
+    },
+    "advanced_bypass_arsenal_2025.py": {
+      "status": "valid",
+      "size": 13253,
+      "lines": 370,
+      "imports": 10
+    },
+    "quick_dm_access_test.py": {
+      "status": "valid",
+      "size": 8611,
+      "lines": 260,
+      "imports": 5
+    },
+    "ultimate_demo_showcase.py": {
+      "status": "valid",
+      "size": 15345,
+      "lines": 387,
+      "imports": 7
+    },
+    "full_auto_extractor.py": {
+      "status": "valid",
+      "size": 19404,
+      "lines": 522,
+      "imports": 9
+    },
+    "rate_limit_bypass_arsenal.py": {
+      "status": "valid",
+      "size": 15515,
+      "lines": 370,
+      "imports": 7
+    },
+    "advanced_browser_dm_extractor.py": {
+      "status": "valid",
+      "size": 23862,
+      "lines": 635,
+      "imports": 10
+    },
+    "automated_dm_extractor.py": {
+      "status": "valid",
+      "size": 17479,
+      "lines": 463,
+      "imports": 9
+    },
+    "ultra_simple_test.py": {
+      "status": "valid",
+      "size": 5842,
+      "lines": 173,
+      "imports": 3
+    },
+    "advanced_dm_extractor.py": {
+      "status": "valid",
+      "size": 15228,
+      "lines": 418,
+      "imports": 13
+    },
+    "instagram_websocket_interceptor.py": {
+      "status": "valid",
+      "size": 13993,
+      "lines": 383,
+      "imports": 11
+    },
+    "ready_extractor_template.py": {
+      "status": "valid",
+      "size": 2693,
+      "lines": 89,
+      "imports": 3
+    },
+    "direct_dm_analyzer_2025.py": {
+      "status": "valid",
+      "size": 13594,
+      "lines": 362,
+      "imports": 8
+    },
+    "extract_alx_trading.py": {
+      "status": "valid",
+      "size": 909,
+      "lines": 32,
+      "imports": 3
+    },
+    "session_status_checker.py": {
+      "status": "valid",
+      "size": 2944,
+      "lines": 86,
+      "imports": 2
+    },
+    "final_extraction_attempt.py": {
+      "status": "valid",
+      "size": 8604,
+      "lines": 203,
+      "imports": 5
+    },
+    "advanced_alx_extractor.py": {
+      "status": "valid",
+      "size": 11281,
+      "lines": 295,
+      "imports": 7
+    },
+    "realops.py": {
+      "status": "valid",
+      "size": 5774,
+      "lines": 179,
+      "imports": 6
+    },
+    "working_dm_extractor.py": {
+      "status": "valid",
+      "size": 12923,
+      "lines": 358,
+      "imports": 7
+    },
+    "enhanced_dm_extractor.py": {
+      "status": "valid",
+      "size": 11676,
+      "lines": 291,
+      "imports": 6
+    },
+    "auto_session_extractor.py": {
+      "status": "valid",
+      "size": 4497,
+      "lines": 102,
+      "imports": 3
+    },
+    "simple_extraction_test.py": {
+      "status": "valid",
+      "size": 4805,
+      "lines": 138,
+      "imports": 4
+    },
+    "final_cleanup_helper.py": {
+      "status": "valid",
+      "size": 11869,
+      "lines": 382,
+      "imports": 20
+    },
+    "fresh_session_finder.py": {
+      "status": "valid",
+      "size": 14680,
+      "lines": 362,
+      "imports": 7
+    },
+    "pentest_ready_summary.py": {
+      "status": "valid",
+      "size": 3352,
+      "lines": 91,
+      "imports": 2
+    },
+    "instagram_redirect_fix.py": {
+      "status": "valid",
+      "size": 8366,
+      "lines": 233,
+      "imports": 5
+    },
+    "auto_dm_extractor.py": {
+      "status": "valid",
+      "size": 15491,
+      "lines": 415,
+      "imports": 6
+    },
+    "direct_test.py": {
+      "status": "valid",
+      "size": 4123,
+      "lines": 107,
+      "imports": 3
+    },
+    "simple_session_guide.py": {
+      "status": "valid",
+      "size": 3803,
+      "lines": 124,
+      "imports": 3
+    },
+    "ultra_quick_alx_fix.py": {
+      "status": "valid",
+      "size": 5464,
+      "lines": 167,
+      "imports": 4
+    },
+    "simple_final_report.py": {
+      "status": "valid",
+      "size": 1846,
+      "lines": 66,
+      "imports": 3
+    },
+    "weaponized-recon-suite.py": {
+      "status": "valid",
+      "size": 11609,
+      "lines": 332,
+      "imports": 6
+    },
+    "git_file_recovery_system.py": {
+      "status": "valid",
+      "size": 19455,
+      "lines": 468,
+      "imports": 9
+    },
+    "simple_dm_extractor.py": {
+      "status": "valid",
+      "size": 3963,
+      "lines": 115,
+      "imports": 4
+    },
+    "check_databases.py": {
+      "status": "valid",
+      "size": 2599,
+      "lines": 78,
+      "imports": 4
+    },
+    "comprehensive_dm_analysis_2025.py": {
+      "status": "valid",
+      "size": 12111,
+      "lines": 294,
+      "imports": 5
+    },
+    "real_dm_extractor_alx.py": {
+      "status": "valid",
+      "size": 11076,
+      "lines": 290,
+      "imports": 6
+    },
+    "quick_pentest_check.py": {
+      "status": "valid",
+      "size": 5075,
+      "lines": 149,
+      "imports": 3
+    },
+    "hardcore_validator.py": {
+      "status": "valid",
+      "size": 13362,
+      "lines": 354,
+      "imports": 7
+    },
+    "simple-recon.py": {
+      "status": "valid",
+      "size": 1,
+      "lines": 1,
+      "imports": 0
+    },
+    "instagram_redirect_loop_fixer.py": {
+      "status": "valid",
+      "size": 15210,
+      "lines": 407,
+      "imports": 7
+    },
+    "ultimate_real_instagram_penetration_2025.py": {
+      "status": "valid",
+      "size": 33935,
+      "lines": 844,
+      "imports": 19
+    },
+    "brightdata_test.py": {
+      "status": "valid",
+      "size": 944,
+      "lines": 29,
+      "imports": 1
+    },
+    "hardcore_setup.py": {
+      "status": "valid",
+      "size": 5383,
+      "lines": 176,
+      "imports": 4
+    },
+    "fix_vscode_linting.py": {
+      "status": "valid",
+      "size": 5863,
+      "lines": 192,
+      "imports": 3
+    },
+    "final_automated_extractor.py": {
+      "status": "valid",
+      "size": 13822,
+      "lines": 337,
+      "imports": 7
+    },
+    "session_finder.py": {
+      "status": "valid",
+      "size": 4410,
+      "lines": 136,
+      "imports": 5
+    },
+    "fix_dm_extraction.py": {
+      "status": "valid",
+      "size": 3949,
+      "lines": 116,
+      "imports": 5
+    },
+    "manual_recovery_guide.py": {
+      "status": "valid",
+      "size": 3000,
+      "lines": 77,
+      "imports": 3
+    },
+    "real_time_dm_interceptor_2025.py": {
+      "status": "valid",
+      "size": 15396,
+      "lines": 409,
+      "imports": 14
+    },
+    "ipad_simple_guide.py": {
+      "status": "valid",
+      "size": 4285,
+      "lines": 103,
+      "imports": 0
+    },
+    "advanced_penetration_demo.py": {
+      "status": "valid",
+      "size": 10980,
+      "lines": 281,
+      "imports": 7
+    },
+    "ultimate_real_dm_hunter_2025.py": {
+      "status": "valid",
+      "size": 24356,
+      "lines": 597,
+      "imports": 18
+    },
+    "quick-test.py": {
+      "status": "valid",
+      "size": 1,
+      "lines": 1,
+      "imports": 0
+    },
+    "comprehensive_session_analyzer.py": {
+      "status": "valid",
+      "size": 12639,
+      "lines": 337,
+      "imports": 7
+    },
+    "direct_session_hijack_test.py": {
+      "status": "valid",
+      "size": 6075,
+      "lines": 190,
+      "imports": 5
+    },
+    "direct-weaponized-recon.py": {
+      "status": "valid",
+      "size": 13412,
+      "lines": 327,
+      "imports": 7
+    },
+    "codespace_troubleshooter.py": {
+      "status": "valid",
+      "size": 20987,
+      "lines": 586,
+      "imports": 23
+    },
+    "ultimate_session_hunter.py": {
+      "status": "valid",
+      "size": 12057,
+      "lines": 342,
+      "imports": 8
+    },
+    "manual_session_input.py": {
+      "status": "valid",
+      "size": 3310,
+      "lines": 113,
+      "imports": 3
+    },
+    "create_deployment_package.py": {
+      "status": "valid",
+      "size": 4158,
+      "lines": 140,
+      "imports": 4
+    },
+    "insert_deep_profile.py": {
+      "status": "valid",
+      "size": 11829,
+      "lines": 326,
+      "imports": 3
+    },
+    "ultimate_alx_dm_extractor.py": {
+      "status": "valid",
+      "size": 15801,
+      "lines": 449,
+      "imports": 9
+    },
+    "setup_playwright.py": {
+      "status": "valid",
+      "size": 7238,
+      "lines": 174,
+      "imports": 7
+    },
+    "complete_sessionid_guide.py": {
+      "status": "valid",
+      "size": 6298,
+      "lines": 190,
+      "imports": 3
+    },
+    "real_data_extractor.py": {
+      "status": "valid",
+      "size": 8917,
+      "lines": 219,
+      "imports": 4
+    },
+    "instant_session_capture.py": {
+      "status": "valid",
+      "size": 10892,
+      "lines": 257,
+      "imports": 6
+    },
+    "real_extraction_with_bypass_2025.py": {
+      "status": "valid",
+      "size": 32714,
+      "lines": 770,
+      "imports": 12
+    },
+    "hardcore_dm_extractor.py": {
+      "status": "valid",
+      "size": 43855,
+      "lines": 1140,
+      "imports": 21
+    },
+    "complete_system_demo.py": {
+      "status": "valid",
+      "size": 11082,
+      "lines": 341,
+      "imports": 7
+    },
+    "demo_complete_system.py": {
+      "status": "valid",
+      "size": 7907,
+      "lines": 230,
+      "imports": 5
+    },
+    "auto_session_generator.py": {
+      "status": "valid",
+      "size": 11690,
+      "lines": 337,
+      "imports": 7
+    },
+    "easy_alx_extractor.py": {
+      "status": "valid",
+      "size": 5276,
+      "lines": 134,
+      "imports": 4
+    },
+    "rate_limit_analyzer.py": {
+      "status": "valid",
+      "size": 16223,
+      "lines": 411,
+      "imports": 10
+    },
+    "extract_dm_texts_from_report.py": {
+      "status": "valid",
+      "size": 1983,
+      "lines": 58,
+      "imports": 3
+    },
+    "cleanup_fake_data.py": {
+      "status": "valid",
+      "size": 11517,
+      "lines": 308,
+      "imports": 4
+    },
+    "run_test.py": {
+      "status": "valid",
+      "size": 843,
+      "lines": 37,
+      "imports": 3
+    },
+    "test_real_extraction.py": {
+      "status": "valid",
+      "size": 6585,
+      "lines": 179,
+      "imports": 5
+    },
+    "ultimate_cleanup.py": {
+      "status": "valid",
+      "size": 5687,
+      "lines": 212,
+      "imports": 2
+    },
+    "auto_login_export.py": {
+      "status": "valid",
+      "size": 14592,
+      "lines": 385,
+      "imports": 10
+    },
+    "enhanced_instagram_extraction_2025.py": {
+      "status": "valid",
+      "size": 60239,
+      "lines": 1527,
+      "imports": 15
+    },
+    "simple_automated_extractor.py": {
+      "status": "valid",
+      "size": 16015,
+      "lines": 430,
+      "imports": 7
+    },
+    "public_data_extractor.py": {
+      "status": "valid",
+      "size": 9259,
+      "lines": 240,
+      "imports": 5
+    },
+    "system_status_demo.py": {
+      "status": "valid",
+      "size": 7268,
+      "lines": 237,
+      "imports": 4
+    },
+    "builtin_extraction_test.py": {
+      "status": "valid",
+      "size": 11694,
+      "lines": 251,
+      "imports": 8
+    },
+    "system_test.py": {
+      "status": "valid",
+      "size": 2951,
+      "lines": 90,
+      "imports": 0
+    },
+    "test_dm_timeline.py": {
+      "status": "valid",
+      "size": 3367,
+      "lines": 98,
+      "imports": 3
+    },
+    "simple_network_test.py": {
+      "status": "valid",
+      "size": 2207,
+      "lines": 65,
+      "imports": 4
+    },
+    "hardcore_launcher.py": {
+      "status": "valid",
+      "size": 9048,
+      "lines": 271,
+      "imports": 6
+    },
+    "network-recon-thai.py": {
+      "status": "valid",
+      "size": 10741,
+      "lines": 279,
+      "imports": 3
+    },
+    "professional-pentest-suite.py": {
+      "status": "valid",
+      "size": 25512,
+      "lines": 628,
+      "imports": 16
+    },
+    "html_dm_parser.py": {
+      "status": "valid",
+      "size": 11957,
+      "lines": 309,
+      "imports": 5
+    },
+    "real_session_validator.py": {
+      "status": "valid",
+      "size": 9344,
+      "lines": 242,
+      "imports": 7
+    },
+    "simple_http_dm_extractor.py": {
+      "status": "valid",
+      "size": 7902,
+      "lines": 211,
+      "imports": 6
+    },
+    "final_dm_extractor.py": {
+      "status": "valid",
+      "size": 10604,
+      "lines": 267,
+      "imports": 5
+    },
+    "ultra_simple_500_test.py": {
+      "status": "valid",
+      "size": 5674,
+      "lines": 162,
+      "imports": 4
+    },
+    "check_ig_username.py": {
+      "status": "valid",
+      "size": 2113,
+      "lines": 66,
+      "imports": 2
+    },
+    "demo_session_extractor.py": {
+      "status": "valid",
+      "size": 8948,
+      "lines": 240,
+      "imports": 6
+    },
+    "ipad_solution.py": {
+      "status": "valid",
+      "size": 12197,
+      "lines": 266,
+      "imports": 5
+    },
+    "create_session.py": {
+      "status": "valid",
+      "size": 968,
+      "lines": 36,
+      "imports": 1
+    },
+    "manual_dm_extractor.py": {
+      "status": "valid",
+      "size": 13049,
+      "lines": 356,
+      "imports": 5
+    },
+    "instagram_penetration_showcase.py": {
+      "status": "valid",
+      "size": 17337,
+      "lines": 483,
+      "imports": 8
+    },
+    "performance_comparison.py": {
+      "status": "valid",
+      "size": 11088,
+      "lines": 306,
+      "imports": 6
+    },
+    "breakthrough_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 18847,
+      "lines": 463,
+      "imports": 16
+    },
+    "auto_session_exporter.py": {
+      "status": "valid",
+      "size": 10470,
+      "lines": 288,
+      "imports": 6
+    },
+    "final_real_dm_extractor.py": {
+      "status": "valid",
+      "size": 14364,
+      "lines": 369,
+      "imports": 7
+    },
+    "quick_insert_profile.py": {
+      "status": "valid",
+      "size": 4115,
+      "lines": 141,
+      "imports": 2
+    },
+    "real_dm_extractor_fresh.py": {
+      "status": "valid",
+      "size": 8815,
+      "lines": 247,
+      "imports": 6
+    },
+    "alx_trading_extractor.py": {
+      "status": "valid",
+      "size": 12527,
+      "lines": 321,
+      "imports": 7
+    },
+    "ultimate_workspace_fixer.py": {
+      "status": "valid",
+      "size": 16894,
+      "lines": 466,
+      "imports": 11
+    },
+    "ultra_fast_dm_extractor.py": {
+      "status": "valid",
+      "size": 13154,
+      "lines": 355,
+      "imports": 16
+    },
+    "brightdata_playwright_login_dm.py": {
+      "status": "valid",
+      "size": 3165,
+      "lines": 76,
+      "imports": 2
+    },
+    "alx_mobile_extractor.py": {
+      "status": "valid",
+      "size": 10176,
+      "lines": 285,
+      "imports": 7
+    },
+    "ctf_hacking_masterclass_2025.py": {
+      "status": "valid",
+      "size": 16590,
+      "lines": 499,
+      "imports": 13
+    },
+    "check_real_dm_db.py": {
+      "status": "valid",
+      "size": 1707,
+      "lines": 58,
+      "imports": 3
+    },
+    "ctf_instagram_exploiter_2025.py": {
+      "status": "valid",
+      "size": 28803,
+      "lines": 767,
+      "imports": 16
+    },
+    "codespace_quick_fix.py": {
+      "status": "valid",
+      "size": 12189,
+      "lines": 323,
+      "imports": 10
+    },
+    "auto_ig_session_login.py": {
+      "status": "valid",
+      "size": 2137,
+      "lines": 61,
+      "imports": 4
+    },
+    "brutal_dir_brute.py": {
+      "status": "valid",
+      "size": 5434,
+      "lines": 139,
+      "imports": 4
+    },
+    "quick_start.py": {
+      "status": "valid",
+      "size": 1295,
+      "lines": 53,
+      "imports": 2
+    },
+    "auto-recon-tradeyourway.py": {
+      "status": "valid",
+      "size": 7534,
+      "lines": 218,
+      "imports": 5
+    },
+    "instagram_mobile_api_emulator.py": {
+      "status": "valid",
+      "size": 14878,
+      "lines": 412,
+      "imports": 10
+    },
+    "alx_trading_targeted_extractor.py": {
+      "status": "valid",
+      "size": 22374,
+      "lines": 578,
+      "imports": 11
+    },
+    "performance_benchmark.py": {
+      "status": "valid",
+      "size": 9312,
+      "lines": 260,
+      "imports": 6
+    },
+    "full-recon-tradeyourway.py": {
+      "status": "valid",
+      "size": 13424,
+      "lines": 356,
+      "imports": 10
+    },
+    "validate_ig_sessions_fixed.py": {
+      "status": "valid",
+      "size": 7549,
+      "lines": 210,
+      "imports": 6
+    },
+    "quick_weaponized_recon.py": {
+      "status": "valid",
+      "size": 9615,
+      "lines": 300,
+      "imports": 7
+    },
+    "cute_rate_dm_extractor.py": {
+      "status": "valid",
+      "size": 18566,
+      "lines": 498,
+      "imports": 10
+    },
+    "simple_runner.py": {
+      "status": "valid",
+      "size": 1538,
+      "lines": 52,
+      "imports": 3
+    },
+    "ultimate_dm_master_2025.py": {
+      "status": "valid",
+      "size": 15489,
+      "lines": 411,
+      "imports": 8
+    },
+    "simple_session_grab.py": {
+      "status": "valid",
+      "size": 5167,
+      "lines": 154,
+      "imports": 3
+    },
+    "quick-weaponized-recon-fixed.py": {
+      "status": "valid",
+      "size": 5504,
+      "lines": 159,
+      "imports": 4
+    },
+    "real_instagram_penetration_2025.py": {
+      "status": "valid",
+      "size": 24823,
+      "lines": 661,
+      "imports": 14
+    },
+    "importt.py": {
+      "status": "valid",
+      "size": 6411,
+      "lines": 124,
+      "imports": 7
+    },
+    "simple_extractor.py": {
+      "status": "valid",
+      "size": 6332,
+      "lines": 181,
+      "imports": 5
+    },
+    "quick_status.py": {
+      "status": "valid",
+      "size": 1105,
+      "lines": 34,
+      "imports": 3
+    },
+    "mission_complete.py": {
+      "status": "valid",
+      "size": 6074,
+      "lines": 193,
+      "imports": 2
+    },
+    "ultimate_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 35567,
+      "lines": 923,
+      "imports": 18
+    },
+    "real_dm_extractor.py": {
+      "status": "valid",
+      "size": 12181,
+      "lines": 261,
+      "imports": 4
+    },
+    "session_validator.py": {
+      "status": "valid",
+      "size": 10630,
+      "lines": 257,
+      "imports": 8
+    },
+    "test_execution.py": {
+      "status": "valid",
+      "size": 545,
+      "lines": 25,
+      "imports": 1
+    },
+    "simple_session_auto.py": {
+      "status": "valid",
+      "size": 3671,
+      "lines": 103,
+      "imports": 4
+    },
+    "quick-pentest-final.py": {
+      "status": "valid",
+      "size": 10484,
+      "lines": 286,
+      "imports": 6
+    },
+    "comprehensive_fake_data_cleanup.py": {
+      "status": "valid",
+      "size": 7526,
+      "lines": 176,
+      "imports": 5
+    },
+    "complete_project_analysis.py": {
+      "status": "valid",
+      "size": 17740,
+      "lines": 427,
+      "imports": 10
+    },
+    "connectivity_test.py": {
+      "status": "valid",
+      "size": 1241,
+      "lines": 44,
+      "imports": 3
+    },
+    "test_fleming_session.py": {
+      "status": "valid",
+      "size": 4050,
+      "lines": 114,
+      "imports": 4
+    },
+    "brightdata_playwright_example.py": {
+      "status": "valid",
+      "size": 708,
+      "lines": 19,
+      "imports": 1
+    },
+    "fixed_instagram_extractor.py": {
+      "status": "valid",
+      "size": 9019,
+      "lines": 258,
+      "imports": 7
+    },
+    "advanced-analysis-tradeyourway.py": {
+      "status": "valid",
+      "size": 10340,
+      "lines": 278,
+      "imports": 5
+    },
+    "memory_efficient_dm_extractor.py": {
+      "status": "valid",
+      "size": 15505,
+      "lines": 424,
+      "imports": 11
+    },
+    "ultimate_dm_extraction_suite_2025.py": {
+      "status": "valid",
+      "size": 13660,
+      "lines": 348,
+      "imports": 8
+    },
+    "browser_login_extractor.py": {
+      "status": "valid",
+      "size": 2127,
+      "lines": 65,
+      "imports": 3
+    },
+    "complete_demo_showcase.py": {
+      "status": "valid",
+      "size": 15017,
+      "lines": 410,
+      "imports": 9
+    },
+    "final_status_and_next_steps.py": {
+      "status": "valid",
+      "size": 6073,
+      "lines": 170,
+      "imports": 3
+    },
+    "real_dm_browser_extractor.py": {
+      "status": "valid",
+      "size": 13669,
+      "lines": 366,
+      "imports": 8
+    },
+    "websocket_dm_interceptor_2025.py": {
+      "status": "valid",
+      "size": 15922,
+      "lines": 424,
+      "imports": 11
+    },
+    "ctf_hacking_masterclass_2025_fixed.py": {
+      "status": "valid",
+      "size": 37446,
+      "lines": 1102,
+      "imports": 28
+    },
+    "instagram_500_complete_fix.py": {
+      "status": "valid",
+      "size": 9165,
+      "lines": 241,
+      "imports": 6
+    },
+    "final_pentest_readiness_report.py": {
+      "status": "valid",
+      "size": 8754,
+      "lines": 227,
+      "imports": 5
+    },
+    "comprehensive_dm_scanner.py": {
+      "status": "valid",
+      "size": 5635,
+      "lines": 168,
+      "imports": 5
+    },
+    "validate_ig_sessions.py": {
+      "status": "valid",
+      "size": 8453,
+      "lines": 245,
+      "imports": 6
+    },
+    "final_alx_solution.py": {
+      "status": "valid",
+      "size": 10655,
+      "lines": 313,
+      "imports": 7
+    },
+    "instagram_session_fixer.py": {
+      "status": "valid",
+      "size": 14440,
+      "lines": 388,
+      "imports": 6
+    },
+    "ultra_simple_extractor.py": {
+      "status": "valid",
+      "size": 4018,
+      "lines": 131,
+      "imports": 4
+    },
+    "recon.py": {
+      "status": "valid",
+      "size": 7516,
+      "lines": 240,
+      "imports": 3
+    },
+    "pentest_assessment.py": {
+      "status": "valid",
+      "size": 15276,
+      "lines": 348,
+      "imports": 4
+    },
+    "alx_diagnostic.py": {
+      "status": "valid",
+      "size": 12087,
+      "lines": 351,
+      "imports": 7
+    },
+    "thai_solution.py": {
+      "status": "valid",
+      "size": 15462,
+      "lines": 413,
+      "imports": 12
+    },
+    "mobile_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 15885,
+      "lines": 406,
+      "imports": 13
+    },
+    "improved_alx_extractor.py": {
+      "status": "valid",
+      "size": 14954,
+      "lines": 413,
+      "imports": 12
+    },
+    "view_deep_profile.py": {
+      "status": "valid",
+      "size": 2853,
+      "lines": 71,
+      "imports": 2
+    },
+    "batch_git_committer.py": {
+      "status": "valid",
+      "size": 6997,
+      "lines": 208,
+      "imports": 5
+    },
+    "instagram_connection_fixer.py": {
+      "status": "valid",
+      "size": 8482,
+      "lines": 232,
+      "imports": 4
+    },
+    "instagram_500_error_fixer.py": {
+      "status": "valid",
+      "size": 24103,
+      "lines": 552,
+      "imports": 12
+    },
+    "ultimate_dm_extractor.py": {
+      "status": "valid",
+      "size": 18342,
+      "lines": 471,
+      "imports": 9
+    },
+    "alx_trading_500_fix.py": {
+      "status": "valid",
+      "size": 10705,
+      "lines": 276,
+      "imports": 6
+    },
+    "professional-pentest-complete.py": {
+      "status": "valid",
+      "size": 32655,
+      "lines": 813,
+      "imports": 11
+    },
+    "bootstrap.py": {
+      "status": "valid",
+      "size": 2235,
+      "lines": 59,
+      "imports": 3
+    },
+    "quick-weaponized-recon.py": {
+      "status": "valid",
+      "size": 13306,
+      "lines": 378,
+      "imports": 6
+    },
+    "fresh_start/playwright_extractor.py": {
+      "status": "valid",
+      "size": 13834,
+      "lines": 371,
+      "imports": 7
+    },
+    "fresh_start/minimal_test.py": {
+      "status": "valid",
+      "size": 1615,
+      "lines": 60,
+      "imports": 4
+    },
+    "fresh_start/quick_test.py": {
+      "status": "valid",
+      "size": 1823,
+      "lines": 67,
+      "imports": 5
+    },
+    "fresh_start/real_live_extractor.py": {
+      "status": "valid",
+      "size": 8837,
+      "lines": 224,
+      "imports": 6
+    },
+    "fresh_start/offline_session.py": {
+      "status": "valid",
+      "size": 1371,
+      "lines": 50,
+      "imports": 3
+    },
+    "fresh_start/test.py": {
+      "status": "valid",
+      "size": 2366,
+      "lines": 88,
+      "imports": 3
+    },
+    "fresh_start/simple_dm_extractor.py": {
+      "status": "valid",
+      "size": 2982,
+      "lines": 97,
+      "imports": 4
+    },
+    "fresh_start/browser_main.py": {
+      "status": "valid",
+      "size": 2664,
+      "lines": 85,
+      "imports": 9
+    },
+    "fresh_start/real_data_hunter.py": {
+      "status": "valid",
+      "size": 15744,
+      "lines": 414,
+      "imports": 7
+    },
+    "fresh_start/main.py": {
+      "status": "valid",
+      "size": 1726,
+      "lines": 63,
+      "imports": 9
+    },
+    "fresh_start/network_test.py": {
+      "status": "valid",
+      "size": 1621,
+      "lines": 49,
+      "imports": 3
+    },
+    "fresh_start/network_diagnostics.py": {
+      "status": "valid",
+      "size": 2354,
+      "lines": 79,
+      "imports": 4
+    },
+    "fresh_start/final_analysis.py": {
+      "status": "valid",
+      "size": 4791,
+      "lines": 123,
+      "imports": 4
+    },
+    "fresh_start/demo.py": {
+      "status": "valid",
+      "size": 2716,
+      "lines": 84,
+      "imports": 4
+    },
+    "fresh_start/real_dm_extractor.py": {
+      "status": "valid",
+      "size": 10652,
+      "lines": 282,
+      "imports": 5
+    },
+    "fresh_start/offline_analyzer.py": {
+      "status": "valid",
+      "size": 11368,
+      "lines": 314,
+      "imports": 12
+    },
+    "fresh_start/validate_session.py": {
+      "status": "valid",
+      "size": 5745,
+      "lines": 156,
+      "imports": 5
+    },
+    "fresh_start/real_data_analyzer.py": {
+      "status": "valid",
+      "size": 9413,
+      "lines": 223,
+      "imports": 5
+    },
+    "fresh_start/connection_test.py": {
+      "status": "valid",
+      "size": 2419,
+      "lines": 82,
+      "imports": 4
+    },
+    "fresh_start/main_v2.py": {
+      "status": "valid",
+      "size": 3206,
+      "lines": 94,
+      "imports": 9
+    },
+    "fresh_start/setup.py": {
+      "status": "valid",
+      "size": 2479,
+      "lines": 80,
+      "imports": 3
+    },
+    "extractors/advanced_stable_dm_extractor.py": {
+      "status": "valid",
+      "size": 45875,
+      "lines": 1135,
+      "imports": 19
+    },
+    "extractors/simple_alx_extractor.py": {
+      "status": "valid",
+      "size": 7093,
+      "lines": 183,
+      "imports": 5
+    },
+    "extractors/test_dm_extractor.py": {
+      "status": "valid",
+      "size": 2556,
+      "lines": 84,
+      "imports": 4
+    },
+    "extractors/hijacked_session_dm_extractor.py": {
+      "status": "valid",
+      "size": 12386,
+      "lines": 319,
+      "imports": 6
+    },
+    "extractors/final_alx_dm_extractor.py": {
+      "status": "valid",
+      "size": 12470,
+      "lines": 330,
+      "imports": 6
+    },
+    "extractors/real_alx_dm_extractor.py": {
+      "status": "valid",
+      "size": 11021,
+      "lines": 301,
+      "imports": 7
+    },
+    "extractors/real_alx_dm_extractor_no_simulation.py": {
+      "status": "valid",
+      "size": 17257,
+      "lines": 431,
+      "imports": 7
+    },
+    "extractors/enhanced_alx_extractor_with_selenium.py": {
+      "status": "valid",
+      "size": 32522,
+      "lines": 816,
+      "imports": 22
+    },
+    "extractors/real_no_mockup_extractor.py": {
+      "status": "valid",
+      "size": 15400,
+      "lines": 412,
+      "imports": 7
+    },
+    "extractors/automatic_alx_extractor.py": {
+      "status": "valid",
+      "size": 7833,
+      "lines": 228,
+      "imports": 6
+    },
+    "extractors/working_alx_extractor_2025.py": {
+      "status": "valid",
+      "size": 21479,
+      "lines": 559,
+      "imports": 8
+    },
+    "extractors/direct_dm_extractor.py": {
+      "status": "valid",
+      "size": 13648,
+      "lines": 382,
+      "imports": 6
+    },
+    "extractors/master_stable_extractor_2025.py": {
+      "status": "valid",
+      "size": 27572,
+      "lines": 756,
+      "imports": 16
+    },
+    "extractors/fixed_alx_extractor.py": {
+      "status": "valid",
+      "size": 14542,
+      "lines": 388,
+      "imports": 8
+    },
+    "extractors/session_injection_extractor.py": {
+      "status": "valid",
+      "size": 12127,
+      "lines": 337,
+      "imports": 7
+    },
+    "extractors/real_hijacked_dm_extractor.py": {
+      "status": "valid",
+      "size": 18514,
+      "lines": 467,
+      "imports": 7
+    },
+    "extractors/ultimate_alx_extractor_2025.py": {
+      "status": "valid",
+      "size": 21414,
+      "lines": 611,
+      "imports": 11
+    },
+    "extractors/advanced_alx_trading_extractor.py": {
+      "status": "valid",
+      "size": 14584,
+      "lines": 406,
+      "imports": 7
+    },
+    "extractors/auto_hijacked_extractor.py": {
+      "status": "valid",
+      "size": 1264,
+      "lines": 42,
+      "imports": 3
+    },
+    "extractors/bypass_rate_limit_extractor.py": {
+      "status": "valid",
+      "size": 10268,
+      "lines": 284,
+      "imports": 6
+    },
+    "extractors/real_dm_extractor.py": {
+      "status": "valid",
+      "size": 7894,
+      "lines": 237,
+      "imports": 6
+    },
+    "extractors/real_only_alx_extractor.py": {
+      "status": "valid",
+      "size": 14717,
+      "lines": 402,
+      "imports": 8
+    },
+    "extractors/safe_post_block_extractor.py": {
+      "status": "valid",
+      "size": 2340,
+      "lines": 71,
+      "imports": 4
+    },
+    "extractors/real_alx_extractor_no_sim.py": {
+      "status": "valid",
+      "size": 21596,
+      "lines": 528,
+      "imports": 8
+    },
+    "extractors/fresh_session_extractor.py": {
+      "status": "valid",
+      "size": 11448,
+      "lines": 324,
+      "imports": 6
+    },
+    "config/config.py": {
+      "status": "valid",
+      "size": 880,
+      "lines": 44,
+      "imports": 1
+    },
+    "REAL_DATA_BACKUP_1749460588/comprehensive_real_data_summary.py": {
+      "status": "valid",
+      "size": 11303,
+      "lines": 281,
+      "imports": 3
+    },
+    "REAL_DATA_BACKUP_1749460588/alx_trading_database_setup.py": {
+      "status": "valid",
+      "size": 4510,
+      "lines": 152,
+      "imports": 1
+    },
+    "REAL_DATA_BACKUP_1749460588/cleanup_fake_data.py": {
+      "status": "valid",
+      "size": 11517,
+      "lines": 308,
+      "imports": 4
+    },
+    "src/restore_files.py": {
+      "status": "valid",
+      "size": 1830,
+      "lines": 46,
+      "imports": 3
+    },
+    "src/show_target_status.py": {
+      "status": "valid",
+      "size": 6622,
+      "lines": 180,
+      "imports": 4
+    },
+    "src/cloud_extraction_launcher.py": {
+      "status": "valid",
+      "size": 1023,
+      "lines": 42,
+      "imports": 3
+    },
+    "src/master_real_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 13109,
+      "lines": 340,
+      "imports": 6
+    },
+    "src/dm_intelligence_dashboard_2025.py": {
+      "status": "valid",
+      "size": 17218,
+      "lines": 439,
+      "imports": 12
+    },
+    "src/simple_database_operations.py": {
+      "status": "valid",
+      "size": 11079,
+      "lines": 292,
+      "imports": 5
+    },
+    "src/execute_real_operations.py": {
+      "status": "valid",
+      "size": 16474,
+      "lines": 419,
+      "imports": 10
+    },
+    "src/comprehensive_dm_analyzer_2025.py": {
+      "status": "valid",
+      "size": 27992,
+      "lines": 622,
+      "imports": 11
+    },
+    "src/proxy_traffic_helper.py": {
+      "status": "valid",
+      "size": 2189,
+      "lines": 61,
+      "imports": 4
+    },
+    "src/emergency_extraction_system_2025.py": {
+      "status": "valid",
+      "size": 16014,
+      "lines": 428,
+      "imports": 8
+    },
+    "src/discord_notify.py": {
+      "status": "valid",
+      "size": 284,
+      "lines": 12,
+      "imports": 1
+    },
+    "src/working_proxy_harvester.py": {
+      "status": "valid",
+      "size": 5711,
+      "lines": 143,
+      "imports": 5
+    },
+    "src/practical_hacking_tools_collection.py": {
+      "status": "valid",
+      "size": 36521,
+      "lines": 983,
+      "imports": 26
+    },
+    "src/quick_launch_bulletproof.py": {
+      "status": "valid",
+      "size": 3454,
+      "lines": 111,
+      "imports": 4
+    },
+    "src/personal_conversation_insight_extractor_2025.py": {
+      "status": "valid",
+      "size": 34270,
+      "lines": 754,
+      "imports": 10
+    },
+    "src/target_database_manager.py": {
+      "status": "valid",
+      "size": 26643,
+      "lines": 720,
+      "imports": 8
+    },
+    "src/cloud_infrastructure_bypass_2025.py": {
+      "status": "valid",
+      "size": 12277,
+      "lines": 335,
+      "imports": 11
+    },
+    "src/master_configuration_manager.py": {
+      "status": "valid",
+      "size": 14843,
+      "lines": 400,
+      "imports": 7
+    },
+    "src/database_dashboard.py": {
+      "status": "valid",
+      "size": 14781,
+      "lines": 390,
+      "imports": 5
+    },
+    "src/quick_demo_fixed.py": {
+      "status": "valid",
+      "size": 9690,
+      "lines": 257,
+      "imports": 5
+    },
+    "src/smart_data_integration_system_2025.py": {
+      "status": "valid",
+      "size": 29834,
+      "lines": 727,
+      "imports": 12
+    },
+    "src/final_extraction_status.py": {
+      "status": "valid",
+      "size": 5023,
+      "lines": 137,
+      "imports": 3
+    },
+    "src/analyzer.py": {
+      "status": "valid",
+      "size": 847,
+      "lines": 24,
+      "imports": 1
+    },
+    "src/alx_trading_interceptor.py": {
+      "status": "valid",
+      "size": 12118,
+      "lines": 305,
+      "imports": 6
+    },
+    "src/project_status_dashboard.py": {
+      "status": "valid",
+      "size": 7308,
+      "lines": 210,
+      "imports": 5
+    },
+    "src/create_reports_dashboard.py": {
+      "status": "valid",
+      "size": 17149,
+      "lines": 536,
+      "imports": 9
+    },
+    "src/quick_config.py": {
+      "status": "valid",
+      "size": 8030,
+      "lines": 246,
+      "imports": 2
+    },
+    "src/ultra_simple_no_mockup.py": {
+      "status": "valid",
+      "size": 15437,
+      "lines": 371,
+      "imports": 11
+    },
+    "src/simple_test_ultimate_system.py": {
+      "status": "valid",
+      "size": 1888,
+      "lines": 60,
+      "imports": 4
+    },
+    "src/step1_data_analysis_dashboard_fixed.py": {
+      "status": "valid",
+      "size": 7459,
+      "lines": 206,
+      "imports": 6
+    },
+    "src/resource_monitor_hack.py": {
+      "status": "valid",
+      "size": 1860,
+      "lines": 50,
+      "imports": 4
+    },
+    "src/setup_fleming_integration.py": {
+      "status": "valid",
+      "size": 7476,
+      "lines": 251,
+      "imports": 6
+    },
+    "src/production_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 14954,
+      "lines": 406,
+      "imports": 8
+    },
+    "src/extreme_dm_intelligence_extractor_2025.py": {
+      "status": "valid",
+      "size": 30896,
+      "lines": 730,
+      "imports": 24
+    },
+    "src/response_content_analyzer.py": {
+      "status": "valid",
+      "size": 11182,
+      "lines": 291,
+      "imports": 8
+    },
+    "src/fleming_integrated_launcher.py": {
+      "status": "valid",
+      "size": 15296,
+      "lines": 358,
+      "imports": 9
+    },
+    "src/ultimate_database_security_arsenal_2025.py": {
+      "status": "valid",
+      "size": 58586,
+      "lines": 1412,
+      "imports": 18
+    },
+    "src/target_integration_system.py": {
+      "status": "valid",
+      "size": 22920,
+      "lines": 598,
+      "imports": 10
+    },
+    "src/sqlite_helper.py": {
+      "status": "valid",
+      "size": 3365,
+      "lines": 102,
+      "imports": 2
+    },
+    "src/no_mockup_real_operations.py": {
+      "status": "valid",
+      "size": 35067,
+      "lines": 852,
+      "imports": 17
+    },
+    "src/elite_dm_penetration_suite_2025.py": {
+      "status": "valid",
+      "size": 943,
+      "lines": 37,
+      "imports": 3
+    },
+    "src/ultra_dm_conversation_extractor_2025.py": {
+      "status": "valid",
+      "size": 21188,
+      "lines": 487,
+      "imports": 15
+    },
+    "src/html_to_pdf_converter.py": {
+      "status": "valid",
+      "size": 4345,
+      "lines": 120,
+      "imports": 3
+    },
+    "src/comprehensive_action_plan_2025.py": {
+      "status": "valid",
+      "size": 8725,
+      "lines": 245,
+      "imports": 4
+    },
+    "src/organization_status_reporter.py": {
+      "status": "valid",
+      "size": 8996,
+      "lines": 268,
+      "imports": 4
+    },
+    "src/realtime_target_monitoring.py": {
+      "status": "valid",
+      "size": 14885,
+      "lines": 381,
+      "imports": 8
+    },
+    "src/ip_blacklist_bypass.py": {
+      "status": "valid",
+      "size": 13664,
+      "lines": 367,
+      "imports": 9
+    },
+    "src/target_database_browser.py": {
+      "status": "valid",
+      "size": 12230,
+      "lines": 364,
+      "imports": 7
+    },
+    "src/cleanup_database.py": {
+      "status": "valid",
+      "size": 2888,
+      "lines": 90,
+      "imports": 3
+    },
+    "src/ultimate_extraction_launcher_2025.py": {
+      "status": "valid",
+      "size": 9858,
+      "lines": 286,
+      "imports": 11
+    },
+    "src/configure_platform.py": {
+      "status": "valid",
+      "size": 15930,
+      "lines": 421,
+      "imports": 5
+    },
+    "src/real_message_extractor.py": {
+      "status": "valid",
+      "size": 17341,
+      "lines": 418,
+      "imports": 10
+    },
+    "src/main.py": {
+      "status": "valid",
+      "size": 163,
+      "lines": 6,
+      "imports": 0
+    },
+    "src/backup_important_data.py": {
+      "status": "valid",
+      "size": 2039,
+      "lines": 67,
+      "imports": 4
+    },
+    "src/dm_extraction_commander_2025.py": {
+      "status": "valid",
+      "size": 18149,
+      "lines": 402,
+      "imports": 12
+    },
+    "src/test_db.py": {
+      "status": "valid",
+      "size": 735,
+      "lines": 33,
+      "imports": 3
+    },
+    "src/target_database_dashboard.py": {
+      "status": "valid",
+      "size": 13923,
+      "lines": 386,
+      "imports": 8
+    },
+    "src/proxy_manager.py": {
+      "status": "valid",
+      "size": 3005,
+      "lines": 72,
+      "imports": 3
+    },
+    "src/core_extractor_2025.py": {
+      "status": "valid",
+      "size": 5547,
+      "lines": 165,
+      "imports": 12
+    },
+    "src/focused_target_operations.py": {
+      "status": "valid",
+      "size": 9701,
+      "lines": 269,
+      "imports": 7
+    },
+    "src/ultimate_target_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 36425,
+      "lines": 874,
+      "imports": 18
+    },
+    "src/cute_rate_limit_extractor.py": {
+      "status": "valid",
+      "size": 11111,
+      "lines": 272,
+      "imports": 6
+    },
+    "src/alternative_data_processor.py": {
+      "status": "valid",
+      "size": 8259,
+      "lines": 248,
+      "imports": 6
+    },
+    "src/ctf_hacking_masterclass_2025.py": {
+      "status": "valid",
+      "size": 37450,
+      "lines": 1102,
+      "imports": 28
+    },
+    "src/enhanced_dm_extractor_with_rate_limiting.py": {
+      "status": "valid",
+      "size": 16058,
+      "lines": 387,
+      "imports": 9
+    },
+    "src/test_core_extractor.py": {
+      "status": "valid",
+      "size": 1152,
+      "lines": 44,
+      "imports": 2
+    },
+    "src/auto_hardcore_test.py": {
+      "status": "valid",
+      "size": 3467,
+      "lines": 116,
+      "imports": 8
+    },
+    "src/debug_extractor.py": {
+      "status": "valid",
+      "size": 2827,
+      "lines": 89,
+      "imports": 4
+    },
+    "src/ultimate_image_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 11266,
+      "lines": 331,
+      "imports": 11
+    },
+    "src/master_improver_v2.py": {
+      "status": "valid",
+      "size": 917,
+      "lines": 37,
+      "imports": 3
+    },
+    "src/fetch_dm.py": {
+      "status": "valid",
+      "size": 305,
+      "lines": 12,
+      "imports": 0
+    },
+    "src/database_operations_test.py": {
+      "status": "valid",
+      "size": 10851,
+      "lines": 322,
+      "imports": 6
+    },
+    "src/instagrapi_extractor.py": {
+      "status": "valid",
+      "size": 1323,
+      "lines": 48,
+      "imports": 4
+    },
+    "src/dm_extractor.py": {
+      "status": "valid",
+      "size": 12682,
+      "lines": 307,
+      "imports": 7
+    },
+    "src/json_to_html_converter.py": {
+      "status": "valid",
+      "size": 5091,
+      "lines": 157,
+      "imports": 3
+    },
+    "src/real_database_operations.py": {
+      "status": "valid",
+      "size": 12705,
+      "lines": 343,
+      "imports": 6
+    },
+    "src/target_database_summary.py": {
+      "status": "valid",
+      "size": 7249,
+      "lines": 203,
+      "imports": 4
+    },
+    "src/real_data_dm_extractor.py": {
+      "status": "valid",
+      "size": 20803,
+      "lines": 494,
+      "imports": 8
+    },
+    "src/improved_real_operations.py": {
+      "status": "valid",
+      "size": 14244,
+      "lines": 352,
+      "imports": 10
+    },
+    "src/project_database_security_analyzer_2025.py": {
+      "status": "valid",
+      "size": 21992,
+      "lines": 507,
+      "imports": 8
+    },
+    "src/database_complete_extractor.py": {
+      "status": "valid",
+      "size": 11983,
+      "lines": 310,
+      "imports": 4
+    },
+    "scripts/logger.py": {
+      "status": "valid",
+      "size": 1416,
+      "lines": 56,
+      "imports": 5
+    },
+    "scripts/simple_config.py": {
+      "status": "valid",
+      "size": 1868,
+      "lines": 62,
+      "imports": 4
+    },
+    "scripts/database_analyzer.py": {
+      "status": "valid",
+      "size": 13035,
+      "lines": 362,
+      "imports": 10
+    },
+    "scripts/master_production_extractor_2025.py": {
+      "status": "valid",
+      "size": 20659,
+      "lines": 528,
+      "imports": 9
+    },
+    "scripts/quick_scan.py": {
+      "status": "valid",
+      "size": 948,
+      "lines": 38,
+      "imports": 3
+    },
+    "scripts/error_handler.py": {
+      "status": "valid",
+      "size": 2721,
+      "lines": 93,
+      "imports": 6
+    },
+    "scripts/ultimate_working_dm_extractor_2025.py": {
+      "status": "valid",
+      "size": 23971,
+      "lines": 600,
+      "imports": 11
+    },
+    "scripts/config_manager.py": {
+      "status": "valid",
+      "size": 8756,
+      "lines": 249,
+      "imports": 5
+    },
+    "scripts/osint_collector.py": {
+      "status": "valid",
+      "size": 2958,
+      "lines": 89,
+      "imports": 4
+    },
+    "scripts/net_utils.py": {
+      "status": "valid",
+      "size": 2263,
+      "lines": 57,
+      "imports": 2
+    },
+    "scripts/session_validator.py": {
+      "status": "valid",
+      "size": 11343,
+      "lines": 310,
+      "imports": 5
+    },
+    "scripts/__init__.py": {
+      "status": "valid",
+      "size": 154,
+      "lines": 6,
+      "imports": 0
+    },
+    "scripts/domain_enum.py": {
+      "status": "valid",
+      "size": 1875,
+      "lines": 62,
+      "imports": 4
+    },
+    "scripts/session_handler.py": {
+      "status": "valid",
+      "size": 3367,
+      "lines": 91,
+      "imports": 5
+    },
+    "launchers/demo_extraction_guide.py": {
+      "status": "valid",
+      "size": 8656,
+      "lines": 178,
+      "imports": 5
+    },
+    "launchers/live_demo_extraction.py": {
+      "status": "valid",
+      "size": 8416,
+      "lines": 201,
+      "imports": 7
+    },
+    "launchers/demo_complete_system.py": {
+      "status": "valid",
+      "size": 6898,
+      "lines": 227,
+      "imports": 5
+    },
+    "launchers/ultimate_launcher_2025.py": {
+      "status": "valid",
+      "size": 15358,
+      "lines": 427,
+      "imports": 6
+    },
+    "launchers/real_operations_launcher.py": {
+      "status": "valid",
+      "size": 14398,
+      "lines": 423,
+      "imports": 7
+    },
+    "launchers/live_extraction_demo.py": {
+      "status": "valid",
+      "size": 12673,
+      "lines": 319,
+      "imports": 8
+    },
+    "launchers/quick_launcher.py": {
+      "status": "valid",
+      "size": 2772,
+      "lines": 88,
+      "imports": 3
+    },
+    "launchers/system_demonstration.py": {
+      "status": "valid",
+      "size": 4695,
+      "lines": 144,
+      "imports": 6
+    },
+    "launchers/real_alx_launcher.py": {
+      "status": "valid",
+      "size": 5473,
+      "lines": 180,
+      "imports": 6
+    },
+    "REAL_DATA_BACKUP_1749460613/comprehensive_real_data_summary.py": {
+      "status": "valid",
+      "size": 11303,
+      "lines": 281,
+      "imports": 3
+    },
+    "REAL_DATA_BACKUP_1749460613/alx_trading_database_setup.py": {
+      "status": "valid",
+      "size": 4510,
+      "lines": 152,
+      "imports": 1
+    },
+    "REAL_DATA_BACKUP_1749460613/cleanup_fake_data.py": {
+      "status": "valid",
+      "size": 11517,
+      "lines": 308,
+      "imports": 4
+    },
+    "deploy_package/final_real_dm_extractor.py": {
+      "status": "valid",
+      "size": 9887,
+      "lines": 288,
+      "imports": 7
+    },
+    "tools/setup_real_targets.py": {
+      "status": "valid",
+      "size": 6017,
+      "lines": 191,
+      "imports": 4
+    },
+    "tools/brightdata_selenium_extractor.py": {
+      "status": "valid",
+      "size": 12844,
+      "lines": 344,
+      "imports": 11
+    },
+    "tools/session_replay_hijacker.py": {
+      "status": "valid",
+      "size": 10555,
+      "lines": 303,
+      "imports": 10
+    },
+    "tools/advanced_session_hijacker_2025.py": {
+      "status": "valid",
+      "size": 17644,
+      "lines": 510,
+      "imports": 19
+    },
+    "tools/brightdata_session_extractor.py": {
+      "status": "valid",
+      "size": 11126,
+      "lines": 280,
+      "imports": 8
+    },
+    "tools/direct_target_dm_harvester.py": {
+      "status": "valid",
+      "size": 18606,
+      "lines": 403,
+      "imports": 10
+    },
+    "tools/proxy_updater.py": {
+      "status": "valid",
+      "size": 5867,
+      "lines": 182,
+      "imports": 5
+    },
+    "tools/final_system_status.py": {
+      "status": "valid",
+      "size": 7050,
+      "lines": 214,
+      "imports": 6
+    },
+    "tools/enhanced_session_hijacker.py": {
+      "status": "valid",
+      "size": 13315,
+      "lines": 344,
+      "imports": 6
+    },
+    "tools/fast_dm_extractor.py": {
+      "status": "valid",
+      "size": 3192,
+      "lines": 109,
+      "imports": 4
+    },
+    "tools/extract_alx_trading_dms_backup.py": {
+      "status": "valid",
+      "size": 13276,
+      "lines": 355,
+      "imports": 7
+    },
+    "tools/comprehensive_system_test.py": {
+      "status": "valid",
+      "size": 6992,
+      "lines": 216,
+      "imports": 7
+    },
+    "tools/sqlite_test.py": {
+      "status": "valid",
+      "size": 7124,
+      "lines": 197,
+      "imports": 4
+    },
+    "tools/realtime_session_interceptor.py": {
+      "status": "valid",
+      "size": 7377,
+      "lines": 203,
+      "imports": 7
+    },
+    "tools/standalone_session_test.py": {
+      "status": "valid",
+      "size": 3445,
+      "lines": 109,
+      "imports": 6
+    },
+    "tools/test_dm_connection_backup.py": {
+      "status": "valid",
+      "size": 8377,
+      "lines": 244,
+      "imports": 5
+    },
+    "tools/advanced_ip_bypass_2025.py": {
+      "status": "valid",
+      "size": 19098,
+      "lines": 547,
+      "imports": 12
+    },
+    "tools/realtime_session_monitor.py": {
+      "status": "valid",
+      "size": 12217,
+      "lines": 340,
+      "imports": 10
+    },
+    "tools/project_status_report.py": {
+      "status": "valid",
+      "size": 6732,
+      "lines": 190,
+      "imports": 3
+    },
+    "tools/test_dm_connection_new.py": {
+      "status": "valid",
+      "size": 5902,
+      "lines": 187,
+      "imports": 4
+    },
+    "tools/real_session_regenerator.py": {
+      "status": "valid",
+      "size": 12913,
+      "lines": 322,
+      "imports": 5
+    },
+    "tools/sqlite_example.py": {
+      "status": "valid",
+      "size": 5512,
+      "lines": 176,
+      "imports": 3
+    },
+    "tools/interceptor_success_report.py": {
+      "status": "valid",
+      "size": 4975,
+      "lines": 124,
+      "imports": 3
+    },
+    "tools/auto_session_hijacker_brightdata.py": {
+      "status": "valid",
+      "size": 10123,
+      "lines": 270,
+      "imports": 7
+    },
+    "tools/auto_session_extractor.py": {
+      "status": "valid",
+      "size": 10036,
+      "lines": 299,
+      "imports": 5
+    },
+    "tools/test_proxy_rotator.py": {
+      "status": "valid",
+      "size": 5890,
+      "lines": 160,
+      "imports": 4
+    },
+    "tools/simple_dm_test.py": {
+      "status": "valid",
+      "size": 5154,
+      "lines": 131,
+      "imports": 3
+    },
+    "tools/dm_extraction_methods_explanation.py": {
+      "status": "valid",
+      "size": 5106,
+      "lines": 99,
+      "imports": 0
+    },
+    "tools/auto_fresh_session_extractor.py": {
+      "status": "valid",
+      "size": 13602,
+      "lines": 384,
+      "imports": 9
+    },
+    "tools/why_username_required_explanation.py": {
+      "status": "valid",
+      "size": 13452,
+      "lines": 298,
+      "imports": 6
+    },
+    "tools/setup_summary.py": {
+      "status": "valid",
+      "size": 5011,
+      "lines": 175,
+      "imports": 4
+    },
+    "tools/ip_block_bypass.py": {
+      "status": "valid",
+      "size": 4915,
+      "lines": 120,
+      "imports": 5
+    },
+    "tools/quick_session_setup.py": {
+      "status": "valid",
+      "size": 4245,
+      "lines": 145,
+      "imports": 5
+    },
+    "tools/system_health_monitor_2025.py": {
+      "status": "valid",
+      "size": 19367,
+      "lines": 507,
+      "imports": 9
+    },
+    "tools/bright_data_proxy_integration.py": {
+      "status": "valid",
+      "size": 1508,
+      "lines": 59,
+      "imports": 4
+    },
+    "tools/example_filter_usage.py": {
+      "status": "valid",
+      "size": 3622,
+      "lines": 105,
+      "imports": 2
+    },
+    "tools/manual_session_input.py": {
+      "status": "valid",
+      "size": 7517,
+      "lines": 196,
+      "imports": 4
+    },
+    "tools/quick_session_creator.py": {
+      "status": "valid",
+      "size": 7944,
+      "lines": 219,
+      "imports": 4
+    },
+    "tools/advanced_session_recovery.py": {
+      "status": "valid",
+      "size": 13071,
+      "lines": 345,
+      "imports": 6
+    },
+    "tools/alx_operations_control_center.py": {
+      "status": "valid",
+      "size": 17517,
+      "lines": 488,
+      "imports": 10
+    },
+    "tools/ultimate_session_generator.py": {
+      "status": "valid",
+      "size": 11848,
+      "lines": 307,
+      "imports": 9
+    },
+    "tools/test_functions.py": {
+      "status": "valid",
+      "size": 3472,
+      "lines": 115,
+      "imports": 6
+    },
+    "tools/auto_session_creator.py": {
+      "status": "valid",
+      "size": 8158,
+      "lines": 241,
+      "imports": 7
+    },
+    "tools/test_alx_dm_extractor.py": {
+      "status": "valid",
+      "size": 5887,
+      "lines": 171,
+      "imports": 4
+    },
+    "tools/browser_session_hijacker.py": {
+      "status": "valid",
+      "size": 8993,
+      "lines": 270,
+      "imports": 8
+    },
+    "tools/proxy_checker.py": {
+      "status": "valid",
+      "size": 6074,
+      "lines": 160,
+      "imports": 4
+    },
+    "tools/instagram_recovery_examples.py": {
+      "status": "valid",
+      "size": 6225,
+      "lines": 184,
+      "imports": 9
+    },
+    "tools/final_alx_comprehensive_report.py": {
+      "status": "valid",
+      "size": 11606,
+      "lines": 291,
+      "imports": 5
+    },
+    "tools/sqlite_setup.py": {
+      "status": "valid",
+      "size": 17378,
+      "lines": 490,
+      "imports": 9
+    },
+    "tools/filter_dms.py": {
+      "status": "valid",
+      "size": 12823,
+      "lines": 371,
+      "imports": 5
+    },
+    "tools/real_alx_interceptor.py": {
+      "status": "valid",
+      "size": 10518,
+      "lines": 316,
+      "imports": 8
+    },
+    "tools/session_recovery_tool.py": {
+      "status": "valid",
+      "size": 9938,
+      "lines": 255,
+      "imports": 6
+    },
+    "tools/ip_rotation_handler.py": {
+      "status": "valid",
+      "size": 16085,
+      "lines": 488,
+      "imports": 8
+    },
+    "tools/test_generate_dm_timeline.py": {
+      "status": "valid",
+      "size": 1074,
+      "lines": 32,
+      "imports": 2
+    },
+    "tools/docker_test.py": {
+      "status": "valid",
+      "size": 5597,
+      "lines": 192,
+      "imports": 5
+    },
+    "tools/generate_dm_timeline.py": {
+      "status": "valid",
+      "size": 2212,
+      "lines": 65,
+      "imports": 3
+    },
+    "tools/auto_extract_session.py": {
+      "status": "valid",
+      "size": 7481,
+      "lines": 201,
+      "imports": 5
+    },
+    "tools/web_recon.py": {
+      "status": "valid",
+      "size": 9521,
+      "lines": 259,
+      "imports": 8
+    },
+    "tools/test_auto_session_extractor.py": {
+      "status": "valid",
+      "size": 5370,
+      "lines": 165,
+      "imports": 4
+    },
+    "tools/fresh_session_tester.py": {
+      "status": "valid",
+      "size": 9107,
+      "lines": 223,
+      "imports": 4
+    },
+    "tools/fast_session_grabber.py": {
+      "status": "valid",
+      "size": 3722,
+      "lines": 126,
+      "imports": 4
+    },
+    "tools/complete_next_steps.py": {
+      "status": "valid",
+      "size": 9046,
+      "lines": 272,
+      "imports": 6
+    },
+    "tools/simple_session_generator.py": {
+      "status": "valid",
+      "size": 8769,
+      "lines": 230,
+      "imports": 4
+    },
+    "tools/session_repair_tool.py": {
+      "status": "valid",
+      "size": 10014,
+      "lines": 258,
+      "imports": 7
+    },
+    "tools/quick_proxy_rotator.py": {
+      "status": "valid",
+      "size": 2474,
+      "lines": 83,
+      "imports": 5
+    },
+    "tools/session_hunter.py": {
+      "status": "valid",
+      "size": 14687,
+      "lines": 378,
+      "imports": 7
+    },
+    "tools/ultimate_session_extractor.py": {
+      "status": "valid",
+      "size": 11385,
+      "lines": 334,
+      "imports": 7
+    },
+    "tools/test_dm_connection.py": {
+      "status": "valid",
+      "size": 7123,
+      "lines": 213,
+      "imports": 4
+    },
+    "tools/fresh_session_finder_v2.py": {
+      "status": "valid",
+      "size": 11960,
+      "lines": 259,
+      "imports": 6
+    },
+    "tools/test_instagram_recovery.py": {
+      "status": "valid",
+      "size": 7872,
+      "lines": 228,
+      "imports": 7
+    },
+    "tools/instagram_block_recovery.py": {
+      "status": "valid",
+      "size": 18851,
+      "lines": 501,
+      "imports": 8
+    },
+    "tools/fresh_session_generator_2025.py": {
+      "status": "valid",
+      "size": 30814,
+      "lines": 723,
+      "imports": 12
+    },
+    "tools/regenerate_alx_session.py": {
+      "status": "valid",
+      "size": 10702,
+      "lines": 302,
+      "imports": 5
+    },
+    "tools/test_integrated_system.py": {
+      "status": "valid",
+      "size": 14788,
+      "lines": 407,
+      "imports": 7
+    },
+    "tools/session_validator.py": {
+      "status": "valid",
+      "size": 6958,
+      "lines": 207,
+      "imports": 4
+    },
+    "tools/final_diagnosis_report.py": {
+      "status": "valid",
+      "size": 4903,
+      "lines": 139,
+      "imports": 3
+    },
+    "tools/auto_dm_interceptor.py": {
+      "status": "valid",
+      "size": 22181,
+      "lines": 601,
+      "imports": 13
+    },
+    "tools/direct_session_regenerator_2025.py": {
+      "status": "valid",
+      "size": 21704,
+      "lines": 603,
+      "imports": 14
+    },
+    "tools/extract_alx_trading_dms_new.py": {
+      "status": "valid",
+      "size": 17751,
+      "lines": 513,
+      "imports": 7
+    },
+    "tools/advanced_target_dm_harvester.py": {
+      "status": "valid",
+      "size": 17838,
+      "lines": 522,
+      "imports": 9
+    },
+    "tools/integrated_dm_extractor.py": {
+      "status": "valid",
+      "size": 14267,
+      "lines": 390,
+      "imports": 7
+    },
+    "tools/ultimate_brightdata_extractor.py": {
+      "status": "valid",
+      "size": 9762,
+      "lines": 264,
+      "imports": 5
+    },
+    "tools/extract_alx_trading_dms.py": {
+      "status": "valid",
+      "size": 26260,
+      "lines": 721,
+      "imports": 7
+    },
+    "tools/dm_extraction_with_interceptor.py": {
+      "status": "valid",
+      "size": 5762,
+      "lines": 159,
+      "imports": 5
+    },
+    "tools/create_fresh_session.py": {
+      "status": "valid",
+      "size": 6995,
+      "lines": 160,
+      "imports": 6
+    },
+    "tools/current_status_checker.py": {
+      "status": "valid",
+      "size": 4623,
+      "lines": 126,
+      "imports": 3
+    },
+    "fresh_start/src/browser_extractor.py": {
+      "status": "valid",
+      "size": 13656,
+      "lines": 359,
+      "imports": 10
+    },
+    "fresh_start/src/utils.py": {
+      "status": "valid",
+      "size": 2234,
+      "lines": 72,
+      "imports": 4
+    },
+    "fresh_start/src/instagram_extractor.py": {
+      "status": "valid",
+      "size": 20699,
+      "lines": 512,
+      "imports": 9
+    },
+    "fresh_start/src/instagram_extractor_v2.py": {
+      "status": "valid",
+      "size": 20045,
+      "lines": 481,
+      "imports": 8
+    },
+    "src/targeted/alx_trading_extraction_suite.py": {
+      "status": "valid",
+      "size": 9845,
+      "lines": 305,
+      "imports": 7
+    },
+    "src/targeted/extract_dm_alx_whatilove.py": {
+      "status": "valid",
+      "size": 3881,
+      "lines": 105,
+      "imports": 4
+    },
+    "src/targeted/session_extractor.py": {
+      "status": "valid",
+      "size": 12617,
+      "lines": 350,
+      "imports": 7
+    },
+    "src/targeted/session_regenerator_fleming654.py": {
+      "status": "valid",
+      "size": 16393,
+      "lines": 439,
+      "imports": 10
+    },
+    "src/targeted/analyze_alx_trading_dms.py": {
+      "status": "valid",
+      "size": 15828,
+      "lines": 458,
+      "imports": 8
+    },
+    "src/targeted/alx_trading_html_converter.py": {
+      "status": "valid",
+      "size": 12753,
+      "lines": 406,
+      "imports": 4
+    },
+    "src/targeted/update_alx_trading_database.py": {
+      "status": "valid",
+      "size": 4758,
+      "lines": 128,
+      "imports": 4
+    },
+    "src/targeted/extract_alx_trading_dms.py": {
+      "status": "valid",
+      "size": 17367,
+      "lines": 474,
+      "imports": 11
+    },
+    "src/targeted/alx_trading_dm_extractor.py": {
+      "status": "valid",
+      "size": 1331,
+      "lines": 48,
+      "imports": 4
+    },
+    "src/targeted/session_manager_alx.py": {
+      "status": "valid",
+      "size": 11128,
+      "lines": 318,
+      "imports": 6
+    },
+    "src/instagram_tools/real_instagram_operations.py": {
+      "status": "valid",
+      "size": 12176,
+      "lines": 352,
+      "imports": 7
+    },
+    "src/instagram_tools/actual_instagram_extractor.py": {
+      "status": "valid",
+      "size": 13944,
+      "lines": 367,
+      "imports": 9
+    },
+    "src/instagram_tools/real_instagram_dm_extractor.py": {
+      "status": "valid",
+      "size": 12358,
+      "lines": 340,
+      "imports": 8
+    },
+    "src/instagram_tools/html_to_pdf_converter.py": {
+      "status": "valid",
+      "size": 1606,
+      "lines": 54,
+      "imports": 3
+    },
+    "src/instagram_tools/master_instagram_ops_executor_2025.py": {
+      "status": "valid",
+      "size": 19633,
+      "lines": 478,
+      "imports": 11
+    },
+    "src/instagram_tools/configured_instagram_launcher.py": {
+      "status": "valid",
+      "size": 23363,
+      "lines": 576,
+      "imports": 6
+    },
+    "src/instagram_tools/instagram_data_analyzer.py": {
+      "status": "valid",
+      "size": 10153,
+      "lines": 248,
+      "imports": 5
+    },
+    "src/instagram_tools/dm_extractor.py": {
+      "status": "valid",
+      "size": 1307,
+      "lines": 48,
+      "imports": 4
+    },
+    "src/instagram_tools/json_to_html_converter.py": {
+      "status": "valid",
+      "size": 1608,
+      "lines": 54,
+      "imports": 3
+    },
+    "src/tools/session_injector_2025.py": {
+      "status": "valid",
+      "size": 5847,
+      "lines": 177,
+      "imports": 4
+    },
+    "src/advanced_tools/advanced_connection_pool.py": {
+      "status": "valid",
+      "size": 15058,
+      "lines": 411,
+      "imports": 13
+    },
+    "src/advanced_tools/advanced_database_penetration_testing_suite_2025.py": {
+      "status": "valid",
+      "size": 39527,
+      "lines": 920,
+      "imports": 20
+    },
+    "src/advanced_tools/advanced_dm_extraction_tools.py": {
+      "status": "valid",
+      "size": 23842,
+      "lines": 559,
+      "imports": 12
+    },
+    "src/advanced_tools/session_hijacking_toolkit_2025.py": {
+      "status": "valid",
+      "size": 16874,
+      "lines": 491,
+      "imports": 11
+    },
+    "src/advanced_tools/instagram_session_analyzer_2025.py": {
+      "status": "valid",
+      "size": 24092,
+      "lines": 651,
+      "imports": 10
+    },
+    "src/advanced_tools/advanced_stealth_techniques_2025.py": {
+      "status": "valid",
+      "size": 13930,
+      "lines": 353,
+      "imports": 13
+    },
+    "src/advanced_tools/advanced_bypass_arsenal_2025.py": {
+      "status": "valid",
+      "size": 13229,
+      "lines": 370,
+      "imports": 10
+    },
+    "src/advanced_tools/advanced_session_hijack_bypass_2025.py": {
+      "status": "valid",
+      "size": 32692,
+      "lines": 789,
+      "imports": 13
+    },
+    "src/advanced_tools/advanced_session_bypass_2025.py": {
+      "status": "valid",
+      "size": 30092,
+      "lines": 846,
+      "imports": 14
+    },
+    "src/advanced_tools/advanced_wireless_network_penetration_arsenal_2025.py": {
+      "status": "valid",
+      "size": 32609,
+      "lines": 914,
+      "imports": 17
+    },
+    "src/advanced_tools/advanced_web_application_penetration_suite_2025.py": {
+      "status": "valid",
+      "size": 46585,
+      "lines": 1220,
+      "imports": 17
+    },
+    "src/advanced_tools/advanced_stealth_techniques_guide.py": {
+      "status": "valid",
+      "size": 52881,
+      "lines": 1456,
+      "imports": 14
+    },
+    "src/advanced_tools/real_session_extractor_2025.py": {
+      "status": "valid",
+      "size": 13122,
+      "lines": 314,
+      "imports": 10
+    },
+    "src/advanced_tools/advanced_stealth_penetration_arsenal_2025.py": {
+      "status": "valid",
+      "size": 28729,
+      "lines": 781,
+      "imports": 15
+    },
+    "src/advanced_tools/advanced_socket_handler.py": {
+      "status": "valid",
+      "size": 10763,
+      "lines": 293,
+      "imports": 14
+    },
+    "src/advanced_tools/legitimate_session_manager_2025.py": {
+      "status": "valid",
+      "size": 32439,
+      "lines": 744,
+      "imports": 9
+    },
+    "src/advanced_tools/session_security_tester_2025.py": {
+      "status": "valid",
+      "size": 22991,
+      "lines": 618,
+      "imports": 11
+    },
+    "src/advanced_tools/advanced_hacking_arsenal_2025.py": {
+      "status": "valid",
+      "size": 47070,
+      "lines": 1277,
+      "imports": 18
+    },
+    "src/advanced_tools/advanced_real_dm_extractor.py": {
+      "status": "valid",
+      "size": 14246,
+      "lines": 379,
+      "imports": 9
+    },
+    "src/advanced_tools/advanced_database_exploitation_testing_2025.py": {
+      "status": "valid",
+      "size": 38836,
+      "lines": 968,
+      "imports": 13
+    },
+    "src/advanced_tools/advanced_hacking_techniques_guide.py": {
+      "status": "valid",
+      "size": 29086,
+      "lines": 808,
+      "imports": 36
+    },
+    "src/advanced_tools/__init__.py": {
+      "status": "valid",
+      "size": 123,
+      "lines": 6,
+      "imports": 0
+    },
+    "src/advanced_tools/advanced_dm_extractor_bulletproof_2025.py": {
+      "status": "valid",
+      "size": 17320,
+      "lines": 494,
+      "imports": 12
+    },
+    "data/demo_targets.db": {
+      "status": "valid",
+      "size": 32768,
+      "tables": {
+        "targets": 2,
+        "sqlite_sequence": 3,
+        "operations": 0,
+        "extracted_data": 0,
+        "target_relationships": 0,
+        "monitoring": 0
+      },
+      "total_records": 5
+    },
+    "data/integrated_targets_2025.db": {
+      "status": "valid",
+      "size": 65536,
+      "tables": {
+        "targets": 4,
+        "sqlite_sequence": 4,
+        "operations": 6,
+        "extracted_data": 6,
+        "target_relationships": 0,
+        "monitoring": 0,
+        "dm_extraction_results": 1
+      },
+      "total_records": 21
+    },
+    "data/project_operations.db": {
+      "status": "valid",
+      "size": 57344,
+      "tables": {
+        "targets": 8,
+        "sqlite_sequence": 7,
+        "operations": 36,
+        "extracted_data": 36,
+        "target_relationships": 12,
+        "monitoring": 12,
+        "dms": 6,
+        "personal_data": 6
+      },
+      "total_records": 123
+    }
+  },
+  "recommendations": [
+    {
+      "category": "Security",
+      "priority": "High",
+      "description": "Address security warnings including SSL verification and hardcoded credentials",
+      "action": "Review and fix security issues in affected files"
+    },
+    {
+      "category": "Code Quality",
+      "priority": "High",
+      "description": "Python syntax errors found in 8 files",
+      "action": "Fix syntax errors to ensure code can execute properly"
+    },
+    {
+      "category": "Environment",
+      "priority": "Low",
+      "description": "Environment setup appears to be complete",
+      "action": "No action required"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "hijacked_session_file": "/workspaces/sugarglitch-realops/hijacked_sessions/ip_spoofed_session_1749511225.json",
+  "test_timestamp": "2025-06-09T23:20:35.702427",
+  "results": [
+    {
+      "endpoint": "https://www.instagram.com/",
+      "status_code": 200,
+      "success": true,
+      "content_length": 420495
+    },
+    {
+      "endpoint": "https://www.instagram.com/direct/",
+      "status_code": 200,
+      "success": true,
+      "content_length": 418804
+    },
+    {
+      "endpoint": "https://www.instagram.com/api/v1/users/web_profile_info/",
+      "status_code": 401,
+      "success": false,
+      "content_length": 119
+    },
+    {
+      "endpoint": "https://www.instagram.com/api/v1/direct_v2/inbox/",
+      "status_code": 404,
+      "success": false,
+      "content_length": 21118
+    }
+  ],
+  "success_rate": 50.0
+}

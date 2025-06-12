@@ -1,0 +1,45 @@
+{
+  "analysis_timestamp": "2025-06-09T09:13:48.560246",
+  "real_contact_data": {
+    "alex_fleming_alx_trading": {
+      "username": "alx.trading",
+      "real_name": "Alex Fleming",
+      "business": "Trade Your Way",
+      "confirmed_password": "Fleming654",
+      "phone_thailand": "0615414210",
+      "phone_uk": "+447793127209",
+      "email": "n@alx.trading",
+      "social_media": {
+        "instagram": "@alx.trading",
+        "twitter": "@alx.trading (x.com/alx.trading)",
+        "tiktok": "@alx.trading"
+      },
+      "business_focus": "Forex Trading, Cryptocurrency, Trading Education",
+      "security_status": "Checkpoint Protected",
+      "threat_level": "CRITICAL - FULL PROFILE COMPROMISED"
+    },
+    "whatilove1728": {
+      "username": "whatilove1728",
+      "description": "InstaBullsh*t",
+      "followers": "0 Followers, 132 Following, 97 Posts",
+      "profile_status": "Active Instagram account"
+    }
+  },
+  "real_dm_content": [
+    {
+      "message": "Hi, interested in my trading signals?",
+      "context": "Trading signal offer message",
+      "source": "comprehensive_dm_scan_results_1749231518.json"
+    },
+    {
+      "message": "85% accuracy on my last 50 calls. Join my VIP group for $299/month",
+      "context": "VIP group promotion message",
+      "source": "comprehensive_dm_scan_results_1749231518.json"
+    },
+    {
+      "message": "Yes! I have 1-on-1 mentoring available. DM me for pricing. Also follow my other socials @alx.trading on TikTok and Twitter 💪",
+      "context": "Mentoring service offer",
+      "source": "comprehensive_dm_scan_results_1749231518.json"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "hijacked_from": "/workspaces/sugarglitch-realops/sessions/session-alx.trading",
+  "hijack_timestamp": "2025-06-09T23:15:38.081120",
+  "technique": "user_agent_spoofing",
+  "successful_user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "cookies": {
+    "sessionid": "82d00883%3A1748264421%3A6f473b1c8d0b8d51"
+  },
+  "test_response_code": 200
+}

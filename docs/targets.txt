@@ -1,0 +1,12 @@
+# Target list for reconnaissance
+# Format: domain.com or IP address
+
+# Primary targets
+tradeyourway.co.uk
+alx.trading
+
+# Social media targets
+instagram.com/alx.trading
+instagram.com/whatilove1728
+
+# Add your targets here

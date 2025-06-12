@@ -1,0 +1,6471 @@
+{
+  "analysis_timestamp": "2025-06-07T00:40:16.553348",
+  "session_data": {
+    "dm_page_20250606_235436.html": {
+      "file_path": "results/dm_page_20250606_235436.html",
+      "file_size": 429041,
+      "analysis_time": "2025-06-07T00:40:16.554249",
+      "csrf_tokens": [
+        "iatPXHRW94oWdCkUBToCwj"
+      ],
+      "x_ig_app_ids": [
+        "936619743392459"
+      ],
+      "user_ids": [
+        "0"
+      ],
+      "account_ids": [
+        "0"
+      ],
+      "ig_device_ids": [
+        "7538F16F-1ECF-49D8-8391-7CBC68389A3E"
+      ],
+      "datr_tokens": [
+        "vH9DaN7d4A-Bn3sCT9kTEQmN"
+      ],
+      "security_config": {
+        "\"InstagramSecurityConfig\"": {
+          "csrf_token": "iatPXHRW94oWdCkUBToCwj"
+        }
+      },
+      "current_user_data": {
+        "\"CurrentUserInitialData\"": {
+          "ACCOUNT_ID": "0",
+          "USER_ID": "0",
+          "NAME": "",
+          "SHORT_NAME": null,
+          "IS_BUSINESS_PERSON_ACCOUNT": false,
+          "HAS_SECONDARY_BUSINESS_PERSON": false,
+          "IS_FACEBOOK_WORK_ACCOUNT": false,
+          "IS_INSTAGRAM_BUSINESS_PERSON": false,
+          "IS_MESSENGER_ONLY_USER": false,
+          "IS_DEACTIVATED_ALLOWED_ON_MESSENGER": false,
+          "IS_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORK_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORKROOMS_USER": false,
+          "APP_ID": "936619743392459",
+          "IS_BUSINESS_DOMAIN": false,
+          "NON_FACEBOOK_USER_ID": "0",
+          "IS_INSTAGRAM_USER": 1,
+          "IG_USER_EIMU": "0"
+        }
+      },
+      "relay_api_config": {
+        "\"RelayAPIConfigDefaults\"": {
+          "accessToken": "",
+          "actorID": "0",
+          "customHeaders": {
+            "X-IG-App-ID": "936619743392459",
+            "X-IG-D": "www"
+          },
+          "enableNetworkLogger": false,
+          "enableVerboseNetworkLogger": false,
+          "fetchTimeout": 30000,
+          "graphURI": "/api/graphql/",
+          "retryDelays": [
+            1000,
+            3000
+          ],
+          "useXController": true,
+          "xhrEncoding": null,
+          "subscriptionTopicURI": null,
+          "withCredentials": false,
+          "isProductionEndpoint": false,
+          "workRequestTaggingProduct": null,
+          "encryptionKeyParams": null,
+          "graphBatchURI": "/api/graphqlbatch/"
+        }
+      },
+      "polaris_viewer": {
+        "\"PolarisViewer\"": {
+          "data": null,
+          "id": null
+        }
+      },
+      "cookie_config": {
+        "\"CookieCoreConfig\"": {
+          "_fbp": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "csrftoken": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "dpr": {
+            "t": 604800,
+            "s": "None"
+          },
+          "ds_user_id": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "ig_lang": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "igd_ls": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "locale": {
+            "t": 604800,
+            "s": "None"
+          },
+          "wd": {
+            "t": 604800,
+            "s": "Lax"
+          }
+        }
+      },
+      "direct_v2_endpoints": [
+        "\\/api\\/v1\\/direct_v2\\/restoration_cdn_url",
+        "\\/api\\/v1\\/direct_v2\\/ranked_recipients",
+        "\\/api\\/v1\\/direct_v2\\/search_secondary",
+        "\\/direct_v2\\/*"
+      ]
+    },
+    "dm_page_20250606_093001.html": {
+      "file_path": "results/dm_page_20250606_093001.html",
+      "file_size": 421736,
+      "analysis_time": "2025-06-07T00:40:16.565041",
+      "csrf_tokens": [
+        "TvcE3zbi-C8-tXuxgIITcm"
+      ],
+      "x_ig_app_ids": [
+        "936619743392459"
+      ],
+      "user_ids": [
+        "0"
+      ],
+      "account_ids": [
+        "0"
+      ],
+      "ig_device_ids": [
+        "6589B2E4-14AB-45BA-95C1-651791D9E925"
+      ],
+      "datr_tokens": [
+        "GLVCaBDf70cNbcpN499pu7Nv"
+      ],
+      "security_config": {
+        "\"InstagramSecurityConfig\"": {
+          "csrf_token": "TvcE3zbi-C8-tXuxgIITcm"
+        }
+      },
+      "current_user_data": {
+        "\"CurrentUserInitialData\"": {
+          "ACCOUNT_ID": "0",
+          "USER_ID": "0",
+          "NAME": "",
+          "SHORT_NAME": null,
+          "IS_BUSINESS_PERSON_ACCOUNT": false,
+          "HAS_SECONDARY_BUSINESS_PERSON": false,
+          "IS_FACEBOOK_WORK_ACCOUNT": false,
+          "IS_INSTAGRAM_BUSINESS_PERSON": false,
+          "IS_MESSENGER_ONLY_USER": false,
+          "IS_DEACTIVATED_ALLOWED_ON_MESSENGER": false,
+          "IS_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORK_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORKROOMS_USER": false,
+          "APP_ID": "936619743392459",
+          "IS_BUSINESS_DOMAIN": false,
+          "NON_FACEBOOK_USER_ID": "0",
+          "IS_INSTAGRAM_USER": 1,
+          "IG_USER_EIMU": "0"
+        }
+      },
+      "relay_api_config": {
+        "\"RelayAPIConfigDefaults\"": {
+          "accessToken": "",
+          "actorID": "0",
+          "customHeaders": {
+            "X-IG-App-ID": "936619743392459",
+            "X-IG-D": "www"
+          },
+          "enableNetworkLogger": false,
+          "enableVerboseNetworkLogger": false,
+          "fetchTimeout": 30000,
+          "graphURI": "/api/graphql/",
+          "retryDelays": [
+            1000,
+            3000
+          ],
+          "useXController": true,
+          "xhrEncoding": null,
+          "subscriptionTopicURI": null,
+          "withCredentials": false,
+          "isProductionEndpoint": false,
+          "workRequestTaggingProduct": null,
+          "encryptionKeyParams": null,
+          "graphBatchURI": "/api/graphqlbatch/"
+        }
+      },
+      "polaris_viewer": {
+        "\"PolarisViewer\"": {
+          "data": null,
+          "id": null
+        }
+      },
+      "cookie_config": {
+        "\"CookieCoreConfig\"": {
+          "_fbp": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "csrftoken": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "dpr": {
+            "t": 604800,
+            "s": "None"
+          },
+          "ds_user_id": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "ig_lang": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "igd_ls": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "locale": {
+            "t": 604800,
+            "s": "None"
+          },
+          "wd": {
+            "t": 604800,
+            "s": "Lax"
+          }
+        }
+      },
+      "direct_v2_endpoints": [
+        "\\/api\\/v1\\/direct_v2\\/restoration_cdn_url",
+        "\\/api\\/v1\\/direct_v2\\/ranked_recipients",
+        "\\/api\\/v1\\/direct_v2\\/search_secondary",
+        "\\/direct_v2\\/*"
+      ]
+    },
+    "dm_page_20250606_234356.html": {
+      "file_path": "results/dm_page_20250606_234356.html",
+      "file_size": 429169,
+      "analysis_time": "2025-06-07T00:40:16.572938",
+      "csrf_tokens": [
+        "w9ILbr-iM8gtB-U2h6D7Sp"
+      ],
+      "x_ig_app_ids": [
+        "936619743392459"
+      ],
+      "user_ids": [
+        "0"
+      ],
+      "account_ids": [
+        "0"
+      ],
+      "ig_device_ids": [
+        "0958E802-CD1E-4CB6-9B25-EE1F2F4EFDFD"
+      ],
+      "datr_tokens": [
+        "PH1DaHJZqOHL_E1g-qFYT5_9"
+      ],
+      "security_config": {
+        "\"InstagramSecurityConfig\"": {
+          "csrf_token": "w9ILbr-iM8gtB-U2h6D7Sp"
+        }
+      },
+      "current_user_data": {
+        "\"CurrentUserInitialData\"": {
+          "ACCOUNT_ID": "0",
+          "USER_ID": "0",
+          "NAME": "",
+          "SHORT_NAME": null,
+          "IS_BUSINESS_PERSON_ACCOUNT": false,
+          "HAS_SECONDARY_BUSINESS_PERSON": false,
+          "IS_FACEBOOK_WORK_ACCOUNT": false,
+          "IS_INSTAGRAM_BUSINESS_PERSON": false,
+          "IS_MESSENGER_ONLY_USER": false,
+          "IS_DEACTIVATED_ALLOWED_ON_MESSENGER": false,
+          "IS_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORK_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORKROOMS_USER": false,
+          "APP_ID": "936619743392459",
+          "IS_BUSINESS_DOMAIN": false,
+          "NON_FACEBOOK_USER_ID": "0",
+          "IS_INSTAGRAM_USER": 1,
+          "IG_USER_EIMU": "0"
+        }
+      },
+      "relay_api_config": {
+        "\"RelayAPIConfigDefaults\"": {
+          "accessToken": "",
+          "actorID": "0",
+          "customHeaders": {
+            "X-IG-App-ID": "936619743392459",
+            "X-IG-D": "www"
+          },
+          "enableNetworkLogger": false,
+          "enableVerboseNetworkLogger": false,
+          "fetchTimeout": 30000,
+          "graphURI": "/api/graphql/",
+          "retryDelays": [
+            1000,
+            3000
+          ],
+          "useXController": true,
+          "xhrEncoding": null,
+          "subscriptionTopicURI": null,
+          "withCredentials": false,
+          "isProductionEndpoint": false,
+          "workRequestTaggingProduct": null,
+          "encryptionKeyParams": null,
+          "graphBatchURI": "/api/graphqlbatch/"
+        }
+      },
+      "polaris_viewer": {
+        "\"PolarisViewer\"": {
+          "data": null,
+          "id": null
+        }
+      },
+      "cookie_config": {
+        "\"CookieCoreConfig\"": {
+          "_fbp": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "csrftoken": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "dpr": {
+            "t": 604800,
+            "s": "None"
+          },
+          "ds_user_id": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "ig_lang": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "igd_ls": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "locale": {
+            "t": 604800,
+            "s": "None"
+          },
+          "wd": {
+            "t": 604800,
+            "s": "Lax"
+          }
+        }
+      },
+      "direct_v2_endpoints": [
+        "\\/api\\/v1\\/direct_v2\\/restoration_cdn_url",
+        "\\/api\\/v1\\/direct_v2\\/ranked_recipients",
+        "\\/api\\/v1\\/direct_v2\\/search_secondary",
+        "\\/direct_v2\\/*"
+      ]
+    },
+    "dm_page_20250606_235043.html": {
+      "file_path": "results/dm_page_20250606_235043.html",
+      "file_size": 429045,
+      "analysis_time": "2025-06-07T00:40:16.580943",
+      "csrf_tokens": [
+        "U4Gn0u5HFlbOfJD9gdDlZf"
+      ],
+      "x_ig_app_ids": [
+        "936619743392459"
+      ],
+      "user_ids": [
+        "0"
+      ],
+      "account_ids": [
+        "0"
+      ],
+      "ig_device_ids": [
+        "C00352E5-00CB-4102-A437-69CC3FE2F70B"
+      ],
+      "datr_tokens": [
+        "0n5DaFcQs47OrlrIg-3QxHEB"
+      ],
+      "security_config": {
+        "\"InstagramSecurityConfig\"": {
+          "csrf_token": "U4Gn0u5HFlbOfJD9gdDlZf"
+        }
+      },
+      "current_user_data": {
+        "\"CurrentUserInitialData\"": {
+          "ACCOUNT_ID": "0",
+          "USER_ID": "0",
+          "NAME": "",
+          "SHORT_NAME": null,
+          "IS_BUSINESS_PERSON_ACCOUNT": false,
+          "HAS_SECONDARY_BUSINESS_PERSON": false,
+          "IS_FACEBOOK_WORK_ACCOUNT": false,
+          "IS_INSTAGRAM_BUSINESS_PERSON": false,
+          "IS_MESSENGER_ONLY_USER": false,
+          "IS_DEACTIVATED_ALLOWED_ON_MESSENGER": false,
+          "IS_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORK_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORKROOMS_USER": false,
+          "APP_ID": "936619743392459",
+          "IS_BUSINESS_DOMAIN": false,
+          "NON_FACEBOOK_USER_ID": "0",
+          "IS_INSTAGRAM_USER": 1,
+          "IG_USER_EIMU": "0"
+        }
+      },
+      "relay_api_config": {
+        "\"RelayAPIConfigDefaults\"": {
+          "accessToken": "",
+          "actorID": "0",
+          "customHeaders": {
+            "X-IG-App-ID": "936619743392459",
+            "X-IG-D": "www"
+          },
+          "enableNetworkLogger": false,
+          "enableVerboseNetworkLogger": false,
+          "fetchTimeout": 30000,
+          "graphURI": "/api/graphql/",
+          "retryDelays": [
+            1000,
+            3000
+          ],
+          "useXController": true,
+          "xhrEncoding": null,
+          "subscriptionTopicURI": null,
+          "withCredentials": false,
+          "isProductionEndpoint": false,
+          "workRequestTaggingProduct": null,
+          "encryptionKeyParams": null,
+          "graphBatchURI": "/api/graphqlbatch/"
+        }
+      },
+      "polaris_viewer": {
+        "\"PolarisViewer\"": {
+          "data": null,
+          "id": null
+        }
+      },
+      "cookie_config": {
+        "\"CookieCoreConfig\"": {
+          "_fbp": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "csrftoken": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "dpr": {
+            "t": 604800,
+            "s": "None"
+          },
+          "ds_user_id": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "ig_lang": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "igd_ls": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "locale": {
+            "t": 604800,
+            "s": "None"
+          },
+          "wd": {
+            "t": 604800,
+            "s": "Lax"
+          }
+        }
+      },
+      "direct_v2_endpoints": [
+        "\\/api\\/v1\\/direct_v2\\/restoration_cdn_url",
+        "\\/api\\/v1\\/direct_v2\\/ranked_recipients",
+        "\\/api\\/v1\\/direct_v2\\/search_secondary",
+        "\\/direct_v2\\/*"
+      ]
+    },
+    "dm_page_20250606_234932.html": {
+      "file_path": "results/dm_page_20250606_234932.html",
+      "file_size": 429168,
+      "analysis_time": "2025-06-07T00:40:16.589646",
+      "csrf_tokens": [
+        "QGJW_xJcFe87N_-wfBfwma"
+      ],
+      "x_ig_app_ids": [
+        "936619743392459"
+      ],
+      "user_ids": [
+        "0"
+      ],
+      "account_ids": [
+        "0"
+      ],
+      "ig_device_ids": [
+        "61BE55B0-0709-4C0A-8522-7299893D7D68"
+      ],
+      "datr_tokens": [
+        "jH5DaEyPRLBPTjaeZn4AkNZg"
+      ],
+      "security_config": {
+        "\"InstagramSecurityConfig\"": {
+          "csrf_token": "QGJW_xJcFe87N_-wfBfwma"
+        }
+      },
+      "current_user_data": {
+        "\"CurrentUserInitialData\"": {
+          "ACCOUNT_ID": "0",
+          "USER_ID": "0",
+          "NAME": "",
+          "SHORT_NAME": null,
+          "IS_BUSINESS_PERSON_ACCOUNT": false,
+          "HAS_SECONDARY_BUSINESS_PERSON": false,
+          "IS_FACEBOOK_WORK_ACCOUNT": false,
+          "IS_INSTAGRAM_BUSINESS_PERSON": false,
+          "IS_MESSENGER_ONLY_USER": false,
+          "IS_DEACTIVATED_ALLOWED_ON_MESSENGER": false,
+          "IS_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORK_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORKROOMS_USER": false,
+          "APP_ID": "936619743392459",
+          "IS_BUSINESS_DOMAIN": false,
+          "NON_FACEBOOK_USER_ID": "0",
+          "IS_INSTAGRAM_USER": 1,
+          "IG_USER_EIMU": "0"
+        }
+      },
+      "relay_api_config": {
+        "\"RelayAPIConfigDefaults\"": {
+          "accessToken": "",
+          "actorID": "0",
+          "customHeaders": {
+            "X-IG-App-ID": "936619743392459",
+            "X-IG-D": "www"
+          },
+          "enableNetworkLogger": false,
+          "enableVerboseNetworkLogger": false,
+          "fetchTimeout": 30000,
+          "graphURI": "/api/graphql/",
+          "retryDelays": [
+            1000,
+            3000
+          ],
+          "useXController": true,
+          "xhrEncoding": null,
+          "subscriptionTopicURI": null,
+          "withCredentials": false,
+          "isProductionEndpoint": false,
+          "workRequestTaggingProduct": null,
+          "encryptionKeyParams": null,
+          "graphBatchURI": "/api/graphqlbatch/"
+        }
+      },
+      "polaris_viewer": {
+        "\"PolarisViewer\"": {
+          "data": null,
+          "id": null
+        }
+      },
+      "cookie_config": {
+        "\"CookieCoreConfig\"": {
+          "_fbp": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "csrftoken": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "dpr": {
+            "t": 604800,
+            "s": "None"
+          },
+          "ds_user_id": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "ig_lang": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "igd_ls": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "locale": {
+            "t": 604800,
+            "s": "None"
+          },
+          "wd": {
+            "t": 604800,
+            "s": "Lax"
+          }
+        }
+      },
+      "direct_v2_endpoints": [
+        "\\/api\\/v1\\/direct_v2\\/restoration_cdn_url",
+        "\\/api\\/v1\\/direct_v2\\/ranked_recipients",
+        "\\/api\\/v1\\/direct_v2\\/search_secondary",
+        "\\/direct_v2\\/*"
+      ]
+    },
+    "dm_page_20250606_235950.html": {
+      "file_path": "results/dm_page_20250606_235950.html",
+      "file_size": 429056,
+      "analysis_time": "2025-06-07T00:40:16.597656",
+      "csrf_tokens": [
+        "izxgHYO2aVJop-wEyYmCUl"
+      ],
+      "x_ig_app_ids": [
+        "936619743392459"
+      ],
+      "user_ids": [
+        "0"
+      ],
+      "account_ids": [
+        "0"
+      ],
+      "ig_device_ids": [
+        "DA1D680C-6246-4473-882D-0BE768ADDA09"
+      ],
+      "datr_tokens": [
+        "9YBDaOL7FFsWZgX_7leutma8"
+      ],
+      "security_config": {
+        "\"InstagramSecurityConfig\"": {
+          "csrf_token": "izxgHYO2aVJop-wEyYmCUl"
+        }
+      },
+      "current_user_data": {
+        "\"CurrentUserInitialData\"": {
+          "ACCOUNT_ID": "0",
+          "USER_ID": "0",
+          "NAME": "",
+          "SHORT_NAME": null,
+          "IS_BUSINESS_PERSON_ACCOUNT": false,
+          "HAS_SECONDARY_BUSINESS_PERSON": false,
+          "IS_FACEBOOK_WORK_ACCOUNT": false,
+          "IS_INSTAGRAM_BUSINESS_PERSON": false,
+          "IS_MESSENGER_ONLY_USER": false,
+          "IS_DEACTIVATED_ALLOWED_ON_MESSENGER": false,
+          "IS_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORK_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORKROOMS_USER": false,
+          "APP_ID": "936619743392459",
+          "IS_BUSINESS_DOMAIN": false,
+          "NON_FACEBOOK_USER_ID": "0",
+          "IS_INSTAGRAM_USER": 1,
+          "IG_USER_EIMU": "0"
+        }
+      },
+      "relay_api_config": {
+        "\"RelayAPIConfigDefaults\"": {
+          "accessToken": "",
+          "actorID": "0",
+          "customHeaders": {
+            "X-IG-App-ID": "936619743392459",
+            "X-IG-D": "www"
+          },
+          "enableNetworkLogger": false,
+          "enableVerboseNetworkLogger": false,
+          "fetchTimeout": 30000,
+          "graphURI": "/api/graphql/",
+          "retryDelays": [
+            1000,
+            3000
+          ],
+          "useXController": true,
+          "xhrEncoding": null,
+          "subscriptionTopicURI": null,
+          "withCredentials": false,
+          "isProductionEndpoint": false,
+          "workRequestTaggingProduct": null,
+          "encryptionKeyParams": null,
+          "graphBatchURI": "/api/graphqlbatch/"
+        }
+      },
+      "polaris_viewer": {
+        "\"PolarisViewer\"": {
+          "data": null,
+          "id": null
+        }
+      },
+      "cookie_config": {
+        "\"CookieCoreConfig\"": {
+          "_fbp": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "csrftoken": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "dpr": {
+            "t": 604800,
+            "s": "None"
+          },
+          "ds_user_id": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "ig_lang": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "igd_ls": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "locale": {
+            "t": 604800,
+            "s": "None"
+          },
+          "wd": {
+            "t": 604800,
+            "s": "Lax"
+          }
+        }
+      },
+      "direct_v2_endpoints": [
+        "\\/api\\/v1\\/direct_v2\\/restoration_cdn_url",
+        "\\/api\\/v1\\/direct_v2\\/ranked_recipients",
+        "\\/api\\/v1\\/direct_v2\\/search_secondary",
+        "\\/direct_v2\\/*"
+      ]
+    },
+    "dm_page_20250606_233752.html": {
+      "file_path": "results/dm_page_20250606_233752.html",
+      "file_size": 429048,
+      "analysis_time": "2025-06-07T00:40:16.606059",
+      "csrf_tokens": [
+        "BAlScQ0ImEV2BBbyM2vQHE"
+      ],
+      "x_ig_app_ids": [
+        "936619743392459"
+      ],
+      "user_ids": [
+        "0"
+      ],
+      "account_ids": [
+        "0"
+      ],
+      "ig_device_ids": [
+        "231F19D4-8B5A-483A-BD66-784D3CC6910A"
+      ],
+      "datr_tokens": [
+        "0HtDaFScA69XvuU-BSrbd50k"
+      ],
+      "security_config": {
+        "\"InstagramSecurityConfig\"": {
+          "csrf_token": "BAlScQ0ImEV2BBbyM2vQHE"
+        }
+      },
+      "current_user_data": {
+        "\"CurrentUserInitialData\"": {
+          "ACCOUNT_ID": "0",
+          "USER_ID": "0",
+          "NAME": "",
+          "SHORT_NAME": null,
+          "IS_BUSINESS_PERSON_ACCOUNT": false,
+          "HAS_SECONDARY_BUSINESS_PERSON": false,
+          "IS_FACEBOOK_WORK_ACCOUNT": false,
+          "IS_INSTAGRAM_BUSINESS_PERSON": false,
+          "IS_MESSENGER_ONLY_USER": false,
+          "IS_DEACTIVATED_ALLOWED_ON_MESSENGER": false,
+          "IS_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORK_MESSENGER_CALL_GUEST_USER": false,
+          "IS_WORKROOMS_USER": false,
+          "APP_ID": "936619743392459",
+          "IS_BUSINESS_DOMAIN": false,
+          "NON_FACEBOOK_USER_ID": "0",
+          "IS_INSTAGRAM_USER": 1,
+          "IG_USER_EIMU": "0"
+        }
+      },
+      "relay_api_config": {
+        "\"RelayAPIConfigDefaults\"": {
+          "accessToken": "",
+          "actorID": "0",
+          "customHeaders": {
+            "X-IG-App-ID": "936619743392459",
+            "X-IG-D": "www"
+          },
+          "enableNetworkLogger": false,
+          "enableVerboseNetworkLogger": false,
+          "fetchTimeout": 30000,
+          "graphURI": "/api/graphql/",
+          "retryDelays": [
+            1000,
+            3000
+          ],
+          "useXController": true,
+          "xhrEncoding": null,
+          "subscriptionTopicURI": null,
+          "withCredentials": false,
+          "isProductionEndpoint": false,
+          "workRequestTaggingProduct": null,
+          "encryptionKeyParams": null,
+          "graphBatchURI": "/api/graphqlbatch/"
+        }
+      },
+      "polaris_viewer": {
+        "\"PolarisViewer\"": {
+          "data": null,
+          "id": null
+        }
+      },
+      "cookie_config": {
+        "\"CookieCoreConfig\"": {
+          "_fbp": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "csrftoken": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "dpr": {
+            "t": 604800,
+            "s": "None"
+          },
+          "ds_user_id": {
+            "t": 7776000,
+            "s": "None"
+          },
+          "ig_lang": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "igd_ls": {
+            "t": 34560000,
+            "s": "None"
+          },
+          "locale": {
+            "t": 604800,
+            "s": "None"
+          },
+          "wd": {
+            "t": 604800,
+            "s": "Lax"
+          }
+        }
+      },
+      "direct_v2_endpoints": [
+        "\\/api\\/v1\\/direct_v2\\/restoration_cdn_url",
+        "\\/api\\/v1\\/direct_v2\\/ranked_recipients",
+        "\\/api\\/v1\\/direct_v2\\/search_secondary",
+        "\\/direct_v2\\/*"
+      ]
+    }
+  },
+  "user_identifiers": {},
+  "csrf_tokens": {},
+  "api_keys": {},
+  "database_schemas": {
+    "alx_trading_dms_1749203477.sqlite": {
+      "database_path": "./alx_trading_dms_1749203477.sqlite",
+      "tables": {
+        "alx_trading_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extracted_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_used",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              "extraction_logs",
+              1
+            ]
+          ]
+        },
+        "thread_metadata": {
+          "columns": [
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "created_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "last_message_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extracted_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_logs": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "extraction_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "action",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "status",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "details",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "ALX_TRADING_1749203477",
+              "session_setup",
+              "error",
+              "Both username and password must be provided.",
+              "2025-06-06T09:51:28.553722"
+            ]
+          ]
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.698617"
+    },
+    "advanced_dm_database_1748743051.sqlite": {
+      "database_path": "./databases/advanced_dm_database_1748743051.sqlite",
+      "tables": {},
+      "analysis_time": "2025-06-07T00:40:16.702832"
+    },
+    "advanced_dm_database_1748742706.sqlite": {
+      "database_path": "./databases/advanced_dm_database_1748742706.sqlite",
+      "tables": {},
+      "analysis_time": "2025-06-07T00:40:16.703559"
+    },
+    "ultimate_dm_extraction_1749158475.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749158475.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.699485"
+    },
+    "advanced_dm_extraction_STABLE_EXTRACT_1749170553.sqlite": {
+      "database_path": "./databases/advanced_dm_extraction_STABLE_EXTRACT_1749170553.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_method",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 2,
+          "sample_data": [
+            [
+              "extraction_logs",
+              21
+            ],
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_methods",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "performance_metrics",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "STABLE_EXTRACT_1749170553",
+              "alx.trading",
+              "2025-06-06T00:42:33.405974",
+              "2025-06-06T00:43:10.396841",
+              0,
+              0,
+              0.0,
+              100.0,
+              "[]",
+              "{\"messages_per_second\": 0.0, \"threads_per_minute\": 0.0, \"success_rate\": 0.0, \"stealth_score\": 100.0}"
+            ]
+          ]
+        },
+        "extraction_logs": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "level",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 21,
+          "sample_data": [
+            [
+              1,
+              "2025-06-06T00:42:33.433340",
+              "SUCCESS",
+              "📊 Advanced database initialized",
+              "STABLE_EXTRACT_1749170553"
+            ],
+            [
+              2,
+              "2025-06-06T00:42:33.437639",
+              "SUCCESS",
+              "📝 Logging system initialized",
+              "STABLE_EXTRACT_1749170553"
+            ],
+            [
+              3,
+              "2025-06-06T00:42:33.441678",
+              "CRITICAL",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "STABLE_EXTRACT_1749170553"
+            ]
+          ]
+        },
+        "session_cache": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "created_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "last_used",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "is_valid",
+              "type": "BOOLEAN",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.699877"
+    },
+    "advanced_dm_extraction_STABLE_EXTRACT_1749162249.sqlite": {
+      "database_path": "./databases/advanced_dm_extraction_STABLE_EXTRACT_1749162249.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_method",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 2,
+          "sample_data": [
+            [
+              "extraction_logs",
+              20
+            ],
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_methods",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "performance_metrics",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "STABLE_EXTRACT_1749162249",
+              "alx.trading",
+              "2025-06-05T22:24:09.688388",
+              "2025-06-05T22:24:48.148785",
+              0,
+              0,
+              0.0,
+              100.0,
+              "[]",
+              "{\"messages_per_second\": 0.0, \"threads_per_minute\": 0.0, \"success_rate\": 0.0, \"stealth_score\": 100.0}"
+            ]
+          ]
+        },
+        "extraction_logs": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "level",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 20,
+          "sample_data": [
+            [
+              1,
+              "2025-06-05T22:24:09.728878",
+              "SUCCESS",
+              "📊 Advanced database initialized",
+              "STABLE_EXTRACT_1749162249"
+            ],
+            [
+              2,
+              "2025-06-05T22:24:09.733990",
+              "SUCCESS",
+              "📝 Logging system initialized",
+              "STABLE_EXTRACT_1749162249"
+            ],
+            [
+              3,
+              "2025-06-05T22:24:09.740658",
+              "CRITICAL",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "STABLE_EXTRACT_1749162249"
+            ]
+          ]
+        },
+        "session_cache": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "created_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "last_used",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "is_valid",
+              "type": "BOOLEAN",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.700543"
+    },
+    "ultimate_dm_extraction_1749153698.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749153698.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "ULTIMATE_DM_1749153698",
+              "/workspaces/sugarglitch-realops/.venv/bin/python /workspaces/sugarglitch-realops/src/advanced_tools/advanced_hacking_arsenal_2025.py",
+              "2025-06-05T20:01:38.606111",
+              "2025-06-05T20:01:46.725532",
+              0,
+              0,
+              0.0,
+              95.0
+            ]
+          ]
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.701107"
+    },
+    "ultimate_dm_extraction_1749161291.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749161291.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "ULTIMATE_DM_1749161291",
+              "alx.trading",
+              "2025-06-05T22:08:11.489139",
+              "2025-06-05T22:08:19.625128",
+              0,
+              0,
+              0.0,
+              95.0
+            ]
+          ]
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.701527"
+    },
+    "ultimate_dm_extraction_1749153158.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749153158.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "ULTIMATE_DM_1749153158",
+              "alx.trading",
+              "2025-06-05T19:52:38.966258",
+              "2025-06-05T19:52:47.692928",
+              0,
+              0,
+              0.0,
+              95.0
+            ]
+          ]
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.701952"
+    },
+    "ultimate_dm_extraction_1749160232.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749160232.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.702479"
+    },
+    "advanced_dm_extraction_STABLE_EXTRACT_1749163147.sqlite": {
+      "database_path": "./databases/advanced_dm_extraction_STABLE_EXTRACT_1749163147.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_method",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              "extraction_logs",
+              2
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_methods",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "performance_metrics",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_logs": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "level",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 2,
+          "sample_data": [
+            [
+              1,
+              "2025-06-05T22:39:07.416232",
+              "SUCCESS",
+              "📊 Advanced database initialized",
+              "STABLE_EXTRACT_1749163147"
+            ],
+            [
+              2,
+              "2025-06-05T22:39:07.420569",
+              "SUCCESS",
+              "📝 Logging system initialized",
+              "STABLE_EXTRACT_1749163147"
+            ]
+          ]
+        },
+        "session_cache": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "created_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "last_used",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "is_valid",
+              "type": "BOOLEAN",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.703066"
+    },
+    "advanced_dm_extraction_STABLE_EXTRACT_1749163756.sqlite": {
+      "database_path": "./databases/advanced_dm_extraction_STABLE_EXTRACT_1749163756.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_method",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 2,
+          "sample_data": [
+            [
+              "extraction_logs",
+              20
+            ],
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_methods",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "performance_metrics",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "STABLE_EXTRACT_1749163756",
+              "alx.trading",
+              "2025-06-05T22:49:16.221414",
+              "2025-06-05T22:49:55.125447",
+              0,
+              0,
+              0.0,
+              100.0,
+              "[]",
+              "{\"messages_per_second\": 0.0, \"threads_per_minute\": 0.0, \"success_rate\": 0.0, \"stealth_score\": 100.0}"
+            ]
+          ]
+        },
+        "extraction_logs": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "level",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 20,
+          "sample_data": [
+            [
+              1,
+              "2025-06-05T22:49:16.248418",
+              "SUCCESS",
+              "📊 Advanced database initialized",
+              "STABLE_EXTRACT_1749163756"
+            ],
+            [
+              2,
+              "2025-06-05T22:49:16.254248",
+              "SUCCESS",
+              "📝 Logging system initialized",
+              "STABLE_EXTRACT_1749163756"
+            ],
+            [
+              3,
+              "2025-06-05T22:49:16.261344",
+              "CRITICAL",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "STABLE_EXTRACT_1749163756"
+            ]
+          ]
+        },
+        "session_cache": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "created_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "last_used",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "is_valid",
+              "type": "BOOLEAN",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.703835"
+    },
+    "ultimate_dm_extraction_1749158401.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749158401.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.704428"
+    },
+    "advanced_dm_extraction_STABLE_EXTRACT_1749163502.sqlite": {
+      "database_path": "./databases/advanced_dm_extraction_STABLE_EXTRACT_1749163502.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_method",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 2,
+          "sample_data": [
+            [
+              "extraction_logs",
+              20
+            ],
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_methods",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "performance_metrics",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "STABLE_EXTRACT_1749163502",
+              "alx.trading",
+              "2025-06-05T22:45:02.129889",
+              "2025-06-05T22:45:38.571842",
+              0,
+              0,
+              0.0,
+              100.0,
+              "[]",
+              "{\"messages_per_second\": 0.0, \"threads_per_minute\": 0.0, \"success_rate\": 0.0, \"stealth_score\": 100.0}"
+            ]
+          ]
+        },
+        "extraction_logs": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "level",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 20,
+          "sample_data": [
+            [
+              1,
+              "2025-06-05T22:45:02.155405",
+              "SUCCESS",
+              "📊 Advanced database initialized",
+              "STABLE_EXTRACT_1749163502"
+            ],
+            [
+              2,
+              "2025-06-05T22:45:02.160999",
+              "SUCCESS",
+              "📝 Logging system initialized",
+              "STABLE_EXTRACT_1749163502"
+            ],
+            [
+              3,
+              "2025-06-05T22:45:02.167000",
+              "CRITICAL",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "STABLE_EXTRACT_1749163502"
+            ]
+          ]
+        },
+        "session_cache": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "created_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "last_used",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "is_valid",
+              "type": "BOOLEAN",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.704816"
+    },
+    "ultimate_dm_extraction_1749160541.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749160541.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.705610"
+    },
+    "ultimate_dm_extraction_1749160555.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749160555.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.706072"
+    },
+    "ultimate_dm_extraction_1749160403.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749160403.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.706493"
+    },
+    "advanced_dm_extraction_STABLE_EXTRACT_1749170273.sqlite": {
+      "database_path": "./databases/advanced_dm_extraction_STABLE_EXTRACT_1749170273.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_method",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 2,
+          "sample_data": [
+            [
+              "extraction_logs",
+              21
+            ],
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_methods",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "performance_metrics",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "STABLE_EXTRACT_1749170273",
+              "alx.trading",
+              "2025-06-06T00:37:53.206222",
+              "2025-06-06T00:38:26.421209",
+              0,
+              0,
+              0.0,
+              100.0,
+              "[]",
+              "{\"messages_per_second\": 0.0, \"threads_per_minute\": 0.0, \"success_rate\": 0.0, \"stealth_score\": 100.0}"
+            ]
+          ]
+        },
+        "extraction_logs": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "level",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 21,
+          "sample_data": [
+            [
+              1,
+              "2025-06-06T00:37:53.231605",
+              "SUCCESS",
+              "📊 Advanced database initialized",
+              "STABLE_EXTRACT_1749170273"
+            ],
+            [
+              2,
+              "2025-06-06T00:37:53.235659",
+              "SUCCESS",
+              "📝 Logging system initialized",
+              "STABLE_EXTRACT_1749170273"
+            ],
+            [
+              3,
+              "2025-06-06T00:37:53.239566",
+              "CRITICAL",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "STABLE_EXTRACT_1749170273"
+            ]
+          ]
+        },
+        "session_cache": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "created_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "last_used",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "is_valid",
+              "type": "BOOLEAN",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.706943"
+    },
+    "ultimate_dm_extraction_1749158025.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749158025.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "ULTIMATE_DM_1749158025",
+              "alx.trading",
+              "2025-06-05T21:13:45.492436",
+              "2025-06-05T21:13:52.235820",
+              0,
+              0,
+              0.0,
+              95.0
+            ]
+          ]
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.707572"
+    },
+    "ultimate_dm_extraction_1749160333.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749160333.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.708041"
+    },
+    "ultimate_dm_extraction_1749160627.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749160627.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.708495"
+    },
+    "advanced_dm_extraction_STABLE_EXTRACT_1749162533.sqlite": {
+      "database_path": "./databases/advanced_dm_extraction_STABLE_EXTRACT_1749162533.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_method",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 2,
+          "sample_data": [
+            [
+              "extraction_logs",
+              20
+            ],
+            [
+              "extraction_sessions",
+              1
+            ]
+          ]
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "raw_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_methods",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "performance_metrics",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 1,
+          "sample_data": [
+            [
+              1,
+              "STABLE_EXTRACT_1749162533",
+              "alx.trading",
+              "2025-06-05T22:28:53.966661",
+              "2025-06-05T22:29:24.315881",
+              0,
+              0,
+              0.0,
+              100.0,
+              "[]",
+              "{\"messages_per_second\": 0.0, \"threads_per_minute\": 0.0, \"success_rate\": 0.0, \"stealth_score\": 100.0}"
+            ]
+          ]
+        },
+        "extraction_logs": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "level",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 20,
+          "sample_data": [
+            [
+              1,
+              "2025-06-05T22:28:53.995767",
+              "SUCCESS",
+              "📊 Advanced database initialized",
+              "STABLE_EXTRACT_1749162533"
+            ],
+            [
+              2,
+              "2025-06-05T22:28:54.001600",
+              "SUCCESS",
+              "📝 Logging system initialized",
+              "STABLE_EXTRACT_1749162533"
+            ],
+            [
+              3,
+              "2025-06-05T22:28:54.006858",
+              "CRITICAL",
+              "🚀 STARTING ADVANCED MULTI-METHOD EXTRACTION",
+              "STABLE_EXTRACT_1749162533"
+            ]
+          ]
+        },
+        "session_cache": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_data",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "created_at",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "last_used",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "is_valid",
+              "type": "BOOLEAN",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.708977"
+    },
+    "ultimate_dm_extraction_1749161210.sqlite": {
+      "database_path": "./databases/ultimate_dm_extraction_1749161210.sqlite",
+      "tables": {
+        "dm_threads": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "thread_title",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "participants",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_count",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "metadata",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "sqlite_sequence": {
+          "columns": [
+            {
+              "name": "name",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "seq",
+              "type": "",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "dm_messages": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "thread_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "sender_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "message_text",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_type",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_url",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "media_path",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "extraction_timestamp",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        },
+        "extraction_sessions": {
+          "columns": [
+            {
+              "name": "id",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 1
+            },
+            {
+              "name": "scan_id",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "target_username",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_start",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "session_end",
+              "type": "TEXT",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_threads",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "total_messages",
+              "type": "INTEGER",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "success_rate",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            },
+            {
+              "name": "stealth_score",
+              "type": "REAL",
+              "not_null": 0,
+              "primary_key": 0
+            }
+          ],
+          "row_count": 0,
+          "sample_data": []
+        }
+      },
+      "analysis_time": "2025-06-07T00:40:16.709650"
+    }
+  },
+  "extracted_cookies": {},
+  "deferred_cookies": {},
+  "instagram_config": {},
+  "api_endpoints": [],
+  "summary": {
+    "total_html_files": 7,
+    "total_databases": 23,
+    "unique_csrf_tokens": [
+      "U4Gn0u5HFlbOfJD9gdDlZf",
+      "QGJW_xJcFe87N_-wfBfwma",
+      "izxgHYO2aVJop-wEyYmCUl",
+      "w9ILbr-iM8gtB-U2h6D7Sp",
+      "BAlScQ0ImEV2BBbyM2vQHE",
+      "TvcE3zbi-C8-tXuxgIITcm",
+      "iatPXHRW94oWdCkUBToCwj"
+    ],
+    "unique_app_ids": [
+      "936619743392459"
+    ],
+    "unique_user_ids": [
+      "0"
+    ],
+    "unique_device_ids": [
+      "DA1D680C-6246-4473-882D-0BE768ADDA09",
+      "61BE55B0-0709-4C0A-8522-7299893D7D68",
+      "6589B2E4-14AB-45BA-95C1-651791D9E925",
+      "0958E802-CD1E-4CB6-9B25-EE1F2F4EFDFD",
+      "7538F16F-1ECF-49D8-8391-7CBC68389A3E",
+      "C00352E5-00CB-4102-A437-69CC3FE2F70B",
+      "231F19D4-8B5A-483A-BD66-784D3CC6910A"
+    ],
+    "direct_v2_endpoints": [
+      "\\/api\\/v1\\/direct_v2\\/ranked_recipients",
+      "\\/api\\/v1\\/direct_v2\\/restoration_cdn_url",
+      "\\/direct_v2\\/*",
+      "\\/api\\/v1\\/direct_v2\\/search_secondary"
+    ],
+    "session_identifiers_found": true
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "Python: DM Extractor",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/quick-dm-extractor.py",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    },
+    {
+      "name": "Python: Hacking Menu",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/hacking-menu.py",
+      "console": "integratedTerminal",
+      "justMyCode": false
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "timestamp": "2025-06-09T13:44:43.982401",
+  "total_modules_tested": 35,
+  "successful_imports": 2,
+  "failed_imports": 33,
+  "success_rate": "5.7%",
+  "test_results": {
+    "requests": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'requests'"
+    },
+    "aiohttp": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'aiohttp'"
+    },
+    "httpx": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'httpx'"
+    },
+    "urllib3": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'urllib3'"
+    },
+    "playwright": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'playwright'"
+    },
+    "selenium": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'selenium'"
+    },
+    "beautifulsoup4": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'bs4'"
+    },
+    "bs4": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'bs4'"
+    },
+    "lxml": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'lxml'"
+    },
+    "asyncio": {
+      "status": "SUCCESS",
+      "version": "Unknown",
+      "module": "<module 'asyncio' from '/usr/lib/python3.12/asyncio/__init__.py'>",
+      "error": null
+    },
+    "aiofiles": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'aiofiles'"
+    },
+    "cryptography": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'cryptography'"
+    },
+    "jwt": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'jwt'"
+    },
+    "passlib": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'passlib'"
+    },
+    "bcrypt": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'bcrypt'"
+    },
+    "pandas": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'pandas'"
+    },
+    "numpy": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'numpy'"
+    },
+    "matplotlib": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'matplotlib'"
+    },
+    "websockets": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'websockets'"
+    },
+    "socketio": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'socketio'"
+    },
+    "click": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'click'"
+    },
+    "colorama": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'colorama'"
+    },
+    "tqdm": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'tqdm'"
+    },
+    "tabulate": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'tabulate'"
+    },
+    "dotenv": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'dotenv'"
+    },
+    "pydantic": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'pydantic'"
+    },
+    "configparser": {
+      "status": "SUCCESS",
+      "version": "Unknown",
+      "module": "<module 'configparser' from '/usr/lib/python3.12/configparser.py'>",
+      "error": null
+    },
+    "pytest": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'pytest'"
+    },
+    "black": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'black'"
+    },
+    "isort": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'isort'"
+    },
+    "flake8": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'flake8'"
+    },
+    "PIL": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'PIL'"
+    },
+    "cv2": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'cv2'"
+    },
+    "jupyter": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'jupyter'"
+    },
+    "IPython": {
+      "status": "MISSING",
+      "version": null,
+      "module": null,
+      "error": "No module named 'IPython'"
+    }
+  },
+  "functionality_tests": {
+    "requests": "Failed",
+    "aiohttp": "Failed",
+    "playwright": "Failed",
+    "selenium": "Failed",
+    "beautifulsoup4": "Failed",
+    "pandas": "Failed",
+    "numpy": "Failed"
+  },
+  "missing_modules": [
+    "requests",
+    "aiohttp",
+    "httpx",
+    "urllib3",
+    "playwright",
+    "selenium",
+    "beautifulsoup4",
+    "bs4",
+    "lxml",
+    "aiofiles",
+    "cryptography",
+    "jwt",
+    "passlib",
+    "bcrypt",
+    "pandas",
+    "numpy",
+    "matplotlib",
+    "websockets",
+    "socketio",
+    "click",
+    "colorama",
+    "tqdm",
+    "tabulate",
+    "dotenv",
+    "pydantic",
+    "pytest",
+    "black",
+    "isort",
+    "flake8",
+    "PIL",
+    "cv2",
+    "jupyter",
+    "IPython"
+  ],
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "action": "Install requests: pip install requests",
+      "reason": "Critical for HTTP operations"
+    },
+    {
+      "priority": "HIGH",
+      "action": "Install playwright: pip install playwright && playwright install",
+      "reason": "Critical for browser automation"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Install selenium: pip install selenium",
+      "reason": "Alternative browser automation"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "Install data science packages: pip install pandas numpy matplotlib",
+      "reason": "Required for data processing"
+    }
+  ]
+}

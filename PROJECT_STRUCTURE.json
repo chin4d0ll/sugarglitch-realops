@@ -1,0 +1,23 @@
+{
+  "project": "SugarGlitch RealOps",
+  "organized_date": "2025-06-12T06:10:23.180335",
+  "structure": {
+    "core": 5,
+    "config": 53,
+    "docs": 105,
+    "sessions": 117,
+    "scripts": 281,
+    "data": 95,
+    "devcontainer": 42
+  },
+  "total_files": 698,
+  "folders": {
+    "core": "Main application files",
+    "config": "Configuration files and environment variables",
+    "docs": "Documentation and guides",
+    "sessions": "Session data and tokens",
+    "scripts": "Utility scripts and tools",
+    "data": "Data files (JSON, TXT, CSV, etc.)",
+    "devcontainer": "Development environment setup"
+  }
+}

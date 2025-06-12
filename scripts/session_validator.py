@@ -1,310 +1,257 @@
-# -*- coding: utf-8 -*-
-# pylint: disable=all
-# flake8: noqa
-# type: ignore
-# mypy: ignore-errors
+#!/usr/bin/env python3
 """
-Session Data Validator and Sanitizer
-Validates and cleans existing session data without deleting anything
+Instagram Session Validator - Using only built-in Python modules
+ทดสอบ session validity โดยไม่ต้องพึ่ง external dependencies
 """
 
+import urllib.request
+import urllib.parse
+import urllib.error
 import json
-import re
-from typing import Dict, List, Optional, Tuple
-from datetime import datetime, timedelta
-from pathlib import Path
+import os
+import sys
+from datetime import datetime
+import time
 
 class SessionValidator:
     def __init__(self):
-        self.required_fields = ['sessionid']
-        self.recommended_fields = ['username', 'csrftoken', 'user_id']
-        self.optional_fields = ['expires', 'created_at', 'is_active', 'cookies']
-
-        # Instagram sessionid pattern (usually 32+ characters alphanumeric)
-        self.sessionid_pattern = re.compile(r'^[a-zA-Z0-9]{10,}$')
-
-    def validate_session_data(self, session_data: Dict) -> Tuple[bool, List[str], Dict[str, str]]:
-        """
-        Validate session data structure
-        Returns: (is_valid, errors, suggestions)
-        """
-        errors = []
-        suggestions = {}
-
-        if not isinstance(session_data, dict):
-            errors.append("Session data must be a dictionary")
-            return False, errors, suggestions
-
-        # Check required fields
-        for field in self.required_fields:
-            if field not in session_data:
-                errors.append(f"Missing required field: {field}")
-            elif not session_data[field]:
-                errors.append(f"Required field '{field}' is empty")
-
-        # Validate sessionid format if present
-        if 'sessionid' in session_data:
-            sessionid = str(session_data['sessionid']).strip()
-            if not self.sessionid_pattern.match(sessionid):
-                errors.append("Invalid sessionid format (should be alphanumeric, 10+ characters)")
-            elif len(sessionid) < 20:
-                suggestions['sessionid'] = "Short sessionid - might be invalid or truncated"
-
-        # Check recommended fields
-        for field in self.recommended_fields:
-            if field not in session_data:
-                suggestions[field] = f"Recommended field '{field}' is missing"
-
-        # Validate username format if present
-        if 'username' in session_data:
-            username = str(session_data['username']).strip()
-            if not username:
-                errors.append("Username is empty")
-            elif not re.match(r'^[a-zA-Z0-9._]{1,30}$', username):
-                suggestions['username'] = "Username format might be invalid for Instagram"
-
-        # Check expiration if present
-        if 'expires' in session_data:
-            try:
-                if isinstance(session_data['expires'], str):
-                    expires = datetime.fromisoformat(session_data['expires'].replace('Z', '+00:00'))
-                else:
-                    expires = datetime.fromtimestamp(session_data['expires'])
-
-                if expires < datetime.now():
-                    suggestions['expires'] = "Session appears to be expired"
-                elif expires < datetime.now() + timedelta(days=1):
-                    suggestions['expires'] = "Session expires soon (within 24 hours)"
-
-            except (ValueError, TypeError):
-                errors.append("Invalid expiration date format")
-
-        # Validate CSRF token if present
-        if 'csrftoken' in session_data:
-            csrf = str(session_data['csrftoken']).strip()
-            if len(csrf) < 10:
-                suggestions['csrftoken'] = "CSRF token seems too short"
-
-        return len(errors) == 0, errors, suggestions
-
-    def sanitize_session_data(self, session_data: Dict) -> Dict:
-        """Clean and sanitize session data"""
-        if not isinstance(session_data, dict):
-            return {}
-
-        sanitized = {}
-
-        for key, value in session_data.items():
-            if isinstance(value, str):
-                # Remove whitespace, quotes, and common prefixes
-                cleaned_value = value.strip().strip('"').strip("'")
-
-                # Remove common cookie prefixes
-                if key == 'sessionid' and cleaned_value.startswith('sessionid='):
-                    cleaned_value = cleaned_value[10:]
-                elif key == 'csrftoken' and cleaned_value.startswith('csrftoken='):
-                    cleaned_value = cleaned_value[10:]
-
-                sanitized[key] = cleaned_value
-            else:
-                sanitized[key] = value
-
-        # Add metadata
-        sanitized['_validation_timestamp'] = datetime.now().isoformat()
-        sanitized['_sanitized'] = True
-
-        return sanitized
-
-    def extract_session_from_cookies(self, cookie_string: str) -> Dict:
-        """Extract session data from cookie string"""
-        session_data = {}
-
-        if not cookie_string:
-            return session_data
-
-        # Split cookies by semicolon
-        cookies = cookie_string.split(';')
-
-        for cookie in cookies:
-            if '=' in cookie:
-                key, value = cookie.split('=', 1)
-                key = key.strip()
-                value = value.strip()
-
-                # Look for Instagram session fields
-                if key in ['sessionid', 'csrftoken', 'mid', 'ig_did', 'ig_nrcb']:
-                    session_data[key] = value
-                elif key == 'ds_user_id':
-                    session_data['user_id'] = value
-                elif key == 'ds_user':
-                    session_data['username'] = value
-
-        return session_data
-
-    def merge_session_data(self, *session_dicts) -> Dict:
-        """Merge multiple session data dictionaries safely"""
-        merged = {}
-        source_info = []
-
-        for i, session_dict in enumerate(session_dicts):
-            if not isinstance(session_dict, dict):
-                continue
-
-            for key, value in session_dict.items():
-                if key.startswith('_'):  # Skip metadata
-                    continue
-
-                if key not in merged and value:
-                    merged[key] = value
-                    source_info.append(f"{key}: source_{i}")
-
-        # Add merge metadata
-        merged['_merged_from'] = len(session_dicts)
-        merged['_merge_timestamp'] = datetime.now().isoformat()
-        merged['_source_info'] = source_info
-
-        return merged
-
-    def validate_session_file(self, file_path: Path) -> Dict:
-        """Validate a session file and return detailed report"""
-        report = {
-            'file': str(file_path),
-            'exists': file_path.exists(),
-            'readable': False,
-            'valid_json': False,
-            'session_valid': False,
-            'errors': [],
-            'suggestions': {},
-            'data': None,
-            'sanitized_data': None
-        }
-
-        if not report['exists']:
-            report['errors'].append("File does not exist")
-            return report
-
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                report['readable'] = True
-
-                # Try to parse JSON
-                data = json.loads(content)
-                report['valid_json'] = True
-                report['data'] = data
-
-                # Validate session structure
-                is_valid, errors, suggestions = self.validate_session_data(data)
-                report['session_valid'] = is_valid
-                report['errors'].extend(errors)
-                report['suggestions'].update(suggestions)
-
-                # Generate sanitized version
-                report['sanitized_data'] = self.sanitize_session_data(data)
-
-        except json.JSONDecodeError as e:
-            report['errors'].append(f"Invalid JSON: {str(e)}")
-        except Exception as e:
-            report['errors'].append(f"Error reading file: {str(e)}")
-
-        return report
-
-# Batch session validation utility
-class SessionBatchValidator:
-    def __init__(self, base_dir: str = "."):
-        self.base_dir = Path(base_dir)
-        self.validator = SessionValidator()
-        self.results_dir = self.base_dir / "validation_results"
-        self.results_dir.mkdir(exist_ok=True)
-
-    def find_all_session_files(self) -> List[Path]:
-        """Find all potential session files"""
-        session_files = []
-
-        patterns = [
-            "**/*session*.json",
-            "**/*SESSION*.json",
-            "**/session.json",
-            "**/*sessionid*.json",
-            "**/*cookies*.json"
+        self.session_files = [
+            "/workspaces/sugarglitch-realops/alx_trading_session_fleming654.json",
+            "/workspaces/sugarglitch-realops/fresh_sessions/working_session_1749202526.json",
+            "/workspaces/sugarglitch-realops/session.json",
+            "/workspaces/sugarglitch-realops/sensitive_data/session.json"
         ]
-
-        for pattern in patterns:
-            session_files.extend(self.base_dir.glob(pattern))
-
-        return [f for f in session_files if f.is_file()]
-
-    def validate_all_sessions(self) -> Dict:
-        """Validate all found session files"""
-        session_files = self.find_all_session_files()
-
-        results = {
-            'total_files': len(session_files),
-            'valid_sessions': [],
-            'invalid_sessions': [],
-            'unreadable_files': [],
-            'validation_timestamp': datetime.now().isoformat(),
-            'summary': {}
-        }
-
-        print(f"🔍 Found {len(session_files)} potential session files")
-
-        for file_path in session_files:
-            print(f"   Validating {file_path}...")
-
-            validation_result = self.validator.validate_session_file(file_path)
-
-            if not validation_result['readable']:
-                results['unreadable_files'].append(validation_result)
-            elif validation_result['session_valid']:
-                results['valid_sessions'].append(validation_result)
-                print(f"   ✅ Valid")
-            else:
-                results['invalid_sessions'].append(validation_result)
-                print(f"   ⚠️ Issues found: {len(validation_result['errors'])} errors")
-
-        # Generate summary
-        results['summary'] = {
-            'valid_count': len(results['valid_sessions']),
-            'invalid_count': len(results['invalid_sessions']),
-            'unreadable_count': len(results['unreadable_files']),
-            'success_rate': len(results['valid_sessions']) / max(len(session_files), 1) * 100
-        }
-
-        # Save detailed results
-        results_file = self.results_dir / "session_validation_report.json"
-        with open(results_file, 'w') as f:
-            json.dump(results, f, indent=2)
-
-        print(f"\n📊 Validation Summary:")
-        print(f"   ✅ Valid sessions: {results['summary']['valid_count']}")
-        print(f"   ⚠️ Invalid sessions: {results['summary']['invalid_count']}")
-        print(f"   ❌ Unreadable files: {results['summary']['unreadable_count']}")
-        print(f"   📈 Success rate: {results['summary']['success_rate']:.1f}%")
-        print(f"   📄 Detailed report: {results_file}")
-
+        
+        self.test_urls = [
+            "https://i.instagram.com/api/v1/accounts/current_user/",
+            "https://www.instagram.com/api/v1/users/web_info/",
+            "https://i.instagram.com/api/v1/direct_v2/inbox/?visual_message_reply_chain_enabled=true&thread_message_limit=10"
+        ]
+        
+    def load_session(self, file_path):
+        """โหลดข้อมูล session จากไฟล์"""
+        print("DEBUG: Entering load_session method")
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                
+            print(f"DEBUG: Loading session from {file_path}")
+            print(f"DEBUG: Session data loaded: {data}")
+                
+            sessionid = data.get("sessionid") or data.get("cookies", {}).get("sessionid")
+            if not sessionid:
+                return None, "No sessionid found"
+                
+            user_agent = data.get("user_agent", "Mozilla/5.0 (iPhone; CPU iPhone OS 15_0 like Mac OS X) AppleWebKit/605.1.15")
+            csrf_token = data.get("csrf_token") or data.get("csrftoken") or data.get("cookies", {}).get("csrftoken")
+            
+            return {
+                "sessionid": sessionid,
+                "user_agent": user_agent,
+                "csrf_token": csrf_token,
+                "file": file_path
+            }, None
+            
+        except Exception as e:
+            return None, str(e)
+    
+    def test_session(self, session_data, url):
+        """ทดสอบ session กับ URL ที่กำหนด"""
+        try:
+            print(f"DEBUG: Testing session {session_data['sessionid']} with URL {url}")
+            
+            # สร้าง request
+            req = urllib.request.Request(url)
+            req.add_header("User-Agent", session_data["user_agent"])
+            req.add_header("Accept", "*/*")
+            req.add_header("Accept-Language", "en-US,en;q=0.9")
+            req.add_header("Accept-Encoding", "gzip, deflate, br")
+            req.add_header("X-Requested-With", "XMLHttpRequest")
+            
+            # เพิ่ม cookie
+            cookie_parts = [f"sessionid={session_data['sessionid']}"]
+            if session_data.get("csrf_token"):
+                cookie_parts.append(f"csrftoken={session_data['csrf_token']}")
+                req.add_header("X-CSRFToken", session_data["csrf_token"])
+            
+            req.add_header("Cookie", "; ".join(cookie_parts))
+            
+            # ส่ง request
+            with urllib.request.urlopen(req, timeout=10) as response:
+                status_code = response.getcode()
+                response_data = response.read().decode('utf-8')
+                
+                return {
+                    "success": True,
+                    "status_code": status_code,
+                    "response_length": len(response_data),
+                    "response_data": response_data[:500] + "..." if len(response_data) > 500 else response_data
+                }
+                
+        except urllib.error.HTTPError as e:
+            return {
+                "success": False,
+                "error_type": "HTTPError",
+                "status_code": e.code,
+                "reason": e.reason,
+                "message": f"HTTP {e.code}: {e.reason}"
+            }
+        except urllib.error.URLError as e:
+            return {
+                "success": False,
+                "error_type": "URLError",
+                "reason": str(e.reason),
+                "message": f"Connection error: {e.reason}"
+            }
+        except Exception as e:
+            return {
+                "success": False,
+                "error_type": "Exception",
+                "message": str(e)
+            }
+    
+    def validate_all_sessions(self):
+        """ทดสอบทุก session files"""
+        print("🔍 Instagram Session Validation Test")
+        print("=" * 60)
+        print(f"⏰ Started at: {datetime.now()}")
+        print()
+        
+        results = []
+        
+        for i, file_path in enumerate(self.session_files, 1):
+            print(f"📁 Testing Session {i}: {os.path.basename(file_path)}")
+            print(f"DEBUG: Validating session file {file_path}")
+            
+            if not os.path.exists(file_path):
+                print(f"❌ File not found: {file_path}")
+                print()
+                continue
+            
+            # โหลด session
+            session_data, error = self.load_session(file_path)
+            if error:
+                print(f"❌ Load error: {error}")
+                print()
+                continue
+            
+            print(f"✅ Session loaded: {session_data['sessionid'][:20]}...")
+            
+            # ทดสอบแต่ละ URL
+            session_results = {
+                "file": file_path,
+                "sessionid": session_data['sessionid'][:20] + "...",
+                "tests": []
+            }
+            
+            for j, url in enumerate(self.test_urls, 1):
+                print(f"  🌐 Test {j}: {url.split('/')[-1][:30]}...")
+                
+                result = self.test_session(session_data, url)
+                session_results["tests"].append(result)
+                
+                if result["success"]:
+                    print(f"    ✅ Status {result['status_code']} - {result['response_length']} bytes")
+                    
+                    # วิเคราะห์ response
+                    try:
+                        response_json = json.loads(result["response_data"].replace("...", ""))
+                        if "user" in response_json:
+                            user = response_json["user"]
+                            username = user.get("username", "N/A")
+                            print(f"    👤 User found: {username}")
+                        elif "inbox" in response_json:
+                            inbox = response_json["inbox"]
+                            threads = inbox.get("threads", [])
+                            print(f"    📬 Inbox access: {len(threads)} threads")
+                        elif "status" in response_json:
+                            print(f"    📊 API Response: {response_json['status']}")
+                    except:
+                        if "html" not in result["response_data"].lower():
+                            print(f"    📝 Response: {result['response_data'][:100]}...")
+                        else:
+                            print(f"    ⚠️ HTML response (possible login page)")
+                else:
+                    print(f"    ❌ {result['message']}")
+                    if result.get("status_code") == 401:
+                        print(f"    🔒 Session expired or invalid")
+                    elif result.get("status_code") == 403:
+                        print(f"    🚫 Access forbidden")
+                    elif result.get("status_code") == 429:
+                        print(f"    ⏳ Rate limited")
+                
+                # หน่วงเวลาระหว่าง request
+                if j < len(self.test_urls):
+                    time.sleep(2)
+            
+            results.append(session_results)
+            print()
+        
         return results
+    
+    def generate_report(self, results):
+        """สร้างรายงานผลการทดสอบ"""
+        print("📊 SESSION VALIDATION REPORT")
+        print("=" * 60)
+        
+        total_sessions = len([r for r in results if r])
+        working_sessions = 0
+        dm_access_sessions = 0
+        
+        for result in results:
+            if not result:
+                continue
+                
+            session_working = False
+            dm_access = False
+            
+            for test in result["tests"]:
+                if test["success"] and test["status_code"] == 200:
+                    session_working = True
+                    # ตรวจสอบว่าเป็น DM API หรือไม่
+                    if "direct_v2" in test.get("url", ""):
+                        dm_access = True
+            
+            if session_working:
+                working_sessions += 1
+            if dm_access:
+                dm_access_sessions += 1
+            
+            status = "✅ WORKING" if session_working else "❌ FAILED"
+            dm_status = " + DM ACCESS" if dm_access else ""
+            print(f"{status}{dm_status}: {result['sessionid']} ({os.path.basename(result['file'])})")
+        
+        print(f"\n📈 SUMMARY:")
+        print(f"Total Sessions Tested: {total_sessions}")
+        print(f"Working Sessions: {working_sessions}")
+        print(f"DM Access Sessions: {dm_access_sessions}")
+        
+        if working_sessions > 0:
+            print(f"\n✅ SUCCESS: {working_sessions} working session(s) found!")
+            if dm_access_sessions > 0:
+                print(f"🎯 READY FOR DM EXTRACTION: {dm_access_sessions} session(s) with DM access!")
+                return True
+            else:
+                print(f"⚠️ No sessions with confirmed DM access found")
+                return False
+        else:
+            print(f"\n❌ FAILURE: No working sessions found")
+            return False
 
-# Example usage
-if __name__ == "__main__":
-    # Test individual validation
+def main():
     validator = SessionValidator()
+    results = validator.validate_all_sessions()
+    success = validator.generate_report(results)
+    
+    print(f"\n🎯 NEXT STEPS:")
+    if success:
+        print("1. ✅ Proceed with DM extraction using working session")
+        print("2. ✅ Run: python3 cute_rate_dm_extractor.py")
+        print("3. ✅ Monitor extraction results")
+    else:
+        print("1. 🔧 Get fresh sessions with proper privileges")
+        print("2. 🔧 Check network connectivity")
+        print("3. 🔧 Verify Instagram API endpoints")
 
-    # Test with sample data
-    sample_session = {
-        'sessionid': 'abcd123456789',
-        'username': 'testuser',
-        'csrftoken': 'xyz789'
-    }
-
-    is_valid, errors, suggestions = validator.validate_session_data(sample_session)
-    print(f"Sample validation - Valid: {is_valid}")
-    if errors:
-        print(f"Errors: {errors}")
-    if suggestions:
-        print(f"Suggestions: {suggestions}")
-
-    # Test batch validation
-    print("\n🔍 Running batch validation...")
-    batch_validator = SessionBatchValidator()
-    results = batch_validator.validate_all_sessions()
+if __name__ == "__main__":
+    main()
