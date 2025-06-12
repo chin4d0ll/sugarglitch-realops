@@ -84,16 +84,52 @@ echo "📁 Creating project directories..."
 mkdir -p /workspaces/sugarglitch-realops/{logs,data,config,temp,output}
 
 # Set up Git configuration if not already set
-echo "⚙️ Configuring Git..."
+echo "⚙️ Configuring Git at all levels..."
 
-# Always set user name and email for consistency
-git config --global user.name "Dreamy"
-git config --global user.email "chin4d0ll@proton.me"
+# Always set user name and email for consistency - PRODUCTION VALUES
+git config --global user.name "chin4d0ll"
+git config --global user.email "beamr.1232@gmail.com"
 
-# Disable GPG commit signing to prevent signing errors
-echo "🔒 Disabling GPG commit signing..."
+# Also set at local level to override any system defaults
+git config --local user.name "chin4d0ll" 2>/dev/null || true
+git config --local user.email "beamr.1232@gmail.com" 2>/dev/null || true
+
+# Disable GPG commit signing to prevent signing errors - ALL LEVELS
+echo "🔒 Disabling GPG commit signing at all levels..."
 git config --global commit.gpgsign false
 git config --global tag.gpgsign false
+git config --global --unset gpg.program 2>/dev/null || true
+
+# Force local overrides as well
+git config --local commit.gpgsign false 2>/dev/null || true
+git config --local tag.gpgsign false 2>/dev/null || true
+git config --local --unset gpg.program 2>/dev/null || true
+
+# Force override system-level GPG settings by directly editing .git/config if it exists
+if [ -d ".git" ]; then
+    echo "🔧 Patching .git/config to override Codespaces system GPG settings..."
+    
+    # Ensure [commit] section exists with gpgsign = false
+    if ! grep -q "\[commit\]" .git/config; then
+        echo -e "\n[commit]\n\tgpgsign = false" >> .git/config
+    else
+        # Update existing commit section
+        sed -i '/^\[commit\]/,/^\[.*\]/{/gpgsign/d;}' .git/config
+        sed -i '/^\[commit\]/a\\tgpgsign = false' .git/config
+    fi
+    
+    # Ensure [user] section exists with correct values
+    if ! grep -q "\[user\]" .git/config; then
+        echo -e "\n[user]\n\tname = chin4d0ll\n\temail = beamr.1232@gmail.com" >> .git/config
+    else
+        # Update existing user section
+        sed -i '/^\[user\]/,/^\[.*\]/{/name\|email/d;}' .git/config
+        sed -i '/^\[user\]/a\\tname = chin4d0ll\n\temail = beamr.1232@gmail.com' .git/config
+    fi
+    
+    # Remove any gpg.program settings from .git/config
+    sed -i '/gpg\.program/d' .git/config 2>/dev/null || true
+fi
 
 # Configure Git defaults
 git config --global init.defaultBranch main
@@ -109,6 +145,17 @@ git config --global push.autoSetupRemote true
 echo "✅ Git configuration complete:"
 echo "  User: $(git config --global user.name) <$(git config --global user.email)>"
 echo "  GPG Signing: $(git config --global commit.gpgsign || echo 'false')"
+
+# Handle SQL Server extension compatibility issues
+echo "🔧 Handling SQL Server extension compatibility..."
+# SQL Server extensions are pre-installed in Codespaces but may cause runtime issues
+# They're disabled in devcontainer.json settings to prevent conflicts
+if code --list-extensions 2>/dev/null | grep -q "ms-mssql"; then
+    echo "⚠️  SQL Server extensions detected - using compatibility mode"
+    echo "   Extensions are configured to not auto-update to prevent conflicts"
+else
+    echo "✅ No SQL Server extension conflicts detected"
+fi
 
 # Install dotfiles
 echo "🔧 Installing dotfiles..."

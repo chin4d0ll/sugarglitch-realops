@@ -1,12 +1,16 @@
 [user]
-    name = Dreamy
-    email = chin4d0ll@proton.me
+    name = chin4d0ll
+    email = beamr.1232@gmail.com
 
 [commit]
     gpgsign = false
 
 [tag]
     gpgsign = false
+
+[gpg]
+    # Explicitly disable GPG program to override Codespaces defaults
+    program = 
 
 [init]
     defaultBranch = main

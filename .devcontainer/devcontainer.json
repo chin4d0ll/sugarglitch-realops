@@ -75,7 +75,9 @@
         "git.confirmSync": false,
         "extensions.ignoreRecommendations": false,
         "breadcrumbs.enabled": true,
-        "workbench.startupEditor": "none"
+        "workbench.startupEditor": "none",
+        "extensions.autoUpdate": false,
+        "extensions.autoCheckUpdates": false
       }
     }
   },
