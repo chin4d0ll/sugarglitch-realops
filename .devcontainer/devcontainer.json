@@ -1,62 +1,104 @@
 {
-  "name": "Sugarglitch RealOps - Penetration Testing Environment",
+  "name": "SugarGlitch RealOps - Advanced Red Team Environment",
   "build": {
     "dockerfile": "Dockerfile"
   },
   "forwardPorts": [
-    8080,
-    8081,
-    3000,
-    4444,
-    8000,
-    9001
+    8080, 8081, 3000, 4444, 8000, 9001, 8888, 5555, 1337
   ],
   "runArgs": [
     "--privileged",
     "--cap-add=NET_ADMIN",
     "--cap-add=SYS_PTRACE",
-    "--cap-add=SYS_ADMIN"
+    "--cap-add=SYS_ADMIN",
+    "--security-opt=seccomp=unconfined"
   ],
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python",
+        "ms-python.debugpy",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
         "ms-vscode-remote.remote-containers",
         "eamodio.gitlens",
         "humao.rest-client",
-        "ms-vscode-remote.remote-ssh",
         "ms-toolsai.jupyter",
-        "ms-python.debugpy",
-        "ms-python.flake8",
-        "ms-python.black-formatter",
         "redhat.vscode-yaml",
         "ms-vscode.hexeditor",
         "formulahendry.code-runner",
         "vscode-icons-team.vscode-icons",
-        "streetsidesoftware.code-spell-checker"
+        "streetsidesoftware.code-spell-checker",
+        "ms-vscode.theme-materialkit",
+        "pkief.material-icon-theme",
+        "bradlc.vscode-tailwindcss",
+        "ms-vscode.vscode-json",
+        "donjayamanne.githistory",
+        "ms-vscode-remote.remote-ssh",
+        "alefragnani.bookmarks",
+        "ms-vscode.powershell"
       ],
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "/bin/bash",
+            "icon": "terminal-bash"
+          },
+          "zsh": {
+            "path": "/bin/zsh",
+            "icon": "terminal"
+          }
+        },
         "files.autoSave": "afterDelay",
-        "http.proxy": "http://127.0.0.1:8080",
+        "files.autoSaveDelay": 2000,
         "security.workspace.trust.enabled": false,
         "terminal.integrated.scrollback": 10000,
-        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "python.defaultInterpreterPath": "/workspaces/sugarglitch-realops/.venv/bin/python",
         "python.formatting.provider": "black",
         "python.linting.enabled": true,
         "python.linting.flake8Enabled": true,
+        "python.analysis.autoImportCompletions": true,
+        "python.analysis.typeCheckingMode": "basic",
         "editor.formatOnSave": true,
-        "workbench.colorTheme": "Default Dark+",
-        "editor.minimap.enabled": false
+        "editor.formatOnPaste": true,
+        "workbench.colorTheme": "Material Theme Darker High Contrast",
+        "workbench.iconTheme": "material-icon-theme",
+        "editor.minimap.enabled": false,
+        "editor.fontSize": 14,
+        "editor.fontFamily": "'Fira Code', 'Cascadia Code', Consolas, monospace",
+        "editor.fontLigatures": true,
+        "editor.renderWhitespace": "boundary",
+        "editor.rulers": [79, 100],
+        "explorer.confirmDelete": false,
+        "git.enableSmartCommit": true,
+        "git.confirmSync": false,
+        "extensions.ignoreRecommendations": false,
+        "breadcrumbs.enabled": true,
+        "workbench.startupEditor": "none"
       }
     }
   },
   "containerEnv": {
     "DISPLAY": ":99",
-    "DEBIAN_FRONTEND": "noninteractive"
+    "DEBIAN_FRONTEND": "noninteractive",
+    "TERM": "xterm-256color",
+    "PYTHONUNBUFFERED": "1",
+    "PIP_DISABLE_PIP_VERSION_CHECK": "1"
   },
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker:2": {},
-    "ghcr.io/devcontainers/features/git:1": {}
-  }
-}
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "vscode",
+  "shutdownAction": "stopContainer",
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ]}
