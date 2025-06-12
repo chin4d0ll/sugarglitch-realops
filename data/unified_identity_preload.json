@@ -1,0 +1,36 @@
+{
+  "usernames": [
+    "alx.trading",
+    "whatilove1728"
+  ],
+  "email": "n@alx.trading",
+  "phones": [
+    "0615414210",
+    "+447793127209"
+  ],
+  "latest_sessionid": null,
+  "latest_session_timestamp": "2025-06-09T23:20:14.293441",
+  "shared_traits": {
+    "location": "Bangkok",
+    "business": "Trade Your Way",
+    "aliases": [
+      "Alx",
+      "Alex"
+    ],
+    "social_media": {
+      "instagram": [
+        "@alx.trading",
+        "@whatilove1728"
+      ],
+      "twitter": "@alx.trading",
+      "telegram": "@Alx_TYW",
+      "youtube": "traderyourway",
+      "discord": "alx76"
+    },
+    "status": [
+      "Checkpoint Protected",
+      "Target for extraction",
+      "Previous successful target"
+    ]
+  }
+}
