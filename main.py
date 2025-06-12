@@ -33,8 +33,10 @@ def check_environment(module_name=None):
     """Check required environment variables"""
     print("🔍 Checking environment configuration...")
     
-    # New modules don't require legacy environment variables
-    if module_name in ['quick-recon', 'instagram-osint', 'env-test', 'nmap-scan', 'sqlmap-test', 'targets']:
+    # Modern modules don't require legacy environment variables
+    modern_modules = ['quick-recon', 'instagram-osint', 'env-test', 'nmap-scan', 
+                     'sqlmap-test', 'targets', 'advanced-tools']
+    if module_name in modern_modules:
         print("✅ Environment configuration OK (modern module)")
         return True
     
@@ -66,6 +68,7 @@ def list_modules():
         ("quick-recon", "Quick Reconnaissance Scanner", "quick_recon.py"),
         ("instagram-osint", "Instagram OSINT Analysis", "instagram_osint.py"),
         ("env-test", "Environment Validation", "environment_test.py"),
+        ("advanced-tools", "Advanced Tools Check", "advanced_tools_check.py"),
         ("targets", "Show Target Database", "target_manager.py"),
         ("ssh-brute", "SSH Brute Force Attack", "ssh_bruteforce_multithread.py"),
         ("ctf-training", "CTF Hacking Masterclass", "ctf_hacking_masterclass_2025_fixed.py"),
@@ -123,6 +126,11 @@ def run_module(module_name, args=None):
         elif module_name == 'env-test':
             from environment_test import test_environment
             test_environment()
+            return True
+            
+        elif module_name == 'advanced-tools':
+            from advanced_tools_check import main as tools_check_main
+            tools_check_main()
             return True
             
         elif module_name == 'targets':
