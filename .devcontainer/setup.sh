@@ -162,6 +162,14 @@ echo "🔧 Installing dotfiles..."
 chmod +x /workspaces/sugarglitch-realops/.devcontainer/dotfiles/install.sh
 /workspaces/sugarglitch-realops/.devcontainer/dotfiles/install.sh
 
+# Install project Python dependencies from requirements.txt
+if [ -f "/workspaces/sugarglitch-realops/requirements.txt" ]; then
+    echo "📦 Installing project dependencies from requirements.txt..."
+    pip install --no-cache-dir -r /workspaces/sugarglitch-realops/requirements.txt
+else
+    echo "⚠️  requirements.txt not found, skipping project dependencies"
+fi
+
 # Install additional Python tools
 echo "🔧 Installing additional Python tools..."
 pip install \

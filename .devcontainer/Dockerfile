@@ -71,9 +71,8 @@ RUN pip install --no-cache-dir \
     selenium-wire \
     mitmproxy
 
-# Install Python dependencies
-COPY requirements.txt /tmp/requirements.txt
-RUN pip install --no-cache-dir -r /tmp/requirements.txt
-
-# Set working directory
+# Set working directory first
 WORKDIR /workspaces/sugarglitch-realops
+
+# Note: requirements.txt will be available after the repository is cloned
+# Additional dependencies can be installed via setup.sh post-create command
