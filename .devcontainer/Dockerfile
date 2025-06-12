@@ -1,7 +1,7 @@
 # Penetration Testing & Hacking Environment
 FROM python:3.10-slim
 
-# Install base system dependencies and penetration testing tools
+# Install base system dependencies and available penetration testing tools
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
@@ -21,7 +21,6 @@ RUN apt-get update && apt-get install -y \
     masscan \
     gobuster \
     dirb \
-    nikto \
     sqlmap \
     hydra \
     john \
@@ -29,22 +28,15 @@ RUN apt-get update && apt-get install -y \
     aircrack-ng \
     wireshark-common \
     tcpdump \
-    metasploit-framework \
-    exploitdb \
-    social-engineer-toolkit \
     fierce \
     dmitry \
-    maltego \
     recon-ng \
-    theharvester \
     ffuf \
     sublist3r \
-    amass \
-    sherlock \
-    phoneinfoga \
-    burpsuite \
-    zaproxy \
     && rm -rf /var/lib/apt/lists/*
+
+# Note: Additional security tools (nikto, metasploit, exploitdb, etc.) 
+# will be installed via setup.sh using alternative methods
 
 # Install additional hacking tools via pip
 RUN pip install --no-cache-dir \

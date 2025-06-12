@@ -198,6 +198,43 @@ pip install \
     python-whois \
     pygments
 
+# Install additional security tools that aren't in Debian repos
+echo "🛡️ Installing additional security tools via alternative methods..."
+
+# Install nikto
+echo "  📥 Installing nikto..."
+git clone https://github.com/sullo/nikto.git /opt/nikto 2>/dev/null || echo "    ⚠️ nikto already exists or failed to clone"
+
+# Install theHarvester
+echo "  📥 Installing theHarvester..."
+pip install theHarvester 2>/dev/null || echo "    ⚠️ theHarvester installation failed"
+
+# Install Sherlock
+echo "  📥 Installing Sherlock..."
+pip install sherlock-project 2>/dev/null || echo "    ⚠️ Sherlock installation failed"
+
+# Install Amass (via GitHub releases)
+echo "  📥 Installing Amass..."
+AMASS_VERSION="v4.2.0"
+wget -q "https://github.com/owasp-amass/amass/releases/download/${AMASS_VERSION}/amass_Linux_amd64.zip" -O /tmp/amass.zip 2>/dev/null || echo "    ⚠️ Amass download failed"
+if [ -f /tmp/amass.zip ]; then
+    unzip -q /tmp/amass.zip -d /tmp/amass 2>/dev/null
+    mv /tmp/amass/amass_Linux_amd64/amass /usr/local/bin/ 2>/dev/null || echo "    ⚠️ Amass installation failed"
+    rm -rf /tmp/amass.zip /tmp/amass 2>/dev/null
+fi
+
+# Install additional tools via pip/git that are commonly needed
+echo "  📥 Installing additional Python security tools..."
+pip install \
+    phonenumbers \
+    requests-html \
+    selenium-wire \
+    fake-useragent \
+    instagram-private-api \
+    2>/dev/null || echo "    ⚠️ Some Python security tools failed to install"
+
+echo "✅ Additional security tools installation completed"
+
 # Create useful aliases
 echo "🚀 Setting up aliases..."
 cat >> ~/.bashrc << 'EOF'
@@ -215,11 +252,13 @@ alias activate='source /workspaces/sugarglitch-realops/.venv/bin/activate'
 alias realops='cd /workspaces/sugarglitch-realops && source .venv/bin/activate'
 alias nmap-quick='nmap -T4 -F'
 alias nmap-full='nmap -T4 -A -v'
-alias burp='java -jar /opt/burpsuite/burpsuite.jar'
-alias msf='msfconsole'
+alias nikto-basic='perl /opt/nikto/program/nikto.pl -h'
+alias nikto-scan='perl /opt/nikto/program/nikto.pl'
+alias sherlock-search='sherlock'
+alias theharvester-search='theHarvester'
+alias amass-scan='amass enum -d'
 alias sqlmap-basic='sqlmap --batch --level=1 --risk=1'
 alias gobuster-dir='gobuster dir -w /usr/share/wordlists/dirb/common.txt'
-alias nikto-basic='nikto -h'
 
 # Environment setup
 export PATH="/workspaces/sugarglitch-realops/.venv/bin:$PATH"
