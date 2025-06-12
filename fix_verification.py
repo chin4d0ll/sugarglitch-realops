@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 """
 🔧 Quick Fix Verification Script
-ตรวจสอบว่าการแก้ไขสำเร็จหรือไม่
-"""
-
-import sys
+ตรวจสอบว่าการแก้ไขสำเร็จหรือ    packages_to_check = ['paramiko', 'requests', 'bs4', 'cryptography', 'numpy', 'pandas']
+    
+    for package in packages_to_check:
+        try:
+            __import__(package)
+            if package == 'bs4':
+                print("✅ beautifulsoup4 (bs4)")
+            else:
+                print(f"✅ {package}")
+        except ImportError:
+            print(f"❌ {package} - MISSING")port sys
 import importlib.util
 import os
 
