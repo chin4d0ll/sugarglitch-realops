@@ -1,0 +1,35 @@
+# SugarGlitch RealOps - Production Requirements
+# Required packages for run_main_realops.py
+
+# Core dependencies
+requests>=2.31.0
+aiohttp>=3.8.0
+aiofiles>=23.0.0
+
+# PDF generation (optional)
+weasyprint>=59.0
+# Alternative: install wkhtmltopdf system package
+
+# Data processing
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Instagram/Web automation
+selenium>=4.15.0
+playwright>=1.40.0
+
+# Security & stealth
+fake-useragent>=1.4.0
+httpx>=0.25.0
+
+# Database
+sqlite3  # Built-in to Python
+sqlalchemy>=2.0.0
+
+# Logging & monitoring
+psutil>=5.9.0
+
+# Development & testing
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
