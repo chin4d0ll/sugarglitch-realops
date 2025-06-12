@@ -1,33 +1,82 @@
 
-# 🎯 SugarGlitch RealOps
-## 🔥 Instagram DM Extraction & Operations Platform
-**SugarGlitch RealOps** is a comprehensive Instagram Direct Message extraction and operational platform designed for advanced social media intelligence gathering and analysis.
----
-## ✨ Key Features
-### 🎯 **Core Capabilities**
-- **📱 Instagram DM Extraction** - Extract direct messages from Instagram accounts
-- **🔓 Session Management** - Advanced session handling and authentication
-- **🕸️ Hijacked Session Support** - Utilize captured sessions for enhanced access
-- **📊 Database Storage** - SQLite-based data persistence and management
-- **🛡️ Anti-Detection** - IP rotation, rate limiting, and bypass mechanisms
-### 🚀 **Advanced Operations**
-- **🎭 Multi-Account Support** - Handle multiple Instagram targets
-- **⚡ Real-time Extraction** - Live DM monitoring and capture
-- **🔄 Session Recovery** - Automatic session repair and regeneration
-- **📈 Monitoring & Analytics** - System health monitoring and reporting
----
-## 🏗️ Project Structure
-### 📂 **Main Directories**
-| Directory | Files | Description |
-|-----------|-------|-------------|
-| **`/extractors/`** | 25 | 📱 Instagram DM extraction tools |
-| **`/tools/`** | 31+ | 🔧 Utilities, session management, bypass tools |
-| **`/databases/`** | 23 | 🗃️ SQLite databases and extraction results |
-| **`/documentation/`** | 13 | 📚 Project documentation and reports |
-| **`/launchers/`** | 6 | 🚀 Launch scripts and demos |
-| **`/hijacked_sessions/`** | 40+ | 🕸️ Captured session files |
-| **`/config/`** | - | ⚙️ Configuration files and settings |
-| **`/extractions/`** | - | 📄 JSON extraction results |
+# 🔥 SugarGlitch RealOps
+
+> **Advanced Red Team Automation Platform** 💀  
+> Production-ready cybersecurity toolkit for authorized penetration testing and security research.
+
+[![License](https://img.shields.io/badge/license-Educational%20Use-red.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://python.org)
+[![Security](https://img.shields.io/badge/security-redteam-critical.svg)](#)
+
+## ⚠️ DISCLAIMER
+
+This tool is for **AUTHORIZED TESTING ONLY**. Use only in environments you own or have explicit permission to test. Unauthorized access to computer systems is illegal and punishable by law.
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- Python 3.8+
+- Docker & Docker Compose  
+- Git
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/chin4d0ll/sugarglitch-realops.git
+cd sugarglitch-realops
+```
+
+### 2. Environment Setup
+
+```bash
+# Copy environment template
+cp .env.example .env
+
+# Edit configuration (REQUIRED)
+nano .env
+```
+
+**Required Environment Variables:**
+- `IG_USERNAME` - Instagram username for session testing
+- `IG_PASSWORD` - Instagram password
+- `TARGET_HOST` - Target host for penetration testing
+- `DISCORD_WEBHOOK_URL` - Discord webhook for notifications
+
+### 3. Installation Methods
+
+#### Option A: Docker (Recommended)
+
+```bash
+# Build container
+docker build -t sugarglitch-realops -f .devcontainer/Dockerfile .
+
+# Run interactively
+docker run --rm -it --privileged \
+  -v $(pwd):/workspaces/sugarglitch-realops \
+  --env-file .env \
+  sugarglitch-realops
+
+# Inside container
+python main.py --help
+```
+
+#### Option B: Local Installation
+
+```bash
+# Create virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Verify installation
+python verify_env.py
+
+# Run application
+python main.py --list
+```
 | **`/logs/`** | - | 📝 System logs and debug files |
 ---
 ## 🚀 Quick Start
