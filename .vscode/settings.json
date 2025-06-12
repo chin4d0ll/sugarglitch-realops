@@ -1,4 +1,6 @@
 {
+  "python.defaultInterpreterPath": "/workspaces/sugarglitch-realops/.venv/bin/python",
+  "python.terminal.activateEnvironment": true,
   "python.linting.enabled": false,
   "python.linting.pylintEnabled": false,
   "python.linting.flake8Enabled": false,
@@ -21,12 +23,18 @@
     "reportMissingImports": "none",
     "reportMissingTypeStubs": "none"
   },
-  "files.exclude": {
-    "**/__pycache__": true,
-    "**/*.pyc": true,
-    "**/.pytest_cache": true,
-    "**/.mypy_cache": true
-  },
+  
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.rulers": [79, 100],
+  "editor.fontSize": 14,
+  "editor.fontFamily": "'Fira Code', 'Cascadia Code', Consolas, monospace",
+  "editor.fontLigatures": true,
+  "editor.renderWhitespace": "boundary",
+  "editor.minimap.enabled": false,
+  
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 2000,
   "search.exclude": {
     "**/__pycache__": true,
     "**/*.pyc": true,
