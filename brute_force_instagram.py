@@ -138,14 +138,20 @@ async def brute_force_login(
                 await asyncio.sleep(delay)
 
             except Exception as e:
-                logger.error(f"❌ Error during login attempt for {username}: {e}")
+                logger.error(
+                    f"❌ Error during login attempt for {username}: {e}")
 
         await browser.close()
         logger.warning(f"❌ FAILED: No valid password found for {username}")
 
 
+# Added debug logging to identify potential issues
+logger.debug("🔍 Debugging script execution")
+
+
 async def main():
     """Main brute-force execution"""
+    logger.debug("🔍 Loading targets and passwords")
     targets = await load_targets()
     passwords = await load_passwords()
 
@@ -159,7 +165,10 @@ async def main():
 
     # Brute-force each target
     for target in targets:
+        logger.debug(f"🔍 Processing target: {target}")
         await brute_force_login(target, passwords, proxy)
+
+    logger.debug("✅ Script execution completed")
 
 
 if __name__ == "__main__":
