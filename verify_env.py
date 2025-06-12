@@ -191,6 +191,83 @@ def check_permissions():
     return len(permission_issues) == 0, permission_issues
 
 
+def check_git_configuration():
+    """Check Git configuration for proper setup"""
+    print("\n🔧 CHECKING GIT CONFIGURATION")
+    print("=" * 50)
+    
+    import subprocess
+    
+    git_checks = {
+        'user.name': 'Git user name',
+        'user.email': 'Git user email', 
+        'commit.gpgsign': 'GPG commit signing (should be false)',
+        'init.defaultBranch': 'Default branch name',
+        'core.editor': 'Default editor'
+    }
+    
+    git_issues = []
+    
+    try:
+        for config, description in git_checks.items():
+            try:
+                result = subprocess.run(
+                    ['git', 'config', '--global', config],
+                    capture_output=True,
+                    text=True,
+                    timeout=10
+                )
+                
+                if result.returncode == 0:
+                    value = result.stdout.strip()
+                    if config == 'commit.gpgsign' and value.lower() == 'true':
+                        print(f"  ⚠️ {config:20} = {value} (should be false to prevent signing errors)")
+                        git_issues.append(f"GPG signing enabled - may cause commit failures")
+                    else:
+                        print(f"  ✅ {config:20} = {value}")
+                else:
+                    print(f"  ❌ {config:20} = NOT SET - {description}")
+                    git_issues.append(f"{config} not configured")
+                    
+            except subprocess.TimeoutExpired:
+                print(f"  ⚠️ {config:20} = TIMEOUT - Git command timed out")
+                git_issues.append(f"Git timeout for {config}")
+            except Exception as e:
+                print(f"  ❌ {config:20} = ERROR - {str(e)}")
+                git_issues.append(f"Git error for {config}: {str(e)}")
+                
+    except FileNotFoundError:
+        print("  ❌ Git not found in PATH")
+        git_issues.append("Git not installed or not in PATH")
+        
+    # Test basic git operations
+    try:
+        # Test git status (basic git operation)
+        result = subprocess.run(
+            ['git', 'status', '--porcelain'],
+            capture_output=True,
+            text=True,
+            timeout=10,
+            cwd='/workspaces/sugarglitch-realops'
+        )
+        if result.returncode == 0:
+            print("  ✅ Git repository operations working")
+        else:
+            print("  ⚠️ Git repository operations may have issues")
+            
+    except Exception as e:
+        print(f"  ⚠️ Git repository test failed: {str(e)}")
+    
+    if git_issues:
+        print(f"\n⚠️ Found {len(git_issues)} git configuration issues:")
+        for issue in git_issues:
+            print(f"  • {issue}")
+        return False
+    else:
+        print("\n✅ Git configuration looks good!")
+        return True
+
+
 def main():
     """Main verification function"""
     print("🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥")
@@ -218,6 +295,10 @@ def main():
     # Permissions
     perms_ok, perm_issues = check_permissions()
     checks.append(("Permissions", perms_ok, f"{len(perm_issues)} permission issues"))
+    
+    # Git Configuration
+    git_ok = check_git_configuration()
+    checks.append(("Git Configuration", git_ok, ""))
     
     # Summary
     print("\n" + "=" * 60)

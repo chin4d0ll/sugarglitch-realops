@@ -9,11 +9,14 @@ HOME_DIR="$HOME"
 
 echo "🔧 Installing SugarGlitch RealOps dotfiles..."
 
-# Function to backup existing files
+# Function to backup existing files with timestamp
 backup_file() {
     if [ -f "$1" ]; then
-        echo "  📋 Backing up existing $1 to $1.backup"
-        cp "$1" "$1.backup"
+        local timestamp=$(date +%s)
+        local backup_name="$1.backup.$timestamp"
+        echo "  📋 Backing up existing $1 to $backup_name"
+        cp "$1" "$backup_name"
+        echo "  💾 Backup saved: $backup_name"
     fi
 }
 

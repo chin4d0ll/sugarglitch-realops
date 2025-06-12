@@ -85,14 +85,30 @@ mkdir -p /workspaces/sugarglitch-realops/{logs,data,config,temp,output}
 
 # Set up Git configuration if not already set
 echo "⚙️ Configuring Git..."
-if [ -z "$(git config --global user.name)" ]; then
-    git config --global user.name "chin4d0ll"
-    git config --global user.email "chin4d0ll@proton.me"
-fi
 
+# Always set user name and email for consistency
+git config --global user.name "Dreamy"
+git config --global user.email "chin4d0ll@proton.me"
+
+# Disable GPG commit signing to prevent signing errors
+echo "🔒 Disabling GPG commit signing..."
+git config --global commit.gpgsign false
+git config --global tag.gpgsign false
+
+# Configure Git defaults
 git config --global init.defaultBranch main
 git config --global pull.rebase false
 git config --global core.editor "code --wait"
+
+# Additional Git optimization settings
+git config --global core.autocrlf input
+git config --global core.filemode false
+git config --global push.default simple
+git config --global push.autoSetupRemote true
+
+echo "✅ Git configuration complete:"
+echo "  User: $(git config --global user.name) <$(git config --global user.email)>"
+echo "  GPG Signing: $(git config --global commit.gpgsign || echo 'false')"
 
 # Install dotfiles
 echo "🔧 Installing dotfiles..."
@@ -187,6 +203,32 @@ if [ ! -f "/usr/share/wordlists/rockyou.txt" ]; then
     sudo wget -q https://github.com/brannondorsey/naive-hashcat/releases/download/data/rockyou.txt -O /usr/share/wordlists/rockyou.txt
 fi
 
+# Verify security tools installation
+echo "🔍 Verifying security tools installation..."
+verify_tool() {
+    local tool=$1
+    local test_cmd=$2
+    echo -n "  🔧 Checking $tool... "
+    if command -v $tool >/dev/null 2>&1; then
+        if [ -n "$test_cmd" ]; then
+            eval "$test_cmd" >/dev/null 2>&1 && echo "✅ OK" || echo "⚠️ Installed but test failed"
+        else
+            echo "✅ OK"
+        fi
+    else
+        echo "❌ NOT FOUND"
+    fi
+}
+
+verify_tool "nmap" "nmap --version"
+verify_tool "hydra" "hydra -h"
+verify_tool "gobuster" "gobuster version"
+verify_tool "nikto" "nikto -Version"
+verify_tool "sqlmap" "sqlmap --version"
+verify_tool "john" "john --version"
+verify_tool "hashcat" "hashcat --version"
+verify_tool "msfconsole" "which msfconsole"
+
 # Create welcome banner
 echo "🎨 Creating welcome banner..."
 cat > /workspaces/sugarglitch-realops/welcome.sh << 'EOF'
@@ -232,11 +274,19 @@ chmod +x /workspaces/sugarglitch-realops/main.py
 chmod +x /workspaces/sugarglitch-realops/runner.py
 chmod +x /workspaces/sugarglitch-realops/verify_env.py
 
-# Run initial verification
+# Run initial verification with proper exit code handling
 echo "🧪 Running initial verification..."
 cd /workspaces/sugarglitch-realops
 source .venv/bin/activate
-python verify_env.py
+
+# Run verification and handle exit codes
+if python verify_env.py; then
+    echo "✅ Environment verification: PASSED"
+else
+    echo "⚠️ Environment verification: FAILED"
+    echo "❌ Some components may need attention. Check output above."
+    echo "💡 You can re-run 'python verify_env.py' later to check status"
+fi
 
 echo ""
 echo "✅ SugarGlitch RealOps environment setup complete!"

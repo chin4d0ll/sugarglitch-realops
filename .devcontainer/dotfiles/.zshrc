@@ -62,6 +62,9 @@ alias python='python3'
 alias pip='pip3'
 alias activate='source $REALOPS_HOME/.venv/bin/activate'
 alias realops='cd $REALOPS_HOME && source .venv/bin/activate'
+alias realops-start='cd $REALOPS_HOME && source .venv/bin/activate && python runner.py --interactive'
+alias realops-quick='cd $REALOPS_HOME && source .venv/bin/activate && python main.py --list'
+alias realops-verify='cd $REALOPS_HOME && source .venv/bin/activate && python verify_env.py'
 alias venv='source .venv/bin/activate'
 alias req='pip install -r requirements.txt'
 alias freeze='pip freeze > requirements.txt'
@@ -185,12 +188,21 @@ quickscan() {
 
 # Banner function
 banner() {
-    echo "🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥"
+    echo -e "\n🩷 Welcome to 🌐 SUGARGLITCH REALOPS 🌐"
+    echo -e "🎯 Automation Suite for OSINT, Brute, Export, and Hijack"
+    echo -e "� Stay Legal. Stay Safe. Pentest Responsibly.\n"
+    echo "�🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥"
     echo "💀                SUGARGLITCH REALOPS               💀"
     echo "🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥"
     echo "⚡ Advanced Red Team Automation Platform"
     echo "🎯 Production-Ready Cybersecurity Toolkit"
     echo "⚠️ AUTHORIZED TESTING ONLY!"
+    echo ""
+    echo "🚀 Quick Commands:"
+    echo "  realops-start          # Interactive mode"
+    echo "  realops-quick          # List modules"
+    echo "  realops-verify         # Check environment"
+    echo ""
 }
 
 # Load local environment if exists

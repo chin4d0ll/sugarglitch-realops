@@ -1,6 +1,12 @@
 [user]
-    name = chin4d0ll
-    email = beamr.1232@gmail.com
+    name = Dreamy
+    email = chin4d0ll@proton.me
+
+[commit]
+    gpgsign = false
+
+[tag]
+    gpgsign = false
 
 [init]
     defaultBranch = main
@@ -87,6 +93,7 @@
     untracked = ls-files --others --exclude-standard
 
 [credential]
+    helper = store
     helper = cache --timeout=3600
 
 [help]

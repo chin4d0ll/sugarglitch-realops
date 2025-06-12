@@ -313,11 +313,31 @@ Generate professional penetration testing reports:
 cd ~/hacking/reports
 gen-report
 ```
-### ⚠️ Legal Notice
-**This hacking environment is for educational and authorized testing purposes only.**
-- Only test systems you own or have explicit permission to test
-- Follow responsible disclosure practices
-- Comply with all applicable laws and regulations
-- Use these tools ethically and professionally
+### ⚠️ Legal Notice & Warning
+
+**💣 IMPORTANT LEGAL WARNING:**
+
+This project is intended for **educational and authorized security assessment purposes only**. 
+
+**DO NOT USE ON SYSTEMS YOU DO NOT OWN OR LACK EXPLICIT PERMISSION TO TEST.**
+
+- ✅ **Authorized use only**: Only test systems you own or have explicit written permission to test
+- ✅ **Educational purposes**: Use for learning cybersecurity concepts and techniques
+- ✅ **Responsible disclosure**: Follow responsible disclosure practices for any vulnerabilities found
+- ✅ **Legal compliance**: Comply with all applicable laws and regulations in your jurisdiction
+- ✅ **Professional ethics**: Use these tools ethically and professionally
+
+**❌ PROHIBITED USES:**
+- Unauthorized access to computer systems
+- Malicious attacks on third-party systems
+- Any illegal activities or violations of terms of service
+- Commercial exploitation without proper authorization
+
+**⚖️ DISCLAIMER:**
+The authors and contributors are not responsible for any misuse, damage, or illegal activities conducted with this software. Users assume all responsibility for their actions and must ensure compliance with all applicable laws.
+
+**🔒 Remember: With great power comes great responsibility. Use ethically and legally only.**
+
 ---
-*🎉 **SugarGlitch RealOps** - Professional Instagram Operations Platform*
+
+*🎉 **SugarGlitch RealOps** - Professional Red Team Automation Platform*
