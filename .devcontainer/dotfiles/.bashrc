@@ -26,7 +26,7 @@ export PS1='\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[01;31m\]$(p
 
 # SugarGlitch RealOps Environment
 export REALOPS_HOME="/workspaces/sugarglitch-realops"
-export PATH="$REALOPS_HOME/.venv/bin:$PATH"
+export PATH="/usr/local/go/bin:$REALOPS_HOME/.venv/bin:$PATH"
 export PYTHONPATH="$REALOPS_HOME:$PYTHONPATH"
 
 # Auto-activate virtual environment if we're in the project directory

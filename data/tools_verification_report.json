@@ -1,0 +1,245 @@
+{
+  "timestamp": "2025-06-12T05:44:56.174883",
+  "total_tools": 29,
+  "available_tools": 23,
+  "percentage": 79.3103448275862,
+  "status": "\u26a1 WELL EQUIPPED - Ready for Operations",
+  "core_tools": [
+    {
+      "name": "Nmap",
+      "command": "nmap",
+      "description": "Network Scanner",
+      "available": true,
+      "version": "Nmap version 7.93 ( https://nmap.org )",
+      "status": "\u2705"
+    },
+    {
+      "name": "SQLMap",
+      "command": "sqlmap",
+      "description": "SQL Injection Tool",
+      "available": true,
+      "version": "1.7.2#stable",
+      "status": "\u2705"
+    },
+    {
+      "name": "Hydra",
+      "command": "hydra",
+      "description": "Password Cracking Tool",
+      "available": false,
+      "version": "Hydra v9.4 (c) 2022 by van Hauser/THC & David Maciejak - Please do not use in military or secret ser",
+      "status": "\u274c"
+    },
+    {
+      "name": "Nikto",
+      "command": "nikto",
+      "description": "Web Vulnerability Scanner",
+      "available": false,
+      "version": "NOT FOUND",
+      "status": "\u274c"
+    },
+    {
+      "name": "Dirb",
+      "command": "dirb",
+      "description": "Web Content Scanner",
+      "available": false,
+      "version": "-----------------",
+      "status": "\u274c"
+    },
+    {
+      "name": "Gobuster",
+      "command": "gobuster",
+      "description": "Directory/DNS Bruteforcer",
+      "available": true,
+      "version": "3.5",
+      "status": "\u2705"
+    },
+    {
+      "name": "Masscan",
+      "command": "masscan",
+      "description": "Fast Port Scanner",
+      "available": false,
+      "version": "Masscan version 1.3.2 ( https://github.com/robertdavidgraham/masscan )",
+      "status": "\u274c"
+    },
+    {
+      "name": "Git",
+      "command": "git",
+      "description": "Version Control System",
+      "available": true,
+      "version": "git version 2.49.0",
+      "status": "\u2705"
+    },
+    {
+      "name": "Curl",
+      "command": "curl",
+      "description": "HTTP Client",
+      "available": true,
+      "version": "curl 7.88.1 (x86_64-pc-linux-gnu) libcurl/7.88.1 OpenSSL/3.0.16 zlib/1.2.13 brotli/1.0.9 zstd/1.5.4 ",
+      "status": "\u2705"
+    },
+    {
+      "name": "Wget",
+      "command": "wget",
+      "description": "File Downloader",
+      "available": true,
+      "version": "GNU Wget 1.21.3 built on linux-gnu.",
+      "status": "\u2705"
+    },
+    {
+      "name": "Dig",
+      "command": "dig",
+      "description": "DNS Lookup Tool",
+      "available": true,
+      "version": "NOT FOUND",
+      "status": "\u2705"
+    },
+    {
+      "name": "Whois",
+      "command": "whois",
+      "description": "Domain Information Tool",
+      "available": true,
+      "version": "Version 5.5.17.",
+      "status": "\u2705"
+    }
+  ],
+  "advanced_tools": [
+    {
+      "name": "Metasploit",
+      "command": "msfconsole",
+      "description": "Exploitation Framework",
+      "available": true,
+      "version": "NOT FOUND",
+      "status": "\u2705"
+    },
+    {
+      "name": "Amass",
+      "command": "amass",
+      "description": "Attack Surface Discovery",
+      "available": false,
+      "version": "NOT FOUND",
+      "status": "\u274c"
+    },
+    {
+      "name": "Subfinder",
+      "command": "subfinder",
+      "description": "Subdomain Discovery",
+      "available": true,
+      "version": "NOT FOUND",
+      "status": "\u2705"
+    },
+    {
+      "name": "TheHarvester",
+      "command": "python3",
+      "description": "Email Harvester",
+      "available": false,
+      "version": "NOT FOUND",
+      "status": "\u274c"
+    },
+    {
+      "name": "DNSRecon",
+      "command": "python3",
+      "description": "DNS Reconnaissance",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "Wafw00f",
+      "command": "python3",
+      "description": "WAF Detection",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "WhatWeb",
+      "command": "whatweb",
+      "description": "Web Technology Identifier",
+      "available": true,
+      "version": "WhatWeb version 0.5.5 ( https://www.morningstarsecurity.com/research/whatweb/ )",
+      "status": "\u2705"
+    },
+    {
+      "name": "Fierce",
+      "command": "fierce",
+      "description": "DNS Scanner",
+      "available": true,
+      "version": "usage: fierce [-h] [--domain DOMAIN] [--connect] [--wide]",
+      "status": "\u2705"
+    }
+  ],
+  "python_modules": [
+    {
+      "name": "Shodan",
+      "command": "python3",
+      "description": "Search Engine API",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "Censys",
+      "command": "python3",
+      "description": "Internet Scanner",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "Scapy",
+      "command": "python3",
+      "description": "Packet Manipulation",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "Impacket",
+      "command": "python3",
+      "description": "Network Protocols",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "DNSPython",
+      "command": "python3",
+      "description": "DNS Toolkit",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "Requests",
+      "command": "python3",
+      "description": "HTTP Library",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "BeautifulSoup",
+      "command": "python3",
+      "description": "Web Scraping",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "Selenium",
+      "command": "python3",
+      "description": "Browser Automation",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    },
+    {
+      "name": "Playwright",
+      "command": "python3",
+      "description": "Browser Automation",
+      "available": true,
+      "version": "Available",
+      "status": "\u2705"
+    }
+  ]
+}
