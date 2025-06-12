@@ -1,0 +1,37 @@
+{
+  "targets": [
+    {
+      "id": "target_001",
+      "name": "Example Domain",
+      "url": "https://example.com",
+      "type": "web",
+      "status": "active",
+      "last_scan": "2025-01-12",
+      "notes": "Example target for reconnaissance testing"
+    },
+    {
+      "id": "target_002", 
+      "name": "Test Infrastructure",
+      "url": "https://httpbin.org",
+      "type": "api",
+      "status": "active",
+      "last_scan": "2025-01-12",
+      "notes": "HTTP testing service for API reconnaissance"
+    },
+    {
+      "id": "target_003",
+      "name": "Local Development",
+      "url": "http://localhost",
+      "type": "local",
+      "status": "development",
+      "last_scan": "2025-01-12", 
+      "notes": "Local development environment"
+    }
+  ],
+  "metadata": {
+    "created": "2025-01-12",
+    "version": "1.0",
+    "description": "SugarGlitch RealOps target configuration file",
+    "total_targets": 3
+  }
+}
