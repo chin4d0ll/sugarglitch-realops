@@ -29,10 +29,16 @@ def banner():
 """
     print(banner_text)
 
-def check_environment():
+def check_environment(module_name=None):
     """Check required environment variables"""
     print("🔍 Checking environment configuration...")
     
+    # New modules don't require legacy environment variables
+    if module_name in ['quick-recon', 'instagram-osint', 'env-test', 'nmap-scan', 'sqlmap-test']:
+        print("✅ Environment configuration OK (modern module)")
+        return True
+    
+    # Legacy modules require these variables
     required_env_vars = [
         'IG_USERNAME', 'IG_PASSWORD', 'TARGET_HOST', 'DISCORD_WEBHOOK_URL'
     ]
@@ -45,6 +51,7 @@ def check_environment():
     if missing_vars:
         print(f"⚠️ Missing environment variables: {', '.join(missing_vars)}")
         print("💡 Please check .env file or set required variables")
+        print("💡 Or use modern modules: quick-recon, instagram-osint, env-test")
         return False
     
     print("✅ Environment configuration OK")
@@ -56,17 +63,31 @@ def list_modules():
     print("=" * 50)
     
     modules = [
+        ("quick-recon", "Quick Reconnaissance Scanner", "quick_recon.py"),
+        ("instagram-osint", "Instagram OSINT Analysis", "instagram_osint.py"),
+        ("env-test", "Environment Validation", "environment_test.py"),
         ("ssh-brute", "SSH Brute Force Attack", "ssh_bruteforce_multithread.py"),
         ("ctf-training", "CTF Hacking Masterclass", "ctf_hacking_masterclass_2025_fixed.py"),
         ("ig-session", "Instagram Session Hijacking", "auto_ig_session_login.py"),
         ("dm-extractor", "Instagram DM Extractor", "advanced_dm_extractor.py"),
         ("web-exploit", "Web Exploitation Tools", "brutal_dir_brute.py"),
         ("network-scan", "Network Analysis Tools", "comprehensive_session_analyzer.py"),
+        ("nmap-scan", "Advanced Nmap Scanning", "nmap"),
+        ("sqlmap-test", "SQL Injection Testing", "sqlmap"),
         ("verify", "System Verification", "ultimate_verification.py")
     ]
     
     for module_id, description, filename in modules:
-        status = "✅" if os.path.exists(filename) else "❌"
+        if filename in ['nmap', 'sqlmap']:
+            # Check if system tools exist
+            import subprocess
+            try:
+                subprocess.run(['which', filename], capture_output=True, check=True)
+                status = "✅"
+            except:
+                status = "❌"
+        else:
+            status = "✅" if os.path.exists(filename) else "❌"
         print(f"{status} {module_id:15} - {description}")
     
     print("=" * 50)
@@ -76,6 +97,66 @@ def run_module(module_name, args=None):
     print(f"\n🚀 Starting module: {module_name}")
     print("-" * 30)
     
+    # Import our new modules
+    try:
+        if module_name == 'quick-recon':
+            from quick_recon import quick_scan, banner as recon_banner
+            target = input("🎯 Enter target (or press Enter for default): ").strip()
+            recon_banner()
+            if not target:
+                target = "httpbin.org"
+            quick_scan(target)
+            return True
+            
+        elif module_name == 'instagram-osint':
+            from instagram_osint import analyze_username, banner as osint_banner
+            username = input("📱 Enter Instagram username: ").strip()
+            if username:
+                osint_banner()
+                analyze_username(username)
+                return True
+            else:
+                print("❌ Username required!")
+                return False
+                
+        elif module_name == 'env-test':
+            from environment_test import test_environment
+            test_environment()
+            return True
+            
+        elif module_name == 'nmap-scan':
+            import subprocess
+            target = input("🎯 Enter target for nmap scan: ").strip()
+            if target:
+                ports = input("🔧 Enter ports (default: 80,443,22): ").strip()
+                ports = ports if ports else "80,443,22"
+                cmd = ['nmap', '-sT', '-p', ports, target]
+                print(f"🔥 Running: {' '.join(cmd)}")
+                subprocess.run(cmd)
+                return True
+            else:
+                print("❌ Target required!")
+                return False
+                
+        elif module_name == 'sqlmap-test':
+            import subprocess
+            url = input("🗃️  Enter URL for SQLMap test: ").strip()
+            if url:
+                cmd = ['sqlmap', '-u', url, '--batch', '--risk=1', '--level=1']
+                print(f"🔥 Running: {' '.join(cmd)}")
+                subprocess.run(cmd)
+                return True
+            else:
+                print("❌ URL required!")
+                return False
+                
+    except ImportError as e:
+        print(f"❌ Could not import module: {e}")
+        return False
+    except Exception as e:
+        print(f"❌ Error running new module: {e}")
+    
+    # Legacy module handling
     module_map = {
         'ssh-brute': 'ssh_bruteforce_multithread.py',
         'ctf-training': 'ctf_hacking_masterclass_2025_fixed.py',
@@ -148,6 +229,11 @@ Options:
   -i, --interactive    Enter interactive mode
   
 Modules:
+  quick-recon         Quick reconnaissance scanning
+  instagram-osint     Instagram OSINT analysis
+  env-test            Environment validation test
+  nmap-scan           Advanced nmap port scanning
+  sqlmap-test         SQL injection testing
   ssh-brute           SSH brute force attack
   ctf-training        CTF hacking training
   ig-session          Instagram session management
@@ -164,6 +250,10 @@ Environment Variables (required):
 
 Examples:
   python main.py --list
+  python main.py quick-recon
+  python main.py instagram-osint
+  python main.py env-test
+  python main.py nmap-scan
   python main.py ssh-brute
   python main.py --interactive
   python main.py --check-env
@@ -205,7 +295,7 @@ def main():
     
     # Run specific module
     if args.module:
-        if not check_environment():
+        if not check_environment(args.module):
             print("🛑 Environment check failed. Use --check-env for details.")
             return 1
         
