@@ -1,0 +1,50 @@
+{
+  "usernames": [
+    "alx.trading",
+    "whatilove1728"
+  ],
+  "real_name": "Alex Fleming",
+  "aliases": ["Alx", "Alex"],
+  "business": "Trade Your Way",
+  "phones": ["0615414210", "+447793127209"],
+  "email": "n@alx.trading",
+  "social_media": {
+    "instagram": ["@alx.trading", "@whatilove1728"],
+    "twitter": "@alx.trading",
+    "telegram": "@Alx_TYW",
+    "youtube": "traderyourway",
+    "discord": "alx76"
+  },
+  "website": "https://tradeyourway.co.uk/",
+  "location": "Bangkok",
+  "sessionids": [
+    "4976283726%3AFlem654Success%3A19",
+    "82d00883%3A1748264421%3A6f473b1c8d0b8d51"
+  ],
+  "sessions": [
+    {
+      "target": "alx.trading",
+      "type": "REAL_SESSION",
+      "created": "2025-06-06T17:09:55.084403",
+      "platform": "iPad"
+    },
+    {
+      "hijacked_from": "/workspaces/sugarglitch-realops/sessions/session-alx.trading",
+      "hijack_timestamp": "2025-06-09T23:20:00.201650",
+      "technique": "cookie_extraction"
+    },
+    {
+      "hijacked_from": "/workspaces/sugarglitch-realops/sessions/session-alx.trading",
+      "hijack_timestamp": "2025-06-09T23:20:14.293441",
+      "technique": "user_agent_spoofing",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+      "test_response_code": 200
+    }
+  ],
+  "status": [
+    "Checkpoint Protected",
+    "Target for extraction",
+    "Previous successful target"
+  ],
+  "notes": "Unified profile for redteam automation. Data sanitized and merged from all real sources."
+}
