@@ -77,7 +77,7 @@ fi
 echo "📚 Installing Python dependencies..."
 source /workspaces/sugarglitch-realops/.venv/bin/activate
 pip install --upgrade pip
-pip install -r /workspaces/sugarglitch-realops/requirements.txt
+# Note: requirements.txt will be installed later in a dedicated section
 
 # Create necessary directories
 echo "📁 Creating project directories..."
