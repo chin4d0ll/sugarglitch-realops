@@ -1,0 +1,18 @@
+{
+  "cleanup_date": "2025-06-12T06:19:57.636887",
+  "moved_files": 57,
+  "removed_reports": 32,
+  "removed_empty_folders": 2,
+  "removed_cache_files": 1519,
+  "organized_structure": {
+    "core": 5,
+    "config": 53,
+    "docs": 105,
+    "sessions": 101,
+    "scripts": 279,
+    "data": 136,
+    "devcontainer": 42
+  },
+  "root_files_remaining": 46,
+  "total_organized_files": 721
+}
