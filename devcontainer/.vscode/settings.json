@@ -74,5 +74,9 @@
   "markdownlint.ignore": [
     "**/*"
   ],
-  "markdown.validate.enabled": false
+  "markdown.validate.enabled": false,
+  "remote.extensionKind": {
+    "ms-vscode-remote.remote-ssh": ["workspace"],
+    "ms-vscode-remote.remote-containers": ["workspace"]
+  }
 }
