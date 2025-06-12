@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Breach Analysis Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+        .container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 20px;
+        }
+        h1, h2, h3 {
+            color: #2C3E50;
+        }
+        h1 {
+            font-size: 28px;
+            border-bottom: 2px solid #3498DB;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 22px;
+            margin-top: 30px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+        .summary {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .data-type {
+            display: inline-block;
+            padding: 5px 10px;
+            margin: 2px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .email {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .password {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .phone {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        .username {
+            background-color: #d1ecf1;
+            color: #0c5460;
+        }
+        .card {
+            background-color: #fdeaef;
+            color: #b10031;
+        }
+        .address {
+            background-color: #e2e3e5;
+            color: #383d41;
+        }
+        .chart-container {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+        }
+        .timestamp {
+            color: #7F8C8D;
+            text-align: right;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .stealth-note {
+            background-color: #f8d7da;
+            border-left: 4px solid #E74C3C;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="stealth-note">
+            <h3>⚠️ Ghost Mode Active</h3>
+            <p>This report was generated while operating in Ghost Mode. All data was processed in-memory with minimal traces. For maximum security, consider downloading and deleting this report when finished.</p>
+        </div>
+        <h1>Data Breach Analysis Report</h1>
+        <p class="timestamp">Generated on: 2025-04-20 20:20:29</p>
+
+        <div class="summary">
+            <h2>Analysis Summary</h2>
+            <p><strong>Total Files Analyzed:</strong> 1</p>
+            <p><strong>Total Records Found:</strong> 41</p>
+        </div>
+
+        <h2>Data Types Found</h2>
+        <table>
+            <tr>
+                <th>Data Type</th>
+                <th>Count</th>
+            </tr>
+
+            <tr>
+                <td>Emails</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Usernames</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Passwords</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>Phone_numbers</td>
+                <td>17</td>
+            </tr>
+            <tr>
+                <td>Addresses</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Credit_cards</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>Other</td>
+                <td>0</td>
+            </tr>
+        </table>
+
+        <h2>Breach Files Summary</h2>
+        <table>
+            <tr>
+                <th>Filename</th>
+                <th>Records</th>
+                <th>Data Types Found</th>
+            </tr>
+
+            <tr>
+                <td>phone_breaches.txt</td>
+                <td>41</td>
+                <td><span class="data-type email">emails</span> <span class="data-type username">usernames</span> <span class="data-type password">passwords</span> <span class="data-type phone">phone_numbers</span> <span class="data-type address">addresses</span> <span class="data-type card">credit_cards</span> </td>
+            </tr>
+        </table>
+
+        <h2>Security Recommendations</h2>
+        <ul>
+            <li>Change passwords for any accounts that may have been compromised</li>
+            <li>Enable two-factor authentication where available</li>
+            <li>Monitor financial accounts for suspicious activity</li>
+            <li>Consider using a password manager to generate and store strong, unique passwords</li>
+            <li>Set up fraud alerts with credit bureaus if personal information was leaked</li>
+        </ul>
+
+        <p class="timestamp">Report generated in Ghost Mode - Leaving minimal digital footprint</p>
+    </div>
+</body>
+</html>

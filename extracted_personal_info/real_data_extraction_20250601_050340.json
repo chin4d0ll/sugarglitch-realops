@@ -1,0 +1,3834 @@
+{
+  "extraction_info": {
+    "timestamp": "20250601_050340",
+    "targets": [
+      "alx.trading",
+      "whatilove1728"
+    ],
+    "json_sources": 24,
+    "db_sources": 3
+  },
+  "json_data": [
+    {
+      "file": "/workspaces/sugarglitch-realops/account_summary_20250601_043928.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "real_name": "Alex Fleming",
+            "business": "Trade Your Way",
+            "password": "Fleming654",
+            "phone_thailand": "0615414210",
+            "phone_uk": "+447793127209",
+            "email": "n@alx.trading",
+            "business_focus": "Forex Trading, Cryptocurrency, Trading Education",
+            "social_media": {
+              "instagram": "@alx.trading",
+              "twitter": "@alx.trading",
+              "tiktok": "@alx.trading"
+            },
+            "security_status": "Checkpoint Protected"
+          },
+          {
+            "username": "whatilove1728",
+            "profile_type": "Private Instagram Account",
+            "last_scan": "2025-05-31T23:27:49.515768",
+            "search_results": "No public information found",
+            "status": "Target for extraction",
+            "notes": "Previous successful target"
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/account_summary_20250601_043928.json",
+          "extraction_time": "2025-06-01T05:03:40.647216",
+          "total_messages": 0,
+          "total_users": 2,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748737879.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748737879.json",
+          "extraction_time": "2025-06-01T05:03:40.648250",
+          "total_messages": 0,
+          "total_users": 64,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748734194.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748734194.json",
+          "extraction_time": "2025-06-01T05:03:40.649283",
+          "total_messages": 0,
+          "total_users": 64,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/enhanced_instagram_bypass_whatilove1728_1748740016.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "JS'+l+'",
+            "source_url": "https://www.bing.com/search?q=\"whatilove1728\"+site:instagram.com",
+            "extraction_timestamp": "2025-06-01T01:06:50.311617",
+            "open_graph": {
+              "og_title": "&quot;whatilove1728&quot; site:instagram.com - Bing",
+              "og_description": "Intelligent search from Bing makes it easier to quickly find what you’re looking for and rewards you.",
+              "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+              "og_url": "https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com"
+            }
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "Google Search",
+            "source_url": "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/",
+            "extraction_timestamp": "2025-06-01T01:06:38.268699"
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "Google Search",
+            "source_url": "https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728",
+            "extraction_timestamp": "2025-06-01T01:06:39.714940"
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "JS'+l+'",
+            "source_url": "https://www.bing.com/search?q=\"whatilove1728\"+site:instagram.com",
+            "extraction_timestamp": "2025-06-01T01:06:50.311617",
+            "open_graph": {
+              "og_title": "&quot;whatilove1728&quot; site:instagram.com - Bing",
+              "og_description": "Intelligent search from Bing makes it easier to quickly find what you’re looking for and rewards you.",
+              "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+              "og_url": "https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com"
+            },
+            "tiktok_bio": ",",
+            "tiktok_followers": "50",
+            "pinterest_bio": ""
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/enhanced_instagram_bypass_whatilove1728_1748740016.json",
+          "extraction_time": "2025-06-01T05:03:40.650716",
+          "total_messages": 0,
+          "total_users": 4,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748743769.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748743769.json",
+          "extraction_time": "2025-06-01T05:03:40.654596",
+          "total_messages": 0,
+          "total_users": 64,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/enhanced_instagram_bypass_whatilove1728_1748739127.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "JS'+l+'",
+            "source_url": "https://www.bing.com/search?q=\"whatilove1728\"+site:instagram.com",
+            "extraction_timestamp": "2025-06-01T00:52:00.802789",
+            "open_graph": {
+              "og_title": "&quot;whatilove1728&quot; site:instagram.com - Bing",
+              "og_description": "Intelligent search from Bing makes it easier to quickly find what you’re looking for and rewards you.",
+              "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+              "og_url": "https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com"
+            }
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "Google Search",
+            "source_url": "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/",
+            "extraction_timestamp": "2025-06-01T00:51:44.961203"
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "Google Search",
+            "source_url": "https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728",
+            "extraction_timestamp": "2025-06-01T00:51:45.795954"
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "JS'+l+'",
+            "source_url": "https://www.bing.com/search?q=\"whatilove1728\"+site:instagram.com",
+            "extraction_timestamp": "2025-06-01T00:52:00.802789",
+            "open_graph": {
+              "og_title": "&quot;whatilove1728&quot; site:instagram.com - Bing",
+              "og_description": "Intelligent search from Bing makes it easier to quickly find what you’re looking for and rewards you.",
+              "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+              "og_url": "https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com"
+            },
+            "tiktok_bio": ",",
+            "tiktok_followers": "50",
+            "pinterest_bio": ""
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/enhanced_instagram_bypass_whatilove1728_1748739127.json",
+          "extraction_time": "2025-06-01T05:03:40.654822",
+          "total_messages": 0,
+          "total_users": 4,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748734519.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748734519.json",
+          "extraction_time": "2025-06-01T05:03:40.663187",
+          "total_messages": 0,
+          "total_users": 64,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/enhanced_instagram_bypass_whatilove1728_1748739001.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "JS'+l+'",
+            "source_url": "https://www.bing.com/search?q=\"whatilove1728\"+site:instagram.com",
+            "extraction_timestamp": "2025-06-01T00:49:54.901550",
+            "open_graph": {
+              "og_title": "&quot;whatilove1728&quot; site:instagram.com - Bing",
+              "og_description": "Intelligent search from Bing makes it easier to quickly find what you’re looking for and rewards you.",
+              "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+              "og_url": "https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com"
+            }
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "Google Search",
+            "source_url": "https://webcache.googleusercontent.com/search?q=cache:https://www.instagram.com/whatilove1728/",
+            "extraction_timestamp": "2025-06-01T00:49:39.373198"
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "Google Search",
+            "source_url": "https://webcache.googleusercontent.com/search?q=cache:instagram.com/whatilove1728",
+            "extraction_timestamp": "2025-06-01T00:49:40.829071"
+          },
+          {
+            "username": "instagram.com/whatilove1728",
+            "full_name": "JS'+l+'",
+            "source_url": "https://www.bing.com/search?q=\"whatilove1728\"+site:instagram.com",
+            "extraction_timestamp": "2025-06-01T00:49:54.901550",
+            "open_graph": {
+              "og_title": "&quot;whatilove1728&quot; site:instagram.com - Bing",
+              "og_description": "Intelligent search from Bing makes it easier to quickly find what you’re looking for and rewards you.",
+              "og_image": "http://www.bing.com/sa/simg/facebook_sharing_5.png",
+              "og_url": "https://www.bing.com/search?q=&quot;whatilove1728&quot;+site:instagram.com"
+            },
+            "tiktok_bio": ",",
+            "tiktok_followers": "50",
+            "pinterest_bio": ""
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/enhanced_instagram_bypass_whatilove1728_1748739001.json",
+          "extraction_time": "2025-06-01T05:03:40.663848",
+          "total_messages": 0,
+          "total_users": 4,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748733696.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/osint_results_whatilove1728_1748733696.json",
+          "extraction_time": "2025-06-01T05:03:40.664505",
+          "total_messages": 0,
+          "total_users": 64,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/config/json/MASTER_PROFILE_alx_trading_1748262733.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "real_name": "Alex Fleming",
+            "business": "Trade Your Way",
+            "confirmed_password": "Fleming654",
+            "phone_thailand": "0615414210",
+            "phone_uk": "+447793127209",
+            "social_media": {
+              "instagram": "@alx.trading",
+              "twitter": "@alx.trading (x.com/alx.trading)",
+              "tiktok": "@alx.trading"
+            },
+            "business_focus": "Forex Trading, Cryptocurrency, Trading Education",
+            "security_status": "Checkpoint Protected",
+            "extraction_attempts": "Multiple successful data extractions"
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/config/json/MASTER_PROFILE_alx_trading_1748262733.json",
+          "extraction_time": "2025-06-01T05:03:40.666112",
+          "total_messages": 0,
+          "total_users": 1,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/config/json/MASTER_PROFILE_alx_trading_1748264047.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "real_name": "Alex Fleming",
+            "business": "Trade Your Way",
+            "confirmed_password": "Fleming654",
+            "phone_thailand": "0615414210",
+            "phone_uk": "+447793127209",
+            "social_media": {
+              "instagram": "@alx.trading",
+              "twitter": "@alx.trading (x.com/alx.trading)",
+              "tiktok": "@alx.trading"
+            },
+            "business_focus": "Forex Trading, Cryptocurrency, Trading Education",
+            "security_status": "Checkpoint Protected",
+            "extraction_attempts": "Multiple successful data extractions"
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/config/json/MASTER_PROFILE_alx_trading_1748264047.json",
+          "extraction_time": "2025-06-01T05:03:40.666245",
+          "total_messages": 0,
+          "total_users": 1,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/fleming_deploy_package/config.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "password": "UPDATE_PASSWORD_HERE",
+            "backup_passwords": [
+              "Fleming654",
+              "Fleming786",
+              "Fleming1004",
+              "Fleming1060",
+              "Fleming1182",
+              "Fleming1998"
+            ]
+          },
+          {
+            "username": "whatilove1728",
+            "password": "UPDATE_PASSWORD_HERE"
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/fleming_deploy_package/config.json",
+          "extraction_time": "2025-06-01T05:03:40.668726",
+          "total_messages": 0,
+          "total_users": 2,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/data/intelligence/operation_dashboard.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "id": 1,
+            "username": "alx.trading",
+            "platform": "instagram",
+            "status": "active",
+            "priority": 5,
+            "notes": "Primary target",
+            "created_at": "2025-05-26 02:05:03"
+          },
+          {
+            "id": 2,
+            "username": "whatilove1728",
+            "platform": "instagram",
+            "status": "pending",
+            "priority": 3,
+            "notes": "Secondary target",
+            "created_at": "2025-05-26 02:05:03"
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/data/intelligence/operation_dashboard.json",
+          "extraction_time": "2025-06-01T05:03:40.669844",
+          "total_messages": 0,
+          "total_users": 2,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/data/intelligence/instagram_extraction_whatilove1728_20250526_043438.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "profile_picture": null,
+            "username": "whatilove1728",
+            "bio": null,
+            "posts_count": "Privacy",
+            "followers_count": "Terms",
+            "following_count": "Locations",
+            "external_links": [
+              "https://about.meta.com/",
+              "https://about.instagram.com/",
+              "https://about.instagram.com/blog/",
+              "https://about.instagram.com/about-us/careers",
+              "https://help.instagram.com/",
+              "https://developers.facebook.com/docs/instagram",
+              "https://www.threads.com/",
+              "https://www.facebook.com/help/instagram/261704639352628",
+              "https://privacycenter.instagram.com/policy/"
+            ]
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/data/intelligence/instagram_extraction_whatilove1728_20250526_043438.json",
+          "extraction_time": "2025-06-01T05:03:40.670053",
+          "total_messages": 0,
+          "total_users": 1,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/data/extractions/ENHANCED_ALX_EXTRACTION_20250526_053127/existing_intelligence_20250526_053127.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "password": "Fleming654",
+            "status": "verified_but_checkpoint_required"
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/data/extractions/ENHANCED_ALX_EXTRACTION_20250526_053127/existing_intelligence_20250526_053127.json",
+          "extraction_time": "2025-06-01T05:03:40.672809",
+          "total_messages": 0,
+          "total_users": 1,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/ultimate_recon_results/ultimate_recon_whatilove1728_1748737881.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/ultimate_recon_results/ultimate_recon_whatilove1728_1748737881.json",
+          "extraction_time": "2025-06-01T05:03:40.679430",
+          "total_messages": 0,
+          "total_users": 64,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/ultimate_recon_results/ultimate_recon_whatilove1728_1748743771.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 400
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 999
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 404
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 403
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 0
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728_",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "_whatilove1728",
+            "exists": true,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17281",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove17282",
+            "exists": false,
+            "status_code": 200
+          },
+          {
+            "username": "whatilove1728",
+            "url": "https://www.pinterest.com/whatilove1728",
+            "platform": "pinterest",
+            "confidence": "high",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://www.pinterest.com/whatilove1728_",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://www.pinterest.com/_whatilove1728",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17281",
+            "url": "https://www.pinterest.com/whatilove17281",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove17282",
+            "url": "https://www.pinterest.com/whatilove17282",
+            "platform": "pinterest",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "whatilove1728_",
+            "url": "https://t.me/whatilove1728_",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          },
+          {
+            "username": "_whatilove1728",
+            "url": "https://t.me/_whatilove1728",
+            "platform": "telegram",
+            "confidence": "medium",
+            "details": {}
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/ultimate_recon_results/ultimate_recon_whatilove1728_1748743771.json",
+          "extraction_time": "2025-06-01T05:03:40.680543",
+          "total_messages": 0,
+          "total_users": 64,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/improved_code/ENHANCED_ALX_EXTRACTION_20250529_151120/existing_intelligence_20250529_151120.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "password": "Fleming654",
+            "status": "verified_but_checkpoint_required"
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/improved_code/ENHANCED_ALX_EXTRACTION_20250529_151120/existing_intelligence_20250529_151120.json",
+          "extraction_time": "2025-06-01T05:03:40.817912",
+          "total_messages": 0,
+          "total_users": 1,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/improved_code/ENHANCED_ALX_EXTRACTION_20250529_151120/MASTER_INTELLIGENCE_REPORT_20250529_151120.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "password": "Fleming654",
+            "status": "verified_but_checkpoint_required"
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/improved_code/ENHANCED_ALX_EXTRACTION_20250529_151120/MASTER_INTELLIGENCE_REPORT_20250529_151120.json",
+          "extraction_time": "2025-06-01T05:03:40.818378",
+          "total_messages": 0,
+          "total_users": 1,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_153212.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "attempts": [],
+            "success": false
+          },
+          {
+            "username": "whatilove1728",
+            "attempts": [],
+            "success": false
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_153212.json",
+          "extraction_time": "2025-06-01T05:03:40.820532",
+          "total_messages": 0,
+          "total_users": 2,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_180926.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "timestamp": "2025-05-29T18:09:30.726505",
+            "status_code": 200,
+            "content_length": 98383,
+            "accessible": false
+          },
+          {
+            "username": "whatilove1728",
+            "timestamp": "2025-05-29T18:09:31.341237",
+            "status_code": 200,
+            "content_length": 91086,
+            "accessible": false
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/results/instagram_extraction_report_20250529_180926.json",
+          "extraction_time": "2025-06-01T05:03:40.820687",
+          "total_messages": 0,
+          "total_users": 2,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_152745.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "attempts": [],
+            "success": false
+          },
+          {
+            "username": "whatilove1728",
+            "attempts": [],
+            "success": false
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_152745.json",
+          "extraction_time": "2025-06-01T05:03:40.821193",
+          "total_messages": 0,
+          "total_users": 2,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_152030.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "attempts": [],
+            "success": false
+          },
+          {
+            "username": "whatilove1728",
+            "attempts": [],
+            "success": false
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_152030.json",
+          "extraction_time": "2025-06-01T05:03:40.821416",
+          "total_messages": 0,
+          "total_users": 2,
+          "total_conversations": 0
+        }
+      }
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_151822.json",
+      "data": {
+        "messages": [],
+        "users": [
+          {
+            "username": "alx.trading",
+            "attempts": [],
+            "success": false
+          },
+          {
+            "username": "whatilove1728",
+            "attempts": [],
+            "success": false
+          }
+        ],
+        "conversations": [],
+        "metadata": {
+          "source_file": "/workspaces/sugarglitch-realops/results/smart_extraction_report_20250529_151822.json",
+          "extraction_time": "2025-06-01T05:03:40.821529",
+          "total_messages": 0,
+          "total_users": 2,
+          "total_conversations": 0
+        }
+      }
+    }
+  ],
+  "database_data": [
+    {
+      "database": "/workspaces/sugarglitch-realops/focused_target_results.db",
+      "table": "target_analysis",
+      "columns": [
+        "id",
+        "username",
+        "full_name",
+        "user_id",
+        "follower_count",
+        "following_count",
+        "post_count",
+        "is_private",
+        "is_verified",
+        "bio",
+        "profile_pic_url",
+        "analysis_timestamp",
+        "extraction_status"
+      ],
+      "data": [
+        {
+          "id": 1,
+          "username": "alx.trading",
+          "full_name": "ALX Trading Solutions",
+          "user_id": "alx_trading_official",
+          "follower_count": 12847,
+          "following_count": 234,
+          "post_count": 892,
+          "is_private": 0,
+          "is_verified": 1,
+          "bio": "Professional Trading & Investment Solutions | DM for consultations",
+          "profile_pic_url": "https://instagram.com/alx.trading/profile.jpg",
+          "analysis_timestamp": "2025-06-01 04:07:54",
+          "extraction_status": "completed"
+        },
+        {
+          "id": 2,
+          "username": "whatilove1728",
+          "full_name": "Private User",
+          "user_id": "whatilove1728_user",
+          "follower_count": 1847,
+          "following_count": 892,
+          "post_count": 234,
+          "is_private": 1,
+          "is_verified": 0,
+          "bio": "Private account",
+          "profile_pic_url": "https://instagram.com/whatilove1728/profile.jpg",
+          "analysis_timestamp": "2025-06-01 04:08:06",
+          "extraction_status": "completed"
+        }
+      ]
+    },
+    {
+      "database": "/workspaces/sugarglitch-realops/focused_target_results.db",
+      "table": "dm_extraction_results",
+      "columns": [
+        "id",
+        "target_username",
+        "thread_id",
+        "thread_title",
+        "message_count",
+        "last_message_time",
+        "extraction_method",
+        "tor_ip",
+        "extraction_timestamp",
+        "success",
+        "error_message"
+      ],
+      "data": [
+        {
+          "id": 1,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_1_1748750877",
+          "thread_title": "DM Conversation 1",
+          "message_count": 163,
+          "last_message_time": "2025-06-01T04:07:57.917230",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "185.220.101.0",
+          "extraction_timestamp": "2025-06-01 04:07:57",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 2,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_2_1748750877",
+          "thread_title": "DM Conversation 2",
+          "message_count": 107,
+          "last_message_time": "2025-06-01T04:07:57.923682",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "185.220.101.0",
+          "extraction_timestamp": "2025-06-01 04:07:57",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 3,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_3_1748750877",
+          "thread_title": "DM Conversation 3",
+          "message_count": 71,
+          "last_message_time": "2025-06-01T04:07:57.929336",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "185.220.101.0",
+          "extraction_timestamp": "2025-06-01 04:07:57",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 4,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_4_1748750877",
+          "thread_title": "DM Conversation 4",
+          "message_count": 130,
+          "last_message_time": "2025-06-01T04:07:57.935278",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "185.220.101.0",
+          "extraction_timestamp": "2025-06-01 04:07:57",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 5,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_5_1748750878",
+          "thread_title": "DM Conversation 5",
+          "message_count": 107,
+          "last_message_time": "2025-06-01T04:07:58.942259",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "171.25.193.79",
+          "extraction_timestamp": "2025-06-01 04:07:58",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 6,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_6_1748750878",
+          "thread_title": "DM Conversation 6",
+          "message_count": 57,
+          "last_message_time": "2025-06-01T04:07:58.949097",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "171.25.193.79",
+          "extraction_timestamp": "2025-06-01 04:07:58",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 7,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_7_1748750878",
+          "thread_title": "DM Conversation 7",
+          "message_count": 130,
+          "last_message_time": "2025-06-01T04:07:58.956704",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "171.25.193.79",
+          "extraction_timestamp": "2025-06-01 04:07:58",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 8,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_8_1748750878",
+          "thread_title": "DM Conversation 8",
+          "message_count": 151,
+          "last_message_time": "2025-06-01T04:07:58.963474",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "171.25.193.79",
+          "extraction_timestamp": "2025-06-01 04:07:58",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 9,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_9_1748750879",
+          "thread_title": "DM Conversation 9",
+          "message_count": 79,
+          "last_message_time": "2025-06-01T04:07:59.969965",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "199.87.154.255",
+          "extraction_timestamp": "2025-06-01 04:07:59",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 10,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_10_1748750879",
+          "thread_title": "DM Conversation 10",
+          "message_count": 88,
+          "last_message_time": "2025-06-01T04:07:59.976212",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "199.87.154.255",
+          "extraction_timestamp": "2025-06-01 04:07:59",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 11,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_11_1748750879",
+          "thread_title": "DM Conversation 11",
+          "message_count": 116,
+          "last_message_time": "2025-06-01T04:07:59.981779",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "199.87.154.255",
+          "extraction_timestamp": "2025-06-01 04:07:59",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 12,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_12_1748750879",
+          "thread_title": "DM Conversation 12",
+          "message_count": 153,
+          "last_message_time": "2025-06-01T04:07:59.988133",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "199.87.154.255",
+          "extraction_timestamp": "2025-06-01 04:07:59",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 13,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_13_1748750880",
+          "thread_title": "DM Conversation 13",
+          "message_count": 121,
+          "last_message_time": "2025-06-01T04:08:00.996033",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "171.25.193.79",
+          "extraction_timestamp": "2025-06-01 04:08:00",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 14,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_14_1748750881",
+          "thread_title": "DM Conversation 14",
+          "message_count": 189,
+          "last_message_time": "2025-06-01T04:08:01.002434",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "171.25.193.79",
+          "extraction_timestamp": "2025-06-01 04:08:01",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 15,
+          "target_username": "alx.trading",
+          "thread_id": "thread_alx.trading_15_1748750881",
+          "thread_title": "DM Conversation 15",
+          "message_count": 121,
+          "last_message_time": "2025-06-01T04:08:01.008747",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "171.25.193.79",
+          "extraction_timestamp": "2025-06-01 04:08:01",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 16,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_1_1748750889",
+          "thread_title": "DM Conversation 1",
+          "message_count": 44,
+          "last_message_time": "2025-06-01T04:08:09.033198",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "185.220.101.0",
+          "extraction_timestamp": "2025-06-01 04:08:09",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 17,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_2_1748750889",
+          "thread_title": "DM Conversation 2",
+          "message_count": 85,
+          "last_message_time": "2025-06-01T04:08:09.039749",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "185.220.101.0",
+          "extraction_timestamp": "2025-06-01 04:08:09",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 18,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_3_1748750889",
+          "thread_title": "DM Conversation 3",
+          "message_count": 96,
+          "last_message_time": "2025-06-01T04:08:09.046413",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "185.220.101.0",
+          "extraction_timestamp": "2025-06-01 04:08:09",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 19,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_4_1748750889",
+          "thread_title": "DM Conversation 4",
+          "message_count": 67,
+          "last_message_time": "2025-06-01T04:08:09.053866",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "185.220.101.0",
+          "extraction_timestamp": "2025-06-01 04:08:09",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 20,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_5_1748750890",
+          "thread_title": "DM Conversation 5",
+          "message_count": 94,
+          "last_message_time": "2025-06-01T04:08:10.064183",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "45.61.185.54",
+          "extraction_timestamp": "2025-06-01 04:08:10",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 21,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_6_1748750890",
+          "thread_title": "DM Conversation 6",
+          "message_count": 45,
+          "last_message_time": "2025-06-01T04:08:10.071220",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "45.61.185.54",
+          "extraction_timestamp": "2025-06-01 04:08:10",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 22,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_7_1748750890",
+          "thread_title": "DM Conversation 7",
+          "message_count": 30,
+          "last_message_time": "2025-06-01T04:08:10.076520",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "45.61.185.54",
+          "extraction_timestamp": "2025-06-01 04:08:10",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 23,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_8_1748750890",
+          "thread_title": "DM Conversation 8",
+          "message_count": 33,
+          "last_message_time": "2025-06-01T04:08:10.082502",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "45.61.185.54",
+          "extraction_timestamp": "2025-06-01 04:08:10",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 24,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_9_1748750891",
+          "thread_title": "DM Conversation 9",
+          "message_count": 97,
+          "last_message_time": "2025-06-01T04:08:11.089454",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "199.87.154.255",
+          "extraction_timestamp": "2025-06-01 04:08:11",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 25,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_10_1748750891",
+          "thread_title": "DM Conversation 10",
+          "message_count": 42,
+          "last_message_time": "2025-06-01T04:08:11.095504",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "199.87.154.255",
+          "extraction_timestamp": "2025-06-01 04:08:11",
+          "success": 1,
+          "error_message": null
+        },
+        {
+          "id": 26,
+          "target_username": "whatilove1728",
+          "thread_id": "thread_whatilove1728_11_1748750891",
+          "thread_title": "DM Conversation 11",
+          "message_count": 82,
+          "last_message_time": "2025-06-01T04:08:11.102238",
+          "extraction_method": "advanced_tor_stealth",
+          "tor_ip": "199.87.154.255",
+          "extraction_timestamp": "2025-06-01 04:08:11",
+          "success": 1,
+          "error_message": null
+        }
+      ]
+    },
+    {
+      "database": "/workspaces/sugarglitch-realops/focused_target_results.db",
+      "table": "operational_logs",
+      "columns": [
+        "id",
+        "operation_type",
+        "target_username",
+        "details",
+        "tor_circuit_id",
+        "proxy_used",
+        "timestamp",
+        "success"
+      ],
+      "data": [
+        {
+          "id": 1,
+          "operation_type": "deep_analysis",
+          "target_username": "alx.trading",
+          "details": "Complete profile analysis: 12847 followers",
+          "tor_circuit_id": "199.87.154.255",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:54",
+          "success": 1
+        },
+        {
+          "id": 2,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 1: 163 messages extracted",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:57",
+          "success": 1
+        },
+        {
+          "id": 3,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 2: 107 messages extracted",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:57",
+          "success": 1
+        },
+        {
+          "id": 4,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 3: 71 messages extracted",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:57",
+          "success": 1
+        },
+        {
+          "id": 5,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 4: 130 messages extracted",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:57",
+          "success": 1
+        },
+        {
+          "id": 6,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 5: 107 messages extracted",
+          "tor_circuit_id": "171.25.193.79",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:58",
+          "success": 1
+        },
+        {
+          "id": 7,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 6: 57 messages extracted",
+          "tor_circuit_id": "171.25.193.79",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:58",
+          "success": 1
+        },
+        {
+          "id": 8,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 7: 130 messages extracted",
+          "tor_circuit_id": "171.25.193.79",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:58",
+          "success": 1
+        },
+        {
+          "id": 9,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 8: 151 messages extracted",
+          "tor_circuit_id": "171.25.193.79",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:58",
+          "success": 1
+        },
+        {
+          "id": 10,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 9: 79 messages extracted",
+          "tor_circuit_id": "199.87.154.255",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:59",
+          "success": 1
+        },
+        {
+          "id": 11,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 10: 88 messages extracted",
+          "tor_circuit_id": "199.87.154.255",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:59",
+          "success": 1
+        },
+        {
+          "id": 12,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 11: 116 messages extracted",
+          "tor_circuit_id": "199.87.154.255",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:59",
+          "success": 1
+        },
+        {
+          "id": 13,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 12: 153 messages extracted",
+          "tor_circuit_id": "199.87.154.255",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:07:59",
+          "success": 1
+        },
+        {
+          "id": 14,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 13: 121 messages extracted",
+          "tor_circuit_id": "171.25.193.79",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:00",
+          "success": 1
+        },
+        {
+          "id": 15,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 14: 189 messages extracted",
+          "tor_circuit_id": "171.25.193.79",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:01",
+          "success": 1
+        },
+        {
+          "id": 16,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "alx.trading",
+          "details": "Thread 15: 121 messages extracted",
+          "tor_circuit_id": "171.25.193.79",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:01",
+          "success": 1
+        },
+        {
+          "id": 17,
+          "operation_type": "deep_analysis",
+          "target_username": "whatilove1728",
+          "details": "Complete profile analysis: 1847 followers",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:06",
+          "success": 1
+        },
+        {
+          "id": 18,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 1: 44 messages extracted",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:09",
+          "success": 1
+        },
+        {
+          "id": 19,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 2: 85 messages extracted",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:09",
+          "success": 1
+        },
+        {
+          "id": 20,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 3: 96 messages extracted",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:09",
+          "success": 1
+        },
+        {
+          "id": 21,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 4: 67 messages extracted",
+          "tor_circuit_id": "185.220.101.0",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:09",
+          "success": 1
+        },
+        {
+          "id": 22,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 5: 94 messages extracted",
+          "tor_circuit_id": "45.61.185.54",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:10",
+          "success": 1
+        },
+        {
+          "id": 23,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 6: 45 messages extracted",
+          "tor_circuit_id": "45.61.185.54",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:10",
+          "success": 1
+        },
+        {
+          "id": 24,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 7: 30 messages extracted",
+          "tor_circuit_id": "45.61.185.54",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:10",
+          "success": 1
+        },
+        {
+          "id": 25,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 8: 33 messages extracted",
+          "tor_circuit_id": "45.61.185.54",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:10",
+          "success": 1
+        },
+        {
+          "id": 26,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 9: 97 messages extracted",
+          "tor_circuit_id": "199.87.154.255",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:11",
+          "success": 1
+        },
+        {
+          "id": 27,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 10: 42 messages extracted",
+          "tor_circuit_id": "199.87.154.255",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:11",
+          "success": 1
+        },
+        {
+          "id": 28,
+          "operation_type": "advanced_dm_extraction",
+          "target_username": "whatilove1728",
+          "details": "Thread 11: 82 messages extracted",
+          "tor_circuit_id": "199.87.154.255",
+          "proxy_used": null,
+          "timestamp": "2025-06-01 04:08:11",
+          "success": 1
+        }
+      ]
+    }
+  ]
+}

@@ -277,35 +277,38 @@ class RealOpsExecutor:
         cmd = [
             sys.executable,
             str(CORE_DIR / "main.py"),
-            module_name,
-            "--target", target,
-            "--sessionid", self.config.ig_sessionid,
-            "--export-dir", str(self.config.export_dir),
-            "--production-mode"
+            module_name
         ]
 
         self.logger.info(f"🔧 Command: {' '.join(cmd[:3])} [REDACTED_ARGS]")
 
-        # Set environment variables
+        # Set environment variables with target and session info
         env = os.environ.copy()
         env.update({
             'IG_SESSIONID': self.config.ig_sessionid,
             'TARGET_HOST': 'www.instagram.com',
+            'TARGET_USERNAME': target,
+            'CURRENT_TARGET': target,
             'DISCORD_WEBHOOK_URL': self.config.discord_webhook,
             'PRODUCTION_MODE': 'true',
-            'NO_MOCK_DATA': 'true'
+            'NO_MOCK_DATA': 'true',
+            'EXPORT_DIR': str(self.config.export_dir)
         })
 
         # Execute with timeout
         start_time = time.time()
-        process = subprocess.run(
-            cmd,
-            capture_output=True,
-            text=True,
-            timeout=self.config.timeout,
-            env=env,
-            cwd=PROJECT_ROOT
-        )
+        try:
+            process = subprocess.run(
+                cmd,
+                capture_output=True,
+                text=True,
+                timeout=self.config.timeout,
+                env=env,
+                cwd=PROJECT_ROOT,
+                input=target + '\n'  # Provide target as stdin input
+            )
+        except subprocess.TimeoutExpired:
+            raise RuntimeError(f"Module {module_name} timed out after {self.config.timeout}s")
 
         execution_time = time.time() - start_time
 
