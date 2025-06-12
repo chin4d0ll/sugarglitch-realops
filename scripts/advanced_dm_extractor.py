@@ -16,6 +16,8 @@ import aiofiles
 import json
 import time
 import random
+import os
+import sys
 from typing import Dict, List, Any, Optional, Tuple, AsyncGenerator
 from dataclasses import dataclass, asdict
 from pathlib import Path
@@ -23,6 +25,7 @@ import logging
 from datetime import datetime
 import weakref
 import gc
+
 
 @dataclass
 class InstagramDM:
@@ -35,6 +38,7 @@ class InstagramDM:
     text: str
     timestamp: int
     item_type: str
+
 
 class AdvancedDMExtractor:
     """
@@ -119,7 +123,8 @@ class AdvancedDMExtractor:
 
     def _rotate_user_agent(self) -> str:
         """🔄 Rotate user agent for stealth"""
-        self.current_ua_index = (self.current_ua_index + 1) % len(self.user_agents)
+        self.current_ua_index = (
+            self.current_ua_index + 1) % len(self.user_agents)
         return self.user_agents[self.current_ua_index]
 
     def _calculate_adaptive_delay(self, attempt: int, consecutive_failures: int) -> float:
@@ -176,18 +181,21 @@ class AdvancedDMExtractor:
         return headers
 
     async def _stealth_request(self, session: aiohttp.ClientSession, url: str,
-                              attempt: int = 1, consecutive_failures: int = 0) -> Tuple[int, Dict, str]:
+                               attempt: int = 1, consecutive_failures: int = 0) -> Tuple[int, Dict, str]:
         """🥷 Make stealth request with advanced evasion"""
 
         # Calculate adaptive delay
         if attempt > 1:
-            delay = self._calculate_adaptive_delay(attempt, consecutive_failures)
-            self.logger.info(f"😴 Adaptive sleep: {delay:.1f}s (attempt {attempt})")
+            delay = self._calculate_adaptive_delay(
+                attempt, consecutive_failures)
+            self.logger.info(
+                f"😴 Adaptive sleep: {delay:.1f}s (attempt {attempt})")
 
             # Show countdown for long delays
             if delay > 30:
                 for remaining in range(int(delay), 0, -5):
-                    print(f"⏳ Waiting {remaining}s to avoid detection...", end='\r')
+                    print(
+                        f"⏳ Waiting {remaining}s to avoid detection...", end='\r')
                     await asyncio.sleep(min(5, remaining))
                 print()
             else:
@@ -203,12 +211,14 @@ class AdvancedDMExtractor:
         self.total_requests += 1
 
         try:
-            self.logger.info(f"🥷 Stealth request #{attempt}: {url.split('/')[-1]}")
+            self.logger.info(
+                f"🥷 Stealth request #{attempt}: {url.split('/')[-1]}")
 
-            async with session.get(url, headers = headers, ssl = False) as response:
+            async with session.get(url, headers=headers, ssl=False) as response:
                 text = await response.text()
 
-                self.logger.info(f"📊 Response: HTTP {response.status} | {len(text):,} chars")
+                self.logger.info(
+                    f"📊 Response: HTTP {response.status} | {len(text):,} chars")
 
                 if response.status == 200:
                     self.successful_requests += 1
@@ -225,7 +235,8 @@ class AdvancedDMExtractor:
 
                 elif response.status == 429:
                     self.rate_limits += 1
-                    self.logger.warning(f"🚫 Rate limited! (Total: {self.rate_limits})")
+                    self.logger.warning(
+                        f"🚫 Rate limited! (Total: {self.rate_limits})")
                     return response.status, dict(response.headers), text
 
                 else:
@@ -237,7 +248,7 @@ class AdvancedDMExtractor:
             return 500, {}, ""
 
     async def _persistent_request(self, session: aiohttp.ClientSession, url: str,
-                                max_attempts: int = 25) -> Tuple[int, Dict, str]:
+                                  max_attempts: int = 25) -> Tuple[int, Dict, str]:
         """🔄 Persistent request with intelligent retry"""
 
         consecutive_failures = 0
@@ -257,7 +268,8 @@ class AdvancedDMExtractor:
 
                 # Adaptive strategy based on consecutive failures
                 if consecutive_failures > 5:
-                    self.logger.warning("🔄 Switching to ultra-conservative mode")
+                    self.logger.warning(
+                        "🔄 Switching to ultra-conservative mode")
                     self.base_delay = min(self.base_delay * 1.5, 300.0)
 
                 continue
@@ -284,16 +296,16 @@ class AdvancedDMExtractor:
 
         # Setup session with conservative settings
         connector = aiohttp.TCPConnector(
-            limit = 1,  # Single connection
-            limit_per_host = 1,
-            ttl_dns_cache = 300,
-            use_dns_cache = True,
-            keepalive_timeout = 60
+            limit=1,  # Single connection
+            limit_per_host=1,
+            ttl_dns_cache=300,
+            use_dns_cache=True,
+            keepalive_timeout=60
         )
 
-        timeout = aiohttp.ClientTimeout(total = 120, connect = 30)
+        timeout = aiohttp.ClientTimeout(total=120, connect=30)
 
-        async with aiohttp.ClientSession(connector = connector, timeout = timeout) as session:
+        async with aiohttp.ClientSession(connector=connector, timeout=timeout) as session:
 
             # Step 1: Get homepage to establish session
             self.logger.info("🏠 Establishing session...")
@@ -338,7 +350,8 @@ class AdvancedDMExtractor:
             thread_pattern = r'"thread_id":"([^"]+)"'
             thread_matches = re.findall(thread_pattern, html_content)
 
-            for i, thread_id in enumerate(thread_matches[:5]):  # Limit to first 5
+            # Limit to first 5
+            for i, thread_id in enumerate(thread_matches[:5]):
                 thread_data = {
                     'thread_id': thread_id,
                     'thread_title': f'Conversation {i+1}',
@@ -359,7 +372,7 @@ class AdvancedDMExtractor:
         """💾 Save results efficiently"""
 
         output_path = Path(output_dir)
-        output_path.mkdir(exist_ok = True)
+        output_path.mkdir(exist_ok=True)
 
         timestamp = int(time.time())
         filename = f"ADVANCED_ALX_TRADING_DMS_{timestamp}.json"
@@ -367,7 +380,7 @@ class AdvancedDMExtractor:
 
         try:
             async with aiofiles.open(filepath, 'w', encoding='utf-8') as f:
-                await f.write(json.dumps(data, ensure_ascii = False, indent = 2))
+                await f.write(json.dumps(data, ensure_ascii=False, indent=2))
 
             self.logger.info(f"✅ Results saved: {filepath}")
 
@@ -376,15 +389,18 @@ class AdvancedDMExtractor:
 
     def print_final_stats(self):
         """📊 Print final statistics"""
-        success_rate = (self.successful_requests / max(self.total_requests, 1)) * 100
+        success_rate = (self.successful_requests /
+                        max(self.total_requests, 1)) * 100
 
         print(f"\n🌸 Advanced DM Extraction Complete!")
         print("=" * 50)
         print(f"📊 Total Requests: {self.total_requests}")
-        print(f"✅ Successful: {self.successful_requests} ({success_rate:.1f}%)")
+        print(
+            f"✅ Successful: {self.successful_requests} ({success_rate:.1f}%)")
         print(f"🚫 Rate Limited: {self.rate_limits}")
         print(f"💬 Messages Extracted: {self.extracted_messages}")
         print(f"⏱️  Average Delay: {self.base_delay:.1f}s")
+
 
 async def main():
     """🚀 Main function"""

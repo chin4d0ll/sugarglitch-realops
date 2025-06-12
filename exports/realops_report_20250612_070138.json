@@ -1,0 +1,52 @@
+{
+  "start_time": "2025-06-12T07:01:37.875297",
+  "targets": [
+    "alx.trading"
+  ],
+  "status": "running",
+  "modules_executed": [
+    {
+      "module": "instagram-osint",
+      "target": "alx.trading",
+      "status": "failed",
+      "error": "Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+      "timestamp": "2025-06-12T07:01:37.906352"
+    },
+    {
+      "module": "dm-extractor",
+      "target": "alx.trading",
+      "status": "failed",
+      "error": "Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+      "timestamp": "2025-06-12T07:01:37.939941"
+    },
+    {
+      "module": "ig-session",
+      "target": "alx.trading",
+      "status": "failed",
+      "error": "Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+      "timestamp": "2025-06-12T07:01:37.975039"
+    },
+    {
+      "module": "breach-analysis",
+      "target": "alx.trading",
+      "status": "failed",
+      "error": "Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+      "timestamp": "2025-06-12T07:01:38.005911"
+    },
+    {
+      "module": "scoring",
+      "target": "alx.trading",
+      "status": "failed",
+      "error": "Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+      "timestamp": "2025-06-12T07:01:38.043567"
+    }
+  ],
+  "exports_generated": [],
+  "errors": [
+    "❌ Module instagram-osint failed for alx.trading: Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+    "❌ Module dm-extractor failed for alx.trading: Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+    "❌ Module ig-session failed for alx.trading: Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+    "❌ Module breach-analysis failed for alx.trading: Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n",
+    "❌ Module scoring failed for alx.trading: Module failed with code 2: usage: main.py [-h] [-l] [-e] [-i] [--no-banner] [module]\nmain.py: error: unrecognized arguments: --target alx.trading --sessionid abcd1234567890abcd1234567890abcd1234567890ab --export-dir /workspaces/sugarglitch-realops/exports --production-mode\n"
+  ]
+}
