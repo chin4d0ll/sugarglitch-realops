@@ -34,7 +34,7 @@ def check_environment(module_name=None):
     print("🔍 Checking environment configuration...")
     
     # New modules don't require legacy environment variables
-    if module_name in ['quick-recon', 'instagram-osint', 'env-test', 'nmap-scan', 'sqlmap-test']:
+    if module_name in ['quick-recon', 'instagram-osint', 'env-test', 'nmap-scan', 'sqlmap-test', 'targets']:
         print("✅ Environment configuration OK (modern module)")
         return True
     
@@ -66,6 +66,7 @@ def list_modules():
         ("quick-recon", "Quick Reconnaissance Scanner", "quick_recon.py"),
         ("instagram-osint", "Instagram OSINT Analysis", "instagram_osint.py"),
         ("env-test", "Environment Validation", "environment_test.py"),
+        ("targets", "Show Target Database", "target_manager.py"),
         ("ssh-brute", "SSH Brute Force Attack", "ssh_bruteforce_multithread.py"),
         ("ctf-training", "CTF Hacking Masterclass", "ctf_hacking_masterclass_2025_fixed.py"),
         ("ig-session", "Instagram Session Hijacking", "auto_ig_session_login.py"),
@@ -122,6 +123,11 @@ def run_module(module_name, args=None):
         elif module_name == 'env-test':
             from environment_test import test_environment
             test_environment()
+            return True
+            
+        elif module_name == 'targets':
+            from target_manager import target_manager
+            target_manager.list_targets_summary()
             return True
             
         elif module_name == 'nmap-scan':
@@ -232,6 +238,7 @@ Modules:
   quick-recon         Quick reconnaissance scanning
   instagram-osint     Instagram OSINT analysis
   env-test            Environment validation test
+  targets             Show target database
   nmap-scan           Advanced nmap port scanning
   sqlmap-test         SQL injection testing
   ssh-brute           SSH brute force attack

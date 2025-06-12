@@ -1,37 +1,92 @@
 {
   "targets": [
     {
-      "id": "target_001",
-      "name": "Example Domain",
-      "url": "https://example.com",
-      "type": "web",
-      "status": "active",
-      "last_scan": "2025-01-12",
-      "notes": "Example target for reconnaissance testing"
+      "username": "alx.trading",
+      "email": [
+        "n@alx.trading"
+      ],
+      "phone": [
+        "447793127209",
+        "0615414210",
+        "+447793127209"
+      ],
+      "ig_id": null,
+      "sessions": [
+        "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262915.json",
+        "MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183431.json",
+        "FINAL_BREACH_OPERATION_alx.trading_1748263267.json",
+        "COMPREHENSIVE_ATTACK_REPORT_alx.trading_1748262744.json",
+        "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748263123.json",
+        "SUCCESSFUL_BREACH_alx_trading_Fleming654.json",
+        "DREAMFLOW_SUMMARY_alx.trading_1748264045.txt",
+        "ADVANCED_SEDUCTION_REPORT_alx.trading_20250525_185113.json",
+        "ADVANCED_SEDUCTION_REPORT_alx.trading_20250525_182950.json",
+        "instagram_safe_extraction_alx.trading_20250525_184224.json",
+        "FINAL_BREACH_OPERATION_alx.trading_1748263437.json",
+        "MASTER_PROFILE_alx_trading_1748262733.json",
+        "instagram_advanced_extraction_alx.trading_20250525_185109.json",
+        "FINAL_BREACH_OPERATION_alx.trading_1748263379.json",
+        "MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183259.json",
+        "ULTIMATE_GHOST_EXPLOITATION_alx.trading_1748262855.json",
+        "MASTER_SEDUCTION_TARGETING_alx.trading_20250525_183323.json",
+        "FINAL_BREACH_OPERATION_alx.trading_1748263320.json",
+        "MASTER_SEDUCTION_TARGETING_alx.trading_20250525_185113.json"
+      ],
+      "location_history": [],
+      "breaches": [],
+      "chat_patterns": [],
+      "aliases": [
+        "Alex Fleming",
+        "alx_trading",
+        "Trade Your Way"
+      ],
+      "linked_accounts": [],
+      "flags": [
+        "email_known",
+        "business_account",
+        "password_known",
+        "phone_known",
+        "high_value_target"
+      ],
+      "business_info": {
+        "business": "Trade Your Way",
+        "focus": "Forex Trading, Cryptocurrency, Trading Education",
+        "password": "Fleming654"
+      }
     },
     {
-      "id": "target_002", 
-      "name": "Test Infrastructure",
-      "url": "https://httpbin.org",
-      "type": "api",
-      "status": "active",
-      "last_scan": "2025-01-12",
-      "notes": "HTTP testing service for API reconnaissance"
-    },
-    {
-      "id": "target_003",
-      "name": "Local Development",
-      "url": "http://localhost",
-      "type": "local",
-      "status": "development",
-      "last_scan": "2025-01-12", 
-      "notes": "Local development environment"
+      "username": "whatilove1728",
+      "email": [],
+      "phone": [],
+      "ig_id": null,
+      "sessions": [],
+      "location_history": [],
+      "breaches": [],
+      "chat_patterns": [
+        {
+          "pattern_type": "username_analysis",
+          "base": "whatilove",
+          "number": "1728",
+          "significance": "1728 = 12³ (perfect cube)"
+        }
+      ],
+      "aliases": [
+        "whatilove17",
+        "whatilove28",
+        "whatilove1727",
+        "ilove1728",
+        "whatilove1729"
+      ],
+      "linked_accounts": [],
+      "flags": [
+        "intelligence_available"
+      ]
     }
   ],
   "metadata": {
-    "created": "2025-01-12",
+    "created": "2025-06-12T05:03:24.386514",
     "version": "1.0",
-    "description": "SugarGlitch RealOps target configuration file",
-    "total_targets": 3
+    "extraction_method": "manual_file_parsing",
+    "total_targets": 2
   }
 }
