@@ -1,0 +1,149 @@
+allow-lan: true
+dns:
+  default-nameserver:
+  - 223.5.5.5
+  - 8.8.8.8
+  enable: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  ipv6: false
+  nameserver:
+  - https://doh.pub/dns-query
+  - https://dns.alidns.com/dns-query
+external-controller: 127.0.0.1:9090
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- alterId: 0
+  cipher: auto
+  name: Free-1-使用前记得更新订阅
+  port: 0
+  server: 使用前记得更新订阅
+  tls: false
+  type: vmess
+  uuid: 6a3bcc08-9c77-4c02-844b-4a694c4f2fea
+- alterId: 0
+  cipher: auto
+  name: Free-2-202.78.162
+  network: ws
+  port: 443
+  server: 202.78.162.5
+  tls: true
+  type: vmess
+  uuid: 2ff97c6d-8557-42a4-b43f-19c77c5959ea
+  ws-opts:
+    headers:
+      Host: irsoft.sytes.net
+    path: /@forwardv2ray
+- alterId: 0
+  cipher: auto
+  name: Free-3-202.78.162
+  network: ws
+  port: 443
+  server: 202.78.162.5
+  tls: true
+  type: vmess
+  uuid: 118287d2-e968-42e1-80d0-12fa2f5d38d6
+  ws-opts:
+    headers:
+      Host: sahand.serveminecraft.net
+    path: /@forwardv2ray
+- alterId: 0
+  cipher: auto
+  name: Free-4-www.darkro
+  network: ws
+  port: 8080
+  server: www.darkroom.lol
+  tls: false
+  type: vmess
+  uuid: 22826b44-5c1a-4b4b-dbaa-83a2e8bd95f0
+  ws-opts:
+    headers:
+      Host: www.darkroom.lol
+    path: /
+- alterId: 0
+  cipher: auto
+  name: Free-5-server31.b
+  network: ws
+  port: 8880
+  server: server31.beheshtbaneh.com
+  tls: false
+  type: vmess
+  uuid: 4154143c-bbba-47a4-9f79-c2ed087cbcc9
+  ws-opts:
+    headers:
+      Host: server31.beheshtbaneh.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: Free-6-data-us-v1
+  network: ws
+  port: 20401
+  server: data-us-v1.shwjfkw.cn
+  tls: false
+  type: vmess
+  uuid: b1478e24-4916-3abe-8f17-15931012ecbe
+  ws-opts:
+    headers:
+      Host: data-us-v1.shwjfkw.cn
+    path: /debian
+- alterId: 0
+  cipher: auto
+  name: Free-7-104.21.82.
+  network: ws
+  port: 8880
+  server: 104.21.82.183
+  tls: false
+  type: vmess
+  uuid: 5a7021e0-26b4-45d6-b175-fe551601ca97
+  ws-opts:
+    headers:
+      Host: server26.beheshtbaneh.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: Free-8-202.78.162
+  network: ws
+  port: 443
+  server: 202.78.162.5
+  tls: true
+  type: vmess
+  uuid: 716eded6-2201-4dbd-9d63-1638c9e8e677
+  ws-opts:
+    headers:
+      Host: pendar.onthewifi.com
+    path: /@forwardv2ray
+proxy-groups:
+- name: 🔥 FREE INTERNET
+  proxies:
+  - ♻️ AUTO
+  - 🎯 MANUAL
+  - DIRECT
+  type: select
+- interval: 300
+  name: ♻️ AUTO
+  proxies: &id001
+  - Free-1-使用前记得更新订阅
+  - Free-2-202.78.162
+  - Free-3-202.78.162
+  - Free-4-www.darkro
+  - Free-5-server31.b
+  - Free-6-data-us-v1
+  - Free-7-104.21.82.
+  - Free-8-202.78.162
+  tolerance: 50
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+- name: 🎯 MANUAL
+  proxies: *id001
+  type: select
+rules:
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,127.0.0.0/8,DIRECT
+- IP-CIDR,172.16.0.0/12,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- GEOIP,CN,DIRECT
+- MATCH,🔥 FREE INTERNET
+socks-port: 7891

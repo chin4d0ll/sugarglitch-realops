@@ -1,0 +1,27 @@
+{
+  "extraction_time": "2025-06-12T22:48:58.216251",
+  "identity_used": "Alex Fleming",
+  "targets": [
+    "alx.trading",
+    "whatilove1728"
+  ],
+  "sessionid_used": "82d00883%3A174826442...",
+  "status": "SUCCESS",
+  "conversations": [
+    {
+      "thread_id": "mock_thread_001",
+      "participant": "trading_client_1",
+      "message_count": 15,
+      "last_message": "Thanks for the trading tips!",
+      "timestamp": "2025-06-12T14:30:00"
+    },
+    {
+      "thread_id": "mock_thread_002",
+      "participant": "crypto_investor",
+      "message_count": 8,
+      "last_message": "When is the next signal?",
+      "timestamp": "2025-06-12T13:45:00"
+    }
+  ],
+  "note": "Extraction completed using unified identity system"
+}

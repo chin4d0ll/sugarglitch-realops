@@ -1,0 +1,77 @@
+allow-lan: true
+log-level: info
+mode: rule
+port: 7890
+proxies:
+- alterId: 0
+  cipher: auto
+  name: Work-1
+  port: 443
+  server: de.vmess.comnpmjs.com
+  tls: true
+  type: vmess
+  uuid: ceaaf653-9874-58c6-b100-092c01a1f73d
+- alterId: 0
+  cipher: auto
+  name: Work-2
+  network: ws
+  port: 8080
+  server: bc842b49-swexs0-t1rt5e-1s09x.hgc1.tcpbbr.net
+  tls: false
+  type: vmess
+  uuid: 62b7824e-47dc-11ef-9f2d-f23c9164ca5d
+  ws-opts:
+    headers:
+      Host: broadcastlv.chat.bilibili.com
+    path: /
+- alterId: 0
+  cipher: auto
+  name: Work-3
+  port: 20452
+  server: 20.2.80.240
+  tls: false
+  type: vmess
+  uuid: 52aba3eb-0a6f-4c2f-29c6-d4b18a1d7c3e
+- alterId: 0
+  cipher: auto
+  name: Work-4
+  port: 31945
+  server: 203.227.44.74
+  tls: false
+  type: vmess
+  uuid: 7ccbb147-38b8-4d7c-9201-2ad4ae8b8761
+- alterId: 0
+  cipher: auto
+  name: Work-5
+  port: 20452
+  server: 20.2.80.240
+  tls: false
+  type: vmess
+  uuid: 52aba3eb-0a6f-4c2f-29c6-d4b18a1d7c3e
+proxy-groups:
+- name: "\U0001F525 WORKING"
+  proxies:
+  - "\u267B\uFE0F AUTO"
+  - Work-1
+  - Work-2
+  - Work-3
+  - Work-4
+  - Work-5
+  type: select
+- interval: 300
+  name: "\u267B\uFE0F AUTO"
+  proxies:
+  - Work-1
+  - Work-2
+  - Work-3
+  - Work-4
+  - Work-5
+  type: url-test
+  url: http://www.gstatic.com/generate_204
+rules:
+- DOMAIN-SUFFIX,local,DIRECT
+- IP-CIDR,192.168.0.0/16,DIRECT
+- IP-CIDR,10.0.0.0/8,DIRECT
+- GEOIP,CN,DIRECT
+- "MATCH,\U0001F525 WORKING"
+socks-port: 7891

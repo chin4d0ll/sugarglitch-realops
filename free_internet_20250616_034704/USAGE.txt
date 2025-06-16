@@ -1,0 +1,36 @@
+
+🔥 FREE INTERNET HUNTER - USAGE INSTRUCTIONS
+Generated: 2025-06-16 03:47:04
+
+📱 FOR MOBILE (Android/iOS):
+1. V2rayNG: 
+   - Scan QR codes: qr_*.png
+   - Or import vmess links: vmess_*.txt
+
+2. Shadowrocket (iOS):
+   - Scan QR codes: qr_*.png
+   - Or add manually from vmess_*.txt
+
+💻 FOR DESKTOP:
+1. Clash Meta:
+   - Import: clash_config.yaml
+   - Set system proxy to 127.0.0.1:7890
+
+2. V2rayN (Windows):
+   - Import vmess links from vmess_*.txt
+
+🚀 QUICK START:
+- Total configs: 8
+- QR codes generated: 8
+- All configs tested and working
+
+⚠️ IMPORTANT:
+- Test all configs, some may be slow
+- Change configs if one stops working
+- Use 🔒 TLS configs for better security
+
+💡 TIPS:
+- Best servers usually: 🔒 TLS + ws network
+- If slow, try different configs
+- Keep this folder for daily use
+        
