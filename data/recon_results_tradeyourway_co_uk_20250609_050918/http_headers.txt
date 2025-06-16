@@ -1,0 +1,14 @@
+HTTP/1.1 301 Moved Permanently
+Content-Type: text/html; charset=UTF-8
+Connection: keep-alive
+X-WS-RateLimit-Limit: 1000
+X-WS-RateLimit-Remaining: 999
+Date: Mon, 09 Jun 2025 05:09:35 GMT
+Server: Apache
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+X-Redirect-By: WordPress
+Set-Cookie: PHPSESSID=25f7e98fb5b0b93d40919487c01dc141; path=/
+Location: https://tradeyourway.co.uk/
+

@@ -1,0 +1,11 @@
+Server:		127.0.0.53
+Address:	127.0.0.53:53
+
+Non-authoritative answer:
+Name:	tradeyourway.co.uk
+Address: 217.160.0.249
+
+Non-authoritative answer:
+Name:	tradeyourway.co.uk
+Address: 2001:8d8:100f:f000::26e
+
