@@ -1,0 +1,78 @@
+#!/bin/bash
+# 🚀 Quick Git Commands - Shortcuts สำหรับใช้งาน Git ประจำวัน
+
+case "$1" in
+    "commit" | "c")
+        echo "🚀 Quick commit..."
+        git add .
+        if [ -n "$2" ]; then
+            git commit -m "$2"
+        else
+            TIMESTAMP=$(date '+%Y%m%d_%H%M%S')
+            git commit -m "🔄 Quick update $TIMESTAMP"
+        fi
+        git push
+        echo "✅ Committed and pushed!"
+        ;;
+        
+    "push" | "p")
+        echo "📤 Quick push..."
+        git add .
+        git commit -m "🚀 Auto-push $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
+        echo "✅ Pushed to remote!"
+        ;;
+        
+    "status" | "s")
+        echo "📊 Git status:"
+        git status --short
+        echo ""
+        echo "📈 Recent commits:"
+        git log --oneline -5
+        ;;
+        
+    "fix" | "f")
+        echo "🔧 Running Git fixer..."
+        ./ultimate_git_fixer.sh
+        ;;
+        
+    "auto" | "a")
+        echo "🤖 Running auto commit..."
+        ./auto_git_commit.sh
+        ;;
+        
+    "reset" | "r")
+        echo "⚠️ Resetting to last commit..."
+        git reset --hard HEAD
+        git clean -fd
+        echo "✅ Reset complete!"
+        ;;
+        
+    "pull" | "pl")
+        echo "📥 Pulling latest changes..."
+        git pull
+        echo "✅ Pull complete!"
+        ;;
+        
+    "help" | "h" | *)
+        echo "🔥 Quick Git Commands:"
+        echo ""
+        echo "Usage: ./git [command] [message]"
+        echo ""
+        echo "Commands:"
+        echo "  commit, c [msg]  - Add, commit with message (or auto), and push"
+        echo "  push, p          - Quick add, commit, and push"
+        echo "  status, s        - Show status and recent commits"
+        echo "  fix, f           - Run complete Git fixer"
+        echo "  auto, a          - Run auto commit script"
+        echo "  reset, r         - Reset to last commit (DANGER!)"
+        echo "  pull, pl         - Pull latest changes"
+        echo "  help, h          - Show this help"
+        echo ""
+        echo "Examples:"
+        echo "  ./git commit 'Added new feature'"
+        echo "  ./git push"
+        echo "  ./git status"
+        echo "  ./git fix"
+        ;;
+esac
