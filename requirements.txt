@@ -1,5 +1,9 @@
-networkx
-matplotlib
-pyvis
-python-dotenv
+instaloader
+selenium
+httpx
 requests
+beautifulsoup4
+# For IG hacking and automation
+pytest
+ipython
+jupyter

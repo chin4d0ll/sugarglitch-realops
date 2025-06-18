@@ -6,13 +6,18 @@ ENV PYTHONUNBUFFERED=1
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
 
-# Install system dependencies for Playwright and general usage
+
+# Install system dependencies for Playwright, IG hacking, and general usage
 RUN apt-get update && apt-get install -y \
     wget \
     gnupg \
     ca-certificates \
     curl \
     git \
+    nmap \
+    mitmproxy \
+    chromium-driver \
+    chromium-browser \
     && rm -rf /var/lib/apt/lists/*
 
 # Create app directory and set up user

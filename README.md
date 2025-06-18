@@ -126,4 +126,76 @@ This platform contains advanced security testing tools and sensitive data. Use r
 
 ---
 
+# 🕵️‍♂️ IG Pentest Codespace (Ethical/Red Team/For Education)
+
+## 📦 พร้อมใช้งานบน Github Codespaces
+
+### ✅ Features
+- Python3, pip, git, curl, wget, nmap, mitmproxy, instaloader, instagrapi, selenium, httpx, requests, beautifulsoup4, ipython, tqdm, lxml, rich
+- devcontainer.json + Dockerfile + requirements.txt ครบ
+- ตัวอย่าง script ดึงข้อมูล IG (profile, media, automation, mitmproxy)
+- Zero-setup: แค่เปิด Codespace แล้วรันได้ทันที
+
+---
+
+## 🚀 วิธีใช้งาน
+
+1. เปิด Codespace (หรือรันใน devcontainer)
+2. ติดตั้ง dependencies อัตโนมัติ (postCreateCommand)
+3. รันตัวอย่าง script:
+
+```bash
+python3 ig_profile_and_media.py
+```
+
+- ถ้าต้องการดัก traffic IG:
+
+```bash
+mitmproxy -s mitm_ig_logger.py
+```
+
+---
+
+## 🛠️ Tools ที่มีใน environment
+- **instaloader**: ดึงข้อมูล IG profile, รูป, followers, stories
+- **instagrapi**: ดึง media, automation IG (ต้องใช้ account ทดสอบ)
+- **selenium**: รัน browser อัตโนมัติ (headless)
+- **httpx + beautifulsoup4**: ดึงและ parse HTML/JSON
+- **mitmproxy**: ดัก/sniff traffic IG (network pentest)
+- **nmap**: สแกน network/port
+- **git, curl, wget**: เครื่องมือพื้นฐาน
+- **ipython, tqdm, lxml, rich**: สำหรับ scripting/data
+
+---
+
+## 🧑‍💻 ตัวอย่าง workflow (สาย Hack/Red Team)
+- `ig_profile_and_media.py` :
+    - ดึง bio, followers, profile pic (instaloader)
+    - ดึง media (instagrapi)
+    - automation selenium เข้า IG
+    - ดึง title (httpx+bs4)
+- `mitm_ig_logger.py` :
+    - ดัก traffic IG ด้วย mitmproxy
+
+---
+
+## 🌐 Ethical Hacking Tips
+- ใช้เพื่อการศึกษา/ทดสอบเท่านั้น (for education/red team)
+- อย่าใช้กับ account จริง/โดยไม่ได้รับอนุญาต
+- mitmproxy ใช้ดัก traffic IG ได้ (ต้องตั้ง proxy ในมือถือ/browser)
+
+---
+
+## 📚 อ้างอิง
+- [instaloader docs](https://instaloader.github.io/)
+- [instagrapi docs](https://adw0rd.github.io/instagrapi/)
+- [mitmproxy docs](https://docs.mitmproxy.org/stable/)
+- [Github Codespaces devcontainer](https://docs.github.com/en/codespaces/customizing-your-codespace/configuring-codespaces-for-your-project)
+
+---
+
+**สร้างโดย Copilot Workspace | June 2025**
+
+---
+
 **🎯 Status**: Production Ready | **🔥 Tools**: 24/24 Available | **📊 Scripts**: 290+ Organized
