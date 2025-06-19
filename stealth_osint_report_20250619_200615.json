@@ -1,0 +1,38 @@
+{
+  "target": "alx.trading",
+  "generated_at": "2025-06-19T20:06:15.549419",
+  "method": "Stealth OSINT with Proxy Rotation",
+  "sessions_used": 4,
+  "platforms_checked": [
+    "Instagram"
+  ],
+  "intelligence_summary": {
+    "platforms_found": 1,
+    "total_passwords": 16,
+    "confidence_level": "High"
+  },
+  "found_data": {
+    "Instagram": {
+      "title": "Instagram",
+      "image": "https://static.cdninstagram.com/rsrc.php/v4/yR/r/hexDR1NOpRC.png"
+    }
+  },
+  "top_passwords": [
+    "trading2025",
+    "alex_trading",
+    "forex123",
+    "alx_trading",
+    "alx.trading",
+    "rich123",
+    "alxtrading",
+    "money123",
+    "crypto123",
+    "success123",
+    "alex2024",
+    "trading2024",
+    "alextrading",
+    "alex2025",
+    "alex.trading",
+    "trading123"
+  ]
+}

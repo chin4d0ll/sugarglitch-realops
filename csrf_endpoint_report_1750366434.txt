@@ -1,0 +1,191 @@
+🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸
+📊 CSRF + Endpoint Discovery Report
+⏰ สร้างเมื่อ: 2025-06-19 20:53:54
+👤 ผู้ใช้: chin4d0ll
+🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸
+
+🎯 สรุปผลการค้นหา:
+   🔑 CSRF Tokens ที่เจอ: 1 ตัว
+   🌐 Endpoints ที่เจอ: 158 ตัว
+   📡 Requests ที่ส่ง: 19 ครั้ง
+
+🔑 CSRF Tokens ที่เจอ:
+
+   Token 1:
+      🏷️ Name: csrf_token
+      🔐 Value: 7wQfEsayn7qSUw9GRn8YtE
+      📍 Method: javascript
+      🔗 Source: https://www.instagram.com
+
+🌐 Endpoints ที่เจอ:
+
+   Endpoint 1:
+      🔗 URL: https://www.instagram.com/v4/yI/r/VsNE-OHk_8a.png
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 2:
+      🔗 URL: https://www.instagram.com/v4/yR/r/lam-fZmwmvn.png
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 3:
+      🔗 URL: https://www.instagram.com/v4/ys/r/aM-g435MtEX.png
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 4:
+      🔗 URL: https://www.instagram.com/v4/yx/r/H1l_HHqi4p6.png
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 5:
+      🔗 URL: https://www.instagram.com/v4/yB/r/-7Z_RkdLJUX.png
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 6:
+      🔗 URL: https://www.instagram.com/v4/yG/r/De-Dwpd5CHc.png
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 7:
+      🔗 URL: https://www.instagram.com/v5/yD/l/0,cross/izgxNGKVsCervEbrAkW7hgs97xFZK--hBruhBENOpKm_.css
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 8:
+      🔗 URL: https://www.instagram.com/v4/yu/r/R6-Uxg_mUAY.js
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 9:
+      🔗 URL: https://www.instagram.com/v4/yI/r/An17Nrg4J4w.js
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 10:
+      🔗 URL: https://www.instagram.com/v4/ya/r/mFZoRayZM41.js
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 11:
+      🔗 URL: https://www.instagram.com/v5/y6/l/0,cross/fgQe914iiBfONMKn3YhINqvU0b58aIhuoQvuWABIjhhR.css
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 12:
+      🔗 URL: https://www.instagram.com/graphql\/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 13:
+      🔗 URL: https://www.instagram.com/graphqlbatch\/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 14:
+      🔗 URL: https://www.instagram.com/graphql
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 15:
+      🔗 URL: https://www.instagram.com/graphql\/ig_schema
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 16:
+      🔗 URL: https://www.instagram.com/graphql\/query
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 17:
+      🔗 URL: https://www.instagram.com/graphql_www
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in main page content
+
+   Endpoint 18:
+      🔗 URL: https://www.instagram.com/\/
+      📝 Method: POST
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in AJAX call
+
+   Endpoint 19:
+      🔗 URL: https:\/\/www.facebook.com\/legal\/ai-terms
+      📝 Method: POST
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in AJAX call
+
+   Endpoint 20:
+      🔗 URL: https:\/\/www.facebook.com\/privacy\/guide\/generative-ai
+      📝 Method: POST
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in AJAX call
+
+🧪 ผลการทดสอบ:
+   📊 Endpoints ที่ทดสอบ: 5
+   ✅ Combinations ที่ใช้ได้: 0
+   🔐 ต้องการ CSRF: 0
+   🔒 ต้องการ Auth: 0
+
+🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸
+💖 รายงานสร้างโดย CSRF + Endpoint Discovery Framework
+⚠️ ใช้ข้อมูลนี้อย่างรับผิดชอบและถูกกฎหมาย
+🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸

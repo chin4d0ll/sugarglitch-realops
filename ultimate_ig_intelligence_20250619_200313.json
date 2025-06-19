@@ -1,0 +1,36 @@
+{
+  "target": "alx.trading",
+  "generated_at": "2025-06-19T20:03:13.605528",
+  "instagram_profile_data": {},
+  "intelligence_summary": {
+    "profile_found": false,
+    "total_passwords": 16,
+    "real_data_passwords": 0,
+    "confidence_level": "Medium"
+  },
+  "top_passwords": [
+    "alex-trading",
+    "alex.trading",
+    "alex_trading",
+    "alextrading",
+    "alextrading123",
+    "alextrading2024",
+    "alextrading2025",
+    "alx-trading",
+    "alx.trading",
+    "alx_trading",
+    "alxtrading",
+    "alxtrading123",
+    "trading-alex",
+    "trading.alex",
+    "trading_alex",
+    "tradingalex"
+  ],
+  "extraction_methods": [
+    "Instagram Profile JSON extraction",
+    "HTML meta tag analysis",
+    "Biography pattern analysis",
+    "URL and business category analysis",
+    "Advanced Instagram-specific patterns"
+  ]
+}

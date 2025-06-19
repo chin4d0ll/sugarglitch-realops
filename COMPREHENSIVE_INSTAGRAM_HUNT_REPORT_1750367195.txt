@@ -1,0 +1,375 @@
+
+🔥📊 COMPREHENSIVE Instagram Hunt Intelligence Report 📊🔥
+⏰ Generated: 2025-06-19 21:06:35
+🎯 Target Analysis: alx.trading Instagram Profile
+💕 By: Ultimate Instagram Intelligence Framework
+======================================================================
+
+📋 HUNT SUMMARY:
+======================================================================
+Total reports analyzed: 10
+Total data files: 1
+Total OSINT files: 5
+Unique CSRF tokens found: 0
+Unique API endpoints found: 45
+Hunt success rate: 927.3%
+
+❌ NO CSRF TOKENS FOUND
+==================================================
+Instagram's security is blocking token extraction.
+Recommendations:
+- Try different IP addresses/proxies
+- Use residential proxy services
+- Attempt during different time periods
+- Consider using authenticated methods
+
+🌐 API ENDPOINTS DISCOVERED: 102 total
+==================================================
+
+Endpoint #1:
+   🔗 URL: https://www.instagram.com/v4/yI/r/VsNE-OHk_8a.png
+   📍 Found in 3 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #2:
+   🔗 URL: https://www.instagram.com/v4/yR/r/lam-fZmwmvn.png
+   📍 Found in 3 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #3:
+   🔗 URL: https://www.instagram.com/v4/ys/r/aM-g435MtEX.png
+   📍 Found in 3 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #4:
+   🔗 URL: https://www.instagram.com/v4/yx/r/H1l_HHqi4p6.png
+   📍 Found in 3 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #5:
+   🔗 URL: https://www.instagram.com/v4/yB/r/-7Z_RkdLJUX.png
+   📍 Found in 3 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #6:
+   🔗 URL: https://www.instagram.com/v4/yG/r/De-Dwpd5CHc.png
+   📍 Found in 3 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #7:
+   🔗 URL: https://www.instagram.com/v5/yD/l/0,cross/izgxNGKVsCervEbrAkW7hgs97xFZK--hBruhBENOpKm_.css
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+
+Endpoint #8:
+   🔗 URL: https://www.instagram.com/v4/yu/r/R6-Uxg_mUAY.js
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+
+Endpoint #9:
+   🔗 URL: https://www.instagram.com/v4/yI/r/An17Nrg4J4w.js
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+
+Endpoint #10:
+   🔗 URL: https://www.instagram.com/v4/ya/r/mFZoRayZM41.js
+   📍 Found in 3 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #11:
+   🔗 URL: https://www.instagram.com/v5/y6/l/0,cross/fgQe914iiBfONMKn3YhINqvU0b58aIhuoQvuWABIjhhR.css
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+
+Endpoint #12:
+   🔗 URL: https://www.instagram.com/graphql\/
+   📍 Found in 5 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #13:
+   🔗 URL: https://www.instagram.com/graphqlbatch\/
+   📍 Found in 5 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #14:
+   🔗 URL: https://www.instagram.com/graphql
+   📍 Found in 5 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #15:
+   🔗 URL: https://www.instagram.com/graphql\/ig_schema
+   📍 Found in 5 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #16:
+   🔗 URL: https://www.instagram.com/graphql\/query
+   📍 Found in 5 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #17:
+   🔗 URL: https://www.instagram.com/graphql_www
+   📍 Found in 5 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #18:
+   🔗 URL: https://www.instagram.com/\/
+   📍 Found in 5 sources:
+      - csrf_endpoint_report_1750366434.txt (text_extraction)
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #19:
+   🔗 URL: https://www.instagram.com/accounts/login/*?next=
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #20:
+   🔗 URL: https://www.instagram.com/ajax/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #21:
+   🔗 URL: https://www.instagram.com/client_error/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #22:
+   🔗 URL: https://www.instagram.com/direct/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #23:
+   🔗 URL: https://www.instagram.com/logging/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #24:
+   🔗 URL: https://www.instagram.com/publicapi/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #25:
+   🔗 URL: https://www.instagram.com/qp/batch_fetch_web/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #26:
+   🔗 URL: https://www.instagram.com/query/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #27:
+   🔗 URL: https://www.instagram.com/*/c/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #28:
+   🔗 URL: https://www.instagram.com/*/comments/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #29:
+   🔗 URL: https://www.instagram.com/*/liked_by/
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #30:
+   🔗 URL: https://www.instagram.com/api
+   📍 Found in 1 sources:
+      - csrf_endpoint_report_1750366576.txt (text_extraction)
+
+Endpoint #31:
+   🔗 URL: https://www.instagram.com/v4/yR/r/hexDR1NOpRC.png
+   📍 Found in 2 sources:
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #32:
+   🔗 URL: https://www.instagram.com/v5/yP/l/0,cross/ljkt2oSdzVGrvEbrAkW7hgfgQe914iiBfONMKn3YhINqQvuWABIjhhRs97xFZK--hBruhBENOpKm_.css
+   📍 Found in 2 sources:
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #33:
+   🔗 URL: https://www.instagram.com/v4/ya/r/xgZJ4-Ok6vl.js
+   📍 Found in 2 sources:
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #34:
+   🔗 URL: https://www.instagram.com/v5/yK/l/0,cross/vU0b58aIhuo.css
+   📍 Found in 2 sources:
+      - csrf_endpoint_report_1750366390.txt (text_extraction)
+      - csrf_endpoint_report_1750366334.txt (text_extraction)
+
+Endpoint #35:
+   🔗 URL: https://www.instagram.com/query\
+   📍 Found in 2 sources:
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #36:
+   🔗 URL: https://www.instagram.com/query
+   📍 Found in 2 sources:
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #37:
+   🔗 URL: https://www.instagram.com/wss:\/\/edge-chat.facebook.com\/chat
+   📍 Found in 2 sources:
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #38:
+   🔗 URL: https://www.instagram.com/*
+   📍 Found in 2 sources:
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+      - advanced_instagram_hunt_1750366890.txt (text_extraction)
+
+Endpoint #39:
+   🔗 URL: https://www.instagram.comgraphql\/
+   📍 Found in 2 sources:
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+
+Endpoint #40:
+   🔗 URL: https://www.instagram.comgraphqlbatch\/
+   📍 Found in 2 sources:
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+
+Endpoint #41:
+   🔗 URL: https://www.instagram.comgraphql
+   📍 Found in 2 sources:
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+
+Endpoint #42:
+   🔗 URL: https://www.instagram.comgraphql\/ig_schema
+   📍 Found in 2 sources:
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+
+Endpoint #43:
+   🔗 URL: https://www.instagram.comgraphql\/query
+   📍 Found in 2 sources:
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+
+Endpoint #44:
+   🔗 URL: https://www.instagram.comgraphql_www
+   📍 Found in 2 sources:
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+
+Endpoint #45:
+   🔗 URL: https://www.instagram.com*
+   📍 Found in 2 sources:
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+      - ultimate_instagram_hunt_1750366966.txt (text_extraction)
+
+🕵️  OSINT INTELLIGENCE: 5 reports
+==================================================
+
+OSINT Report #1:
+   📄 File: deep_osint_report_20250619_194125.json
+   👥 Social profiles: 5
+
+OSINT Report #2:
+   📄 File: deep_osint_report_20250619_200155.json
+   👥 Social profiles: 0
+
+OSINT Report #3:
+   📄 File: deep_osint_report_20250619_193930.json
+   👥 Social profiles: 5
+
+OSINT Report #4:
+   📄 File: stealth_osint_report_20250619_200615.json
+
+OSINT Report #5:
+   📄 File: deep_osint_report_20250619_200222.json
+   👥 Social profiles: 0
+
+🔬 HUNT METHODS ANALYSIS:
+==================================================
+✅ text_extraction
+
+🎯 TARGET PROFILE ANALYSIS: alx.trading
+==================================================
+Username: alx.trading
+Platform: Instagram
+Profile URL: https://www.instagram.com/alx.trading/
+Hunt attempts: 10 text reports + 1 data files
+Rate limiting encountered: 2 times
+
+🛡️  SECURITY ASSESSMENT:
+==================================================
+🟢 SECURITY: CSRF tokens properly protected
+   Risk Level: LOW
+   Protection: Rate limiting and detection active
+
+🔴 EXPOSURE: API endpoints discoverable
+   Risk Level: MEDIUM
+   Impact: Can be used for reconnaissance
+
+💡 RECOMMENDATIONS:
+==================================================
+FOR CONTINUED TESTING:
+1. 🌐 Try residential proxy services
+2. 🕐 Test during off-peak hours
+3. 📱 Try mobile-specific approaches
+4. 🔄 Use authenticated testing methods
+
+🚀 NEXT STEPS:
+==================================================
+🔍 RESEARCH PATH:
+1. 🏠 Acquire residential proxies
+2. 🕵️  Advanced OSINT techniques
+3. 🔬 Social engineering approaches
+4. 📱 Mobile app reverse engineering
+
+======================================================================
+🔥 Comprehensive hunt completed by Ultimate Intelligence Framework
+📊 Total intelligence items analyzed: 107
+⚠️  Use all findings ethically and responsibly!
+======================================================================

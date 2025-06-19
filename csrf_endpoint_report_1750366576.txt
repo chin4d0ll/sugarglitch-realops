@@ -1,0 +1,113 @@
+🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸
+📊 CSRF + Endpoint Discovery Report
+⏰ สร้างเมื่อ: 2025-06-19 20:56:16
+👤 ผู้ใช้: chin4d0ll
+🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸
+
+🎯 สรุปผลการค้นหา:
+   🔑 CSRF Tokens ที่เจอ: 0 ตัว
+   🌐 Endpoints ที่เจอ: 12 ตัว
+   📡 Requests ที่ส่ง: 12 ครั้ง
+
+🌐 Endpoints ที่เจอ:
+
+   Endpoint 1:
+      🔗 URL: https://www.instagram.com/accounts/login/*?next=
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 2:
+      🔗 URL: https://www.instagram.com/ajax/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 3:
+      🔗 URL: https://www.instagram.com/client_error/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 4:
+      🔗 URL: https://www.instagram.com/direct/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 5:
+      🔗 URL: https://www.instagram.com/logging/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 6:
+      🔗 URL: https://www.instagram.com/publicapi/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 7:
+      🔗 URL: https://www.instagram.com/qp/batch_fetch_web/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 8:
+      🔗 URL: https://www.instagram.com/query/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 9:
+      🔗 URL: https://www.instagram.com/*/c/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 10:
+      🔗 URL: https://www.instagram.com/*/comments/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 11:
+      🔗 URL: https://www.instagram.com/*/liked_by/
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: Not Tested
+      💬 Description: Found in robots.txt
+
+   Endpoint 12:
+      🔗 URL: https://www.instagram.com/api
+      📝 Method: GET
+      🔐 CSRF: ❌ Not Required
+      🔒 Auth: 🔓 Not Required
+      📊 Status: 200
+      💬 Description: Found via brute force (Status: 200)
+
+🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸
+💖 รายงานสร้างโดย CSRF + Endpoint Discovery Framework
+⚠️ ใช้ข้อมูลนี้อย่างรับผิดชอบและถูกกฎหมาย
+🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸

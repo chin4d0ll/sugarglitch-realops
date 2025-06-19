@@ -1,0 +1,11 @@
+
+🌸 Instagram CSRF & Endpoint Hunt Report 🌸
+⏰ เวลา: 20:57:14
+==================================================
+
+🔑 CSRF Tokens พบ: 0 ตัว
+
+🌐 API Endpoints พบ: 0 ตัว
+
+==================================================
+💖 Hunt completed! โดย Instagram Hunter Framework

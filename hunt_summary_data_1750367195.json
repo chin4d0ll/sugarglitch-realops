@@ -1,0 +1,535 @@
+{
+  "timestamp": "2025-06-19T21:06:35.385335",
+  "target": "alx.trading",
+  "csrf_tokens": [],
+  "endpoints": [
+    {
+      "endpoint": "https://www.instagram.com/v4/yI/r/VsNE-OHk_8a.png",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yR/r/lam-fZmwmvn.png",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/ys/r/aM-g435MtEX.png",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yx/r/H1l_HHqi4p6.png",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yB/r/-7Z_RkdLJUX.png",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yG/r/De-Dwpd5CHc.png",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v5/yD/l/0,cross/izgxNGKVsCervEbrAkW7hgs97xFZK--hBruhBENOpKm_.css",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yu/r/R6-Uxg_mUAY.js",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yI/r/An17Nrg4J4w.js",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/ya/r/mFZoRayZM41.js",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v5/y6/l/0,cross/fgQe914iiBfONMKn3YhINqvU0b58aIhuoQvuWABIjhhR.css",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphqlbatch\\/",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/ig_schema",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/query",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql_www",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/\\/",
+      "source": "csrf_endpoint_report_1750366434.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/accounts/login/*?next=",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/ajax/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/client_error/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/direct/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/logging/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/publicapi/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/qp/batch_fetch_web/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/query/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/*/c/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/*/comments/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/*/liked_by/",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/api",
+      "source": "csrf_endpoint_report_1750366576.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yI/r/VsNE-OHk_8a.png",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yR/r/lam-fZmwmvn.png",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/ys/r/aM-g435MtEX.png",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yx/r/H1l_HHqi4p6.png",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yB/r/-7Z_RkdLJUX.png",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yG/r/De-Dwpd5CHc.png",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yR/r/hexDR1NOpRC.png",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v5/yP/l/0,cross/ljkt2oSdzVGrvEbrAkW7hgfgQe914iiBfONMKn3YhINqQvuWABIjhhRs97xFZK--hBruhBENOpKm_.css",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/ya/r/xgZJ4-Ok6vl.js",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/ya/r/mFZoRayZM41.js",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v5/yK/l/0,cross/vU0b58aIhuo.css",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphqlbatch\\/",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/ig_schema",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/query",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql_www",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/\\/",
+      "source": "csrf_endpoint_report_1750366390.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yI/r/VsNE-OHk_8a.png",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yR/r/lam-fZmwmvn.png",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/ys/r/aM-g435MtEX.png",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yx/r/H1l_HHqi4p6.png",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yB/r/-7Z_RkdLJUX.png",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yG/r/De-Dwpd5CHc.png",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/yR/r/hexDR1NOpRC.png",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v5/yP/l/0,cross/ljkt2oSdzVGrvEbrAkW7hgfgQe914iiBfONMKn3YhINqQvuWABIjhhRs97xFZK--hBruhBENOpKm_.css",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/ya/r/xgZJ4-Ok6vl.js",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v4/ya/r/mFZoRayZM41.js",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/v5/yK/l/0,cross/vU0b58aIhuo.css",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphqlbatch\\/",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/ig_schema",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/query",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql_www",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/\\/",
+      "source": "csrf_endpoint_report_1750366334.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphqlbatch\\/",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/ig_schema",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/query",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql_www",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/query\\",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/query",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/\\/",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/wss:\\/\\/edge-chat.facebook.com\\/chat",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/*",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql\\/",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphqlbatch\\/",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql\\/ig_schema",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql\\/query",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql_www",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com*",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql\\/",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphqlbatch\\/",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql\\/ig_schema",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql\\/query",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.comgraphql_www",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com*",
+      "source": "ultimate_instagram_hunt_1750366966.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphqlbatch\\/",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/ig_schema",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql\\/query",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/graphql_www",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/query\\",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/query",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/\\/",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/wss:\\/\\/edge-chat.facebook.com\\/chat",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    },
+    {
+      "endpoint": "https://www.instagram.com/*",
+      "source": "advanced_instagram_hunt_1750366890.txt",
+      "method": "text_extraction"
+    }
+  ],
+  "osint_data": [
+    "deep_osint_report_20250619_194125.json",
+    "deep_osint_report_20250619_200155.json",
+    "deep_osint_report_20250619_193930.json",
+    "stealth_osint_report_20250619_200615.json",
+    "deep_osint_report_20250619_200222.json"
+  ],
+  "total_reports": 10,
+  "analysis": {
+    "total_reports": 10,
+    "total_data_files": 1,
+    "total_osint_files": 5,
+    "unique_csrf_tokens": 0,
+    "unique_endpoints": 45,
+    "hunt_methods": "{'text_extraction'}",
+    "target_info": {},
+    "success_rate": 927.2727272727274
+  }
+}

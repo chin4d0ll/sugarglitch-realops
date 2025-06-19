@@ -1,0 +1,78 @@
+{
+  "target": "alx.trading",
+  "generated_at": "2025-06-19T20:02:22.211237",
+  "intelligence_summary": {
+    "total_passwords": 656,
+    "real_social_data_found": 2,
+    "platforms_discovered": [
+      "tiktok",
+      "facebook"
+    ],
+    "confidence_level": "High - Real Data Analysis"
+  },
+  "real_social_data": {
+    "tiktok": {},
+    "facebook": {
+      "url": "https://www.facebook.com/alx.trading",
+      "found": true
+    }
+  },
+  "real_data_summary": {
+    "facebook": {
+      "found": true,
+      "data_points": 2,
+      "key_info": [
+        "url",
+        "found"
+      ]
+    }
+  },
+  "password_categories": {
+    "real_social_data": "Extracted from actual social profiles",
+    "personal_info": "Names, birthdays, ages",
+    "family_data": "Wife, children, anniversaries",
+    "location_based": "Cities, countries, states",
+    "business_related": "Trading, finance, crypto"
+  },
+  "top_priority_passwords": [
+    "Alejandro1990",
+    "Alejandro1991",
+    "Alejandro1992",
+    "Alejandro1993",
+    "Alejandro1994",
+    "Alejandro1995",
+    "Alejandro1996",
+    "Alejandro1997",
+    "Alejandro1998",
+    "Alejandro1999",
+    "Alejandro2000",
+    "Alex010100",
+    "Alex01011990",
+    "Alex01011995",
+    "Alex01012000",
+    "Alex010190",
+    "Alex010195",
+    "Alex010600",
+    "Alex01061990",
+    "Alex01061995",
+    "Alex01062000",
+    "Alex010690",
+    "Alex010695",
+    "Alex011200",
+    "Alex01121990",
+    "Alex01121995",
+    "Alex01122000",
+    "Alex011290",
+    "Alex011295",
+    "Alex011500"
+  ],
+  "social_profiles": {},
+  "next_steps": [
+    "Manual deep-dive on found social profiles",
+    "Image EXIF data extraction",
+    "Contact list analysis",
+    "Family member profile hunting",
+    "Advanced timeline correlation",
+    "Cross-platform data validation"
+  ]
+}

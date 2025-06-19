@@ -1,0 +1,288 @@
+{
+  "intelligence_type": "ULTIMATE_DEEP_HARVESTING",
+  "target": "alx.trading",
+  "generated_at": "2025-06-19T19:45:21.351991",
+  "analysis_depth": "MAXIMUM - ALL SOURCES",
+  "confidence_level": "EXTREME HIGH",
+  "password_analysis": {
+    "total_generated": 1408,
+    "sources_analyzed": "attack_reports + pattern_analysis + psychological_profiling",
+    "pattern_insights": {
+      "length_distribution": {
+        "23": 2,
+        "6": 200,
+        "7": 378,
+        "10": 968,
+        "4": 12,
+        "5": 80,
+        "8": 606,
+        "9": 612,
+        "12": 1852,
+        "11": 1396,
+        "15": 696,
+        "13": 1618,
+        "16": 922,
+        "14": 1240,
+        "17": 1058,
+        "18": 866,
+        "19": 596,
+        "20": 250,
+        "25": 2,
+        "21": 120
+      },
+      "character_types": {
+        "only_lowercase": 7216,
+        "only_uppercase": 6,
+        "mixed_case": 970,
+        "has_numbers": 6230,
+        "has_special": 10050,
+        "alphanumeric": 3424
+      },
+      "common_words": [
+        [
+          "love",
+          1430
+        ],
+        [
+          "whatilove",
+          1262
+        ],
+        [
+          "alex",
+          832
+        ],
+        [
+          "trading",
+          546
+        ],
+        [
+          "instagram",
+          442
+        ],
+        [
+          "alexander",
+          410
+        ],
+        [
+          "alx",
+          318
+        ],
+        [
+          "fleming",
+          304
+        ],
+        [
+          "trader",
+          274
+        ],
+        [
+          "business",
+          270
+        ],
+        [
+          "account",
+          200
+        ],
+        [
+          "adjust",
+          200
+        ],
+        [
+          "advanced",
+          200
+        ],
+        [
+          "analysis",
+          200
+        ],
+        [
+          "assessment",
+          188
+        ],
+        [
+          "bangkok",
+          174
+        ],
+        [
+          "thailand",
+          174
+        ],
+        [
+          "associated",
+          172
+        ],
+        [
+          "between",
+          172
+        ],
+        [
+          "collected",
+          172
+        ]
+      ],
+      "number_patterns": [
+        [
+          "123",
+          1148
+        ],
+        [
+          "2025",
+          992
+        ],
+        [
+          "1728",
+          882
+        ],
+        [
+          "007",
+          700
+        ],
+        [
+          "3",
+          514
+        ],
+        [
+          "4",
+          456
+        ],
+        [
+          "1",
+          238
+        ],
+        [
+          "1991",
+          226
+        ],
+        [
+          "0",
+          218
+        ],
+        [
+          "1990",
+          216
+        ],
+        [
+          "1988",
+          190
+        ],
+        [
+          "1989",
+          190
+        ],
+        [
+          "7",
+          146
+        ],
+        [
+          "471",
+          82
+        ],
+        [
+          "2024",
+          54
+        ]
+      ],
+      "special_chars": [
+        [
+          "#",
+          2228
+        ],
+        [
+          "@",
+          2224
+        ],
+        [
+          "!",
+          2222
+        ],
+        [
+          "$",
+          2222
+        ],
+        [
+          ".",
+          1254
+        ],
+        [
+          "-",
+          968
+        ],
+        [
+          "_",
+          960
+        ],
+        [
+          "&",
+          14
+        ],
+        [
+          " ",
+          8
+        ]
+      ],
+      "case_patterns": {
+        "starts_uppercase": 5276,
+        "all_caps_words": 6,
+        "camel_case": 1630,
+        "mixed_random": 0
+      }
+    },
+    "top_20_ultimate": [
+      "alexmarket21",
+      "alex.wealth21",
+      "2000alx",
+      "alex19",
+      "alex.money24",
+      "alx_888",
+      "alex20",
+      "alex.market21",
+      "alx12",
+      "2025trading",
+      "alex_money2020",
+      "portfolio.alex2021",
+      "88alx",
+      "alex2011",
+      "trade.alex2024",
+      "alex#trading",
+      "alexwealth25",
+      "alexsuccess25",
+      "businessalex20",
+      "alx08"
+    ]
+  },
+  "attack_intelligence": {
+    "successful_attempts": [],
+    "failed_attempts": [],
+    "checkpoint_triggers": [],
+    "rate_limits": [],
+    "csrf_successes": []
+  },
+  "psychological_profile": {
+    "professional_oriented": true,
+    "abbreviated_name": true,
+    "business_focus": true,
+    "modern_style": true,
+    "likely_age_range": "25-40",
+    "personality_traits": [
+      "practical",
+      "business-minded",
+      "efficiency-focused",
+      "professional",
+      "money-oriented",
+      "modern"
+    ]
+  },
+  "success_probability": {
+    "checkpoint_triggers": "95%",
+    "psychological_matches": "85%",
+    "pattern_based": "75%",
+    "overall_confidence": "90%+"
+  },
+  "recommended_strategy": [
+    "Test checkpoint triggers first (highest probability)",
+    "Use psychological patterns for manual attempts",
+    "Apply pattern-based passwords with session rotation",
+    "Monitor for behavioral responses",
+    "Escalate to social engineering if needed"
+  ]
+}

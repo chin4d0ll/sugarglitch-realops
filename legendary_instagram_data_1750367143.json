@@ -1,0 +1,36 @@
+[
+  {
+    "source": "social_api",
+    "endpoint": "https://api.github.com/search/users?q=alx.trading",
+    "data": {
+      "total_count": 0,
+      "incomplete_results": false,
+      "items": []
+    },
+    "timestamp": "2025-06-19T21:05:20.275308"
+  },
+  {
+    "source": "osint_analysis",
+    "username": "alx.trading",
+    "patterns": {
+      "email_patterns": [
+        "alx.trading@gmail.com",
+        "alx.trading@yahoo.com",
+        "alx.trading@outlook.com",
+        "contact@alx.trading.com"
+      ],
+      "social_patterns": [
+        "https://twitter.com/alx.trading",
+        "https://facebook.com/alx.trading",
+        "https://linkedin.com/in/alx.trading",
+        "https://tiktok.com/@alx.trading"
+      ],
+      "domain_patterns": [
+        "alx.trading.com",
+        "alx.trading.net",
+        "www.alx.trading.com"
+      ]
+    },
+    "timestamp": "2025-06-19T21:05:33.643275"
+  }
+]

@@ -1,0 +1,84 @@
+
+🔥💥 ULTIMATE Instagram CSRF Hunt Report 💥🔥
+⏰ เวลา: 2025-06-19 21:02:46
+🎯 Hunt completed by Ultimate Hunter Framework
+============================================================
+
+🔑 CSRF TOKENS FOUND: 4
+============================================================
+
+Token #1:
+   🔐 Value: cOW8LDFQbBeOow_P_wHk_h
+   📍 Method: direct
+   🔗 Source: https://www.instagram.com/
+
+Token #2:
+   🔐 Value: cOW8LDFQbBeOow_P_wHk_h
+   📍 Method: direct
+   🔗 Source: https://www.instagram.com/
+
+Token #3:
+   🔐 Value: cOW8LDFQbBeOow_P_wHk_h
+   📍 Method: direct
+   🔗 Source: https://www.instagram.com/
+
+Token #4:
+   🔐 Value: cOW8LDFQbBeOow_P_wHk_h
+   📍 Method: direct
+   🔗 Source: https://www.instagram.com/
+
+
+🌐 API ENDPOINTS FOUND: 7
+============================================================
+
+Endpoint #1:
+   🔗 URL: https://www.instagram.comgraphql\/
+   📍 Found via: direct
+
+Endpoint #2:
+   🔗 URL: https://www.instagram.comgraphqlbatch\/
+   📍 Found via: direct
+
+Endpoint #3:
+   🔗 URL: https://www.instagram.comgraphql
+   📍 Found via: direct
+
+Endpoint #4:
+   🔗 URL: https://www.instagram.comgraphql\/ig_schema
+   📍 Found via: direct
+
+Endpoint #5:
+   🔗 URL: https://www.instagram.comgraphql\/query
+   📍 Found via: direct
+
+Endpoint #6:
+   🔗 URL: https://www.instagram.comgraphql_www
+   📍 Found via: direct
+
+Endpoint #7:
+   🔗 URL: https://www.instagram.com*
+   📍 Found via: direct
+
+
+🎯 ANALYSIS:
+============================================================
+✅ SUCCESS! CSRF tokens discovered
+🔥 These tokens can be used for Instagram API calls
+💡 Remember to handle token expiration
+
+✅ 7 API endpoints discovered
+🔥 Use these for further reconnaissance
+
+
+💡 RECOMMENDATIONS:
+============================================================
+1. 🔄 Use residential proxies for better success rate
+2. 🕐 Implement proper timing between requests
+3. 🎭 Rotate user agents and headers frequently
+4. 📱 Try mobile-specific endpoints
+5. 🔍 Monitor for new Instagram API changes
+
+============================================================
+💖 Ultimate Hunt completed!
+⚠️  Use ethically and responsibly!
+============================================================

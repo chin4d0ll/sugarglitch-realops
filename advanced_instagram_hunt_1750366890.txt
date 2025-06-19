@@ -1,0 +1,110 @@
+
+🔥 Advanced Instagram CSRF & Endpoint Hunt Report 🔥
+⏰ เวลา: 2025-06-19 21:01:30
+🎯 Target: Instagram Profile Analysis
+💕 โดย: Advanced Instagram Hunter Framework
+============================================================
+
+🔑 CSRF TOKENS DISCOVERED: 1 tokens
+============================================================
+
+Token #1:
+   🏷️  Name: csrf_token
+   🔐 Value: olP6v6tpuJbK6Z3JT4khcShXNBje64cP
+   📍 Method: alternative
+   🔗 Source: https://www.instagram.com/
+
+
+🌐 API ENDPOINTS DISCOVERED: 11 endpoints
+============================================================
+
+Endpoint #1:
+   🔗 URL: https://www.instagram.com/graphql\/
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #2:
+   🔗 URL: https://www.instagram.com/graphqlbatch\/
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #3:
+   🔗 URL: https://www.instagram.com/graphql
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #4:
+   🔗 URL: https://www.instagram.com/graphql\/ig_schema
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #5:
+   🔗 URL: https://www.instagram.com/graphql\/query
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #6:
+   🔗 URL: https://www.instagram.com/graphql_www
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #7:
+   🔗 URL: https://www.instagram.com/query\
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #8:
+   🔗 URL: https://www.instagram.com/query
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #9:
+   🔗 URL: https://www.instagram.com/\/
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #10:
+   🔗 URL: https://www.instagram.com/wss:\/\/edge-chat.facebook.com\/chat
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+Endpoint #11:
+   🔗 URL: https://www.instagram.com/*
+   📝 Method: GET
+   📍 Found via: alternative
+   🔍 Discovered in: https://www.instagram.com/
+
+
+🎯 ANALYSIS & RECOMMENDATIONS:
+============================================================
+✅ CSRF tokens discovered - can proceed with authenticated requests
+🔥 Try using these tokens for Instagram API interactions
+⚠️  Remember to handle token expiration and refresh
+
+✅ 11 API endpoints discovered
+🔥 These endpoints can be used for further reconnaissance
+⚠️  Test each endpoint for CSRF requirements
+
+
+💡 NEXT STEPS:
+============================================================
+1. 🔑 Use found CSRF tokens in requests
+2. 🌐 Test discovered endpoints
+3. 🔄 Implement token refresh mechanism  
+4. 🕵️  Monitor for new endpoints
+5. 🛡️  Implement proper rate limiting
+
+============================================================
+💖 Hunt completed by Advanced Instagram Hunter
+⚠️  Use responsibly and ethically only!
+============================================================

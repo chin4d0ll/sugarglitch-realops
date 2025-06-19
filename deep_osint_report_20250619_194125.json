@@ -1,0 +1,72 @@
+{
+  "target": "alx.trading",
+  "generated_at": "2025-06-19T19:41:25.489354",
+  "intelligence_summary": {
+    "total_passwords": 661,
+    "social_platforms": 5,
+    "name_variations": 20,
+    "confidence_level": "High - Comprehensive Analysis"
+  },
+  "password_categories": {
+    "personal_info": "Names, birthdays, ages",
+    "family_data": "Wife, children, anniversaries",
+    "location_based": "Cities, countries, states",
+    "business_related": "Trading, finance, crypto",
+    "social_patterns": "Instagram, social media"
+  },
+  "top_priority_passwords": [
+    "Alejandro1990",
+    "Alejandro1991",
+    "Alejandro1992",
+    "Alejandro1993",
+    "Alejandro1994",
+    "Alejandro1995",
+    "Alejandro1996",
+    "Alejandro1997",
+    "Alejandro1998",
+    "Alejandro1999",
+    "Alejandro2000",
+    "Alex010100",
+    "Alex01011990",
+    "Alex01011995",
+    "Alex01012000",
+    "Alex010190",
+    "Alex010195",
+    "Alex010600",
+    "Alex01061990",
+    "Alex01061995"
+  ],
+  "social_profiles": {
+    "facebook": [
+      "facebook.com/alx.trading",
+      "facebook.com/alex.trading",
+      "facebook.com/alextrading",
+      "facebook.com/alexander.trading"
+    ],
+    "linkedin": [
+      "linkedin.com/in/alx.trading",
+      "linkedin.com/in/alex-trading",
+      "linkedin.com/in/alexander-trading"
+    ],
+    "twitter": [
+      "twitter.com/alx.trading",
+      "twitter.com/alextrading",
+      "twitter.com/alex_trading"
+    ],
+    "tiktok": [
+      "tiktok.com/@alx.trading",
+      "tiktok.com/@alextrading"
+    ],
+    "youtube": [
+      "youtube.com/c/AlexTrading",
+      "youtube.com/@alextrading"
+    ]
+  },
+  "next_steps": [
+    "Manual verification of social profiles",
+    "Image reverse search",
+    "Contact verification",
+    "Email pattern testing",
+    "Family member identification"
+  ]
+}
