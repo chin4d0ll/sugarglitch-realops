@@ -76,35 +76,31 @@ class HighPerformanceVenvActivator:
             return True
         else:
             print(f"❌ Failed to create venv: {result.stderr}")
-            return False async def install_dependencies(self) -> bool:
+            return False
+
+    async def install_dependencies(self) -> bool:
         """Install dependencies asynchronously."""
         if not self.requirements_path.exists():
-            print(
-                "⚠️  No requirements.txt found, "
-                "skipping dependency installation"
-            )
+            print("⚠️  No requirements.txt found, skipping dependencies")
             return True
 
-        # Try multiple pip paths for cross-platform compatibility
-        pip_paths = [
-            self.venv_path / "bin" / "pip",  # Linux/Mac
-            self.venv_path / "Scripts" / "pip.exe",  # Windows
-            self.venv_path / "pyvenv.cfg",  # Check if venv exists first
-        ]
-
-        # Use system pip with venv python if venv pip not found
+        # Use venv python to install packages
         python_path = self.venv_path / "bin" / "python"
         if not python_path.exists():
-            python_path = self.venv_path / "Scripts" / "python.exe"
+            python_path = self.venv_path / "Scripts" / "python.exe"  # Windows
 
         if python_path.exists():
             print("🔄 Installing dependencies using venv python...")
-            cmd = [str(python_path), "-m", "pip", "install", "-r",
-                   str(self.requirements_path)]
+            cmd = [
+                str(python_path), "-m", "pip", "install", "-r",
+                str(self.requirements_path)
+            ]
         else:
             print("⚠️  Using system pip (venv python not found)")
-            cmd = [sys.executable, "-m", "pip", "install", "-r",
-                   str(self.requirements_path)]
+            cmd = [
+                sys.executable, "-m", "pip", "install", "-r",
+                str(self.requirements_path)
+            ]
 
         result = await self.run_subprocess(cmd, self.project_path)
 
@@ -151,10 +147,7 @@ class HighPerformanceVenvActivator:
             print(f"🔧 Activation command: {self.get_activation_command()}")
             return True
         else:
-            print(
-                f"❌ Failed to activate virtual environment "
-                f"({elapsed_time:.2f}s)"
-            )
+            print(f"❌ Failed to activate venv ({elapsed_time:.2f}s)")
             return False
 
 
