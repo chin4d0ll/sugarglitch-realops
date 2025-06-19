@@ -22,7 +22,7 @@ import os
 class QuickIPChanger:
     """เครื่องมือเปลี่ยน IP อย่างรวดเร็ว"""
 
-    def __init__(self):
+    defะ __init__(self):
         self.original_ip = self.get_current_ip()
         self.working_proxies = []
 
