@@ -380,13 +380,15 @@ class UltimateVenvActivator:
             return f'"{activate_script}"'
         else:
             activate_script = venv_path / "bin" / "activate"
-            return f"source {activate_script}" def get_python_executable(self, venv_path: Path) -> Optional[Path]:
+            return f"source {activate_script}"
+
+    def get_python_executable(self, venv_path: Path) -> Optional[Path]:
         """
         Get the Python executable path from the virtual environment.
-        
+
         Args:
             venv_path: Path to the virtual environment
-            
+
         Returns:
             Optional[Path]: Path to Python executable or None
         """
