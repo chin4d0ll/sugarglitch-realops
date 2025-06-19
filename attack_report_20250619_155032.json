@@ -1,0 +1,18 @@
+{
+  "attack_stats": {
+    "start_time": "2025-06-19T15:50:32.031173",
+    "total_attempts": 0,
+    "successful_logins": 0,
+    "checkpoint_triggers": 0,
+    "rate_limits": 0,
+    "active_sessions": 0,
+    "passwords_tested": 0,
+    "current_password": "",
+    "target_username": "alx.trading",
+    "attack_mode": "Advanced Penetration"
+  },
+  "nodes": [],
+  "recent_results": [],
+  "high_value_passwords": [],
+  "generated_at": "2025-06-19T15:50:32.268393"
+}
