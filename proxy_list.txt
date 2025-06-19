@@ -1,0 +1,28 @@
+# 🌐 Advanced Proxy List for Distributed Attack
+# Format: ip:port หรือ ip:port:username:password
+# ใส่ # ข้างหน้าเพื่อ comment
+
+# ✨ Free HTTP/HTTPS Proxies (ตัวอย่าง)
+185.162.231.166:80
+138.68.60.8:8080
+159.89.195.14:8080
+157.230.103.91:33061
+103.108.228.185:8080
+
+# 🎯 Premium Proxies with Authentication (ตัวอย่าง)
+# premium-proxy1.com:8080:username:password
+# premium-proxy2.com:3128:user123:pass456
+
+# 🔥 Bright Data / Luminati Proxies (ตัวอย่าง)
+# brd-customer-hl_xxxxx-zone-static:xxxx@brd.superproxy.io:22225
+
+# 💡 Tips:
+# - ใช้ residential proxies สำหรับความน่าเชื่อถือ
+# - หมุนเวียน datacenter proxies สำหรับความเร็ว  
+# - ใช้ SOCKS5 proxies สำหรับความปลอดภัย
+# - ทดสอบ proxy ก่อนใช้งานจริง
+
+# 🛡️ Security Tips:
+# - อย่าใช้ free proxies สำหรับข้อมูลสำคัญ
+# - เปลี่ยน proxy list เป็นประจำ
+# - ใช้ VPN ร่วมกับ proxy เพื่อความปลอดภัยเพิ่ม
