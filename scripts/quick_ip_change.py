@@ -118,8 +118,8 @@ class QuickIPChanger:
         try:
             proxies = {'http': proxy, 'https': proxy}
             response = requests.get(
-                'https://ifconfig.me', 
-                proxies=proxies, 
+                'https://ifconfig.me',
+                proxies=proxies,
                 auth=auth,
                 timeout=10
             )
@@ -166,7 +166,7 @@ class QuickIPChanger:
                 'name': 'Bright Data (Default Port)'
             },
             {
-                'proxy': 'http://brd.superproxy.io:9515', 
+                'proxy': 'http://brd.superproxy.io:9515',
                 'auth': ('brd-customer-hl_63f0835e-zone-scraping_agent', 'o5wnk3ws1r04'),
                 'name': 'Bright Data (Selenium Port)'
             },
@@ -181,7 +181,7 @@ class QuickIPChanger:
             proxy_url = proxy_info['proxy']
             auth = proxy_info['auth']
             name = proxy_info['name']
-            
+
             print(f"🧪 Testing: {name}")
 
             # Test proxy with authentication
