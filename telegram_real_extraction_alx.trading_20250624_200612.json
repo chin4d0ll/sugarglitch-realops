@@ -1,0 +1,46 @@
+{
+  "extraction_info": {
+    "target": "alx.trading",
+    "timestamp": "20250624_200601",
+    "extractor_version": "1.0_sync",
+    "methods_used": [
+      "profile_analysis",
+      "search_engine_recon",
+      "archive_checking",
+      "security_analysis"
+    ]
+  },
+  "profile_data": {
+    "account_type": "channel",
+    "has_member_count": true,
+    "has_messages": true,
+    "display_name": "elegram – a new era of messaging",
+    "description": "Fast. Secure. Powerful."
+  },
+  "mentions": [],
+  "archives": [
+    {
+      "archive": "wayback_machine",
+      "has_snapshots": true,
+      "url": "https://web.archive.org/web/*/https://t.me/alx.trading"
+    }
+  ],
+  "security_analysis": {
+    "privacy_level": "PRIVATE",
+    "public_info_exposed": [
+      "phone_number"
+    ],
+    "recommendations": [
+      "ใช้การตั้งค่าความเป็นส่วนตัวที่เหมาะสม",
+      "ไม่แชร์ข้อมูลส่วนตัวในช่องสาธารณะ",
+      "ตรวจสอบการตั้งค่าความปลอดภัยเป็นประจำ",
+      "ใช้ Two-Factor Authentication"
+    ]
+  },
+  "summary": {
+    "profile_accessible": true,
+    "mentions_found": 0,
+    "archives_found": 1,
+    "security_level": "PRIVATE"
+  }
+}
