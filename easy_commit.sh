@@ -1,20 +1,31 @@
 #!/bin/bash
+# Easy Commit Script
+echo "🚀 Easy Git Commit"
+echo "=================="
 
-# ตั้งค่า environment variables
-export GIT_COMMITTER_EMAIL="developer@example.com"
-export GIT_COMMITTER_NAME="Developer"
-export GIT_AUTHOR_EMAIL="developer@example.com"
-export GIT_AUTHOR_NAME="Developer"
+# Add all files
+git add .
+echo "✅ Added all files"
 
-# ตรวจสอบว่ามีข้อความ commit หรือไม่
-if [ -z "$1" ]; then
-    echo "กรุณาระบุข้อความ commit"
-    echo "ใช้งาน: ./easy_commit.sh \"ข้อความ commit\""
-    exit 1
+# Get commit message
+if [ "$1" != "" ]; then
+    MESSAGE="$1"
+else
+    echo "📝 Enter commit message:"
+    read MESSAGE
 fi
 
-# Add ไฟล์ทั้งหมดและ commit
-git add .
-git commit -m "$1" --no-gpg-sign --no-verify
+# Commit
+git commit -m "$MESSAGE"
 
-echo "Commit เสร็จสิ้น!"
+if [ $? -eq 0 ]; then
+    echo "🎉 Commit successful!"
+    echo "💫 Push to GitHub? (y/n)"
+    read PUSH
+    if [ "$PUSH" = "y" ] || [ "$PUSH" = "Y" ]; then
+        git push
+        echo "🌟 Pushed to GitHub!"
+    fi
+else
+    echo "❌ Commit failed"
+fi

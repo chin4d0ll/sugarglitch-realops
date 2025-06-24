@@ -7,11 +7,16 @@
 import os
 import json
 import glob
+import argparse
 from pathlib import Path
 from datetime import datetime
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Simple Personal Data Extractor")
+    parser.add_argument('--limit', type=int, default=20, help='Maximum number of files to scan (default: 20)')
+    args = parser.parse_args()
+
     print("🔥 Personal Data Extractor Starting...")
 
     # Target emails
@@ -57,7 +62,7 @@ def main():
     print(f"📋 Found {len(files_found)} files to scan")
 
     # Process each file
-    for file_path in files_found[:20]:  # Limit to 20 files
+    for file_path in files_found[:args.limit]:  # Limit to user-specified number of files
         try:
             print(f"🔍 Scanning: {file_path.name}")
             results["files_scanned"].append(str(file_path))

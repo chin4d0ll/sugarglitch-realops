@@ -1,0 +1,24 @@
+{
+  "chat_messages": [],
+  "personal_info": {},
+  "contact_details": [],
+  "social_accounts": [],
+  "financial_info": {},
+  "location_data": [],
+  "family_friends": [],
+  "work_education": {},
+  "interests_hobbies": [],
+  "photos_media": [],
+  "metadata": {
+    "extraction_time": "2025-06-24T19:09:00.251939",
+    "target": "alx.trading",
+    "telegram": "Alx_TYW",
+    "behavioral_patterns": {
+      "posting_times": [],
+      "common_words": {},
+      "communication_style": {},
+      "interests": [],
+      "social_connections": []
+    }
+  }
+}
