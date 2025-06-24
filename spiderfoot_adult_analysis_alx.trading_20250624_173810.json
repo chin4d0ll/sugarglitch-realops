@@ -1,0 +1,416 @@
+{
+  "target": "alx.trading",
+  "telegram_username": "Alx_TYW",
+  "analysis_timestamp": "2025-06-24T17:38:10.466529",
+  "adult_sites_found": [
+    {
+      "type": "keyword",
+      "keyword": "anal",
+      "context": "\"social_platforms\": 5,     \"name_variations\": 20,     \"confidence_level\": \"high - comprehensive analysis\"   },   \"password_categories\": {     \"personal_info\": \"names, birthdays, ages\",     \"family_dat",
+      "found_at": "2025-06-24T17:38:10.309415"
+    },
+    {
+      "type": "keyword",
+      "keyword": "cam",
+      "context": "'description': 'finance/trading site - high-value targets',         'recommendation': 'phishing campaigns, credential harvesting',         'timeline': 'immediate'     })      print(f\"⚔️ generated {le",
+      "found_at": "2025-06-24T17:38:10.311797"
+    },
+    {
+      "type": "keyword",
+      "keyword": "strip",
+      "context": "uick weaponized reconnaissance\")     print(\"=\" * 40)      target = input(\"🎯 enter target domain: \").strip()      if not target:         target = \"tradeyourway.co.uk\"         print(f\"🎯 using default target:",
+      "found_at": "2025-06-24T17:38:10.311884"
+    },
+    {
+      "type": "keyword",
+      "keyword": "porn",
+      "context": "rns และ domains         self.adult_patterns = {             'explicit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'feti",
+      "found_at": "2025-06-24T17:38:10.319613"
+    },
+    {
+      "type": "keyword",
+      "keyword": "xxx",
+      "context": "domains         self.adult_patterns = {             'explicit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',",
+      "found_at": "2025-06-24T17:38:10.319727"
+    },
+    {
+      "type": "keyword",
+      "keyword": "sex",
+      "context": "self.adult_patterns = {             'explicit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',",
+      "found_at": "2025-06-24T17:38:10.319836"
+    },
+    {
+      "type": "keyword",
+      "keyword": "adult",
+      "context": "#!/usr/bin/env python3 \"\"\" 🕷️💎 advanced spiderfoot log analyzer 💎🕷️ สำหรับวิเคราะห์ adult site activity ของ alx.trading โดย chin4d0ll framework \"\"\"  import json import re import os import g",
+      "found_at": "2025-06-24T17:38:10.319956"
+    },
+    {
+      "type": "keyword",
+      "keyword": "nude",
+      "context": "ult_patterns = {             'explicit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 't",
+      "found_at": "2025-06-24T17:38:10.320076"
+    },
+    {
+      "type": "keyword",
+      "keyword": "naked",
+      "context": "erns = {             'explicit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'am",
+      "found_at": "2025-06-24T17:38:10.320197"
+    },
+    {
+      "type": "keyword",
+      "keyword": "erotic",
+      "context": "licit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',",
+      "found_at": "2025-06-24T17:38:10.320306"
+    },
+    {
+      "type": "keyword",
+      "keyword": "escort",
+      "context": "[                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'l",
+      "found_at": "2025-06-24T17:38:10.320424"
+    },
+    {
+      "type": "keyword",
+      "keyword": "fetish",
+      "context": "porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'o",
+      "found_at": "2025-06-24T17:38:10.320552"
+    },
+    {
+      "type": "keyword",
+      "keyword": "milf",
+      "context": "t', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softc",
+      "found_at": "2025-06-24T17:38:10.320683"
+    },
+    {
+      "type": "keyword",
+      "keyword": "teen",
+      "context": "e', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'",
+      "found_at": "2025-06-24T17:38:10.320809"
+    },
+    {
+      "type": "keyword",
+      "keyword": "amateur",
+      "context": "ed',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],",
+      "found_at": "2025-06-24T17:38:10.320957"
+    },
+    {
+      "type": "keyword",
+      "keyword": "mature",
+      "context": "'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],",
+      "found_at": "2025-06-24T17:38:10.321087"
+    },
+    {
+      "type": "keyword",
+      "keyword": "gay",
+      "context": "'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],             'kno",
+      "found_at": "2025-06-24T17:38:10.321213"
+    },
+    {
+      "type": "keyword",
+      "keyword": "lesbian",
+      "context": "t', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],             'known_adult_tlds': [",
+      "found_at": "2025-06-24T17:38:10.321335"
+    },
+    {
+      "type": "keyword",
+      "keyword": "oral",
+      "context": "h',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],             'known_adult_tlds': [                 '.xxx', '",
+      "found_at": "2025-06-24T17:38:10.321467"
+    },
+    {
+      "type": "keyword",
+      "keyword": "hardcore",
+      "context": "'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],             'known_adult_tlds': [                 '.xxx', '.adult', '.p",
+      "found_at": "2025-06-24T17:38:10.321596"
+    },
+    {
+      "type": "keyword",
+      "keyword": "softcore",
+      "context": "'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],             'known_adult_tlds': [                 '.xxx', '.adult', '.porn', '.sex'",
+      "found_at": "2025-06-24T17:38:10.321718"
+    }
+  ],
+  "suspicious_domains": [
+    {
+      "type": "adult_site",
+      "domain": "pornhub.com",
+      "context": "'.xxx', '.adult', '.porn', '.sex'             ],             'adult_domains': [                 'pornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com',",
+      "found_at": "2025-06-24T17:38:10.321853"
+    },
+    {
+      "type": "adult_site",
+      "domain": "xvideos.com",
+      "context": "ult', '.porn', '.sex'             ],             'adult_domains': [                 'pornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com",
+      "found_at": "2025-06-24T17:38:10.321994"
+    },
+    {
+      "type": "adult_site",
+      "domain": "xnxx.com",
+      "context": "'.sex'             ],             'adult_domains': [                 'pornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',",
+      "found_at": "2025-06-24T17:38:10.322130"
+    },
+    {
+      "type": "adult_site",
+      "domain": "redtube.com",
+      "context": "],             'adult_domains': [                 'pornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamste",
+      "found_at": "2025-06-24T17:38:10.322257"
+    },
+    {
+      "type": "adult_site",
+      "domain": "youporn.com",
+      "context": "mains': [                 'pornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'live",
+      "found_at": "2025-06-24T17:38:10.322377"
+    },
+    {
+      "type": "adult_site",
+      "domain": "tube8.com",
+      "context": "'pornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',",
+      "found_at": "2025-06-24T17:38:10.322492"
+    },
+    {
+      "type": "adult_site",
+      "domain": "beeg.com",
+      "context": "ornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',",
+      "found_at": "2025-06-24T17:38:10.322598"
+    },
+    {
+      "type": "adult_site",
+      "domain": "spankbang.com",
+      "context": "'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.co",
+      "found_at": "2025-06-24T17:38:10.322702"
+    },
+    {
+      "type": "adult_site",
+      "domain": "xhamster.com",
+      "context": "ube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com'",
+      "found_at": "2025-06-24T17:38:10.322805"
+    },
+    {
+      "type": "adult_site",
+      "domain": "chaturbate.com",
+      "context": "'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',",
+      "found_at": "2025-06-24T17:38:10.322928"
+    },
+    {
+      "type": "adult_site",
+      "domain": "livejasmin.com",
+      "context": ".com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'm",
+      "found_at": "2025-06-24T17:38:10.323033"
+    },
+    {
+      "type": "adult_site",
+      "domain": "stripchat.com",
+      "context": "pankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',",
+      "found_at": "2025-06-24T17:38:10.323136"
+    },
+    {
+      "type": "adult_site",
+      "domain": "cam4.com",
+      "context": "'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',",
+      "found_at": "2025-06-24T17:38:10.323238"
+    },
+    {
+      "type": "adult_site",
+      "domain": "myfreecams.com",
+      "context": "'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfin",
+      "found_at": "2025-06-24T17:38:10.323339"
+    },
+    {
+      "type": "adult_site",
+      "domain": "onlyfans.com",
+      "context": ", 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',",
+      "found_at": "2025-06-24T17:38:10.323439"
+    },
+    {
+      "type": "adult_site",
+      "domain": "manyvids.com",
+      "context": "m',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',",
+      "found_at": "2025-06-24T17:38:10.323539"
+    },
+    {
+      "type": "adult_site",
+      "domain": "clips4sale.com",
+      "context": "'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'ma",
+      "found_at": "2025-06-24T17:38:10.323641"
+    },
+    {
+      "type": "adult_site",
+      "domain": "adultfriendfinder.com",
+      "context": "myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 '",
+      "found_at": "2025-06-24T17:38:10.323744"
+    },
+    {
+      "type": "adult_site",
+      "domain": "ashley madison.com",
+      "context": "'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.co",
+      "found_at": "2025-06-24T17:38:10.323847"
+    },
+    {
+      "type": "adult_site",
+      "domain": "seeking.com",
+      "context": ", 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],",
+      "found_at": "2025-06-24T17:38:10.323980"
+    },
+    {
+      "type": "adult_site",
+      "domain": "match.com",
+      "context": "om',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'ca",
+      "found_at": "2025-06-24T17:38:10.324101"
+    },
+    {
+      "type": "adult_site",
+      "domain": "tinder.com",
+      "context": "'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'cam_sites': [",
+      "found_at": "2025-06-24T17:38:10.324210"
+    },
+    {
+      "type": "adult_site",
+      "domain": "badoo.com",
+      "context": "', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'cam_sites': [                 'chaturbate', '",
+      "found_at": "2025-06-24T17:38:10.324365"
+    },
+    {
+      "type": "adult_site",
+      "domain": "bumble.com",
+      "context": "dison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'cam_sites': [                 'chaturbate', 'livejasmin', '",
+      "found_at": "2025-06-24T17:38:10.324488"
+    },
+    {
+      "type": "adult_site",
+      "domain": "pof.com",
+      "context": "'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'cam_sites': [                 'chaturbate', 'livejasmin', 'stripchat',",
+      "found_at": "2025-06-24T17:38:10.324614"
+    }
+  ],
+  "social_risks": [
+    {
+      "type": "cam_site",
+      "site": "chaturbate",
+      "risk_level": "HIGH",
+      "description": "Adult cam site activity detected",
+      "found_at": "2025-06-24T17:38:10.324639"
+    },
+    {
+      "type": "cam_site",
+      "site": "livejasmin",
+      "risk_level": "HIGH",
+      "description": "Adult cam site activity detected",
+      "found_at": "2025-06-24T17:38:10.324662"
+    },
+    {
+      "type": "cam_site",
+      "site": "stripchat",
+      "risk_level": "HIGH",
+      "description": "Adult cam site activity detected",
+      "found_at": "2025-06-24T17:38:10.324682"
+    },
+    {
+      "type": "cam_site",
+      "site": "cam4",
+      "risk_level": "HIGH",
+      "description": "Adult cam site activity detected",
+      "found_at": "2025-06-24T17:38:10.324703"
+    },
+    {
+      "type": "cam_site",
+      "site": "myfreecams",
+      "risk_level": "HIGH",
+      "description": "Adult cam site activity detected",
+      "found_at": "2025-06-24T17:38:10.324724"
+    },
+    {
+      "type": "cam_site",
+      "site": "bongacams",
+      "risk_level": "HIGH",
+      "description": "Adult cam site activity detected",
+      "found_at": "2025-06-24T17:38:10.324745"
+    },
+    {
+      "type": "cam_site",
+      "site": "camsoda",
+      "risk_level": "HIGH",
+      "description": "Adult cam site activity detected",
+      "found_at": "2025-06-24T17:38:10.324764"
+    },
+    {
+      "type": "cam_site",
+      "site": "flirt4free",
+      "risk_level": "HIGH",
+      "description": "Adult cam site activity detected",
+      "found_at": "2025-06-24T17:38:10.324785"
+    }
+  ],
+  "privacy_risks": [
+    {
+      "type": "dating_app",
+      "app": "match",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.313544"
+    },
+    {
+      "type": "dating_app",
+      "app": "tinder",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.324808"
+    },
+    {
+      "type": "dating_app",
+      "app": "bumble",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.324829"
+    },
+    {
+      "type": "dating_app",
+      "app": "badoo",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.324849"
+    },
+    {
+      "type": "dating_app",
+      "app": "pof",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.324867"
+    },
+    {
+      "type": "dating_app",
+      "app": "okcupid",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.324887"
+    },
+    {
+      "type": "dating_app",
+      "app": "eharmony",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.324928"
+    },
+    {
+      "type": "dating_app",
+      "app": "seeking",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.324952"
+    },
+    {
+      "type": "dating_app",
+      "app": "sugardaddy",
+      "risk_level": "MEDIUM",
+      "description": "Dating app usage detected",
+      "found_at": "2025-06-24T17:38:10.324970"
+    }
+  ],
+  "browsing_patterns": {
+    "adult_content_exposure": 54,
+    "adult_keywords_found": 21,
+    "suspicious_domains": 25,
+    "cam_sites_detected": 8,
+    "dating_apps_detected": 9,
+    "risk_assessment": "CRITICAL"
+  }
+}

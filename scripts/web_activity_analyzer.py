@@ -32,45 +32,43 @@ class WebActivityAnalyzer:
             'business': [],
             'security_risk': []
         }
-
+        
     def print_cute(self, text, emoji="💕"):
         timestamp = datetime.now().strftime("%H:%M:%S")
         print(f"{emoji} [{timestamp}] {text}")
-
+    
     def analyze_spiderfoot_logs(self, log_path=None):
         """วิเคราะห์ logs จาก SpiderFoot หรือ web activity logs"""
         self.print_cute("🕷️ กำลังวิเคราะห์ SpiderFoot logs...", "🔍")
-
+        
         # ค้นหา log files ที่มี
         log_patterns = [
             "*spiderfoot*.log",
-            "*web*.log",
+            "*web*.log", 
             "*activity*.log",
             "*browsing*.log",
             "*alx*.log"
         ]
-
+        
         found_logs = []
         for pattern in log_patterns:
             files = glob.glob(pattern)
             found_logs.extend(files)
-
+        
         if not found_logs:
-            self.print_cute(
-                "ไม่พบ log files จริง กำลังสร้าง simulated analysis...", "⚠️")
+            self.print_cute("ไม่พบ log files จริง กำลังสร้าง simulated analysis...", "⚠️")
             return self._create_simulated_analysis()
-
+        
         # วิเคราะห์ logs ที่เจอ
         for log_file in found_logs:
             self._parse_log_file(log_file)
-
+        
         return self._generate_analysis()
-
+    
     def _create_simulated_analysis(self):
         """สร้างการวิเคราะห์แบบ simulation จากข้อมูลที่มี"""
-        self.print_cute(
-            "📊 สร้าง behavioral analysis จากข้อมูล intelligence...", "🧠")
-
+        self.print_cute("📊 สร้าง behavioral analysis จากข้อมูล intelligence...", "🧠")
+        
         # จำลอง web activity patterns จากข้อมูล OSINT
         simulated_activities = {
             'financial_trading': [
@@ -97,7 +95,7 @@ class WebActivityAnalyzer:
                 'privateinternetaccess.com', 'expressvpn.com'
             ]
         }
-
+        
         # สร้างข้อมูลการวิเคราะห์
         analysis = {
             'target': self.target,
@@ -108,19 +106,19 @@ class WebActivityAnalyzer:
             'behavioral_insights': self._generate_behavioral_insights(simulated_activities),
             'security_recommendations': self._generate_security_recommendations()
         }
-
+        
         return analysis
-
+    
     def _assess_risk_patterns(self, activities):
         """ประเมินความเสี่ยงจาก browsing patterns"""
         risk_levels = {
             'financial_trading': 'MEDIUM - การเงินส่วนตัว',
-            'social_media': 'LOW - ปกติทั่วไป',
+            'social_media': 'LOW - ปกติทั่วไป', 
             'adult_content': 'HIGH - เสี่ยงต่อ malware และ social engineering',
             'business_tools': 'LOW - การใช้งานปกติ',
             'security_concerning': 'VERY HIGH - พฤติกรรมซ่อนตัวตน'
         }
-
+        
         assessment = {}
         for category, sites in activities.items():
             if sites:  # ถ้ามี activity ในหมวดนี้
@@ -129,13 +127,13 @@ class WebActivityAnalyzer:
                     'risk_level': risk_levels.get(category, 'UNKNOWN'),
                     'sites': sites
                 }
-
+        
         return assessment
-
+    
     def _generate_behavioral_insights(self, activities):
         """สร้าง behavioral insights"""
         insights = []
-
+        
         # วิเคราะห์ adult content usage
         if activities.get('adult_content'):
             insights.append({
@@ -149,16 +147,16 @@ class WebActivityAnalyzer:
                 ],
                 'attack_vectors': [
                     'Sextortion scams',
-                    'Malware-infected adult sites',
+                    'Malware-infected adult sites', 
                     'Social engineering via embarrassing content',
                     'Credential harvesting from unsafe sites'
                 ]
             })
-
+        
         # วิเคราะห์ financial activity
         if activities.get('financial_trading'):
             insights.append({
-                'category': 'Financial Trading Activity',
+                'category': 'Financial Trading Activity', 
                 'insight': 'มี trading activities สูง บ่งชี้มีทรัพย์สินมาก',
                 'implications': [
                     'เป็น high-value target สำหรับ financial attacks',
@@ -173,7 +171,7 @@ class WebActivityAnalyzer:
                     'Financial phishing attacks'
                 ]
             })
-
+        
         # วิเคราะห์ social media
         if activities.get('social_media'):
             insights.append({
@@ -192,9 +190,9 @@ class WebActivityAnalyzer:
                     'Personal information harvesting'
                 ]
             })
-
+        
         return insights
-
+    
     def _generate_security_recommendations(self):
         """สร้างคำแนะนำด้านความปลอดภัย"""
         return {
@@ -223,11 +221,11 @@ class WebActivityAnalyzer:
                 '🌍 ปิด location sharing'
             ]
         }
-
+    
     def generate_detailed_report(self):
         """สร้างรายงานละเอียด"""
         analysis = self.analyze_spiderfoot_logs()
-
+        
         report = f"""
 🔍💖 Advanced Web Activity Intelligence Report 💖🔍
 {'='*70}
@@ -238,7 +236,7 @@ class WebActivityAnalyzer:
 📊 WEB ACTIVITY PATTERNS:
 {'='*70}
 """
-
+        
         # วิเคราะห์แต่ละหมวดหมู่
         for category, sites in analysis['web_activity_patterns'].items():
             if sites:
@@ -247,14 +245,14 @@ class WebActivityAnalyzer:
    📍 Sites Count: {len(sites)}
    🔗 Examples: {', '.join(sites[:3])}{'...' if len(sites) > 3 else ''}
 """
-
+        
         # Risk Assessment
         report += f"""
 
 🚨 RISK ASSESSMENT:
 {'='*70}
 """
-
+        
         for category, assessment in analysis['risk_assessment'].items():
             report += f"""
 ⚠️ {category.upper().replace('_', ' ')}:
@@ -262,14 +260,14 @@ class WebActivityAnalyzer:
    📊 Sites Found: {assessment['site_count']}
    🔍 Impact: {'High security concern' if 'HIGH' in assessment['risk_level'] else 'Monitor recommended'}
 """
-
+        
         # Behavioral Insights
         report += f"""
 
 🧠 BEHAVIORAL INSIGHTS:
 {'='*70}
 """
-
+        
         for insight in analysis['behavioral_insights']:
             report += f"""
 💡 {insight['category']}:
@@ -279,15 +277,15 @@ class WebActivityAnalyzer:
 """
             for implication in insight['implications']:
                 report += f"      • {implication}\n"
-
+                
             report += f"""
    🎯 Potential Attack Vectors:
 """
             for vector in insight['attack_vectors']:
                 report += f"      • {vector}\n"
-
+            
             report += "\n"
-
+        
         # Security Recommendations
         report += f"""
 
@@ -298,25 +296,25 @@ class WebActivityAnalyzer:
 """
         for action in analysis['security_recommendations']['immediate_actions']:
             report += f"   {action}\n"
-
+        
         report += f"""
 🌐 BROWSING SECURITY:
 """
         for rec in analysis['security_recommendations']['browsing_security']:
             report += f"   {rec}\n"
-
+        
         report += f"""
 💰 FINANCIAL SECURITY:
 """
         for rec in analysis['security_recommendations']['financial_security']:
             report += f"   {rec}\n"
-
+        
         report += f"""
 📱 SOCIAL MEDIA PRIVACY:
 """
         for rec in analysis['security_recommendations']['social_media_privacy']:
             report += f"   {rec}\n"
-
+        
         # Attack Surface Analysis
         report += f"""
 
@@ -350,29 +348,28 @@ class WebActivityAnalyzer:
 💖 Stay safe and secure online!
 {'='*70}
 """
-
+        
         return report, analysis
-
+    
     def save_analysis(self):
         """บันทึกการวิเคราะห์"""
         report, analysis_data = self.generate_detailed_report()
-
+        
         # บันทึกรายงาน
         timestamp = int(datetime.now().timestamp())
         report_file = f"web_activity_analysis_{timestamp}.txt"
-
+        
         with open(report_file, 'w', encoding='utf-8') as f:
             f.write(report)
-
+        
         # บันทึกข้อมูล JSON
         json_file = f"web_activity_data_{timestamp}.json"
         with open(json_file, 'w', encoding='utf-8') as f:
-            json.dump(analysis_data, f, indent=2,
-                      ensure_ascii=False, default=str)
-
+            json.dump(analysis_data, f, indent=2, ensure_ascii=False, default=str)
+        
         self.print_cute(f"📄 รายงานบันทึกแล้ว: {report_file}", "✅")
         self.print_cute(f"📊 ข้อมูลบันทึกแล้ว: {json_file}", "✅")
-
+        
         return report_file, json_file
 
 
@@ -383,18 +380,18 @@ def main():
 🌸 สำหรับวิเคราะห์ digital footprint และ browsing patterns
 ⚠️ เพื่อการศึกษาและการป้องกันเท่านั้น!
 """)
-
+    
     analyzer = WebActivityAnalyzer()
-
+    
     print("🔍 เริ่มการวิเคราะห์ web activity...")
-
+    
     # สร้างและแสดงรายงาน
     report, analysis = analyzer.generate_detailed_report()
     print(report)
-
+    
     # บันทึกผลลัพธ์
     report_file, json_file = analyzer.save_analysis()
-
+    
     print(f"""
 🎯 การวิเคราะห์เสร็จสิ้น!
 📄 Text Report: {report_file}

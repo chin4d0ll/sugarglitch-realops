@@ -1,0 +1,391 @@
+
+🕷️💎 SPIDERFOOT ADULT SITE INTELLIGENCE REPORT 💎🕷️
+⏰ Generated: 2025-06-24 17:37:58
+🎯 Target: alx.trading (Telegram: Alx_TYW)
+💕 By: Advanced Spiderfoot Analyzer Framework
+================================================================================
+
+📋 EXECUTIVE SUMMARY:
+================================================================================
+Target Profile: alx.trading
+Telegram Username: Alx_TYW
+Analysis Date: 2025-06-24 17:37:58
+Risk Level: CRITICAL
+
+🚨 FINDINGS OVERVIEW:
+Adult Keywords Found: 21
+Suspicious Domains: 25
+Cam Sites Detected: 8
+Dating Apps Detected: 9
+Total Adult Content Exposure: 54
+
+🔞 ADULT CONTENT DETECTED:
+============================================================
+
+1. Adult Keyword: "anal"
+   📅 Found: 2025-06-24T17:37:58.221508
+   📝 Context: ms_discovered": [       "tiktok",       "facebook"     ],     "confidence_level": "high - real data analysis"   },   "real_social_data": {     "tiktok": {},     "facebook": {       "url": "https://www...
+
+2. Adult Keyword: "porn"
+   📅 Found: 2025-06-24T17:37:58.226656
+   📝 Context: ",     "scan_name": "email",     "scan_target": "alexander_fleming@gmail.com"   },   {     "data": "pornhub users (category: xx nsfw xx)\nhttps://www.pornhub.com/users/alexander_fleming",     "event_t...
+
+3. Adult Keyword: "strip"
+   📅 Found: 2025-06-24T17:37:58.233621
+   📝 Context: # รับ response             banner = sock.recv(1024).decode('utf-8', errors='ignore').strip()             sock.close()                          return banner if banner else none...
+
+4. Adult Keyword: "hardcore"
+   📅 Found: 2025-06-24T17:37:58.235057
+   📝 Context: _1749233354.json",     "response_debug_1749160264.html",     "response_debug_1749161657.html",     "hardcore_extraction_report_20250606_093817.json.backup",     "hardcore_extraction_report_20250606_08...
+
+5. Adult Keyword: "sex"
+   📅 Found: 2025-06-24T17:37:58.265705
+   📝 Context: 62wfwm4brgpkwylpbnjkn8tfq3wos6sxclxc5fynelfswzxaq0xbq2tgwfydslfhyzzyx6sfiw8dpp63phevfix5y6welfnwxatfsexpp/1pxc67uftjv19ntejoxkslx42dnlhfpgs+85gfjx5nj4wggqdkq61nu4pmnszdavvowbjqgpcll0kuqjkqvrbtrvey2dfh...
+
+6. Adult Keyword: "cam"
+   📅 Found: 2025-06-24T17:37:58.268559
+   📝 Context: uqs5uq7tny+bfrbtu87y1rz9qxkpzuuw3wlo9tp3ynk6jmv3ora4qpy9ttjtek1tgmfktsawybx+0mfzipf20tnkwiejs7iyusbjcamuybhm3wo4lggqaxskoucpqqatohshcj0i9dpfr1js6u2asbffnwwdjwolegd1dhq7txgj3k16d9hln3orz0padtbi/v/kbhsc...
+
+7. Adult Keyword: "teen"
+   📅 Found: 2025-06-24T17:37:58.271735
+   📝 Context: :true,\"oz_www_log_appended_segment_info\":false,\"oz_www_log_media_element_error_source_buffer_updateend_error\":true,\"oz_www_log_extra_events\":true,\"oz_www_overwrite_video_current_time_property\"...
+
+8. Adult Keyword: "gay"
+   📅 Found: 2025-06-24T17:37:58.273844
+   📝 Context: 1ycoq\":{\"type\":\"js\",\"src\":\"https:\\/\\/static.cdninstagram.com\\/rsrc.php\\/v4\\/yz\\/r\\/ubgaymaygii.js\",\"c\":1,\"p\":\":701\",\"m\":\"1023525661_main\"},\"g52qmde\":{\"type\":\"js\",\"src\...
+
+9. Adult Keyword: "oral"
+   📅 Found: 2025-06-24T17:37:58.275218
+   📝 Context: 00,\"hypstep4\":true,\"phdon\":false,\"phdseparatebitmaps\":false,\"btcutoffindex\":1511,\"fastpathforalreadyrequired\":true,\"earlyrequirelazy\":false,\"enabletimeoutloggingfornoncomet\":true,\"defer...
+
+10. Adult Keyword: "adult"
+   📅 Found: 2025-06-24T17:37:58.401059
+   📝 Context: om",       "twitter.com",       "linkedin.com",       "tiktok.com",       "youtube.com"     ],     "adult_content": [       "pornhub.com",       "xnxx.com",       "xvideos.com",       "redtube.com",...
+
+11. Adult Keyword: "xxx"
+   📅 Found: 2025-06-24T17:37:58.403572
+   📝 Context: domains         self.adult_patterns = {             'explicit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',...
+
+12. Adult Keyword: "nude"
+   📅 Found: 2025-06-24T17:37:58.403689
+   📝 Context: ult_patterns = {             'explicit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf'...
+
+13. Adult Keyword: "naked"
+   📅 Found: 2025-06-24T17:37:58.403767
+   📝 Context: erns = {             'explicit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen'...
+
+14. Adult Keyword: "erotic"
+   📅 Found: 2025-06-24T17:37:58.403835
+   📝 Context: licit_keywords': [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'g...
+
+15. Adult Keyword: "escort"
+   📅 Found: 2025-06-24T17:37:58.403901
+   📝 Context: [                 'porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',             ...
+
+16. Adult Keyword: "fetish"
+   📅 Found: 2025-06-24T17:37:58.403996
+   📝 Context: porn', 'xxx', 'sex', 'adult', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'ana...
+
+17. Adult Keyword: "milf"
+   📅 Found: 2025-06-24T17:37:58.404111
+   📝 Context: t', 'nude', 'naked',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 's...
+
+18. Adult Keyword: "amateur"
+   📅 Found: 2025-06-24T17:37:58.404225
+   📝 Context: ed',                 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'        ...
+
+19. Adult Keyword: "mature"
+   📅 Found: 2025-06-24T17:37:58.404336
+   📝 Context: 'erotic', 'cam', 'escort', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],...
+
+20. Adult Keyword: "lesbian"
+   📅 Found: 2025-06-24T17:37:58.404458
+   📝 Context: t', 'strip', 'fetish',                 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],             'known_adult_tlds': [...
+
+21. Adult Keyword: "softcore"
+   📅 Found: 2025-06-24T17:37:58.404594
+   📝 Context: 'milf', 'teen', 'amateur', 'mature', 'gay',                 'lesbian', 'anal', 'oral', 'hardcore', 'softcore'             ],             'known_adult_tlds': [                 '.xxx', '.adult', '.porn'...
+
+🌐 SUSPICIOUS DOMAINS:
+============================================================
+
+1. Domain: pornhub.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.227968
+   🔗 Full URL: N/A
+   📝 Context: lexander_fleming@gmail.com"   },   {     "data": "pornhub users (category: xx nsfw xx)\nhttps://www.pornhub.com/users/alexander_fleming",     "event_type": "account_external_owned",     "module": "sfp...
+
+2. Domain: xvideos.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.228084
+   🔗 Full URL: N/A
+   📝 Context: ander_fleming@gmail.com"   },   {     "data": "xvideos-profiles (category: xx nsfw xx)\nhttps://www.xvideos.com/profiles/alexander_fleming",     "event_type": "account_external_owned",     "module": "...
+
+3. Domain: xnxx.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.401215
+   🔗 Full URL: N/A
+   📝 Context: ,       "tiktok.com",       "youtube.com"     ],     "adult_content": [       "pornhub.com",       "xnxx.com",       "xvideos.com",       "redtube.com",       "youporn.com",       "spankbang.com",    ...
+
+4. Domain: redtube.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.401260
+   🔗 Full URL: N/A
+   📝 Context: m"     ],     "adult_content": [       "pornhub.com",       "xnxx.com",       "xvideos.com",       "redtube.com",       "youporn.com",       "spankbang.com",       "xhamster.com",       "chaturbate.co...
+
+5. Domain: youporn.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.401301
+   🔗 Full URL: N/A
+   📝 Context: content": [       "pornhub.com",       "xnxx.com",       "xvideos.com",       "redtube.com",       "youporn.com",       "spankbang.com",       "xhamster.com",       "chaturbate.com"     ],     "busine...
+
+6. Domain: spankbang.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.401358
+   🔗 Full URL: N/A
+   📝 Context: rnhub.com",       "xnxx.com",       "xvideos.com",       "redtube.com",       "youporn.com",       "spankbang.com",       "xhamster.com",       "chaturbate.com"     ],     "business_tools": [       "g...
+
+7. Domain: xhamster.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.401400
+   🔗 Full URL: N/A
+   📝 Context: .com",       "xvideos.com",       "redtube.com",       "youporn.com",       "spankbang.com",       "xhamster.com",       "chaturbate.com"     ],     "business_tools": [       "gmail.com",       "outlo...
+
+8. Domain: chaturbate.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.401437
+   🔗 Full URL: N/A
+   📝 Context: com",       "redtube.com",       "youporn.com",       "spankbang.com",       "xhamster.com",       "chaturbate.com"     ],     "business_tools": [       "gmail.com",       "outlook.com",       "zoom.u...
+
+9. Domain: tube8.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.404737
+   🔗 Full URL: N/A
+   📝 Context: 'pornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',...
+
+10. Domain: beeg.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.404844
+   🔗 Full URL: N/A
+   📝 Context: ornhub.com', 'xvideos.com', 'xnxx.com', 'redtube.com',                 'youporn.com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',...
+
+11. Domain: livejasmin.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.404990
+   🔗 Full URL: N/A
+   📝 Context: .com', 'tube8.com', 'beeg.com', 'spankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onl...
+
+12. Domain: stripchat.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.405120
+   🔗 Full URL: N/A
+   📝 Context: pankbang.com',                 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips...
+
+13. Domain: cam4.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.405239
+   🔗 Full URL: N/A
+   📝 Context: 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',...
+
+14. Domain: myfreecams.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.405346
+   🔗 Full URL: N/A
+   📝 Context: 'xhamster.com', 'chaturbate.com', 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'ad...
+
+15. Domain: onlyfans.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.405449
+   🔗 Full URL: N/A
+   📝 Context: , 'livejasmin.com',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley ma...
+
+16. Domain: manyvids.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.405553
+   🔗 Full URL: N/A
+   📝 Context: m',                 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',...
+
+17. Domain: clips4sale.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.405654
+   🔗 Full URL: N/A
+   📝 Context: 'stripchat.com', 'cam4.com', 'myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking...
+
+18. Domain: adultfriendfinder.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.405759
+   🔗 Full URL: N/A
+   📝 Context: myfreecams.com',                 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.co...
+
+19. Domain: ashley madison.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.405881
+   🔗 Full URL: N/A
+   📝 Context: 'onlyfans.com', 'manyvids.com', 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', ...
+
+20. Domain: seeking.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.406028
+   🔗 Full URL: N/A
+   📝 Context: , 'clips4sale.com',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'       ...
+
+21. Domain: match.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.406172
+   🔗 Full URL: N/A
+   📝 Context: om',                 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],       ...
+
+22. Domain: tinder.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.406300
+   🔗 Full URL: N/A
+   📝 Context: 'adultfriendfinder.com', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'cam_sites': [...
+
+23. Domain: badoo.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.406516
+   🔗 Full URL: N/A
+   📝 Context: ', 'ashley madison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'cam_sites': [                 'chatu...
+
+24. Domain: bumble.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.406647
+   🔗 Full URL: N/A
+   📝 Context: dison.com',                 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'cam_sites': [                 'chaturbate', 'live...
+
+25. Domain: pof.com
+   🔗 Type: adult_site
+   📅 Found: 2025-06-24T17:37:58.407024
+   🔗 Full URL: N/A
+   📝 Context: 'seeking.com', 'match.com', 'tinder.com',                 'badoo.com', 'bumble.com', 'pof.com'             ],             'cam_sites': [                 'chaturbate', 'livejasmin', 'stripchat',...
+
+📹 CAM SITES & ADULT PLATFORMS:
+============================================================
+
+1. Platform: chaturbate
+   ⚠️ Risk Level: HIGH
+   📝 Description: Adult cam site activity detected
+   📅 Found: 2025-06-24T17:37:58.401536
+
+2. Platform: livejasmin
+   ⚠️ Risk Level: HIGH
+   📝 Description: Adult cam site activity detected
+   📅 Found: 2025-06-24T17:37:58.407067
+
+3. Platform: stripchat
+   ⚠️ Risk Level: HIGH
+   📝 Description: Adult cam site activity detected
+   📅 Found: 2025-06-24T17:37:58.407095
+
+4. Platform: cam4
+   ⚠️ Risk Level: HIGH
+   📝 Description: Adult cam site activity detected
+   📅 Found: 2025-06-24T17:37:58.407119
+
+5. Platform: myfreecams
+   ⚠️ Risk Level: HIGH
+   📝 Description: Adult cam site activity detected
+   📅 Found: 2025-06-24T17:37:58.407139
+
+6. Platform: bongacams
+   ⚠️ Risk Level: HIGH
+   📝 Description: Adult cam site activity detected
+   📅 Found: 2025-06-24T17:37:58.407166
+
+7. Platform: camsoda
+   ⚠️ Risk Level: HIGH
+   📝 Description: Adult cam site activity detected
+   📅 Found: 2025-06-24T17:37:58.407193
+
+8. Platform: flirt4free
+   ⚠️ Risk Level: HIGH
+   📝 Description: Adult cam site activity detected
+   📅 Found: 2025-06-24T17:37:58.407219
+
+💕 DATING APPS & SOCIAL PLATFORMS:
+============================================================
+
+1. App: pof
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.290955
+
+2. App: match
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.291680
+
+3. App: tinder
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.407244
+
+4. App: bumble
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.407269
+
+5. App: badoo
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.407291
+
+6. App: okcupid
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.407311
+
+7. App: eharmony
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.407335
+
+8. App: seeking
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.407353
+
+9. App: sugardaddy
+   ⚠️ Risk Level: MEDIUM
+   📝 Description: Dating app usage detected
+   📅 Found: 2025-06-24T17:37:58.407373
+
+🎯 RISK ASSESSMENT:
+============================================================
+
+🔴 Overall Risk Level: CRITICAL
+📊 Adult Content Exposure Score: 54/20
+🔞 Adult Keywords: 21
+🌐 Suspicious Domains: 25
+📹 Cam Sites: 8
+💕 Dating Apps: 9
+
+💡 RECOMMENDATIONS:
+============================================================
+
+🚨 IMMEDIATE ACTIONS REQUIRED:
+1. 🔒 Review and strengthen privacy settings
+2. 🛡️ Implement content filtering and monitoring
+3. 📱 Audit social media and app usage
+4. 🔍 Conduct deeper investigation into activity patterns
+5. ⚠️ Consider potential reputation risks
+
+🔍 INVESTIGATIVE PRIORITIES:
+1. 📊 Monitor ongoing activity patterns
+2. 🔗 Map connections to adult platforms
+3. 📱 Cross-reference with social media activity
+4. 🕐 Establish timeline of adult content exposure
+
+🔧 TECHNICAL ANALYSIS:
+============================================================
+
+Analysis Method: Spiderfoot Log Parsing + Pattern Recognition
+Keywords Searched: 21 adult keywords
+Domains Checked: 25 known adult sites
+Platform Categories: 8 cam sites, 9 dating apps
+
+================================================================================
+💖 Adult site analysis completed by Advanced Spiderfoot Framework
+⚠️ This analysis is for security and privacy assessment only!
+🔒 Use all data ethically and legally!
+================================================================================
