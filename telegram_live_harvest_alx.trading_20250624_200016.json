@@ -1,0 +1,95 @@
+{
+  "harvest_info": {
+    "target": "alx.trading",
+    "timestamp": "20250624_200003",
+    "harvester_version": "1.0",
+    "methods_used": [
+      "web_interface_analysis",
+      "search_engine_reconnaissance",
+      "api_validation",
+      "leak_detection"
+    ]
+  },
+  "metadata": {
+    "timestamp": "2025-06-24T20:00:03.404709",
+    "target": "alx.trading",
+    "extraction_methods": [
+      "web_interface",
+      "search_engines",
+      "api_checking",
+      "metadata_extraction"
+    ],
+    "success_rate": 100.0,
+    "data_points": [],
+    "web_data": {
+      "web_data": [],
+      "profile_info": {
+        "web_accessible": true,
+        "last_seen": "2025-06-24T20:00:04.048896"
+      },
+      "public_messages": [],
+      "media_files": []
+    },
+    "related_channels": [
+      {
+        "search_term": "alx.trading",
+        "found_links": true,
+        "timestamp": "2025-06-24T20:00:05.398220"
+      },
+      {
+        "search_term": "alx.trading_channel",
+        "found_links": true,
+        "timestamp": "2025-06-24T20:00:06.589811"
+      },
+      {
+        "search_term": "alx.trading_group",
+        "found_links": true,
+        "timestamp": "2025-06-24T20:00:07.802657"
+      }
+    ],
+    "api_data": {
+      "bot_api_accessible": false,
+      "web_api_accessible": false,
+      "username_valid": true,
+      "profile_data": {
+        "has_messages": true
+      }
+    }
+  },
+  "leak_scan": {
+    "potential_leaks": [
+      {
+        "search_term": "alx.trading email",
+        "found_at": "2025-06-24T20:00:10.284212",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "search_term": "alx.trading password",
+        "found_at": "2025-06-24T20:00:11.667673",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "search_term": "alx.trading phone",
+        "found_at": "2025-06-24T20:00:12.870130",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "search_term": "alx.trading telegram leak",
+        "found_at": "2025-06-24T20:00:14.256167",
+        "risk_level": "MEDIUM"
+      },
+      {
+        "search_term": "alx.trading credentials",
+        "found_at": "2025-06-24T20:00:15.591732",
+        "risk_level": "MEDIUM"
+      }
+    ],
+    "risk_assessment": "HIGH",
+    "recommendations": []
+  },
+  "summary": {
+    "total_data_points": 0,
+    "risk_level": "HIGH",
+    "harvest_success": true
+  }
+}
