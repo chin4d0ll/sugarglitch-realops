@@ -29,19 +29,19 @@ class PyrogramExtractor:
         self.api_id = 12345  # แทนที่ด้วย API ID จริง
         self.api_hash = "abcd1234"  # แทนที่ด้วย API Hash จริง
         self.phone_number = "+66812345678"  # แทนที่ด้วยเบอร์จริง
-        
+
         self.client = None
         self.session_name = "pyrogram_session"
-        
+
     def print_step(self, message):
         print(f"{Colors.BLUE}📋 {message}{Colors.END}")
-        
+
     def print_success(self, message):
         print(f"{Colors.GREEN}✅ {message}{Colors.END}")
-        
+
     def print_error(self, message):
         print(f"{Colors.RED}❌ {message}{Colors.END}")
-        
+
     def print_warning(self, message):
         print(f"{Colors.YELLOW}⚠️ {message}{Colors.END}")
 
@@ -49,17 +49,17 @@ class PyrogramExtractor:
         """ตั้งค่า Pyrogram client"""
         try:
             self.print_step("Setting up Pyrogram client...")
-            
+
             self.client = Client(
                 self.session_name,
                 api_id=self.api_id,
                 api_hash=self.api_hash,
                 phone_number=self.phone_number
             )
-            
+
             self.print_success("Client setup completed")
             return True
-            
+
         except Exception as e:
             self.print_error(f"Client setup failed: {e}")
             return False
@@ -68,12 +68,12 @@ class PyrogramExtractor:
         """เชื่อมต่อและยืนยันตัวตน"""
         try:
             self.print_step("Connecting to Telegram...")
-            
+
             await self.client.start()
-            
+
             self.print_success("Connected and authenticated!")
             return True
-            
+
         except Exception as e:
             self.print_error(f"Connection failed: {e}")
             # ใช้ demo mode สำหรับการทดสอบ
@@ -84,13 +84,13 @@ class PyrogramExtractor:
         """ดึงข้อมูลผู้ใช้"""
         try:
             self.print_step(f"Getting user data for: {username}")
-            
+
             # ใน demo mode ให้ return demo data
             if not self.client:
                 return self.get_demo_user_data(username)
-            
+
             user = await self.client.get_users(username)
-            
+
             user_data = {
                 'id': user.id,
                 'is_self': user.is_self,
@@ -111,10 +111,10 @@ class PyrogramExtractor:
                 'last_online_date': str(user.last_online_date) if user.last_online_date else None,
                 'photo': str(user.photo) if user.photo else None
             }
-            
+
             self.print_success(f"User data retrieved for: {user.first_name}")
             return user_data
-            
+
         except Exception as e:
             self.print_error(f"Failed to get user data: {e}")
             return self.get_demo_user_data(username)
@@ -140,10 +140,10 @@ class PyrogramExtractor:
         """ดึงประวัติการแชท"""
         try:
             self.print_step(f"Getting chat history with: {username}")
-            
+
             if not self.client:
                 return self.get_demo_chat_history(username, limit)
-            
+
             messages = []
             async for message in self.client.get_chat_history(username, limit=limit):
                 if message.text:
@@ -157,10 +157,10 @@ class PyrogramExtractor:
                         'edit_date': message.edit_date.isoformat() if message.edit_date else None
                     }
                     messages.append(msg_data)
-            
+
             self.print_success(f"Retrieved {len(messages)} messages")
             return messages
-            
+
         except Exception as e:
             self.print_error(f"Failed to get chat history: {e}")
             return self.get_demo_chat_history(username, limit)
@@ -180,20 +180,20 @@ class PyrogramExtractor:
                 'demo_mode': True
             }
             messages.append(msg)
-        
+
         return messages
 
     async def get_common_chats(self, username):
         """ดึงแชทร่วมกัน"""
         try:
             self.print_step(f"Getting common chats with: {username}")
-            
+
             if not self.client:
                 return self.get_demo_common_chats(username)
-            
+
             user = await self.client.get_users(username)
             common_chats = await self.client.get_common_chats(user.id)
-            
+
             chats_data = []
             for chat in common_chats:
                 chat_data = {
@@ -204,10 +204,10 @@ class PyrogramExtractor:
                     'members_count': chat.members_count if hasattr(chat, 'members_count') else 0
                 }
                 chats_data.append(chat_data)
-            
+
             self.print_success(f"Found {len(chats_data)} common chats")
             return chats_data
-            
+
         except Exception as e:
             self.print_error(f"Failed to get common chats: {e}")
             return self.get_demo_common_chats(username)
@@ -235,14 +235,15 @@ class PyrogramExtractor:
 
     async def extract_comprehensive_data(self, target_username):
         """ดึงข้อมูลครบถ้วน"""
-        self.print_step(f"Starting comprehensive extraction for: {target_username}")
-        
+        self.print_step(
+            f"Starting comprehensive extraction for: {target_username}")
+
         # Setup client
         await self.setup_client()
-        
+
         # Try to connect (will fallback to demo mode if fails)
         connected = await self.connect_and_auth()
-        
+
         result = {
             'target': target_username,
             'extraction_time': datetime.now().isoformat(),
@@ -253,29 +254,29 @@ class PyrogramExtractor:
             'common_chats': [],
             'analysis': {}
         }
-        
+
         # Get user data
         user_data = await self.get_user_data(target_username)
         result['user_data'] = user_data
-        
+
         # Get chat history
         chat_history = await self.get_chat_history(target_username)
         result['chat_history'] = chat_history
-        
+
         # Get common chats
         common_chats = await self.get_common_chats(target_username)
         result['common_chats'] = common_chats
-        
+
         # Analyze data
         result['analysis'] = self.analyze_data(result)
-        
+
         # Disconnect if connected
         if self.client and connected:
             await self.client.stop()
-        
+
         # Save results
         self.save_results(result, target_username)
-        
+
         return result
 
     def analyze_data(self, data):
@@ -288,27 +289,28 @@ class PyrogramExtractor:
             'account_type': 'premium' if data['user_data'] and data['user_data'].get('is_premium') else 'regular',
             'verification_status': 'verified' if data['user_data'] and data['user_data'].get('is_verified') else 'unverified'
         }
-        
+
         # Analyze message patterns
         if data['chat_history']:
-            outgoing = sum(1 for msg in data['chat_history'] if msg.get('is_outgoing'))
+            outgoing = sum(
+                1 for msg in data['chat_history'] if msg.get('is_outgoing'))
             incoming = len(data['chat_history']) - outgoing
             analysis['message_ratio'] = f"{outgoing}:{incoming} (out:in)"
-        
+
         return analysis
 
     def save_results(self, data, target):
         """บันทึกผลลัพธ์"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
+
         # Save JSON
         json_filename = f"pyrogram_extraction_{target}_{timestamp}.json"
         with open(json_filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, indent=2, ensure_ascii=False)
-        
+
         # Generate report
         self.generate_report(data, target, timestamp)
-        
+
         self.print_success(f"Results saved to: {json_filename}")
 
     def generate_report(self, data, target, timestamp):
@@ -329,7 +331,7 @@ Chat Messages: {len(data['chat_history'])}
 Common Chats: {len(data['common_chats'])}
 
 """
-        
+
         if data['user_data']:
             user = data['user_data']
             report += f"""
@@ -399,11 +401,11 @@ Message Pattern: {analysis.get('message_ratio', 'Unknown')}
 📱 Telegram API v{timestamp[:8]}
 ================================================================================
 """
-        
+
         report_filename = f"pyrogram_report_{target}_{timestamp}.txt"
         with open(report_filename, 'w', encoding='utf-8') as f:
             f.write(report)
-        
+
         self.print_success(f"Report saved to: {report_filename}")
 
 
@@ -411,28 +413,29 @@ async def main():
     """Main function"""
     print(f"{Colors.BOLD}🔥 PYROGRAM TELEGRAM EXTRACTOR 🔥{Colors.END}")
     print("=" * 60)
-    
+
     extractor = PyrogramExtractor()
-    
+
     target = "Alx_TYW"
-    
+
     print(f"\n🎯 Target: {target}")
     print("🔄 Starting Pyrogram extraction...")
     print("⚠️  Will attempt real API, fallback to demo mode")
     print()
-    
+
     try:
         result = await extractor.extract_comprehensive_data(target)
         print(f"\n{Colors.GREEN}🎉 Extraction completed!{Colors.END}")
-        
+
         # Print summary
         if result['user_data']:
             user = result['user_data']
-            print(f"👤 Found: {user.get('first_name', '')} {user.get('last_name', '')}")
-        
+            print(
+                f"👤 Found: {user.get('first_name', '')} {user.get('last_name', '')}")
+
         print(f"💬 Messages: {len(result['chat_history'])}")
         print(f"📢 Common Chats: {len(result['common_chats'])}")
-        
+
     except Exception as e:
         print(f"\n{Colors.RED}💥 Extraction error: {e}{Colors.END}")
 

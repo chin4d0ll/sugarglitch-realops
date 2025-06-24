@@ -30,26 +30,26 @@ class RealTelegramExtractor:
         self.api_id = None  # ใส่ API ID จาก my.telegram.org
         self.api_hash = None  # ใส่ API Hash จาก my.telegram.org
         self.phone = None  # เบอร์โทรศัพท์ที่ลงทะเบียน Telegram
-        
+
         self.client = None
         self.session_name = 'telegram_session'
-        
+
     def print_step(self, message):
         print(f"{Colors.BLUE}📋 {message}{Colors.END}")
-        
+
     def print_success(self, message):
         print(f"{Colors.GREEN}✅ {message}{Colors.END}")
-        
+
     def print_error(self, message):
         print(f"{Colors.RED}❌ {message}{Colors.END}")
-        
+
     def print_warning(self, message):
         print(f"{Colors.YELLOW}⚠️ {message}{Colors.END}")
 
     def setup_credentials(self):
         """ตั้งค่า API credentials"""
         self.print_step("Setting up Telegram API credentials")
-        
+
         if not self.api_id:
             self.print_warning("API ID not configured")
             print("📱 How to get Telegram API credentials:")
@@ -59,31 +59,33 @@ class RealTelegramExtractor:
             print("4. Create an application")
             print("5. Copy API ID and API Hash")
             print()
-            
+
             # ใส่ demo values สำหรับทดสอบ
             self.api_id = 12345  # แทนที่ด้วย API ID จริง
-            self.api_hash = "abcd1234"  # แทนที่ด้วย API Hash จริง  
+            self.api_hash = "abcd1234"  # แทนที่ด้วย API Hash จริง
             self.phone = "+66812345678"  # แทนที่ด้วยเบอร์จริง
-            
-            self.print_warning("Using demo credentials. Replace with real ones for actual use.")
-            
+
+            self.print_warning(
+                "Using demo credentials. Replace with real ones for actual use.")
+
         return True
 
     async def connect_telegram(self):
         """เชื่อมต่อกับ Telegram"""
         try:
             self.print_step("Connecting to Telegram...")
-            
-            self.client = TelegramClient(self.session_name, self.api_id, self.api_hash)
+
+            self.client = TelegramClient(
+                self.session_name, self.api_id, self.api_hash)
             await self.client.connect()
-            
+
             if not await self.client.is_user_authorized():
                 self.print_warning("Not authorized. Need to login.")
                 return await self.login_telegram()
             else:
                 self.print_success("Already authorized!")
                 return True
-                
+
         except Exception as e:
             self.print_error(f"Connection failed: {e}")
             return False
@@ -92,24 +94,24 @@ class RealTelegramExtractor:
         """เข้าสู่ระบบ Telegram"""
         try:
             self.print_step("Starting login process...")
-            
+
             await self.client.send_code_request(self.phone)
             self.print_warning("Code sent to your phone. Enter it below:")
-            
+
             # ในการใช้งานจริง ให้ใช้ input() เพื่อรับ code
             code = "12345"  # แทนที่ด้วย input("Enter code: ")
-            
+
             await self.client.sign_in(self.phone, code)
             self.print_success("Login successful!")
             return True
-            
+
         except SessionPasswordNeededError:
             self.print_warning("2FA enabled. Enter password:")
             password = "password"  # แทนที่ด้วย input("Enter password: ")
             await self.client.sign_in(password=password)
             self.print_success("Login with 2FA successful!")
             return True
-            
+
         except Exception as e:
             self.print_error(f"Login failed: {e}")
             return False
@@ -118,9 +120,9 @@ class RealTelegramExtractor:
         """ดึงข้อมูลผู้ใช้"""
         try:
             self.print_step(f"Getting user info for: {username}")
-            
+
             user = await self.client.get_entity(username)
-            
+
             user_data = {
                 'id': user.id,
                 'username': user.username,
@@ -133,7 +135,7 @@ class RealTelegramExtractor:
                 'status': str(getattr(user, 'status', 'unknown')),
                 'bio': ''
             }
-            
+
             # ดึง bio
             try:
                 full_user = await self.client.get_entity(user.id)
@@ -141,10 +143,11 @@ class RealTelegramExtractor:
                     user_data['bio'] = full_user.about
             except:
                 pass
-                
-            self.print_success(f"User info retrieved: {user_data['first_name']} {user_data['last_name']}")
+
+            self.print_success(
+                f"User info retrieved: {user_data['first_name']} {user_data['last_name']}")
             return user_data
-            
+
         except Exception as e:
             self.print_error(f"Failed to get user info: {e}")
             return None
@@ -153,10 +156,10 @@ class RealTelegramExtractor:
         """ดึงข้อความของผู้ใช้"""
         try:
             self.print_step(f"Getting messages from: {username}")
-            
+
             user = await self.client.get_entity(username)
             messages = []
-            
+
             # ดึงข้อความจาก chat ส่วนตัว
             async for message in self.client.iter_messages(user, limit=limit):
                 if message.text:
@@ -169,10 +172,10 @@ class RealTelegramExtractor:
                         'reply_to': message.reply_to_msg_id if message.reply_to else None
                     }
                     messages.append(msg_data)
-            
+
             self.print_success(f"Retrieved {len(messages)} messages")
             return messages
-            
+
         except Exception as e:
             self.print_error(f"Failed to get messages: {e}")
             return []
@@ -181,10 +184,10 @@ class RealTelegramExtractor:
         """ดึงรายการ channels ที่ผู้ใช้เข้าร่วม"""
         try:
             self.print_step(f"Getting channels for: {username}")
-            
+
             dialogs = await self.client.get_dialogs()
             channels = []
-            
+
             for dialog in dialogs:
                 if hasattr(dialog.entity, 'username') and dialog.entity.username:
                     if isinstance(dialog.entity, Channel):
@@ -197,22 +200,23 @@ class RealTelegramExtractor:
                             'is_broadcast': getattr(dialog.entity, 'broadcast', False)
                         }
                         channels.append(channel_data)
-            
+
             self.print_success(f"Found {len(channels)} channels")
             return channels
-            
+
         except Exception as e:
             self.print_error(f"Failed to get channels: {e}")
             return []
 
     async def extract_target_data(self, target_username):
         """ดึงข้อมูลครบถ้วนของเป้าหมาย"""
-        self.print_step(f"Starting comprehensive data extraction for: {target_username}")
-        
+        self.print_step(
+            f"Starting comprehensive data extraction for: {target_username}")
+
         if not await self.connect_telegram():
             self.print_error("Failed to connect to Telegram")
             return None
-            
+
         result = {
             'target': target_username,
             'extraction_time': datetime.now().isoformat(),
@@ -222,34 +226,34 @@ class RealTelegramExtractor:
             'contacts': [],
             'media_files': []
         }
-        
+
         # ดึงข้อมูลผู้ใช้
         user_info = await self.get_user_info(target_username)
         if user_info:
             result['user_info'] = user_info
-            
+
         # ดึงข้อความ
         messages = await self.get_user_messages(target_username)
         result['messages'] = messages
-        
+
         # ดึง channels
         channels = await self.get_user_channels(target_username)
         result['channels'] = channels
-        
+
         await self.client.disconnect()
-        
+
         # บันทึกผลลัพธ์
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"real_telegram_data_{target_username}_{timestamp}.json"
-        
+
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(result, f, indent=2, ensure_ascii=False)
-            
+
         self.print_success(f"Data saved to: {filename}")
-        
+
         # สร้างรายงาน
         self.generate_report(result, target_username, timestamp)
-        
+
         return result
 
     def generate_report(self, data, target, timestamp):
@@ -270,7 +274,7 @@ Channels Found: {len(data['channels'])}
 Contacts Found: {len(data['contacts'])}
 
 """
-        
+
         if data['user_info']:
             user = data['user_info']
             report += f"""
@@ -332,11 +336,11 @@ Respect user privacy and data protection regulations.
 📡 Powered by Telethon API
 ================================================================================
 """
-        
+
         report_filename = f"real_telegram_report_{target}_{timestamp}.txt"
         with open(report_filename, 'w', encoding='utf-8') as f:
             f.write(report)
-            
+
         self.print_success(f"Report saved to: {report_filename}")
 
 
@@ -344,28 +348,29 @@ async def main():
     """Main execution function"""
     print(f"{Colors.BOLD}🔥 REAL TELEGRAM DATA EXTRACTOR 🔥{Colors.END}")
     print("=" * 60)
-    
+
     extractor = RealTelegramExtractor()
-    
+
     # Setup credentials
     if not extractor.setup_credentials():
         return
-    
+
     # Target to extract
     target = "Alx_TYW"  # เปลี่ยนเป้าหมายได้ที่นี่
-    
+
     print(f"\n🎯 Target: {target}")
     print("🔄 Starting real data extraction...")
     print("⚠️  This will attempt to connect to real Telegram API")
     print()
-    
+
     try:
         result = await extractor.extract_target_data(target)
         if result:
-            print(f"\n{Colors.GREEN}🎉 Extraction completed successfully!{Colors.END}")
+            print(
+                f"\n{Colors.GREEN}🎉 Extraction completed successfully!{Colors.END}")
         else:
             print(f"\n{Colors.RED}❌ Extraction failed{Colors.END}")
-            
+
     except Exception as e:
         print(f"\n{Colors.RED}💥 Error during extraction: {e}{Colors.END}")
 
