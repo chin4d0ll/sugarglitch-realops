@@ -1,0 +1,33 @@
+🔥 REAL INTELLIGENCE GATHERING REPORT 🔥
+============================================================
+
+🎯 Target: alxtrading
+⏰ Extraction Time: 20250624_193846
+🔍 Methods Used: telegram_web, social_media, public_apis
+
+📊 INTELLIGENCE SUMMARY:
+----------------------------------------
+Platforms Found: 3
+Platform List: telegram_web, social_media, public_apis
+Risk Score: 42/100
+Risk Level: MEDIUM
+
+👤 PERSONAL INFORMATION:
+----------------------------------------
+Descriptions:
+  - 🤑Trading à moyen long terme &amp; Micro Scalper Intraday 🤑	Or &amp; Crypto 🙏💚	(Or - seulement pour les portefeuilles minimum : 500€)
+
+🔍 RAW DATA DETAILS:
+----------------------------------------
+
+[TELEGRAM_WEB]
+  username: alxtrading
+  extraction_method: telegram_web
+  timestamp: 2025-06-24T19:38:22.475183
+  found_data: {'title': 'Telegram: View @alxtrading', 'description': '🤑Trading à moyen long terme &amp; Micro Scalper Intraday 🤑\tOr &amp; Crypto 🙏💚\t(Or - seulement pour les portefeuilles minimum : 500€)', 'subscribers': '9'}
+
+[SOCIAL_MEDIA]
+  twitter: [{'username': 'alxtrading', 'url': 'https://twitter.com/alxtrading', 'status': 'exists'}, {'username': 'alxtrading', 'url': 'https://twitter.com/alxtrading', 'status': 'exists'}, {'username': 'alxtrading', 'url': 'https://twitter.com/alxtrading', 'status': 'exists'}, {'username': 'alxtrading_official', 'url': 'https://twitter.com/alxtrading_official', 'status': 'exists'}]
+
+[PUBLIC_APIS]
+  osint: {'github': {'login': 'alxtrading', 'id': 17819327, 'node_id': 'MDEyOk9yZ2FuaXphdGlvbjE3ODE5MzI3', 'avatar_url': 'https://avatars.githubusercontent.com/u/17819327?v=4', 'gravatar_id': '', 'url': 'https://api.github.com/users/alxtrading', 'html_url': 'https://github.com/alxtrading', 'followers_url': 'https://api.github.com/users/alxtrading/followers', 'following_url': 'https://api.github.com/users/alxtrading/following{/other_user}', 'gists_url': 'https://api.github.com/users/alxtrading/gists{/gist_id}', 'starred_url': 'https://api.github.com/users/alxtrading/starred{/owner}{/repo}', 'subscriptions_url': 'https://api.github.com/users/alxtrading/subscriptions', 'organizations_url': 'https://api.github.com/users/alxtrading/orgs', 'repos_url': 'https://api.github.com/users/alxtrading/repos', 'events_url': 'https://api.github.com/users/alxtrading/events{/privacy}', 'received_events_url': 'https://api.github.com/users/alxtrading/received_events', 'type': 'Organization', 'user_view_type': 'public', 'site_admin': False, 'name': None, 'company': None, 'blog': '', 'location': None, 'email': None, 'hireable': None, 'bio': None, 'twitter_username': None, 'public_repos': 0, 'public_gists': 0, 'followers': 0, 'following': 0, 'created_at': '2016-03-14T02:46:29Z', 'updated_at': '2016-03-14T02:46:29Z'}}

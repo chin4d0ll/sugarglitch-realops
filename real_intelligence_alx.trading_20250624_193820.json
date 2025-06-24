@@ -1,0 +1,93 @@
+{
+  "target": "alx.trading",
+  "extraction_time": "20250624_193820",
+  "methods_used": [
+    "telegram_web",
+    "social_media",
+    "public_apis"
+  ],
+  "intelligence_summary": {
+    "platforms_found": [
+      "telegram_web",
+      "social_media"
+    ],
+    "total_platforms": 2,
+    "personal_info": {
+      "descriptions": [
+        "Fast. Secure. Powerful."
+      ]
+    },
+    "risk_assessment": {
+      "score": 32,
+      "level": "LOW"
+    }
+  },
+  "raw_data": {
+    "telegram_web": {
+      "username": "alx.trading",
+      "extraction_method": "telegram_web",
+      "timestamp": "2025-06-24T19:37:56.416597",
+      "found_data": {
+        "title": "Telegram Messenger",
+        "description": "Fast. Secure. Powerful."
+      }
+    },
+    "social_media": {
+      "twitter": [
+        {
+          "username": "alx.trading",
+          "url": "https://twitter.com/alx.trading",
+          "status": "exists"
+        },
+        {
+          "username": "alx.trading",
+          "url": "https://twitter.com/alx.trading",
+          "status": "exists"
+        },
+        {
+          "username": "alxtrading",
+          "url": "https://twitter.com/alxtrading",
+          "status": "exists"
+        },
+        {
+          "username": "alx.trading_official",
+          "url": "https://twitter.com/alx.trading_official",
+          "status": "exists"
+        }
+      ],
+      "youtube": [
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "alx.trading",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        },
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "alx.trading",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        },
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "alx.trading",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        },
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "alx.trading",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        },
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "alx.trading",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        },
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "alx.trading",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        }
+      ]
+    },
+    "public_apis": {}
+  }
+}

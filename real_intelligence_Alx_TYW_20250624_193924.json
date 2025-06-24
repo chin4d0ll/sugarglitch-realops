@@ -1,0 +1,78 @@
+{
+  "target": "Alx_TYW",
+  "extraction_time": "20250624_193924",
+  "methods_used": [
+    "telegram_web",
+    "social_media",
+    "public_apis"
+  ],
+  "intelligence_summary": {
+    "platforms_found": [
+      "telegram_web",
+      "social_media"
+    ],
+    "total_platforms": 2,
+    "personal_info": {
+      "descriptions": [
+        "Trades, Analysis &amp; Ideas are not financial advice"
+      ]
+    },
+    "risk_assessment": {
+      "score": 32,
+      "level": "LOW"
+    }
+  },
+  "raw_data": {
+    "telegram_web": {
+      "username": "Alx_TYW",
+      "extraction_method": "telegram_web",
+      "timestamp": "2025-06-24T19:39:00.384115",
+      "found_data": {
+        "title": "Telegram: Contact @Alx_TYW",
+        "description": "Trades, Analysis &amp; Ideas are not financial advice"
+      }
+    },
+    "social_media": {
+      "twitter": [
+        {
+          "username": "Alx_TYW",
+          "url": "https://twitter.com/Alx_TYW",
+          "status": "exists"
+        },
+        {
+          "username": "AlxTYW",
+          "url": "https://twitter.com/AlxTYW",
+          "status": "exists"
+        },
+        {
+          "username": "Alx_TYW",
+          "url": "https://twitter.com/Alx_TYW",
+          "status": "exists"
+        },
+        {
+          "username": "Alx_TYW_official",
+          "url": "https://twitter.com/Alx_TYW_official",
+          "status": "exists"
+        }
+      ],
+      "youtube": [
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "Alx TYW",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        },
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "Alx TYW",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        },
+        {
+          "channel_id": "UCCBVXXoxvm8jglyeUQN-ylA",
+          "search_term": "Alx TYW",
+          "url": "https://www.youtube.com/channel/UCCBVXXoxvm8jglyeUQN-ylA"
+        }
+      ]
+    },
+    "public_apis": {}
+  }
+}

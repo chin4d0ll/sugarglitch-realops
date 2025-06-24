@@ -1,0 +1,33 @@
+🔥 REAL INTELLIGENCE GATHERING REPORT 🔥
+============================================================
+
+🎯 Target: Alx_TYW
+⏰ Extraction Time: 20250624_193753
+🔍 Methods Used: telegram_web, social_media, public_apis
+
+📊 INTELLIGENCE SUMMARY:
+----------------------------------------
+Platforms Found: 2
+Platform List: telegram_web, social_media
+Risk Score: 30/100
+Risk Level: LOW
+
+👤 PERSONAL INFORMATION:
+----------------------------------------
+Descriptions:
+  - Trades, Analysis &amp; Ideas are not financial advice
+
+🔍 RAW DATA DETAILS:
+----------------------------------------
+
+[TELEGRAM_WEB]
+  username: Alx_TYW
+  extraction_method: telegram_web
+  timestamp: 2025-06-24T19:37:29.133551
+  found_data: {'title': 'Telegram: Contact @Alx_TYW', 'description': 'Trades, Analysis &amp; Ideas are not financial advice'}
+
+[SOCIAL_MEDIA]
+  twitter: [{'username': 'Alx_TYW', 'url': 'https://twitter.com/Alx_TYW', 'status': 'exists'}, {'username': 'AlxTYW', 'url': 'https://twitter.com/AlxTYW', 'status': 'exists'}, {'username': 'Alx_TYW', 'url': 'https://twitter.com/Alx_TYW', 'status': 'exists'}, {'username': 'Alx_TYW_official', 'url': 'https://twitter.com/Alx_TYW_official', 'status': 'exists'}]
+
+[PUBLIC_APIS]
+  No data found
