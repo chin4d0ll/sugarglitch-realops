@@ -1,0 +1,5777 @@
+{
+  "monitoring_session": {
+    "target": "Alx_TYW",
+    "profile": "alx.trading",
+    "start_time": "2025-06-24T18:24:08.144198",
+    "report_number": 10
+  },
+  "live_data": {
+    "messages": [
+      {
+        "username": "ALX_TYW",
+        "text": "⚠️ ALX_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:14:08.090729",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:14:08.091439",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📊 alx_crypto: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:14:08.091485",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📊 alx_tyw: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:14:13.097067",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🎯 alxtrading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:14:13.097164",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚠️ alex_trading: Market volatility warning",
+        "timestamp": "2025-06-24T18:14:18.098292",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚡ alx_crypto: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:14:18.098365",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "📊 Alx_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:14:23.098842",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📈 alx_tyw: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:14:23.098948",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "💰 ALX_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:14:23.098998",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🎯 alx_tyw: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:14:28.103349",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📊 alx.trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:14:28.103426",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "🔥 Alx_TYW: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:14:33.108663",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚡ alxtrading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:14:33.108756",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚡ ALX_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:14:38.109668",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:14:38.109749",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ Alx_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:14:43.115108",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:14:43.115226",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "💰 alxtrading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:14:43.115261",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "🔥 ALX_TYW: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:14:48.117386",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🔥 alx_crypto: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:14:48.117470",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "💰 ALX_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:14:53.118623",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "📊 Alx_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:14:58.119358",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "⚡ alx_tyw: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:14:58.119413",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🎯 alxtrading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:14:58.119460",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "📈 alex_trading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:14:58.119496",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚡ alx_crypto: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:14:58.119539",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🎯 alx_tyw: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:15:03.120023",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📊 alx.trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:15:03.120096",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📈 alx_tyw: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:15:08.120542",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📊 alx_crypto: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:15:08.121070",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚡ ALX_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:15:13.126020",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:15:13.126101",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📈 alx_crypto: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:15:13.126143",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "⚠️ alx_tyw: Market volatility warning",
+        "timestamp": "2025-06-24T18:15:18.126634",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "📊 ALX_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:15:18.126740",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "⚠️ alx.trading: Market volatility warning",
+        "timestamp": "2025-06-24T18:15:18.126787",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "📈 Alx_TYW: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:15:23.129012",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "🔥 ALX_TYW: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:15:23.129137",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📊 alx_crypto: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:15:23.129196",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "💰 alx.trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:15:28.132455",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ RISK: High volatility expected in next hour",
+        "timestamp": "2025-06-24T18:15:30.023032",
+        "type": "trading_signal",
+        "source": "realtime_simulation",
+        "priority": "high"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "📊 ALX_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:15:33.136047",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:15:33.136174",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🎯 alx_crypto: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:15:33.136225",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "⚡ alx.trading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:15:38.136972",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:15:43.142053",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚠️ alex_trading: Market volatility warning",
+        "timestamp": "2025-06-24T18:15:43.142393",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🎯 alx_tyw: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:15:48.142874",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🎯 alxtrading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:15:48.142948",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:15:53.143985",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚡ alex_trading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:15:53.144062",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "🔥 HOT: Major whale movement detected",
+        "timestamp": "2025-06-24T18:15:55.138015",
+        "type": "trading_signal",
+        "source": "realtime_simulation",
+        "priority": "high"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚠️ ALX_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:15:58.144516",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:16:03.149088",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🔥 alx_tyw: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:16:08.150169",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "⚡ alx.trading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:16:08.150236",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "⚠️ alx_tyw: Market volatility warning",
+        "timestamp": "2025-06-24T18:16:18.157025",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:16:18.157124",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚠️ ALX_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:16:23.157457",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🎯 alx_crypto: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:16:23.157564",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🔥 alxtrading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:16:28.158160",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🔥 alx_tyw: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:16:33.163522",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:16:38.164311",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🔥 alx_crypto: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:16:38.164379",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "🔥 Alx_TYW: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:16:43.169562",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "📈 alxtrading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:16:43.169643",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:16:48.171798",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:16:53.172155",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚠️ alex_trading: Market volatility warning",
+        "timestamp": "2025-06-24T18:16:58.173748",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "🔥 Alx_TYW: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:17:03.175714",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📊 alx_tyw: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:17:08.176559",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🔥 alx.trading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:17:08.176669",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📊 alx_crypto: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:17:08.176744",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:17:13.182059",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ Alx_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:17:18.182683",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:17:18.182757",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:17:18.182790",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:17:18.182820",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚡ ALX_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:17:23.183187",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:17:23.183276",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚠️ ALX_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:17:28.183782",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📈 alx_crypto: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:17:28.183836",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "💰 Alx_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:17:33.185031",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "⚡ alx_tyw: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:17:33.185119",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "🎯 ALX_TYW: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:17:33.185167",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚡ alx_crypto: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:17:43.190861",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "💰 ALX_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:17:48.191424",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:17:48.191507",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "📊 ALX_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:17:53.193195",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "💰 alxtrading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:17:53.193446",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📈 alx_crypto: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:17:53.193574",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:17:58.196988",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📊 alx_crypto: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:17:58.197083",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:18:03.202047",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "📊 ALX_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:18:08.202434",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "📊 alex_trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:18:08.202507",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:18:13.207729",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📈 alx.trading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:18:13.207843",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚡ Alx_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:18:23.211298",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🎯 alx_tyw: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:18:23.211381",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "📈 SIGNAL: Long position recommended on BTC",
+        "timestamp": "2025-06-24T18:18:29.836161",
+        "type": "trading_signal",
+        "source": "realtime_simulation",
+        "priority": "high"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📊 alx.trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:18:33.215431",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🔥 alex_trading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:18:33.215519",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🔥 alx_crypto: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:18:48.221392",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "📈 Alx_TYW: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:18:53.223369",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🎯 alx_crypto: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:18:53.223476",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "💰 Alx_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:19:03.230566",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "⚠️ alx.trading: Market volatility warning",
+        "timestamp": "2025-06-24T18:19:03.230665",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "💰 alxtrading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:19:03.230712",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ Alx_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:19:08.231819",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:19:08.231901",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "⚡ alx.trading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:19:13.237169",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:19:13.237269",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📊 alx.trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:19:18.238320",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚡ alex_trading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:19:18.238407",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "📈 ALX_TYW: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:19:23.239986",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚡ Alx_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:19:28.240352",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📈 alx_tyw: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:19:28.240414",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:19:33.245033",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:19:38.248003",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚡ alx_crypto: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:19:38.248108",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🔥 alex_trading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:19:43.253344",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚠️ alx_crypto: Market volatility warning",
+        "timestamp": "2025-06-24T18:19:43.253459",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ RISK: High volatility expected in next hour",
+        "timestamp": "2025-06-24T18:19:47.793260",
+        "type": "trading_signal",
+        "source": "realtime_simulation",
+        "priority": "high"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:19:53.254612",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:19:53.254707",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "📈 alex_trading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:19:53.254782",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🎯 alx_tyw: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:20:03.258843",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "💰 alx_crypto: New position opened in crypto",
+        "timestamp": "2025-06-24T18:20:03.258953",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🔥 alx_tyw: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:08.259968",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚠️ ALX_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:20:08.260041",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🎯 alx_crypto: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:20:08.260110",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "📈 Alx_TYW: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:20:13.264033",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🔥 alx_tyw: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:13.264127",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🔥 alx_crypto: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:13.264194",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:20:18.265348",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚡ ALX_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:20:23.265781",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "💰 alx_crypto: New position opened in crypto",
+        "timestamp": "2025-06-24T18:20:23.265874",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🎯 alx_tyw: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:20:28.266380",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "🔥 ALX_TYW: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:28.266440",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📊 alx_tyw: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:20:33.271747",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚡ alex_trading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:20:33.271846",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚡ Alx_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:20:38.272704",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🔥 alx_tyw: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:38.272764",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🔥 alx.trading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:38.272814",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "💰 alx.trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:20:48.278591",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🔥 alex_trading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:48.278661",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:20:53.279124",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🔥 alx.trading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:53.279216",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "📈 alex_trading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:20:53.279280",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:20:58.279872",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🔥 alxtrading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:20:58.279980",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "📈 alex_trading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:20:58.280047",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "💰 Alx_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:21:03.282634",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚠️ ALX_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:21:03.282735",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "🎯 Alx_TYW: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:21:08.283539",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "💰 ALX_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:21:08.283613",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:21:08.283665",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:21:13.288991",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚠️ ALX_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:21:13.289093",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🔥 alxtrading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:21:13.289159",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "⚠️ alx_tyw: Market volatility warning",
+        "timestamp": "2025-06-24T18:21:18.290979",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "📊 ALX_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:21:18.291057",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "🎯 ALX_TYW: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:21:23.292342",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🎯 alxtrading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:21:23.292441",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:21:23.292500",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚠️ alx_crypto: Market volatility warning",
+        "timestamp": "2025-06-24T18:21:23.292548",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🎯 alx_crypto: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:21:28.293379",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚡ QUICK: Ethereum showing bullish pattern",
+        "timestamp": "2025-06-24T18:21:28.872015",
+        "type": "trading_signal",
+        "source": "realtime_simulation",
+        "priority": "high"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚠️ alex_trading: Market volatility warning",
+        "timestamp": "2025-06-24T18:21:33.298691",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📈 alx_crypto: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:21:33.298792",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "⚠️ alx_tyw: Market volatility warning",
+        "timestamp": "2025-06-24T18:21:38.299536",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "💰 ALX_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:21:38.299630",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:21:38.299661",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:21:38.299691",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚡ Alx_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:21:43.300121",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🔥 alxtrading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:21:48.300708",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:21:53.301018",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚡ alex_trading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:21:53.301114",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🔥 alx_tyw: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:22:03.303036",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ Alx_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:22:08.303981",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "💰 alx_tyw: New position opened in crypto",
+        "timestamp": "2025-06-24T18:22:08.304051",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "🔥 ALX_TYW: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:22:08.304092",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "📊 alxtrading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:22:08.304130",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📈 alx.trading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:22:13.309316",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "📊 ALX_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:22:18.310395",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:22:18.310454",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚡ alx_crypto: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:22:18.310485",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "📈 Alx_TYW: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:22:23.310874",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "⚡ alx.trading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:22:23.310986",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "💰 alxtrading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:22:23.311043",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🔥 alex_trading: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:22:23.311080",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚡ QUICK: Ethereum showing bullish pattern",
+        "timestamp": "2025-06-24T18:22:27.167006",
+        "type": "trading_signal",
+        "source": "realtime_simulation",
+        "priority": "high"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ Alx_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:22:28.311773",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "💰 ALX_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:22:28.311857",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:22:28.311934",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚠️ alx_crypto: Market volatility warning",
+        "timestamp": "2025-06-24T18:22:33.319396",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚡ ALX_TYW: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:22:38.320695",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:22:38.320797",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🔥 alx_tyw: Portfolio up 15% this week",
+        "timestamp": "2025-06-24T18:22:43.326031",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📊 alx.trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:22:43.326123",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:22:43.326166",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚠️ alx_crypto: Market volatility warning",
+        "timestamp": "2025-06-24T18:22:43.326200",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ Alx_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:22:48.326712",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "📈 ALX_TYW: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:22:48.326784",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "📈 alex_trading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:22:48.326842",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "🎯 alx_crypto: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:22:48.326888",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "📊 alxtrading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:22:53.327531",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "💰 alex_trading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:22:53.327617",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:22:58.328128",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "📊 alx_crypto: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:22:58.328193",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:23:03.330017",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🎯 alxtrading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:23:03.330090",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:23:03.330129",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "ALX_TYW",
+        "text": "⚠️ ALX_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:23:08.330439",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "📈 alxtrading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:23:08.330515",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "💰 alx_crypto: New position opened in crypto",
+        "timestamp": "2025-06-24T18:23:08.330562",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📊 alx.trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:23:13.335751",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚡ alxtrading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:23:13.335836",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "📊 alx.trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:23:18.336378",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "📈 alex_trading: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:23:18.336459",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_crypto",
+        "text": "⚠️ alx_crypto: Market volatility warning",
+        "timestamp": "2025-06-24T18:23:18.336500",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📈 alx_tyw: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:23:23.338302",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "🎯 alxtrading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:23:23.338409",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "📊 alex_trading: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:23:23.338441",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📈 alx_tyw: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:23:28.340225",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "💰 alxtrading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:23:28.340305",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📊 alx_tyw: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:23:33.345560",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "⚠️ alex_trading: Market volatility warning",
+        "timestamp": "2025-06-24T18:23:33.345647",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "📊 Alx_TYW: Technical analysis update posted",
+        "timestamp": "2025-06-24T18:23:38.346288",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "🎯 alx_tyw: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:23:38.346369",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "💰 alxtrading: New position opened in crypto",
+        "timestamp": "2025-06-24T18:23:38.346426",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:23:38.346480",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "⚠️ Alx_TYW: Market volatility warning",
+        "timestamp": "2025-06-24T18:23:48.349576",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx.trading",
+        "text": "🎯 alx.trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:23:48.349673",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "Alx_TYW",
+        "text": "💰 Alx_TYW: New position opened in crypto",
+        "timestamp": "2025-06-24T18:23:53.350030",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚠️ alxtrading: Market volatility warning",
+        "timestamp": "2025-06-24T18:23:53.350159",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alx_tyw",
+        "text": "📈 alx_tyw: BTC breaking resistance at $67,500!",
+        "timestamp": "2025-06-24T18:23:58.350821",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alex_trading",
+        "text": "🎯 alex_trading: Target hit! Closing profitable trade",
+        "timestamp": "2025-06-24T18:23:58.350941",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      },
+      {
+        "username": "alxtrading",
+        "text": "⚡ alxtrading: Quick scalp opportunity on ETH",
+        "timestamp": "2025-06-24T18:24:03.356020",
+        "type": "realtime_message",
+        "source": "live_monitoring",
+        "priority": "normal"
+      }
+    ],
+    "activity_log": [
+      {
+        "timestamp": "2025-06-24T18:14:08.091391",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚠️ ALX_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091455",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091498",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📊 alx_crypto: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091597",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091627",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091655",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091682",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091709",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091736",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:08.091764",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:13.097103",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📊 alx_tyw: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:13.097174",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🎯 alxtrading: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:18.097088",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:18.097114",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:18.097135",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:18.098324",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚠️ alex_trading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:18.098391",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚡ alx_crypto: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:23.098874",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "📊 Alx_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:23.098967",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📈 alx_tyw: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:23.099007",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "💰 ALX_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:28.103234",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:28.103299",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:28.103376",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🎯 alx_tyw: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:28.103443",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📊 alx.trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:33.108700",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "🔥 Alx_TYW: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:33.108781",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚡ alxtrading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.098103",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "Message posted"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.104312",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.104345",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.104373",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.104398",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.104421",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.104445",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.109703",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚡ ALX_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:38.109764",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:43.115146",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ Alx_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:43.115239",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:43.115270",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "💰 alxtrading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:48.107095",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:48.107128",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:48.107150",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:48.107174",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:48.107193",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:48.107208",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:48.117422",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "🔥 ALX_TYW: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:48.117485",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🔥 alx_crypto: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:53.103455",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "Poll created"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:53.118651",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "💰 ALX_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.112146",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.112166",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.112190",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.112205",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.112227",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.119379",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "📊 Alx_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.119433",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "⚡ alx_tyw: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.119472",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🎯 alxtrading: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.119515",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "📈 alex_trading: BTC breaking resistance at $67,500...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:14:58.119555",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚡ alx_crypto: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:03.120049",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🎯 alx_tyw: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:03.120107",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📊 alx.trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:08.105810",
+        "event": "channel_activity",
+        "channel": "alx_crypto",
+        "activity": "Poll created"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:08.113238",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:08.113280",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:08.113313",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:08.113342",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:08.113372",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:08.120577",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📈 alx_tyw: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:08.121088",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📊 alx_crypto: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:13.126052",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚡ ALX_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:13.126114",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:13.126160",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📈 alx_crypto: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:18.122329",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:18.122376",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:18.122411",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:18.122443",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:18.122477",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:18.126672",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "⚠️ alx_tyw: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:18.126752",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "📊 ALX_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:18.126800",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "⚠️ alx.trading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:23.129051",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "📈 Alx_TYW: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:23.129151",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "🔥 ALX_TYW: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:23.129204",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📊 alx_crypto: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:28.128079",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:28.128130",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:28.128162",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:28.128188",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:28.132484",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "💰 alx.trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:30.023076",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ RISK: High volatility expected in next hour...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:33.136082",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "📊 ALX_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:33.136187",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:33.136236",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🎯 alx_crypto: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:38.128644",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:38.128685",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:38.128714",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:38.128742",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:38.128770",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:38.128793",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:38.137010",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "⚡ alx.trading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:43.142097",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:43.142414",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚠️ alex_trading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:48.134675",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:48.134721",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:48.142894",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🎯 alx_tyw: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:48.142961",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🎯 alxtrading: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:53.144011",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:53.144075",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚡ alex_trading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:55.138047",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "🔥 HOT: Major whale movement detected...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:58.138289",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:58.138351",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:15:58.144553",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚠️ ALX_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:03.149125",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:08.121697",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "Poll created"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:08.138875",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:08.138929",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:08.138966",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:08.139001",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:08.139030",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:08.150197",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🔥 alx_tyw: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:08.150256",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "⚡ alx.trading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:18.144120",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:18.144153",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:18.144177",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:18.157068",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "⚠️ alx_tyw: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:18.157142",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:23.157499",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚠️ ALX_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:23.157578",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🎯 alx_crypto: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:28.149824",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:28.149875",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:28.149904",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:28.149964",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:28.149999",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:28.158187",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🔥 alxtrading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:33.163559",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🔥 alx_tyw: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.151943",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.151988",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.152021",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.152053",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.152089",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.152127",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.152163",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.164339",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:38.164402",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🔥 alx_crypto: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:43.169594",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "🔥 Alx_TYW: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:43.169661",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "📈 alxtrading: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:48.157504",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:48.157550",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:48.157585",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:48.157612",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:48.157637",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:48.171823",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:53.172185",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:58.163530",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:58.163569",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:16:58.173778",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚠️ alex_trading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:03.175758",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "🔥 Alx_TYW: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.164252",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.164287",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.164312",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.164334",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.164358",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.164379",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.176591",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📊 alx_tyw: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.176691",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🔥 alx.trading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:08.176757",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📊 alx_crypto: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:13.182099",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.171429",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.171458",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.171477",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.171494",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.171508",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.171526",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.171542",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.182712",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ Alx_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.182767",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.182801",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:18.182827",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:23.146015",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "Poll created"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:23.183219",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚡ ALX_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:23.183295",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:28.177579",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:28.177610",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:28.177631",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:28.177647",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:28.183806",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚠️ ALX_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:28.183856",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📈 alx_crypto: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:33.185066",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "💰 Alx_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:33.185141",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "⚡ alx_tyw: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:33.185177",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "🎯 ALX_TYW: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:38.178522",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:38.178567",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:43.190906",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚡ alx_crypto: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.186092",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.186136",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.186171",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.186199",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.186222",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.186244",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.186266",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.191453",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "💰 ALX_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:48.191522",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:53.193225",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "📊 ALX_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:53.193461",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "💰 alxtrading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:53.193597",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📈 alx_crypto: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:58.190131",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:58.190195",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:58.190255",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:58.190312",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:58.190380",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:58.197017",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:17:58.197097",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📊 alx_crypto: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:03.202081",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:08.156713",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "File shared"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:08.191053",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:08.191109",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:08.191161",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:08.191218",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:08.191256",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:08.202461",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "📊 ALX_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:08.202521",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "📊 alex_trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:13.207765",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:13.207868",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📈 alx.trading: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:18.195084",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:18.195118",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:18.195147",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:18.195165",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:18.195183",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:23.211330",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚡ Alx_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:23.211395",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🎯 alx_tyw: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:28.200093",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:28.200125",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:28.200145",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:28.200175",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:28.200204",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:29.836198",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "📈 SIGNAL: Long position recommended on BTC...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:33.215462",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📊 alx.trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:33.215538",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🔥 alex_trading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:38.201506",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:38.201576",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:38.203945",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:38.203993",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:38.204024",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:38.204061",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:48.210074",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:48.210110",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:48.210138",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:48.210166",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:48.210192",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:48.210217",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:48.221427",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🔥 alx_crypto: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:53.170127",
+        "event": "channel_activity",
+        "channel": "alx_crypto",
+        "activity": "Poll created"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:53.170162",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "New member joined"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:53.223406",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "📈 Alx_TYW: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:53.223495",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🎯 alx_crypto: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:58.211325",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:58.211364",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:58.211390",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:58.211412",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:18:58.211437",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:03.230600",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "💰 Alx_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:03.230684",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "⚠️ alx.trading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:03.230724",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "💰 alxtrading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:08.170951",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "Pinned message updated"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:08.212343",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:08.212382",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:08.212412",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:08.212439",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:08.231850",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ Alx_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:08.231931",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:13.237207",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "⚡ alx.trading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:13.237280",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:18.218837",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:18.218870",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:18.218890",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:18.218956",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:18.218989",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:18.219008",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:18.238351",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📊 alx.trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:18.238428",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚡ alex_trading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:23.171725",
+        "event": "channel_activity",
+        "channel": "alx_crypto",
+        "activity": "Message posted"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:23.240030",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "📈 ALX_TYW: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:28.224054",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:28.224092",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:28.224119",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:28.224144",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:28.224168",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:28.224193",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:28.240380",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚡ Alx_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:28.240434",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📈 alx_tyw: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:33.245060",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.178257",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "Admin activity"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.224580",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.224675",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.224705",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.224724",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.224747",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.224774",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.248035",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:38.248128",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚡ alx_crypto: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:43.253387",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🔥 alex_trading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:43.253479",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚠️ alx_crypto: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:47.793297",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ RISK: High volatility expected in next hour...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:48.225980",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:48.226013",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:48.226038",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:48.226063",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:48.226085",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:53.184376",
+        "event": "channel_activity",
+        "channel": "alx_crypto",
+        "activity": "File shared"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:53.254645",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:53.254726",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:53.254819",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "📈 alex_trading: BTC breaking resistance at $67,500...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:58.232090",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:58.232136",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:58.232169",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:58.232198",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:58.232227",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:58.232257",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:19:58.232283",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:03.258872",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🎯 alx_tyw: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:03.258967",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "💰 alx_crypto: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.185393",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "Pinned message updated"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.232605",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.232653",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.232695",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.232741",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.232781",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.259999",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🔥 alx_tyw: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.260065",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚠️ ALX_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:08.260128",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🎯 alx_crypto: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:13.264072",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "📈 Alx_TYW: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:13.264146",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🔥 alx_tyw: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:13.264213",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🔥 alx_crypto: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:18.236111",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:18.236148",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:18.236183",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:18.265373",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:23.265819",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚡ ALX_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:23.265884",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "💰 alx_crypto: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:28.242139",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:28.242197",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:28.242229",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:28.266403",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🎯 alx_tyw: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:28.266463",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "🔥 ALX_TYW: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:33.271778",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📊 alx_tyw: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:33.271872",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚡ alex_trading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.244407",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.244436",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.244462",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.244493",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.244524",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.244552",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.272730",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚡ Alx_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.272780",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🔥 alx_tyw: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:38.272830",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🔥 alx.trading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:48.251266",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:48.251335",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:48.251372",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:48.251404",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:48.278614",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "💰 alx.trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:48.278685",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🔥 alex_trading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:53.196866",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "Pinned message updated"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:53.279157",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:53.279236",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🔥 alx.trading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:53.279297",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "📈 alex_trading: BTC breaking resistance at $67,500...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:58.257543",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:58.257590",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:58.257625",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:58.257662",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:58.257697",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:58.279897",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:58.280003",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🔥 alxtrading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:20:58.280066",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "📈 alex_trading: BTC breaking resistance at $67,500...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:03.282667",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "💰 Alx_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:03.282755",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚠️ ALX_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:08.259254",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:08.259298",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:08.259331",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:08.259365",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:08.283566",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "🎯 Alx_TYW: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:08.283628",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "💰 ALX_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:08.283687",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:13.289028",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:13.289121",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚠️ ALX_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:13.289185",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🔥 alxtrading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:18.263589",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:18.263640",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:18.263675",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:18.263708",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:18.263744",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:18.263780",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:18.291010",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "⚠️ alx_tyw: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:18.291073",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "📊 ALX_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:23.204091",
+        "event": "channel_activity",
+        "channel": "alex_crypto_channel",
+        "activity": "File shared"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:23.292373",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "🎯 ALX_TYW: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:23.292459",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🎯 alxtrading: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:23.292516",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:23.292573",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚠️ alx_crypto: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:28.269083",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:28.269120",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:28.269147",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:28.269173",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:28.269205",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:28.269232",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:28.293401",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🎯 alx_crypto: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:28.872054",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚡ QUICK: Ethereum showing bullish pattern...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:33.298731",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚠️ alex_trading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:33.298812",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📈 alx_crypto: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.270271",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.270296",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.270314",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.270330",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.270341",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.299573",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "⚠️ alx_tyw: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.299641",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "💰 ALX_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.299672",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:38.299699",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:43.300157",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚡ Alx_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:48.276443",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:48.276468",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:48.276516",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:48.276548",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:48.300738",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🔥 alxtrading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:53.301048",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:53.301142",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚡ alex_trading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:58.282403",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:58.282442",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:58.282475",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:58.282503",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:21:58.282536",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:03.303076",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🔥 alx_tyw: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:08.284785",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:08.284810",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:08.284829",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:08.284851",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:08.304008",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ Alx_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:08.304064",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "💰 alx_tyw: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:08.304106",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "🔥 ALX_TYW: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:08.304141",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "📊 alxtrading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:13.309353",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📈 alx.trading: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:18.287189",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:18.287212",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:18.287225",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:18.287237",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:18.287253",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:18.310418",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "📊 ALX_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:18.310463",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:18.310500",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚡ alx_crypto: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:23.216649",
+        "event": "channel_activity",
+        "channel": "alx_crypto",
+        "activity": "Pinned message updated"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:23.310931",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "📈 Alx_TYW: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:23.311004",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "⚡ alx.trading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:23.311054",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "💰 alxtrading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:23.311095",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🔥 alex_trading: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:27.167039",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚡ QUICK: Ethereum showing bullish pattern...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:28.289462",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:28.289508",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:28.289543",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:28.289575",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:28.311806",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ Alx_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:28.311874",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "💰 ALX_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:28.311948",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:33.319436",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚠️ alx_crypto: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:38.291344",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:38.291387",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:38.291416",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:38.291443",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:38.291472",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:38.291496",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:38.320735",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚡ ALX_TYW: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:38.320809",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:43.326066",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🔥 alx_tyw: Portfolio up 15% this week...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:43.326143",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📊 alx.trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:43.326179",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:43.326210",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚠️ alx_crypto: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.297413",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.297456",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.297495",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.297526",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.297558",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.326740",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ Alx_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.326808",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "📈 ALX_TYW: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.326860",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "📈 alex_trading: BTC breaking resistance at $67,500...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:48.326902",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "🎯 alx_crypto: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:53.228270",
+        "event": "channel_activity",
+        "channel": "alx_crypto",
+        "activity": "New member joined"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:53.327554",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "📊 alxtrading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:53.327634",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "💰 alex_trading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:58.302891",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:58.302957",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:58.328157",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:22:58.328209",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "📊 alx_crypto: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:03.330042",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:03.330100",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🎯 alxtrading: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:03.330139",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.303244",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.303272",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.303292",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.303310",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.303326",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.303341",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.330471",
+        "event": "new_message",
+        "username": "ALX_TYW",
+        "text_preview": "⚠️ ALX_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.330533",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "📈 alxtrading: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:08.330572",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "💰 alx_crypto: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:13.335780",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📊 alx.trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:13.335854",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚡ alxtrading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:18.309126",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:18.309152",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:18.309174",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:18.309192",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:18.309206",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:18.336404",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "📊 alx.trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:18.336475",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "📈 alex_trading: BTC breaking resistance at $67,500...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:18.336513",
+        "event": "new_message",
+        "username": "alx_crypto",
+        "text_preview": "⚠️ alx_crypto: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:23.338340",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📈 alx_tyw: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:23.338418",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "🎯 alxtrading: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:23.338459",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "📊 alex_trading: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:28.312832",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:28.312883",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:28.312939",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "busy"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:28.312989",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:28.313023",
+        "event": "status_change",
+        "username": "alxtrading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:28.313055",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:28.340256",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📈 alx_tyw: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:28.340322",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "💰 alxtrading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:33.345591",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📊 alx_tyw: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:33.345662",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "⚠️ alex_trading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.314013",
+        "event": "status_change",
+        "username": "Alx_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.314046",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.314074",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.314098",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.314119",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.346315",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "📊 Alx_TYW: Technical analysis update posted...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.346386",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "🎯 alx_tyw: Target hit! Closing profitable trade...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.346442",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "💰 alxtrading: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:38.346497",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:48.320296",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:48.320347",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:48.320386",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "online"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:48.349609",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "⚠️ Alx_TYW: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:48.349692",
+        "event": "new_message",
+        "username": "alx.trading",
+        "text_preview": "🎯 alx.trading: Target hit! Closing profitable trad...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:53.350077",
+        "event": "new_message",
+        "username": "Alx_TYW",
+        "text_preview": "💰 Alx_TYW: New position opened in crypto...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:53.350187",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚠️ alxtrading: Market volatility warning...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:58.326514",
+        "event": "status_change",
+        "username": "alx_tyw",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:58.326555",
+        "event": "status_change",
+        "username": "ALX_TYW",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:58.326577",
+        "event": "status_change",
+        "username": "alx.trading",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:58.326603",
+        "event": "status_change",
+        "username": "alex_trading",
+        "status": "offline"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:58.326633",
+        "event": "status_change",
+        "username": "alx_crypto",
+        "status": "away"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:58.350853",
+        "event": "new_message",
+        "username": "alx_tyw",
+        "text_preview": "📈 alx_tyw: BTC breaking resistance at $67,500!...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:23:58.350955",
+        "event": "new_message",
+        "username": "alex_trading",
+        "text_preview": "🎯 alex_trading: Target hit! Closing profitable tra...",
+        "alert_level": "normal"
+      },
+      {
+        "timestamp": "2025-06-24T18:24:03.356053",
+        "event": "new_message",
+        "username": "alxtrading",
+        "text_preview": "⚡ alxtrading: Quick scalp opportunity on ETH...",
+        "alert_level": "normal"
+      }
+    ],
+    "online_status": {
+      "Alx_TYW": "offline",
+      "alx_tyw": "offline",
+      "ALX_TYW": "offline",
+      "alx.trading": "away",
+      "alxtrading": "online",
+      "alex_trading": "offline",
+      "alx_crypto": "away"
+    },
+    "typing_indicators": [
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:14:13.097249",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:14:33.108850",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:14:53.118721",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:14:58.119594",
+        "event": "typing"
+      },
+      {
+        "username": "ALX_TYW",
+        "timestamp": "2025-06-24T18:15:08.121167",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:15:18.126861",
+        "event": "typing"
+      },
+      {
+        "username": "ALX_TYW",
+        "timestamp": "2025-06-24T18:15:23.129261",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:15:28.132556",
+        "event": "typing"
+      },
+      {
+        "username": "alex_trading",
+        "timestamp": "2025-06-24T18:15:48.143018",
+        "event": "typing"
+      },
+      {
+        "username": "alx_crypto",
+        "timestamp": "2025-06-24T18:15:58.144625",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:16:53.172276",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:16:58.173843",
+        "event": "typing"
+      },
+      {
+        "username": "alx_crypto",
+        "timestamp": "2025-06-24T18:17:03.175891",
+        "event": "typing"
+      },
+      {
+        "username": "alx.trading",
+        "timestamp": "2025-06-24T18:17:08.176838",
+        "event": "typing"
+      },
+      {
+        "username": "alx_crypto",
+        "timestamp": "2025-06-24T18:17:13.182228",
+        "event": "typing"
+      },
+      {
+        "username": "ALX_TYW",
+        "timestamp": "2025-06-24T18:17:23.183359",
+        "event": "typing"
+      },
+      {
+        "username": "alx.trading",
+        "timestamp": "2025-06-24T18:17:28.183888",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:17:43.191017",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:17:53.193730",
+        "event": "typing"
+      },
+      {
+        "username": "alex_trading",
+        "timestamp": "2025-06-24T18:18:13.207956",
+        "event": "typing"
+      },
+      {
+        "username": "alx.trading",
+        "timestamp": "2025-06-24T18:18:18.211048",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:18:28.212386",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:18:33.215590",
+        "event": "typing"
+      },
+      {
+        "username": "alex_trading",
+        "timestamp": "2025-06-24T18:18:43.221053",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:18:58.225657",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:19:03.230775",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:19:13.237332",
+        "event": "typing"
+      },
+      {
+        "username": "alx.trading",
+        "timestamp": "2025-06-24T18:19:18.238484",
+        "event": "typing"
+      },
+      {
+        "username": "alex_trading",
+        "timestamp": "2025-06-24T18:19:43.253539",
+        "event": "typing"
+      },
+      {
+        "username": "alx_crypto",
+        "timestamp": "2025-06-24T18:19:53.254869",
+        "event": "typing"
+      },
+      {
+        "username": "alxtrading",
+        "timestamp": "2025-06-24T18:19:58.255473",
+        "event": "typing"
+      },
+      {
+        "username": "alxtrading",
+        "timestamp": "2025-06-24T18:20:03.259031",
+        "event": "typing"
+      },
+      {
+        "username": "alx.trading",
+        "timestamp": "2025-06-24T18:20:18.265453",
+        "event": "typing"
+      },
+      {
+        "username": "alx.trading",
+        "timestamp": "2025-06-24T18:20:23.265957",
+        "event": "typing"
+      },
+      {
+        "username": "alxtrading",
+        "timestamp": "2025-06-24T18:20:28.266540",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:20:43.278035",
+        "event": "typing"
+      },
+      {
+        "username": "alx_crypto",
+        "timestamp": "2025-06-24T18:20:48.278742",
+        "event": "typing"
+      },
+      {
+        "username": "ALX_TYW",
+        "timestamp": "2025-06-24T18:20:53.279353",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:21:08.283757",
+        "event": "typing"
+      },
+      {
+        "username": "alex_trading",
+        "timestamp": "2025-06-24T18:21:13.289252",
+        "event": "typing"
+      },
+      {
+        "username": "alex_trading",
+        "timestamp": "2025-06-24T18:21:18.291148",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:21:23.292637",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:21:33.298864",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:21:53.301208",
+        "event": "typing"
+      },
+      {
+        "username": "ALX_TYW",
+        "timestamp": "2025-06-24T18:21:58.301713",
+        "event": "typing"
+      },
+      {
+        "username": "alxtrading",
+        "timestamp": "2025-06-24T18:22:03.303168",
+        "event": "typing"
+      },
+      {
+        "username": "alx_crypto",
+        "timestamp": "2025-06-24T18:22:33.319690",
+        "event": "typing"
+      },
+      {
+        "username": "ALX_TYW",
+        "timestamp": "2025-06-24T18:22:43.326251",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:22:48.326977",
+        "event": "typing"
+      },
+      {
+        "username": "alex_trading",
+        "timestamp": "2025-06-24T18:22:53.327697",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:22:58.328278",
+        "event": "typing"
+      },
+      {
+        "username": "alex_trading",
+        "timestamp": "2025-06-24T18:23:03.330192",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:23:18.336552",
+        "event": "typing"
+      },
+      {
+        "username": "alx_tyw",
+        "timestamp": "2025-06-24T18:23:28.340386",
+        "event": "typing"
+      },
+      {
+        "username": "Alx_TYW",
+        "timestamp": "2025-06-24T18:23:43.349045",
+        "event": "typing"
+      },
+      {
+        "username": "ALX_TYW",
+        "timestamp": "2025-06-24T18:23:48.349754",
+        "event": "typing"
+      },
+      {
+        "username": "ALX_TYW",
+        "timestamp": "2025-06-24T18:23:53.350264",
+        "event": "typing"
+      },
+      {
+        "username": "alx.trading",
+        "timestamp": "2025-06-24T18:23:58.351011",
+        "event": "typing"
+      },
+      {
+        "username": "alx.trading",
+        "timestamp": "2025-06-24T18:24:03.356134",
+        "event": "typing"
+      }
+    ]
+  },
+  "statistics": {
+    "total_messages": 241,
+    "total_activities": 547,
+    "monitoring_targets": 7,
+    "channels_monitored": 2
+  }
+}

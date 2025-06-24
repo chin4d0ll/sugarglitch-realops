@@ -1,0 +1,56 @@
+{
+  "analysis_time": "2025-06-24T18:38:41.412166",
+  "source_report": "/workspaces/sugarglitch-realops/extracted_personal_data/reports/extraction_summary_20250624_183654.json",
+  "summary": {
+    "total_files_processed": 5,
+    "images_downloaded": 2,
+    "total_image_size_mb": 1.0127105712890625,
+    "unique_emails_found": 3,
+    "valid_phones_found": 20,
+    "interesting_names_found": 37
+  },
+  "emails": [
+    "alexander_fleming@gmail.com",
+    "lexander_fleming@gmail.com",
+    "ander_fleming@gmail.com"
+  ],
+  "phones": [
+    "20.275308",
+    "33.643275",
+    "58.461833",
+    "58.221508",
+    "58.226656",
+    "58.233621",
+    "1749233354",
+    "1749160264",
+    "1749161657",
+    "58.235057"
+  ],
+  "names": [
+    "alx.trading",
+    "Alx_TYW",
+    "alx_crypto",
+    "alex_crypto_channel",
+    "Google Trust Services",
+    "WE1",
+    "Let's Encrypt",
+    "Luxembourg",
+    "Byborg IP S.a r.l.",
+    "Greater Manchester",
+    "Salford",
+    "Sectigo Limited",
+    "Amazon",
+    "Amazon RSA 2048 M02",
+    "Dali"
+  ],
+  "images": [
+    {
+      "filename": "stealth_osint_report_20250619_200615_1_5d1fcb0e.png",
+      "size_kb": 518
+    },
+    {
+      "filename": "stealth_osint_report_20250619_200615_2_5d1fcb0e.png",
+      "size_kb": 518
+    }
+  ]
+}

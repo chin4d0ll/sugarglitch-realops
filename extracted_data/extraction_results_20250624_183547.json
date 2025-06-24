@@ -1,0 +1,57 @@
+{
+  "emails_found": {
+    "alx.trading@gmail.com": [
+      {
+        "file": "/workspaces/sugarglitch-realops/legendary_instagram_data_1750367143.json",
+        "type": "json"
+      },
+      {
+        "file": "/workspaces/sugarglitch-realops/telegram_intelligence_Alx_TYW_1750786438.json",
+        "type": "json"
+      }
+    ],
+    "alexander_fleming@gmail.com": [
+      {
+        "file": "/workspaces/sugarglitch-realops/spiderfoot_adult_analysis_alx.trading_20250624_173758.json",
+        "type": "json"
+      }
+    ]
+  },
+  "images_found": [
+    {
+      "file": "/workspaces/sugarglitch-realops/deep_domain_analysis_20250624_180014.json",
+      "type": "json_with_images"
+    },
+    {
+      "file": "/workspaces/sugarglitch-realops/stealth_osint_report_20250619_200615.json",
+      "type": "json_with_images"
+    }
+  ],
+  "personal_data": {},
+  "files_scanned": [
+    "/workspaces/sugarglitch-realops/brute_targets.json",
+    "/workspaces/sugarglitch-realops/ULTIMATE_CLEANUP_SUMMARY.json",
+    "/workspaces/sugarglitch-realops/deep_osint_report_20250619_194125.json",
+    "/workspaces/sugarglitch-realops/telegram_realtime_monitoring_Alx_TYW_20250624_183408.json",
+    "/workspaces/sugarglitch-realops/telegram_realtime_monitoring_Alx_TYW_20250624_182908.json",
+    "/workspaces/sugarglitch-realops/deep_osint_report_20250619_200155.json",
+    "/workspaces/sugarglitch-realops/deep_osint_report_20250619_193930.json",
+    "/workspaces/sugarglitch-realops/FINAL_PROJECT_SUMMARY_1750368550.json",
+    "/workspaces/sugarglitch-realops/legendary_instagram_data_1750367143.json",
+    "/workspaces/sugarglitch-realops/spiderfoot_adult_analysis_alx.trading_20250624_173758.json",
+    "/workspaces/sugarglitch-realops/real_telegram_intelligence_Alx_TYW_20250624_175738.json",
+    "/workspaces/sugarglitch-realops/telegram_intelligence_Alx_TYW_1750786438.json",
+    "/workspaces/sugarglitch-realops/FINAL_PROJECT_SUMMARY_1750368883.json",
+    "/workspaces/sugarglitch-realops/FINAL_CLEANUP_SUMMARY.json",
+    "/workspaces/sugarglitch-realops/PROJECT_STRUCTURE.json",
+    "/workspaces/sugarglitch-realops/telegram_realtime_monitoring_Alx_TYW_20250624_182408.json",
+    "/workspaces/sugarglitch-realops/devcontainer.json",
+    "/workspaces/sugarglitch-realops/deep_domain_analysis_20250624_180014.json",
+    "/workspaces/sugarglitch-realops/stealth_osint_report_20250619_200615.json",
+    "/workspaces/sugarglitch-realops/attack_report_20250619_160356.json"
+  ],
+  "scan_time": "2025-06-24T18:35:47.909799",
+  "total_files_scanned": 20,
+  "total_emails_found": 2,
+  "total_images_found": 2
+}
