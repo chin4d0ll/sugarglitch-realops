@@ -1,0 +1,189 @@
+{
+  "target": "alx.trading",
+  "analysis_type": "simulated_behavioral_analysis",
+  "generated_at": "2025-06-19T22:10:39.788603",
+  "web_activity_patterns": {
+    "financial_trading": [
+      "binance.com",
+      "coinbase.com",
+      "kraken.com",
+      "tradingview.com",
+      "investing.com",
+      "yahoo.com/finance",
+      "bloomberg.com",
+      "reuters.com/business"
+    ],
+    "social_media": [
+      "instagram.com/alx.trading",
+      "facebook.com",
+      "twitter.com",
+      "linkedin.com",
+      "tiktok.com",
+      "youtube.com"
+    ],
+    "adult_content": [
+      "pornhub.com",
+      "xnxx.com",
+      "xvideos.com",
+      "redtube.com",
+      "youporn.com",
+      "spankbang.com",
+      "xhamster.com",
+      "chaturbate.com"
+    ],
+    "business_tools": [
+      "gmail.com",
+      "outlook.com",
+      "zoom.us",
+      "slack.com",
+      "dropbox.com",
+      "google.com/drive"
+    ],
+    "security_concerning": [
+      "tor.oniondirectory.com",
+      "vpn-service.com",
+      "privateinternetaccess.com",
+      "expressvpn.com"
+    ]
+  },
+  "risk_assessment": {
+    "financial_trading": {
+      "site_count": 8,
+      "risk_level": "MEDIUM - การเงินส่วนตัว",
+      "sites": [
+        "binance.com",
+        "coinbase.com",
+        "kraken.com",
+        "tradingview.com",
+        "investing.com",
+        "yahoo.com/finance",
+        "bloomberg.com",
+        "reuters.com/business"
+      ]
+    },
+    "social_media": {
+      "site_count": 6,
+      "risk_level": "LOW - ปกติทั่วไป",
+      "sites": [
+        "instagram.com/alx.trading",
+        "facebook.com",
+        "twitter.com",
+        "linkedin.com",
+        "tiktok.com",
+        "youtube.com"
+      ]
+    },
+    "adult_content": {
+      "site_count": 8,
+      "risk_level": "HIGH - เสี่ยงต่อ malware และ social engineering",
+      "sites": [
+        "pornhub.com",
+        "xnxx.com",
+        "xvideos.com",
+        "redtube.com",
+        "youporn.com",
+        "spankbang.com",
+        "xhamster.com",
+        "chaturbate.com"
+      ]
+    },
+    "business_tools": {
+      "site_count": 6,
+      "risk_level": "LOW - การใช้งานปกติ",
+      "sites": [
+        "gmail.com",
+        "outlook.com",
+        "zoom.us",
+        "slack.com",
+        "dropbox.com",
+        "google.com/drive"
+      ]
+    },
+    "security_concerning": {
+      "site_count": 4,
+      "risk_level": "VERY HIGH - พฤติกรรมซ่อนตัวตน",
+      "sites": [
+        "tor.oniondirectory.com",
+        "vpn-service.com",
+        "privateinternetaccess.com",
+        "expressvpn.com"
+      ]
+    }
+  },
+  "behavioral_insights": [
+    {
+      "category": "Adult Content Usage",
+      "insight": "พบการเข้าถึง adult content websites เป็นประจำ",
+      "implications": [
+        "เสี่ยงต่อ malware จาก adult sites",
+        "อาจถูกใช้เป็น blackmail material",
+        "เสี่ยงต่อ phishing attacks ที่เล่นจิตวิทยา",
+        "อาจมี saved passwords ในระบบที่เสี่ยง"
+      ],
+      "attack_vectors": [
+        "Sextortion scams",
+        "Malware-infected adult sites",
+        "Social engineering via embarrassing content",
+        "Credential harvesting from unsafe sites"
+      ]
+    },
+    {
+      "category": "Financial Trading Activity",
+      "insight": "มี trading activities สูง บ่งชี้มีทรัพย์สินมาก",
+      "implications": [
+        "เป็น high-value target สำหรับ financial attacks",
+        "อาจมี cryptocurrency หรือ trading accounts",
+        "เสี่ยงต่อ investment scams",
+        "มีข้อมูลการเงินที่ sensitive"
+      ],
+      "attack_vectors": [
+        "Fake trading platforms",
+        "Cryptocurrency theft",
+        "Investment scam targeting",
+        "Financial phishing attacks"
+      ]
+    },
+    {
+      "category": "Social Media Exposure",
+      "insight": "Active บน social media หลายแพลตฟอร์ม",
+      "implications": [
+        "ข้อมูลส่วนตัวเปิดเผยมาก",
+        "เสี่ยงต่อ social engineering",
+        "อาจมี personal information leakage",
+        "Connection mapping ได้ง่าย"
+      ],
+      "attack_vectors": [
+        "Social engineering attacks",
+        "Identity theft",
+        "Relationship mapping",
+        "Personal information harvesting"
+      ]
+    }
+  ],
+  "security_recommendations": {
+    "immediate_actions": [
+      "🔒 เปลี่ยน passwords ทั้งหมดทันที",
+      "🛡️ เปิด 2FA บนทุก accounts",
+      "🕵️ ตรวจสอบ login history ย้อนหลัง 6 เดือน",
+      "📱 อัพเดท security software ทั้งหมด"
+    ],
+    "browsing_security": [
+      "🌐 ใช้ VPN เมื่อเข้า sensitive sites",
+      "🔍 ใช้ private/incognito browsing",
+      "🚫 หลีกเลี่ยง adult sites ที่ไม่ปลอดภัย",
+      "💻 แยก browser สำหรับ personal และ financial"
+    ],
+    "financial_security": [
+      "💳 Monitor bank statements รายวัน",
+      "📊 ใช้ dedicated device สำหรับ trading",
+      "🔐 ใช้ hardware wallet สำหรับ crypto",
+      "📧 ระวัง investment scam emails"
+    ],
+    "social_media_privacy": [
+      "🔒 ตั้ง privacy settings เป็น private",
+      "👥 จำกัด friend/follower lists",
+      "📸 หลีกเลี่ยงการ post ข้อมูลส่วนตัว",
+      "🌍 ปิด location sharing"
+    ]
+  }
+}

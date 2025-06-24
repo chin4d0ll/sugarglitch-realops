@@ -22,9 +22,9 @@ from typing import List, Dict, Optional, Set, Tuple, AsyncGenerator
 from urllib.parse import urljoin, urlparse, parse_qs, unquote
 import itertools
 import hashlib
-from collections import defaul    def generate_comprehensive_report(self, csrf_tokens: List[CSRFToken], 
-                                      endpoints: List[APIEndpoint], 
-                                      test_results: Dict = None) -> str:ct
+from collections import defaul def generate_comprehensive_report(self, csrf_tokens: List[CSRFToken],
+                                                                 endpoints: List[APIEndpoint],
+                                                                 test_results: Dict=None) -> str: ct
 import weakref
 
 # 💕 สีสวยๆ เหมือนเดิม

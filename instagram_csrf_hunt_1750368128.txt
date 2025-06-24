@@ -1,0 +1,113 @@
+
+🌸💕 Instagram-Specific CSRF & Token Hunt Report 💕🌸
+⏰ เวลา: 2025-06-19 21:22:08
+🎯 Target: Instagram Profile Analysis
+💕 โดย: Instagram CSRF Hunter Framework
+============================================================
+
+🔑 TOKENS DISCOVERED: 2 tokens
+============================================================
+
+📌 CSRF_TOKEN (2 tokens):
+
+Token #1:
+   🔐 Value: DG8FLYygxvXDU1atK36ykM3kmfnNeYQN
+   📍 Method: alternative
+   🔗 Source: https://www.instagram.com/
+   🔍 Pattern: "csrf_token":"([^"]+)"...
+
+Token #2:
+   🔐 Value: DG8FLYygxvXDU1atK36ykM3kmfnNeYQN
+   📍 Method: alternative
+   🔗 Source: https://www.instagram.com/
+   🔍 Pattern: "csrf_token":"([^"]+)"...
+
+
+🌐 API ENDPOINTS DISCOVERED: 12 endpoints
+============================================================
+
+Endpoint #1:
+   🔗 URL: https://www.instagram.com/graphql\/
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #2:
+   🔗 URL: https://www.instagram.com/graphqlbatch\/
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #3:
+   🔗 URL: https://www.instagram.com/graphql
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #4:
+   🔗 URL: https://www.instagram.com/graphql\/ig_schema
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #5:
+   🔗 URL: https://www.instagram.com/graphql\/query
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #6:
+   🔗 URL: https://www.instagram.com/graphql_www
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #7:
+   🔗 URL: https://www.instagram.com/graphql\/
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #8:
+   🔗 URL: https://www.instagram.com/graphqlbatch\/
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #9:
+   🔗 URL: wss:\/\/edge-chat.facebook.com\/chat
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #10:
+   🔗 URL: https://www.instagram.com/\/\/edge-chat.facebook.com\/mqtt\/pull
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #11:
+   🔗 URL: wss:\/\/edge-chat.facebook.com\/chat
+   📝 Method: GET
+   📍 Found via: alternative
+
+Endpoint #12:
+   🔗 URL: https://www.instagram.com/\/\/edge-chat.facebook.com\/mqtt\/pull
+   📝 Method: GET
+   📍 Found via: alternative
+
+
+📱 INSTAGRAM-SPECIFIC ANALYSIS:
+============================================================
+🔑 CSRF Tokens: 2
+🍪 Session Tokens: 0
+📱 Instagram-specific Tokens: 0
+🌐 API Endpoints: 12
+
+✅ SUCCESS: CSRF tokens พบแล้ว!
+🔥 สามารถใช้สำหรับ Instagram automation
+
+
+💡 INSTAGRAM RECOMMENDATIONS:
+============================================================
+1. 🔑 ใช้ CSRF tokens ที่พบสำหรับ API calls
+2. 🍪 เก็บ session tokens สำหรับ authentication
+3. 📱 ใช้ mobile endpoints สำหรับ better success rate
+4. ⏰ ใช้ proper delays เพื่อหลีกเลี่ยง rate limiting
+5. 🔄 Rotate user agents และ headers
+6. 🌐 ทดสอบ discovered endpoints เพิ่มเติม
+
+============================================================
+💖 Instagram Hunt completed!
+⚠️ ใช้อย่างรับผิดชอบและถูกกฎหมายเท่านั้น!
+============================================================

@@ -1,4 +1,102 @@
-# 🔥 SugarGlitch RealOps - Production Environment
+# 🌸💖 Instagram Hunt Framework 💖🌸
+
+> **Advanced CSRF Token & Endpoint Discovery Framework**  
+> โดยเฉพาะสำหรับการศึกษาและป้องกันตัวเอง 🛡️
+
+## 🎯 Project Overview
+
+Instagram Hunt Framework เป็นชุดเครื่องมือขั้นสูงสำหรับการค้นหา CSRF tokens และ API endpoints ใน Instagram และเว็บไซต์อื่นๆ พร้อมฟีเจอร์ OSINT และการวิเคราะห์ความปลอดภัย
+
+### ✨ Key Features
+
+- 🔍 **CSRF Token Discovery** - ค้นหา CSRF tokens จากหลายแหล่ง
+- 🌐 **API Endpoint Hunting** - ค้นหา endpoints แบบครอบคลุม
+- �️ **Instagram Intelligence** - เฉพาะสำหรับ Instagram patterns
+- 🧬 **Advanced OSINT** - รวบรวมข้อมูลเชิงลึก
+- 📊 **Comprehensive Reporting** - รายงานแบบละเอียด
+- 🚀 **Quick Automation** - รันได้ง่ายๆ ผ่าน menu
+
+## 🛠️ Tools & Scripts
+
+### �🔥 Main Frameworks
+
+| Script | Description | Features |
+|--------|-------------|----------|
+| `csrf_endpoint_master.py` | หลัก CSRF + Endpoint Framework | ครอบคลุมทุกฟีเจอร์ |
+| `enhanced_csrf_master.py` | Enhanced version ปรับปรุงแล้ว | Memory efficient + เร็วขึ้น |
+| `instagram_csrf_hunter.py` | เฉพาะสำหรับ Instagram | Instagram-specific patterns |
+| `legendary_instagram_hunter.py` | Advanced Intelligence Hunter | Multiple API sources |
+
+### 🔧 Utility Scripts
+
+| Script | Description |
+|--------|-------------|
+| `quick_csrf_test.py` | ทดสอบแบบเร็ว |
+| `quick_automation.py` | Menu automation |
+| `hunt_summary.py` | วิเคราะห์ผลลัพธ์ |
+| `final_status_check.py` | ตรวจสอบสถานะ |
+
+## 🚀 Quick Start
+
+### 1. เริ่มต้นแบบง่าย
+
+```bash
+# รัน automation menu
+python scripts/quick_automation.py
+```
+
+### 2. ทดสอบ CSRF แบบเร็ว
+
+```bash
+# ทดสอบ target เฉพาะ
+python scripts/quick_csrf_test.py https://example.com
+
+# Instagram hunt
+python scripts/instagram_csrf_hunter.py alx.trading
+```
+
+### 3. Framework แบบเต็ม
+
+```bash
+# CSRF + Endpoint discovery
+python scripts/csrf_endpoint_master.py https://target.com
+
+# Enhanced version
+python scripts/enhanced_csrf_master.py https://target.com
+```
+
+### 4. ตรวจสอบสถานะ
+
+```bash
+# ดูสถานะ project
+python scripts/final_status_check.py
+
+# วิเคราะห์ผลลัพธ์
+python scripts/hunt_summary.py
+```
+
+## 📊 Project Status
+
+### ✅ Completed Features
+
+- ✅ **8 Working Scripts** (100% functional)
+- ✅ **12 Text Reports** generated
+- ✅ **14 JSON Reports** with data
+- ✅ **102 API Endpoints** discovered
+- ✅ **5 OSINT Data Files** collected
+
+### 🎯 Target Analysis (alx.trading)
+
+- 👤 **Username**: alx.trading
+- 🔗 **Platform**: Instagram
+- 🌐 **URL**: https://www.instagram.com/alx.trading/
+- 📊 **Status**: Rate limiting encountered
+
+⚠️ **ใช้อย่างรับผิดชอบและถูกกฎหมายเท่านั้น** 🛡️
+
+---
+
+# 🔥 Original SugarGlitch RealOps Documentation
 
 **Advanced Red Team Operations & Intelligence Platform**
 

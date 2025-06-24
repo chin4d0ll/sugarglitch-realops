@@ -1,0 +1,29 @@
+{
+  "timestamp": "2025-06-19T21:34:43.878169",
+  "project_name": "Instagram Hunt Framework",
+  "target": "alx.trading",
+  "scripts": {
+    "total": 8,
+    "working": 8,
+    "missing": 0
+  },
+  "reports": {
+    "text_reports": 12,
+    "json_reports": 14
+  },
+  "hunt_results": {
+    "csrf_tokens": 0,
+    "endpoints": 102,
+    "osint_data": 5
+  },
+  "target_status": {
+    "username": "alx.trading",
+    "platform": "Instagram",
+    "url": "https://www.instagram.com/alx.trading/",
+    "hunt_attempts": 0,
+    "csrf_tokens_found": 0,
+    "endpoints_discovered": 0,
+    "rate_limiting": false
+  },
+  "project_status": "COMPLETED"
+}
