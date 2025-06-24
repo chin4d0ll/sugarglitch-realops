@@ -24,7 +24,7 @@ class SpiderfootAdultSiteAnalyzer:
         self.browsing_patterns = {}
         self.privacy_risks = []
         self.social_risks = []
-        
+
         # Adult site patterns และ domains
         self.adult_patterns = {
             'explicit_keywords': [
@@ -55,39 +55,39 @@ class SpiderfootAdultSiteAnalyzer:
                 'match', 'eharmony', 'seeking', 'sugardaddy'
             ]
         }
-        
+
         print(f"🕷️ Spiderfoot Adult Site Analyzer สำหรับ {self.target}")
         print(f"📡 Telegram: {self.telegram_username}")
-    
+
     def print_cute(self, text, emoji="💕"):
         timestamp = datetime.now().strftime("%H:%M:%S")
         print(f"{emoji} [{timestamp}] {text}")
-    
+
     def analyze_spiderfoot_data(self):
         """วิเคราะห์ข้อมูล Spiderfoot ทั้งหมด"""
         self.print_cute("🕷️ เริ่มวิเคราะห์ Spiderfoot logs...", "🔍")
-        
+
         # ค้นหาไฟล์ Spiderfoot
         spiderfoot_files = self._find_spiderfoot_files()
-        
+
         if not spiderfoot_files:
             self.print_cute("⚠️ ไม่พบไฟล์ Spiderfoot logs", "❌")
             self._analyze_existing_project_data()
             return
-        
+
         # วิเคราะห์แต่ละไฟล์
         for file_path in spiderfoot_files:
             self._analyze_spiderfoot_file(file_path)
-        
+
         # วิเคราะห์ข้อมูลที่มีในโปรเจค
         self._analyze_existing_project_data()
-        
+
         # วิเคราะห์ patterns และ risks
         self._analyze_patterns()
-        
+
         # สร้างรายงาน
         self._generate_intelligence_report()
-    
+
     def _find_spiderfoot_files(self) -> List[str]:
         """ค้นหาไฟล์ Spiderfoot"""
         search_patterns = [
@@ -100,25 +100,25 @@ class SpiderfootAdultSiteAnalyzer:
             '*osint*',
             '*recon*'
         ]
-        
+
         found_files = []
         for pattern in search_patterns:
             files = glob.glob(pattern, recursive=True)
             found_files.extend(files)
-        
+
         # ค้นหาใน subdirectories
         for root, dirs, files in os.walk('.'):
             for file in files:
-                if any(keyword in file.lower() for keyword in 
-                      ['spiderfoot', 'spider', 'scan', 'osint', 'recon']):
+                if any(keyword in file.lower() for keyword in
+                       ['spiderfoot', 'spider', 'scan', 'osint', 'recon']):
                     found_files.append(os.path.join(root, file))
-        
+
         return list(set(found_files))  # Remove duplicates
-    
+
     def _analyze_spiderfoot_file(self, file_path: str):
         """วิเคราะห์ไฟล์ Spiderfoot แต่ละไฟล์"""
         self.print_cute(f"📄 วิเคราะห์: {file_path}", "🔍")
-        
+
         try:
             if file_path.endswith('.db') or file_path.endswith('.sqlite'):
                 self._analyze_sqlite_db(file_path)
@@ -126,75 +126,76 @@ class SpiderfootAdultSiteAnalyzer:
                 self._analyze_json_file(file_path)
             else:
                 self._analyze_text_file(file_path)
-                
+
         except Exception as e:
             self.print_cute(f"❌ Error analyzing {file_path}: {e}", "⚠️")
-    
+
     def _analyze_sqlite_db(self, db_path: str):
         """วิเคราะห์ SQLite database"""
         try:
             conn = sqlite3.connect(db_path)
             cursor = conn.cursor()
-            
+
             # ดู tables ที่มี
-            cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
+            cursor.execute(
+                "SELECT name FROM sqlite_master WHERE type='table';")
             tables = [row[0] for row in cursor.fetchall()]
-            
+
             self.print_cute(f"📊 Tables in {db_path}: {tables}", "📋")
-            
+
             for table in tables:
                 try:
                     # ค้นหาข้อมูลที่เกี่ยวข้องกับ adult sites
                     cursor.execute(f"SELECT * FROM {table} LIMIT 10")
                     rows = cursor.fetchall()
-                    
+
                     # Get column names
                     cursor.execute(f"PRAGMA table_info({table})")
                     columns = [row[1] for row in cursor.fetchall()]
-                    
+
                     for row in rows:
                         row_data = dict(zip(columns, row))
                         self._check_for_adult_content(str(row_data))
-                
+
                 except Exception as e:
                     continue
-            
+
             conn.close()
-            
+
         except Exception as e:
             self.print_cute(f"❌ SQLite error: {e}", "⚠️")
-    
+
     def _analyze_json_file(self, json_path: str):
         """วิเคราะห์ JSON file"""
         try:
             with open(json_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-            
+
             # ค้นหา adult content ใน JSON
             json_str = json.dumps(data, indent=2).lower()
             self._check_for_adult_content(json_str)
-            
+
             # ค้นหา URLs และ domains
             self._extract_urls_from_data(data)
-            
+
         except Exception as e:
             self.print_cute(f"❌ JSON error: {e}", "⚠️")
-    
+
     def _analyze_text_file(self, file_path: str):
         """วิเคราะห์ text file"""
         try:
             with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                 content = f.read().lower()
-            
+
             self._check_for_adult_content(content)
-            
+
         except Exception as e:
             self.print_cute(f"❌ Text file error: {e}", "⚠️")
-    
+
     def _check_for_adult_content(self, content: str):
         """ตรวจสอบ adult content ใน text"""
         content_lower = content.lower()
-        
+
         # ตรวจสอบ explicit keywords
         for keyword in self.adult_patterns['explicit_keywords']:
             if keyword in content_lower:
@@ -206,7 +207,7 @@ class SpiderfootAdultSiteAnalyzer:
                         'found_at': datetime.now().isoformat()
                     })
                     self.print_cute(f"🚨 เจอ adult keyword: {keyword}", "⚠️")
-        
+
         # ตรวจสอบ adult domains
         for domain in self.adult_patterns['adult_domains']:
             if domain in content_lower:
@@ -218,7 +219,7 @@ class SpiderfootAdultSiteAnalyzer:
                         'found_at': datetime.now().isoformat()
                     })
                     self.print_cute(f"🔞 เจอ adult domain: {domain}", "🚨")
-        
+
         # ตรวจสอบ cam sites
         for cam_site in self.adult_patterns['cam_sites']:
             if cam_site in content_lower:
@@ -231,7 +232,7 @@ class SpiderfootAdultSiteAnalyzer:
                         'found_at': datetime.now().isoformat()
                     })
                     self.print_cute(f"📹 เจอ cam site: {cam_site}", "🔞")
-        
+
         # ตรวจสอบ dating apps
         for dating_app in self.adult_patterns['dating_apps']:
             if dating_app in content_lower:
@@ -244,26 +245,26 @@ class SpiderfootAdultSiteAnalyzer:
                         'found_at': datetime.now().isoformat()
                     })
                     self.print_cute(f"💕 เจอ dating app: {dating_app}", "📱")
-    
+
     def _extract_context(self, content: str, keyword: str, context_length: int = 100) -> str:
         """ดึงบริบทรอบๆ keyword"""
         try:
             content_lower = content.lower()
             keyword_lower = keyword.lower()
-            
+
             index = content_lower.find(keyword_lower)
             if index == -1:
                 return ""
-            
+
             start = max(0, index - context_length)
             end = min(len(content), index + len(keyword) + context_length)
-            
+
             context = content[start:end]
             return context.replace('\n', ' ').replace('\r', ' ').strip()
-            
+
         except Exception:
             return ""
-    
+
     def _extract_urls_from_data(self, data: Any):
         """ดึง URLs จากข้อมูล"""
         if isinstance(data, dict):
@@ -281,13 +282,13 @@ class SpiderfootAdultSiteAnalyzer:
             urls = re.findall(url_pattern, data)
             for url in urls:
                 self._analyze_url(url)
-    
+
     def _analyze_url(self, url: str):
         """วิเคราะห์ URL"""
         try:
             parsed = urlparse(url.lower())
             domain = parsed.netloc
-            
+
             # ตรวจสอบว่าเป็น adult domain หรือไม่
             for adult_domain in self.adult_patterns['adult_domains']:
                 if adult_domain in domain:
@@ -299,14 +300,14 @@ class SpiderfootAdultSiteAnalyzer:
                             'found_at': datetime.now().isoformat()
                         })
                         self.print_cute(f"🔗 เจอ adult URL: {domain}", "🚨")
-        
+
         except Exception:
             pass
-    
+
     def _analyze_existing_project_data(self):
         """วิเคราะห์ข้อมูลที่มีในโปรเจค"""
         self.print_cute("📂 วิเคราะห์ข้อมูลโปรเจค...", "🔍")
-        
+
         # ค้นหาไฟล์ที่อาจมีข้อมูล OSINT
         osint_files = [
             'deep_osint_report_*.json',
@@ -317,7 +318,7 @@ class SpiderfootAdultSiteAnalyzer:
             '*.json',
             '*.md'
         ]
-        
+
         for pattern in osint_files:
             files = glob.glob(pattern)
             for file_path in files:
@@ -329,18 +330,18 @@ class SpiderfootAdultSiteAnalyzer:
                             self._analyze_text_file(file_path)
                     except Exception:
                         continue
-    
+
     def _analyze_patterns(self):
         """วิเคราะห์ patterns และความเสี่ยง"""
         self.print_cute("🧠 วิเคราะห์ patterns...", "📊")
-        
+
         # วิเคราะห์ browsing patterns
         total_adult_findings = (
-            len(self.adult_sites_found) + 
+            len(self.adult_sites_found) +
             len(self.suspicious_domains) +
             len(self.social_risks)
         )
-        
+
         self.browsing_patterns = {
             'adult_content_exposure': total_adult_findings,
             'adult_keywords_found': len(self.adult_sites_found),
@@ -349,9 +350,9 @@ class SpiderfootAdultSiteAnalyzer:
             'dating_apps_detected': len([r for r in self.privacy_risks if r['type'] == 'dating_app']),
             'risk_assessment': self._calculate_risk_level(total_adult_findings)
         }
-        
+
         self.print_cute(f"📊 Total adult findings: {total_adult_findings}", "📈")
-    
+
     def _calculate_risk_level(self, findings_count: int) -> str:
         """คำนวณระดับความเสี่ยง"""
         if findings_count > 10:
@@ -364,13 +365,13 @@ class SpiderfootAdultSiteAnalyzer:
             return "LOW"
         else:
             return "CLEAN"
-    
+
     def _generate_intelligence_report(self):
         """สร้างรายงาน intelligence"""
         self.print_cute("📋 สร้างรายงาน...", "✍️")
-        
+
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        
+
         # บันทึก JSON data
         json_filename = f"spiderfoot_adult_analysis_{self.target}_{timestamp}.json"
         report_data = {
@@ -383,27 +384,27 @@ class SpiderfootAdultSiteAnalyzer:
             'privacy_risks': self.privacy_risks,
             'browsing_patterns': self.browsing_patterns
         }
-        
+
         with open(json_filename, 'w', encoding='utf-8') as f:
             json.dump(report_data, f, indent=2, ensure_ascii=False)
-        
+
         # สร้างรายงาน text
         report_filename = f"spiderfoot_adult_intelligence_{self.target}_{timestamp}.txt"
         report = self._create_detailed_report()
-        
+
         with open(report_filename, 'w', encoding='utf-8') as f:
             f.write(report)
-        
+
         self.print_cute(f"💾 บันทึกรายงาน:", "✅")
         self.print_cute(f"   📊 JSON: {json_filename}", "📄")
         self.print_cute(f"   📋 Report: {report_filename}", "📄")
-        
+
         return json_filename, report_filename
-    
+
     def _create_detailed_report(self) -> str:
         """สร้างรายงานละเอียด"""
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        
+
         report = f"""
 🕷️💎 SPIDERFOOT ADULT SITE INTELLIGENCE REPORT 💎🕷️
 ⏰ Generated: {timestamp}
@@ -425,7 +426,7 @@ Cam Sites Detected: {self.browsing_patterns.get('cam_sites_detected', 0)}
 Dating Apps Detected: {self.browsing_patterns.get('dating_apps_detected', 0)}
 Total Adult Content Exposure: {self.browsing_patterns.get('adult_content_exposure', 0)}
 """
-        
+
         # Adult Sites Found
         if self.adult_sites_found:
             report += f"\n🔞 ADULT CONTENT DETECTED:\n{'='*60}\n"
@@ -435,7 +436,7 @@ Total Adult Content Exposure: {self.browsing_patterns.get('adult_content_exposur
    📅 Found: {item.get('found_at', 'Unknown')}
    📝 Context: {item.get('context', 'No context')[:200]}...
 """
-        
+
         # Suspicious Domains
         if self.suspicious_domains:
             report += f"\n🌐 SUSPICIOUS DOMAINS:\n{'='*60}\n"
@@ -447,7 +448,7 @@ Total Adult Content Exposure: {self.browsing_patterns.get('adult_content_exposur
    🔗 Full URL: {domain.get('full_url', 'N/A')}
    📝 Context: {domain.get('context', 'No context')[:200]}...
 """
-        
+
         # Social Risks (Cam Sites)
         if self.social_risks:
             report += f"\n📹 CAM SITES & ADULT PLATFORMS:\n{'='*60}\n"
@@ -458,7 +459,7 @@ Total Adult Content Exposure: {self.browsing_patterns.get('adult_content_exposur
    📝 Description: {risk.get('description', 'No description')}
    📅 Found: {risk.get('found_at', 'Unknown')}
 """
-        
+
         # Privacy Risks (Dating Apps)
         if self.privacy_risks:
             report += f"\n💕 DATING APPS & SOCIAL PLATFORMS:\n{'='*60}\n"
@@ -469,17 +470,17 @@ Total Adult Content Exposure: {self.browsing_patterns.get('adult_content_exposur
    📝 Description: {risk.get('description', 'No description')}
    📅 Found: {risk.get('found_at', 'Unknown')}
 """
-        
+
         # Risk Assessment
         risk_level = self.browsing_patterns.get('risk_assessment', 'UNKNOWN')
         risk_emoji = {
             'CRITICAL': '🔴',
-            'HIGH': '🟠', 
+            'HIGH': '🟠',
             'MEDIUM': '🟡',
             'LOW': '🟢',
             'CLEAN': '✅'
         }.get(risk_level, '❓')
-        
+
         report += f"\n🎯 RISK ASSESSMENT:\n{'='*60}\n"
         report += f"""
 {risk_emoji} Overall Risk Level: {risk_level}
@@ -489,10 +490,10 @@ Total Adult Content Exposure: {self.browsing_patterns.get('adult_content_exposur
 📹 Cam Sites: {self.browsing_patterns.get('cam_sites_detected', 0)}
 💕 Dating Apps: {self.browsing_patterns.get('dating_apps_detected', 0)}
 """
-        
+
         # Recommendations
         report += f"\n💡 RECOMMENDATIONS:\n{'='*60}\n"
-        
+
         if risk_level in ['CRITICAL', 'HIGH']:
             report += """
 🚨 IMMEDIATE ACTIONS REQUIRED:
@@ -533,7 +534,7 @@ Total Adult Content Exposure: {self.browsing_patterns.get('adult_content_exposur
 2. 📊 Monitor for new patterns
 3. 🔗 Cross-platform consistency checks
 """
-        
+
         # Technical Details
         report += f"\n🔧 TECHNICAL ANALYSIS:\n{'='*60}\n"
         report += f"""
@@ -542,7 +543,7 @@ Keywords Searched: {len(self.adult_patterns['explicit_keywords'])} adult keyword
 Domains Checked: {len(self.adult_patterns['adult_domains'])} known adult sites
 Platform Categories: {len(self.adult_patterns['cam_sites'])} cam sites, {len(self.adult_patterns['dating_apps'])} dating apps
 """
-        
+
         if not any([self.adult_sites_found, self.suspicious_domains, self.social_risks, self.privacy_risks]):
             report += f"\n✅ CLEAN ASSESSMENT:\n{'='*60}\n"
             report += """
@@ -550,13 +551,13 @@ Platform Categories: {len(self.adult_patterns['cam_sites'])} cam sites, {len(sel
 📊 This indicates good digital hygiene and privacy practices.
 🛡️ Continue maintaining current security and privacy standards.
 """
-        
+
         report += f"\n{'='*80}\n"
         report += "💖 Adult site analysis completed by Advanced Spiderfoot Framework\n"
         report += "⚠️ This analysis is for security and privacy assessment only!\n"
         report += "🔒 Use all data ethically and legally!\n"
         report += f"{'='*80}\n"
-        
+
         return report
 
 
@@ -567,14 +568,14 @@ def main():
 สำหรับวิเคราะห์ adult site activity ของ alx.trading
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """)
-    
+
     # สร้าง analyzer
     analyzer = SpiderfootAdultSiteAnalyzer()
-    
+
     try:
         # เริ่มการวิเคราะห์
         analyzer.analyze_spiderfoot_data()
-        
+
         print(f"""
 🎉 SPIDERFOOT ADULT SITE ANALYSIS COMPLETED! 🎉
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -590,7 +591,7 @@ def main():
 ✅ Adult site intelligence analysis completed!
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 """)
-        
+
     except KeyboardInterrupt:
         print("\n⏹️ Analysis stopped by user")
     except Exception as e:
