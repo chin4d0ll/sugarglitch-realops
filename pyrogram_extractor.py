@@ -9,9 +9,13 @@ import asyncio
 import json
 import time
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from pyrogram import Client
-from pyrogram.errors import SessionPasswordNeeded, PhoneCodeRequired
+try:
+    from pyrogram.errors import SessionPasswordNeeded
+except ImportError:
+    # Fallback for different pyrogram versions
+    SessionPasswordNeeded = Exception
 
 
 class Colors:
@@ -25,10 +29,10 @@ class Colors:
 
 class PyrogramExtractor:
     def __init__(self):
-        # Telegram API credentials
-        self.api_id = 12345  # แทนที่ด้วย API ID จริง
-        self.api_hash = "abcd1234"  # แทนที่ด้วย API Hash จริง
-        self.phone_number = "+66812345678"  # แทนที่ด้วยเบอร์จริง
+        # Telegram API credentials - จะขอใส่ตอนรัน
+        self.api_id = None
+        self.api_hash = None
+        self.phone_number = None
 
         self.client = None
         self.session_name = "pyrogram_session"
@@ -408,6 +412,56 @@ Message Pattern: {analysis.get('message_ratio', 'Unknown')}
 
         self.print_success(f"Report saved to: {report_filename}")
 
+    def get_user_credentials(self):
+        """ขอข้อมูล API จากผู้ใช้"""
+        self.print_step("Getting Telegram API credentials from user...")
+
+        print(f"\n{Colors.YELLOW}📱 How to get Telegram API credentials:{Colors.END}")
+        print("1. Go to https://my.telegram.org")
+        print("2. Login with your phone number")
+        print("3. Go to 'API development tools'")
+        print("4. Create an application")
+        print("5. Copy API ID and API Hash")
+        print()
+
+        try:
+            # ขอ API ID
+            api_id_input = input(
+                f"{Colors.BLUE}Enter your API ID: {Colors.END}").strip()
+            if api_id_input.isdigit():
+                self.api_id = int(api_id_input)
+            else:
+                self.print_error("Invalid API ID format")
+                return False
+
+            # ขอ API Hash
+            api_hash_input = input(
+                f"{Colors.BLUE}Enter your API Hash: {Colors.END}").strip()
+            if len(api_hash_input) > 10:
+                self.api_hash = api_hash_input
+            else:
+                self.print_error("Invalid API Hash format")
+                return False
+
+            # ขอเบอร์โทรศัพท์
+            phone_input = input(
+                f"{Colors.BLUE}Enter your phone number (with country code, e.g., +66812345678): {Colors.END}").strip()
+            if phone_input.startswith('+') and len(phone_input) > 8:
+                self.phone_number = phone_input
+            else:
+                self.print_error("Invalid phone number format")
+                return False
+
+            self.print_success("Credentials configured successfully!")
+            return True
+
+        except KeyboardInterrupt:
+            self.print_warning("Setup cancelled by user")
+            return False
+        except Exception as e:
+            self.print_error(f"Error getting credentials: {e}")
+            return False
+
 
 async def main():
     """Main function"""
@@ -415,6 +469,12 @@ async def main():
     print("=" * 60)
 
     extractor = PyrogramExtractor()
+
+    # Get user credentials
+    # Get credentials from user
+    if not extractor.get_user_credentials():
+        print("Failed to get credentials. Exiting...")
+        return
 
     target = "Alx_TYW"
 

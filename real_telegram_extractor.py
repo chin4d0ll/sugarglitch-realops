@@ -12,7 +12,12 @@ import os
 from datetime import datetime, timedelta
 from telethon import TelegramClient
 from telethon.tl.types import User, Channel, Chat
-from telethon.errors import SessionPasswordNeededError, PhoneCodeRequiredError
+try:
+    from telethon.errors import SessionPasswordNeededError, PhoneCodeRequiredError
+except ImportError:
+    # Fallback for different telethon versions
+    SessionPasswordNeededError = Exception
+    PhoneCodeRequiredError = Exception
 
 
 class Colors:
@@ -60,13 +65,25 @@ class RealTelegramExtractor:
             print("5. Copy API ID and API Hash")
             print()
 
-            # ใส่ demo values สำหรับทดสอบ
-            self.api_id = 12345  # แทนที่ด้วย API ID จริง
-            self.api_hash = "abcd1234"  # แทนที่ด้วย API Hash จริง
-            self.phone = "+66812345678"  # แทนที่ด้วยเบอร์จริง
+            # รับข้อมูลจริงจากผู้ใช้
+            try:
+                self.api_id = int(input("🔑 Enter your API ID: "))
+                self.api_hash = input("🔑 Enter your API Hash: ").strip()
+                self.phone = input(
+                    "📱 Enter your phone number (with country code): ").strip()
 
-            self.print_warning(
-                "Using demo credentials. Replace with real ones for actual use.")
+                if not self.api_id or not self.api_hash or not self.phone:
+                    self.print_error("All credentials are required!")
+                    return False
+
+                self.print_success("Real credentials configured!")
+
+            except ValueError:
+                self.print_error("Invalid API ID format!")
+                return False
+            except KeyboardInterrupt:
+                self.print_warning("Setup cancelled by user")
+                return False
 
         return True
 
@@ -98,8 +115,8 @@ class RealTelegramExtractor:
             await self.client.send_code_request(self.phone)
             self.print_warning("Code sent to your phone. Enter it below:")
 
-            # ในการใช้งานจริง ให้ใช้ input() เพื่อรับ code
-            code = "12345"  # แทนที่ด้วย input("Enter code: ")
+            # รับ verification code จริงจากผู้ใช้
+            code = input("🔢 Enter verification code: ").strip()
 
             await self.client.sign_in(self.phone, code)
             self.print_success("Login successful!")
@@ -107,7 +124,7 @@ class RealTelegramExtractor:
 
         except SessionPasswordNeededError:
             self.print_warning("2FA enabled. Enter password:")
-            password = "password"  # แทนที่ด้วย input("Enter password: ")
+            password = input("🔐 Enter 2FA password: ").strip()
             await self.client.sign_in(password=password)
             self.print_success("Login with 2FA successful!")
             return True
