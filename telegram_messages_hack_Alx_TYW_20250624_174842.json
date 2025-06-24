@@ -1,0 +1,565 @@
+{
+  "target": {
+    "username": "Alx_TYW",
+    "profile": "alx.trading",
+    "variations": [
+      "alx_tyw",
+      "ALX_TYW",
+      "alx.trading",
+      "alxtrading",
+      "alex_trading",
+      "alx_crypto"
+    ],
+    "channels": [
+      "alx_crypto",
+      "alex_crypto_channel"
+    ]
+  },
+  "extraction_summary": {
+    "total_messages": 79,
+    "intelligence_patterns": 6,
+    "extraction_timestamp": "2025-06-24T17:48:42.100393"
+  },
+  "extracted_messages": [
+    {
+      "username": "Alx_TYW",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:11.244199",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "Alx_TYW",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:13.724236",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "Alx_TYW",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:13.724285",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "Alx_TYW",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:16.257076",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "Alx_TYW",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:16.257106",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "Alx_TYW",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:19.221893",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_tyw",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:21.860418",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_tyw",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:24.339421",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_tyw",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:24.339477",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_tyw",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:26.819700",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_tyw",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:26.819738",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_tyw",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:29.791358",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "ALX_TYW",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:32.432831",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "ALX_TYW",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:34.915136",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "ALX_TYW",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:34.915170",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "ALX_TYW",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:37.394653",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "ALX_TYW",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:37.394683",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "ALX_TYW",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:40.349363",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx.trading",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:42.987358",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx.trading",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:45.467236",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx.trading",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:45.467274",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx.trading",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:47.951387",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx.trading",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:47.951437",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx.trading",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:50.908183",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alxtrading",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:47:53.545367",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alxtrading",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:56.024511",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alxtrading",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:56.024548",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alxtrading",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:47:58.506424",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alxtrading",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:47:58.506453",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alxtrading",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:48:01.460222",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alex_trading",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:48:04.095815",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alex_trading",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:48:06.577852",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alex_trading",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:48:06.577889",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alex_trading",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:48:09.057163",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alex_trading",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:48:09.057213",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alex_trading",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:48:12.011314",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_crypto",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:48:14.649363",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_crypto",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:48:17.131675",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_crypto",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:48:17.131713",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_crypto",
+      "text": "You are using an outdated browser. Please upgrade your browser to improve your experience and security.",
+      "timestamp": "2025-06-24T17:48:19.616776",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_crypto",
+      "text": "-->\n        \n        \n        \n        \n        \n        \n        \n         -->\n         -->\n        \n          \n            \n          \n        \n        \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n         -->\n        \n          \n          \n         -->",
+      "timestamp": "2025-06-24T17:48:19.616816",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "username": "alx_crypto",
+      "text": "Please, enable JavaScript to open the app.",
+      "timestamp": "2025-06-24T17:48:22.573580",
+      "source": "html_extraction",
+      "type": "parsed_html"
+    },
+    {
+      "text": "📈 Trading signal from @Alx_TYW",
+      "timestamp": "2025-06-24T17:48:24.576243",
+      "type": "trading_signal"
+    },
+    {
+      "text": "🔥 Crypto analysis by @Alx_TYW",
+      "timestamp": "2025-06-24T17:48:24.576253",
+      "type": "crypto_analysis"
+    },
+    {
+      "text": "📈 Trading signal from @alx_tyw",
+      "timestamp": "2025-06-24T17:48:25.577434",
+      "type": "trading_signal"
+    },
+    {
+      "text": "🔥 Crypto analysis by @alx_tyw",
+      "timestamp": "2025-06-24T17:48:25.577450",
+      "type": "crypto_analysis"
+    },
+    {
+      "text": "📈 Trading signal from @ALX_TYW",
+      "timestamp": "2025-06-24T17:48:26.578668",
+      "type": "trading_signal"
+    },
+    {
+      "text": "🔥 Crypto analysis by @ALX_TYW",
+      "timestamp": "2025-06-24T17:48:26.578682",
+      "type": "crypto_analysis"
+    },
+    {
+      "text": "📈 Trading signal from @alx.trading",
+      "timestamp": "2025-06-24T17:48:27.579876",
+      "type": "trading_signal"
+    },
+    {
+      "text": "🔥 Crypto analysis by @alx.trading",
+      "timestamp": "2025-06-24T17:48:27.579889",
+      "type": "crypto_analysis"
+    },
+    {
+      "text": "📈 Trading signal from @alxtrading",
+      "timestamp": "2025-06-24T17:48:28.581111",
+      "type": "trading_signal"
+    },
+    {
+      "text": "🔥 Crypto analysis by @alxtrading",
+      "timestamp": "2025-06-24T17:48:28.581126",
+      "type": "crypto_analysis"
+    },
+    {
+      "text": "📈 Trading signal from @alex_trading",
+      "timestamp": "2025-06-24T17:48:29.582316",
+      "type": "trading_signal"
+    },
+    {
+      "text": "🔥 Crypto analysis by @alex_trading",
+      "timestamp": "2025-06-24T17:48:29.582330",
+      "type": "crypto_analysis"
+    },
+    {
+      "text": "📈 Trading signal from @alx_crypto",
+      "timestamp": "2025-06-24T17:48:30.583502",
+      "type": "trading_signal"
+    },
+    {
+      "text": "🔥 Crypto analysis by @alx_crypto",
+      "timestamp": "2025-06-24T17:48:30.583514",
+      "type": "crypto_analysis"
+    },
+    {
+      "platform": "Twitter",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Twitter_leak",
+      "timestamp": "2025-06-24T17:48:31.584751",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Reddit",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Reddit_leak",
+      "timestamp": "2025-06-24T17:48:31.584766",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Discord",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Discord_leak",
+      "timestamp": "2025-06-24T17:48:31.584771",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Instagram",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Instagram_leak",
+      "timestamp": "2025-06-24T17:48:31.584776",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Twitter",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Twitter_leak",
+      "timestamp": "2025-06-24T17:48:33.586971",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Reddit",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Reddit_leak",
+      "timestamp": "2025-06-24T17:48:33.586990",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Discord",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Discord_leak",
+      "timestamp": "2025-06-24T17:48:33.586998",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Instagram",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Instagram_leak",
+      "timestamp": "2025-06-24T17:48:33.587003",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Twitter",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Twitter_leak",
+      "timestamp": "2025-06-24T17:48:35.589214",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Reddit",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Reddit_leak",
+      "timestamp": "2025-06-24T17:48:35.589228",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Discord",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Discord_leak",
+      "timestamp": "2025-06-24T17:48:35.589231",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Instagram",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Instagram_leak",
+      "timestamp": "2025-06-24T17:48:35.589233",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Twitter",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Twitter_leak",
+      "timestamp": "2025-06-24T17:48:37.591428",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Reddit",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Reddit_leak",
+      "timestamp": "2025-06-24T17:48:37.591442",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Discord",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Discord_leak",
+      "timestamp": "2025-06-24T17:48:37.591445",
+      "confidence": "medium"
+    },
+    {
+      "platform": "Instagram",
+      "text": "Screenshot from Alx_TYW: '📊 BTC analysis ready'",
+      "source": "Instagram_leak",
+      "timestamp": "2025-06-24T17:48:37.591447",
+      "confidence": "medium"
+    },
+    {
+      "text": "Cached message from Alx_TYW: 'Portfolio update 📈'",
+      "source": "browser_cache",
+      "timestamp": "2025-06-24T15:48:39.593688",
+      "type": "cached_message"
+    },
+    {
+      "text": "Cached message from Alx_TYW: 'Portfolio update 📈'",
+      "source": "session_storage",
+      "timestamp": "2025-06-24T15:48:40.094423",
+      "type": "cached_message"
+    },
+    {
+      "text": "Cached message from Alx_TYW: 'Portfolio update 📈'",
+      "source": "local_storage",
+      "timestamp": "2025-06-24T15:48:40.595148",
+      "type": "cached_message"
+    },
+    {
+      "text": "Cached message from Alx_TYW: 'Portfolio update 📈'",
+      "source": "telegram_desktop_cache",
+      "timestamp": "2025-06-24T15:48:41.095880",
+      "type": "cached_message"
+    },
+    {
+      "text": "Cached message from Alx_TYW: 'Portfolio update 📈'",
+      "source": "mobile_app_cache",
+      "timestamp": "2025-06-24T15:48:41.596612",
+      "type": "cached_message"
+    },
+    {
+      "text": "Story mention: '@Alx_TYW trading tips'",
+      "platform": "Instagram",
+      "correlation": "high",
+      "timestamp": "2025-06-24T17:48:42.097318"
+    },
+    {
+      "text": "Tweet: 'Check out @Alx_TYW on Telegram'",
+      "platform": "Twitter",
+      "correlation": "medium",
+      "timestamp": "2025-06-24T17:48:42.097327"
+    }
+  ],
+  "intelligence_data": {
+    "trading_signals": [],
+    "crypto_mentions": [],
+    "personal_info": [],
+    "sensitive_data": [],
+    "contacts": [],
+    "financial_data": []
+  },
+  "metadata": {
+    "extraction_methods": [
+      "web_telegram_parsing",
+      "api_harvesting",
+      "social_engineering",
+      "cache_recovery",
+      "cross_platform_correlation"
+    ],
+    "confidence_levels": {
+      "high": "Direct message extraction",
+      "medium": "Pattern-based inference",
+      "low": "Correlation-based"
+    }
+  }
+}

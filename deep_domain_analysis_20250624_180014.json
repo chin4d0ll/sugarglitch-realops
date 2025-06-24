@@ -1,0 +1,3624 @@
+{
+  "analysis_timestamp": "2025-06-24T18:00:14.452074",
+  "total_domains": 26,
+  "successful_analysis": 26,
+  "failed_analysis": 0,
+  "domains_analyzed": {
+    "seeking.com": {
+      "domain": "seeking.com",
+      "timestamp": "2025-06-24T17:59:18.766673",
+      "whois_info": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "1997-06-02 04:00:00",
+        "expiration_date": "2034-06-01 04:00:00",
+        "name_servers": [
+          "JAY.NS.CLOUDFLARE.COM",
+          "ROXY.NS.CLOUDFLARE.COM"
+        ],
+        "country": "Unknown",
+        "org": "Unknown"
+      },
+      "dns_records": {
+        "A": [
+          "104.16.249.118",
+          "104.16.250.118"
+        ],
+        "AAAA": [],
+        "MX": [
+          "1 aspmx.l.google.com.",
+          "10 aspmx2.googlemail.com.",
+          "10 aspmx3.googlemail.com.",
+          "5 alt1.aspmx.l.google.com.",
+          "5 alt2.aspmx.l.google.com."
+        ],
+        "NS": [
+          "jay.ns.cloudflare.com.",
+          "roxy.ns.cloudflare.com."
+        ],
+        "TXT": [
+          "\"amazonses:S7q5HGBgagb4hTys1gQLv8F0Dtg5eOXScc7ZRKGbQek=\"",
+          "\"google-site-verification=AqyUUTKYm94QFnsEwusGDhaZI9QplLA7ZflTbCg-1eY\"",
+          "\"google-site-verification=W82X-_dBv_8PrV4KTrh2Icartw6W01qhB-7PDH3mqXk\"",
+          "\"v=spf1 include:_spf.google.com ~all\"",
+          "\"validity-domain-verification=Validity-r77SURYHll67xQMtSwAB0zTtJy\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "seeking.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Google Trust Services",
+          "commonName": "WE1"
+        },
+        "version": 3,
+        "serial_number": "F667FFE33D4ADA080D30954AB794D3F3",
+        "not_before": "May 16 02:19:58 2025 GMT",
+        "not_after": "Aug 14 03:19:57 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "seeking.com"
+          ],
+          [
+            "DNS",
+            "*.seeking.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 403,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:21 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "close",
+          "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+          "cf-mitigated": "challenge",
+          "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-resource-policy": "same-origin",
+          "origin-agent-cluster": "?1",
+          "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
+          "referrer-policy": "same-origin",
+          "server-timing": "chlray;desc=\"954e1e550889f8e4\"",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+          "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+          "Vary": "Accept-Encoding",
+          "Strict-Transport-Security": "max-age=15552000",
+          "Server": "cloudflare",
+          "CF-RAY": "954e1e550889f8e4-SIN",
+          "Content-Encoding": "gzip"
+        },
+        "content_length": 114483,
+        "redirect_history": [
+          "https://seeking.com/"
+        ],
+        "final_url": "https://www.seeking.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15552000",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "same-origin",
+        "security_score": "4/6"
+      },
+      "technologies": [
+        "Cloudflare",
+        "Vue.js"
+      ],
+      "subdomains": [
+        "www.seeking.com",
+        "admin.seeking.com",
+        "api.seeking.com",
+        "blog.seeking.com"
+      ],
+      "ip_geolocation": {
+        "ip": "104.16.249.118",
+        "country": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "lat": 43.6532,
+        "lon": -79.3832
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "xhamster.com": {
+      "domain": "xhamster.com",
+      "timestamp": "2025-06-24T17:59:18.766992",
+      "whois_info": {
+        "registrar": "NameCheap, Inc.",
+        "creation_date": "2007-04-02 12:48:32",
+        "expiration_date": "2027-04-02 12:48:32",
+        "name_servers": [
+          "ANUJ.NS.CLOUDFLARE.COM",
+          "SIMA.NS.CLOUDFLARE.COM"
+        ],
+        "country": "Unknown",
+        "org": "Unknown"
+      },
+      "dns_records": {
+        "A": [
+          "104.18.146.40",
+          "104.18.147.40"
+        ],
+        "AAAA": [
+          "2606:4700::6812:9328",
+          "2606:4700::6812:9228"
+        ],
+        "MX": [
+          "1 aspmx.l.google.com.",
+          "10 aspmx2.googlemail.com.",
+          "10 aspmx3.googlemail.com.",
+          "5 alt1.aspmx.l.google.com.",
+          "5 alt2.aspmx.l.google.com."
+        ],
+        "NS": [
+          "sima.ns.cloudflare.com.",
+          "anuj.ns.cloudflare.com."
+        ],
+        "TXT": [
+          "\"domain-verification=LyqG2sBiew\"",
+          "\"google-site-verification=wFhABH7C00kAyDG91D-6kwaUvPnH8N7meVvcFZn48hk\"",
+          "\"have-i-been-pwned-verification=dweb_65v1a87a1850m16hvkwtkgjy\"",
+          "\"v=spf1 include:_spf.google.com include:_spf.smtp.advancedhosters.com ip4:88.208.60.232 -all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "xhamster.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Let's Encrypt",
+          "commonName": "E5"
+        },
+        "version": 3,
+        "serial_number": "052ED3A9FAF23548C8BA96A532FE7800B16B",
+        "not_before": "Jun  6 01:17:53 2025 GMT",
+        "not_after": "Sep  4 01:17:52 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "xhamster.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:38 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Vary": "Accept-Encoding, User-Agent",
+          "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+          "x-frame-options": "SAMEORIGIN",
+          "content-security-policy": "frame-ancestors 'self'",
+          "Set-Cookie": "cookie_accept_v2=%7B%22e%22%3A1%2C%22f%22%3A1%2C%22t%22%3A1%2C%22a%22%3A1%7D; expires=Wed, 24 Jun 2026 17:59:37 GMT; Max-Age=31535999; path=/; domain=.xhamster.com, recs_show_time=1750787977; expires=Tue, 24 Jun 2025 18:14:37 GMT; Max-Age=899; path=/; domain=.xhamster.com, moments_listing_ad_offset=1; expires=Wed, 24 Jun 2026 17:59:38 GMT; Max-Age=31536000; path=/; domain=.xhamster.com, _cfg=3a6b8bb1fb07536d23c895ddbeef9879; expires=Thu, 24 Jul 2025 17:59:38 GMT; Max-Age=2592000; path=/; domain=.xhamster.com; secure; HttpOnly; SameSite=Lax",
+          "cf-cache-status": "DYNAMIC",
+          "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=OeuEfqFH%2FyGL9nGNRhEWFB%2BdQAqUxE9BOOb6B1TYDO6HQkvWqr09t4mt1ARq7xhyUPoMrtZBGjqvdIPWXcvWWIX%2Bn%2BILGgGNGiGBRPcieHDl6alWULtncLxFpV6UNw%3D%3D\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+          "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+          "Server": "cloudflare",
+          "CF-RAY": "954e1ebc5dc0d437-SIN",
+          "Content-Encoding": "br",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "content_length": 376331,
+        "redirect_history": [],
+        "final_url": "https://xhamster.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": "frame-ancestors 'self'",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "3/6"
+      },
+      "technologies": [
+        "Cloudflare",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.xhamster.com",
+        "mail.xhamster.com",
+        "ftp.xhamster.com",
+        "admin.xhamster.com",
+        "api.xhamster.com",
+        "blog.xhamster.com",
+        "shop.xhamster.com",
+        "mobile.xhamster.com",
+        "app.xhamster.com"
+      ],
+      "ip_geolocation": {
+        "ip": "104.18.146.40",
+        "country": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "lat": 43.6532,
+        "lon": -79.3832
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {
+        "twitter": "xhamstercom",
+        "youtube": "channel"
+      }
+    },
+    "livejasmin.com": {
+      "domain": "livejasmin.com",
+      "timestamp": "2025-06-24T17:59:18.782879",
+      "whois_info": {
+        "registrar": "EuroDNS S.A.",
+        "creation_date": "[datetime.datetime(2001, 11, 12, 8, 8, 1), datetime.datetime(2001, 11, 12, 0, 0)]",
+        "expiration_date": "[datetime.datetime(2025, 11, 12, 8, 8, 1), datetime.datetime(2025, 11, 11, 0, 0)]",
+        "name_servers": [
+          "NS1.DDITSERVICES.COM",
+          "NS2.DDITSERVICES.COM"
+        ],
+        "country": "LU",
+        "org": "Docler IP S.a r.l."
+      },
+      "dns_records": {
+        "A": [
+          "109.71.161.200"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 livejasmin-com.mail.protection.outlook.com."
+        ],
+        "NS": [
+          "ns1.dditservices.com.",
+          "ns2.dditservices.com."
+        ],
+        "TXT": [
+          "\"v=spf1 include:_spf.duodecadits.com ip4:93.93.49.152 ip4:5.159.216.29 ip4:109.71.166.0/24 -all\"",
+          "\"MS=ms20277184\"",
+          "\"google-site-verification=RCUnY2mGgQcWlJiBQiWDRlLEq-GpbZAtVVW3Np-LeDw\"",
+          "\"google-site-verification=_ZYzSH2aHZdHPJwECloZloyKjVkGcOa6ghqX7ke96Jw\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "countryName": "LU",
+          "stateOrProvinceName": "Luxembourg",
+          "organizationName": "Byborg IP S.a r.l.",
+          "commonName": "www.livejasmin.com"
+        },
+        "issuer": {
+          "countryName": "GB",
+          "stateOrProvinceName": "Greater Manchester",
+          "localityName": "Salford",
+          "organizationName": "Sectigo Limited",
+          "commonName": "Sectigo RSA Organization Validation Secure Server CA"
+        },
+        "version": 3,
+        "serial_number": "249556B298F47B31B907DE40914C05FC",
+        "not_before": "Apr 28 00:00:00 2025 GMT",
+        "not_after": "May 25 23:59:59 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "www.livejasmin.com"
+          ],
+          [
+            "DNS",
+            "livejasmin.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:25 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "Connection": "close",
+          "NEL": "{\"success_fraction\":0.0,\"failure_fraction\":1.0,\"report_to\":\"default\",\"max_age\":86400,\"include_subdomains\":true}",
+          "Report-To": "{\"include_subdomains\":true,\"group\":\"default\",\"endpoints\":[{\"url\":\"https://a.nel.livejasmin.com/report/v4?s=eApSC1xbXgk5CUpeWVoFUVEDUFdGGGdbXx9BUkdMW0d3AlBNQxtSTVQLGhxYDwB+DxAQGRtCWg0KEQEfU001\"}],\"max_age\":86400}",
+          "Set-Cookie": "session=geca877d9a7ce8530e2c1b6eb8dbb9b52; path=/; domain=.livejasmin.com; secure; SameSite=Lax, unique_visitor_id=a9e79459-57e8-4b16-a311-907f5a44a6ee; expires=Wed, 24 Jun 2026 17:59:24 GMT; path=/; domain=.livejasmin.com; secure; SameSite=Lax, tppId=35a131b64aa4c6c2a7038529c8dc4b4d6a966995685ae77c; expires=Wed, 24 Jun 2026 17:59:24 GMT; path=/; domain=.livejasmin.com; secure; httponly; SameSite=Lax, category=girls; expires=Wed, 24 Jun 2026 17:59:24 GMT; path=/; domain=.livejasmin.com; secure; SameSite=Lax, is_personalized_content_allowed=; expires=Thu, 24 Jul 2025 17:59:25 GMT; path=/; domain=.livejasmin.com; secure; SameSite=Lax, is_sensitive_data_collection_allowed=; expires=Thu, 24 Jul 2025 17:59:25 GMT; path=/; domain=.livejasmin.com; secure; SameSite=Lax",
+          "Link": "<https://www.livejasmin.com/en/girls>; rel=\"canonical\"",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Content-Type-Options": "nosniff",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Correlation-Id": "aa61b2f22c23d49760a804f9d1bf8a06",
+          "Cache-Control": "max-age=0,no-cache,no-store,must-revalidate,post-check=0,pre-check=0",
+          "Expires": "0",
+          "Pragma": "no-cache",
+          "Server": "unknown",
+          "Content-Encoding": "gzip"
+        },
+        "content_length": 483101,
+        "redirect_history": [
+          "https://livejasmin.com/",
+          "https://www.livejasmin.com/"
+        ],
+        "final_url": "https://www.livejasmin.com/en/girls",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": "1; mode=block",
+        "Referrer-Policy": null,
+        "security_score": "3/6"
+      },
+      "technologies": [
+        "Unable to detect"
+      ],
+      "subdomains": [
+        "www.livejasmin.com",
+        "mail.livejasmin.com"
+      ],
+      "ip_geolocation": {
+        "ip": "109.71.161.200",
+        "country": "Luxembourg",
+        "region": "Diekirch",
+        "city": "Schieren",
+        "isp": "JWE S.a r.l.",
+        "org": "JWE S.a",
+        "lat": 49.8153,
+        "lon": 6.12958
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "fac": {
+      "domain": "fac",
+      "timestamp": "2025-06-24T17:59:18.783218",
+      "whois_info": {
+        "registrar": "Unknown",
+        "creation_date": "Unknown",
+        "expiration_date": "Unknown",
+        "name_servers": [],
+        "country": "Unknown",
+        "org": "Unknown"
+      },
+      "dns_records": {
+        "A": [],
+        "AAAA": [],
+        "MX": [],
+        "NS": [],
+        "TXT": [],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "error": "SSL information not available"
+      },
+      "http_response": {
+        "error": "Cannot retrieve HTTP response"
+      },
+      "security_headers": {
+        "error": "Cannot analyze security headers"
+      },
+      "technologies": [
+        "Unable to detect"
+      ],
+      "subdomains": [],
+      "ip_geolocation": {
+        "error": "Cannot retrieve geolocation data"
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "tinder.com": {
+      "domain": "tinder.com",
+      "timestamp": "2025-06-24T17:59:18.786407",
+      "whois_info": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "[datetime.datetime(1998, 10, 15, 4, 0), datetime.datetime(1998, 10, 15, 4, 0, tzinfo=datetime.timezone.utc)]",
+        "expiration_date": "[datetime.datetime(2025, 10, 14, 4, 0), datetime.datetime(2025, 10, 14, 0, 0, tzinfo=datetime.timezone.utc)]",
+        "name_servers": [
+          "NS-1483.AWSDNS-57.ORG",
+          "NS-1571.AWSDNS-04.CO.UK",
+          "NS-303.AWSDNS-37.COM",
+          "NS-684.AWSDNS-21.NET"
+        ],
+        "country": "US",
+        "org": "Match Group, LLC"
+      },
+      "dns_records": {
+        "A": [
+          "52.84.150.54",
+          "52.84.150.55",
+          "52.84.150.60",
+          "52.84.150.39"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 aspmx.l.google.com.",
+          "20 alt1.aspmx.l.google.com.",
+          "30 alt2.aspmx.l.google.com.",
+          "40 aspmx2.googlemail.com.",
+          "50 aspmx3.googlemail.com."
+        ],
+        "NS": [
+          "ns-1483.awsdns-57.org.",
+          "ns-1571.awsdns-04.co.uk.",
+          "ns-303.awsdns-37.com.",
+          "ns-684.awsdns-21.net."
+        ],
+        "TXT": [
+          "\"OSSRH-49342\"",
+          "\"google-site-verification=8Lg81wA2KUu6Decn-GH3tkOB5VeYAUsCWMpUAGEFwDc\"",
+          "\"google-site-verification=hl89faooobd53l_n3yaXMKWqxj9HQmJ1uHIF0JA-MDw\"",
+          "\"google-site-verification=bfJd9owFtmCvui4O6JrDJLVnSJA_aaxJOJuOEFbInF4\"",
+          "\"google-site-verification=rBpv3L9D4zbAMPOmrNZvyMW5yiWPc4wlUcAAEffiyU0\"",
+          "\"facebook-domain-verification=mubcqnl1rf89sxi0nk4gc1hij354ff\"",
+          "\"v=spf1 include:mail.zendesk.com include:_spf.google.com include:_spf1.tinder.com -all\"",
+          "\"google-site-verification=3DRNth5Cc4J6V0isjY7TVFKBv_dzH52aPupt2Axa_fQT4\"",
+          "\"facebook-domain-verification=9o6q82t8kc2hyjisuur2ihrb5p030t\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "tinder.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Amazon",
+          "commonName": "Amazon RSA 2048 M02"
+        },
+        "version": 3,
+        "serial_number": "03965C6D9DE948D691CF174912B90087",
+        "not_before": "Feb 15 00:00:00 2025 GMT",
+        "not_after": "Mar 17 23:59:59 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "tinder.com"
+          ],
+          [
+            "DNS",
+            "www.tinder.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Content-Type": "text/html; charset=utf-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Date": "Tue, 24 Jun 2025 17:59:21 GMT",
+          "Content-Encoding": "gzip",
+          "Set-Cookie": "AWSALB=jf0NOPBZpj8xDIa72LshW28xPAByesPDggXPqsxk1NS8kBd0oLTYyCvvehzdlXssSx/Ocnv854TN/P9Q63Oi3JwDso+HthXwhIGQSDhCMdmg/InshoWs5x4d9abz; Expires=Tue, 01 Jul 2025 17:59:21 GMT; Path=/, AWSALBCORS=jf0NOPBZpj8xDIa72LshW28xPAByesPDggXPqsxk1NS8kBd0oLTYyCvvehzdlXssSx/Ocnv854TN/P9Q63Oi3JwDso+HthXwhIGQSDhCMdmg/InshoWs5x4d9abz; Expires=Tue, 01 Jul 2025 17:59:21 GMT; Path=/; SameSite=None; Secure",
+          "Server": "nginx",
+          "X-Powered-By": "Express",
+          "X-DNS-Prefetch-Control": "on",
+          "Referrer-Policy": "origin-when-cross-origin",
+          "Content-Security-Policy-Report-Only": "default-src 'self';base-uri 'self';connect-src 'self' wss://keepalive.gotinder.com wss://keepalive.ue1.d1.tstaging.com https://messagepublish.ue1.d4.tstaging.com https://*.gotinder.com https://*.appsflyer.com https://*.bugsnag.com https://tinder-api.arkoselabs.com https://*.spotify.com https://*.line.me https://*.onelink.me https://*.*.braintree-api.com https://*.*.paypal.com https://*.braintree-api.com https://*.paypal.com https://*.braintreegateway.com https://*.s3.amazonaws.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.doubleclick.net https://*.google.com https://maps.googleapis.com https://*.gstatic.com https://fonts.googleapis.com;script-src 'nonce-CC+8KcFw+QnfIJMmAShpfA==' 'strict-dynamic' 'unsafe-eval' 'unsafe-hashes' 'sha256-PLCxbpHSwAa8+W198R1KQQ9UDCexTvYy4z4YmCg21NM=' 'unsafe-inline' https:;style-src 'self' 'unsafe-inline' blob: https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.doubleclick.net https://*.google.com https://maps.googleapis.com https://*.gstatic.com https://fonts.googleapis.com;frame-src 'self' https://tinder-api.arkoselabs.com https://*.*.paypal.com https://*.paypal.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.doubleclick.net https://*.google.com https://maps.googleapis.com https://*.gstatic.com https://fonts.googleapis.com;frame-ancestors 'self';form-action 'self' *.tinder.com tinder.com;object-src 'none';img-src 'self' data: blob: https://*.gotinder.com https://*.scdn.co https://*.cdninstagram.com https://*.cloudfront.net https://*.s3.amazonaws.com https://*.*.paypal.com https://*.paypalobjects.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.doubleclick.net https://*.google.com https://maps.googleapis.com https://*.gstatic.com https://fonts.googleapis.com;media-src 'self' data: https://*.scdn.co https://*.spotify.com https://media.tenor.com;report-to csp-reports;font-src 'self' data: https:;manifest-src 'self' https:",
+          "Content-Security-Policy": "default-src *;script-src * 'unsafe-inline' 'unsafe-eval';style-src * 'unsafe-inline' blob:;img-src * data: blob:;media-src * data:;font-src * data: https:",
+          "Report-To": "{\"group\":\"csp-reports\",\"max_age\":604800,\"endpoints\":[{\"url\":\"/api/csp-reports\"}]}",
+          "X-Render-Method": "ssr",
+          "Cache-Control": "must-revalidate, public, max-age=3600",
+          "Cross-Origin-Opener-Policy": "same-origin-allow-popups",
+          "ETag": "W/\"729f3-c3F56G8c+NLJuMvxsm/v25lygs4\"",
+          "Vary": "Accept-Encoding",
+          "X-Cache": "Miss from cloudfront",
+          "Via": "1.1 8d08de7fce6cdb6f648bade508fa2926.cloudfront.net (CloudFront)",
+          "X-Amz-Cf-Pop": "SIN2-P1",
+          "X-Amz-Cf-Id": "K7hqxyoxsm4aWSwo37i-DCTnJjMgqsBDY3yPEmMKxceuJ18EnJsD0A==",
+          "X-XSS-Protection": "1; mode=block",
+          "X-Frame-Options": "SAMEORIGIN",
+          "X-Content-Type-Options": "nosniff",
+          "Strict-Transport-Security": "max-age=31536000"
+        },
+        "content_length": 469491,
+        "redirect_history": [],
+        "final_url": "https://tinder.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": "default-src *;script-src * 'unsafe-inline' 'unsafe-eval';style-src * 'unsafe-inline' blob:;img-src * data: blob:;media-src * data:;font-src * data: https:",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=31536000",
+        "X-XSS-Protection": "1; mode=block",
+        "Referrer-Policy": "origin-when-cross-origin",
+        "security_score": "6/6"
+      },
+      "technologies": [
+        "Nginx",
+        "React"
+      ],
+      "subdomains": [
+        "www.tinder.com"
+      ],
+      "ip_geolocation": {
+        "ip": "52.84.150.39",
+        "country": "United States",
+        "region": "Virginia",
+        "city": "Ashburn",
+        "isp": "Amazon.com, Inc.",
+        "org": "AWS CloudFront (GLOBAL)",
+        "lat": 39.0438,
+        "lon": -77.4874
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {
+        "facebook": "tinder",
+        "twitter": "Tinder",
+        "instagram": "tinder",
+        "youtube": "Tinder",
+        "linkedin": "company",
+        "tiktok": "@tinder"
+      }
+    },
+    "youporn.com": {
+      "domain": "youporn.com",
+      "timestamp": "2025-06-24T17:59:20.252079",
+      "whois_info": {
+        "registrar": "EuroDNS S.A.",
+        "creation_date": "[datetime.datetime(2005, 12, 2, 21, 28, 36), datetime.datetime(2005, 12, 2, 0, 0)]",
+        "expiration_date": "[datetime.datetime(2027, 5, 23, 17, 23, 18), datetime.datetime(2027, 5, 22, 0, 0)]",
+        "name_servers": [
+          "NS-1499.AWSDNS-59.ORG",
+          "NS-1567.AWSDNS-03.CO.UK",
+          "NS-531.AWSDNS-02.NET",
+          "NS-92.AWSDNS-11.COM",
+          "SDNS3.ULTRADNS.BIZ",
+          "SDNS3.ULTRADNS.COM",
+          "SDNS3.ULTRADNS.NET",
+          "SDNS3.ULTRADNS.ORG"
+        ],
+        "country": "LU",
+        "org": "Whois Privacy (enumDNS dba)"
+      },
+      "dns_records": {
+        "A": [
+          "66.254.114.79"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 mxa-002a0701.gslb.pphosted.com.",
+          "10 mxb-002a0701.gslb.pphosted.com."
+        ],
+        "NS": [
+          "ns-1499.awsdns-59.org.",
+          "ns-1567.awsdns-03.co.uk.",
+          "ns-531.awsdns-02.net.",
+          "ns-92.awsdns-11.com.",
+          "sdns3.ultradns.biz.",
+          "sdns3.ultradns.com.",
+          "sdns3.ultradns.net.",
+          "sdns3.ultradns.org."
+        ],
+        "TXT": [
+          "\"google-site-verification=JUUOfrLhnWgybRcxRF-kprv_vOjidmHqLuaPifFvpLM\"",
+          "\"google-site-verification=ufL21hvym5tTTHmAoexqrN06UxZBF-_Jv-ClrW08paE\"",
+          "\"google-site-verification=b7CVdAoGp7_rKw8kW7thFyclQwtm8rpyWN9e82kbVrA\"",
+          "\"google-site-verification=as4DDhkQ8sQe6bTsLONdgzzN1lwfZ-0LvtPvT7CCD4c\"",
+          "\"q8h189zxgnfzjxmdr3z16t61lg0r6n3t\"",
+          "\"_m508c56a4ythxg269o5xp3ndzgnh6ir\"",
+          "\"6ctwc2smlph5jpnzxt7wm1hsb6y2zmz5\"",
+          "\"b41b54db786e43df944f815b056a01a0\"",
+          "\"ms=ms93693720\"",
+          "\"google-site-verification=o7eXfwPy9AAHMqQtdGFU_rw_PtHtv4XmwDAdDddMHHU\"",
+          "\"v=spf1 mx include:_spf.google.com include:mail.zendesk.com ip4:208.91.206.64/26 ip4:62.212.83.19/32 ip4:31.192.125.32/28 ip4:208.99.69.22/32 ip4:94.199.252.160/28 ip4:162.211.96.66 ip4:162.211.96.67 include:spf-002a0701.pphosted.com include:spf.protection\" \".outlook.com ~all\"",
+          "\"vhrpgpndkh2yj02mn66mh4sx92037zys\"",
+          "\"google-site-verification=sANgPRb7LSH8rdhuidrObK8BYORtcN-zK2zASKLKZFU\"",
+          "\"google-site-verification=op9ijPoI32P4e8_wCijlSI_cylw59S2JNlzF62dY7UU\"",
+          "\"google-site-verification=j4xF9wuvHzDe0qoK9BOMG5kSx1gv-1ShQcX1CYDMnkI\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "countryName": "CY",
+          "localityName": "Dali",
+          "organizationName": "AYLO Freesites Ltd",
+          "commonName": "*.youporn.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "DigiCert Inc",
+          "commonName": "DigiCert Global G3 TLS ECC SHA384 2020 CA1"
+        },
+        "version": 3,
+        "serial_number": "0570A1E8DEB1FFF069E4F6C88D86D061",
+        "not_before": "Apr 11 00:00:00 2025 GMT",
+        "not_after": "May 12 23:59:59 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.youporn.com"
+          ],
+          [
+            "DNS",
+            "youporn.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "server": "openresty",
+          "date": "Tue, 24 Jun 2025 17:59:25 GMT",
+          "content-type": "text/html; charset=UTF-8",
+          "transfer-encoding": "chunked",
+          "set-cookie": "ua=87d166c91c0adb73ab1bd7fa82ca0662; expires=Tue, 17-Dec-2080 11:58:50 GMT; Max-Age=1750874365; path=/; domain=youporn.com, platform=pc; expires=Sat, 25-Jul-2026 17:59:25 GMT; Max-Age=34214400; path=/; domain=youporn.com, bs=0000000000000000f0e645f32fe898a4; expires=Wed, 24-Jun-2026 17:59:25 GMT; Max-Age=31536000; path=/; domain=youporn.com; secure; SameSite=None, ss=909903611304794111; expires=Wed, 24-Jun-2026 17:59:25 GMT; Max-Age=31536000; path=/; domain=youporn.com; secure; SameSite=None, ua=87d166c91c0adb73ab1bd7fa82ca0662; expires=Tue, 17-Dec-2080 11:58:50 GMT; Max-Age=1750874365; path=/; domain=youporn.com, platform=pc; expires=Sat, 25-Jul-2026 17:59:25 GMT; Max-Age=34214400; path=/; domain=youporn.com, LBSERVERID=ded8290; path=/; Secure; SameSite=None",
+          "x-frame-options": "SAMEORIGIN",
+          "vary": "User-Agent",
+          "rating": "RTA-5042-1996-1400-1577-RTA",
+          "cache-control": "no-store,no-cache,private,max-age=0,no-transform,must-revalidate",
+          "content-encoding": "gzip",
+          "x-rn-rsrv": "ded8290",
+          "accept-ch": "Sec-CH-UA,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-UA-Platform,Sec-CH-UA-Platform-Version",
+          "strict-transport-security": "max-age=604800",
+          "alt-svc": "h3=\":443\"; ma=60"
+        },
+        "content_length": 583618,
+        "redirect_history": [
+          "https://youporn.com/"
+        ],
+        "final_url": "https://www.youporn.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=604800",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "2/6"
+      },
+      "technologies": [
+        "Vue.js",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.youporn.com",
+        "blog.youporn.com",
+        "mobile.youporn.com"
+      ],
+      "ip_geolocation": {
+        "ip": "66.254.114.79",
+        "country": "United States",
+        "region": "New York",
+        "city": "New York",
+        "isp": "Reflected Networks, Inc.",
+        "org": "Reflected Networks, Inc.",
+        "lat": 40.7128,
+        "lon": -74.006
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": true
+      },
+      "social_presence": {}
+    },
+    "myfreecams.com": {
+      "domain": "myfreecams.com",
+      "timestamp": "2025-06-24T17:59:22.259443",
+      "whois_info": {
+        "registrar": "Moniker Online Services LLC",
+        "creation_date": "2002-03-19 04:18:38",
+        "expiration_date": "2031-03-19 03:18:38",
+        "name_servers": [
+          "NS1.METAPEER.COM",
+          "NS1A.MYFREECAMS.COM",
+          "NS2A.MYFREECAMS.COM",
+          "NS3.METAPEER.COM",
+          "NS3A.MYFREECAMS.COM",
+          "NS4.METAPEER.COM"
+        ],
+        "country": "US",
+        "org": "Moniker Privacy Services"
+      },
+      "dns_records": {
+        "A": [
+          "163.237.254.146"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 mail.myfreecams.com."
+        ],
+        "NS": [
+          "ns1.metapeer.com.",
+          "ns3.metapeer.com.",
+          "ns4.metapeer.com.",
+          "ns1a.myfreecams.com.",
+          "ns2a.myfreecams.com.",
+          "ns3a.myfreecams.com."
+        ],
+        "TXT": [
+          "\"google-site-verification=G6heoIm1mzBtK_JdqgHCxCOoRPsrzv6ocGVjHlhBJu0\"",
+          "\"google-site-verification=wa-AFW8nn_6GAE3So8Lbj5-ZjMDK2n7_UYVe6hiaj0Q\"",
+          "\"v=spf1 mx include:spf.myfreecams.com ?all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "myfreecams.com"
+        },
+        "issuer": {
+          "countryName": "GB",
+          "stateOrProvinceName": "Greater Manchester",
+          "localityName": "Salford",
+          "organizationName": "Sectigo Limited",
+          "commonName": "Sectigo ECC Domain Validation Secure Server CA"
+        },
+        "version": 3,
+        "serial_number": "0586C43166893518D083B75635858DEF",
+        "not_before": "Jul 29 00:00:00 2024 GMT",
+        "not_after": "Jul 29 23:59:59 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "myfreecams.com"
+          ],
+          [
+            "DNS",
+            "*.myfreecams.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Tue, 24 Jun 2025 17:59:28 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Content-Length": "18261",
+          "Connection": "keep-alive",
+          "Keep-Alive": "timeout=30",
+          "set-cookie": "cid=3149; expires=Tue, 25-May-2027 17:59:28 GMT; Max-Age=60480000; path=/; domain=myfreecams.com",
+          "cache-control": "no-cache, must-revalidate",
+          "expires": "Mon, 26 Jul 1997 05:00:00 GMT",
+          "vary": "Accept-Encoding",
+          "content-encoding": "gzip",
+          "X-Served-By": "edge6tyo",
+          "X-Cache-Status": "BYPASS",
+          "alt-svc": "h3=\":443\"; ma=345600",
+          "Strict-Transport-Security": "max-age=15552000;"
+        },
+        "content_length": 73623,
+        "redirect_history": [
+          "https://myfreecams.com/"
+        ],
+        "final_url": "https://www.myfreecams.com",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": null,
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=15552000;",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "1/6"
+      },
+      "technologies": [
+        "Nginx",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.myfreecams.com",
+        "mail.myfreecams.com",
+        "admin.myfreecams.com",
+        "api.myfreecams.com",
+        "mobile.myfreecams.com",
+        "app.myfreecams.com"
+      ],
+      "ip_geolocation": {
+        "ip": "163.237.254.146",
+        "country": "United States",
+        "region": "Illinois",
+        "city": "Chicago",
+        "isp": "YOUR.ORG, INC.",
+        "org": "Redwood Network Design",
+        "lat": 41.8781,
+        "lon": -87.6298
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": true
+      },
+      "social_presence": {
+        "twitter": "MyFreeCams"
+      }
+    },
+    "badoo.com": {
+      "domain": "badoo.com",
+      "timestamp": "2025-06-24T17:59:23.146034",
+      "whois_info": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "[datetime.datetime(2003, 5, 26, 4, 0, 51), datetime.datetime(2003, 5, 26, 4, 0, 51, tzinfo=datetime.timezone.utc)]",
+        "expiration_date": "[datetime.datetime(2027, 5, 26, 4, 0, 51), datetime.datetime(2027, 5, 26, 0, 0, tzinfo=datetime.timezone.utc)]",
+        "name_servers": [
+          "NS1.BADOO.COM",
+          "NS2.BADOO.COM",
+          "NS3.BADOO.COM",
+          "NS4.BADOO.COM",
+          "NS5.BADOO.COM",
+          "NS6.BADOO.COM"
+        ],
+        "country": "CY",
+        "org": "Badoo Media Limited"
+      },
+      "dns_records": {
+        "A": [
+          "31.222.75.112"
+        ],
+        "AAAA": [],
+        "MX": [
+          "5 mailin1eu.monopost.com.",
+          "5 mailin1us.monopost.com."
+        ],
+        "NS": [
+          "ns1.badoo.com.",
+          "ns2.badoo.com.",
+          "ns3.badoo.com.",
+          "ns4.badoo.com.",
+          "ns5.badoo.com.",
+          "ns6.badoo.com."
+        ],
+        "TXT": [
+          "\"google-site-verification=nW3eL-Oz934O7wMttQ855YJ9seq5866Xly_qarjPhj4\"",
+          "\"v=spf1 include:mail.zendesk.com ip4:31.222.64.0/20 ip4:159.253.176.0/21 -all\"",
+          "\"google-site-verification=lzwmS88UMZwgkBTtXaIpsXv6DVDas3pbBQCrkCa8bgE\"",
+          "\"facebook-domain-verification=go09qpwzxq40ry6h4ehsynos0y824n\"",
+          "\"sql35j0cp6sccts163r949kc1zghds8c\"",
+          "\"google-site-verification=pj-0XqkiW0M4hU5dJNxkPghak-swvnDtPywyY7aK4Qs\"",
+          "\"google-site-verification=MNvdEFom8ksg-0SRNZRPQHPqnE4-HS3q8HvOFSoWHd0\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "*.badoo.app"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Let's Encrypt",
+          "commonName": "R11"
+        },
+        "version": 3,
+        "serial_number": "0693209A7C3F143BFEAC7A9794F0A4351C72",
+        "not_before": "Jun 16 00:24:59 2025 GMT",
+        "not_after": "Sep 14 00:24:58 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.badoo.app"
+          ],
+          [
+            "DNS",
+            "*.badoo.com"
+          ],
+          [
+            "DNS",
+            "badoo.app"
+          ],
+          [
+            "DNS",
+            "badoo.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Tue, 24 Jun 2025 17:59:28 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Keep-Alive": "timeout=60",
+          "Expires": "Mon, 26 Jul 1997 05:00:00 GMT",
+          "Cache-Control": "no-store, no-cache, must-revalidate, max-age=0, post-check=0, pre-check=0, private, private, no-cache, no-store, max-age=0, must-revalidate",
+          "Set-Cookie": "device_id=5b4d6cab-6cab-ab69-690a-0a41c2bec95b; expires=Thu, 31 May 2125 17:59:28 GMT; Max-Age=3153600000; path=/; domain=.badoo.com",
+          "Document-Policy": "js-profiling",
+          "Content-Security-Policy": "default-src 'self' https://consent.badoo.com; script-src 'self' 'unsafe-inline' 'report-sample' 'nonce-hqSYZBAHjmOwQg1//SLvlg==' badoocdn.com *.badoocdn.com https://consent.badoo.com https://*.googletagmanager.com https://tr.snapchat.com https://tr-shadow.snapchat.com https://badoo-api.arkoselabs.com; style-src 'self' 'unsafe-inline'; connect-src 'self' *.badoo.com *.badoo.eu *.badoo.us https://consent.badoo.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.google.com https://tr.snapchat.com https://tr-shadow.snapchat.com https://badoo-api.arkoselabs.com https://*.sentry.io; child-src 'self' blob:; font-src * data:; manifest-src 'self'; base-uri 'self'; frame-src * bds: bdp:; img-src * data: blob:; media-src * data: blob:; report-uri /jss/csp_report.phtml?token=badoo_homepage&env=production; upgrade-insecure-requests;",
+          "ETag": "\"vvtrcvg6t61utc\"",
+          "Vary": "Accept-Encoding",
+          "Content-Encoding": "gzip",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+          "Referrer-Policy": "strict-origin-when-cross-origin",
+          "X-Content-Type-Options": "nosniff"
+        },
+        "content_length": 88713,
+        "redirect_history": [],
+        "final_url": "https://badoo.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": "default-src 'self' https://consent.badoo.com; script-src 'self' 'unsafe-inline' 'report-sample' 'nonce-m7fE9Qq+XKgRN5Pq9GNPmg==' badoocdn.com *.badoocdn.com https://consent.badoo.com https://*.googletagmanager.com https://tr.snapchat.com https://tr-shadow.snapchat.com https://badoo-api.arkoselabs.com; style-src 'self' 'unsafe-inline'; connect-src 'self' *.badoo.com *.badoo.eu *.badoo.us https://consent.badoo.com https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://*.g.doubleclick.net https://*.google.com https://tr.snapchat.com https://tr-shadow.snapchat.com https://badoo-api.arkoselabs.com https://*.sentry.io; child-src 'self' blob:; font-src * data:; manifest-src 'self'; base-uri 'self'; frame-src * bds: bdp:; img-src * data: blob:; media-src * data: blob:; report-uri /jss/csp_report.phtml?token=badoo_homepage&env=production; upgrade-insecure-requests;",
+        "X-Frame-Options": null,
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "security_score": "4/6"
+      },
+      "technologies": [
+        "Nginx"
+      ],
+      "subdomains": [
+        "www.badoo.com",
+        "mail.badoo.com",
+        "ftp.badoo.com",
+        "admin.badoo.com",
+        "api.badoo.com",
+        "blog.badoo.com",
+        "shop.badoo.com",
+        "mobile.badoo.com",
+        "app.badoo.com"
+      ],
+      "ip_geolocation": {
+        "ip": "31.222.75.112",
+        "country": "United States",
+        "region": "Florida",
+        "city": "Miami",
+        "isp": "Public-services",
+        "org": "Public services",
+        "lat": 25.7838,
+        "lon": -80.1823
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {
+        "facebook": "badoo",
+        "twitter": "Badoo?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor",
+        "instagram": "badoo",
+        "linkedin": "company"
+      }
+    },
+    "ashley madison.com": {
+      "domain": "ashley madison.com",
+      "timestamp": "2025-06-24T17:59:33.657565",
+      "whois_info": {
+        "error": "Cannot retrieve WHOIS data"
+      },
+      "dns_records": {
+        "A": [],
+        "AAAA": [],
+        "MX": [],
+        "NS": [],
+        "TXT": [],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "error": "SSL information not available"
+      },
+      "http_response": {
+        "error": "Cannot retrieve HTTP response"
+      },
+      "security_headers": {
+        "error": "Cannot analyze security headers"
+      },
+      "technologies": [
+        "Unable to detect"
+      ],
+      "subdomains": [],
+      "ip_geolocation": {
+        "error": "Cannot retrieve geolocation data"
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "manyvids.com": {
+      "domain": "manyvids.com",
+      "timestamp": "2025-06-24T17:59:34.456515",
+      "whois_info": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "2013-03-11 00:41:32",
+        "expiration_date": "2026-03-11 00:41:32",
+        "name_servers": [
+          "NS-1007.AWSDNS-61.NET",
+          "NS-1032.AWSDNS-01.ORG",
+          "NS-1764.AWSDNS-28.CO.UK",
+          "NS-327.AWSDNS-40.COM"
+        ],
+        "country": "Unknown",
+        "org": "Unknown"
+      },
+      "dns_records": {
+        "A": [
+          "13.35.37.8",
+          "13.35.37.92",
+          "13.35.37.83",
+          "13.35.37.127"
+        ],
+        "AAAA": [
+          "2600:9000:213e:600:5:d53a:fc40:93a1",
+          "2600:9000:213e:a00:5:d53a:fc40:93a1",
+          "2600:9000:213e:e800:5:d53a:fc40:93a1",
+          "2600:9000:213e:8600:5:d53a:fc40:93a1",
+          "2600:9000:213e:c800:5:d53a:fc40:93a1",
+          "2600:9000:213e:6c00:5:d53a:fc40:93a1",
+          "2600:9000:213e:3800:5:d53a:fc40:93a1",
+          "2600:9000:213e:2600:5:d53a:fc40:93a1"
+        ],
+        "MX": [
+          "0 manyvids-com.mail.protection.outlook.com."
+        ],
+        "NS": [
+          "ns-1007.awsdns-61.net.",
+          "ns-1032.awsdns-01.org.",
+          "ns-1764.awsdns-28.co.uk.",
+          "ns-327.awsdns-40.com."
+        ],
+        "TXT": [
+          "\"MS=ms56024389\"",
+          "\"google-site-verification=TuYcmCesosiMdDiMcst8FAeL6rnP_iWiGtfwr3e8fvs\"",
+          "\"v=spf1 mx include:amazonses.com include:spf.protection.outlook.com include:mail.zendesk.com -all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "manyvids.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Amazon",
+          "commonName": "Amazon RSA 2048 M03"
+        },
+        "version": 3,
+        "serial_number": "04AB9423FE5CADFED49E954AC2528258",
+        "not_before": "Sep 25 00:00:00 2024 GMT",
+        "not_after": "Oct 25 23:59:59 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "manyvids.com"
+          ],
+          [
+            "DNS",
+            "*.manyvids.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Server": "CloudFront",
+          "Content-Type": "text/html; charset=utf-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Access-Control-Allow-Origin": "*",
+          "Cache-Control": "public, max-age=0, must-revalidate",
+          "Content-Disposition": "inline",
+          "Content-Encoding": "br",
+          "Date": "Tue, 24 Jun 2025 17:59:36 GMT",
+          "ETag": "W/\"3fa6cdfb1c5e875a1854c38731541b0e\"",
+          "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+          "X-Matched-Path": "/disclaimer",
+          "X-Vercel-Cache": "HIT",
+          "X-Vercel-Id": "iad1::9dvr9-1750787976391-925542eabcb5",
+          "X-Vercel-Ip-As-Number": "8075",
+          "X-Vercel-Ip-City": "Singapore",
+          "X-Vercel-Ip-Continent": "AS",
+          "X-Vercel-Ip-Country": "SG",
+          "X-Vercel-Ip-Latitude": "1.2872",
+          "X-Vercel-Ip-Longitude": "103.8507",
+          "X-Vercel-Ip-Postal-Code": "17",
+          "X-Vercel-Ip-Timezone": "Asia/Singapore",
+          "X-Cache": "Miss from cloudfront",
+          "Via": "1.1 f88b12326a074e160cdec4e94dd566f4.cloudfront.net (CloudFront)",
+          "X-Amz-Cf-Pop": "SIN2-P9",
+          "X-Amz-Cf-Id": "b7t0klqVldYq20_n_6LTjOW81g7fotqYq6QWyB0PXdYshHpZ8YLY3w==",
+          "Age": "71018",
+          "X-Frame-Options": "SAMEORIGIN"
+        },
+        "content_length": 52885,
+        "redirect_history": [
+          "https://manyvids.com/"
+        ],
+        "final_url": "https://www.manyvids.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "2/6"
+      },
+      "technologies": [
+        "React",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.manyvids.com",
+        "mail.manyvids.com",
+        "ftp.manyvids.com",
+        "admin.manyvids.com",
+        "api.manyvids.com",
+        "blog.manyvids.com",
+        "shop.manyvids.com",
+        "mobile.manyvids.com",
+        "app.manyvids.com"
+      ],
+      "ip_geolocation": {
+        "ip": "13.35.37.92",
+        "country": "Singapore",
+        "region": "North West",
+        "city": "Singapore",
+        "isp": "Amazon.com, Inc.",
+        "org": "AWS CloudFront (GLOBAL)",
+        "lat": 1.35208,
+        "lon": 103.82
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "xvideos.com": {
+      "domain": "xvideos.com",
+      "timestamp": "2025-06-24T17:59:35.035119",
+      "whois_info": {
+        "registrar": "GRANSY S.R.O D/B/A SUBREG.CZ",
+        "creation_date": "[datetime.datetime(1997, 12, 30, 5, 0), datetime.datetime(1997, 12, 30, 0, 0)]",
+        "expiration_date": "[datetime.datetime(2028, 12, 29, 5, 0), datetime.datetime(2028, 12, 29, 0, 0)]",
+        "name_servers": [
+          "NS1.RANDOMSERVER.COM",
+          "NS2.RANDOMSERVER.COM",
+          "NS3.RANDOMSERVER.COM",
+          "NS4.RANDOMSERVER.COM",
+          "NS5.RANDOMSERVER.COM",
+          "NS6.RANDOMSERVER.COM"
+        ],
+        "country": "CZ",
+        "org": "Whois protection, this company does not own this domain name s.r.o."
+      },
+      "dns_records": {
+        "A": [
+          "185.88.181.8",
+          "185.88.181.11",
+          "185.88.181.2",
+          "185.88.181.4",
+          "185.88.181.7",
+          "185.88.181.9",
+          "185.88.181.6",
+          "185.88.181.5",
+          "185.88.181.10",
+          "185.88.181.3"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 aspmx2.googlemail.com.",
+          "1 aspmx.l.google.com.",
+          "5 alt1.aspmx.l.google.com.",
+          "10 aspmx5.googlemail.com.",
+          "5 alt2.aspmx.l.google.com.",
+          "10 aspmx3.googlemail.com.",
+          "10 aspmx4.googlemail.com."
+        ],
+        "NS": [
+          "ns1.randomserver.com.",
+          "ns2.randomserver.com.",
+          "ns3.randomserver.com.",
+          "ns4.randomserver.com.",
+          "ns5.randomserver.com.",
+          "ns6.randomserver.com."
+        ],
+        "TXT": [
+          "\"v=spf1 mx ip4:69.55.53.62/32 ip4:141.0.172.202/32 ip4:69.55.53.149/32 ip4:69.55.53.150/32 ip4:141.0.172.99/26 ip4:141.0.168.58/32 ip4:69.55.57.146/32 ip4:69.55.53.235/32 include:_spf.google.com include:sendgrid.net include:spf.dynect.net -all\"",
+          "\"google-site-verification=AaqKS4MdHV6EpISaFwBtduOlvf79g3Wx5QxzTIl1ECQ\"",
+          "\"tiktok-developers-site-verification=TjYXWYDF1LPiMRRgAh2HYTW06oWK9hbW\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "*.xvideos.com"
+        },
+        "issuer": {
+          "countryName": "GB",
+          "stateOrProvinceName": "Greater Manchester",
+          "localityName": "Salford",
+          "organizationName": "Sectigo Limited",
+          "commonName": "Sectigo RSA Domain Validation Secure Server CA"
+        },
+        "version": 3,
+        "serial_number": "3552B5D208803B5466C29403EF393BB7",
+        "not_before": "Dec 30 00:00:00 2024 GMT",
+        "not_after": "Jan 30 23:59:59 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.xvideos.com"
+          ],
+          [
+            "DNS",
+            "xvideos.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:39 GMT",
+          "P3p": "policyref=\"/p3p.xml\", CP=\"NOI CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT\"",
+          "Accept-Ch": "Viewport-Width, Width, Device-Memory, Sec-CH-UA, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Model, Sec-CH-UA-Bitness",
+          "Vary": "Accept-Encoding,User-Agent,Accept-Language,Cookie",
+          "X-Frame-Options": "SAMEORIGIN",
+          "Report-To": "{\"group\": \"csp-endpoint\", \"max_age\": 10886400, \"endpoints\": [ { \"url\": \"https://www.xvideos.com/csp-reports\" } ] }",
+          "Content-Security-Policy": "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' blob: *.xvideos.com *.xnxx.com *.red-cdn.com *.gold-cdn.com *.xvideos-cdn.com *.xnxx-cdn.com *.others-cdn.com 1868565294.rsc.cdn77.org static.cloudflareinsights.com www.google.com www.gstatic.com fonts.gstatic.com global.frcapi.com *.googleapis.com accounts.google.com *.cdn77.org  *.nk-img.com  *.segpay.com  *.online-metrix.net *.vscdns.com *.vsmvideo.com *.mmcdn.com info.xvideos.net www.tjk-njk.com *.exoclick.com *.orbsrv.com *.opoxv.com *.exdynsrv.com *.afcdn.net *.aucdn.net *.tf4srv.com *.aacdn.net *.trackingtraffo.com *.adglare.net www.flirt4free.com www.ohmybutt.com www.secretpartners.com *.asf4f.us *.livejasmin.com *.jsmcrptjmp.com *.awemwh.com etahub.com ctrack.trafficjunky.net tracking.sexcash.com *.gtflixtv.com wss://*.1ka.com https://*.1ka.com https://media.1ka.com https://u.1ka.com https://n.1ka.com;img-src 'self' 'unsafe-inline' data: blob: *.xvideos.com *.xnxx.com *.red-cdn.com *.gold-cdn.com *.xvideos-cdn.com *.xnxx-cdn.com *.others-cdn.com *.cdn77.org www.google.com www.google-analytics.com ssl.gstatic.com *.nk-img.com *.camster.com data-cdn.pornbiz.com *.vscdns.com *.vsmvideo.com *.mmcdn.com *.doubleclick.net *.google.fr *.google.com *.segpay.com *.online-metrix.net cdn.asf4f.us *.gtflixtv.com *.1ka.com *.orbsrv.com *.exdynsrv.com *.afcdn.net *.aucdn.net *.justservingfiles.net *.tf4srv.com *.aacdn.net *.rtbsuperhub.com *.trackingtraffo.com; report-uri https://www.xvideos.com/csp-reports; report-to csp-endpoint",
+          "Referrer-Policy": "no-referrer-when-downgrade",
+          "Set-Cookie": "session_token=249e4340385d87c4d9vL8U_3-3XhQPTS7BkkRpwJFUu4ASria4fHdIEuA0KOQCXPJfUau7hSsR0PESO1oM9gc7iMkvW13cruWZP7hbxlWqd1o9SJ9Zaeh9YGAXhi0S6FnjMwq3nMqQih5e9nF3d2JkBHDUUqgMoVBSl0ADqdf3_iIkQWM_n8SIeoYIuPCvXKIr90nm6HS3dbBtsg; expires=Sun, 21 Dec 2025 17:59:39 GMT; Max-Age=15552000; path=/; domain=.xvideos.com; secure; HttpOnly",
+          "Content-Encoding": "gzip",
+          "Content-Length": "48763",
+          "Content-Type": "text/html; charset=utf-8",
+          "Server": "nginx"
+        },
+        "content_length": 184071,
+        "redirect_history": [
+          "https://xvideos.com/"
+        ],
+        "final_url": "https://www.xvideos.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' blob: *.xvideos.com *.xnxx.com *.red-cdn.com *.gold-cdn.com *.xvideos-cdn.com *.xnxx-cdn.com *.others-cdn.com 1868565294.rsc.cdn77.org static.cloudflareinsights.com www.google.com www.gstatic.com fonts.gstatic.com global.frcapi.com *.googleapis.com accounts.google.com *.cdn77.org  *.nk-img.com  *.segpay.com  *.online-metrix.net *.vscdns.com *.vsmvideo.com *.mmcdn.com info.xvideos.net www.tjk-njk.com *.exoclick.com *.orbsrv.com *.opoxv.com *.exdynsrv.com *.afcdn.net *.aucdn.net *.tf4srv.com *.aacdn.net *.trackingtraffo.com *.adglare.net www.flirt4free.com www.ohmybutt.com www.secretpartners.com *.asf4f.us *.livejasmin.com *.jsmcrptjmp.com *.awemwh.com etahub.com ctrack.trafficjunky.net tracking.sexcash.com *.gtflixtv.com wss://*.1ka.com https://*.1ka.com https://media.1ka.com https://u.1ka.com https://n.1ka.com;img-src 'self' 'unsafe-inline' data: blob: *.xvideos.com *.xnxx.com *.red-cdn.com *.gold-cdn.com *.xvideos-cdn.com *.xnxx-cdn.com *.others-cdn.com *.cdn77.org www.google.com www.google-analytics.com ssl.gstatic.com *.nk-img.com *.camster.com data-cdn.pornbiz.com *.vscdns.com *.vsmvideo.com *.mmcdn.com *.doubleclick.net *.google.fr *.google.com *.segpay.com *.online-metrix.net cdn.asf4f.us *.gtflixtv.com *.1ka.com *.orbsrv.com *.exdynsrv.com *.afcdn.net *.aucdn.net *.justservingfiles.net *.tf4srv.com *.aacdn.net *.rtbsuperhub.com *.trackingtraffo.com; report-uri https://www.xvideos.com/csp-reports; report-to csp-endpoint",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "no-referrer-when-downgrade",
+        "security_score": "3/6"
+      },
+      "technologies": [
+        "Nginx",
+        "jQuery"
+      ],
+      "subdomains": [
+        "www.xvideos.com",
+        "mail.xvideos.com",
+        "ftp.xvideos.com",
+        "admin.xvideos.com",
+        "api.xvideos.com",
+        "blog.xvideos.com",
+        "shop.xvideos.com",
+        "mobile.xvideos.com",
+        "app.xvideos.com"
+      ],
+      "ip_geolocation": {
+        "ip": "185.88.181.6",
+        "country": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "isp": "DigitalOcean, LLC",
+        "org": "ServerStack, Inc",
+        "lat": 52.3759,
+        "lon": 4.8975
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "stripchat.com": {
+      "domain": "stripchat.com",
+      "timestamp": "2025-06-24T17:59:35.097393",
+      "whois_info": {
+        "registrar": "Amazon Registrar, Inc.",
+        "creation_date": "2006-02-13 19:09:16",
+        "expiration_date": "2029-02-13 19:09:16",
+        "name_servers": [
+          "AMY.NS.CLOUDFLARE.COM",
+          "DUKE.NS.CLOUDFLARE.COM"
+        ],
+        "country": "GB",
+        "org": "Identity Protection Service"
+      },
+      "dns_records": {
+        "A": [
+          "104.17.117.12",
+          "104.17.118.12"
+        ],
+        "AAAA": [
+          "2606:4700::6811:760c",
+          "2606:4700::6811:750c"
+        ],
+        "MX": [
+          "1 aspmx.l.google.com.",
+          "10 aspmx2.googlemail.com.",
+          "10 aspmx3.googlemail.com.",
+          "10 aspmx4.googlemail.com.",
+          "10 aspmx5.googlemail.com.",
+          "5 alt1.aspmx.l.google.com.",
+          "5 alt2.aspmx.l.google.com."
+        ],
+        "NS": [
+          "amy.ns.cloudflare.com.",
+          "duke.ns.cloudflare.com."
+        ],
+        "TXT": [
+          "\"google-site-verification=S8ShtOSN2AUxiDZbsiDUtsIdx7Jr8CtTa_wTlnI5bwI\"",
+          "\"google-site-verification=TBV_95JbDODhguSUqTs45WSpw1H4nff5VD0Zd1imj-c\"",
+          "\"google-site-verification=iduZu8D3ZgE5M1MqS-Rkvldi6SCThQwlVs4u27etGNU\"",
+          "\"mailru-verification: aa18f9ab0def0b70\"",
+          "\"v=spf1 include:spf.stripchat.com -all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "stripchat.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Google Trust Services",
+          "commonName": "WE1"
+        },
+        "version": 3,
+        "serial_number": "FE5A991453A175150E94506E24A5D3C6",
+        "not_before": "May 22 00:04:24 2025 GMT",
+        "not_after": "Aug 20 01:04:22 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "stripchat.com"
+          ],
+          [
+            "DNS",
+            "*.stripchat.com"
+          ],
+          [
+            "DNS",
+            "*.beta.stripchat.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:37 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "x-ssr-cache-status": "HIT",
+          "Set-Cookie": "ABTest_ab_nav_b_v3_key=A_899; path=/; domain=stripchat.com; expires=Wed, 24 Jun 2026 00:00:00 GMT, ABTest_ab_avp_new_provider_friendlyid_4_key=X_899; path=/; domain=stripchat.com; expires=Wed, 24 Jun 2026 00:00:00 GMT, ABTest_ab_s_d_recommended_v40_tech_v9_key=A_899; path=/; domain=stripchat.com; expires=Wed, 24 Jun 2026 00:00:00 GMT, __cf_bm=6Q6wdlwMDVaB8Ntm_3kaq3_anXBapR7fYfC4fGIbvlU-1750787977-1.0.1.1-YhqXoIC9Sv5Pk.PnJ0Xyan79qUkS2ah6ifEUryHbwEy_fj8acLcmowO0soG3pRxI4AtqkiD9MKeXWlchJAz08l6Ugt2Sr6v93QftewQ9zsVozfq1jV8HzvLcKgEWMzik; path=/; expires=Tue, 24-Jun-25 18:29:37 GMT; domain=.stripchat.com; HttpOnly; Secure; SameSite=None, _cfuvid=iOOfdYIfQNPwMPXc6OmC9YfPNaunr7d0hThs_rRFVdo-1750787977334-0.0.1.1-604800000; path=/; domain=.stripchat.com; HttpOnly; Secure; SameSite=None",
+          "x-backend": "mike-ssr-application-cd8b5b7d5-r6xjk, sc-fw",
+          "strict-transport-security": "max-age=31536000; includeSubDomains",
+          "x-frame-options": "deny",
+          "vary": "accept-encoding",
+          "cf-cache-status": "DYNAMIC",
+          "Server": "cloudflare",
+          "CF-RAY": "954e1eb90abaf8fc-SIN",
+          "Content-Encoding": "br",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "content_length": 861756,
+        "redirect_history": [],
+        "final_url": "https://stripchat.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "deny",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "2/6"
+      },
+      "technologies": [
+        "Cloudflare",
+        "React",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.stripchat.com",
+        "ftp.stripchat.com",
+        "admin.stripchat.com",
+        "api.stripchat.com",
+        "blog.stripchat.com",
+        "shop.stripchat.com",
+        "mobile.stripchat.com",
+        "app.stripchat.com"
+      ],
+      "ip_geolocation": {
+        "ip": "104.17.117.12",
+        "country": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "lat": 43.6532,
+        "lon": -79.3832
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {
+        "twitter": "stripchat"
+      }
+    },
+    "onlyfans.com": {
+      "domain": "onlyfans.com",
+      "timestamp": "2025-06-24T17:59:38.421531",
+      "whois_info": {
+        "registrar": "GoDaddy Corporate Domains, LLC",
+        "creation_date": "2013-01-29 19:10:56",
+        "expiration_date": "2035-01-29 19:10:56",
+        "name_servers": [
+          "NS-1381.AWSDNS-44.ORG",
+          "NS-158.AWSDNS-19.COM",
+          "NS-1697.AWSDNS-20.CO.UK",
+          "NS-713.AWSDNS-25.NET"
+        ],
+        "country": "Unknown",
+        "org": "Unknown"
+      },
+      "dns_records": {
+        "A": [
+          "172.66.0.144",
+          "162.159.140.146"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 inbound-smtp.us-east-1.amazonaws.com."
+        ],
+        "NS": [
+          "ns-158.awsdns-19.com.",
+          "ns-713.awsdns-25.net.",
+          "ns-1697.awsdns-20.co.uk.",
+          "ns-1381.awsdns-44.org."
+        ],
+        "TXT": [
+          "\"google-site-verification=vwksrAgGYSO0CRDHi-GL5zUbuXYl63RrHh6lQTCX0FA\"",
+          "\"\\\":\"",
+          "\"ca3-de336f9c3eea41d182c58a0e383506c2\"",
+          "\"facebook-domain-verification=7jovorxjgyt0xc5dbw5rjxyrogoglu\"",
+          "\"_globalsign-domain-verification=eemA9F_UsK0bGrGGm2wfKCLw_pen3ByIq06fk2SjZe\"",
+          "\"facebook-domain-verification=t4v612fq7qxhqypi627dn5zumlwag2\"",
+          "\"MS=A1ABFEB5CA2E639421538B196FFF5EB1DBAE0FB7\"",
+          "\"dlyyb13d2kwy4tc0qq56mfgdjpt7mlzw\"",
+          "\"google-site-verification=cCYazcwl39IyKOjENTcydGP_hx-QM0IRj7jTEx5ZZls\"",
+          "\"h1-domain-verification=gMHMAJkqUQ5736hpkAUd7ZwP4z1g1HLivwwjL9RWbF8jy6YM\"",
+          "\"MS=ms58770879\"",
+          "\"google-site-verification=pe0Tbj-4J9WcdPWMmKN9A23JBxS7Q_v0yNXs26GQ2Lk\"",
+          "\"atlassian-domain-verification=puayH7wgeQrYnWGVFbP9PHjbcqrPuVh2JmVvjT7a4pgg9wKALoU310Xj2E2PxMm2\"",
+          "\"google-site-verification=2sM2u2738SgRyoEv08B_k1c1Hdy6NEP6kgZbqW8L8DI\\\"\"",
+          "\"google-site-verification=YdGOLeW5196Q7EO8CSEFulXKVsJOGCz5wtgCUJdC6qU\"",
+          "\"docusign=282ecea0-1005-448e-98dc-b73eeb8ea750\"",
+          "\"v=spf1 +a +mx ip4:3.226.227.91 ip4:54.175.88.73 ip4:18.232.46.215 include:amazonses.com include:_spf.google.com include:mail.zendesk.com ~all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "onlyfans.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Let's Encrypt",
+          "commonName": "E6"
+        },
+        "version": 3,
+        "serial_number": "0651D8A0EC8F09AC0B51FB0062818F416D86",
+        "not_before": "May 30 09:34:21 2025 GMT",
+        "not_after": "Aug 28 09:34:20 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "onlyfans.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 403,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:40 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "close",
+          "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+          "cf-mitigated": "challenge",
+          "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-resource-policy": "same-origin",
+          "origin-agent-cluster": "?1",
+          "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
+          "referrer-policy": "same-origin",
+          "server-timing": "chlray;desc=\"954e1ecf19c9879f\"",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+          "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+          "Set-Cookie": "__cf_bm=dzkxS46.IYPgdCLiD1fs2k4BICE2lS1KtNYXvzFvX50-1750787980-1.0.1.1-Rh6Eadya2gkgLO6rBcJhUfFzPly2L8mSsBl46Xk9gzOma.t6qxBidDkm4PZKoVlcyrDJVIo4Y.ppAQDgsh_0C_f8pyj_1B_rpPm3BsMhPn8; path=/; expires=Tue, 24-Jun-25 18:29:40 GMT; domain=.onlyfans.com; HttpOnly; Secure; SameSite=None",
+          "Vary": "Accept-Encoding",
+          "Server": "cloudflare",
+          "CF-RAY": "954e1ecf19c9879f-SIN",
+          "Content-Encoding": "gzip",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "content_length": 6964,
+        "redirect_history": [],
+        "final_url": "https://onlyfans.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "same-origin",
+        "security_score": "3/6"
+      },
+      "technologies": [
+        "Cloudflare"
+      ],
+      "subdomains": [
+        "www.onlyfans.com",
+        "blog.onlyfans.com"
+      ],
+      "ip_geolocation": {
+        "ip": "162.159.140.146",
+        "country": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "lat": 43.6532,
+        "lon": -79.3832
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "clips4sale.com": {
+      "domain": "clips4sale.com",
+      "timestamp": "2025-06-24T17:59:38.594210",
+      "whois_info": {
+        "registrar": "EuroDNS S.A.",
+        "creation_date": "[datetime.datetime(2003, 7, 22, 3, 45, 51), datetime.datetime(2003, 7, 22, 0, 0)]",
+        "expiration_date": "[datetime.datetime(2025, 7, 22, 3, 45, 51), datetime.datetime(2025, 7, 21, 0, 0)]",
+        "name_servers": [
+          "NS-1429.AWSDNS-50.ORG",
+          "NS-1909.AWSDNS-46.CO.UK",
+          "NS-212.AWSDNS-26.COM",
+          "NS-821.AWSDNS-38.NET"
+        ],
+        "country": "LU",
+        "org": "Whois Privacy (enumDNS dba)"
+      },
+      "dns_records": {
+        "A": [
+          "216.18.168.233"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 aspmx.l.google.com.",
+          "20 alt1.aspmx.l.google.com.",
+          "20 alt2.aspmx.l.google.com.",
+          "30 aspmx2.googlemail.com.",
+          "30 aspmx3.googlemail.com."
+        ],
+        "NS": [
+          "ns-1429.awsdns-50.org.",
+          "ns-1909.awsdns-46.co.uk.",
+          "ns-212.awsdns-26.com.",
+          "ns-821.awsdns-38.net."
+        ],
+        "TXT": [
+          "\"atlassian-domain-verification=yfr8kwo6ezuOaWz0TpZAT/h14l2Zk9aQfkU/hO/MdTm8uoeK49IDZVTQZrM5sia4\"",
+          "\"google-site-verification=pLBW-1XkEw2SmRKVkDSMQURDeAS7FzYxVV__njPWawk\"",
+          "\"8zgjw2prjygqvckkj641x1k74bzl7yjc\"",
+          "\"ca3-ab2c9a2c512e4279887d3f573f6386d6\"",
+          "\"5284a8e640c443a7847c98bfa0d77154\"",
+          "\"google-site-verification=OLP0C7SDtxL4pCZgVCkks_jIbv7a11Nmpmmn-zhM3bI\"",
+          "\"z3trpk5l2mzmdbm6b7xt8jr5xykg0k7r\"",
+          "\"google-site-verification=AoceViVkrLTlLfxkPbnbVRRg51EIwBwNmfV-E4FJ3So\"",
+          "\"google-site-verification=gqA2gahFGKL7OS7TmfDWzDO4YXUHMk_XxI3PuH8Z9OQ\"",
+          "\"google-site-verification=hTUGP_j4ZeRNXTVorC66B28voIPfA3mBoEgc3Zp4WHE\"",
+          "\"v=spf1 a:mx.intermarkproductions.com include:spf.dynect.net include:_spf.google.com mx:intermarkproductions.com include:_spf.smtp.com ~all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "*.clips4sale.com"
+        },
+        "issuer": {
+          "countryName": "GB",
+          "stateOrProvinceName": "Greater Manchester",
+          "localityName": "Salford",
+          "organizationName": "Sectigo Limited",
+          "commonName": "Sectigo RSA Domain Validation Secure Server CA"
+        },
+        "version": 3,
+        "serial_number": "A98556D83DFECD55C837258999DA3F2B",
+        "not_before": "Dec  2 00:00:00 2024 GMT",
+        "not_after": "Jan  2 23:59:59 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.clips4sale.com"
+          ],
+          [
+            "DNS",
+            "clips4sale.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:41 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "content-security-policy": "frame-ancestors 'self' https://ladmin.clips4sale.com https://workspace.clips4sale.com",
+          "link": "<https://imagecdn.clips4sale.com>; rel=\"preconnect\"",
+          "Set-Cookie": "__session=Ijg2ZDQ0YTU5LWIwZmYtNGI4MS1hZjRkLWIxNDhjY2UwOTQ1ZiI%3D.%2FDMdOKn3HlsMNSR%2Be61vDeXPlWr4Edlcbu%2F4HmHBllY; Max-Age=86400; Domain=clips4sale.com; Path=/; SameSite=Lax, clips4sale_forever_session_v2=1a4c644e-3502-4fb1-b21d-46311297ba02; Domain=clips4sale.com; Path=/; Expires=Fri, 22 Jun 2035 17:59:41 GMT; Secure; SameSite=None, promoKey=; Domain=clips4sale.com; Path=/; Expires=Wed, 25 Jun 2025 17:59:41 GMT; SameSite=Lax, allowCurrencySwitch=false; Max-Age=86400; Domain=clips4sale.com; Path=/; SameSite=Lax, RNLBSERVERID-REMIX=ded7793; path=/",
+          "x-frame-options": "SAMEORIGIN",
+          "vary": "Accept-Encoding",
+          "strict-transport-security": "max-age=15768000",
+          "accept-ch": "Sec-CH-UA,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-UA-Platform,Sec-CH-UA-Platform-Version",
+          "cf-cache-status": "DYNAMIC",
+          "Server": "cloudflare",
+          "CF-RAY": "954e1ed2ee86823b-SIN",
+          "Content-Encoding": "gzip",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "content_length": 532905,
+        "redirect_history": [
+          "https://clips4sale.com/"
+        ],
+        "final_url": "https://www.clips4sale.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": "frame-ancestors 'self' https://ladmin.clips4sale.com https://workspace.clips4sale.com",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=15768000",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "3/6"
+      },
+      "technologies": [
+        "Cloudflare",
+        "React",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.clips4sale.com",
+        "mail.clips4sale.com",
+        "ftp.clips4sale.com",
+        "admin.clips4sale.com",
+        "api.clips4sale.com",
+        "blog.clips4sale.com",
+        "shop.clips4sale.com",
+        "mobile.clips4sale.com",
+        "app.clips4sale.com"
+      ],
+      "ip_geolocation": {
+        "ip": "216.18.168.233",
+        "country": "United States",
+        "region": "Illinois",
+        "city": "Chicago",
+        "isp": "Reflected Networks, Inc.",
+        "org": "Reflected Networks, Inc.",
+        "lat": 41.8781,
+        "lon": -87.6298
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {
+        "twitter": "clips4sale?t=HzBgd908mBu_x2uLC4F71g&amp;s=09",
+        "youtube": "@Clips4SaleOfficial"
+      }
+    },
+    "pof.com": {
+      "domain": "pof.com",
+      "timestamp": "2025-06-24T17:59:41.447796",
+      "whois_info": {
+        "registrar": "CSC Corporate Domains, Inc.",
+        "creation_date": "[datetime.datetime(2000, 2, 21, 11, 46, 13), datetime.datetime(2000, 2, 21, 6, 46, 13)]",
+        "expiration_date": "2026-02-21 11:46:12",
+        "name_servers": [
+          "ALDO.NS.CLOUDFLARE.COM",
+          "ELAINE.NS.CLOUDFLARE.COM"
+        ],
+        "country": "CA",
+        "org": "Plentyoffish Media ULC"
+      },
+      "dns_records": {
+        "A": [
+          "172.64.151.193",
+          "104.18.36.63"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 aspmx.l.google.com.",
+          "20 alt1.aspmx.l.google.com.",
+          "30 alt2.aspmx.l.google.com.",
+          "40 aspmx2.googlemail.com.",
+          "50 aspmx3.googlemail.com."
+        ],
+        "NS": [
+          "elaine.ns.cloudflare.com.",
+          "aldo.ns.cloudflare.com."
+        ],
+        "TXT": [
+          "\"v=spf2.0/pra ip4:199.182.216.128/27 include:_spf.google.com include:mailgun.org include:mail.zendesk.com ~all\"",
+          "\"byjr6v75z3t20dvl1rqbgt1jf8kql84x\"",
+          "\"knowbe4-site-verification=3972620090c8fec7e810fe659fed3d7e\"",
+          "\"jty0xj4vyg11fl4t962lwt5g6lzklqm2\"",
+          "\"google-site-verification=F7P2bWvqWlnnzt_mSC3Eu-M7PeA5xPyl-RWEw4qZ8Bk\"",
+          "\"ca3-c5cc288c7feb4887bcd93fc301ff5024\"",
+          "\"google-site-verification=KTJllXXavBU3bGwtXdI2tsL-LiOEGViHkZnIdt5ACXA\"",
+          "\"google-site-verification=sUIebfld7FMsQga_KgQ8S01W1elF4JJt4giGMOCiyzY\"",
+          "\"gmfgrbntmkw4b49j3csbx1h01rg9kwqb\"",
+          "\"docusign=02223860-9550-4b98-9efb-05b01e953ff8\"",
+          "\"v=spf1 ip4:199.182.216.128/27 include:_spf.google.com include:mailgun.org include:mail.zendesk.com ~all\"",
+          "\"facebook-domain-verification=uiu9nfi8eg8zlhj2dyg83hii8j532f\"",
+          "\"e5 94 64 91 66 9f 00 28 02 46\"",
+          "\"openai-domain-verification=dv-fX1uzo52HAXPeR2RosRsv2XS\"",
+          "\"monday-com-verification=EarLJiS8OqFLzMB6w_-eNsPVHRnufaxyPH9NPZEuVAI\"",
+          "\"ZOOM_verify_15vKatZOQLqQFi1hUWF-DQ\"",
+          "\"_ekmanwdbgq6oh6knh42hli0qk8mzvun\"",
+          "\"notion-domain-verification=i6pGcLWelWhczFC7HNlhYgLkpjOPpocoop2jWsJWVXa\"",
+          "\"atlassian-domain-verification=ySfArD90okMxGOgfUHlUeuRYVFYhk4mx0eC4SsRbLea1Ox4YzmkiGl7PLAlV1bgG\"",
+          "\"wiz-domain-verification=473a99e8f6c0132353f2489a2314670ffdbb3f7818f68037d1afa27af0d24bdd\"",
+          "\"monday-com-verification=slY9y3XHq34uh-YcJ6kJt7zn9sZ11zFTlJm_Ny6W0Po\"",
+          "\"docker-verification=1c763820-1a53-40bd-bbba-04a1f197b2b0\"",
+          "\"canva-site-verification=Q-2fSxMsEMPTXckRWAMddw\"",
+          "\"google-site-verification=QUjgJJsw4aIvCHmdjC6z5mSTfbYqEsqgZzjZSh-3GM4\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "pof.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Let's Encrypt",
+          "commonName": "E5"
+        },
+        "version": 3,
+        "serial_number": "05F7665034D4028EC5895A787995E66164CF",
+        "not_before": "Jun 13 19:50:24 2025 GMT",
+        "not_after": "Sep 11 19:50:23 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "appl-pn.pof.com"
+          ],
+          [
+            "DNS",
+            "pof.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 403,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:43 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "X-Frame-Options": "SAMEORIGIN",
+          "Referrer-Policy": "same-origin",
+          "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+          "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+          "Set-Cookie": "__cf_bm=RbqCilSltKLZN79_dd8LLAID9N7moyBgH7X_2Ydyk7U-1750787983-1.0.1.1-2AO475iwTiwTyPxNOe5UR2_f.mqyaZgx04H_RsePHcrXqwXG3.siRog3rzACMLW54mXPoN2lj9H1YF6Yc2rtpC7r9dQjQyOU0ttCGJsTNWg; path=/; expires=Tue, 24-Jun-25 18:29:43 GMT; domain=.pof.com; HttpOnly; Secure; SameSite=None",
+          "Vary": "Accept-Encoding",
+          "Server": "cloudflare",
+          "CF-RAY": "954e1edfc93b3e4a-SIN",
+          "Content-Encoding": "gzip"
+        },
+        "content_length": 4509,
+        "redirect_history": [],
+        "final_url": "https://pof.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "same-origin",
+        "security_score": "2/6"
+      },
+      "technologies": [
+        "Cloudflare"
+      ],
+      "subdomains": [
+        "www.pof.com",
+        "blog.pof.com",
+        "app.pof.com"
+      ],
+      "ip_geolocation": {
+        "ip": "104.18.36.63",
+        "country": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "lat": 43.6532,
+        "lon": -79.3832
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "match.com": {
+      "domain": "match.com",
+      "timestamp": "2025-06-24T17:59:41.567833",
+      "whois_info": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "[datetime.datetime(1998, 6, 2, 4, 0), datetime.datetime(1998, 6, 2, 7, 0, tzinfo=datetime.timezone.utc)]",
+        "expiration_date": "[datetime.datetime(2026, 6, 1, 4, 0), datetime.datetime(2026, 6, 1, 0, 0, tzinfo=datetime.timezone.utc)]",
+        "name_servers": [
+          "DNS1.P01.NSONE.NET",
+          "DNS2.P01.NSONE.NET",
+          "DNS3.P01.NSONE.NET",
+          "DNS4.P01.NSONE.NET"
+        ],
+        "country": "US",
+        "org": "Match Group, LLC"
+      },
+      "dns_records": {
+        "A": [
+          "208.83.242.49"
+        ],
+        "AAAA": [],
+        "MX": [
+          "1 aspmx.l.google.com.",
+          "5 alt1.aspmx.l.google.com.",
+          "5 alt2.aspmx.l.google.com.",
+          "10 alt3.aspmx.l.google.com.",
+          "10 alt4.aspmx.l.google.com."
+        ],
+        "NS": [
+          "dns1.p01.nsone.net.",
+          "dns2.p01.nsone.net.",
+          "dns3.p01.nsone.net.",
+          "dns4.p01.nsone.net."
+        ],
+        "TXT": [
+          "\"google-site-verification=vA8JUqcZ1Mes2DRtIDeZ4L17w4aNXYvqOCVzSCq9Qms\"",
+          "\"adobe-idp-site-verification=6ff142c7-3f16-4155-9688-68e9cf6a74e2\"",
+          "\"v=spf1 ip4:8.40.142.22 ip4:209.249.148.231 ip4:208.83.240.0/22 include:_spf.google.com  -all\"",
+          "\"twilio-domain-verification=f0b17bfb885c3af5a4970703418e6cd8\"",
+          "\"e5 94 64 91 66 9f 00 28 02 46\"",
+          "\"google-site-verification=J07ohO982DqYdoIkMvkbdKFY5zKutDD0oQPxzdXezzM\"",
+          "\"vmware-cloud-verification-b890c9e5-fadf-43ed-9159-d016476634f9\"",
+          "\"atlassian-domain-verification=NplEbul6/QwY27UjCFVIejY24fDMShplITQWKk1tmWCsWKsnK/oN3X5fOtfepLYA\"",
+          "\"google-site-verification=5oN9qfCbwk38hvo8BzQmGDGGsp3BKw8Eea6MvCU1ps0\"",
+          "\"monday-com-verification=EarLJiS8OqFLzMB6w_-eNsPVHRnufaxyPH9NPZEuVAI\"",
+          "\"ciscocidomainverification=79ea860d47bf76824983406da949d789e4b71cc4f9bed756982169d9c047a3b1\"",
+          "\"docusign=f9a4ec42-bb80-4e29-ad28-f8906c19c6a2\"",
+          "\"facebook-domain-verification=oscvnn60k5wwgy07rt7mkpil0o10mj\"",
+          "\"atlassian-domain-verification=ySfArD90okMxGOgfUHlUeuRYVFYhk4mx0eC4SsRbLea1Ox4YzmkiGl7PLAlV1bgG\"",
+          "\"monday-com-verification=slY9y3XHq34uh-YcJ6kJt7zn9sZ11zFTlJm_Ny6W0Po\"",
+          "\"twilio-domain-verification=ce84b60799b57e0b564c0ff14fe84fa0\"",
+          "\"docker-verification=cc1cf118-dbf2-448d-b04c-3d0c49708c4d\"",
+          "\"2yppkfcjfg8p7wdfx33695n0nwwmrccr\"",
+          "\"apple-domain-verification=MJ0AvuorPaLBQbOC\"",
+          "\"_n1w4omwc1gg72g0julc3cx3rzmnj6a5\"",
+          "\"lS2V/KWvpJpJYTvxjvAWlr9H5SLceXgZhTP5aWvCQdA2/FkFJOF9nDxIhrgZnl9llu1Z4+rSTercGRGWCrEabg==\"",
+          "\"atlassian-domain-verification=IEKliHq4MX4nFt542a7Ia1a21wymT82uxnN1TPpaLzlwt42WUL2TjldWSOujK4xv\"",
+          "\"canva-site-verification=C-VSVCcEIK24Cl6UkmBQPA\"",
+          "\"openai-domain-verification=dv-7LCQlJbRt61ret8X48zyrDFC\"",
+          "\"adobe-idp-site-verification=524cb03a118a8834795ef48a18932f5af8789dab734cd919ec0b7b56a12efa1b\"",
+          "\"ppe-bb067409fbceab86925d\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "countryName": "US",
+          "stateOrProvinceName": "Texas",
+          "localityName": "Dallas",
+          "organizationName": "MATCH GROUP, LLC",
+          "commonName": "www.match.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "DigiCert Inc",
+          "commonName": "DigiCert Global G2 TLS RSA SHA256 2020 CA1"
+        },
+        "version": 3,
+        "serial_number": "090F685583B591880D09AC2887B807B0",
+        "not_before": "Mar 18 00:00:00 2025 GMT",
+        "not_after": "Apr 15 23:59:59 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "www.match.com"
+          ],
+          [
+            "DNS",
+            "match.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:45 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "x-powered-by": "Next.js",
+          "x-frame-options": "SAMEORIGIN",
+          "x-xss-protection": "1;mode=block",
+          "x-content-type-options": "nosniff",
+          "cache-control": "no-cache, no-store, must-revalidate",
+          "set-cookie": "machineid=071C6856-5F99-4D44-AB76-9C237A77C1E4; Path=/; Expires=Wed, 24 Jun 2026 17:59:45 GMT; HttpOnly; Secure, authtoken=Bearer%20eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjb3JlYXBpIiwiYXVkIjoiY29yZWFwaSIsInBsYXRmb3JtSWQiOjQ5LCJzZXNzaW9uSWQiOiJmNTU1MWY5Zi03YjAwLTRiODQtOWE0Yy0xOGZjYzJmMWY1MTAiLCJzaXRlQ29kZSI6MSwiU2VydmVySWQiOjIwNywidmVyIjoxMiwiaXNzU3JjIjoyNywiZW52IjoxLCJzY29wZSI6WzFdLCJhdXRoX3RpbWUiOm51bGwsImlhdCI6MTc1MDc4Nzk4NSwiZXhwIjoxNzUwNzkwNjg1LCJ1cmxDb2RlIjoiMSJ9.4n7rJAfxqO5vnbh3FZItmdM1asVJsnlbPoN2Sw23fYI; Path=/; Expires=Wed, 24 Jun 2026 17:59:45 GMT; HttpOnly; Secure",
+          "vary": "Accept-Encoding",
+          "content-encoding": "gzip",
+          "shouldproxy": "0",
+          "access-control-allow-origin": "*"
+        },
+        "content_length": 135504,
+        "redirect_history": [
+          "https://match.com/"
+        ],
+        "final_url": "https://www.match.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": "1;mode=block",
+        "Referrer-Policy": null,
+        "security_score": "3/6"
+      },
+      "technologies": [
+        "React"
+      ],
+      "subdomains": [
+        "www.match.com",
+        "blog.match.com",
+        "mobile.match.com"
+      ],
+      "ip_geolocation": {
+        "ip": "208.83.242.49",
+        "country": "United States",
+        "region": "Texas",
+        "city": "Dallas",
+        "isp": "Match Group, LLC",
+        "org": "Match Group, LLC",
+        "lat": 32.886,
+        "lon": -96.7692
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "beeg.com": {
+      "domain": "beeg.com",
+      "timestamp": "2025-06-24T17:59:43.838604",
+      "whois_info": {
+        "registrar": "DomainSpot LLC",
+        "creation_date": "[datetime.datetime(2000, 8, 10, 17, 57, 46), datetime.datetime(2000, 8, 10, 9, 57, 46)]",
+        "expiration_date": "[datetime.datetime(2027, 8, 10, 17, 57, 46), datetime.datetime(2027, 8, 11, 2, 39, 8)]",
+        "name_servers": [
+          "CLOE.NS.CLOUDFLARE.COM",
+          "RODNEY.NS.CLOUDFLARE.COM"
+        ],
+        "country": "CZ",
+        "org": "Redacted"
+      },
+      "dns_records": {
+        "A": [
+          "172.67.181.179",
+          "104.21.56.86"
+        ],
+        "AAAA": [
+          "2606:4700:3037::6815:3856",
+          "2606:4700:3034::ac43:b5b3"
+        ],
+        "MX": [
+          "1 aspmx.l.google.com.",
+          "10 alt3.aspmx.l.google.com.",
+          "10 alt4.aspmx.l.google.com.",
+          "5 alt1.aspmx.l.google.com.",
+          "5 alt2.aspmx.l.google.com."
+        ],
+        "NS": [
+          "cloe.ns.cloudflare.com.",
+          "rodney.ns.cloudflare.com."
+        ],
+        "TXT": [
+          "\"_globalsign-domain-verification=7ot5_K97M3OcrVUysSWYfYWeiV5kF0WjVjH4uX-Thy\"",
+          "\"google-site-verification=Q1_ohSXCmfdknU26iO9unPRU7zNCy3k2ILjjxVGNtNM\"",
+          "\"v=spf1 include:_spf.google.com ~all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "beeg.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Google Trust Services",
+          "commonName": "WE1"
+        },
+        "version": 3,
+        "serial_number": "8A83D28C29CA30F00D96120CAC2820F2",
+        "not_before": "May 17 09:44:14 2025 GMT",
+        "not_after": "Aug 15 10:42:47 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "beeg.com"
+          ],
+          [
+            "DNS",
+            "*.beeg.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:45 GMT",
+          "Content-Type": "text/html",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "Access-Control-Allow-Origin": "*",
+          "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=%2BP%2FvOPWHklLD8ED5LTQhUcsj73tXbzV2z4agqyMukbeJwH9WYdUqVYLu9L%2FbdDNEPmSTrGmyyGnOjP%2BYvJjfRqeUGwD5cJ1h\"}]}",
+          "Last-Modified": "Thu, 19 Jun 2025 13:32:44 GMT",
+          "Server": "cloudflare",
+          "Vary": "Origin",
+          "X-Frame-Options": "DENY",
+          "X-Xss-Protection": "1; mode=block",
+          "Cf-Cache-Status": "DYNAMIC",
+          "Content-Encoding": "zstd",
+          "CF-RAY": "954e1eef2c7efce0-SIN",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "content_length": 7124,
+        "redirect_history": [],
+        "final_url": "https://beeg.com/",
+        "encoding": "ISO-8859-1",
+        "content_type": "text/html"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "DENY",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": "1; mode=block",
+        "Referrer-Policy": null,
+        "security_score": "2/6"
+      },
+      "technologies": [
+        "Cloudflare"
+      ],
+      "subdomains": [
+        "www.beeg.com",
+        "mail.beeg.com"
+      ],
+      "ip_geolocation": {
+        "ip": "172.67.181.179",
+        "country": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "lat": 43.6532,
+        "lon": -79.3832
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "xnxx.com": {
+      "domain": "xnxx.com",
+      "timestamp": "2025-06-24T17:59:46.601531",
+      "whois_info": {
+        "registrar": "Gandi SAS",
+        "creation_date": "2002-04-08 22:38:49",
+        "expiration_date": "2033-04-08 22:38:49",
+        "name_servers": [
+          "NS1.XXX.ORG",
+          "NS2.XXX.ORG",
+          "NS3.XXX.ORG",
+          "NS4.XXX.ORG",
+          "NS5.XXX.ORG",
+          "NS6.XXX.ORG"
+        ],
+        "country": "Unknown",
+        "org": "Unknown"
+      },
+      "dns_records": {
+        "A": [
+          "185.88.181.58",
+          "185.88.181.55",
+          "185.88.181.54",
+          "185.88.181.60",
+          "185.88.181.57",
+          "185.88.181.59",
+          "185.88.181.56",
+          "185.88.181.53"
+        ],
+        "AAAA": [],
+        "MX": [
+          "30 aspmx5.googlemail.com.",
+          "30 aspmx4.googlemail.com.",
+          "20 alt1.aspmx.l.google.com.",
+          "30 aspmx3.googlemail.com.",
+          "30 aspmx2.googlemail.com.",
+          "20 alt2.aspmx.l.google.com.",
+          "10 aspmx.l.google.com."
+        ],
+        "NS": [
+          "ns2.xxx.org.",
+          "ns1.xxx.org.",
+          "ns4.xxx.org.",
+          "ns3.xxx.org.",
+          "ns6.xxx.org.",
+          "ns5.xxx.org."
+        ],
+        "TXT": [
+          "\"google-site-verification=UaCuOn1FBDy090nnewBbMo93L5X9WQYAA57DJruotnA\"",
+          "\"v=spf1 mx ip4:141.0.172.202 ip4:141.0.172.99 ip4:69.55.57.180 include:_spf.google.com include:mail.zendesk.com include:sendgrid.net -all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "*.xnxx.com"
+        },
+        "issuer": {
+          "countryName": "GB",
+          "stateOrProvinceName": "Greater Manchester",
+          "localityName": "Salford",
+          "organizationName": "Sectigo Limited",
+          "commonName": "Sectigo RSA Domain Validation Secure Server CA"
+        },
+        "version": 3,
+        "serial_number": "C8439CA86174F7A541E1219B74F79462",
+        "not_before": "Nov 14 00:00:00 2024 GMT",
+        "not_after": "Dec 15 23:59:59 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.xnxx.com"
+          ],
+          [
+            "DNS",
+            "xnxx.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 18:00:00 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "Content-Length": "28234",
+          "P3p": "policyref=\"/p3p.xml\", CP=\"NOI CURa ADMa DEVa TAIa OUR BUS IND UNI COM NAV INT\"",
+          "Accept-Ch": "Viewport-Width, Width, Device-Memory, Sec-CH-UA, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Sec-CH-UA-Platform-Version, Sec-CH-UA-Model, Sec-CH-UA-Bitness",
+          "Vary": "Accept-Encoding,User-Agent,Accept-Language,Cookie",
+          "X-Frame-Options": "SAMEORIGIN",
+          "Report-To": "{\"group\": \"csp-endpoint\", \"max_age\": 10886400, \"endpoints\": [ { \"url\": \"https://www.xnxx.com/csp-reports\" } ] }",
+          "Content-Security-Policy": "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' blob: *.xvideos.com *.xnxx.com *.red-cdn.com *.gold-cdn.com *.xvideos-cdn.com *.xnxx-cdn.com *.others-cdn.com 1868565294.rsc.cdn77.org static.cloudflareinsights.com www.google.com www.gstatic.com fonts.gstatic.com global.frcapi.com *.googleapis.com accounts.google.com *.cdn77.org  *.nk-img.com  *.segpay.com  *.online-metrix.net *.vscdns.com *.vsmvideo.com *.mmcdn.com info.xnxx.com www.tjk-njk.com *.exoclick.com *.orbsrv.com *.opoxv.com *.exdynsrv.com *.afcdn.net *.aucdn.net *.tf4srv.com *.aacdn.net *.trackingtraffo.com *.adglare.net www.flirt4free.com www.ohmybutt.com www.secretpartners.com *.asf4f.us *.livejasmin.com *.jsmcrptjmp.com *.awemwh.com etahub.com ctrack.trafficjunky.net tracking.sexcash.com *.gtflixtv.com;img-src 'self' 'unsafe-inline' data: blob: *.xvideos.com *.xnxx.com *.red-cdn.com *.gold-cdn.com *.xvideos-cdn.com *.xnxx-cdn.com *.others-cdn.com *.cdn77.org www.google.com www.google-analytics.com ssl.gstatic.com *.nk-img.com *.camster.com data-cdn.pornbiz.com *.vscdns.com *.vsmvideo.com *.mmcdn.com *.doubleclick.net *.google.fr *.google.com *.segpay.com *.online-metrix.net cdn.asf4f.us *.gtflixtv.com *.orbsrv.com *.exdynsrv.com *.afcdn.net *.aucdn.net *.justservingfiles.net *.tf4srv.com *.aacdn.net *.rtbsuperhub.com *.trackingtraffo.com; report-uri https://www.xnxx.com/csp-reports; report-to csp-endpoint",
+          "Referrer-Policy": "no-referrer-when-downgrade",
+          "Set-Cookie": "pending_thumb=deleted; expires=Thu, 01 Jan 1970 00:00:01 GMT; Max-Age=0; path=/; domain=.xnxx.com, session_token=5241a224c842515dJcZfiQALz6WqsXU3V5ozGKNQtbQuogUcP9wJaXcRplAnDl5atGWCPFmXmnailUiFRW87FPO8T7xPyFc5Nnc9ggFWAXlSlPhS4-hORzsyzDY_hYN9uK6hCfH18ElP_OrW8vRUAQvKHvs_WZbK8YRzwA7rXo7dTLv3zbj__ZEe1ZNh5Z5vGC7Z8nyCKvBSBQZ0; expires=Sun, 21 Dec 2025 18:00:00 GMT; Max-Age=15552000; path=/; domain=.xnxx.com; secure; HttpOnly",
+          "Content-Encoding": "gzip",
+          "Server": "nginx"
+        },
+        "content_length": 113118,
+        "redirect_history": [
+          "https://xnxx.com/"
+        ],
+        "final_url": "https://www.xnxx.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": "default-src 'self' data: 'unsafe-inline' 'unsafe-eval' blob: *.xvideos.com *.xnxx.com *.red-cdn.com *.gold-cdn.com *.xvideos-cdn.com *.xnxx-cdn.com *.others-cdn.com 1868565294.rsc.cdn77.org static.cloudflareinsights.com www.google.com www.gstatic.com fonts.gstatic.com global.frcapi.com *.googleapis.com accounts.google.com *.cdn77.org  *.nk-img.com  *.segpay.com  *.online-metrix.net *.vscdns.com *.vsmvideo.com *.mmcdn.com info.xnxx.com www.tjk-njk.com *.exoclick.com *.orbsrv.com *.opoxv.com *.exdynsrv.com *.afcdn.net *.aucdn.net *.tf4srv.com *.aacdn.net *.trackingtraffo.com *.adglare.net www.flirt4free.com www.ohmybutt.com www.secretpartners.com *.asf4f.us *.livejasmin.com *.jsmcrptjmp.com *.awemwh.com etahub.com ctrack.trafficjunky.net tracking.sexcash.com *.gtflixtv.com;img-src 'self' 'unsafe-inline' data: blob: *.xvideos.com *.xnxx.com *.red-cdn.com *.gold-cdn.com *.xvideos-cdn.com *.xnxx-cdn.com *.others-cdn.com *.cdn77.org www.google.com www.google-analytics.com ssl.gstatic.com *.nk-img.com *.camster.com data-cdn.pornbiz.com *.vscdns.com *.vsmvideo.com *.mmcdn.com *.doubleclick.net *.google.fr *.google.com *.segpay.com *.online-metrix.net cdn.asf4f.us *.gtflixtv.com *.orbsrv.com *.exdynsrv.com *.afcdn.net *.aucdn.net *.justservingfiles.net *.tf4srv.com *.aacdn.net *.rtbsuperhub.com *.trackingtraffo.com; report-uri https://www.xnxx.com/csp-reports; report-to csp-endpoint",
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "no-referrer-when-downgrade",
+        "security_score": "3/6"
+      },
+      "technologies": [
+        "Nginx",
+        "jQuery"
+      ],
+      "subdomains": [
+        "www.xnxx.com",
+        "mobile.xnxx.com"
+      ],
+      "ip_geolocation": {
+        "ip": "185.88.181.59",
+        "country": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "isp": "DigitalOcean, LLC",
+        "org": "ServerStack, Inc",
+        "lat": 52.3759,
+        "lon": 4.8975
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "spankbang.com": {
+      "domain": "spankbang.com",
+      "timestamp": "2025-06-24T17:59:46.997892",
+      "whois_info": {
+        "registrar": "NameCheap, Inc.",
+        "creation_date": "2011-02-19 09:49:41",
+        "expiration_date": "2026-02-19 09:49:41",
+        "name_servers": [
+          "JONAH.NS.CLOUDFLARE.COM",
+          "WALLY.NS.CLOUDFLARE.COM"
+        ],
+        "country": "Unknown",
+        "org": "Unknown"
+      },
+      "dns_records": {
+        "A": [
+          "104.18.96.242",
+          "104.19.239.156"
+        ],
+        "AAAA": [
+          "2606:4700::6812:60f2",
+          "2606:4700::6813:ef9c"
+        ],
+        "MX": [
+          "10 spankbang-com.mail.protection.outlook.com."
+        ],
+        "NS": [
+          "wally.ns.cloudflare.com.",
+          "jonah.ns.cloudflare.com."
+        ],
+        "TXT": [
+          "\"google-site-verification=mXMFJWW2CpN24p2jSz1vEOI2nATq0RqrhGU3o4OaOuA\"",
+          "\"google-site-verification=9ADjW3RPujPvYW841m1wJIp7o9h7jxlcAOLG8WysrUA\"",
+          "\"google-gws-recovery-domain-verification=48105609\"",
+          "\"google-site-verification=DWzsGcNwc7ERn8lmo7lzhEkD0fBZmt4Ym022U5WFo7I\"",
+          "\"v=spf1 include:_spf.duodecadits.com -all\"",
+          "\"google-site-verification=WQPlIZhPDw_03EzLrAUJ2bgMvpQ7QneiQ_28fB0eTkQ\"",
+          "\"MS=ms92645917\"",
+          "\"google-site-verification=PCygOhCUKEppX9PFdAQrGCUf3ieDcdhPt7UVcRqi6uM\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "spankbang.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Let's Encrypt",
+          "commonName": "E6"
+        },
+        "version": 3,
+        "serial_number": "05272A3C13FA3BF5E2624269886389EA19D3",
+        "not_before": "May  2 20:04:11 2025 GMT",
+        "not_after": "Jul 31 20:04:10 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.core-sys.spankbang.com"
+          ],
+          [
+            "DNS",
+            "*.spankbang.com"
+          ],
+          [
+            "DNS",
+            "spankbang.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 403,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 17:59:58 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "X-Frame-Options": "SAMEORIGIN",
+          "Referrer-Policy": "same-origin",
+          "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+          "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+          "Set-Cookie": "__cf_bm=GhvyQs.WGkH1RktsTetmTgKqsZcdq4dSzOK2BCeyNPE-1750787998-1.0.1.1-bn.Mjz0euNzgfPX_pU7H_PxWzTbwi1NNMduoVa2GuJcPlFz6tPWWEuhjXroIoiPo1m98kCBSoFH3TtrP841PSyXJhwmAJCPVscYK0OwAPsY; path=/; expires=Tue, 24-Jun-25 18:29:58 GMT; domain=.spankbang.com; HttpOnly; Secure; SameSite=None",
+          "Vary": "Accept-Encoding",
+          "Strict-Transport-Security": "max-age=15552000; includeSubDomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "Server": "cloudflare",
+          "CF-RAY": "954e1f3c790ece79-SIN",
+          "Content-Encoding": "br",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "content_length": 5453,
+        "redirect_history": [],
+        "final_url": "https://spankbang.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=15552000; includeSubDomains; preload",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "same-origin",
+        "security_score": "4/6"
+      },
+      "technologies": [
+        "Cloudflare"
+      ],
+      "subdomains": [
+        "www.spankbang.com",
+        "mail.spankbang.com",
+        "ftp.spankbang.com",
+        "admin.spankbang.com",
+        "api.spankbang.com",
+        "blog.spankbang.com",
+        "shop.spankbang.com",
+        "mobile.spankbang.com",
+        "app.spankbang.com"
+      ],
+      "ip_geolocation": {
+        "ip": "104.18.96.242",
+        "country": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "lat": 43.6532,
+        "lon": -79.3832
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "redtube.com": {
+      "domain": "redtube.com",
+      "timestamp": "2025-06-24T17:59:47.228328",
+      "whois_info": {
+        "registrar": "EuroDNS S.A.",
+        "creation_date": "[datetime.datetime(2006, 1, 7, 15, 9, 11), datetime.datetime(2006, 1, 7, 0, 0)]",
+        "expiration_date": "[datetime.datetime(2027, 1, 7, 15, 9, 11), datetime.datetime(2027, 1, 6, 0, 0)]",
+        "name_servers": [
+          "NS-1499.AWSDNS-59.ORG",
+          "NS-1567.AWSDNS-03.CO.UK",
+          "NS-531.AWSDNS-02.NET",
+          "NS-92.AWSDNS-11.COM",
+          "SDNS3.ULTRADNS.BIZ",
+          "SDNS3.ULTRADNS.COM",
+          "SDNS3.ULTRADNS.NET",
+          "SDNS3.ULTRADNS.ORG"
+        ],
+        "country": "LU",
+        "org": "Whois Privacy (enumDNS dba)"
+      },
+      "dns_records": {
+        "A": [
+          "66.254.114.238"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 mxa-002a0701.gslb.pphosted.com.",
+          "10 mxb-002a0701.gslb.pphosted.com."
+        ],
+        "NS": [
+          "ns-1499.awsdns-59.org.",
+          "ns-1567.awsdns-03.co.uk.",
+          "ns-531.awsdns-02.net.",
+          "ns-92.awsdns-11.com.",
+          "sdns3.ultradns.biz.",
+          "sdns3.ultradns.com.",
+          "sdns3.ultradns.net.",
+          "sdns3.ultradns.org."
+        ],
+        "TXT": [
+          "\"google-site-verification=9gpxCff5vciyFx55Hj_mVTxUoThKaCZyjrni3nuyyuo\"",
+          "\"rbtwq1jnw88fxz1q3wm9krj5cd2cctrx\"",
+          "\"V-kzbjHYyHYVtniBJuyiWJ5wDd5cW_BuUbPo9Yo-gIU\"",
+          "\"google-site-verification=JNmeyeScDi8vsIQLhXXG9DEuJGQ-iZnTZlV5ju4_nO4\"",
+          "\"bhsdsmd081rdt2fd9l6plb8zwsphcjmq\"",
+          "\"google-site-verification=yXCZcuvHm7yQ5rLhnWiIiKlRCh514J-x3M9upiCtQJ4\"",
+          "\"google-site-verification=L1KYnJjWn0BTij6L9EQA0ug6wMbjUmtXZJ07TC3bL2M\"",
+          "\"m5yy611314d12y5rd2nf5y78sgj5m58q\"",
+          "\"google-site-verification=moAnpmLNPD6q_dlvxBI0EOfEu3Brvcqk9vrrqTrYsHU\"",
+          "\"MS=ms41815766\"",
+          "\"google-site-verification=yUaPbawRTdxF3Wnsm7ZJoBKZOz_I0a3GMmPnLDExeqE\"",
+          "\"9jm5x38zsnj8c9l8mlfl54ztzbbd8y3s\"",
+          "\"v=spf1 a mx include:_spf.google.com include:mail.zendesk.com ip4:208.91.206.64/26 ip4:62.212.83.19/32 ip4:31.192.125.32/28 ip4:208.99.69.22/32 ip4:94.199.252.160/28 mx ip4:162.211.96.66 ip4:162.211.96.67 include:spf-002a0701.pphosted.com include:spf.prote\" \"ction.outlook.com ~all\"",
+          "\"_a8xogbcakeduubmir5ro2fe5raxk42e\"",
+          "\"google-site-verification=nA3sW-BoUeZdxEPNSeHo2fG58wJ_yF2B9aQ9vjMCNsA\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "countryName": "CY",
+          "localityName": "Dali",
+          "organizationName": "AYLO Freesites Ltd",
+          "commonName": "*.redtube.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "DigiCert Inc",
+          "commonName": "DigiCert Global G3 TLS ECC SHA384 2020 CA1"
+        },
+        "version": 3,
+        "serial_number": "0AAE6E0966F28D77261AF8E21EA81C40",
+        "not_before": "May 16 00:00:00 2025 GMT",
+        "not_after": "Jun 15 23:59:59 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.redtube.com"
+          ],
+          [
+            "DNS",
+            "redtube.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "server": "openresty",
+          "date": "Tue, 24 Jun 2025 17:59:51 GMT",
+          "content-type": "text/html; charset=UTF-8",
+          "transfer-encoding": "chunked",
+          "set-cookie": "ua=87d166c91c0adb73ab1bd7fa82ca0662; expires=Tue, 17-Dec-2080 11:59:42 GMT; Max-Age=1750874391; path=/; domain=redtube.com, platform=pc; expires=Sat, 25-Jul-2026 17:59:51 GMT; Max-Age=34214400; path=/; domain=redtube.com, bs=0000000000000000f0e645f32fe898a4; expires=Wed, 24-Jun-2026 17:59:51 GMT; Max-Age=31536000; path=/; domain=redtube.com; secure; SameSite=None, ss=730669684726420686; expires=Wed, 24-Jun-2026 17:59:51 GMT; Max-Age=31536000; path=/; domain=redtube.com; secure; SameSite=None",
+          "detected_device": "pc",
+          "x-mg-s": "1",
+          "tbws1": "recently-viewed-titles",
+          "tbws2": "search-recm-dd-titles",
+          "tdd-1": "searchRecommendedVideos",
+          "tdd-2": "getExperimentIdsForGA",
+          "x-frame-options": "SAMEORIGIN",
+          "vary": "User-Agent",
+          "rating": "RTA-5042-1996-1400-1577-RTA",
+          "cache-control": "no-store,no-cache,private,max-age=0,no-transform,must-revalidate",
+          "content-encoding": "gzip",
+          "x-rn-rsrv": "ded8231",
+          "accept-ch": "Sec-CH-UA,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-UA-Platform,Sec-CH-UA-Platform-Version",
+          "alt-svc": "h3=\":443\"; ma=60"
+        },
+        "content_length": 735638,
+        "redirect_history": [
+          "https://redtube.com/"
+        ],
+        "final_url": "https://www.redtube.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "1/6"
+      },
+      "technologies": [
+        "jQuery",
+        "Vue.js",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.redtube.com",
+        "api.redtube.com",
+        "blog.redtube.com"
+      ],
+      "ip_geolocation": {
+        "ip": "66.254.114.238",
+        "country": "United States",
+        "region": "New York",
+        "city": "New York",
+        "isp": "Reflected Networks, Inc.",
+        "org": "Reflected Networks, Inc.",
+        "lat": 40.7128,
+        "lon": -74.006
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {
+        "twitter": "redtube",
+        "instagram": "redtube.official"
+      }
+    },
+    "tube8.com": {
+      "domain": "tube8.com",
+      "timestamp": "2025-06-24T17:59:51.838410",
+      "whois_info": {
+        "registrar": "EuroDNS S.A.",
+        "creation_date": "[datetime.datetime(2007, 9, 5, 18, 10, 26), datetime.datetime(2007, 9, 5, 0, 0)]",
+        "expiration_date": "[datetime.datetime(2027, 9, 5, 18, 10, 26), datetime.datetime(2027, 9, 4, 0, 0)]",
+        "name_servers": [
+          "NS-1499.AWSDNS-59.ORG",
+          "NS-1567.AWSDNS-03.CO.UK",
+          "NS-531.AWSDNS-02.NET",
+          "NS-92.AWSDNS-11.COM",
+          "SDNS3.ULTRADNS.BIZ",
+          "SDNS3.ULTRADNS.COM",
+          "SDNS3.ULTRADNS.NET",
+          "SDNS3.ULTRADNS.ORG"
+        ],
+        "country": "LU",
+        "org": "Whois Privacy (enumDNS dba)"
+      },
+      "dns_records": {
+        "A": [
+          "66.254.114.239"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 mxa-002a0701.gslb.pphosted.com.",
+          "10 mxb-002a0701.gslb.pphosted.com."
+        ],
+        "NS": [
+          "ns-92.awsdns-11.com.",
+          "ns-531.awsdns-02.net.",
+          "ns-1567.awsdns-03.co.uk.",
+          "ns-1499.awsdns-59.org.",
+          "sdns3.ultradns.net.",
+          "sdns3.ultradns.com.",
+          "sdns3.ultradns.org.",
+          "sdns3.ultradns.biz."
+        ],
+        "TXT": [
+          "\"google-site-verification=IoTvOowXUbXMnMH-enL-w-bpnE3QOuZuGxRDp983H5A\"",
+          "\"google-site-verification=blLuydR6SyPDRjMW1CNL9hgBJdCi6xUi31tv6RikI-I\"",
+          "\"google-site-verification=z8tIVkVnOtv3Ob-dISurUQnsxHWqR7Uf7s887Dj3uKU\"",
+          "\"yandex-verification:2cad523403fd7c21\"",
+          "\"google-site-verification=9JF2L7jmUd016RETNXpuprGJOtI1G2mQEWq4MAb8ke8\"",
+          "\"sctqjcwpcm9141zlx64rgjydx1c2yktn\"",
+          "\"google-site-verification=qHOR1aoa9dpUhcQgnI3gKBG_IsrZEEIPj8mov2WN4FE\"",
+          "\"_9hgw1nhjx5qy6jhu7yp56ofksn9taud\"",
+          "\"google-site-verification=a8wEwHau1B-D2RW0pc6laL5E8x9c7AE_iraw-rN_JIQ\"",
+          "\"aa95eb9b10854dc0a810f84635588265\"",
+          "\"ms=ms19124595\"",
+          "\"xy9bnkbvvjfh58j6t6ndcqcvh5ncdvgh\"",
+          "\"google-site-verification=SCAW7Z50wTxxlVhi4kgL_cymdFqxh4ocb5fL08iH-Ys\"",
+          "\"v=spf1 mx ip4:162.211.96.66 ip4:162.211.96.67 include:spf-002a0701.pphosted.com a:smtp-out.reflected.net a:devilrays-out.reflected.net include:spf.protection.outlook.com include:mail.zendesk.com ~all\"",
+          "\"google-site-verification=OSXSoDOD28ezOtDjeZMSTT8grLsWbih6bY2uocInmQ0\"",
+          "\"k8cqvxjkc3n8mqxv3v477ylg9kg1rwvb\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "countryName": "CY",
+          "localityName": "Dali",
+          "organizationName": "AYLO Freesites Ltd",
+          "commonName": "*.tube8.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "DigiCert Inc",
+          "commonName": "DigiCert Global G3 TLS ECC SHA384 2020 CA1"
+        },
+        "version": 3,
+        "serial_number": "0E47143AC6B18E4739AE73E2471EE679",
+        "not_before": "Aug  1 00:00:00 2024 GMT",
+        "not_after": "Sep  1 23:59:59 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.tube8.com"
+          ],
+          [
+            "DNS",
+            "tube8.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "server": "openresty",
+          "date": "Tue, 24 Jun 2025 17:59:56 GMT",
+          "content-type": "text/html; charset=UTF-8",
+          "transfer-encoding": "chunked",
+          "set-cookie": "ua=87d166c91c0adb73ab1bd7fa82ca0662; expires=Tue, 17-Dec-2080 11:59:52 GMT; Max-Age=1750874396; path=/; domain=tube8.com, platform=pc; expires=Sat, 25-Jul-2026 17:59:56 GMT; Max-Age=34214400; path=/; domain=tube8.com, bs=0000000000000000f0e645f32fe898a4; expires=Wed, 24-Jun-2026 17:59:56 GMT; Max-Age=31536000; path=/; domain=tube8.com; secure; SameSite=None, ss=291187568149837186; expires=Wed, 24-Jun-2026 17:59:56 GMT; Max-Age=31536000; path=/; domain=tube8.com; secure; SameSite=None, ua=87d166c91c0adb73ab1bd7fa82ca0662; expires=Tue, 17-Dec-2080 11:59:52 GMT; Max-Age=1750874396; path=/; domain=tube8.com, platform=pc; expires=Sat, 25-Jul-2026 17:59:56 GMT; Max-Age=34214400; path=/; domain=tube8.com, LBSERVERID=ded8306; path=/; Secure; SameSite=None",
+          "vary": "User-Agent",
+          "rating": "RTA-5042-1996-1400-1577-RTA, RTA-5042-1996-1400-1577-RTA",
+          "cache-control": "no-store,no-cache,private,max-age=0,no-transform,must-revalidate",
+          "content-encoding": "gzip",
+          "x-rn-rsrv": "ded8306",
+          "accept-ch": "Sec-CH-UA,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-UA-Platform,Sec-CH-UA-Platform-Version",
+          "x-frame-options": "SAMEORIGIN",
+          "strict-transport-security": "max-age=max-age=300",
+          "alt-svc": "h3=\":443\"; ma=60"
+        },
+        "content_length": 561257,
+        "redirect_history": [
+          "https://tube8.com/"
+        ],
+        "final_url": "https://www.tube8.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=max-age=300",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "2/6"
+      },
+      "technologies": [
+        "Vue.js",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.tube8.com",
+        "admin.tube8.com",
+        "api.tube8.com",
+        "blog.tube8.com"
+      ],
+      "ip_geolocation": {
+        "ip": "66.254.114.239",
+        "country": "United States",
+        "region": "New York",
+        "city": "New York",
+        "isp": "Reflected Networks, Inc.",
+        "org": "Reflected Networks, Inc.",
+        "lat": 40.7128,
+        "lon": -74.006
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    },
+    "cam4.com": {
+      "domain": "cam4.com",
+      "timestamp": "2025-06-24T17:59:52.184864",
+      "whois_info": {
+        "registrar": "https://www.101domain.com/",
+        "creation_date": "1999-07-28 14:15:30",
+        "expiration_date": "2027-07-28 14:15:27",
+        "name_servers": [
+          "NS-1161.AWSDNS-17.ORG",
+          "NS-1674.AWSDNS-17.CO.UK",
+          "NS-319.AWSDNS-39.COM",
+          "NS-749.AWSDNS-29.NET"
+        ],
+        "country": "US",
+        "org": "Digital Privacy Corporation"
+      },
+      "dns_records": {
+        "A": [
+          "185.94.239.88"
+        ],
+        "AAAA": [],
+        "MX": [
+          "0 mx19-1.mycloudmailbox.com.",
+          "0 mx19-2.mycloudmailbox.com."
+        ],
+        "NS": [
+          "ns-1161.awsdns-17.org.",
+          "ns-1674.awsdns-17.co.uk.",
+          "ns-319.awsdns-39.com.",
+          "ns-749.awsdns-29.net."
+        ],
+        "TXT": [
+          "\"dk5l4x0t6gqm9gwsz2zmp0nn1b8rs683\"",
+          "\"KWCv5KabDSumBfA/lJ6f8kE+ofgBwfANng2gjvx3AZc=\"",
+          "\"google-site-verification=4ao-4PLfEYI8QlyameFdsfoT95LS9tMMkPlRLUC-yv0\"",
+          "\"google-site-verification=RDPHPvJly9Ynt-MPWl1mH3bijrbChl_h-yN2FaVK7Ds\"",
+          "\"google-site-verification=iDiNx0aQPuqLC0O4qXV6ellkTvpbpNUh0MG_MrPzBrQ\"",
+          "\"httpcs-site-verification=a00f7ac4e66709c9628936c12048532098eece0e\"",
+          "\"_pzmkqt0r3j2bqa621glts6okvftzpxm\"",
+          "\"_globalsign-domain-verification=UrpLe30uQGUSlX-KZGH7PamFFprFXSO5PGoXA-KVQc\"",
+          "\"v=spf1 a mx a:cam4.biz a:cam4support.com ip4:173.46.152.128/25 ip4:199.244.76.0/24 ip4:96.125.216.50 ip4:184.94.153.124 ip4:199.59.88.62 ip4:207.126.101.0/24 include:_spf2.cam4.biz include:_spf3.cam4.biz ~all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "countryName": "CW",
+          "stateOrProvinceName": "WILLEMSTAD",
+          "localityName": "WILLEMSTAD",
+          "organizationName": "Surecom Corporation N.V.",
+          "commonName": "*.cam4.com"
+        },
+        "issuer": {
+          "countryName": "BE",
+          "organizationName": "GlobalSign nv-sa",
+          "commonName": "GlobalSign RSA OV SSL CA 2018"
+        },
+        "version": 3,
+        "serial_number": "3444EE14BD30DD1275FD6C98",
+        "not_before": "Oct 22 12:32:02 2024 GMT",
+        "not_after": "Oct 14 15:16:01 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.cam4.com"
+          ],
+          [
+            "DNS",
+            "cam4.de.com"
+          ],
+          [
+            "DNS",
+            "www.cam4.de.com"
+          ],
+          [
+            "DNS",
+            "cam4.es"
+          ],
+          [
+            "DNS",
+            "www.cam4.es"
+          ],
+          [
+            "DNS",
+            "cam4.fr"
+          ],
+          [
+            "DNS",
+            "www.cam4.fr"
+          ],
+          [
+            "DNS",
+            "cam4.it"
+          ],
+          [
+            "DNS",
+            "www.cam4.it"
+          ],
+          [
+            "DNS",
+            "cam4.nl"
+          ],
+          [
+            "DNS",
+            "www.cam4.nl"
+          ],
+          [
+            "DNS",
+            "cam4.eu"
+          ],
+          [
+            "DNS",
+            "*.cam4.eu"
+          ],
+          [
+            "DNS",
+            "cam4.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Tue, 24 Jun 2025 17:59:57 GMT",
+          "Content-Type": "text/html;charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Set-Cookie": "cam4_user_language=en; Domain=.cam4.com; Path=/, INGRESSCOOKIE=354e4bd400a6dc604257625800d24f65|d6a68dccd9919960ff135dee3820d14b; Path=/; HttpOnly; Domain=.cam4.com, JSESSIONID=7FD778758144EF724C5A586F66989068; Path=/; Secure; HttpOnly; Domain=.cam4.com",
+          "X-Tenant": "cam4",
+          "Content-Encoding": "gzip"
+        },
+        "content_length": 969187,
+        "redirect_history": [
+          "https://cam4.com/"
+        ],
+        "final_url": "https://www.cam4.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html;charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": null,
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": null,
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "0/6"
+      },
+      "technologies": [
+        "Nginx",
+        "Vue.js",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.cam4.com",
+        "mail.cam4.com",
+        "ftp.cam4.com",
+        "admin.cam4.com",
+        "api.cam4.com",
+        "blog.cam4.com",
+        "shop.cam4.com",
+        "mobile.cam4.com",
+        "app.cam4.com"
+      ],
+      "ip_geolocation": {
+        "ip": "185.94.239.88",
+        "country": "The Netherlands",
+        "region": "North Holland",
+        "city": "Amsterdam",
+        "isp": "Mojohost B.V.",
+        "org": "",
+        "lat": 52.3676,
+        "lon": 4.90414
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": true
+      },
+      "social_presence": {
+        "instagram": "c4.cultureofficial",
+        "youtube": "@CAM4Official",
+        "tiktok": "@c4culture"
+      }
+    },
+    "pornhub.com": {
+      "domain": "pornhub.com",
+      "timestamp": "2025-06-24T17:59:58.583547",
+      "whois_info": {
+        "registrar": "EuroDNS S.A.",
+        "creation_date": "[datetime.datetime(2000, 10, 31, 12, 23, 38), datetime.datetime(2000, 10, 31, 0, 0)]",
+        "expiration_date": "[datetime.datetime(2027, 10, 31, 11, 23, 38), datetime.datetime(2027, 10, 30, 0, 0)]",
+        "name_servers": [
+          "NS-1499.AWSDNS-59.ORG",
+          "NS-1567.AWSDNS-03.CO.UK",
+          "NS-531.AWSDNS-02.NET",
+          "NS-92.AWSDNS-11.COM",
+          "SDNS3.ULTRADNS.BIZ",
+          "SDNS3.ULTRADNS.COM",
+          "SDNS3.ULTRADNS.NET",
+          "SDNS3.ULTRADNS.ORG"
+        ],
+        "country": "LU",
+        "org": "Whois Privacy (enumDNS dba)"
+      },
+      "dns_records": {
+        "A": [
+          "66.254.114.41"
+        ],
+        "AAAA": [],
+        "MX": [
+          "10 mxa-002a0701.gslb.pphosted.com.",
+          "10 mxb-002a0701.gslb.pphosted.com."
+        ],
+        "NS": [
+          "ns-1499.awsdns-59.org.",
+          "ns-1567.awsdns-03.co.uk.",
+          "ns-531.awsdns-02.net.",
+          "ns-92.awsdns-11.com.",
+          "sdns3.ultradns.biz.",
+          "sdns3.ultradns.com.",
+          "sdns3.ultradns.net.",
+          "sdns3.ultradns.org."
+        ],
+        "TXT": [
+          "\"v=spf1 include:_spf.mlsend.com include:sender.zohobooks.com include:mail.zendesk.com ip4:94.199.255.10/32 ip4:208.91.206.64/26 ip4:66.254.113.78/32 ip4:66.254.119.174 ip4:66.254.113.78 ip4:66.254.112.72/30 ip4:162.211.96.66 ip4:162.211.96.67 ip4:67.231.15\" \"1.26 ip4:67.231.158.156 a:smtp-out.reflected.net a:devilrays-out.reflected.net include:spf.protection.outlook.com -all\"",
+          "\"MS=ms54289033\"",
+          "\"_pp4dhbbh0qvnkenn5nf1e9psomjg6fg\"",
+          "\"google-gws-recovery-domain-verification=50340749\"",
+          "\"kkvchh9nc20zqclz9r1fwfx4ydfh41pd\"",
+          "\"pd5fdxxbzn34ljgl6kbhd5xnz4cdgt3f\"",
+          "\"google-site-verification=dug_KXFRBOzhEpV6p-hzn-ozaGXa3xfF82rW6mqhOK8\"",
+          "\"google-site-verification=LFRKK2NjHzXR6MK6RU7zIEI7Tgel7vtoE88kNZqUaos\"",
+          "\"google-site-verification=HjPnSnR1Tun0kHE_HxQ90eShcfVw-ZnloCL0FkOHYXw\"",
+          "\"google-site-verification=oiQAl3PbQ5Ozmw2lDDQ_UuJMGvOpEzzJ_b926wxMXcI\"",
+          "\"_twpx4k787g069qzojo75ghmnlil23i8\"",
+          "\"google-site-verification=z7sWYEKED5sA2wXYfCmlR2OKkV7YiaPiZMv-YkQ8l6Y\"",
+          "\"j3hm4p54gpzff1dt25w0z1m5q6749v23\"",
+          "\"google-site-verification=mBLIe_LYyVmp7-dKcYMnE2VgbHqhMMbF0Ib_lNxydxw\"",
+          "\"51v423477tpvn79tnhkc6dcd50vfwsmw\"",
+          "\"kRTRS-5fqACZExtm5Ed_63Uz2-mi2w\"",
+          "\"google-site-verification=A_zvK-GpJnRnZeQsY7Zu6-OhUtttveONsSHeEyesS7E\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "countryName": "CY",
+          "localityName": "Dali",
+          "organizationName": "AYLO Freesites Ltd",
+          "commonName": "*.pornhub.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "DigiCert Inc",
+          "commonName": "DigiCert Global G3 TLS ECC SHA384 2020 CA1"
+        },
+        "version": 3,
+        "serial_number": "0722461F90BADAEA513A8B1438652E4A",
+        "not_before": "Jan  9 00:00:00 2025 GMT",
+        "not_after": "Feb  9 23:59:59 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.pornhub.com"
+          ],
+          [
+            "DNS",
+            "pornhub.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "server": "openresty",
+          "date": "Tue, 24 Jun 2025 18:00:02 GMT",
+          "content-type": "text/html; charset=UTF-8",
+          "transfer-encoding": "chunked",
+          "set-cookie": "ua=87d166c91c0adb73ab1bd7fa82ca0662; expires=Wed, 25 Jun 2025 18:00:02 GMT; Max-Age=86400; path=/; domain=pornhub.com; secure, platform=pc; expires=Tue, 01 Jul 2025 18:00:02 GMT; Max-Age=604800; path=/; domain=pornhub.com; secure, bs=0000000000000000d05da63f21ec3817; expires=Wed, 24 Jun 2026 18:00:02 GMT; Max-Age=31536000; path=/; domain=pornhub.com; secure; SameSite=None, bsdd=0000000000000000d05da63f21ec3817; expires=Wed, 24 Jun 2026 18:00:02 GMT; Max-Age=31536000; path=/; domain=pornhub.com; secure; SameSite=None, ss=232726383927229391; expires=Wed, 24 Jun 2026 18:00:02 GMT; Max-Age=31536000; path=/; domain=pornhub.com; secure, sessid=712058961293354256; expires=Wed, 24 Jun 2026 18:00:02 GMT; Max-Age=31536000; path=/; domain=pornhub.com; secure, comp_detect-cookies=1382.100000; expires=Thu, 24 Jul 2025 18:00:02 GMT; Max-Age=2592000; path=/; domain=pornhub.com; secure, fg_afaf12e314c5419a855ddc0bf120670f=92055.100000; expires=Thu, 24 Jul 2025 18:00:02 GMT; Max-Age=2592000; path=/; domain=pornhub.com; secure, fg_7d31324eedb583147b6dcbea0051c868=46089.100000; expires=Thu, 24 Jul 2025 18:00:02 GMT; Max-Age=2592000; path=/; domain=pornhub.com; secure, __s=685AE7A1-42FE722901BB224DEE-4BE3AD; Domain=pornhub.com; Secure; Path=/; Samesite=None, __l=685AE7A1-42FE722901BB224DEE-4BE3AD; Domain=pornhub.com; Path=/; Secure; Samesite=None; Max-Age=31556926",
+          "x-frame-options": "SAMEORIGIN",
+          "cache-control": "no-cache, no-store, must-revalidate",
+          "vary": "User-Agent",
+          "rating": "RTA-5042-1996-1400-1577-RTA",
+          "content-encoding": "br",
+          "accept-ch": "Sec-CH-UA,Sec-CH-UA-Arch,Sec-CH-UA-Full-Version,Sec-CH-UA-Full-Version-List,Sec-CH-UA-Model,Sec-CH-UA-Platform,Sec-CH-UA-Platform-Version",
+          "strict-transport-security": "max-age=63072000; includeSubDomains; preload"
+        },
+        "content_length": 815930,
+        "redirect_history": [
+          "https://pornhub.com/"
+        ],
+        "final_url": "https://www.pornhub.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=63072000; includeSubDomains; preload",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "2/6"
+      },
+      "technologies": [
+        "jQuery",
+        "React",
+        "Vue.js",
+        "Google Analytics"
+      ],
+      "subdomains": [
+        "www.pornhub.com",
+        "mail.pornhub.com",
+        "api.pornhub.com",
+        "mobile.pornhub.com"
+      ],
+      "ip_geolocation": {
+        "ip": "66.254.114.41",
+        "country": "United States",
+        "region": "New York",
+        "city": "New York",
+        "isp": "Reflected Networks, Inc.",
+        "org": "Reflected Networks, Inc.",
+        "lat": 40.7128,
+        "lon": -74.006
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": true
+      },
+      "social_presence": {
+        "twitter": "pornhub",
+        "instagram": "pornhub",
+        "youtube": "channel"
+      }
+    },
+    "adultfriendfinder.com": {
+      "domain": "adultfriendfinder.com",
+      "timestamp": "2025-06-24T18:00:02.958114",
+      "whois_info": {
+        "registrar": "GoDaddy.com, LLC",
+        "creation_date": "1997-11-29 05:00:00",
+        "expiration_date": "2025-11-28 05:00:00",
+        "name_servers": [
+          "PDNS1.ULTRADNS.NET",
+          "PDNS2.ULTRADNS.NET",
+          "PDNS3.ULTRADNS.ORG",
+          "PDNS4.ULTRADNS.ORG",
+          "PDNS5.ULTRADNS.INFO",
+          "PDNS6.ULTRADNS.CO.UK"
+        ],
+        "country": "Unknown",
+        "org": "Unknown"
+      },
+      "dns_records": {
+        "A": [
+          "69.165.107.69"
+        ],
+        "AAAA": [],
+        "MX": [
+          "20 mx3.friendfinder.com.",
+          "20 mx2.friendfinder.com.",
+          "20 mx1.friendfinder.com."
+        ],
+        "NS": [
+          "pdns6.ultradns.co.uk.",
+          "pdns1.ultradns.net.",
+          "pdns3.ultradns.org.",
+          "pdns5.ultradns.info.",
+          "pdns4.ultradns.org.",
+          "pdns2.ultradns.net."
+        ],
+        "TXT": [
+          "\"yahoo-verification-key=1B3O+P9Le5Y/f3w6db8vYXmW9QvbWIrIfsLaeaEXMlQ=\"",
+          "\"google-site-verification=8srkS67c5sljDLWsRTJgxJ_Y9JwuOav3g43z2GjSzrU\"",
+          "\"google-site-verification=GsQBw0uEgp_FIVULhsuXvCYsY6wFChq1AZsCzHbhpYM\"",
+          "\"IPROTA_D71896-XXX\"",
+          "\"v=spf1 include:_spf.ffn.com -all\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "*.adultfriendfinder.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "stateOrProvinceName": "Arizona",
+          "localityName": "Scottsdale",
+          "organizationName": "GoDaddy.com, Inc.",
+          "organizationalUnitName": "http://certs.godaddy.com/repository/",
+          "commonName": "Go Daddy Secure Certificate Authority - G2"
+        },
+        "version": 3,
+        "serial_number": "ED40D3F7B437F7C2",
+        "not_before": "Mar 13 12:48:57 2025 GMT",
+        "not_after": "Apr 14 12:48:57 2026 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.adultfriendfinder.com"
+          ],
+          [
+            "DNS",
+            "adultfriendfinder.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 18:00:06 GMT",
+          "Server": "Apache",
+          "Set-Cookie": "ffadult_pop=1; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure, ffadult_pop_session=1; Secure; path=/; domain=.adultfriendfinder.com; expires=Tue, 24-Jun-2025 18:05:06 GMT; secure, ffadult_who=r_9N38SZ8OdmKMx5.WM0hS8Okl93ecBPMI3vyi7q0_uMcx5U7q1sJrCsFOoumlAoUj6bGhCtkIXoRljQKyUhR6y0.PBIGS8bxddBiGq6_yZwVIJ74EeMm4K24PT2wVFGptNA25BEfhJB_io4eincDydQ--; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jun-2027 18:00:06 GMT; secure, v_hash=_english_0; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure, IP_COUNTRY=Singapore; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure, ffadult_tr=r_QQGyiRK0sMc8bckXxjfPANkFu87LAqIbWHzV3ophELBbAmkDuit2wxB1wDpluTO8; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure, LOCATION_FROM_IP=country&Singapore&area_code&&longitude&103.8507&country_name&Singapore&lat&1.2872&region_name&&country_code&SG&region&&city&Singapore&postal_code&17&latitude&1.2872&lon&103.8507&dma_code&&country_code3&SGP; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure, HISTORY=20250624-1-Dc; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure, AB_TRACKING=F09woDU3QqYrpgzhxPJwrB; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure, throttling={\"time\":1750788006,\"AppD\":1,\"GTM\":0}; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure, REFERRAL_URL=; Secure; path=/; domain=.adultfriendfinder.com; expires=Wed, 25-Jun-2025 06:00:06 GMT; secure, click_id_time=663434205_2025-06-24 11:00:06; Secure; path=/; domain=.adultfriendfinder.com; expires=Thu, 24-Jul-2025 18:00:06 GMT; secure",
+          "X-PERF": "0.182357,0.032610,TS_79_0.0647520,DB_8_0.0036510,TM_101_0.0445440,CD_48_0.0127660,FS_84_0.0080370,PK_8_0.0035570,CE_86_0.0124400",
+          "Strict-Transport-Security": "max-age=300; includeSubDomains, max-age=15552000; includeSubDomains; preload",
+          "X-Frame-Options": "SAMEORIGIN",
+          "ETag": "TESTBED",
+          "P3P": "CP=\"DSP LAW\"",
+          "X-ApacheServer": "si211-133.friendfinderinc.com",
+          "Vary": "Accept-Encoding",
+          "Content-Encoding": "gzip",
+          "Content-Length": "41218",
+          "Keep-Alive": "timeout=5",
+          "Connection": "Keep-Alive",
+          "Content-Type": "text/html;charset=UTF-8"
+        },
+        "content_length": 200453,
+        "redirect_history": [],
+        "final_url": "https://adultfriendfinder.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html;charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": null,
+        "Strict-Transport-Security": "max-age=300; includeSubDomains, max-age=15552000; includeSubDomains; preload",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": null,
+        "security_score": "2/6"
+      },
+      "technologies": [
+        "Apache",
+        "jQuery",
+        "React"
+      ],
+      "subdomains": [
+        "www.adultfriendfinder.com",
+        "mail.adultfriendfinder.com",
+        "ftp.adultfriendfinder.com",
+        "admin.adultfriendfinder.com",
+        "api.adultfriendfinder.com",
+        "blog.adultfriendfinder.com",
+        "shop.adultfriendfinder.com",
+        "mobile.adultfriendfinder.com",
+        "app.adultfriendfinder.com"
+      ],
+      "ip_geolocation": {
+        "ip": "69.165.107.69",
+        "country": "United States",
+        "region": "California",
+        "city": "San Jose",
+        "isp": "FriendFinder Networks Inc",
+        "org": "FriendFinder Networks Inc",
+        "lat": 37.3083,
+        "lon": -121.9643
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": true
+      },
+      "social_presence": {
+        "twitter": "adultfriendfind"
+      }
+    },
+    "bumble.com": {
+      "domain": "bumble.com",
+      "timestamp": "2025-06-24T18:00:05.623128",
+      "whois_info": {
+        "registrar": "MarkMonitor, Inc.",
+        "creation_date": "[datetime.datetime(1997, 7, 27, 4, 0), datetime.datetime(1997, 7, 27, 4, 0, tzinfo=datetime.timezone.utc)]",
+        "expiration_date": "[datetime.datetime(2027, 7, 26, 4, 0), datetime.datetime(2027, 7, 26, 0, 0, tzinfo=datetime.timezone.utc)]",
+        "name_servers": [
+          "NS1.BUMBLE.COM",
+          "NS2.BUMBLE.COM",
+          "NS3.BUMBLE.COM",
+          "NS4.BUMBLE.COM",
+          "NS5.BUMBLE.COM",
+          "NS6.BUMBLE.COM"
+        ],
+        "country": "CY",
+        "org": "Badoo Media Limited"
+      },
+      "dns_records": {
+        "A": [
+          "31.222.75.113"
+        ],
+        "AAAA": [],
+        "MX": [
+          "5 mailin1eu.monopost.com.",
+          "5 mailin1us.monopost.com."
+        ],
+        "NS": [
+          "ns1.bumble.com.",
+          "ns2.bumble.com.",
+          "ns3.bumble.com.",
+          "ns4.bumble.com.",
+          "ns5.bumble.com.",
+          "ns6.bumble.com."
+        ],
+        "TXT": [
+          "\"mailru-verification: c4d2d72602d6f569\"",
+          "\"google-site-verification=lNZiO6KN_WztgPDCPcQgUz5RimSqj01COtpBOnBS9WA\"",
+          "\"google-site-verification=cAE3aRSPaGrxU7N-rJw5O4APM62yLqvb8TLTX8hJNrk\"",
+          "\"google-site-verification=Jhg7q3xSAR-558RAxnV2cXQTiJXyl5nNmRYdvhkGOyI\"",
+          "\"facebook-domain-verification=zkrfxt6s5z5jeli68o4wkxw3f16g4k\"",
+          "\"v=spf1 include:mail.zendesk.com ip4:31.222.64.0/20 ip4:159.253.176.0/21 -all\"",
+          "\"google-site-verification=ohC5seycw-H7ZPPq3csVsqydCN5taaDzUfvXpp0A1ss\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "commonName": "*.bumble.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "Let's Encrypt",
+          "commonName": "R11"
+        },
+        "version": 3,
+        "serial_number": "067221953925145C33FFCEFA183011E31094",
+        "not_before": "Jun 17 00:32:16 2025 GMT",
+        "not_after": "Sep 15 00:32:15 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.bumble.com"
+          ],
+          [
+            "DNS",
+            "bumble.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 200,
+        "headers": {
+          "Server": "nginx",
+          "Date": "Tue, 24 Jun 2025 18:00:09 GMT",
+          "Content-Type": "text/html; charset=utf-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Keep-Alive": "timeout=60",
+          "Expires": "Mon, 26 Jul 1997 05:00:00 GMT",
+          "Cache-control": "private, public, s-maxage=10, stale-while-revalidate=59",
+          "Set-Cookie": "session=s2%3A9999%3AjrjkR9PZWrRkw2UHzUoTArBRajgcMKlYj5luyeQ2; path=/; domain=.bumble.com; secure; HttpOnly, session_cookie_name=session; path=/; domain=.bumble.com; secure; HttpOnly, has_secure_session=1; expires=Thu, 01 Jan 1970 00:00:01 GMT; Max-Age=0; path=/; domain=.bumble.com, device_id=c02b52dd-52dd-ddef-ef19-194d0495a8d3; expires=Thu, 31 May 2125 18:00:09 GMT; Max-Age=3153600000; path=/; domain=.bumble.com, buzz_lang_code=zh; expires=Wed, 24 Jun 2026 18:00:09 GMT; Max-Age=31536000; path=/; domain=.bumble.com, first_web_visit_id=b0d6fde4396751cf41df3ef194f4bf5db93bffb7; expires=Thu, 24 Jul 2025 18:00:09 GMT; Max-Age=2592000; path=/; domain=.bumble.com",
+          "Content-Security-Policy-Report-Only": "default-src 'self' https://cdn.ampproject.org https://snap.licdn.com https://www.youtube.com *.youtube.com *.google-analytics.com https://www.googletagmanager.com https://consent.bumble.com *.typeform.com *.doubleclick.net *.taboola.com; script-src 'self' 'unsafe-inline' 'report-sample' 'nonce-0rpZOzWV3PsXLwmsobf10A==' https://cdn.ampproject.org https://snap.licdn.com https://www.youtube.com *.youtube.com *.google-analytics.com https://www.googletagmanager.com https://consent.bumble.com *.typeform.com *.doubleclick.net *.taboola.com; style-src 'self' 'unsafe-inline' *.typeform.com; connect-src 'self' https://cdn.ampproject.org https://consent.bumble.com https://www.googletagmanager.com *.google-analytics.com *.analytics.google.com https://stats.g.doubleclick.net https://googleads.g.doubleclick.net https://www.google.com/pagead *.googlesyndication.com; child-src 'self'; font-src 'self' data:; manifest-src 'self'; base-uri 'self'; frame-src 'self' https://cdn.ampproject.org https://snap.licdn.com https://www.youtube.com *.youtube.com *.google-analytics.com https://www.googletagmanager.com https://consent.bumble.com *.typeform.com *.doubleclick.net *.taboola.com; img-src * data: blob: www.googletagmanager.com; media-src * data: blob:; report-uri /jss/csp_report.phtml?token=bumble_team_site&env=production;",
+          "ETag": "\"8sx6e734h721bp\"",
+          "Vary": "Accept-Encoding",
+          "Content-Encoding": "gzip",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+          "Referrer-Policy": "strict-origin-when-cross-origin",
+          "X-Content-Type-Options": "nosniff"
+        },
+        "content_length": 96242,
+        "redirect_history": [],
+        "final_url": "https://bumble.com/",
+        "encoding": "utf-8",
+        "content_type": "text/html; charset=utf-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": null,
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "security_score": "3/6"
+      },
+      "technologies": [
+        "Nginx"
+      ],
+      "subdomains": [
+        "www.bumble.com",
+        "mail.bumble.com",
+        "ftp.bumble.com",
+        "admin.bumble.com",
+        "api.bumble.com",
+        "blog.bumble.com",
+        "shop.bumble.com",
+        "mobile.bumble.com",
+        "app.bumble.com"
+      ],
+      "ip_geolocation": {
+        "ip": "31.222.75.113",
+        "country": "United States",
+        "region": "Florida",
+        "city": "Miami",
+        "isp": "Public-services",
+        "org": "Public services",
+        "lat": 25.7838,
+        "lon": -80.1823
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {
+        "facebook": "bumbleapp",
+        "twitter": "bumble",
+        "instagram": "bumble",
+        "youtube": "channel",
+        "linkedin": "company",
+        "tiktok": "@bumble"
+      }
+    },
+    "chaturbate.com": {
+      "domain": "chaturbate.com",
+      "timestamp": "2025-06-24T18:00:05.623636",
+      "whois_info": {
+        "registrar": "Cloudflare, Inc.",
+        "creation_date": "2011-02-26 03:30:59",
+        "expiration_date": "2027-11-19 05:15:42",
+        "name_servers": [
+          "NSA.CHATURBATE.COM",
+          "NSB.CHATURBATE.COM",
+          "NSC.CHATURBATE.COM"
+        ],
+        "country": "US",
+        "org": "DATA REDACTED"
+      },
+      "dns_records": {
+        "A": [
+          "104.16.44.196",
+          "104.16.43.196",
+          "104.16.45.196",
+          "104.16.41.196",
+          "104.16.42.196"
+        ],
+        "AAAA": [
+          "2606:4700::6810:2cc4",
+          "2606:4700::6810:2bc4",
+          "2606:4700::6810:29c4",
+          "2606:4700::6810:2ac4",
+          "2606:4700::6810:2dc4"
+        ],
+        "MX": [
+          "1 aspmx.l.google.com.",
+          "10 aspmx2.googlemail.com.",
+          "10 aspmx3.googlemail.com.",
+          "5 alt1.aspmx.l.google.com.",
+          "5 alt2.aspmx.l.google.com."
+        ],
+        "NS": [
+          "nsa.chaturbate.com.",
+          "nsb.chaturbate.com.",
+          "nsc.chaturbate.com."
+        ],
+        "TXT": [
+          "\"knowbe4-site-verification=bf70859a7bcd8133d145ae6d967c1686\"",
+          "\"dropbox-domain-verification=75emrqy5m01x\"",
+          "\"google-site-verification=Vm1z2qfXec3B9_coWw2aRUi8JlOpidnuVuxXWzXgLN4\"",
+          "\"IPROTA_D12586-XXX\"",
+          "\"docusign=d71f07ce-17c4-4c3d-9950-18054bda8ad1\"",
+          "\"8f21dc6558f343b18d0a542689bb0f09\"",
+          "\"v=spf1 mx include:u1789071.wl.sendgrid.net include:_spf.google.com include:mail.zendesk.com -all\"",
+          "\"lucid-verification=ktb3MHD!cqr2pat3ver\"",
+          "\"google-site-verification=WuJfTogSVQ9RfY4b201uv46KnL4CXySS9fsFLqEN1KI\""
+        ],
+        "CNAME": []
+      },
+      "ssl_info": {
+        "subject": {
+          "countryName": "US",
+          "stateOrProvinceName": "California",
+          "localityName": "Lake Forest",
+          "organizationName": "Multi Media, LLC",
+          "commonName": "*.highwebmedia.com"
+        },
+        "issuer": {
+          "countryName": "US",
+          "organizationName": "DigiCert Inc",
+          "commonName": "DigiCert Global G3 TLS ECC SHA384 2020 CA1"
+        },
+        "version": 3,
+        "serial_number": "054006A2DBC3701B6E7B3EE4D9AEB668",
+        "not_before": "Jul 30 00:00:00 2024 GMT",
+        "not_after": "Aug 30 23:59:59 2025 GMT",
+        "san": [
+          [
+            "DNS",
+            "*.highwebmedia.com"
+          ],
+          [
+            "DNS",
+            "*.chaturbate.com"
+          ],
+          [
+            "DNS",
+            "chaturbate.com"
+          ],
+          [
+            "DNS",
+            "highwebmedia.com"
+          ]
+        ]
+      },
+      "http_response": {
+        "status_code": 403,
+        "headers": {
+          "Date": "Tue, 24 Jun 2025 18:00:07 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "close",
+          "accept-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+          "cf-mitigated": "challenge",
+          "critical-ch": "Sec-CH-UA-Bitness, Sec-CH-UA-Arch, Sec-CH-UA-Full-Version, Sec-CH-UA-Mobile, Sec-CH-UA-Model, Sec-CH-UA-Platform-Version, Sec-CH-UA-Full-Version-List, Sec-CH-UA-Platform, Sec-CH-UA, UA-Bitness, UA-Arch, UA-Full-Version, UA-Mobile, UA-Model, UA-Platform-Version, UA-Platform, UA",
+          "cross-origin-embedder-policy": "require-corp",
+          "cross-origin-opener-policy": "same-origin",
+          "cross-origin-resource-policy": "same-origin",
+          "origin-agent-cluster": "?1",
+          "permissions-policy": "accelerometer=(),autoplay=(),browsing-topics=(),camera=(),clipboard-read=(),clipboard-write=(),geolocation=(),gyroscope=(),hid=(),interest-cohort=(),magnetometer=(),microphone=(),payment=(),publickey-credentials-get=(),screen-wake-lock=(),serial=(),sync-xhr=(),usb=()",
+          "referrer-policy": "same-origin",
+          "server-timing": "chlray;desc=\"954e1f764c68fdbc\"",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN",
+          "Cache-Control": "private, max-age=0, no-store, no-cache, must-revalidate, post-check=0, pre-check=0",
+          "Expires": "Thu, 01 Jan 1970 00:00:01 GMT",
+          "Set-Cookie": "__cf_bm=8NB8YAusVVDmjc.77Utu1L0jqjkFJsRS8GzHzRdeZQg-1750788007-1.0.1.1-wVlKxDnkHoQYGq1M6MZoeqks9Y6E_LtysacvdA_fhW_uaPmnlKlz8EBhfVV.4o7sb.IuP4bJ_SkrRpJfp3puyh7oVA87A1YDSNnYFfWiKxk; path=/; expires=Tue, 24-Jun-25 18:30:07 GMT; domain=.chaturbate.com; HttpOnly; Secure; SameSite=None",
+          "Report-To": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v4?s=pkXVVCl4mcDOfKSnZ37PkML7CFHyg%2FFj8EZjTVhMSauU2AxPVwN7upHe%2BbxXa200BViEYz18F3xNrX7JjEindcV4nA7XSv07eukMFNeIkBAg09LMV2kXm5xTsypGmnH0\"}],\"group\":\"cf-nel\",\"max_age\":604800}",
+          "NEL": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}",
+          "Vary": "Accept-Encoding",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+          "Server": "cloudflare",
+          "CF-RAY": "954e1f764c68fdbc-SIN",
+          "Content-Encoding": "br",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "content_length": 6882,
+        "redirect_history": [],
+        "final_url": "https://chaturbate.com/",
+        "encoding": "UTF-8",
+        "content_type": "text/html; charset=UTF-8"
+      },
+      "security_headers": {
+        "Content-Security-Policy": null,
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-Content-Type-Options": "nosniff",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "X-XSS-Protection": null,
+        "Referrer-Policy": "same-origin",
+        "security_score": "4/6"
+      },
+      "technologies": [
+        "Cloudflare"
+      ],
+      "subdomains": [
+        "www.chaturbate.com",
+        "ftp.chaturbate.com",
+        "admin.chaturbate.com",
+        "api.chaturbate.com",
+        "blog.chaturbate.com",
+        "shop.chaturbate.com",
+        "mobile.chaturbate.com",
+        "app.chaturbate.com"
+      ],
+      "ip_geolocation": {
+        "ip": "104.16.42.196",
+        "country": "Canada",
+        "region": "Ontario",
+        "city": "Toronto",
+        "isp": "Cloudflare, Inc.",
+        "org": "Cloudflare, Inc.",
+        "lat": 43.6532,
+        "lon": -79.3832
+      },
+      "reputation": {
+        "safe_browsing": "Unknown",
+        "malware_detected": false,
+        "phishing_detected": false,
+        "spam_detected": false,
+        "adult_content": false
+      },
+      "social_presence": {}
+    }
+  }
+}

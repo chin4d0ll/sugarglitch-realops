@@ -1,0 +1,775 @@
+================================================================================
+🔍 DEEP DOMAIN INTELLIGENCE ANALYSIS REPORT
+================================================================================
+วันที่วิเคราะห์: 2025-06-24 18:00:14
+จำนวน Domains ทั้งหมด: 26
+วิเคราะห์สำเร็จ: 26
+วิเคราะห์ไม่สำเร็จ: 0
+
+================================================================================
+
+🌐 DOMAIN: seeking.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: GoDaddy.com, LLC
+  • Created: 1997-06-02 04:00:00
+  • Expires: 2034-06-01 04:00:00
+  • Country: Unknown
+
+🌍 IP Geolocation:
+  • IP Address: 104.16.249.118
+  • Country: Canada
+  • City: Toronto
+  • ISP: Cloudflare, Inc.
+
+🛡️ Security Score: 4/6
+
+💻 Technologies: Cloudflare, Vue.js
+
+🔗 Subdomains Found: 4
+  • www.seeking.com
+  • admin.seeking.com
+  • api.seeking.com
+  • blog.seeking.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: xhamster.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: NameCheap, Inc.
+  • Created: 2007-04-02 12:48:32
+  • Expires: 2027-04-02 12:48:32
+  • Country: Unknown
+
+🌍 IP Geolocation:
+  • IP Address: 104.18.146.40
+  • Country: Canada
+  • City: Toronto
+  • ISP: Cloudflare, Inc.
+
+🛡️ Security Score: 3/6
+
+💻 Technologies: Cloudflare, Google Analytics
+
+🔗 Subdomains Found: 9
+  • www.xhamster.com
+  • mail.xhamster.com
+  • ftp.xhamster.com
+  • admin.xhamster.com
+  • api.xhamster.com
+
+📱 Social Media Presence:
+  • Twitter: xhamstercom
+  • Youtube: channel
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: livejasmin.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: EuroDNS S.A.
+  • Created: [datetime.datetime(2001, 11, 12, 8, 8, 1), datetime.datetime(2001, 11, 12, 0, 0)]
+  • Expires: [datetime.datetime(2025, 11, 12, 8, 8, 1), datetime.datetime(2025, 11, 11, 0, 0)]
+  • Country: LU
+
+🌍 IP Geolocation:
+  • IP Address: 109.71.161.200
+  • Country: Luxembourg
+  • City: Schieren
+  • ISP: JWE S.a r.l.
+
+🛡️ Security Score: 3/6
+
+🔗 Subdomains Found: 2
+  • www.livejasmin.com
+  • mail.livejasmin.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: fac
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: Unknown
+  • Created: Unknown
+  • Expires: Unknown
+  • Country: Unknown
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: tinder.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: MarkMonitor, Inc.
+  • Created: [datetime.datetime(1998, 10, 15, 4, 0), datetime.datetime(1998, 10, 15, 4, 0, tzinfo=datetime.timezone.utc)]
+  • Expires: [datetime.datetime(2025, 10, 14, 4, 0), datetime.datetime(2025, 10, 14, 0, 0, tzinfo=datetime.timezone.utc)]
+  • Country: US
+
+🌍 IP Geolocation:
+  • IP Address: 52.84.150.39
+  • Country: United States
+  • City: Ashburn
+  • ISP: Amazon.com, Inc.
+
+🛡️ Security Score: 6/6
+
+💻 Technologies: Nginx, React
+
+🔗 Subdomains Found: 1
+  • www.tinder.com
+
+📱 Social Media Presence:
+  • Facebook: tinder
+  • Twitter: Tinder
+  • Instagram: tinder
+  • Youtube: Tinder
+  • Linkedin: company
+  • Tiktok: @tinder
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: youporn.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: EuroDNS S.A.
+  • Created: [datetime.datetime(2005, 12, 2, 21, 28, 36), datetime.datetime(2005, 12, 2, 0, 0)]
+  • Expires: [datetime.datetime(2027, 5, 23, 17, 23, 18), datetime.datetime(2027, 5, 22, 0, 0)]
+  • Country: LU
+
+🌍 IP Geolocation:
+  • IP Address: 66.254.114.79
+  • Country: United States
+  • City: New York
+  • ISP: Reflected Networks, Inc.
+
+🛡️ Security Score: 2/6
+
+💻 Technologies: Vue.js, Google Analytics
+
+🔗 Subdomains Found: 3
+  • www.youporn.com
+  • blog.youporn.com
+  • mobile.youporn.com
+
+⚠️ Reputation Analysis:
+  • ⚠️ ADULT CONTENT DETECTED
+
+================================================================================
+
+🌐 DOMAIN: myfreecams.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: Moniker Online Services LLC
+  • Created: 2002-03-19 04:18:38
+  • Expires: 2031-03-19 03:18:38
+  • Country: US
+
+🌍 IP Geolocation:
+  • IP Address: 163.237.254.146
+  • Country: United States
+  • City: Chicago
+  • ISP: YOUR.ORG, INC.
+
+🛡️ Security Score: 1/6
+
+💻 Technologies: Nginx, Google Analytics
+
+🔗 Subdomains Found: 6
+  • www.myfreecams.com
+  • mail.myfreecams.com
+  • admin.myfreecams.com
+  • api.myfreecams.com
+  • mobile.myfreecams.com
+
+📱 Social Media Presence:
+  • Twitter: MyFreeCams
+
+⚠️ Reputation Analysis:
+  • ⚠️ ADULT CONTENT DETECTED
+
+================================================================================
+
+🌐 DOMAIN: badoo.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: MarkMonitor, Inc.
+  • Created: [datetime.datetime(2003, 5, 26, 4, 0, 51), datetime.datetime(2003, 5, 26, 4, 0, 51, tzinfo=datetime.timezone.utc)]
+  • Expires: [datetime.datetime(2027, 5, 26, 4, 0, 51), datetime.datetime(2027, 5, 26, 0, 0, tzinfo=datetime.timezone.utc)]
+  • Country: CY
+
+🌍 IP Geolocation:
+  • IP Address: 31.222.75.112
+  • Country: United States
+  • City: Miami
+  • ISP: Public-services
+
+🛡️ Security Score: 4/6
+
+💻 Technologies: Nginx
+
+🔗 Subdomains Found: 9
+  • www.badoo.com
+  • mail.badoo.com
+  • ftp.badoo.com
+  • admin.badoo.com
+  • api.badoo.com
+
+📱 Social Media Presence:
+  • Facebook: badoo
+  • Twitter: Badoo?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor
+  • Instagram: badoo
+  • Linkedin: company
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: ashley madison.com
+--------------------------------------------------
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: manyvids.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: GoDaddy.com, LLC
+  • Created: 2013-03-11 00:41:32
+  • Expires: 2026-03-11 00:41:32
+  • Country: Unknown
+
+🌍 IP Geolocation:
+  • IP Address: 13.35.37.92
+  • Country: Singapore
+  • City: Singapore
+  • ISP: Amazon.com, Inc.
+
+🛡️ Security Score: 2/6
+
+💻 Technologies: React, Google Analytics
+
+🔗 Subdomains Found: 9
+  • www.manyvids.com
+  • mail.manyvids.com
+  • ftp.manyvids.com
+  • admin.manyvids.com
+  • api.manyvids.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: xvideos.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: GRANSY S.R.O D/B/A SUBREG.CZ
+  • Created: [datetime.datetime(1997, 12, 30, 5, 0), datetime.datetime(1997, 12, 30, 0, 0)]
+  • Expires: [datetime.datetime(2028, 12, 29, 5, 0), datetime.datetime(2028, 12, 29, 0, 0)]
+  • Country: CZ
+
+🌍 IP Geolocation:
+  • IP Address: 185.88.181.6
+  • Country: The Netherlands
+  • City: Amsterdam
+  • ISP: DigitalOcean, LLC
+
+🛡️ Security Score: 3/6
+
+💻 Technologies: Nginx, jQuery
+
+🔗 Subdomains Found: 9
+  • www.xvideos.com
+  • mail.xvideos.com
+  • ftp.xvideos.com
+  • admin.xvideos.com
+  • api.xvideos.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: stripchat.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: Amazon Registrar, Inc.
+  • Created: 2006-02-13 19:09:16
+  • Expires: 2029-02-13 19:09:16
+  • Country: GB
+
+🌍 IP Geolocation:
+  • IP Address: 104.17.117.12
+  • Country: Canada
+  • City: Toronto
+  • ISP: Cloudflare, Inc.
+
+🛡️ Security Score: 2/6
+
+💻 Technologies: Cloudflare, React, Google Analytics
+
+🔗 Subdomains Found: 8
+  • www.stripchat.com
+  • ftp.stripchat.com
+  • admin.stripchat.com
+  • api.stripchat.com
+  • blog.stripchat.com
+
+📱 Social Media Presence:
+  • Twitter: stripchat
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: onlyfans.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: GoDaddy Corporate Domains, LLC
+  • Created: 2013-01-29 19:10:56
+  • Expires: 2035-01-29 19:10:56
+  • Country: Unknown
+
+🌍 IP Geolocation:
+  • IP Address: 162.159.140.146
+  • Country: Canada
+  • City: Toronto
+  • ISP: Cloudflare, Inc.
+
+🛡️ Security Score: 3/6
+
+💻 Technologies: Cloudflare
+
+🔗 Subdomains Found: 2
+  • www.onlyfans.com
+  • blog.onlyfans.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: clips4sale.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: EuroDNS S.A.
+  • Created: [datetime.datetime(2003, 7, 22, 3, 45, 51), datetime.datetime(2003, 7, 22, 0, 0)]
+  • Expires: [datetime.datetime(2025, 7, 22, 3, 45, 51), datetime.datetime(2025, 7, 21, 0, 0)]
+  • Country: LU
+
+🌍 IP Geolocation:
+  • IP Address: 216.18.168.233
+  • Country: United States
+  • City: Chicago
+  • ISP: Reflected Networks, Inc.
+
+🛡️ Security Score: 3/6
+
+💻 Technologies: Cloudflare, React, Google Analytics
+
+🔗 Subdomains Found: 9
+  • www.clips4sale.com
+  • mail.clips4sale.com
+  • ftp.clips4sale.com
+  • admin.clips4sale.com
+  • api.clips4sale.com
+
+📱 Social Media Presence:
+  • Twitter: clips4sale?t=HzBgd908mBu_x2uLC4F71g&amp;s=09
+  • Youtube: @Clips4SaleOfficial
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: pof.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: CSC Corporate Domains, Inc.
+  • Created: [datetime.datetime(2000, 2, 21, 11, 46, 13), datetime.datetime(2000, 2, 21, 6, 46, 13)]
+  • Expires: 2026-02-21 11:46:12
+  • Country: CA
+
+🌍 IP Geolocation:
+  • IP Address: 104.18.36.63
+  • Country: Canada
+  • City: Toronto
+  • ISP: Cloudflare, Inc.
+
+🛡️ Security Score: 2/6
+
+💻 Technologies: Cloudflare
+
+🔗 Subdomains Found: 3
+  • www.pof.com
+  • blog.pof.com
+  • app.pof.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: match.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: MarkMonitor, Inc.
+  • Created: [datetime.datetime(1998, 6, 2, 4, 0), datetime.datetime(1998, 6, 2, 7, 0, tzinfo=datetime.timezone.utc)]
+  • Expires: [datetime.datetime(2026, 6, 1, 4, 0), datetime.datetime(2026, 6, 1, 0, 0, tzinfo=datetime.timezone.utc)]
+  • Country: US
+
+🌍 IP Geolocation:
+  • IP Address: 208.83.242.49
+  • Country: United States
+  • City: Dallas
+  • ISP: Match Group, LLC
+
+🛡️ Security Score: 3/6
+
+💻 Technologies: React
+
+🔗 Subdomains Found: 3
+  • www.match.com
+  • blog.match.com
+  • mobile.match.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: beeg.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: DomainSpot LLC
+  • Created: [datetime.datetime(2000, 8, 10, 17, 57, 46), datetime.datetime(2000, 8, 10, 9, 57, 46)]
+  • Expires: [datetime.datetime(2027, 8, 10, 17, 57, 46), datetime.datetime(2027, 8, 11, 2, 39, 8)]
+  • Country: CZ
+
+🌍 IP Geolocation:
+  • IP Address: 172.67.181.179
+  • Country: Canada
+  • City: Toronto
+  • ISP: Cloudflare, Inc.
+
+🛡️ Security Score: 2/6
+
+💻 Technologies: Cloudflare
+
+🔗 Subdomains Found: 2
+  • www.beeg.com
+  • mail.beeg.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: xnxx.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: Gandi SAS
+  • Created: 2002-04-08 22:38:49
+  • Expires: 2033-04-08 22:38:49
+  • Country: Unknown
+
+🌍 IP Geolocation:
+  • IP Address: 185.88.181.59
+  • Country: The Netherlands
+  • City: Amsterdam
+  • ISP: DigitalOcean, LLC
+
+🛡️ Security Score: 3/6
+
+💻 Technologies: Nginx, jQuery
+
+🔗 Subdomains Found: 2
+  • www.xnxx.com
+  • mobile.xnxx.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: spankbang.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: NameCheap, Inc.
+  • Created: 2011-02-19 09:49:41
+  • Expires: 2026-02-19 09:49:41
+  • Country: Unknown
+
+🌍 IP Geolocation:
+  • IP Address: 104.18.96.242
+  • Country: Canada
+  • City: Toronto
+  • ISP: Cloudflare, Inc.
+
+🛡️ Security Score: 4/6
+
+💻 Technologies: Cloudflare
+
+🔗 Subdomains Found: 9
+  • www.spankbang.com
+  • mail.spankbang.com
+  • ftp.spankbang.com
+  • admin.spankbang.com
+  • api.spankbang.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: redtube.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: EuroDNS S.A.
+  • Created: [datetime.datetime(2006, 1, 7, 15, 9, 11), datetime.datetime(2006, 1, 7, 0, 0)]
+  • Expires: [datetime.datetime(2027, 1, 7, 15, 9, 11), datetime.datetime(2027, 1, 6, 0, 0)]
+  • Country: LU
+
+🌍 IP Geolocation:
+  • IP Address: 66.254.114.238
+  • Country: United States
+  • City: New York
+  • ISP: Reflected Networks, Inc.
+
+🛡️ Security Score: 1/6
+
+💻 Technologies: jQuery, Vue.js, Google Analytics
+
+🔗 Subdomains Found: 3
+  • www.redtube.com
+  • api.redtube.com
+  • blog.redtube.com
+
+📱 Social Media Presence:
+  • Twitter: redtube
+  • Instagram: redtube.official
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: tube8.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: EuroDNS S.A.
+  • Created: [datetime.datetime(2007, 9, 5, 18, 10, 26), datetime.datetime(2007, 9, 5, 0, 0)]
+  • Expires: [datetime.datetime(2027, 9, 5, 18, 10, 26), datetime.datetime(2027, 9, 4, 0, 0)]
+  • Country: LU
+
+🌍 IP Geolocation:
+  • IP Address: 66.254.114.239
+  • Country: United States
+  • City: New York
+  • ISP: Reflected Networks, Inc.
+
+🛡️ Security Score: 2/6
+
+💻 Technologies: Vue.js, Google Analytics
+
+🔗 Subdomains Found: 4
+  • www.tube8.com
+  • admin.tube8.com
+  • api.tube8.com
+  • blog.tube8.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: cam4.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: https://www.101domain.com/
+  • Created: 1999-07-28 14:15:30
+  • Expires: 2027-07-28 14:15:27
+  • Country: US
+
+🌍 IP Geolocation:
+  • IP Address: 185.94.239.88
+  • Country: The Netherlands
+  • City: Amsterdam
+  • ISP: Mojohost B.V.
+
+🛡️ Security Score: 0/6
+
+💻 Technologies: Nginx, Vue.js, Google Analytics
+
+🔗 Subdomains Found: 9
+  • www.cam4.com
+  • mail.cam4.com
+  • ftp.cam4.com
+  • admin.cam4.com
+  • api.cam4.com
+
+📱 Social Media Presence:
+  • Instagram: c4.cultureofficial
+  • Youtube: @CAM4Official
+  • Tiktok: @c4culture
+
+⚠️ Reputation Analysis:
+  • ⚠️ ADULT CONTENT DETECTED
+
+================================================================================
+
+🌐 DOMAIN: pornhub.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: EuroDNS S.A.
+  • Created: [datetime.datetime(2000, 10, 31, 12, 23, 38), datetime.datetime(2000, 10, 31, 0, 0)]
+  • Expires: [datetime.datetime(2027, 10, 31, 11, 23, 38), datetime.datetime(2027, 10, 30, 0, 0)]
+  • Country: LU
+
+🌍 IP Geolocation:
+  • IP Address: 66.254.114.41
+  • Country: United States
+  • City: New York
+  • ISP: Reflected Networks, Inc.
+
+🛡️ Security Score: 2/6
+
+💻 Technologies: jQuery, React, Vue.js, Google Analytics
+
+🔗 Subdomains Found: 4
+  • www.pornhub.com
+  • mail.pornhub.com
+  • api.pornhub.com
+  • mobile.pornhub.com
+
+📱 Social Media Presence:
+  • Twitter: pornhub
+  • Instagram: pornhub
+  • Youtube: channel
+
+⚠️ Reputation Analysis:
+  • ⚠️ ADULT CONTENT DETECTED
+
+================================================================================
+
+🌐 DOMAIN: adultfriendfinder.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: GoDaddy.com, LLC
+  • Created: 1997-11-29 05:00:00
+  • Expires: 2025-11-28 05:00:00
+  • Country: Unknown
+
+🌍 IP Geolocation:
+  • IP Address: 69.165.107.69
+  • Country: United States
+  • City: San Jose
+  • ISP: FriendFinder Networks Inc
+
+🛡️ Security Score: 2/6
+
+💻 Technologies: Apache, jQuery, React
+
+🔗 Subdomains Found: 9
+  • www.adultfriendfinder.com
+  • mail.adultfriendfinder.com
+  • ftp.adultfriendfinder.com
+  • admin.adultfriendfinder.com
+  • api.adultfriendfinder.com
+
+📱 Social Media Presence:
+  • Twitter: adultfriendfind
+
+⚠️ Reputation Analysis:
+  • ⚠️ ADULT CONTENT DETECTED
+
+================================================================================
+
+🌐 DOMAIN: bumble.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: MarkMonitor, Inc.
+  • Created: [datetime.datetime(1997, 7, 27, 4, 0), datetime.datetime(1997, 7, 27, 4, 0, tzinfo=datetime.timezone.utc)]
+  • Expires: [datetime.datetime(2027, 7, 26, 4, 0), datetime.datetime(2027, 7, 26, 0, 0, tzinfo=datetime.timezone.utc)]
+  • Country: CY
+
+🌍 IP Geolocation:
+  • IP Address: 31.222.75.113
+  • Country: United States
+  • City: Miami
+  • ISP: Public-services
+
+🛡️ Security Score: 3/6
+
+💻 Technologies: Nginx
+
+🔗 Subdomains Found: 9
+  • www.bumble.com
+  • mail.bumble.com
+  • ftp.bumble.com
+  • admin.bumble.com
+  • api.bumble.com
+
+📱 Social Media Presence:
+  • Facebook: bumbleapp
+  • Twitter: bumble
+  • Instagram: bumble
+  • Youtube: channel
+  • Linkedin: company
+  • Tiktok: @bumble
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
+🌐 DOMAIN: chaturbate.com
+--------------------------------------------------
+📋 WHOIS Information:
+  • Registrar: Cloudflare, Inc.
+  • Created: 2011-02-26 03:30:59
+  • Expires: 2027-11-19 05:15:42
+  • Country: US
+
+🌍 IP Geolocation:
+  • IP Address: 104.16.42.196
+  • Country: Canada
+  • City: Toronto
+  • ISP: Cloudflare, Inc.
+
+🛡️ Security Score: 4/6
+
+💻 Technologies: Cloudflare
+
+🔗 Subdomains Found: 8
+  • www.chaturbate.com
+  • ftp.chaturbate.com
+  • admin.chaturbate.com
+  • api.chaturbate.com
+  • blog.chaturbate.com
+
+⚠️ Reputation Analysis:
+  • ✅ No adult content keywords detected
+
+================================================================================
+
