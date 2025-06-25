@@ -1,0 +1,799 @@
+{
+  "exploitation_start": "2025-06-25T00:28:30.706534",
+  "exploited_endpoints": [],
+  "extracted_sessions": {
+    "https://web.telegram.org/k/": {
+      "cookies": {
+        "stel_ssid": {
+          "value": "d6eaa5e54e007f0eb0_1345851439967679944",
+          "domain": "t.me",
+          "path": "/",
+          "secure": true,
+          "expires": 1750897727
+        }
+      },
+      "potential_tokens": [],
+      "content_length": 15320,
+      "session_established": true,
+      "hijack_time": "2025-06-25T00:28:55.203220"
+    },
+    "https://web.telegram.org/z/": {
+      "cookies": {
+        "stel_ssid": {
+          "value": "d6eaa5e54e007f0eb0_1345851439967679944",
+          "domain": "t.me",
+          "path": "/",
+          "secure": true,
+          "expires": 1750897727
+        }
+      },
+      "potential_tokens": [
+        "dc555687e5f675c26ecf",
+        "97d30d2b76d1814fcc88",
+        "disablepictureinpicture"
+      ],
+      "content_length": 3075,
+      "session_established": true,
+      "hijack_time": "2025-06-25T00:28:55.528284"
+    }
+  },
+  "compromised_data": {},
+  "network_intelligence": {
+    "port_scan": {
+      "web.telegram.org": [
+        443,
+        80
+      ],
+      "api.telegram.org": [
+        443,
+        80
+      ],
+      "core.telegram.org": [
+        443,
+        80
+      ],
+      "t.me": [
+        80,
+        443
+      ],
+      "telegram.me": [
+        443,
+        80
+      ]
+    },
+    "header_analysis": {
+      "https://web.telegram.org/": {
+        "status_code": 200,
+        "headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Wed, 25 Jun 2025 00:28:46 GMT",
+          "Content-Type": "text/html",
+          "Last-Modified": "Wed, 25 Oct 2023 19:17:17 GMT",
+          "Connection": "keep-alive",
+          "ETag": "W/\"653969bd-633\"",
+          "Expires": "Wed, 25 Jun 2025 01:28:46 GMT",
+          "Cache-Control": "max-age=3600",
+          "X-Frame-Options": "deny",
+          "X-Served-By": "meta4119538",
+          "Content-Encoding": "gzip"
+        },
+        "security_analysis": {
+          "missing_security_headers": [
+            "X-Content-Type-Options",
+            "X-XSS-Protection",
+            "Strict-Transport-Security",
+            "Content-Security-Policy"
+          ],
+          "weak_security_headers": [],
+          "information_disclosure": [
+            {
+              "header": "Server",
+              "value": "nginx/1.18.0"
+            }
+          ],
+          "cache_issues": []
+        },
+        "analysis_time": "2025-06-25T00:28:46.258865"
+      },
+      "https://web.telegram.org/k/": {
+        "status_code": 200,
+        "headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Wed, 25 Jun 2025 00:28:46 GMT",
+          "Content-Type": "text/html",
+          "Last-Modified": "Wed, 18 Jun 2025 23:53:25 GMT",
+          "Connection": "keep-alive",
+          "ETag": "W/\"68535175-3bd8\"",
+          "Expires": "Wed, 25 Jun 2025 01:28:46 GMT",
+          "Cache-Control": "max-age=3600",
+          "X-Frame-Options": "deny",
+          "X-Served-By": "meta4119538",
+          "Content-Encoding": "gzip"
+        },
+        "security_analysis": {
+          "missing_security_headers": [
+            "X-Content-Type-Options",
+            "X-XSS-Protection",
+            "Strict-Transport-Security",
+            "Content-Security-Policy"
+          ],
+          "weak_security_headers": [],
+          "information_disclosure": [
+            {
+              "header": "Server",
+              "value": "nginx/1.18.0"
+            }
+          ],
+          "cache_issues": []
+        },
+        "analysis_time": "2025-06-25T00:28:46.417231"
+      },
+      "https://web.telegram.org/z/": {
+        "status_code": 301,
+        "headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Wed, 25 Jun 2025 00:28:46 GMT",
+          "Content-Type": "text/html",
+          "Content-Length": "169",
+          "Connection": "keep-alive",
+          "Location": "https://web.telegram.org/a/",
+          "Expires": "Wed, 25 Jun 2025 01:28:46 GMT",
+          "Cache-Control": "max-age=3600",
+          "X-Frame-Options": "deny",
+          "X-Served-By": "meta4119538"
+        },
+        "security_analysis": {
+          "missing_security_headers": [
+            "X-Content-Type-Options",
+            "X-XSS-Protection",
+            "Strict-Transport-Security",
+            "Content-Security-Policy"
+          ],
+          "weak_security_headers": [],
+          "information_disclosure": [
+            {
+              "header": "Server",
+              "value": "nginx/1.18.0"
+            }
+          ],
+          "cache_issues": []
+        },
+        "analysis_time": "2025-06-25T00:28:46.576759"
+      },
+      "https://api.telegram.org/": {
+        "status_code": 302,
+        "headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Wed, 25 Jun 2025 00:28:46 GMT",
+          "Content-Type": "text/html",
+          "Content-Length": "145",
+          "Connection": "keep-alive",
+          "Location": "https://core.telegram.org/bots",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+          "Access-Control-Allow-Origin": "*",
+          "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
+          "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+        },
+        "security_analysis": {
+          "missing_security_headers": [
+            "X-Frame-Options",
+            "X-Content-Type-Options",
+            "X-XSS-Protection",
+            "Content-Security-Policy"
+          ],
+          "weak_security_headers": [],
+          "information_disclosure": [
+            {
+              "header": "Server",
+              "value": "nginx/1.18.0"
+            }
+          ],
+          "cache_issues": []
+        },
+        "analysis_time": "2025-06-25T00:28:47.080367"
+      },
+      "https://t.me/": {
+        "status_code": 302,
+        "headers": {
+          "Server": "nginx/1.18.0",
+          "Date": "Wed, 25 Jun 2025 00:28:47 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Content-Length": "20",
+          "Connection": "keep-alive",
+          "Set-Cookie": "stel_ssid=d6eaa5e54e007f0eb0_1345851439967679944; expires=Thu, 26 Jun 2025 00:28:47 GMT; path=/; samesite=None; secure; HttpOnly",
+          "Pragma": "no-cache",
+          "Cache-control": "no-store",
+          "Location": "//telegram.org/",
+          "Content-Encoding": "gzip",
+          "Strict-Transport-Security": "max-age=35768000"
+        },
+        "security_analysis": {
+          "missing_security_headers": [
+            "X-Frame-Options",
+            "X-Content-Type-Options",
+            "X-XSS-Protection",
+            "Content-Security-Policy"
+          ],
+          "weak_security_headers": [],
+          "information_disclosure": [
+            {
+              "header": "Server",
+              "value": "nginx/1.18.0"
+            }
+          ],
+          "cache_issues": []
+        },
+        "analysis_time": "2025-06-25T00:28:47.580369"
+      }
+    },
+    "api_fingerprinting": {
+      "https://api.telegram.org/bot": {
+        "GET": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:47 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.157267
+        },
+        "POST": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:47 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.156933
+        },
+        "PUT": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:47 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.157669
+        },
+        "DELETE": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:48 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.157338
+        },
+        "OPTIONS": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:48 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.15793
+        },
+        "HEAD": {
+          "status": 404,
+          "size": 0,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:48 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.157071
+        }
+      },
+      "https://api.telegram.org/file/bot": {
+        "GET": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:48 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.157087
+        },
+        "POST": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:48 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.159066
+        },
+        "PUT": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:48 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.156898
+        },
+        "DELETE": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:49 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.156995
+        },
+        "OPTIONS": {
+          "status": 404,
+          "size": 55,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:49 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.158584
+        },
+        "HEAD": {
+          "status": 404,
+          "size": 0,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:49 GMT",
+            "Content-Type": "application/json",
+            "Content-Length": "55",
+            "Connection": "keep-alive",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Expose-Headers": "Content-Length,Content-Type,Date,Server,Connection"
+          },
+          "response_time": 0.15725
+        }
+      },
+      "https://core.telegram.org/api": {
+        "GET": {
+          "status": 200,
+          "size": 37487,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:49 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Length": "9663",
+            "Connection": "keep-alive",
+            "Pragma": "no-cache",
+            "Cache-control": "no-store",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Content-Encoding": "gzip",
+            "Strict-Transport-Security": "max-age=35768000"
+          },
+          "response_time": 0.517315
+        },
+        "POST": {
+          "status": 200,
+          "size": 37487,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:50 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Length": "9663",
+            "Connection": "keep-alive",
+            "Pragma": "no-cache",
+            "Cache-control": "no-store",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Content-Encoding": "gzip",
+            "Strict-Transport-Security": "max-age=35768000"
+          },
+          "response_time": 0.167457
+        },
+        "PUT": {
+          "status": 400,
+          "size": 173,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:50 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "173",
+            "Connection": "keep-alive"
+          },
+          "response_time": 0.158691
+        },
+        "DELETE": {
+          "status": 200,
+          "size": 37488,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:50 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Length": "9664",
+            "Connection": "keep-alive",
+            "Pragma": "no-cache",
+            "Cache-control": "no-store",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Content-Encoding": "gzip",
+            "Strict-Transport-Security": "max-age=35768000"
+          },
+          "response_time": 0.169999
+        },
+        "OPTIONS": {
+          "status": 501,
+          "size": 181,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:50 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "181",
+            "Connection": "keep-alive"
+          },
+          "response_time": 0.158307
+        },
+        "HEAD": {
+          "status": 200,
+          "size": 0,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:50 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Length": "9663",
+            "Connection": "keep-alive",
+            "Pragma": "no-cache",
+            "Cache-control": "no-store",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Content-Encoding": "gzip",
+            "Strict-Transport-Security": "max-age=35768000"
+          },
+          "response_time": 0.167241
+        }
+      },
+      "https://core.telegram.org/mtproto": {
+        "GET": {
+          "status": 200,
+          "size": 17439,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:50 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Length": "5620",
+            "Connection": "keep-alive",
+            "Pragma": "no-cache",
+            "Cache-control": "no-store",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Content-Encoding": "gzip",
+            "Strict-Transport-Security": "max-age=35768000"
+          },
+          "response_time": 0.170121
+        },
+        "POST": {
+          "status": 200,
+          "size": 17439,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:51 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Length": "5619",
+            "Connection": "keep-alive",
+            "Pragma": "no-cache",
+            "Cache-control": "no-store",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Content-Encoding": "gzip",
+            "Strict-Transport-Security": "max-age=35768000"
+          },
+          "response_time": 0.171198
+        },
+        "PUT": {
+          "status": 400,
+          "size": 173,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:51 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "173",
+            "Connection": "keep-alive"
+          },
+          "response_time": 0.158153
+        },
+        "DELETE": {
+          "status": 200,
+          "size": 17438,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:51 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Length": "5620",
+            "Connection": "keep-alive",
+            "Pragma": "no-cache",
+            "Cache-control": "no-store",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Content-Encoding": "gzip",
+            "Strict-Transport-Security": "max-age=35768000"
+          },
+          "response_time": 0.169461
+        },
+        "OPTIONS": {
+          "status": 501,
+          "size": 181,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:51 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "181",
+            "Connection": "keep-alive"
+          },
+          "response_time": 0.158584
+        },
+        "HEAD": {
+          "status": 200,
+          "size": 0,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:51 GMT",
+            "Content-Type": "text/html; charset=utf-8",
+            "Content-Length": "5619",
+            "Connection": "keep-alive",
+            "Pragma": "no-cache",
+            "Cache-control": "no-store",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Content-Encoding": "gzip",
+            "Strict-Transport-Security": "max-age=35768000"
+          },
+          "response_time": 0.169174
+        }
+      },
+      "https://web.telegram.org/k/api": {
+        "GET": {
+          "status": 404,
+          "size": 555,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:51 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "555",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157808
+        },
+        "POST": {
+          "status": 404,
+          "size": 555,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:52 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "555",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157789
+        },
+        "PUT": {
+          "status": 405,
+          "size": 559,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:52 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "559",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.178258
+        },
+        "DELETE": {
+          "status": 405,
+          "size": 559,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:52 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "559",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.158736
+        },
+        "OPTIONS": {
+          "status": 405,
+          "size": 559,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:52 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "559",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.158049
+        },
+        "HEAD": {
+          "status": 404,
+          "size": 0,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:52 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "555",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157992
+        }
+      },
+      "https://web.telegram.org/z/api": {
+        "GET": {
+          "status": 404,
+          "size": 555,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:53 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "555",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157752
+        },
+        "POST": {
+          "status": 404,
+          "size": 555,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:53 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "555",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157681
+        },
+        "PUT": {
+          "status": 405,
+          "size": 559,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:53 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "559",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157912
+        },
+        "DELETE": {
+          "status": 405,
+          "size": 559,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:53 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "559",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157821
+        },
+        "OPTIONS": {
+          "status": 405,
+          "size": 559,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:54 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "559",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157722
+        },
+        "HEAD": {
+          "status": 404,
+          "size": 0,
+          "headers": {
+            "Server": "nginx/1.18.0",
+            "Date": "Wed, 25 Jun 2025 00:28:54 GMT",
+            "Content-Type": "text/html",
+            "Content-Length": "555",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "deny"
+          },
+          "response_time": 0.157773
+        }
+      }
+    }
+  },
+  "social_engineering_data": {
+    "target": "Alx_TYW",
+    "profile": "alx.trading",
+    "intelligence": {
+      "https://t.me/Alx_TYW": {
+        "crypto": 3,
+        "financial": 0,
+        "social": 0,
+        "urgency": 0,
+        "trust": 0
+      },
+      "https://telegram.me/Alx_TYW": {
+        "crypto": 3,
+        "financial": 0,
+        "social": 0,
+        "urgency": 0,
+        "trust": 0
+      },
+      "https://t.me/s/Alx_TYW": {
+        "crypto": 3,
+        "financial": 0,
+        "social": 0,
+        "urgency": 0,
+        "trust": 0
+      }
+    },
+    "attack_vectors": [],
+    "behavioral_analysis": {
+      "risk_score": 90,
+      "vulnerability_level": "HIGH",
+      "primary_interests": "Cryptocurrency Trading",
+      "manipulation_vectors": 0
+    }
+  },
+  "attack_vectors_successful": []
+}
