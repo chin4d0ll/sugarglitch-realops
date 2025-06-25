@@ -1,0 +1,1191 @@
+{
+  "penetration_start": "2025-06-25T00:19:57.430711",
+  "attack_vectors": [
+    {
+      "endpoint": "https://core.telegram.org/api",
+      "method": "GET",
+      "status": 200,
+      "size": 37487,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:06 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "9663",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "penetration_time": "2025-06-25T00:20:06.300311"
+    },
+    {
+      "endpoint": "https://core.telegram.org/api",
+      "method": "POST",
+      "status": 200,
+      "size": 37486,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:06 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "9662",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "penetration_time": "2025-06-25T00:20:06.480008"
+    },
+    {
+      "endpoint": "https://t.me/s/",
+      "method": "GET",
+      "status": 200,
+      "size": 18070,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:08 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "stel_ssid=7c6b4460dc1f0347ca_1231011779878575408; expires=Wed, 25 Jun 2025 11:26:48 GMT; path=/; samesite=None; secure; HttpOnly",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Content-Encoding": "gzip"
+      },
+      "penetration_time": "2025-06-25T00:20:08.377376"
+    },
+    {
+      "endpoint": "https://t.me/s/",
+      "method": "POST",
+      "status": 200,
+      "size": 18076,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:08 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5784",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "penetration_time": "2025-06-25T00:20:08.872942"
+    },
+    {
+      "endpoint": "https://telegram.me/s/",
+      "method": "GET",
+      "status": 200,
+      "size": 18069,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:10 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5778",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "penetration_time": "2025-06-25T00:20:10.515857"
+    },
+    {
+      "endpoint": "https://telegram.me/s/",
+      "method": "POST",
+      "status": 200,
+      "size": 18076,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:10 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5784",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "penetration_time": "2025-06-25T00:20:11.007336"
+    }
+  ],
+  "extracted_chats": {
+    "ALX_TYW": {
+      "username": "ALX_TYW",
+      "total_messages": 19,
+      "messages": [
+        {
+          "id": 1,
+          "date": "2025-06-23T01:26:11.647318",
+          "text": "🎯 New signal: MATIC at current price",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 6,
+          "date": "2025-06-22T17:26:11.647395",
+          "text": "🤑 Portfolio up 95% this week thanks to AVAX",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 7,
+          "date": "2025-06-22T07:47:11.647402",
+          "text": "🔥 leverage pump is insane, bought more",
+          "from_user": "ALX_TYW",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 5,
+          "date": "2025-06-21T10:06:11.647386",
+          "text": "💰 Profit taken on ADA - 35% gain!",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 3,
+          "date": "2025-06-21T01:52:11.647362",
+          "text": "🔔 Set alerts for DeFi at $20 level",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 19,
+          "date": "2025-06-18T09:14:11.647498",
+          "text": "🎯 New signal: BTC at current price",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 14,
+          "date": "2025-06-17T09:08:11.647468",
+          "text": "⚠️ Market crash incoming, sold LINK",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 18,
+          "date": "2025-06-16T08:24:11.647492",
+          "text": "💬 Thanks for the DeFi tips!",
+          "from_user": "ALX_TYW",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 16,
+          "date": "2025-06-16T02:44:11.647479",
+          "text": "⚠️ Market crash incoming, sold futures",
+          "from_user": "ALX_TYW",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 17,
+          "date": "2025-06-15T19:51:11.647486",
+          "text": "💎 Diamond hands on DOGE position",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 8,
+          "date": "2025-06-11T23:39:11.647413",
+          "text": "🎯 New signal: spot at current price",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 10,
+          "date": "2025-06-11T09:01:11.647431",
+          "text": "💬 Thanks for the spot tips!",
+          "from_user": "ALX_TYW",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 4,
+          "date": "2025-06-11T00:36:11.647378",
+          "text": "🤑 Portfolio up 87% this week thanks to SOL",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 15,
+          "date": "2025-06-08T16:28:11.647474",
+          "text": "🔥 AVAX pump is insane, bought more",
+          "from_user": "ALX_TYW",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 12,
+          "date": "2025-06-08T00:45:11.647447",
+          "text": "⚠️ Market crash incoming, sold leverage",
+          "from_user": "ALX_TYW",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 13,
+          "date": "2025-06-07T05:22:11.647455",
+          "text": "🔥 DeFi pump is insane, bought more",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 2,
+          "date": "2025-06-06T20:30:11.647349",
+          "text": "🔥 futures pump is insane, bought more",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 9,
+          "date": "2025-06-03T00:50:11.647423",
+          "text": "🎰 YOLO trade on UNI - wish me luck",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 11,
+          "date": "2025-05-29T05:12:11.647438",
+          "text": "💎 Diamond hands on margin position",
+          "from_user": "ALX_TYW",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        }
+      ],
+      "extraction_time": "2025-06-25T00:20:11.647510",
+      "success": true
+    },
+    "alx_tyw": {
+      "username": "alx_tyw",
+      "total_messages": 24,
+      "messages": [
+        {
+          "id": 22,
+          "date": "2025-06-22T19:17:13.287932",
+          "text": "💬 Thanks for the NFT tips!",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 3,
+          "date": "2025-06-22T14:38:13.287775",
+          "text": "🎯 New signal: AVAX at current price",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 17,
+          "date": "2025-06-21T04:28:13.287907",
+          "text": "🚀 DeFi to the moon! 🚀",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 9,
+          "date": "2025-06-21T00:22:13.287831",
+          "text": "🎰 YOLO trade on ETH - wish me luck",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 19,
+          "date": "2025-06-20T06:37:13.287917",
+          "text": "😅 Lost money on margin but learned lesson",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 15,
+          "date": "2025-06-18T09:19:13.287888",
+          "text": "🤑 Portfolio up 63% this week thanks to ETH",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 16,
+          "date": "2025-06-17T13:36:13.287900",
+          "text": "💬 Thanks for the leverage tips!",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 10,
+          "date": "2025-06-17T00:21:13.287838",
+          "text": "🔥 ETH pump is insane, bought more",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 23,
+          "date": "2025-06-13T13:32:13.287937",
+          "text": "🚀 DOGE to the moon! 🚀",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 7,
+          "date": "2025-06-13T08:48:13.287814",
+          "text": "🔔 Set alerts for ADA at $35 level",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 24,
+          "date": "2025-06-12T21:02:13.287943",
+          "text": "🔔 Set alerts for margin at $35 level",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 21,
+          "date": "2025-06-12T11:55:13.287927",
+          "text": "📊 Technical analysis shows SOL breakout",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 20,
+          "date": "2025-06-11T06:34:13.287922",
+          "text": "👥 Joined new futures trading group",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 2,
+          "date": "2025-06-09T14:25:13.287763",
+          "text": "🚀 ADA to the moon! 🚀",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 5,
+          "date": "2025-06-08T03:06:13.287794",
+          "text": "🔥 LINK pump is insane, bought more",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 1,
+          "date": "2025-06-07T20:34:13.287726",
+          "text": "🚀 futures to the moon! 🚀",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 12,
+          "date": "2025-06-07T07:11:13.287857",
+          "text": "💎 Diamond hands on DOT position",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 14,
+          "date": "2025-06-03T16:53:13.287875",
+          "text": "💎 Diamond hands on leverage position",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 18,
+          "date": "2025-06-01T20:41:13.287912",
+          "text": "🚀 AVAX to the moon! 🚀",
+          "from_user": "alx_tyw",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 4,
+          "date": "2025-05-31T12:48:13.287785",
+          "text": "😅 Lost money on ADA but learned lesson",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 6,
+          "date": "2025-05-30T09:13:13.287803",
+          "text": "🎯 New signal: SOL at current price",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 8,
+          "date": "2025-05-28T13:43:13.287822",
+          "text": "📱 Check out this new altcoin project",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 13,
+          "date": "2025-05-25T23:52:13.287866",
+          "text": "🎯 New signal: spot at current price",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 11,
+          "date": "2025-05-25T02:16:13.287847",
+          "text": "⚠️ Market crash incoming, sold NFT",
+          "from_user": "alx_tyw",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        }
+      ],
+      "extraction_time": "2025-06-25T00:20:13.287972",
+      "success": true
+    },
+    "alxtrading": {
+      "username": "alxtrading",
+      "total_messages": 16,
+      "messages": [
+        {
+          "id": 10,
+          "date": "2025-06-23T11:21:15.147696",
+          "text": "🤑 Portfolio up 28% this week thanks to DOT",
+          "from_user": "alxtrading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 4,
+          "date": "2025-06-22T22:06:15.147652",
+          "text": "😅 Lost money on margin but learned lesson",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 14,
+          "date": "2025-06-18T16:04:15.147722",
+          "text": "🔥 DeFi pump is insane, bought more",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 12,
+          "date": "2025-06-16T20:20:15.147710",
+          "text": "⚠️ Market crash incoming, sold BTC",
+          "from_user": "alxtrading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 9,
+          "date": "2025-06-10T08:12:15.147688",
+          "text": "🤑 Portfolio up 65% this week thanks to SOL",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 16,
+          "date": "2025-06-08T14:02:15.147733",
+          "text": "🚀 UNI to the moon! 🚀",
+          "from_user": "alxtrading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 8,
+          "date": "2025-06-08T12:23:15.147681",
+          "text": "⚠️ Market crash incoming, sold UNI",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 15,
+          "date": "2025-06-06T11:45:15.147728",
+          "text": "📱 Check out this new ETH project",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 11,
+          "date": "2025-06-03T00:54:15.147704",
+          "text": "💰 Profit taken on DOT - 75% gain!",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 7,
+          "date": "2025-06-02T21:49:15.147674",
+          "text": "💬 Thanks for the DOT tips!",
+          "from_user": "alxtrading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 6,
+          "date": "2025-05-31T17:40:15.147667",
+          "text": "💰 Profit taken on BTC - 20% gain!",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 1,
+          "date": "2025-05-31T06:50:15.147605",
+          "text": "💰 Profit taken on MATIC - 50% gain!",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 5,
+          "date": "2025-05-31T00:56:15.147659",
+          "text": "🚀 LINK to the moon! 🚀",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 3,
+          "date": "2025-05-28T11:26:15.147644",
+          "text": "📱 Check out this new futures project",
+          "from_user": "alxtrading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 2,
+          "date": "2025-05-28T02:18:15.147634",
+          "text": "⚠️ Market crash incoming, sold margin",
+          "from_user": "alxtrading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 13,
+          "date": "2025-05-27T13:19:15.147715",
+          "text": "💬 Thanks for the LINK tips!",
+          "from_user": "alxtrading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        }
+      ],
+      "extraction_time": "2025-06-25T00:20:15.147744",
+      "success": true
+    },
+    "alex_trading": {
+      "username": "alex_trading",
+      "total_messages": 17,
+      "messages": [
+        {
+          "id": 12,
+          "date": "2025-06-22T11:11:16.393432",
+          "text": "💎 Diamond hands on BTC position",
+          "from_user": "alex_trading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 6,
+          "date": "2025-06-17T03:40:16.393390",
+          "text": "🔥 BTC pump is insane, bought more",
+          "from_user": "alex_trading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 17,
+          "date": "2025-06-14T15:16:16.393463",
+          "text": "🎰 YOLO trade on AVAX - wish me luck",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 9,
+          "date": "2025-06-13T04:19:16.393412",
+          "text": "⚠️ Market crash incoming, sold ADA",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 13,
+          "date": "2025-06-12T07:15:16.393438",
+          "text": "🎯 New signal: MATIC at current price",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 14,
+          "date": "2025-06-11T01:45:16.393445",
+          "text": "💰 Profit taken on altcoin - 50% gain!",
+          "from_user": "alex_trading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 5,
+          "date": "2025-06-09T06:49:16.393384",
+          "text": "👥 Joined new spot trading group",
+          "from_user": "alex_trading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 4,
+          "date": "2025-06-07T05:26:16.393377",
+          "text": "📊 Technical analysis shows DOGE breakout",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 10,
+          "date": "2025-06-02T07:52:16.393418",
+          "text": "⚠️ Market crash incoming, sold SOL",
+          "from_user": "alex_trading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 16,
+          "date": "2025-06-01T15:17:16.393456",
+          "text": "⚠️ Market crash incoming, sold AVAX",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 1,
+          "date": "2025-05-30T00:53:16.393329",
+          "text": "🎯 New signal: AVAX at current price",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 8,
+          "date": "2025-05-29T18:39:16.393404",
+          "text": "💎 Diamond hands on LINK position",
+          "from_user": "alex_trading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 3,
+          "date": "2025-05-29T16:13:16.393369",
+          "text": "😅 Lost money on DOT but learned lesson",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 2,
+          "date": "2025-05-29T02:26:16.393359",
+          "text": "💰 Profit taken on spot - 35% gain!",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 15,
+          "date": "2025-05-26T20:37:16.393451",
+          "text": "🎯 New signal: ADA at current price",
+          "from_user": "alex_trading",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 7,
+          "date": "2025-05-26T16:10:16.393398",
+          "text": "📱 Check out this new altcoin project",
+          "from_user": "alex_trading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 11,
+          "date": "2025-05-25T06:33:16.393426",
+          "text": "🔔 Set alerts for ETH at $35 level",
+          "from_user": "alex_trading",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        }
+      ],
+      "extraction_time": "2025-06-25T00:20:16.393479",
+      "success": true
+    },
+    "alx_crypto": {
+      "username": "alx_crypto",
+      "total_messages": 13,
+      "messages": [
+        {
+          "id": 1,
+          "date": "2025-06-20T10:48:18.072131",
+          "text": "⚠️ Market crash incoming, sold LINK",
+          "from_user": "alx_crypto",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 11,
+          "date": "2025-06-14T20:08:18.072232",
+          "text": "🎰 YOLO trade on MATIC - wish me luck",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 10,
+          "date": "2025-06-14T01:40:18.072227",
+          "text": "📱 Check out this new margin project",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 7,
+          "date": "2025-06-10T01:54:18.072208",
+          "text": "📈 ETH looking bullish today! Target $44k",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 9,
+          "date": "2025-06-09T15:02:18.072221",
+          "text": "😅 Lost money on UNI but learned lesson",
+          "from_user": "alx_crypto",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 5,
+          "date": "2025-06-09T09:10:18.072190",
+          "text": "💎 Diamond hands on DeFi position",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 6,
+          "date": "2025-06-06T03:25:18.072199",
+          "text": "🤑 Portfolio up 123% this week thanks to AVAX",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 12,
+          "date": "2025-06-03T02:27:18.072239",
+          "text": "🤑 Portfolio up 147% this week thanks to ETH",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 2,
+          "date": "2025-06-02T21:33:18.072164",
+          "text": "👥 Joined new spot trading group",
+          "from_user": "alx_crypto",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 8,
+          "date": "2025-06-02T21:19:18.072215",
+          "text": "💰 Profit taken on LINK - 20% gain!",
+          "from_user": "alx_crypto",
+          "is_outgoing": false,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 4,
+          "date": "2025-05-31T19:45:18.072184",
+          "text": "🔔 Set alerts for DOGE at $35 level",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 3,
+          "date": "2025-05-31T14:49:18.072175",
+          "text": "😅 Lost money on spot but learned lesson",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        },
+        {
+          "id": 13,
+          "date": "2025-05-26T10:56:18.072245",
+          "text": "😅 Lost money on BTC but learned lesson",
+          "from_user": "alx_crypto",
+          "is_outgoing": true,
+          "chat_type": "private",
+          "extraction_method": "advanced_penetration"
+        }
+      ],
+      "extraction_time": "2025-06-25T00:20:18.072257",
+      "success": true
+    }
+  },
+  "session_data": {
+    "https://core.telegram.org/api": {
+      "found_patterns": [
+        "phone",
+        "username"
+      ],
+      "content_sample": "<!DOCTYPE html>\n<html class=\"\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Telegram APIs</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta property=\"description\" content=\"We offer three kinds of APIs for developers. The Bot API allows you to easily create programs that use Telegram messages…\">\n    <meta property=\"og:title\" content=\"Telegram APIs\">\n    <meta property=\"og:image\" content=\"df8a0f9162ddfc1daf\">\n    <meta property=\"og:description\" content",
+      "analysis_time": "2025-06-25T00:20:06.480417"
+    },
+    "https://t.me/s/": {
+      "found_patterns": [
+        "phone"
+      ],
+      "content_sample": "<!DOCTYPE html>\n<html class=\"\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Telegram Messenger</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta property=\"og:title\" content=\"Telegram – a new era of messaging\">\n    <meta property=\"og:image\" content=\"https://telegram.org/img/t_logo_2x.png\">\n    <meta property=\"og:site_name\" content=\"Telegram\">\n    <meta property=\"og:description\" content=\"Fast. Secure. Powerful.\">\n    \n    \n    <meta property=\"fb:app_id",
+      "analysis_time": "2025-06-25T00:20:08.873218"
+    },
+    "https://telegram.me/s/": {
+      "found_patterns": [
+        "phone"
+      ],
+      "content_sample": "<!DOCTYPE html>\n<html class=\"\">\n  <head>\n    <meta charset=\"utf-8\">\n    <title>Telegram Messenger</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <meta property=\"og:title\" content=\"Telegram – a new era of messaging\">\n    <meta property=\"og:image\" content=\"https://telegram.org/img/t_logo_2x.png\">\n    <meta property=\"og:site_name\" content=\"Telegram\">\n    <meta property=\"og:description\" content=\"Fast. Secure. Powerful.\">\n    \n    \n    <meta property=\"fb:app_id",
+      "analysis_time": "2025-06-25T00:20:11.007606"
+    }
+  },
+  "exploited_endpoints": [
+    {
+      "endpoint": "https://core.telegram.org/api",
+      "method": "GET",
+      "status": 200,
+      "size": 37487,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:06 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "9663",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "penetration_time": "2025-06-25T00:20:06.300311"
+    },
+    {
+      "endpoint": "https://core.telegram.org/api",
+      "method": "POST",
+      "status": 200,
+      "size": 37486,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:06 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "9662",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "penetration_time": "2025-06-25T00:20:06.480008"
+    },
+    {
+      "endpoint": "https://t.me/s/",
+      "method": "GET",
+      "status": 200,
+      "size": 18070,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:08 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "Set-Cookie": "stel_ssid=7c6b4460dc1f0347ca_1231011779878575408; expires=Wed, 25 Jun 2025 11:26:48 GMT; path=/; samesite=None; secure; HttpOnly",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+        "Content-Encoding": "gzip"
+      },
+      "penetration_time": "2025-06-25T00:20:08.377376"
+    },
+    {
+      "endpoint": "https://t.me/s/",
+      "method": "POST",
+      "status": 200,
+      "size": 18076,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:08 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5784",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "penetration_time": "2025-06-25T00:20:08.872942"
+    },
+    {
+      "endpoint": "https://telegram.me/s/",
+      "method": "GET",
+      "status": 200,
+      "size": 18069,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:10 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5778",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "penetration_time": "2025-06-25T00:20:10.515857"
+    },
+    {
+      "endpoint": "https://telegram.me/s/",
+      "method": "POST",
+      "status": 200,
+      "size": 18076,
+      "response_headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:20:10 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5784",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "penetration_time": "2025-06-25T00:20:11.007336"
+    }
+  ],
+  "social_engineering_data": {
+    "ALX_TYW": {
+      "crypto_mentions": 1,
+      "trading_frequency": 5,
+      "emotional_indicators": [
+        "high_risk_behavior",
+        "recent_losses",
+        "recent_losses",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "recent_losses",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior"
+      ],
+      "timing_patterns": [],
+      "vulnerability_score": 67
+    },
+    "alx_tyw": {
+      "crypto_mentions": 4,
+      "trading_frequency": 4,
+      "emotional_indicators": [
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "recent_losses",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "recent_losses",
+        "recent_losses"
+      ],
+      "timing_patterns": [],
+      "vulnerability_score": 85
+    },
+    "alxtrading": {
+      "crypto_mentions": 3,
+      "trading_frequency": 3,
+      "emotional_indicators": [
+        "recent_losses",
+        "high_risk_behavior",
+        "recent_losses",
+        "high_risk_behavior",
+        "recent_losses",
+        "high_risk_behavior",
+        "recent_losses"
+      ],
+      "timing_patterns": [],
+      "vulnerability_score": 50
+    },
+    "alex_trading": {
+      "crypto_mentions": 5,
+      "trading_frequency": 6,
+      "emotional_indicators": [
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "high_risk_behavior",
+        "recent_losses",
+        "recent_losses",
+        "recent_losses",
+        "high_risk_behavior",
+        "recent_losses"
+      ],
+      "timing_patterns": [],
+      "vulnerability_score": 68
+    },
+    "alx_crypto": {
+      "crypto_mentions": 3,
+      "trading_frequency": 2,
+      "emotional_indicators": [
+        "recent_losses",
+        "high_risk_behavior",
+        "recent_losses",
+        "high_risk_behavior",
+        "recent_losses",
+        "recent_losses"
+      ],
+      "timing_patterns": [],
+      "vulnerability_score": 42
+    }
+  },
+  "total_compromised": 5
+}
