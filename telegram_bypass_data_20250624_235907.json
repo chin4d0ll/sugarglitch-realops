@@ -1,0 +1,341 @@
+{
+  "bypass_attempts": 10,
+  "successful_bypasses": 0,
+  "found_endpoints": [
+    {
+      "url": "https://web.telegram.org/k/",
+      "status": 200,
+      "size": 15320,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:40 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 23:53:25 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"68535175-3bd8\"",
+        "Expires": "Wed, 25 Jun 2025 00:58:40 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119739",
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "url": "https://web.telegram.org/z/",
+      "status": 200,
+      "size": 3075,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:42 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 16:28:16 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"6852e920-c03\"",
+        "Expires": "Wed, 25 Jun 2025 00:58:42 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119739",
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "url": "https://web.telegram.org/a/",
+      "status": 200,
+      "size": 3075,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:44 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 16:28:16 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"6852e920-c03\"",
+        "Expires": "Wed, 25 Jun 2025 00:58:44 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119739",
+        "Content-Encoding": "gzip"
+      }
+    },
+    {
+      "url": "https://t.me/",
+      "status": 200,
+      "size": 18076,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:45 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5784",
+        "Connection": "keep-alive",
+        "Set-Cookie": "stel_ssid=7b089c11090ab84d19_5241507094973880540; expires=Wed, 25 Jun 2025 11:05:25 GMT; path=/; samesite=None; secure; HttpOnly",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      }
+    },
+    {
+      "url": "https://telegram.me/",
+      "status": 200,
+      "size": 18076,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:47 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "5783",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      }
+    },
+    {
+      "url": "https://api.telegram.org/",
+      "status": 200,
+      "size": 23174,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:49 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "6932",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      }
+    },
+    {
+      "url": "https://core.telegram.org/",
+      "status": 200,
+      "size": 37487,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:50 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "9663",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      }
+    },
+    {
+      "url": "https://desktop.telegram.org/",
+      "status": 200,
+      "size": 4105,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:51 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "1512",
+        "Connection": "keep-alive",
+        "Set-Cookie": "stel_ssid=f51e5fe3f54407267a_3537367457345396343; expires=Wed, 25 Jun 2025 11:05:31 GMT; path=/; samesite=None; secure; HttpOnly",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      }
+    },
+    {
+      "url": "https://macos.telegram.org/",
+      "status": 200,
+      "size": 7420,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:53 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "2253",
+        "Connection": "keep-alive",
+        "Set-Cookie": "stel_ssid=8ff1d0b493096d6860_13318983597568462041; expires=Wed, 25 Jun 2025 11:05:33 GMT; path=/; samesite=None; secure; HttpOnly",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      }
+    },
+    {
+      "url": "https://telegram.org/apps",
+      "status": 200,
+      "size": 15345,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:58:54 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "3832",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      }
+    }
+  ],
+  "found_vulnerabilities": [
+    {
+      "test_name": "CSRF Token Bypass",
+      "url": "https://web.telegram.org/k/",
+      "status_code": 200,
+      "response_size": 15320,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:59:07 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 23:53:25 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"68535175-3bd8\"",
+        "Expires": "Wed, 25 Jun 2025 00:59:07 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119739",
+        "Content-Encoding": "gzip"
+      },
+      "potential_issue": true,
+      "description": "Possible CSRF protection bypass"
+    },
+    {
+      "test_name": "Session Fixation",
+      "url": "https://web.telegram.org/z/",
+      "status_code": 200,
+      "response_size": 3075,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:59:07 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 16:28:16 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"6852e920-c03\"",
+        "Expires": "Wed, 25 Jun 2025 00:59:07 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119739",
+        "Content-Encoding": "gzip"
+      },
+      "potential_issue": false
+    },
+    {
+      "test_name": "API Endpoint Exposure",
+      "url": "https://web.telegram.org/k/api",
+      "status_code": 404,
+      "response_size": 153,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Tue, 24 Jun 2025 23:59:07 GMT",
+        "Content-Type": "text/html",
+        "Content-Length": "153",
+        "Connection": "keep-alive",
+        "X-Frame-Options": "deny"
+      },
+      "potential_issue": false
+    }
+  ],
+  "extracted_data": {
+    "target": "Alx_TYW",
+    "profile": "alx.trading",
+    "variants_found": [
+      {
+        "username": "Alx_TYW",
+        "url": "https://t.me/Alx_TYW",
+        "status": "accessible",
+        "content_length": 10852
+      },
+      {
+        "username": "Alx_TYW",
+        "url": "https://telegram.me/Alx_TYW",
+        "status": "accessible",
+        "content_length": 10835
+      },
+      {
+        "username": "ALX_TYW",
+        "url": "https://t.me/ALX_TYW",
+        "status": "accessible",
+        "content_length": 10853
+      },
+      {
+        "username": "ALX_TYW",
+        "url": "https://telegram.me/ALX_TYW",
+        "status": "accessible",
+        "content_length": 10836
+      },
+      {
+        "username": "alx_tyw",
+        "url": "https://t.me/alx_tyw",
+        "status": "accessible",
+        "content_length": 10854
+      },
+      {
+        "username": "alx_tyw",
+        "url": "https://telegram.me/alx_tyw",
+        "status": "accessible",
+        "content_length": 10818
+      },
+      {
+        "username": "alxtrading",
+        "url": "https://t.me/alxtrading",
+        "status": "accessible",
+        "content_length": 11324
+      },
+      {
+        "username": "alxtrading",
+        "url": "https://telegram.me/alxtrading",
+        "status": "accessible",
+        "content_length": 11323
+      },
+      {
+        "username": "alex_trading",
+        "url": "https://t.me/alex_trading",
+        "status": "accessible",
+        "content_length": 9595
+      },
+      {
+        "username": "alex_trading",
+        "url": "https://telegram.me/alex_trading",
+        "status": "accessible",
+        "content_length": 9595
+      },
+      {
+        "username": "alx_crypto",
+        "url": "https://t.me/alx_crypto",
+        "status": "accessible",
+        "content_length": 12544
+      },
+      {
+        "username": "alx_crypto",
+        "url": "https://telegram.me/alx_crypto",
+        "status": "accessible",
+        "content_length": 12526
+      }
+    ],
+    "public_data": {},
+    "social_links": [],
+    "potential_vulnerabilities": [
+      "alxtrading: Financial/Crypto content detected",
+      "alxtrading: Financial/Crypto content detected",
+      "alex_trading: Financial/Crypto content detected",
+      "alex_trading: Financial/Crypto content detected",
+      "alx_crypto: Financial/Crypto content detected",
+      "alx_crypto: Financial/Crypto content detected"
+    ]
+  },
+  "session_data": {
+    "cookies_found": [],
+    "local_storage_patterns": [
+      "auth"
+    ],
+    "session_tokens": [],
+    "csrf_tokens": []
+  }
+}
