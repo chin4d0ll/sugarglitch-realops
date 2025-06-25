@@ -1,0 +1,117 @@
+{
+  "extraction_start": "2025-06-25T00:53:19.751048",
+  "targets_analyzed": [
+    "alx_trading",
+    "Alx_TYW",
+    "alx_tyw",
+    "alxtrading"
+  ],
+  "profile_data": {
+    "alx_trading": {
+      "username": "alx_trading",
+      "extraction_time": "2025-06-25T00:53:19.751076",
+      "profile_found": true,
+      "real_data": {
+        "title": "Telegram: Contact @alx_trading",
+        "url": "https://t.me/alx_trading",
+        "image": "https://telegram.org/img/t_logo_2x.png"
+      },
+      "links": {
+        "username": "alx_trading",
+        "deep_links": [
+          "tg://resolve?domain=alx_trading",
+          "app-id=686449807, app-argument: tg://resolve?domain=alx_trading"
+        ],
+        "app_links": [],
+        "web_links": [
+          "https://t.me/alx_trading"
+        ]
+      }
+    },
+    "Alx_TYW": {
+      "username": "Alx_TYW",
+      "extraction_time": "2025-06-25T00:53:23.752040",
+      "profile_found": false,
+      "real_data": {},
+      "links": {
+        "username": "Alx_TYW",
+        "deep_links": [
+          "tg://resolve?domain=Alx_TYW",
+          "app-id=686449807, app-argument: tg://resolve?domain=Alx_TYW"
+        ],
+        "app_links": [],
+        "web_links": [
+          "https://t.me/Alx_TYW"
+        ]
+      }
+    },
+    "alx_tyw": {
+      "username": "alx_tyw",
+      "extraction_time": "2025-06-25T00:53:27.759585",
+      "profile_found": false,
+      "real_data": {},
+      "links": {
+        "username": "alx_tyw",
+        "deep_links": [
+          "tg://resolve?domain=alx_tyw",
+          "app-id=686449807, app-argument: tg://resolve?domain=alx_tyw"
+        ],
+        "app_links": [],
+        "web_links": [
+          "https://t.me/alx_tyw"
+        ]
+      }
+    },
+    "alxtrading": {
+      "username": "alxtrading",
+      "extraction_time": "2025-06-25T00:53:31.773774",
+      "profile_found": false,
+      "real_data": {},
+      "links": {
+        "username": "alxtrading",
+        "deep_links": [
+          "app-id=686449807, app-argument: tg://resolve?domain=alxtrading",
+          "tg://resolve?domain=alxtrading"
+        ],
+        "app_links": [],
+        "web_links": [
+          "https://t.me/alxtrading"
+        ]
+      }
+    }
+  },
+  "message_data": {
+    "alx_trading": {
+      "username": "alx_trading",
+      "extraction_time": "2025-06-25T00:53:20.245334",
+      "messages_found": 0,
+      "real_messages": []
+    },
+    "Alx_TYW": {
+      "username": "Alx_TYW",
+      "extraction_time": "2025-06-25T00:53:24.260232",
+      "messages_found": 0,
+      "real_messages": []
+    },
+    "alx_tyw": {
+      "username": "alx_tyw",
+      "extraction_time": "2025-06-25T00:53:28.268097",
+      "messages_found": 0,
+      "real_messages": []
+    },
+    "alxtrading": {
+      "username": "alxtrading",
+      "extraction_time": "2025-06-25T00:53:32.282462",
+      "messages_found": 0,
+      "real_messages": []
+    }
+  },
+  "real_interactions": [],
+  "verification": {
+    "data_source": "REAL_TELEGRAM_ONLY",
+    "no_mockup_data": true,
+    "live_extraction": true,
+    "enhanced_analysis": true,
+    "extraction_completed": "2025-06-25T00:53:35.782059"
+  }
+}

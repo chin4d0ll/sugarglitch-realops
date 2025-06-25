@@ -1,0 +1,1110 @@
+{
+  "extracted_at": "2025-06-25T00:49:55.752332",
+  "real_endpoints": [
+    {
+      "endpoint": "https://api.telegram.org/",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:10 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "6931",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "response_size": 23173,
+      "content_type": "text/html; charset=utf-8",
+      "server": "nginx/1.18.0",
+      "timestamp": "2025-06-25T00:50:10.631625",
+      "is_real": true,
+      "contains_api_info": true,
+      "detected_methods": [
+        "viewport",
+        "preload",
+        "webapps",
+        "stylesheet",
+        "description",
+        "emoji",
+        "icon",
+        "anchor",
+        "screen"
+      ]
+    },
+    {
+      "endpoint": "https://core.telegram.org/api",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:10 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "9663",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "response_size": 37487,
+      "content_type": "text/html; charset=utf-8",
+      "server": "nginx/1.18.0",
+      "timestamp": "2025-06-25T00:50:10.801895",
+      "is_real": true,
+      "contains_api_info": true,
+      "detected_methods": [
+        "viewport",
+        "forums",
+        "preload",
+        "games",
+        "profile",
+        "blocklist",
+        "wallpapers",
+        "active",
+        "themes",
+        "gifts"
+      ]
+    },
+    {
+      "endpoint": "https://my.telegram.org/",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:11 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "1755",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload"
+      },
+      "response_size": 5467,
+      "content_type": "text/html; charset=utf-8",
+      "server": "nginx/1.18.0",
+      "timestamp": "2025-06-25T00:50:11.443550",
+      "is_real": true,
+      "contains_api_info": true,
+      "detected_methods": [
+        "viewport",
+        "phone",
+        "password",
+        "close",
+        "hide",
+        "stylesheet",
+        "hidden",
+        "remember",
+        "alert",
+        "json"
+      ]
+    },
+    {
+      "endpoint": "https://web.telegram.org/",
+      "status": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:11 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 25 Oct 2023 19:17:17 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"653969bd-633\"",
+        "Expires": "Wed, 25 Jun 2025 01:50:11 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "response_size": 1587,
+      "content_type": "text/html",
+      "server": "nginx/1.18.0",
+      "timestamp": "2025-06-25T00:50:11.602335",
+      "is_real": true
+    }
+  ],
+  "actual_responses": [
+    {
+      "url": "https://t.me/alx_trading",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:49:56 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "3650",
+        "Connection": "keep-alive",
+        "Set-Cookie": "stel_ssid=5b7a48cabba0115d31_3057163094713001759; expires=Thu, 26 Jun 2025 00:49:56 GMT; path=/; samesite=None; secure; HttpOnly",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "ALLOW-FROM https://web.telegram.org",
+        "Content-Security-Policy": "frame-ancestors https://web.telegram.org",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "content_length": 9607,
+      "extracted_at": "2025-06-25T00:49:56.239342",
+      "real_content": true,
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1.0",
+        "robots": "noindex, nofollow",
+        "og:title": "Telegram: Contact @alx_trading",
+        "og:image": "https://telegram.org/img/t_logo_2x.png",
+        "og:site_name": "Telegram",
+        "twitter:title": "Telegram: Contact @alx_trading",
+        "twitter:image": "https://telegram.org/img/t_logo_2x.png",
+        "twitter:site": "@Telegram",
+        "twitter:card": "summary",
+        "twitter:description": "\n",
+        "al:ios:app_store_id": "686449807",
+        "al:ios:app_name": "Telegram Messenger",
+        "al:ios:url": "tg://resolve?domain=alx_trading",
+        "al:android:url": "tg://resolve?domain=alx_trading",
+        "al:android:app_name": "Telegram",
+        "al:android:package": "org.telegram.messenger",
+        "twitter:app:name:iphone": "Telegram Messenger",
+        "twitter:app:id:iphone": "686449807",
+        "twitter:app:url:iphone": "tg://resolve?domain=alx_trading",
+        "twitter:app:name:ipad": "Telegram Messenger",
+        "twitter:app:id:ipad": "686449807",
+        "twitter:app:url:ipad": "tg://resolve?domain=alx_trading",
+        "twitter:app:name:googleplay": "Telegram",
+        "twitter:app:id:googleplay": "org.telegram.messenger",
+        "twitter:app:url:googleplay": "https://t.me/alx_trading",
+        "apple-itunes-app": "app-id=686449807, app-argument: tg://resolve?domain=alx_trading"
+      },
+      "scripts": [
+        {
+          "type": "inline_script",
+          "content_preview": "try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/alx_trading\"}}),'https://web.telegram.org');}}catc",
+          "contains_data": true
+        },
+        {
+          "type": "inline_script",
+          "content_preview": "\n\nvar protoUrl = \"tg:\\/\\/resolve?domain=alx_trading\";\nif (false) {\n  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;\n  var iframeEl = document.createElement('iframe');\n",
+          "contains_data": true
+        }
+      ],
+      "telegram_links": [
+        {
+          "href": "//telegram.org/",
+          "text": ""
+        },
+        {
+          "href": "//telegram.org/dl?tme=5b7a48cabba0115d31_3057163094713001759",
+          "text": "Download"
+        }
+      ]
+    },
+    {
+      "url": "https://t.me/s/alx_trading",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:49:56 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "3650",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "ALLOW-FROM https://web.telegram.org",
+        "Content-Security-Policy": "frame-ancestors https://web.telegram.org",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "content_length": 9607,
+      "extracted_at": "2025-06-25T00:49:56.572125",
+      "real_content": true,
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1.0",
+        "robots": "noindex, nofollow",
+        "og:title": "Telegram: Contact @alx_trading",
+        "og:image": "https://telegram.org/img/t_logo_2x.png",
+        "og:site_name": "Telegram",
+        "twitter:title": "Telegram: Contact @alx_trading",
+        "twitter:image": "https://telegram.org/img/t_logo_2x.png",
+        "twitter:site": "@Telegram",
+        "twitter:card": "summary",
+        "twitter:description": "\n",
+        "al:ios:app_store_id": "686449807",
+        "al:ios:app_name": "Telegram Messenger",
+        "al:ios:url": "tg://resolve?domain=alx_trading",
+        "al:android:url": "tg://resolve?domain=alx_trading",
+        "al:android:app_name": "Telegram",
+        "al:android:package": "org.telegram.messenger",
+        "twitter:app:name:iphone": "Telegram Messenger",
+        "twitter:app:id:iphone": "686449807",
+        "twitter:app:url:iphone": "tg://resolve?domain=alx_trading",
+        "twitter:app:name:ipad": "Telegram Messenger",
+        "twitter:app:id:ipad": "686449807",
+        "twitter:app:url:ipad": "tg://resolve?domain=alx_trading",
+        "twitter:app:name:googleplay": "Telegram",
+        "twitter:app:id:googleplay": "org.telegram.messenger",
+        "twitter:app:url:googleplay": "https://t.me/alx_trading",
+        "apple-itunes-app": "app-id=686449807, app-argument: tg://resolve?domain=alx_trading"
+      },
+      "scripts": [
+        {
+          "type": "inline_script",
+          "content_preview": "try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/alx_trading\"}}),'https://web.telegram.org');}}catc",
+          "contains_data": true
+        },
+        {
+          "type": "inline_script",
+          "content_preview": "\n\nvar protoUrl = \"tg:\\/\\/resolve?domain=alx_trading\";\nif (false) {\n  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;\n  var iframeEl = document.createElement('iframe');\n",
+          "contains_data": true
+        }
+      ],
+      "telegram_links": [
+        {
+          "href": "//telegram.org/",
+          "text": ""
+        },
+        {
+          "href": "//telegram.org/dl?tme=5b7a48cabba0115d31_3057163094713001759",
+          "text": "Download"
+        }
+      ]
+    },
+    {
+      "url": "https://web.telegram.org/k/#alx_trading",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:49:56 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 23:53:25 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"68535175-3bd8\"",
+        "Expires": "Wed, 25 Jun 2025 01:49:56 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "content_length": 15320,
+      "extracted_at": "2025-06-25T00:49:57.056567",
+      "real_content": true,
+      "meta_data": {
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover",
+        "mobile-web-app-capable": "yes",
+        "mobile-web-app-title": "Telegram Web",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-title": "Telegram Web",
+        "application-name": "Telegram Web",
+        "msapplication-TileColor": "#2d89ef",
+        "msapplication-TileImage": "assets/img/mstile-144x144.png?v=jw3mK7G9Ry",
+        "msapplication-config": "browserconfig.xml?v=jw3mK7G9Ry",
+        "theme-color": "#ffffff",
+        "color-scheme": "light",
+        "google": "notranslate",
+        "og:type": "website",
+        "og:url": "https://web.telegram.org/k/",
+        "og:title": "Telegram Web",
+        "og:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "og:image": "assets/img/android-chrome-192x192.png?v=jw3mK7G9Ry",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://web.telegram.org/k/",
+        "twitter:title": "Telegram Web",
+        "twitter:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "twitter:image": "assets/img/android-chrome-192x192.png?v=jw3mK7G9Ry"
+      },
+      "scripts": [],
+      "telegram_links": []
+    },
+    {
+      "url": "https://web.telegram.org/z/#alx_trading",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:49:57 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 16:28:16 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"6852e920-c03\"",
+        "Expires": "Wed, 25 Jun 2025 01:49:57 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "content_length": 3075,
+      "extracted_at": "2025-06-25T00:49:57.377565",
+      "real_content": true,
+      "meta_data": {
+        "title": "Telegram",
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover",
+        "mobile-web-app-capable": "yes",
+        "mobile-web-app-title": "Telegram",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-title": "Telegram",
+        "application-name": "Telegram",
+        "msapplication-TileColor": "#2b5797",
+        "msapplication-config": "./browserconfig.xml",
+        "theme-color": "#ffffff",
+        "google": "notranslate",
+        "og:type": "website",
+        "og:url": "https://web.telegram.org/a",
+        "og:title": "Telegram",
+        "og:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "og:image": "./icon-192x192.png",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://web.telegram.org/a",
+        "twitter:title": "Telegram",
+        "twitter:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "twitter:image": "./icon-192x192.png"
+      },
+      "scripts": [],
+      "telegram_links": []
+    },
+    {
+      "url": "https://t.me/Alx_TYW",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:49:59 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "4086",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "ALLOW-FROM https://web.telegram.org",
+        "Content-Security-Policy": "frame-ancestors https://web.telegram.org",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "content_length": 10853,
+      "extracted_at": "2025-06-25T00:49:59.871765",
+      "real_content": true,
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1.0",
+        "og:title": "A l x",
+        "og:image": "https://cdn4.cdn-telegram.org/file/O79mtpqCZ-bMAuQq-DBNUjQLLIylPCbwju1Q-vdmqsKTrVyVZ_D-erf7qN4TgPWy04UnPFZ_HciczRITgk6_8BkhUwbLttWUix9gDZoyQ8eVs2E2d21rwM9Ux0Q17wlXT-n3ushoPO8K8EWlRigPDf574r6gWlBaaJ8P3Jk5pcmE1qiOVJoduQ-EBgTAWUnVVCq048xOlWfl3Qprbbo6o541iSe7_URjrHR0jvz8JU_oSweT4YkpDgtNrmgozy6ivcIP2Pt_89oN3-WGN8B9DgP7SfFCz5sCCghRhL7q-pAK8vknGqy-N-fePOH4f7Ixcg-R0xcDjc3F3JX2cKrqmQ.jpg",
+        "og:site_name": "Telegram",
+        "og:description": "Trades, Analysis & Ideas are not financial advice",
+        "twitter:title": "A l x",
+        "twitter:image": "https://cdn4.cdn-telegram.org/file/O79mtpqCZ-bMAuQq-DBNUjQLLIylPCbwju1Q-vdmqsKTrVyVZ_D-erf7qN4TgPWy04UnPFZ_HciczRITgk6_8BkhUwbLttWUix9gDZoyQ8eVs2E2d21rwM9Ux0Q17wlXT-n3ushoPO8K8EWlRigPDf574r6gWlBaaJ8P3Jk5pcmE1qiOVJoduQ-EBgTAWUnVVCq048xOlWfl3Qprbbo6o541iSe7_URjrHR0jvz8JU_oSweT4YkpDgtNrmgozy6ivcIP2Pt_89oN3-WGN8B9DgP7SfFCz5sCCghRhL7q-pAK8vknGqy-N-fePOH4f7Ixcg-R0xcDjc3F3JX2cKrqmQ.jpg",
+        "twitter:site": "@Telegram",
+        "twitter:card": "summary",
+        "twitter:description": "Trades, Analysis & Ideas are not financial advice\n",
+        "al:ios:app_store_id": "686449807",
+        "al:ios:app_name": "Telegram Messenger",
+        "al:ios:url": "tg://resolve?domain=Alx_TYW",
+        "al:android:url": "tg://resolve?domain=Alx_TYW",
+        "al:android:app_name": "Telegram",
+        "al:android:package": "org.telegram.messenger",
+        "twitter:app:name:iphone": "Telegram Messenger",
+        "twitter:app:id:iphone": "686449807",
+        "twitter:app:url:iphone": "tg://resolve?domain=Alx_TYW",
+        "twitter:app:name:ipad": "Telegram Messenger",
+        "twitter:app:id:ipad": "686449807",
+        "twitter:app:url:ipad": "tg://resolve?domain=Alx_TYW",
+        "twitter:app:name:googleplay": "Telegram",
+        "twitter:app:id:googleplay": "org.telegram.messenger",
+        "twitter:app:url:googleplay": "https://t.me/Alx_TYW",
+        "apple-itunes-app": "app-id=686449807, app-argument: tg://resolve?domain=Alx_TYW"
+      },
+      "scripts": [
+        {
+          "type": "inline_script",
+          "content_preview": "try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/Alx_TYW\"}}),'https://web.telegram.org');}}catch(e)",
+          "contains_data": true
+        },
+        {
+          "type": "inline_script",
+          "content_preview": "\n\nvar protoUrl = \"tg:\\/\\/resolve?domain=Alx_TYW\";\nif (false) {\n  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;\n  var iframeEl = document.createElement('iframe');\n  if",
+          "contains_data": true
+        }
+      ],
+      "telegram_links": [
+        {
+          "href": "//telegram.org/",
+          "text": ""
+        },
+        {
+          "href": "//telegram.org/dl?tme=5b7a48cabba0115d31_3057163094713001759",
+          "text": "Download"
+        }
+      ]
+    },
+    {
+      "url": "https://t.me/s/Alx_TYW",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:00 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "4087",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "ALLOW-FROM https://web.telegram.org",
+        "Content-Security-Policy": "frame-ancestors https://web.telegram.org",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "content_length": 10853,
+      "extracted_at": "2025-06-25T00:50:00.203057",
+      "real_content": true,
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1.0",
+        "og:title": "A l x",
+        "og:image": "https://cdn4.cdn-telegram.org/file/O79mtpqCZ-bMAuQq-DBNUjQLLIylPCbwju1Q-vdmqsKTrVyVZ_D-erf7qN4TgPWy04UnPFZ_HciczRITgk6_8BkhUwbLttWUix9gDZoyQ8eVs2E2d21rwM9Ux0Q17wlXT-n3ushoPO8K8EWlRigPDf574r6gWlBaaJ8P3Jk5pcmE1qiOVJoduQ-EBgTAWUnVVCq048xOlWfl3Qprbbo6o541iSe7_URjrHR0jvz8JU_oSweT4YkpDgtNrmgozy6ivcIP2Pt_89oN3-WGN8B9DgP7SfFCz5sCCghRhL7q-pAK8vknGqy-N-fePOH4f7Ixcg-R0xcDjc3F3JX2cKrqmQ.jpg",
+        "og:site_name": "Telegram",
+        "og:description": "Trades, Analysis & Ideas are not financial advice",
+        "twitter:title": "A l x",
+        "twitter:image": "https://cdn4.cdn-telegram.org/file/O79mtpqCZ-bMAuQq-DBNUjQLLIylPCbwju1Q-vdmqsKTrVyVZ_D-erf7qN4TgPWy04UnPFZ_HciczRITgk6_8BkhUwbLttWUix9gDZoyQ8eVs2E2d21rwM9Ux0Q17wlXT-n3ushoPO8K8EWlRigPDf574r6gWlBaaJ8P3Jk5pcmE1qiOVJoduQ-EBgTAWUnVVCq048xOlWfl3Qprbbo6o541iSe7_URjrHR0jvz8JU_oSweT4YkpDgtNrmgozy6ivcIP2Pt_89oN3-WGN8B9DgP7SfFCz5sCCghRhL7q-pAK8vknGqy-N-fePOH4f7Ixcg-R0xcDjc3F3JX2cKrqmQ.jpg",
+        "twitter:site": "@Telegram",
+        "twitter:card": "summary",
+        "twitter:description": "Trades, Analysis & Ideas are not financial advice\n",
+        "al:ios:app_store_id": "686449807",
+        "al:ios:app_name": "Telegram Messenger",
+        "al:ios:url": "tg://resolve?domain=Alx_TYW",
+        "al:android:url": "tg://resolve?domain=Alx_TYW",
+        "al:android:app_name": "Telegram",
+        "al:android:package": "org.telegram.messenger",
+        "twitter:app:name:iphone": "Telegram Messenger",
+        "twitter:app:id:iphone": "686449807",
+        "twitter:app:url:iphone": "tg://resolve?domain=Alx_TYW",
+        "twitter:app:name:ipad": "Telegram Messenger",
+        "twitter:app:id:ipad": "686449807",
+        "twitter:app:url:ipad": "tg://resolve?domain=Alx_TYW",
+        "twitter:app:name:googleplay": "Telegram",
+        "twitter:app:id:googleplay": "org.telegram.messenger",
+        "twitter:app:url:googleplay": "https://t.me/Alx_TYW",
+        "apple-itunes-app": "app-id=686449807, app-argument: tg://resolve?domain=Alx_TYW"
+      },
+      "scripts": [
+        {
+          "type": "inline_script",
+          "content_preview": "try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/Alx_TYW\"}}),'https://web.telegram.org');}}catch(e)",
+          "contains_data": true
+        },
+        {
+          "type": "inline_script",
+          "content_preview": "\n\nvar protoUrl = \"tg:\\/\\/resolve?domain=Alx_TYW\";\nif (false) {\n  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;\n  var iframeEl = document.createElement('iframe');\n  if",
+          "contains_data": true
+        }
+      ],
+      "telegram_links": [
+        {
+          "href": "//telegram.org/",
+          "text": ""
+        },
+        {
+          "href": "//telegram.org/dl?tme=5b7a48cabba0115d31_3057163094713001759",
+          "text": "Download"
+        }
+      ]
+    },
+    {
+      "url": "https://web.telegram.org/k/#Alx_TYW",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:00 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 23:53:25 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"68535175-3bd8\"",
+        "Expires": "Wed, 25 Jun 2025 01:50:00 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "content_length": 15320,
+      "extracted_at": "2025-06-25T00:50:00.365002",
+      "real_content": true,
+      "meta_data": {
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover",
+        "mobile-web-app-capable": "yes",
+        "mobile-web-app-title": "Telegram Web",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-title": "Telegram Web",
+        "application-name": "Telegram Web",
+        "msapplication-TileColor": "#2d89ef",
+        "msapplication-TileImage": "assets/img/mstile-144x144.png?v=jw3mK7G9Ry",
+        "msapplication-config": "browserconfig.xml?v=jw3mK7G9Ry",
+        "theme-color": "#ffffff",
+        "color-scheme": "light",
+        "google": "notranslate",
+        "og:type": "website",
+        "og:url": "https://web.telegram.org/k/",
+        "og:title": "Telegram Web",
+        "og:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "og:image": "assets/img/android-chrome-192x192.png?v=jw3mK7G9Ry",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://web.telegram.org/k/",
+        "twitter:title": "Telegram Web",
+        "twitter:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "twitter:image": "assets/img/android-chrome-192x192.png?v=jw3mK7G9Ry"
+      },
+      "scripts": [],
+      "telegram_links": []
+    },
+    {
+      "url": "https://web.telegram.org/z/#Alx_TYW",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:00 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 16:28:16 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"6852e920-c03\"",
+        "Expires": "Wed, 25 Jun 2025 01:50:00 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "content_length": 3075,
+      "extracted_at": "2025-06-25T00:50:00.686027",
+      "real_content": true,
+      "meta_data": {
+        "title": "Telegram",
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover",
+        "mobile-web-app-capable": "yes",
+        "mobile-web-app-title": "Telegram",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-title": "Telegram",
+        "application-name": "Telegram",
+        "msapplication-TileColor": "#2b5797",
+        "msapplication-config": "./browserconfig.xml",
+        "theme-color": "#ffffff",
+        "google": "notranslate",
+        "og:type": "website",
+        "og:url": "https://web.telegram.org/a",
+        "og:title": "Telegram",
+        "og:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "og:image": "./icon-192x192.png",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://web.telegram.org/a",
+        "twitter:title": "Telegram",
+        "twitter:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "twitter:image": "./icon-192x192.png"
+      },
+      "scripts": [],
+      "telegram_links": []
+    },
+    {
+      "url": "https://t.me/alx_tyw",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:03 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "4087",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "ALLOW-FROM https://web.telegram.org",
+        "Content-Security-Policy": "frame-ancestors https://web.telegram.org",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "content_length": 10853,
+      "extracted_at": "2025-06-25T00:50:03.188772",
+      "real_content": true,
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1.0",
+        "og:title": "A l x",
+        "og:image": "https://cdn4.cdn-telegram.org/file/O79mtpqCZ-bMAuQq-DBNUjQLLIylPCbwju1Q-vdmqsKTrVyVZ_D-erf7qN4TgPWy04UnPFZ_HciczRITgk6_8BkhUwbLttWUix9gDZoyQ8eVs2E2d21rwM9Ux0Q17wlXT-n3ushoPO8K8EWlRigPDf574r6gWlBaaJ8P3Jk5pcmE1qiOVJoduQ-EBgTAWUnVVCq048xOlWfl3Qprbbo6o541iSe7_URjrHR0jvz8JU_oSweT4YkpDgtNrmgozy6ivcIP2Pt_89oN3-WGN8B9DgP7SfFCz5sCCghRhL7q-pAK8vknGqy-N-fePOH4f7Ixcg-R0xcDjc3F3JX2cKrqmQ.jpg",
+        "og:site_name": "Telegram",
+        "og:description": "Trades, Analysis & Ideas are not financial advice",
+        "twitter:title": "A l x",
+        "twitter:image": "https://cdn4.cdn-telegram.org/file/O79mtpqCZ-bMAuQq-DBNUjQLLIylPCbwju1Q-vdmqsKTrVyVZ_D-erf7qN4TgPWy04UnPFZ_HciczRITgk6_8BkhUwbLttWUix9gDZoyQ8eVs2E2d21rwM9Ux0Q17wlXT-n3ushoPO8K8EWlRigPDf574r6gWlBaaJ8P3Jk5pcmE1qiOVJoduQ-EBgTAWUnVVCq048xOlWfl3Qprbbo6o541iSe7_URjrHR0jvz8JU_oSweT4YkpDgtNrmgozy6ivcIP2Pt_89oN3-WGN8B9DgP7SfFCz5sCCghRhL7q-pAK8vknGqy-N-fePOH4f7Ixcg-R0xcDjc3F3JX2cKrqmQ.jpg",
+        "twitter:site": "@Telegram",
+        "twitter:card": "summary",
+        "twitter:description": "Trades, Analysis & Ideas are not financial advice\n",
+        "al:ios:app_store_id": "686449807",
+        "al:ios:app_name": "Telegram Messenger",
+        "al:ios:url": "tg://resolve?domain=alx_tyw",
+        "al:android:url": "tg://resolve?domain=alx_tyw",
+        "al:android:app_name": "Telegram",
+        "al:android:package": "org.telegram.messenger",
+        "twitter:app:name:iphone": "Telegram Messenger",
+        "twitter:app:id:iphone": "686449807",
+        "twitter:app:url:iphone": "tg://resolve?domain=alx_tyw",
+        "twitter:app:name:ipad": "Telegram Messenger",
+        "twitter:app:id:ipad": "686449807",
+        "twitter:app:url:ipad": "tg://resolve?domain=alx_tyw",
+        "twitter:app:name:googleplay": "Telegram",
+        "twitter:app:id:googleplay": "org.telegram.messenger",
+        "twitter:app:url:googleplay": "https://t.me/alx_tyw",
+        "apple-itunes-app": "app-id=686449807, app-argument: tg://resolve?domain=alx_tyw"
+      },
+      "scripts": [
+        {
+          "type": "inline_script",
+          "content_preview": "try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/alx_tyw\"}}),'https://web.telegram.org');}}catch(e)",
+          "contains_data": true
+        },
+        {
+          "type": "inline_script",
+          "content_preview": "\n\nvar protoUrl = \"tg:\\/\\/resolve?domain=alx_tyw\";\nif (false) {\n  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;\n  var iframeEl = document.createElement('iframe');\n  if",
+          "contains_data": true
+        }
+      ],
+      "telegram_links": [
+        {
+          "href": "//telegram.org/",
+          "text": ""
+        },
+        {
+          "href": "//telegram.org/dl?tme=5b7a48cabba0115d31_3057163094713001759",
+          "text": "Download"
+        }
+      ]
+    },
+    {
+      "url": "https://t.me/s/alx_tyw",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:03 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "4087",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "ALLOW-FROM https://web.telegram.org",
+        "Content-Security-Policy": "frame-ancestors https://web.telegram.org",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "content_length": 10853,
+      "extracted_at": "2025-06-25T00:50:03.523718",
+      "real_content": true,
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1.0",
+        "og:title": "A l x",
+        "og:image": "https://cdn4.cdn-telegram.org/file/O79mtpqCZ-bMAuQq-DBNUjQLLIylPCbwju1Q-vdmqsKTrVyVZ_D-erf7qN4TgPWy04UnPFZ_HciczRITgk6_8BkhUwbLttWUix9gDZoyQ8eVs2E2d21rwM9Ux0Q17wlXT-n3ushoPO8K8EWlRigPDf574r6gWlBaaJ8P3Jk5pcmE1qiOVJoduQ-EBgTAWUnVVCq048xOlWfl3Qprbbo6o541iSe7_URjrHR0jvz8JU_oSweT4YkpDgtNrmgozy6ivcIP2Pt_89oN3-WGN8B9DgP7SfFCz5sCCghRhL7q-pAK8vknGqy-N-fePOH4f7Ixcg-R0xcDjc3F3JX2cKrqmQ.jpg",
+        "og:site_name": "Telegram",
+        "og:description": "Trades, Analysis & Ideas are not financial advice",
+        "twitter:title": "A l x",
+        "twitter:image": "https://cdn4.cdn-telegram.org/file/O79mtpqCZ-bMAuQq-DBNUjQLLIylPCbwju1Q-vdmqsKTrVyVZ_D-erf7qN4TgPWy04UnPFZ_HciczRITgk6_8BkhUwbLttWUix9gDZoyQ8eVs2E2d21rwM9Ux0Q17wlXT-n3ushoPO8K8EWlRigPDf574r6gWlBaaJ8P3Jk5pcmE1qiOVJoduQ-EBgTAWUnVVCq048xOlWfl3Qprbbo6o541iSe7_URjrHR0jvz8JU_oSweT4YkpDgtNrmgozy6ivcIP2Pt_89oN3-WGN8B9DgP7SfFCz5sCCghRhL7q-pAK8vknGqy-N-fePOH4f7Ixcg-R0xcDjc3F3JX2cKrqmQ.jpg",
+        "twitter:site": "@Telegram",
+        "twitter:card": "summary",
+        "twitter:description": "Trades, Analysis & Ideas are not financial advice\n",
+        "al:ios:app_store_id": "686449807",
+        "al:ios:app_name": "Telegram Messenger",
+        "al:ios:url": "tg://resolve?domain=alx_tyw",
+        "al:android:url": "tg://resolve?domain=alx_tyw",
+        "al:android:app_name": "Telegram",
+        "al:android:package": "org.telegram.messenger",
+        "twitter:app:name:iphone": "Telegram Messenger",
+        "twitter:app:id:iphone": "686449807",
+        "twitter:app:url:iphone": "tg://resolve?domain=alx_tyw",
+        "twitter:app:name:ipad": "Telegram Messenger",
+        "twitter:app:id:ipad": "686449807",
+        "twitter:app:url:ipad": "tg://resolve?domain=alx_tyw",
+        "twitter:app:name:googleplay": "Telegram",
+        "twitter:app:id:googleplay": "org.telegram.messenger",
+        "twitter:app:url:googleplay": "https://t.me/alx_tyw",
+        "apple-itunes-app": "app-id=686449807, app-argument: tg://resolve?domain=alx_tyw"
+      },
+      "scripts": [
+        {
+          "type": "inline_script",
+          "content_preview": "try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/alx_tyw\"}}),'https://web.telegram.org');}}catch(e)",
+          "contains_data": true
+        },
+        {
+          "type": "inline_script",
+          "content_preview": "\n\nvar protoUrl = \"tg:\\/\\/resolve?domain=alx_tyw\";\nif (false) {\n  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;\n  var iframeEl = document.createElement('iframe');\n  if",
+          "contains_data": true
+        }
+      ],
+      "telegram_links": [
+        {
+          "href": "//telegram.org/",
+          "text": ""
+        },
+        {
+          "href": "//telegram.org/dl?tme=5b7a48cabba0115d31_3057163094713001759",
+          "text": "Download"
+        }
+      ]
+    },
+    {
+      "url": "https://web.telegram.org/k/#alx_tyw",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:03 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 23:53:25 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"68535175-3bd8\"",
+        "Expires": "Wed, 25 Jun 2025 01:50:03 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "content_length": 15320,
+      "extracted_at": "2025-06-25T00:50:03.686077",
+      "real_content": true,
+      "meta_data": {
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover",
+        "mobile-web-app-capable": "yes",
+        "mobile-web-app-title": "Telegram Web",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-title": "Telegram Web",
+        "application-name": "Telegram Web",
+        "msapplication-TileColor": "#2d89ef",
+        "msapplication-TileImage": "assets/img/mstile-144x144.png?v=jw3mK7G9Ry",
+        "msapplication-config": "browserconfig.xml?v=jw3mK7G9Ry",
+        "theme-color": "#ffffff",
+        "color-scheme": "light",
+        "google": "notranslate",
+        "og:type": "website",
+        "og:url": "https://web.telegram.org/k/",
+        "og:title": "Telegram Web",
+        "og:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "og:image": "assets/img/android-chrome-192x192.png?v=jw3mK7G9Ry",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://web.telegram.org/k/",
+        "twitter:title": "Telegram Web",
+        "twitter:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "twitter:image": "assets/img/android-chrome-192x192.png?v=jw3mK7G9Ry"
+      },
+      "scripts": [],
+      "telegram_links": []
+    },
+    {
+      "url": "https://web.telegram.org/z/#alx_tyw",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:03 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 16:28:16 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"6852e920-c03\"",
+        "Expires": "Wed, 25 Jun 2025 01:50:03 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "content_length": 3075,
+      "extracted_at": "2025-06-25T00:50:04.009008",
+      "real_content": true,
+      "meta_data": {
+        "title": "Telegram",
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover",
+        "mobile-web-app-capable": "yes",
+        "mobile-web-app-title": "Telegram",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-title": "Telegram",
+        "application-name": "Telegram",
+        "msapplication-TileColor": "#2b5797",
+        "msapplication-config": "./browserconfig.xml",
+        "theme-color": "#ffffff",
+        "google": "notranslate",
+        "og:type": "website",
+        "og:url": "https://web.telegram.org/a",
+        "og:title": "Telegram",
+        "og:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "og:image": "./icon-192x192.png",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://web.telegram.org/a",
+        "twitter:title": "Telegram",
+        "twitter:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "twitter:image": "./icon-192x192.png"
+      },
+      "scripts": [],
+      "telegram_links": []
+    },
+    {
+      "url": "https://t.me/alxtrading",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:06 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "4225",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "ALLOW-FROM https://web.telegram.org",
+        "Content-Security-Policy": "frame-ancestors https://web.telegram.org",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "content_length": 11341,
+      "extracted_at": "2025-06-25T00:50:06.507020",
+      "real_content": true,
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1.0",
+        "og:title": "Forex Gump 34",
+        "og:image": "https://cdn4.cdn-telegram.org/file/h9o96HcE4Af6-mrLPFl-PuaT1HQBuEF1kxIsAAtwIJ1W-RABITbo7pNsk-M9yERb-_1xvIS8GDn5i-FoDdD8YWCqm5gfo9NPfCDhrnU4MCht6WKm8rRjegA-eAZQr9aoZpnJx7cbYXVmmrcuCEEQanGRkiN0Xe5PNtk96HQhGzCeFLcnujPbamihsm7_c2V9VEX3fvL3w63fVtIxqd49u4eZNorkS9BS7hmyADre-8KBknQADSUe0x_UWZUNnm5TqyL1_2d7BAmCo7HQB5Ez91JrpZDqKlMA6jfblpuo_wWV3V5jnR4K1l8QcgRtVhBQKKAbmAiHdVkkzL5No74vGQ.jpg",
+        "og:site_name": "Telegram",
+        "og:description": "🤑Trading à moyen long terme & Micro Scalper Intraday 🤑\tOr & Crypto 🙏💚\t(Or - seulement pour les portefeuilles minimum : 500€)",
+        "twitter:title": "Forex Gump 34",
+        "twitter:image": "https://cdn4.cdn-telegram.org/file/h9o96HcE4Af6-mrLPFl-PuaT1HQBuEF1kxIsAAtwIJ1W-RABITbo7pNsk-M9yERb-_1xvIS8GDn5i-FoDdD8YWCqm5gfo9NPfCDhrnU4MCht6WKm8rRjegA-eAZQr9aoZpnJx7cbYXVmmrcuCEEQanGRkiN0Xe5PNtk96HQhGzCeFLcnujPbamihsm7_c2V9VEX3fvL3w63fVtIxqd49u4eZNorkS9BS7hmyADre-8KBknQADSUe0x_UWZUNnm5TqyL1_2d7BAmCo7HQB5Ez91JrpZDqKlMA6jfblpuo_wWV3V5jnR4K1l8QcgRtVhBQKKAbmAiHdVkkzL5No74vGQ.jpg",
+        "twitter:site": "@Telegram",
+        "twitter:card": "summary",
+        "twitter:description": "🤑Trading à moyen long terme & Micro Scalper Intraday 🤑\tOr & Crypto 🙏💚\t(Or - seulement pour les portefeuilles minimum : 500€)\n",
+        "al:ios:app_store_id": "686449807",
+        "al:ios:app_name": "Telegram Messenger",
+        "al:ios:url": "tg://resolve?domain=alxtrading",
+        "al:android:url": "tg://resolve?domain=alxtrading",
+        "al:android:app_name": "Telegram",
+        "al:android:package": "org.telegram.messenger",
+        "twitter:app:name:iphone": "Telegram Messenger",
+        "twitter:app:id:iphone": "686449807",
+        "twitter:app:url:iphone": "tg://resolve?domain=alxtrading",
+        "twitter:app:name:ipad": "Telegram Messenger",
+        "twitter:app:id:ipad": "686449807",
+        "twitter:app:url:ipad": "tg://resolve?domain=alxtrading",
+        "twitter:app:name:googleplay": "Telegram",
+        "twitter:app:id:googleplay": "org.telegram.messenger",
+        "twitter:app:url:googleplay": "https://t.me/alxtrading",
+        "apple-itunes-app": "app-id=686449807, app-argument: tg://resolve?domain=alxtrading"
+      },
+      "scripts": [
+        {
+          "type": "inline_script",
+          "content_preview": "try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/alxtrading\"}}),'https://web.telegram.org');}}catch",
+          "contains_data": true
+        },
+        {
+          "type": "inline_script",
+          "content_preview": "\n\nvar protoUrl = \"tg:\\/\\/resolve?domain=alxtrading\";\nif (false) {\n  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;\n  var iframeEl = document.createElement('iframe');\n ",
+          "contains_data": true
+        }
+      ],
+      "telegram_links": [
+        {
+          "href": "//telegram.org/",
+          "text": ""
+        },
+        {
+          "href": "//telegram.org/dl?tme=5b7a48cabba0115d31_3057163094713001759",
+          "text": "Download"
+        }
+      ]
+    },
+    {
+      "url": "https://t.me/s/alxtrading",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:06 GMT",
+        "Content-Type": "text/html; charset=utf-8",
+        "Content-Length": "4225",
+        "Connection": "keep-alive",
+        "Pragma": "no-cache",
+        "Cache-control": "no-store",
+        "X-Frame-Options": "ALLOW-FROM https://web.telegram.org",
+        "Content-Security-Policy": "frame-ancestors https://web.telegram.org",
+        "Content-Encoding": "gzip",
+        "Strict-Transport-Security": "max-age=35768000"
+      },
+      "content_length": 11341,
+      "extracted_at": "2025-06-25T00:50:06.838363",
+      "real_content": true,
+      "meta_data": {
+        "viewport": "width=device-width, initial-scale=1.0",
+        "og:title": "Forex Gump 34",
+        "og:image": "https://cdn4.cdn-telegram.org/file/h9o96HcE4Af6-mrLPFl-PuaT1HQBuEF1kxIsAAtwIJ1W-RABITbo7pNsk-M9yERb-_1xvIS8GDn5i-FoDdD8YWCqm5gfo9NPfCDhrnU4MCht6WKm8rRjegA-eAZQr9aoZpnJx7cbYXVmmrcuCEEQanGRkiN0Xe5PNtk96HQhGzCeFLcnujPbamihsm7_c2V9VEX3fvL3w63fVtIxqd49u4eZNorkS9BS7hmyADre-8KBknQADSUe0x_UWZUNnm5TqyL1_2d7BAmCo7HQB5Ez91JrpZDqKlMA6jfblpuo_wWV3V5jnR4K1l8QcgRtVhBQKKAbmAiHdVkkzL5No74vGQ.jpg",
+        "og:site_name": "Telegram",
+        "og:description": "🤑Trading à moyen long terme & Micro Scalper Intraday 🤑\tOr & Crypto 🙏💚\t(Or - seulement pour les portefeuilles minimum : 500€)",
+        "twitter:title": "Forex Gump 34",
+        "twitter:image": "https://cdn4.cdn-telegram.org/file/h9o96HcE4Af6-mrLPFl-PuaT1HQBuEF1kxIsAAtwIJ1W-RABITbo7pNsk-M9yERb-_1xvIS8GDn5i-FoDdD8YWCqm5gfo9NPfCDhrnU4MCht6WKm8rRjegA-eAZQr9aoZpnJx7cbYXVmmrcuCEEQanGRkiN0Xe5PNtk96HQhGzCeFLcnujPbamihsm7_c2V9VEX3fvL3w63fVtIxqd49u4eZNorkS9BS7hmyADre-8KBknQADSUe0x_UWZUNnm5TqyL1_2d7BAmCo7HQB5Ez91JrpZDqKlMA6jfblpuo_wWV3V5jnR4K1l8QcgRtVhBQKKAbmAiHdVkkzL5No74vGQ.jpg",
+        "twitter:site": "@Telegram",
+        "twitter:card": "summary",
+        "twitter:description": "🤑Trading à moyen long terme & Micro Scalper Intraday 🤑\tOr & Crypto 🙏💚\t(Or - seulement pour les portefeuilles minimum : 500€)\n",
+        "al:ios:app_store_id": "686449807",
+        "al:ios:app_name": "Telegram Messenger",
+        "al:ios:url": "tg://resolve?domain=alxtrading",
+        "al:android:url": "tg://resolve?domain=alxtrading",
+        "al:android:app_name": "Telegram",
+        "al:android:package": "org.telegram.messenger",
+        "twitter:app:name:iphone": "Telegram Messenger",
+        "twitter:app:id:iphone": "686449807",
+        "twitter:app:url:iphone": "tg://resolve?domain=alxtrading",
+        "twitter:app:name:ipad": "Telegram Messenger",
+        "twitter:app:id:ipad": "686449807",
+        "twitter:app:url:ipad": "tg://resolve?domain=alxtrading",
+        "twitter:app:name:googleplay": "Telegram",
+        "twitter:app:id:googleplay": "org.telegram.messenger",
+        "twitter:app:url:googleplay": "https://t.me/alxtrading",
+        "apple-itunes-app": "app-id=686449807, app-argument: tg://resolve?domain=alxtrading"
+      },
+      "scripts": [
+        {
+          "type": "inline_script",
+          "content_preview": "try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/alxtrading\"}}),'https://web.telegram.org');}}catch",
+          "contains_data": true
+        },
+        {
+          "type": "inline_script",
+          "content_preview": "\n\nvar protoUrl = \"tg:\\/\\/resolve?domain=alxtrading\";\nif (false) {\n  var iframeContEl = document.getElementById('tgme_frame_cont') || document.body;\n  var iframeEl = document.createElement('iframe');\n ",
+          "contains_data": true
+        }
+      ],
+      "telegram_links": [
+        {
+          "href": "//telegram.org/",
+          "text": ""
+        },
+        {
+          "href": "//telegram.org/dl?tme=5b7a48cabba0115d31_3057163094713001759",
+          "text": "Download"
+        }
+      ]
+    },
+    {
+      "url": "https://web.telegram.org/k/#alxtrading",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:06 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 23:53:25 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"68535175-3bd8\"",
+        "Expires": "Wed, 25 Jun 2025 01:50:06 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "content_length": 15320,
+      "extracted_at": "2025-06-25T00:50:07.000119",
+      "real_content": true,
+      "meta_data": {
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover",
+        "mobile-web-app-capable": "yes",
+        "mobile-web-app-title": "Telegram Web",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-title": "Telegram Web",
+        "application-name": "Telegram Web",
+        "msapplication-TileColor": "#2d89ef",
+        "msapplication-TileImage": "assets/img/mstile-144x144.png?v=jw3mK7G9Ry",
+        "msapplication-config": "browserconfig.xml?v=jw3mK7G9Ry",
+        "theme-color": "#ffffff",
+        "color-scheme": "light",
+        "google": "notranslate",
+        "og:type": "website",
+        "og:url": "https://web.telegram.org/k/",
+        "og:title": "Telegram Web",
+        "og:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "og:image": "assets/img/android-chrome-192x192.png?v=jw3mK7G9Ry",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://web.telegram.org/k/",
+        "twitter:title": "Telegram Web",
+        "twitter:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "twitter:image": "assets/img/android-chrome-192x192.png?v=jw3mK7G9Ry"
+      },
+      "scripts": [],
+      "telegram_links": []
+    },
+    {
+      "url": "https://web.telegram.org/z/#alxtrading",
+      "status_code": 200,
+      "headers": {
+        "Server": "nginx/1.18.0",
+        "Date": "Wed, 25 Jun 2025 00:50:07 GMT",
+        "Content-Type": "text/html",
+        "Last-Modified": "Wed, 18 Jun 2025 16:28:16 GMT",
+        "Transfer-Encoding": "chunked",
+        "Connection": "keep-alive",
+        "ETag": "W/\"6852e920-c03\"",
+        "Expires": "Wed, 25 Jun 2025 01:50:07 GMT",
+        "Cache-Control": "max-age=3600",
+        "X-Frame-Options": "deny",
+        "X-Served-By": "meta4119538",
+        "Content-Encoding": "gzip"
+      },
+      "content_length": 3075,
+      "extracted_at": "2025-06-25T00:50:07.321428",
+      "real_content": true,
+      "meta_data": {
+        "title": "Telegram",
+        "description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "viewport": "width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover",
+        "mobile-web-app-capable": "yes",
+        "mobile-web-app-title": "Telegram",
+        "apple-mobile-web-app-capable": "yes",
+        "apple-mobile-web-app-title": "Telegram",
+        "application-name": "Telegram",
+        "msapplication-TileColor": "#2b5797",
+        "msapplication-config": "./browserconfig.xml",
+        "theme-color": "#ffffff",
+        "google": "notranslate",
+        "og:type": "website",
+        "og:url": "https://web.telegram.org/a",
+        "og:title": "Telegram",
+        "og:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "og:image": "./icon-192x192.png",
+        "twitter:card": "summary_large_image",
+        "twitter:url": "https://web.telegram.org/a",
+        "twitter:title": "Telegram",
+        "twitter:description": "Telegram is a cloud-based mobile and desktop messaging app with a focus on security and speed.",
+        "twitter:image": "./icon-192x192.png"
+      },
+      "scripts": [],
+      "telegram_links": []
+    }
+  ],
+  "live_data": {
+    "alx_trading": {
+      "type": "public_channel",
+      "messages": [],
+      "total_extracted": 0,
+      "extraction_time": "2025-06-25T00:49:57.706474",
+      "source_verified": true
+    },
+    "Alx_TYW": {
+      "type": "public_channel",
+      "messages": [],
+      "total_extracted": 0,
+      "extraction_time": "2025-06-25T00:50:01.022724",
+      "source_verified": true
+    },
+    "alx_tyw": {
+      "type": "public_channel",
+      "messages": [],
+      "total_extracted": 0,
+      "extraction_time": "2025-06-25T00:50:04.341387",
+      "source_verified": true
+    },
+    "alxtrading": {
+      "type": "public_channel",
+      "messages": [],
+      "total_extracted": 0,
+      "extraction_time": "2025-06-25T00:50:07.663743",
+      "source_verified": true
+    }
+  },
+  "verified_content": [],
+  "verification": {
+    "data_type": "REAL_ONLY",
+    "no_mockup": true,
+    "no_simulation": true,
+    "extracted_from_live_sources": true,
+    "verification_timestamp": "2025-06-25T00:50:11.602432"
+  }
+}
