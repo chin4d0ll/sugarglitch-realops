@@ -73,27 +73,28 @@ class RequestMetrics:
 
 class AsyncRateLimiter:
     """⏱️ High-performance async rate limiter with token bucket"""
-    
+
     def __init__(self, calls: int, period: int):
         self.calls = calls
         self.period = period
         self.tokens = calls
         self.last_update = time.time()
         self._lock = asyncio.Lock()
-        
+
     async def acquire(self) -> None:
         """Acquire rate limit token"""
         async with self._lock:
             now = time.time()
             # Add tokens based on elapsed time
             elapsed = now - self.last_update
-            self.tokens = min(self.calls, self.tokens + elapsed * (self.calls / self.period))
+            self.tokens = min(self.calls, self.tokens +
+                              elapsed * (self.calls / self.period))
             self.last_update = now
-            
+
             if self.tokens >= 1:
                 self.tokens -= 1
                 return
-            
+
             # Wait for next token
             wait_time = (1 - self.tokens) * (self.period / self.calls)
             await asyncio.sleep(wait_time)
@@ -102,33 +103,34 @@ class AsyncRateLimiter:
 
 class AsyncSessionManager:
     """🔗 Advanced async HTTP session manager with connection pooling"""
-    
+
     def __init__(self, config: AsyncConfig):
         self.config = config
         self.session: Optional[aiohttp.ClientSession] = None
-        self.rate_limiter = AsyncRateLimiter(config.rate_limit_calls, config.rate_limit_period)
+        self.rate_limiter = AsyncRateLimiter(
+            config.rate_limit_calls, config.rate_limit_period)
         self.semaphore = asyncio.Semaphore(config.max_concurrent_requests)
         self.metrics = RequestMetrics()
         self._closed = False
-        
+
     async def __aenter__(self):
         await self.start()
         return self
-        
+
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         await self.close()
-        
+
     async def start(self) -> None:
         """Initialize async session with optimized settings"""
         if self.session and not self.session.closed:
             return
-            
+
         # SSL context for performance
         ssl_context = ssl.create_default_context()
         if not self.config.ssl_verify:
             ssl_context.check_hostname = False
             ssl_context.verify_mode = ssl.CERT_NONE
-            
+
         # Connection settings
         connector = aiohttp.TCPConnector(
             limit=self.config.pool_limit,
@@ -138,13 +140,13 @@ class AsyncSessionManager:
             keepalive_timeout=30,
             ttl_dns_cache=300
         )
-        
+
         # Timeout settings
         timeout = aiohttp.ClientTimeout(
             total=self.config.request_timeout,
             connect=self.config.connect_timeout
         )
-        
+
         # Session with compression
         self.session = aiohttp.ClientSession(
             connector=connector,
@@ -154,7 +156,7 @@ class AsyncSessionManager:
                 'Connection': 'keep-alive' if self.config.enable_keepalive else 'close'
             }
         )
-        
+
     async def close(self) -> None:
         """Gracefully close session"""
         if self.session and not self.session.closed:
@@ -162,11 +164,11 @@ class AsyncSessionManager:
             # Wait for connections to close
             await asyncio.sleep(0.1)
         self._closed = True
-        
+
     async def request(
-        self, 
-        method: str, 
-        url: str, 
+        self,
+        method: str,
+        url: str,
         headers: Optional[Dict] = None,
         data: Optional[Union[str, bytes, Dict]] = None,
         json_data: Optional[Dict] = None,
@@ -175,18 +177,18 @@ class AsyncSessionManager:
         """Make optimized async HTTP request with rate limiting"""
         if self._closed or not self.session:
             await self.start()
-            
+
         await self.rate_limiter.acquire()
-        
+
         async with self.semaphore:
             start_time = time.time()
-            
+
             try:
                 self.metrics.total_requests += 1
-                
+
                 async with self.session.request(
-                    method, 
-                    url, 
+                    method,
+                    url,
                     headers=headers,
                     data=data,
                     json=json_data,
@@ -195,19 +197,20 @@ class AsyncSessionManager:
                     # Update metrics
                     response_time = time.time() - start_time
                     self.metrics.avg_response_time = (
-                        (self.metrics.avg_response_time * (self.metrics.total_requests - 1) + response_time) 
+                        (self.metrics.avg_response_time *
+                         (self.metrics.total_requests - 1) + response_time)
                         / self.metrics.total_requests
                     )
-                    
+
                     if response.status == 200:
                         self.metrics.successful_requests += 1
                     elif response.status == 429:
                         self.metrics.rate_limited += 1
                     else:
                         self.metrics.failed_requests += 1
-                        
+
                     return response
-                    
+
             except asyncio.TimeoutError:
                 self.metrics.timeouts += 1
                 self.metrics.failed_requests += 1
@@ -220,32 +223,32 @@ class AsyncSessionManager:
 
 class AsyncFileManager:
     """📁 High-performance async file operations"""
-    
+
     def __init__(self, chunk_size: int = 8192):
         self.chunk_size = chunk_size
-        
+
     @asynccontextmanager
     async def open_file(self, filepath: Path, mode: str = 'r', encoding: str = 'utf-8'):
         """Async context manager for file operations"""
         async with aiofiles.open(filepath, mode=mode, encoding=encoding) as f:
             yield f
-            
+
     async def write_json_streaming(self, filepath: Path, data: AsyncGenerator, indent: int = 2) -> None:
         """Stream write large JSON data to avoid memory issues"""
         async with self.open_file(filepath, 'w') as f:
             await f.write('[\n')
-            
+
             first_item = True
             async for item in data:
                 if not first_item:
                     await f.write(',\n')
                 first_item = False
-                
+
                 json_str = json.dumps(item, indent=indent, ensure_ascii=False)
                 await f.write(json_str)
-                
+
             await f.write('\n]')
-            
+
     async def read_lines_streaming(self, filepath: Path) -> AsyncGenerator[str, None]:
         """Stream read file lines to avoid loading entire file in memory"""
         async with self.open_file(filepath, 'r') as f:
@@ -255,7 +258,7 @@ class AsyncFileManager:
 
 class AsyncTaskManager:
     """🎯 Advanced async task orchestration with progress tracking"""
-    
+
     def __init__(self, max_concurrent: int = 100):
         self.max_concurrent = max_concurrent
         self.semaphore = asyncio.Semaphore(max_concurrent)
@@ -264,7 +267,7 @@ class AsyncTaskManager:
         self.failed_tasks = 0
         self.progress: Optional[Progress] = None
         self.task_id: Optional[TaskID] = None
-        
+
     async def __aenter__(self):
         if RICH_AVAILABLE:
             self.progress = Progress(
@@ -277,17 +280,17 @@ class AsyncTaskManager:
             )
             self.progress.__enter__()
         return self
-        
+
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         await self.wait_all()
         if self.progress:
             self.progress.__exit__(exc_type, exc_val, exc_tb)
-            
+
     async def add_task(self, coro, description: str = "Processing...") -> None:
         """Add async task with concurrency control"""
         if self.progress and not self.task_id:
             self.task_id = self.progress.add_task(description, total=None)
-            
+
         async def controlled_task():
             async with self.semaphore:
                 try:
@@ -300,23 +303,24 @@ class AsyncTaskManager:
                     self.failed_tasks += 1
                     logging.debug(f"Task failed: {e}")
                     raise
-                    
+
         task = asyncio.create_task(controlled_task())
         self.tasks.append(task)
-        
+
     async def add_batch(self, coros: List, description: str = "Batch processing...") -> None:
         """Add batch of coroutines efficiently"""
         if self.progress:
-            self.task_id = self.progress.add_task(description, total=len(coros))
-            
+            self.task_id = self.progress.add_task(
+                description, total=len(coros))
+
         for coro in coros:
             await self.add_task(coro, description)
-            
+
     async def wait_all(self) -> List[Any]:
         """Wait for all tasks to complete"""
         if not self.tasks:
             return []
-            
+
         results = []
         for task in asyncio.as_completed(self.tasks):
             try:
@@ -325,80 +329,80 @@ class AsyncTaskManager:
             except Exception as e:
                 logging.warning(f"Task failed: {e}")
                 results.append(None)
-                
+
         self.tasks.clear()
         return results
 
 
 class AsyncLogger:
     """📝 High-performance async logging system"""
-    
+
     def __init__(self, log_file: Optional[Path] = None, level: int = logging.INFO):
         self.log_file = log_file
         self.level = level
         self.logger = self._setup_logger()
         self._log_queue = asyncio.Queue()
         self._log_task: Optional[asyncio.Task] = None
-        
+
     def _setup_logger(self) -> logging.Logger:
         """Setup optimized logger"""
         logger = logging.getLogger("AsyncCore")
         logger.setLevel(self.level)
-        
+
         # Console handler
         console_handler = logging.StreamHandler()
         console_handler.setLevel(self.level)
-        
+
         # File handler if specified
         if self.log_file:
             file_handler = logging.FileHandler(self.log_file)
             file_handler.setLevel(self.level)
             logger.addHandler(file_handler)
-            
+
         logger.addHandler(console_handler)
         return logger
-        
+
     async def start_logging(self) -> None:
         """Start async log processing"""
         if self._log_task:
             return
-            
+
         self._log_task = asyncio.create_task(self._log_processor())
-        
+
     async def stop_logging(self) -> None:
         """Stop async log processing"""
         if self._log_task:
             await self._log_queue.put(None)  # Sentinel
             await self._log_task
             self._log_task = None
-            
+
     async def _log_processor(self) -> None:
         """Process log messages asynchronously"""
         while True:
             log_item = await self._log_queue.get()
             if log_item is None:  # Sentinel to stop
                 break
-                
+
             level, message, extra = log_item
             self.logger.log(level, message, extra=extra or {})
-            
+
     async def log(self, level: int, message: str, **kwargs) -> None:
         """Queue async log message"""
         await self._log_queue.put((level, message, kwargs))
-        
+
     async def info(self, message: str, **kwargs) -> None:
         await self.log(logging.INFO, message, **kwargs)
-        
+
     async def warning(self, message: str, **kwargs) -> None:
         await self.log(logging.WARNING, message, **kwargs)
-        
+
     async def error(self, message: str, **kwargs) -> None:
         await self.log(logging.ERROR, message, **kwargs)
 
 
 class AsyncCoreEngine:
     """🚀 Main async engine coordinating all components"""
-    
+
     def __init__(self, config: Optional[AsyncConfig] = None):
         self.config = config or AsyncConfig()
         self.session_manager: Optional[AsyncSessionManager] = None
@@ -406,67 +410,67 @@ class AsyncCoreEngine:
         self.task_manager: Optional[AsyncTaskManager] = None
         self.logger: Optional[AsyncLogger] = None
         self._shutdown_event = asyncio.Event()
-        
+
     async def __aenter__(self):
         await self.initialize()
         return self
-        
+
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         await self.shutdown()
-        
+
     async def initialize(self) -> None:
         """Initialize all async components"""
         # Setup signal handlers for graceful shutdown
         loop = asyncio.get_event_loop()
         for sig in [signal.SIGTERM, signal.SIGINT]:
             loop.add_signal_handler(sig, self._signal_handler)
-            
+
         # Initialize components
         self.session_manager = AsyncSessionManager(self.config)
         await self.session_manager.start()
-        
+
         self.task_manager = AsyncTaskManager(self.config.max_concurrent_tasks)
-        
+
         # Setup logging
         log_file = Path("logs/async_core.log")
         log_file.parent.mkdir(exist_ok=True)
         self.logger = AsyncLogger(log_file)
         await self.logger.start_logging()
-        
+
         await self.logger.info("🚀 AsyncCoreEngine initialized")
-        
+
     def _signal_handler(self):
         """Handle shutdown signals"""
         self._shutdown_event.set()
-        
+
     async def shutdown(self) -> None:
         """Graceful shutdown of all components"""
         await self.logger.info("🔄 Shutting down AsyncCoreEngine...")
-        
+
         # Cancel all pending tasks
         if self.task_manager:
             for task in self.task_manager.tasks:
                 if not task.done():
                     task.cancel()
-                    
+
         # Close session manager
         if self.session_manager:
             await self.session_manager.close()
-            
+
         # Stop logging
         if self.logger:
             await self.logger.stop_logging()
-            
+
         await asyncio.sleep(0.1)  # Allow cleanup
-        
+
     async def get_performance_stats(self) -> Dict[str, Any]:
         """Get comprehensive performance statistics"""
         if not self.session_manager:
             return {}
-            
+
         metrics = self.session_manager.metrics
         elapsed_time = time.time() - metrics.start_time
-        
+
         return {
             "uptime_seconds": elapsed_time,
             "total_requests": metrics.total_requests,
@@ -479,22 +483,23 @@ class AsyncCoreEngine:
             "timeouts": metrics.timeouts,
             "total_bytes": metrics.total_bytes
         }
-        
+
     async def display_performance_report(self) -> None:
         """Display beautiful performance report"""
         stats = await self.get_performance_stats()
-        
+
         if RICH_AVAILABLE and console:
             table = Table(title="🚀 Async Performance Report")
             table.add_column("Metric", style="cyan")
             table.add_column("Value", style="green")
-            
+
             for key, value in stats.items():
                 if isinstance(value, float):
-                    table.add_row(key.replace("_", " ").title(), f"{value:.2f}")
+                    table.add_row(key.replace(
+                        "_", " ").title(), f"{value:.2f}")
                 else:
                     table.add_row(key.replace("_", " ").title(), str(value))
-                    
+
             console.print(table)
         else:
             print("\n🚀 Async Performance Report:")
@@ -509,7 +514,7 @@ def async_retry(max_attempts: int = 3, backoff: float = 1.5):
         @wraps(func)
         async def wrapper(*args, **kwargs):
             last_exception = None
-            
+
             for attempt in range(max_attempts):
                 try:
                     return await func(*args, **kwargs)
@@ -520,7 +525,7 @@ def async_retry(max_attempts: int = 3, backoff: float = 1.5):
                         await asyncio.sleep(wait_time)
                     else:
                         break
-                        
+
             raise last_exception
         return wrapper
     return decorator
@@ -539,7 +544,7 @@ def async_timeout(seconds: int):
 # Export main components
 __all__ = [
     'AsyncConfig',
-    'AsyncCoreEngine', 
+    'AsyncCoreEngine',
     'AsyncSessionManager',
     'AsyncTaskManager',
     'AsyncFileManager',

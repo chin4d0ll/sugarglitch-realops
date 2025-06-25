@@ -30,7 +30,7 @@ console = Console() if RICH_AVAILABLE else None
 class NotificationLevel(Enum):
     """📊 Notification priority levels"""
     LOW = "🔵"
-    MEDIUM = "🟡" 
+    MEDIUM = "🟡"
     HIGH = "🟠"
     CRITICAL = "🔴"
     SUCCESS = "🟢"
@@ -46,7 +46,7 @@ class DiscordEmbed:
     footer: Optional[Dict[str, str]] = None
     thumbnail: Optional[Dict[str, str]] = None
     timestamp: Optional[str] = None
-    
+
     def add_field(self, name: str, value: str, inline: bool = False) -> None:
         """Add field to embed"""
         self.fields.append({
@@ -54,7 +54,7 @@ class DiscordEmbed:
             "value": value[:1024],  # Discord limit
             "inline": inline
         })
-        
+
     def to_dict(self) -> Dict[str, Any]:
         """Convert to Discord API format"""
         embed_dict = {
@@ -64,12 +64,12 @@ class DiscordEmbed:
             "fields": self.fields,
             "timestamp": self.timestamp or datetime.utcnow().isoformat()
         }
-        
+
         if self.footer:
             embed_dict["footer"] = self.footer
         if self.thumbnail:
             embed_dict["thumbnail"] = self.thumbnail
-            
+
         return embed_dict
 
 
@@ -81,28 +81,29 @@ class NotificationTemplate:
     description_template: str
     color: int
     level: NotificationLevel
-    
+
     def render(self, **kwargs) -> DiscordEmbed:
         """Render template with variables"""
         title = self.title_template.format(**kwargs)
         description = self.description_template.format(**kwargs)
-        
+
         embed = DiscordEmbed(
             title=title,
-            description=description, 
+            description=description,
             color=self.color
         )
-        
+
         # Add timestamp and level
         embed.add_field("Level", self.level.value, inline=True)
-        embed.add_field("Time", datetime.now().strftime("%H:%M:%S"), inline=True)
-        
+        embed.add_field("Time", datetime.now().strftime(
+            "%H:%M:%S"), inline=True)
+
         return embed
 
 
 class AsyncDiscordNotifier:
     """🚀 High-performance async Discord webhook notifier"""
-    
+
     def __init__(
         self,
         webhook_url: str,
@@ -118,23 +119,23 @@ class AsyncDiscordNotifier:
         self.rate_limit_period = rate_limit_period
         self.retry_attempts = retry_attempts
         self.timeout = timeout
-        
+
         # Rate limiting
         self.semaphore = asyncio.Semaphore(max_concurrent)
         self.rate_limiter = self._create_rate_limiter()
-        
+
         # Session management
         self.session: Optional[aiohttp.ClientSession] = None
-        
+
         # Metrics
         self.sent_notifications = 0
         self.failed_notifications = 0
         self.rate_limited_count = 0
-        
+
         # Templates
         self.templates: Dict[str, NotificationTemplate] = {}
         self._load_default_templates()
-        
+
     def _create_rate_limiter(self):
         """Create token bucket rate limiter"""
         async def rate_limit():
@@ -142,28 +143,30 @@ class AsyncDiscordNotifier:
             if not hasattr(self, '_tokens'):
                 self._tokens = self.rate_limit_calls
                 self._last_refill = time.time()
-                
+
             now = time.time()
             elapsed = now - self._last_refill
-            
+
             # Refill tokens
             self._tokens = min(
                 self.rate_limit_calls,
-                self._tokens + elapsed * (self.rate_limit_calls / self.rate_limit_period)
+                self._tokens + elapsed *
+                (self.rate_limit_calls / self.rate_limit_period)
             )
             self._last_refill = now
-            
+
             if self._tokens >= 1:
                 self._tokens -= 1
                 return
-                
+
             # Wait for next token
-            wait_time = (1 - self._tokens) * (self.rate_limit_period / self.rate_limit_calls)
+            wait_time = (1 - self._tokens) * \
+                (self.rate_limit_period / self.rate_limit_calls)
             await asyncio.sleep(wait_time)
             self._tokens = 0
-            
+
         return rate_limit
-        
+
     def _load_default_templates(self):
         """Load default notification templates"""
         self.templates.update({
@@ -175,7 +178,7 @@ class AsyncDiscordNotifier:
                 level=NotificationLevel.MEDIUM
             ),
             "attack_success": NotificationTemplate(
-                name="attack_success", 
+                name="attack_success",
                 title_template="✅ Attack Successful: {target}",
                 description_template="Successfully compromised target: {target}\nMethod: {method}\nCredentials: {credentials}\nTime taken: {time_taken}",
                 color=0x00ff00,
@@ -210,28 +213,28 @@ class AsyncDiscordNotifier:
                 level=NotificationLevel.CRITICAL
             )
         })
-        
+
     async def __aenter__(self):
         await self.start()
         return self
-        
+
     async def __aexit__(self, exc_type, exc_val, exc_tb):
         await self.close()
-        
+
     async def start(self) -> None:
         """Initialize async session"""
         if self.session and not self.session.closed:
             return
-            
+
         timeout = aiohttp.ClientTimeout(total=self.timeout)
         self.session = aiohttp.ClientSession(timeout=timeout)
-        
+
     async def close(self) -> None:
         """Close async session"""
         if self.session and not self.session.closed:
             await self.session.close()
             await asyncio.sleep(0.1)  # Allow cleanup
-            
+
     async def send_notification(
         self,
         content: str = "",
@@ -242,19 +245,19 @@ class AsyncDiscordNotifier:
         """Send notification to Discord webhook"""
         if not self.session:
             await self.start()
-            
+
         async with self.semaphore:
             await self.rate_limiter()
-            
+
             payload = {
                 "username": username,
                 "content": content[:2000] if content else "",  # Discord limit
                 "avatar_url": avatar_url
             }
-            
+
             if embed:
                 payload["embeds"] = [embed.to_dict()]
-                
+
             for attempt in range(self.retry_attempts):
                 try:
                     async with self.session.post(
@@ -262,40 +265,43 @@ class AsyncDiscordNotifier:
                         json=payload,
                         headers={"Content-Type": "application/json"}
                     ) as response:
-                        
+
                         if response.status == 204:  # Success
                             self.sent_notifications += 1
                             return True
                         elif response.status == 429:  # Rate limited
                             self.rate_limited_count += 1
-                            retry_after = int(response.headers.get("Retry-After", 5))
+                            retry_after = int(
+                                response.headers.get("Retry-After", 5))
                             await asyncio.sleep(retry_after)
                             continue
                         else:
-                            logging.warning(f"Discord webhook failed: {response.status}")
-                            
+                            logging.warning(
+                                f"Discord webhook failed: {response.status}")
+
                 except asyncio.TimeoutError:
-                    logging.warning(f"Discord webhook timeout (attempt {attempt + 1})")
+                    logging.warning(
+                        f"Discord webhook timeout (attempt {attempt + 1})")
                 except Exception as e:
                     logging.error(f"Discord webhook error: {e}")
-                    
+
                 if attempt < self.retry_attempts - 1:
                     await asyncio.sleep(2 ** attempt)  # Exponential backoff
-                    
+
             self.failed_notifications += 1
             return False
-            
+
     async def send_template(self, template_name: str, **kwargs) -> bool:
         """Send notification using template"""
         if template_name not in self.templates:
             logging.error(f"Template '{template_name}' not found")
             return False
-            
+
         template = self.templates[template_name]
         embed = template.render(**kwargs)
-        
+
         return await self.send_notification(embed=embed)
-        
+
     async def send_attack_start(self, target: str, attack_type: str, threads: int, estimated_time: str) -> bool:
         """Send attack start notification"""
         return await self.send_template(
@@ -305,7 +311,7 @@ class AsyncDiscordNotifier:
             threads=threads,
             estimated_time=estimated_time
         )
-        
+
     async def send_attack_success(self, target: str, method: str, credentials: str, time_taken: str) -> bool:
         """Send attack success notification"""
         return await self.send_template(
@@ -315,7 +321,7 @@ class AsyncDiscordNotifier:
             credentials=credentials,
             time_taken=time_taken
         )
-        
+
     async def send_attack_failed(self, target: str, reason: str, attempts: int) -> bool:
         """Send attack failed notification"""
         return await self.send_template(
@@ -324,7 +330,7 @@ class AsyncDiscordNotifier:
             reason=reason,
             attempts=attempts
         )
-        
+
     async def send_data_extracted(self, target: str, data_type: str, record_count: int, data_size: str) -> bool:
         """Send data extraction notification"""
         return await self.send_template(
@@ -334,7 +340,7 @@ class AsyncDiscordNotifier:
             record_count=record_count,
             data_size=data_size
         )
-        
+
     async def send_rate_limited(self, target: str, status_code: int, wait_time: int) -> bool:
         """Send rate limit notification"""
         return await self.send_template(
@@ -343,7 +349,7 @@ class AsyncDiscordNotifier:
             status_code=status_code,
             wait_time=wait_time
         )
-        
+
     async def send_system_error(self, error: str, component: str) -> bool:
         """Send system error notification"""
         return await self.send_template(
@@ -351,25 +357,25 @@ class AsyncDiscordNotifier:
             error=str(error)[:1000],  # Truncate long errors
             component=component
         )
-        
+
     async def send_batch(self, notifications: List[Dict[str, Any]]) -> List[bool]:
         """Send multiple notifications concurrently"""
         tasks = []
-        
+
         for notification in notifications:
             if "template" in notification:
                 task = self.send_template(**notification)
             else:
                 task = self.send_notification(**notification)
             tasks.append(task)
-            
+
         return await asyncio.gather(*tasks, return_exceptions=True)
-        
+
     def get_stats(self) -> Dict[str, Any]:
         """Get notification statistics"""
         total = self.sent_notifications + self.failed_notifications
         success_rate = (self.sent_notifications / max(total, 1)) * 100
-        
+
         return {
             "sent_notifications": self.sent_notifications,
             "failed_notifications": self.failed_notifications,
@@ -377,7 +383,7 @@ class AsyncDiscordNotifier:
             "rate_limited_count": self.rate_limited_count,
             "total_notifications": total
         }
-        
+
     async def test_webhook(self) -> bool:
         """Test webhook connection"""
         embed = DiscordEmbed(
@@ -386,18 +392,20 @@ class AsyncDiscordNotifier:
             color=0x0099ff
         )
         embed.add_field("Status", "✅ Connected", inline=True)
-        embed.add_field("Time", datetime.now().strftime("%Y-%m-%d %H:%M:%S"), inline=True)
-        
+        embed.add_field("Time", datetime.now().strftime(
+            "%Y-%m-%d %H:%M:%S"), inline=True)
+
         result = await self.send_notification(embed=embed)
-        
+
         if RICH_AVAILABLE and console:
             if result:
-                console.print("[green]✅ Discord webhook test successful![/green]")
+                console.print(
+                    "[green]✅ Discord webhook test successful![/green]")
             else:
                 console.print("[red]❌ Discord webhook test failed![/red]")
         else:
             print(f"Webhook test: {'✅ Success' if result else '❌ Failed'}")
-            
+
         return result
 
 
@@ -410,7 +418,7 @@ async def send_quick_notification(
     **kwargs
 ) -> bool:
     """Send a quick notification without setting up full notifier"""
-    
+
     color_map = {
         NotificationLevel.LOW: 0x0099ff,
         NotificationLevel.MEDIUM: 0xffaa00,
@@ -418,17 +426,17 @@ async def send_quick_notification(
         NotificationLevel.CRITICAL: 0xff0000,
         NotificationLevel.SUCCESS: 0x00ff00
     }
-    
+
     embed = DiscordEmbed(
         title=f"{level.value} {title}",
         description=description,
         color=color_map[level]
     )
-    
+
     # Add extra fields
     for key, value in kwargs.items():
         embed.add_field(key.replace("_", " ").title(), str(value), inline=True)
-        
+
     async with AsyncDiscordNotifier(webhook_url) as notifier:
         return await notifier.send_notification(embed=embed)
 
@@ -436,7 +444,7 @@ async def send_quick_notification(
 # Export main components
 __all__ = [
     'AsyncDiscordNotifier',
-    'DiscordEmbed', 
+    'DiscordEmbed',
     'NotificationLevel',
     'NotificationTemplate',
     'send_quick_notification'

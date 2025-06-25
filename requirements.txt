@@ -1,9 +1,73 @@
-instaloader
-selenium
-httpx
-requests
-beautifulsoup4
-# For IG hacking and automation
-pytest
-ipython
-jupyter
+# Core async dependencies
+aiohttp>=3.8.0
+aiofiles>=22.0.0
+asyncio-semaphore>=0.1.0
+
+# HTTP and networking
+requests>=2.28.0
+httpx>=0.24.0
+urllib3>=1.26.0
+
+# Instagram automation
+instaloader>=4.9.0
+selenium>=4.8.0
+
+# Web scraping and parsing
+beautifulsoup4>=4.11.0
+lxml>=4.9.0
+
+# Progress bars and UI
+rich>=13.0.0
+tqdm>=4.64.0
+colorama>=0.4.6
+
+# Data handling and export
+pandas>=1.5.0
+openpyxl>=3.0.0
+xlsxwriter>=3.0.0
+
+# Logging and monitoring
+loguru>=0.6.0
+structlog>=22.3.0
+
+# Configuration and validation
+pydantic>=1.10.0
+python-dotenv>=0.20.0
+configparser>=5.3.0
+
+# Security and crypto
+cryptography>=3.4.0
+bcrypt>=4.0.0
+hashlib3>=3.0.0
+
+# Database
+sqlite3
+psycopg2-binary>=2.9.0
+
+# Development and testing
+pytest>=7.2.0
+pytest-asyncio>=0.20.0
+ipython>=8.7.0
+jupyter>=1.0.0
+
+# Proxy and networking
+pysocks>=1.7.0
+fake-useragent>=1.4.0
+
+# Task scheduling
+schedule>=1.2.0
+celery>=5.2.0
+
+# File compression
+zipfile36>=0.1.0
+
+# Social media APIs
+tweepy>=4.14.0
+discord-webhook>=1.1.0
+
+# Brute force and password testing
+hydra>=0.11.0
+
+# System monitoring
+psutil>=5.9.0
+memory-profiler>=0.60.0
