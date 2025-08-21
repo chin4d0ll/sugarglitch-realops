@@ -1,4 +1,4 @@
-# 🌸💖 Instagram Hunt Framework 💖🌸
+# Instagram Hunt Framework 
 
 > **Advanced CSRF Token & Endpoint Discovery Framework**  
 > โดยเฉพาะสำหรับการศึกษาและป้องกันตัวเอง 🛡️
